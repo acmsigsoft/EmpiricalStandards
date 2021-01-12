@@ -15,8 +15,8 @@
 > Specific Attributes
 
 ##### Section Attribute
-
-> Essential 
+<standard name="Systematic Reviews">
+<checklist name="Essential">
 
 - [ ] step-by-step, systematic, replicable description of search process including search terms^14^
 
@@ -38,10 +38,13 @@
 
 - [ ]  identifies method (e.g. systematic review, meta-analysis, mapping
     > study, narrative synthesis, etc.)
+</checklist>
 
-> Desirable  provides replication package including protocol, search
-> terms, search results, selection process results; complete dataset,
-> analysis scripts; examples of coding, decision rules or edge cases
+<checklist name="Desirable">
+
+- provides replication package including protocol, search
+	> terms, search results, selection process results; complete dataset,
+	> analysis scripts; examples of coding, decision rules or edge cases
 
 -   mitigates sampling bias and publication bias, using some combination
     > of: (i) manual and keyword automated searches; (ii) backward and
@@ -82,14 +85,21 @@
 
 -   presents results as practical, evidence-based guidelines for
     > practitioners, researchers, or educators
+</checklist>
 
-> Extraordinary  two or more researchers independently undertaking the
-> preliminary search process before finalizing the search scope and
-> search keywords
+<checklist name="Extraordinary">
+> Extraordinary
+
+- two or more researchers independently undertaking the
+	> preliminary search process before finalizing the search scope and
+	> search keywords
 
 -   contacted primary study authors to ensure interpretations were
     > correct, and elicit additional details not found in the papers
     > such as access to raw data
+</checklist>
+
+</standard>
 
 ### Examples of Acceptable Deviations
 
