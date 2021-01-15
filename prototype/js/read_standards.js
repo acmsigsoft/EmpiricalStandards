@@ -30,25 +30,27 @@ function readEmpiricalStandards(){
 
 function convert_checklists_to_checkboxes(standardName, checklistName, checklistText){
 	var checkboxes = document.createElement("UL");
-	checkboxes.style = "list-style-type:none;";
+	checkboxes.style = "list-style-type:none;list-style-position: inside; text-indent: -1.5em;";
 
 	lines = checklistText.split("<br/>");
 	var i = 0;
 	for(let line of lines){
-		line_text = line.trim().replace("- ", "").replace("-\t", " ").replace(/\^[0-9]+\^/, "");
+		line_text = line.trim().replace("- ", "").replace("-\t", " ").replace("---", "&mdash;").replace(/\^[0-9]+\^/, "");
 		if (line_text != ""){
 			i++;
 			checkbox_id = standardName + "-" + checklistName + ":" + i;
 			var checkboxLI = document.createElement("LI");
 			var checkboxInput = document.createElement("input");
 			var checkboxLabel = document.createElement("label");
+			var checkboxText = document.createElement("span");
 			checkboxInput.type = "checkbox";
 			checkboxInput.id = checkbox_id;
 			checkboxInput.name = checkbox_id;
 			checkboxInput.style = "color:#FFF";
 			checkboxInput.value = line_text;
 			checkboxLabel.htmlFor = checkbox_id;
-			checkboxLabel.appendChild(document.createTextNode(line_text));
+			checkboxText.innerHTML = line_text;
+			checkboxLabel.appendChild(checkboxText);
 			checkboxLI.appendChild(checkboxInput);
 			checkboxLI.appendChild(checkboxLabel);
 			checkboxes.appendChild(checkboxLI);
