@@ -45,7 +45,8 @@ confirming that the manuscript meets these criteria:
 
 ##### Importance Attribute
 
-> Essential  states a purpose, problem, objective, or research question
+> Essential 
+- states a purpose, problem, objective, or research question
 
 -   methodology is appropriate (not necessarily optimal) for stated
     > purpose or questions
