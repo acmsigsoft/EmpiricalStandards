@@ -1,6 +1,6 @@
 # The General Standard
 
- ### Application
+ ## Application
 
  This general standard applies to all software engineering studies that
  collect and analyze data. It should be complemented by more specific
@@ -8,25 +8,25 @@
 
 ### Initial Checks (Editor)
 
-> Reviewers should only be invited for papers with the following
-> attributes. By assigning reviewers, the editor/chair/administrator is
-> confirming that the manuscript meets these criteria:
+Reviewers should only be invited for papers with the following
+attributes. By assigning reviewers, the editor/chair/administrator is
+confirming that the manuscript meets these criteria:
 
 -   meets venue's requirements (e.g. length, author-blinding,
-    > appropriate keywords)
+    appropriate keywords)
 
 -   within the venue's scope
 
 -   meets the minimum level of language quality acceptable to the
-    > journal
+    journal
 
 -   cites other scholarly works
 
 -   presents new analysis not previously published in a peer-reviewed
-    > venue (i.e. preprints are fine)
+    venue (i.e. preprints are fine)
 
 -   does not include unattributed verbatim published text (i.e.
-    > plagiarism)
+    plagiarism)
 
 ### Initial Checks (Reviewer)
 
