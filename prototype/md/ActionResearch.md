@@ -26,8 +26,7 @@ Standard**. If the research involves creating a technology and an
 organizational intervention with a social dimension, consider both
 standards.
 
-### Specific Attributes {#specific-attributes-2 .Standard.Heading}
-
+### Specific Attributes
 
 **Importance**  **Attribute**                                      
 
@@ -56,7 +55,6 @@ standards.
 -   reports lessons learned by the organization
 
 -   researchers reflect on their own possible biases
-</checklist>
 
 > Desirable 
 -	uses direct quotations extensively
@@ -71,7 +69,7 @@ standards.
 
 -	research team with triangulation across researchers (to mitigate researcher bias)
 
-### General Quality Criteria {#general-quality-criteria-2 .Standard.Heading}
+### General Quality Criteria 
 
 Example criteria include reflexivity, credibility, resonance, usefulness
 and transferability (see **Glossary**). Positivist quality criteria such
