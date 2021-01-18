@@ -28,7 +28,7 @@ standards.
 
 ### Specific Attributes
 ---
-**Importance**  **Attribute**                                      
+**Importance** | **Attribute**                                      
 ---
 > Essential
 
