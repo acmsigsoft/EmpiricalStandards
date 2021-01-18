@@ -27,9 +27,9 @@ organizational intervention with a social dimension, consider both
 standards.
 
 ### Specific Attributes
-
+---
 **Importance**  **Attribute**                                      
-
+---
 > Essential
 
 -	describes the context or site of the intervention(s)
