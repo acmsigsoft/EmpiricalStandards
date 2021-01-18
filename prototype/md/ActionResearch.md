@@ -1,9 +1,9 @@
-## Action Research {#action-research .Standard.Title}
+## Action Research 
 
 Empirical research that investigates how an intervention, like the
 introduction of a method or tool, affects a real-life context
 
-### Application {#application-2 .Standard.Heading}
+### Application 
 
 This standard applies to empirical research that meets the following
 conditions.
@@ -28,9 +28,9 @@ standards.
 
 ### Specific Attributes {#specific-attributes-2 .Standard.Heading}
 
---------------------------------------------------------------------
-| **Importance** | **Attribute**                                      |
---------------------------------------------------------------------
+
+**Importance**  **Attribute**                                      
+
 | Essential      | -   describes the context or site of the           |
 |                |     intervention(s)                                |
 |                |                                                    |
@@ -84,7 +84,7 @@ standards.
 +----------------+----------------------------------------------------+
 | Extraordinary  | -   research team with triangulation across        |
 |                |     researchers (to mitigate researcher bias)      |
-+----------------+----------------------------------------------------+
+
 
 ### General Quality Criteria {#general-quality-criteria-2 .Standard.Heading}
 
@@ -93,7 +93,7 @@ and transferability (see **Glossary**). Positivist quality criteria such
 as internal validity, construct validity, generalizability and
 reliability typically do not apply.
 
-### Examples of Acceptable Deviations {#examples-of-acceptable-deviations-1 .Standard.Heading}
+### Examples of Acceptable Deviations 
 
 -   In a study of deviations from organizational standards, detailed
     description of circumstances and direct quotations are omitted to
@@ -102,7 +102,7 @@ reliability typically do not apply.
 -   The article reports a negative outcome of an intervention and e.g.
     investigates why a certain method was not applicable.
 
-### Antipatterns {#antipatterns-1 .Standard.Heading}
+### Antipatterns 
 
 -   Forcing interventions that are not acceptable to participants or the
     host organization.
@@ -116,7 +116,7 @@ reliability typically do not apply.
 -   Avoiding systematic evaluation; downplaying problems; simply
     reporting participants views of the intervention.
 
-### Invalid Criticisms {#invalid-criticisms-1 .Standard.Heading}
+### Invalid Criticisms 
 
 -   The findings and insights are not valid because the research
     intervened in the context. Though reflexivity is crucial, the whole
@@ -139,7 +139,7 @@ reliability typically do not apply.
 -   Lack of control group or experimental protocols. An action research
     study is not an experiment.
 
-### Suggested Readings {#suggested-readings-1 .Standard.Heading}
+### Suggested Readings
 
 Richard Baskerville and A. Trevor Wood-Harper. 1996. A critical
 perspective on action research as a method for information systems
@@ -177,7 +177,7 @@ Maung K. Sein, Ola Henfridsson, Sandeep Purao, Matti Rossi and Rikard
 Lindgren. 2011. Action design research. *MIS quarterly*. (2011), 37-56.
 DOI: 10.2307/23043488
 
-### Exemplars {#exemplars-1 .Standard.Heading}
+### Exemplars
 
 Yvonne Dittrich, Kari Rönkkö, Jeanette Eriksson, Christina Hansson and
 Olle Lindeberg. 2008. Cooperative method development. *Empirical
