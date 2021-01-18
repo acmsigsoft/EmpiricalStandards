@@ -1899,11 +1899,13 @@ S[pecific Attributes]{.ul}
 > Essential 
 <checklist name="Essential">
 
-- step-by-step, systematic, replicable description of search process including search terms^14^
+-	step-by-step, systematic, replicable description of search
+	> process including search terms^14^
 
-- defines clear inclusion and exclusion criteria
+-   defines clear inclusion and exclusion criteria
 
--   specifies the data extracted from each primary study^15^; explains relationships to research questions
+-   specifies the data extracted from each primary study^15^; explains
+    > relationships to research questions
 
 -   describes in detail how data were extracted and synthesized (can be
     > qualitative or quantitative)
