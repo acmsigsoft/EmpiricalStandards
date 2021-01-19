@@ -1,9 +1,9 @@
-## Action Research 
+# Action Research 
 
 Empirical research that investigates how an intervention, like the
 introduction of a method or tool, affects a real-life context
 
-### Application 
+## Application 
 
 This standard applies to empirical research that meets the following
 conditions.
@@ -26,11 +26,9 @@ Standard**. If the research involves creating a technology and an
 organizational intervention with a social dimension, consider both
 standards.
 
-### Specific Attributes
+## Specific Attributes
 ---
-**Importance** | **Attribute**                                      
----
-> Essential
+### Essential Attributes
 
 -	describes the context or site of the intervention(s)
 
@@ -56,7 +54,7 @@ standards.
 
 -   researchers reflect on their own possible biases
 
-> Desirable 
+### Desirable Attributes
 -	uses direct quotations extensively
 
 -   uses member checking to assess resonance
@@ -65,18 +63,18 @@ standards.
 
 -   triangulation across quantitative and qualitative data
 
-> Extraordinary
+### Extraordinary Attributes
 
 -	research team with triangulation across researchers (to mitigate researcher bias)
 
-### General Quality Criteria 
+## General Quality Criteria 
 
 Example criteria include reflexivity, credibility, resonance, usefulness
 and transferability (see **Glossary**). Positivist quality criteria such
 as internal validity, construct validity, generalizability and
 reliability typically do not apply.
 
-### Examples of Acceptable Deviations 
+## Examples of Acceptable Deviations 
 
 -   In a study of deviations from organizational standards, detailed
     description of circumstances and direct quotations are omitted to
@@ -85,7 +83,7 @@ reliability typically do not apply.
 -   The article reports a negative outcome of an intervention and e.g.
     investigates why a certain method was not applicable.
 
-### Antipatterns 
+## Antipatterns 
 
 -   Forcing interventions that are not acceptable to participants or the
     host organization.
@@ -99,7 +97,7 @@ reliability typically do not apply.
 -   Avoiding systematic evaluation; downplaying problems; simply
     reporting participants views of the intervention.
 
-### Invalid Criticisms 
+## Invalid Criticisms 
 
 -   The findings and insights are not valid because the research
     intervened in the context. Though reflexivity is crucial, the whole
@@ -122,7 +120,7 @@ reliability typically do not apply.
 -   Lack of control group or experimental protocols. An action research
     study is not an experiment.
 
-### Suggested Readings
+## Suggested Readings
 
 Richard Baskerville and A. Trevor Wood-Harper. 1996. A critical
 perspective on action research as a method for information systems
@@ -160,7 +158,7 @@ Maung K. Sein, Ola Henfridsson, Sandeep Purao, Matti Rossi and Rikard
 Lindgren. 2011. Action design research. *MIS quarterly*. (2011), 37-56.
 DOI: 10.2307/23043488
 
-### Exemplars
+## Exemplars
 
 Yvonne Dittrich, Kari Rönkkö, Jeanette Eriksson, Christina Hansson and
 Olle Lindeberg. 2008. Cooperative method development. *Empirical
