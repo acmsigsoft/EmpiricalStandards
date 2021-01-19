@@ -202,4 +202,4 @@ Hawaii International Conference on System Sciences (HICSS)*, January 5,
 Hataichanok Unphon, Yvonne Dittrich. 2008. Organisation matters: how the
 organisation of software development influences the introduction of a
 product line architecture. In *Proc. IASTED Int. Conf. on Software
-Engineering*. 2008, 178-183
+Engineering*. 2008, 178-183.
