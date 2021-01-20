@@ -203,3 +203,8 @@ Hataichanok Unphon, Yvonne Dittrich. 2008. Organisation matters: how the
 organisation of software development influences the introduction of a
 product line architecture. In *Proc. IASTED Int. Conf. on Software
 Engineering*. 2008, 178-183.
+
+[^bignote]:
+[^bignote] E.g. project financing, potential conflicts of interest, professional relationship leading to access
+[^bignote] Action research projects are structured in interventions often described as action research cycles, which are often structured in distinct phases. It is a flexible methodology, where subsequent cycles are based on their predecessors.
+[^bignote] Can include quantitative evaluation in addition to qualitative evaluation.
