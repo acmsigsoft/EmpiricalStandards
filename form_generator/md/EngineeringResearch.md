@@ -1,10 +1,10 @@
-# Engineering Methods {#engineering-methods .SectionTitle}
+# Engineering Methods 
 
-## Engineering Research (AKA Design Science) {#engineering-research-aka-design-science .Standard.Title}
+## Engineering Research (AKA Design Science) 
 
 Research that invents and evaluates technological artifacts
 
-### Application {#application-1 .Standard.Heading}
+## Application 
 
 This standard applies to manuscripts that propose and evaluate
 technological artifacts, including algorithms, models, languages,
@@ -17,96 +17,47 @@ standard is not appropriate for:
 -   experience reports of applying pre-existing engineering research
     approaches
 
-### Specific Attributes
+## Specific Attributes
 
-+----------------+----------------------------------------------------+
-| **Importance** | **Attribute**                                      |
-+----------------+----------------------------------------------------+
-| Essential      | -   describes the proposed artifact in adequate    |
-|                |     detail[^4]                                     |
-|                |                                                    |
-|                | -   justifies the need for, usefulness of, or      |
-|                |     relevance of the proposed artifact[^5]         |
-|                |                                                    |
-|                | -   conceptually evaluates the artifact; discusses |
-|                |     its strengths, weaknesses and limitations[^6]  |
-|                |                                                    |
-|                | -   EITHER: discusses state-of-art alternatives    |
-|                |     (and their strengths, weaknesses and           |
-|                |     limitations)\                                  |
-|                |     OR: explains why no state-of-art alternatives  |
-|                |     exist\                                         |
-|                |     OR: provides compelling argument that direct   |
-|                |     comparisons are impractical                    |
-|                |                                                    |
-|                | -   Empirically evaluates the proposed artifact    |
-|                |     using:\                                        |
-|                |     **action research**, in which the researchers  |
-|                |     intervene a real organization using the        |
-|                |     artifact,\                                     |
-|                |     a **case study** in which a real organization  |
-|                |     uses the artifact without researcher           |
-|                |     intervention,\                                 |
-|                |     a **controlled experiment** in which human     |
-|                |     participants use the artifact,\                |
-|                |     a **simulation** in which the artifact is used |
-|                |     in an artificial environment, or\              |
-|                |     another method for which a clear and           |
-|                |     convincing rationale is provided               |
-|                |                                                    |
-|                | -   clearly indicates the empirical methodology    |
-|                |     being used (e.g. action research, controlled   |
-|                |     experiment)                                    |
-|                |                                                    |
-|                | -   EITHER: empirically compares the artifact to   |
-|                |     one or more state-of-the-art alternative       |
-|                |     artifacts\                                     |
-|                |     OR: empirically compares the artifact to one   |
-|                |     or more state-of-the-art benchmarks\           |
-|                |     OR: provides a clear and convincing rationale  |
-|                |     for why comparative evaluation is impractical  |
-|                |                                                    |
-|                | -   assumptions (if any) are explicit; do not      |
-|                |     contradict each other or the contribution's    |
-|                |     goals; plausibly hold for the evaluation       |
-|                |     subjects                                       |
-|                |                                                    |
-|                | -   uses notation consistently (if any notation is |
-|                |     used)                                          |
-|                |                                                    |
-|                | -   complies with the **Ethics (Engineering        |
-|                |     Research)** supplement                         |
-+----------------+----------------------------------------------------+
-| Desirable      | -   reviews the theoretical basis of the artifact  |
-|                |                                                    |
-|                | -   provides correctness arguments of the key      |
-|                |     analytical and theoretical contributions (e.g. |
-|                |     theorems, complexity analyses, mathematical    |
-|                |     proofs)                                        |
-|                |                                                    |
-|                | -   includes one or more running examples to       |
-|                |     elucidate the artifact                         |
-|                |                                                    |
-|                | -   evaluates the artifact in an industry-relevant |
-|                |     context (e.g. widely used open-source          |
-|                |     projects, professional programmers)            |
-|                |                                                    |
-|                | -   provides a replication package including       |
-|                |     datasets and analytical scripts and EITHER a   |
-|                |     comprehensive description of the artifact OR   |
-|                |     source code if artifact is virtual             |
-|                |                                                    |
-|                | -   justifies any items missing from replication   |
-|                |     package based on practical or ethical grounds. |
-+----------------+----------------------------------------------------+
-| Extraordinary  | -   contributes to our collective understanding of |
-|                |     design practices or principles                 |
-|                |                                                    |
-|                | -   presents ground-breaking innovations with      |
-|                |     obvious real-world benefits                    |
-+----------------+----------------------------------------------------+
+### Essential Attributes
+-   describes the proposed artifact in adequate detail^1^
 
-### General Quality Criteria {#general-quality-criteria-1 .Standard.Heading}
+-   justifies the need for, usefulness of, or relevance of the proposed artifact^2^
+
+-   conceptually evaluates the artifact; discusses its strengths, weaknesses and limitations^3^
+
+-   EITHER: discusses state-of-art alternatives (and their strengths, weaknesses and limitations) OR: explains why no state-of-art alternatives exist OR: provides compelling argument that direct comparisons are impractical
+
+-   Empirically evaluates the proposed artifact using:
+**action research**, in which the researchers intervene a real organization using the artifact, a **case study** in which a real organization uses the artifact without researcher intervention, a **controlled experiment** in which human participants use the  artifact, a **simulation** in which the artifact is used in an artificial environment, or another method for which a clear and convincing rationale is provided
+
+-   clearly indicates the empirical methodology being used (e.g. action research, controlled experiment)
+
+-   EITHER: empirically compares the artifact to one or more state-of-the-art alternative artifacts OR: empirically compares the artifact to one or more state-of-the-art benchmarks OR: provides a clear and convincing rationale for why comparative evaluation is impractical
+
+-   assumptions (if any) are explicit; do not contradict each other or the contribution's goals; plausibly hold for the evaluation subjects
+
+-   uses notation consistently (if any notation is used)
+
+### Desirable Attributes
+-   reviews the theoretical basis of the artifact
+
+-   provides correctness arguments of the key analytical and theoretical contributions (e.g. theorems, complexity analyses, mathematical proofs)
+
+-   includes one or more running examples to elucidate the artifact
+
+-   evaluates the artifact in an industry-relevant context (e.g. widely used open-source projects, professional programmers)
+
+-   provides a replication package including datasets and analytical scripts and EITHER a comprehensive description of the artifact OR source code if artifact is virtual
+
+-   justifies any items missing from replication package based on practical or ethical grounds.
+
+### Extraordinary Attributes
+-   contributes to our collective understanding of design practices or principles
+
+-   presents ground-breaking innovations with obvious real-world benefits
+
+## General Quality Criteria 
 
 -   Comprehensiveness of proposed artifact description
 
@@ -116,7 +67,7 @@ standard is not appropriate for:
 -   Relationship of innovativeness to rigorousness: less innovative
     artifacts require more rigorous evaluations
 
-### Antipatterns
+## Antipatterns
 
 -   overstates the novelty of the contribution
 
@@ -130,7 +81,7 @@ standard is not appropriate for:
     not compared to established benchmarks or alternative solutions (see
     related point in "Invalid Criticism")
 
-### Invalid Criticisms
+## Invalid Criticisms
 
 -   The paper does not report as ambitious an empirical study as other
     predominately empirical papers. The more innovative the artifact and
@@ -169,24 +120,24 @@ Richard Baskerville, Jan Pries-Heje, and John Venable. 2009. Soft design
 science methodology. In *Proceedings of the 4th International Conference
 on Design Science Research in Information Systems and Technology
 (DESRIST '09).* Association for Computing Machinery, New York, NY, USA,
-Article 9, 1--11. DOI: 10.1145/1555619.1555631
+Article 9, 1–11. DOI: 10.1145/1555619.1555631
 
 Carlo Ghezzi. 2020. *Being a researcher - an informatics perspective*.
 Springer Nature.
 
 Alan Hevner and Samir Chatterjee. 2010. *Design Research in Information
 Systems*. Integrated Series in Information Systems. Springer, 22, (Mar.
-2010), 145-156. DOI:
+2010), 145–156. DOI:
 [10.1007/978-1-4419-5653-8_11](https://doi.org/10.1007/978-1-4419-5653-8_11)
 
 Alan R. Hevner, Salvatore T. March, Jinsoo Park and Sudha Ram. 2004.
 Design Science in Information Systems Research. *MIS Quarterly*, 28, 1
-(Mar. 2004), 75--105. DOI:10.2307/25148625.
+(Mar. 2004), 75–105. DOI:10.2307/25148625.
 
 Roel Wieringa. 2014. *Design science methodology for information systems
 and software engineering.* Springer*.*
 
-### Exemplars
+## Exemplars
 
 Kihong Heo, Hakjoo Oh and Hongseok Yang. 2019. Resource-aware Program
 Analysis via Online Abstraction Coarsening. In *Proceedings of the 41st
