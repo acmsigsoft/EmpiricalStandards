@@ -1,6 +1,6 @@
 # The General Standard 
 
-## Application {
+## Application 
 
 This general standard applies to all software engineering studies that
 collect and analyze data. It should be complemented by more specific
