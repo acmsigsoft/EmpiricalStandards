@@ -1,10 +1,10 @@
-## Case Study and Ethnography {#case-study-and-ethnography .Standard.Title}
+# Case Study and Ethnography 
 
 "An empirical inquiry that investigates a contemporary phenomenon (the
 "case") in depth and within its real-world context, especially when the
 boundaries between phenomenon and context \[are unclear\]" (Yin 2017)
 
-### Application {#application-3 .Standard.Heading}
+## Application 
 
 This standard applies to empirical research that meets the following
 conditions.
@@ -32,60 +32,42 @@ in the context, consider the **Action Research Standard.** If the study
 captures a large quantitative dataset with limited context, consider the
 **Exploratory Data Science Standard.**
 
-### Specific Attributes {#specific-attributes-3 .Standard.Heading}
+## Specific Attributes 
 
-+----------------+----------------------------------------------------+
-| **Importance** | **Attribute**                                      |
-+----------------+----------------------------------------------------+
-| Essential      | -   explains why the case study approach is        |
-|                |     appropriate for the research question          |
-|                |                                                    |
-|                | -   justifies the selection of the case or site    |
-|                |     that was studied                               |
-|                |                                                    |
-|                | -   describes the context of the case in rich      |
-|                |     detail                                         |
-|                |                                                    |
-|                | -   defines unit(s) of analysis                    |
-|                |                                                    |
-|                | -   presents a clear and well-argued "chain of     |
-|                |     evidence" from observations to findings        |
-|                |                                                    |
-|                | -   clearly answers the research question(s)       |
-+----------------+----------------------------------------------------+
-| Desirable      | -   reports the type of case study (see *Types of  |
-|                |     Case Studies*, below)                          |
-|                |                                                    |
-|                | -   describes external events and other factors    |
-|                |     that may have affected the case or site        |
-|                |                                                    |
-|                | -   explains how researchers triangulated across   |
-|                |     data sources, informants or researchers        |
-|                |                                                    |
-|                | -   cross-checks interviewee statements (e.g.      |
-|                |     against direct observation or archival         |
-|                |     records)                                       |
-|                |                                                    |
-|                | -   uses quotations to *illustrate* findings       |
-|                |     (note: quotations should not be *the only*     |
-|                |     representation of a finding; each finding      |
-|                |     should be described independently of           |
-|                |     supporting quotations)                         |
-+----------------+----------------------------------------------------+
-| Extraordinary  | -   multiple, deep, fully-developed cases with     |
-|                |     cross-case triangulation                       |
-|                |                                                    |
-|                | -   uses multiple judges and reports inter-rater   |
-|                |     reliability (cf. Gwet & Gwet 2002)             |
-|                |                                                    |
-|                | -   uses direct observation and clearly integrates |
-|                |     direct observations into results               |
-|                |                                                    |
-|                | -   created a case study protocol beforehand and   |
-|                |     makes it publicly accessible                   |
-+----------------+----------------------------------------------------+
+### Essential Attributes
+-   explains why the case study approach is appropriate for the research question
 
-### General Quality Criteria {#general-quality-criteria-3 .Standard.Heading}
+-   justifies the selection of the case or site that was studied
+
+-   describes the context of the case in rich detail
+
+-   defines unit(s) of analysis
+
+-   presents a clear and well-argued "chain of evidence" from observations to findings
+
+-   clearly answers the research question(s)
+
+### Desirable Attributes
+-   reports the type of case study (see *Types of Case Studies*, below)
+
+-   describes external events and other factors that may have affected the case or site
+
+-   explains how researchers triangulated across data sources, informants or researchers
+
+-   cross-checks interviewee statements (e.g. against direct observation or archival records)
+
+-   uses quotations to *illustrate* findings (note: quotations should not be *the only* representation of a finding; each finding should be described independently of supporting quotations)
+
+### Extraordinary Attributes
+-   multiple, deep, fully-developed cases with cross-case triangulation
+
+-   uses multiple judges and reports inter-rater reliability (cf. Gwet & Gwet 2002)
+
+-   uses direct observation and clearly integrates direct observations into results
+
+-   created a case study protocol beforehand and makes it publicly accessible
+
+## General Quality Criteria 
 
 Case studies should be evaluated using qualitative validity criteria
 such as credibility, multivocality, reflexivity, rigor and
@@ -93,7 +75,7 @@ transferability (see **Glossary**). Quantitative quality criteria such
 as replicability, generalizability and objectivity typically do not
 apply.
 
-### Types of Case Studies {#types-of-case-studies .Standard.Heading}
+## Types of Case Studies 
 
 There is no standard way of conducting a case study. Case study research
 can adopt different philosophies, most notably (post-)positivism (Lee
@@ -122,7 +104,7 @@ different purposes, including:
 -   a **revelatory case study** examines a hitherto unknown or
     unexplored phenomenon
 
-### Antipatterns {#antipatterns-2 .Standard.Heading}
+## Antipatterns 
 
 -   Relying on a single approach to data collection (e.g. interviews)
     without corroboration or triangulation
@@ -130,7 +112,7 @@ different purposes, including:
 -   Oversimplifying and over-rationalizing complex phenomena; presenting
     messy complicated things as simple and clean
 
-### Invalid Criticisms {#invalid-criticisms-2 .Standard.Heading}
+## Invalid Criticisms 
 
 -   Does not present quantitative data; only collects a single data
     type.
@@ -150,11 +132,11 @@ different purposes, including:
     number; what matters is that there is enough data that the findings
     are credible, and the description is deep and rich.
 
-### Suggested Readings {#suggested-readings-2 .Standard.Heading}
+## Suggested Readings 
 
 Line Dube and Guy Pare. Rigor in information systems positivist case
 re-search: current practices, trends, and recommendations. 2003. *MIS
-quarterly.* JSTOR 27, 4 (Dec. 2003), 597--636. DOI: 10.2307/30036550
+quarterly.* JSTOR 27, 4 (Dec. 2003), 597–636. DOI: 10.2307/30036550
 
 Shiva Ebneyamini, and Mohammad Reza Sadeghi Moghadam. 2018. Toward
 Developing a Framework for Conducting Case Study Research.
@@ -166,11 +148,11 @@ Reliability Assessment Series, 2 (May 2002), 9 pages.
 
 Barbara Kitchenham, Lesley Pickard, and Shari Lawrence Pfleeger. 1995.
 Case studies for method and tool evaluation. *IEEE software.* 12, 4
-(1995), 52-62.
+(1995), 52–62.
 
 Timothy C. Lethbridge, Susan Elliott Sim, and Janice Singer. 2005.
 Studying software engineers: Data collection techniques for software
-field studies. *Empirical software engineering.* 10, 3 (2005), 311-341.
+field studies. *Empirical software engineering.* 10, 3 (2005), 311–341.
 
 Mathew Miles, A Michael Huberman and Saldana Johnny. 2014. *Qualitative
 data analysis: A methods sourcebook*.
@@ -178,7 +160,7 @@ data analysis: A methods sourcebook*.
 Dewayne E. Perry, Susan Elliott Sim, and Steve M. Easterbrook. 2004.
 Case Studies for Software Engineers, In *Proceedings 26th International
 Conference on Software Engineering.* 28 May 2008, Edinburgh, UK,
-736-738.
+736–738.
 
 Per Runeson and Martin Höst. 2009. Guidelines for conducting and
 reporting case study research in software engineering. *Empirical
@@ -190,32 +172,32 @@ Wiley & Sons.
 
 Sarah J. Tracy. 2010. Qualitative Quality: Eight "Big-Tent" Criteria for
 Excellent Qualitative Research. *Qualitative Inquiry*. *16*, 10,
-837--851. DOI:
+837–851. DOI:
 [10.1177/1077800410383121](https://doi.org/10.1177/1077800410383121)
 
 Geoff Walsham, 1995. Interpretive case studies in IS research: nature
-and method. *European Journal of information systems.* 4,2, 74-81.
+and method. *European Journal of information systems.* 4,2, 74–81.
 
 Robert K. Yin. 2017. *Case study research and applications: Design and
 methods*. Sage publications.
 
-### Exemplars {#exemplars-2 .Standard.Heading}
+## Exemplars 
 
 Adam Alami, and Andrzej Wąsowski. 2019. Affiliated participation in open
 source communities. In *2019 ACM/IEEE International Symposium on
-Empirical Software Engineering and Measurement (ESEM)*. 1-11
+Empirical Software Engineering and Measurement (ESEM)*. 1–11
 
 Michael Felderer and Rudolf Ramler. 2016. Risk orientation in software
 testing processes of small and medium enterprises: an exploratory and
-comparative study. *Software Quality Journal*. 24, 3 (2016), 519-548.
+comparative study. *Software Quality Journal*. 24, 3 (2016), 519–548.
 
 Audris Mockus, Roy T. Fielding, and James D. Herbsleb. 2002. Two case
 studies of open source software development: Apache and Mozilla. *ACM
 Transactions on Software Engineering and Methodology (TOSEM).* 11, 3
-(2002), 309-346.
+(2002), 309–346.
 
 Helen Sharp and Hugh Robinson. 2004. An ethnographic study of XP
-practice. *Empirical Software Engineering.* 9, 4 (2004), 353-375.
+practice. *Empirical Software Engineering.* 9, 4 (2004), 353–375.
 
 Diomidis Spinellis and Paris C. Avgeriou. Evolution of the Unix System
 Architecture: An Exploratory Case Study. *IEEE Transactions on Software
@@ -223,5 +205,5 @@ Engineering*. (2019).
 
 Klaas-Jan Stol and Brian Fitzgerald. Two's company, three's a crowd: a
 case study of crowdsourcing software development. In *Proceedings of the
-36^th^ International Conference on Software Engineering*, 187--198,
+36^th^ International Conference on Software Engineering*, 187–198,
 2014.
