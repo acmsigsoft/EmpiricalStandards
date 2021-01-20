@@ -1,10 +1,10 @@
-## Systematic Reviews {#systematic-reviews .Standard.Title}
+# Systematic Reviews 
 
 A study that appraises, analyses, and synthesizes primary or secondary
 literature to provide a complete, exhaustive summary of current evidence
 regarding one or more specific topics or research questions
 
-### Application {#application-8 .Standard.Heading}
+## Application 
 
 -   Applies to studies that systematically find and analyze existing
     literature about a specified topic
@@ -14,105 +14,38 @@ regarding one or more specific topics or research questions
 -   Does not apply to ad-hoc literature reviews, case surveys or
     advanced qualitative synthesis methods (e.g. meta-ethnography)
 
-### Specific Attributes {#specific-attributes-8 .Standard.Heading}
+## Specific Attributes 
 
-+---------------+-----------------------------------------------------+
-| **Section**   | **Attribute**                                       |
-+---------------+-----------------------------------------------------+
-| Essential     | -   presents step-by-step, systematic, replicable   |
-|               |     description of search process including search  |
-|               |     terms[^29]                                      |
-|               |                                                     |
-|               | -   defines clear inclusion and exclusion criteria  |
-|               |                                                     |
-|               | -   specifies the data extracted from each primary  |
-|               |     study[^30]; explains relationships to research  |
-|               |     questions                                       |
-|               |                                                     |
-|               | -   describes in detail how data were extracted and |
-|               |     synthesized (can be qualitative or              |
-|               |     quantitative)                                   |
-|               |                                                     |
-|               | -   describes coding scheme(s) and their use        |
-|               |                                                     |
-|               | -   clear chain of evidence from the extracted data |
-|               |     to the answers to the research question(s)      |
-|               |                                                     |
-|               | -   presents conclusions or recommendations for     |
-|               |     practitioners/non-specialists                   |
-|               |                                                     |
-|               | -   identifies method (e.g. systematic review,      |
-|               |     meta-analysis, mapping study, narrative         |
-|               |     synthesis, etc.)                                |
-+---------------+-----------------------------------------------------+
-| Desirable     | -   provides replication package including          |
-|               |     protocol, search terms, search results,         |
-|               |     selection process results; complete dataset,    |
-|               |     analysis scripts; examples of coding, decision  |
-|               |     rules or edge cases                             |
-|               |                                                     |
-|               | -   mitigates sampling bias and publication bias,   |
-|               |     using some combination of: (i) manual and       |
-|               |     keyword automated searches; (ii) backward and   |
-|               |     forward snowballing searches; (iii) checking    |
-|               |     profiles of prolific authors in the area; (iv)  |
-|               |     searching both formal databases (e.g. ACM       |
-|               |     Digital Library) and indexes (e.g. Google       |
-|               |     Scholar); (v) searching for relevant            |
-|               |     dissertations; (vi) searching pre-print servers |
-|               |     (e.g. arXiv); (iiv) soliciting unpublished      |
-|               |     manuscripts through appropriate listservs or    |
-|               |     social media; (iiiv) contacting known authors   |
-|               |     in the area.                                    |
-|               |                                                     |
-|               | -   demonstrates that the search process is         |
-|               |     sufficiently rigorous for the systematic review |
-|               |     goals[^31]                                      |
-|               |                                                     |
-|               | -   assesses quality of primary studies; explains   |
-|               |     how quality was assessed                        |
-|               |                                                     |
-|               | -   assesses coverage using funnel plots or         |
-|               |     percentage of known papers found                |
-|               |                                                     |
-|               | -   (positivist reviews), uses 2+ independent       |
-|               |     analysts; analyzes inter-rater reliability      |
-|               |     (e.g. KALPHA)                                   |
-|               |                                                     |
-|               | -   (interpretivist reviews) reflects on how        |
-|               |     researcher's biases may have affected their     |
-|               |     analysis                                        |
-|               |                                                     |
-|               | -   consolidates results using tables, diagrams, or |
-|               |     charts; PRISMA flow diagram (cf. Moher et       |
-|               |     al. 2009)                                       |
-|               |                                                     |
-|               | -   performs analysis through an existing or new    |
-|               |     conceptual framework (qualitative synthesis)    |
-|               |                                                     |
-|               | -   uses meta-analysis methods appropriate for      |
-|               |     primary studies; does not use vote counting     |
-|               |                                                     |
-|               | -   integrates results into prior theory or         |
-|               |     research; identifies gaps, biases, or future    |
-|               |     directions                                      |
-|               |                                                     |
-|               | -   presents results as practical, evidence-based   |
-|               |     guidelines for practitioners, researchers, or   |
-|               |     educators                                       |
-+---------------+-----------------------------------------------------+
-| Extraordinary | -   two or more researchers independently           |
-|               |     undertaking the preliminary search process      |
-|               |     before finalizing the search scope and search   |
-|               |     keywords                                        |
-|               |                                                     |
-|               | -   contacted primary study authors to ensure       |
-|               |     interpretations are correct, and elicit         |
-|               |     additional details not found in the papers such |
-|               |     as access to raw data                           |
-+---------------+-----------------------------------------------------+
+### Essential Attributes 
+-	presents step-by-step, systematic, replicable description of search process including search terms  
+-	defines clear inclusion and exclusion criteria
+-	specifies the data extracted from each primary study ; explains relationships to research questions
+-	describes in detail how data were extracted and synthesized (can be qualitative or quantitative)
+-	describes coding scheme(s) and their use
+-	clear chain of evidence from the extracted data to the answers to the research question(s)
+-	presents conclusions or recommendations for practitioners/non-specialists
+-	identifies method (e.g. systematic review, meta-analysis, mapping study, narrative synthesis, etc.)
 
-### Examples of Acceptable Deviations {#examples-of-acceptable-deviations-4 .Standard.Heading}
+### Desirable Attributes 	
+-	provides replication package including protocol, search terms, search results, selection process results; complete dataset, analysis scripts; examples of coding, decision rules or edge cases
+-	mitigates sampling bias and publication bias, using some combination of: (i) manual and keyword automated searches; (ii) backward and forward snowballing searches; (iii) checking profiles of prolific authors in the area; (iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar); (v) searching for relevant dissertations; (vi) searching pre-print servers (e.g. arXiv); (iiv) soliciting unpublished manuscripts through appropriate listservs or social media; (iiiv) contacting known authors in the area. 
+-	demonstrates that the search process is sufficiently rigorous for the systematic review goals  
+-	assesses quality of primary studies; explains how quality was assessed 
+-	assesses coverage using funnel plots or percentage of known papers found
+-	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (e.g. KALPHA) 
+-	(interpretivist reviews) reflects on how researcher’s biases may have affected their analysis
+-	consolidates results using tables, diagrams, or charts; PRISMA flow diagram (cf. Moher et al. 2009)
+-	performs analysis through an existing or new conceptual framework (qualitative synthesis)
+-	uses meta-analysis methods appropriate for primary studies; does not use vote counting 
+-	integrates results into prior theory or research; identifies gaps, biases, or future directions
+-	presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
+
+### Extraordinary Attributes 	
+-	two or more researchers independently undertaking the preliminary search process before finalizing the search scope and search keywords
+-	contacted primary study authors to ensure interpretations are correct, and elicit additional details not found in the papers such as access to raw data
+
+
+## Examples of Acceptable Deviations 
 
 -   No attempts to mitigate publication bias in a study explicitly
     examining a specific venue's (e.g. CACM or ICSE) coverage of a given
@@ -124,7 +57,7 @@ regarding one or more specific topics or research questions
 -   No recommendations for practitioners in a study of a methodological
     issue (e.g. representative sampling).
 
-### Antipatterns {#antipatterns-6 .Standard.Heading}
+## Antipatterns 
 
 -   A laundry-list description of the studies (A found X, B found Y,
     ...), rather than a synthesis of the findings.
@@ -136,7 +69,7 @@ regarding one or more specific topics or research questions
 -   Reviewing an area in which there are too few high-quality primary
     studies to draw reliable conclusions.
 
-### Suggested Readings {#suggested-readings-6 .Standard.Heading}
+## Suggested Readings 
 
 Moher D, Liberati A, Tetzlaff J, Altman DG, The PRISMA Group (2009).
 *P*referred *R*eporting *I*tems for *S*ystematic Reviews and
@@ -151,7 +84,7 @@ Daniela S. Cruzes and Tore Dybå. 2010. Synthesizing evidence in software
 engineering research. In Proceedings of the 2010 ACM-IEEE International
 Symposium on Empirical Software Engineering and Measurement (ESEM '10).
 Association for Computing Machinery, New York, NY, USA, Article 1,
-1--10. DOI:10.1145/1852786.1852788
+1–10. DOI:10.1145/1852786.1852788
 
 Barbara Kitchenham and Stuart Charters. 2007. Guidelines for performing
 Systematic Literature Reviews in Software Engineering.
@@ -162,6 +95,4 @@ Qualitative Data Analysis: A Methods Sourcebook. Sage Publications Inc.
 Kai Petersen, Robert Feldt, Shahid Mujtaba, and Michael Mattsson. 2008.
 Systematic mapping studies in software engineering. In *12th
 International Conference on Evaluation and Assessment in Software
-Engineering (EASE).* (Jun. 2008), 1-10.
-
-# 
+Engineering (EASE).* (Jun. 2008), 1–10.
