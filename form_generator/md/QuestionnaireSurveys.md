@@ -1,9 +1,9 @@
-## Questionnaire Surveys {#questionnaire-surveys .Standard.Title}
+# Questionnaire Surveys 
 
 A study in which a sample of respondents answer a series of questions,
 typically through a computerized or paper form and mostly structured
 
-### Application
+## Application
 
 This guideline applies to studies in which:
 
@@ -21,107 +21,46 @@ Review Standard**), longitudinal or repeated measures studies (see the
 typically given to participants in controlled experiments (see the
 **Experiments Standard**).
 
-### Specific Attributes {#specific-attributes-7 .Standard.Heading}
+## Specific Attributes 
 
-+---------------+-----------------------------------------------------+
-| **Section**   | **Attribute**                                       |
-+---------------+-----------------------------------------------------+
-| Essential     | -   identifies the target population & defines the  |
-|               |     sampling strategy (see the **Sampling           |
-|               |     Supplement**)                                   |
-|               |                                                     |
-|               | -   provides questionnaire instrument (e.g. as      |
-|               |     supplemental file)                              |
-|               |                                                     |
-|               | -   EITHER: provides study artifacts; i.e.,         |
-|               |     instrument(s), code books, analysis scripts and |
-|               |     dataset(s) (addressing potential anonymity and  |
-|               |     confidentiality issues)\                        |
-|               |     OR: describes in detail study artifacts and     |
-|               |     justifies why they are not provided             |
-|               |                                                     |
-|               | -   the questionnaire design matches the research   |
-|               |     aims (i.e. questions are mapped to research     |
-|               |     objectives) and the target population (wording  |
-|               |     and format of the questions)                    |
-|               |                                                     |
-|               | -   describes how participants were selected,       |
-|               |     including invitations and incentives            |
-|               |                                                     |
-|               | -   step-by-step, systematic, replicable            |
-|               |     description of data collection and analysis     |
-|               |                                                     |
-|               | -   describes how responses were managed/monitored, |
-|               |     including contingency actions for non-responses |
-|               |     and drop-outs                                   |
-|               |                                                     |
-|               | -   EITHER: measures constructs using (or adapting) |
-|               |     validated scales\                               |
-|               |     OR: analyzes construct validity (e.g. content,  |
-|               |     convergent, discriminant, predictive) ex post   |
-|               |                                                     |
-|               | -   explains handling of missing data (e.g.         |
-|               |     imputation, weighting adjustments, discarding)  |
-|               |                                                     |
-|               | -   acknowledges generalizability threats;          |
-|               |     discusses how respondents may differ from       |
-|               |     target population                               |
-|               |                                                     |
-|               | -   analyzes response rates                         |
-+---------------+-----------------------------------------------------+
-| Desirable     | -   characterizes the target population including   |
-|               |     demographic information (e.g. culture,          |
-|               |     knowledge)                                      |
-|               |                                                     |
-|               | -   defines and estimates the size of the           |
-|               |     population strata (if applicable)               |
-|               |                                                     |
-|               | -   accounts for the principles of research ethics  |
-|               |     (e.g. informed consent, re-identification risk) |
-|               |                                                     |
-|               | -   explains and justifies instrument design and    |
-|               |     choice of scales (e.g. by research objectives   |
-|               |     or by analogy to similar studies).              |
-|               |                                                     |
-|               | -   validates whether the items, layout, duration,  |
-|               |     and technology are appropriate (e.g. using      |
-|               |     pilots, test-retest, or expert and non-expert   |
-|               |     reviews).                                       |
-|               |                                                     |
-|               | -   reports how the instrument has evolved through  |
-|               |     the validation process (if at all)              |
-|               |                                                     |
-|               | -   applies techniques for improving response rates |
-|               |     (e.g. incentives, reminders, targeted           |
-|               |     advertising)                                    |
-|               |                                                     |
-|               | -   analyzes response bias (quantitatively)         |
-|               |                                                     |
-|               | -   discusses possible effect of incentives (e.g.   |
-|               |     on voluntariness, response rates, response      |
-|               |     bias) if used                                   |
-|               |                                                     |
-|               | -   describes the stratification of the analysis    |
-|               |     (if stratified sampling is used)                |
-|               |                                                     |
-|               | -   clearly distinguishes evidence-based results    |
-|               |     from interpretations and speculation[^25]       |
-+---------------+-----------------------------------------------------+
-| Extraordinary | -   provides feasibility check of the anticipated   |
-|               |     data analysis techniques                        |
-|               |                                                     |
-|               | -   reports on the scale validation in terms of     |
-|               |     dimensionality, reliability, and validity of    |
-|               |     measures                                        |
-+---------------+-----------------------------------------------------+
+### Essential Attributes 	
+-	identifies the target population & defines the sampling strategy (see the Sampling Supplement)
+-	provides questionnaire instrument (e.g. as supplemental file)
+-	EITHER: provides study artifacts; i.e., instrument(s), code books, analysis scripts and dataset(s) (addressing potential anonymity and confidentiality issues) OR: describes in detail study artifacts and justifies why they are not provided
+-	the questionnaire design matches the research aims (i.e. questions are mapped to research objectives) and the target population (wording and format of the questions)
+-	describes how participants were selected, including invitations and incentives
+-	step-by-step, systematic, replicable description of data collection and analysis 
+-	describes how responses were managed/monitored, including contingency actions for non-responses and drop-outs
+-	EITHER: measures constructs using (or adapting) validated scales  OR: analyzes construct validity (e.g. content, convergent, discriminant, predictive) ex post
+-	explains handling of missing data (e.g. imputation, weighting adjustments, discarding)
+-	acknowledges generalizability threats; discusses how respondents may differ from target population
+-	analyzes response rates
 
-### General Quality Criteria {#general-quality-criteria-6 .Standard.Heading}
+### Desirable Attributes 	
+-	characterizes the target population including demographic information (e.g. culture, knowledge)
+-	defines and estimates the size of the population strata (if applicable)
+-	accounts for the principles of research ethics (e.g. informed consent, re-identification risk)
+-	explains and justifies instrument design and choice of scales (e.g. by research objectives or by analogy to similar studies).
+-	validates whether the items, layout, duration, and technology are appropriate (e.g. using pilots, test-retest, or expert and non-expert reviews).
+-	reports how the instrument has evolved through the validation process (if at all)
+-	applies techniques for improving response rates (e.g. incentives, reminders, targeted advertising)
+-	analyzes response bias (quantitatively)
+-	discusses possible effect of incentives (e.g. on voluntariness, response rates, response bias) if used
+-	describes the stratification of the analysis (if stratified sampling is used)
+-	clearly distinguishes evidence-based results from interpretations and speculation 
+
+### Extraordinary Attributes 	
+-	provides feasibility check of the anticipated data analysis techniques
+-	reports on the scale validation in terms of dimensionality, reliability, and validity of measures
+
+
+## General Quality Criteria 
 
 Survey studies should address quantitative quality criteria such
 as **internal validity**, **construct validity**, **external validity**,
 **reliability** and **objectivity** (see **Glossary**).
 
-### Variations {#variations .Standard.Heading}
+## Variations 
 
 -   **Descriptive surveys** provide a detailed account of the properties
     of a phenomenon or population.
@@ -132,7 +71,7 @@ as **internal validity**, **construct validity**, **external validity**,
 -   **Confirmatory surveys** testing formal (e.g. causal) propositions
     to explain a phenomenon.
 
-### Invalid Criticism {#invalid-criticism .Standard.Heading}
+## Invalid Criticism 
 
 -   Not reporting response rate for open public subscription surveys
     (i.e. surveys open to the anonymous public so that everyone with a
@@ -152,7 +91,7 @@ as **internal validity**, **construct validity**, **external validity**,
 -   The results do not accord with the reviewer's personal experience or
     previous studies.
 
-### Suggested Readings {#suggested-readings-5 .Standard.Heading}
+## Suggested Readings 
 
 Don Dillman, Jolene Smyth, and Leah Christian. 2014. Internet, phone,
 mail, and mixed-mode surveys: the tailored design method. John Wiley &
@@ -172,33 +111,33 @@ Methods in Software Engineering, *Springer,* 2020.
 Paul Ralph and Ewan Tempero. 2018. Construct Validity in Software
 Engineering Research and Software Metrics. In *Proceedings of the 22nd
 International Conference on Evaluation and Assessment in Software
-Engineering* 2018 (EASE'18), 13--23. DOI:10.1145/3210459.3210461
+Engineering* 2018 (EASE'18), 13–23. DOI:10.1145/3210459.3210461
 
 Marco Torchiano, Daniel Méndez, Guilherme Horta Travassos, and Rafael
 Maiani de Mello. 2017. Lessons learnt in conducting survey research. In
 *Proceedings of the 5th International Workshop on Conducting Empirical
-Studies in Industry (CESI '17)*, 33--39. DOI:10.1109/CESI.2017.5
+Studies in Industry (CESI '17)*, 33–39. DOI:10.1109/CESI.2017.5
 
 Torchiano Marco and Filippo Ricca. Six reasons for rejecting an
 industrial survey paper. In *2013 1st International Workshop on
-Conducting Empirical Studies in Industry (CESI).* (2013), 21--26.
+Conducting Empirical Studies in Industry (CESI).* (2013), 21–26.
 
-### Exemplars {#exemplars-6 .Standard.Heading}
+## Exemplars 
 
 Jingyue Li, Reidar Conradi, Odd Petter Slyngstad, Marco Torchiano,
 Maurizio Morisio, and Christian Bunse. A State-of-the-Practice Survey on
 Risk Management in Development with Off-The-Shelf Software Components.
-In *IEEE Transactions on Software Engineering*. 34, 2 (2008), 271--286.
+In *IEEE Transactions on Software Engineering*. 34, 2 (2008), 271–286.
 
 D. Méndez Fernández, Stefan Wagner, Marcos Kalinowski, Michael Felderer,
 Priscilla Mafra, Antonio Vetrò, Tayana Conte et al. Naming the Pain in
 Requirements Engineering: Contemporary Problems, Causes, and Effects in
-Practice. In *Empirical software engineering*. 22, 5 (2016), 2298--2338.
+Practice. In *Empirical software engineering*. 22, 5 (2016), 2298–2338.
 
 Paul Ralph, Sebastian Baltes, Gianisa Adisaputri, Richard Torkar,
 Vladimir Kovalenko, Marcos Kalinowski, et al. Pandemic Programming: How
 COVID-19 affects software developers and how their organizations can
-help. In *Empirical Software Engineering*, 25, 6, 2020, 4927--4961. DOI:
+help. In *Empirical Software Engineering*, 25, 6, 2020, 4927–4961. DOI:
 10.1007/s10664-020-09875-y
 
 Stefan Wagner, Daniel Méndez Fernández, Michael Felderer, Antonio Vetrò,
