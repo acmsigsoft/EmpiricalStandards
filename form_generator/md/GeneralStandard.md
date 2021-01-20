@@ -1,12 +1,12 @@
-# The General Standard {#the-general-standard .SectionTitle}
+# The General Standard 
 
-### Application {#application .Standard.Heading}
+## Application {
 
 This general standard applies to all software engineering studies that
 collect and analyze data. It should be complemented by more specific
 guidelines where available.
 
-### Initial Checks (Editor) {#initial-checks-editor .Standard.Heading}
+## Initial Checks (Editor) 
 
 Reviewers should only be invited for papers with the following
 attributes. By assigning reviewers, the editor/chair/administrator is
@@ -28,7 +28,7 @@ confirming that the manuscript meets these criteria:
 -   does not include unattributed verbatim published text (i.e.
     plagiarism)
 
-### Initial Checks (Reviewer) {#initial-checks-reviewer .Standard.Heading}
+### Initial Checks (Reviewer)
 
 Before beginning to review a paper, assigned reviewers should verify the
 following.
@@ -41,101 +41,44 @@ following.
 
 -   paper is clear enough (in language and presentation) to even review
 
-### Specific Attributes {#specific-attributes .Standard.Heading}
+## Specific Attributes 
 
-+----------------+----------------------------------------------------+
-| **Importance** | **Attribute**                                      |
-+----------------+----------------------------------------------------+
-| Essential      | -   states a purpose, problem, objective, or       |
-|                |     research question                              |
-|                |                                                    |
-|                | -   methodology is appropriate (not necessarily    |
-|                |     optimal) for stated purpose or questions       |
-|                |                                                    |
-|                | -   describes in detail *what*, *where*, *when*    |
-|                |     and *how* data were collected                  |
-|                |                                                    |
-|                | -   describes in detail how the data were analyzed |
-|                |                                                    |
-|                | -   discusses and validates assumptions of any     |
-|                |     statistical tests used                         |
-|                |                                                    |
-|                | -   presents results; results directly address     |
-|                |     research questions                             |
-|                |                                                    |
-|                | -   discusses the importance, implications and     |
-|                |     limitations (validity threats) of the study    |
-|                |                                                    |
-|                | -   contributes in some way to the collective body |
-|                |     of knowledge (see **Replications Supplement**) |
-|                |                                                    |
-|                | -   supports claims and conclusions with explicit  |
-|                |     arguments or evidence (data/observations)      |
-|                |                                                    |
-|                | -   defines jargon, acronyms and key concepts      |
-|                |                                                    |
-|                | -   language is not misleading; any grammatical    |
-|                |     problems do not substantially hinder           |
-|                |     understanding                                  |
-|                |                                                    |
-|                | -   visualizations/graphs are not misleading (see  |
-|                |     the **Information Visualization Supplement**)  |
-|                |                                                    |
-|                | -   complies with all applicable **empirical       |
-|                |     standards**                                    |
-+----------------+----------------------------------------------------+
-| Desirable      | -   summarizes and synthesizes a reasonable        |
-|                |     selection of related work                      |
-|                |                                                    |
-|                | -   clearly describes relationship between         |
-|                |     contribution(s) and related work               |
-|                |                                                    |
-|                | -   states epistemological stance (e.g.            |
-|                |     post-positivism, interpretivism, critical      |
-|                |     realism)                                       |
-|                |                                                    |
-|                | -   appropriate statistical power (for             |
-|                |     quantitative work) or saturation (for          |
-|                |     qualitative work)                              |
-|                |                                                    |
-|                | -   reasonable attempts to investigate or mitigate |
-|                |     limitations                                    |
-|                |                                                    |
-|                | -   discusses study's realism, assumptions and     |
-|                |     sensitivity of the results to the              |
-|                |     realism/assumptions                            |
-|                |                                                    |
-|                | -   provides plausibly useful interpretations or   |
-|                |     recommendations for practice, education or     |
-|                |     research                                       |
-|                |                                                    |
-|                | -   openly shares data and materials to the extent |
-|                |     possible within practical and ethical limits   |
-|                |                                                    |
-|                | -   concise, precise, well-organized and           |
-|                |     easy-to-read presentation                      |
-|                |                                                    |
-|                | -   visualizations (e.g. graphs, diagrams, tables) |
-|                |     advance the paper's arguments or contribution  |
-|                |                                                    |
-|                | -   clarifies the roles and responsibilities of    |
-|                |     the researchers (i.e. who did what?)           |
-|                |                                                    |
-|                | -   provides an auto-reflection or assessment of   |
-|                |     the authors' own work (e.g. lessons learned)   |
-+----------------+----------------------------------------------------+
-| Extraordinary  | -   applies two or more data collection or         |
-|                |     analysis strategies to the same research       |
-|                |     question (see **Multimethodology Supplement**) |
-|                |                                                    |
-|                | -   approaches the same research question(s) from  |
-|                |     multiple epistemological perspectives          |
-|                |                                                    |
-|                | -   innovates on research methodology while        |
-|                |     completing an empirical study                  |
-+----------------+----------------------------------------------------+
+### Essential Attributes 
+-	states a purpose, problem, objective, or research question
+-	methodology is appropriate (not necessarily optimal) for stated purpose or questions
+-	describes in detail what, where, when and how data were collected
+-	describes in detail how the data were analyzed
+-	discusses and validates assumptions of any statistical tests used 
+-	presents results; results directly address research questions
+-	discusses the importance, implications and limitations (validity threats) of the study
+-	contributes in some way to the collective body of knowledge (see Replications Supplement)
+-	supports claims and conclusions with explicit arguments or evidence (data/observations)
+-	defines jargon, acronyms and key concepts
+-	language is not misleading; any grammatical problems do not substantially hinder understanding
+-	visualizations/graphs are not misleading (see the Information Visualization Supplement)
+-	complies with all applicable empirical standards
 
-### General Quality Criteria {#general-quality-criteria .Standard.Heading}
+### Desirable Attributes 
+-	summarizes and synthesizes a reasonable selection of related work
+-	clearly describes relationship between contribution(s) and related work
+-	states epistemological stance (e.g. post-positivism, interpretivism, critical realism)
+-	appropriate statistical power (for quantitative work) or saturation (for qualitative work)
+-	reasonable attempts to investigate or mitigate limitations
+-	discusses study’s realism, assumptions and sensitivity of the results to the realism/assumptions
+-	provides plausibly useful interpretations or recommendations for practice, education or research
+-	openly shares data and materials to the extent possible within practical and ethical limits
+-	concise, precise, well-organized and easy-to-read presentation
+-	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
+-	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
+-	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
+
+### Extraordinary Attributes 	
+-	applies two or more data collection or analysis strategies to the same research question (see Multimethodology Supplement)
+-	approaches the same research question(s) from multiple epistemological perspectives
+-	innovates on research methodology while completing an empirical study
+
+
+## General Quality Criteria 
 
 There are no universal quality criteria. Each study should be assessed
 against quality criteria appropriate for its methodology, as laid out in
@@ -143,7 +86,7 @@ the specific **empirical standards**. Avoid applying inappropriate
 quality criteria (e.g. construct validity to a study with no constructs;
 internal validity to a study with no causal relationships).
 
-### Examples of Acceptable Deviations {#examples-of-acceptable-deviations .Standard.Heading}
+### Examples of Acceptable Deviations 
 
 A study can only apply an **empirical standard** if an appropriate
 standard exists. If no related standards exist, studies should apply
@@ -151,7 +94,7 @@ published guidance. If no appropriate guidance exists, reviewers should
 apply the general standard and construct an ad hoc evaluation scheme for
 the new method.
 
-### Good Review Practices {#good-review-practices .Standard.Heading}
+## Good Review Practices 
 
 Reviewers evaluate a manuscripts' trustworthiness, importance and
 clarity. The results must be, primarily, true (trustworthy) and,
@@ -169,7 +112,7 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Identify parts of the paper that you cannot effectively judge or did
     not review.
 
-### Invalid Criticisms and Reviewing Antipatterns {#invalid-criticisms-and-reviewing-antipatterns .Standard.Heading}
+## Invalid Criticisms and Reviewing Antipatterns
 
 -   Applying empirical standards in a mechanical, inflexible,
     box-ticking or gotcha-like manner.
@@ -208,7 +151,7 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Rejecting a study because the reviewer would have used a different
     methodology or design.
 
-### Research and Reporting Antipatterns {#research-and-reporting-antipatterns .Standard.Heading}
+## Research and Reporting Antipatterns
 
 -   Attempting a study without reading, understanding and applying
     published guidelines for that kind of study.
@@ -234,4 +177,4 @@ their trustworthiness and importance. Reviewers should endeavor to:
     rather than analyzing and synthesizing related work.
 
 -   Acknowledging limitations but then writing implications and
-    conclusions as though the limitations don't exist.
+    conclusions as though the limitations don't exist
