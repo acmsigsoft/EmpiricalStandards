@@ -1,8 +1,8 @@
-## Qualitative Surveys (Interview Studies) {#qualitative-surveys-interview-studies .Standard.Title}
+# Qualitative Surveys (Interview Studies) 
 
 Research comprising semi-structured or open-ended interviews
 
-### Application {#application-5 .Standard.Heading}
+## Application 
 
 This standard applies to empirical inquiries that meet all of the
 following criteria:
@@ -23,70 +23,31 @@ organization, consider the **Case Study Standard**. If researchers
 collect written text or conversations (e.g. StackExchange threads),
 consider the **Discourse Analysis Standard**.
 
-### Specific Attributes {#specific-attributes-5 .Standard.Heading}
+## Specific Attributes
 
-+----------------+----------------------------------------------------+
-| **Importance** | **Attribute**                                      |
-+----------------+----------------------------------------------------+
-| Essential      | -   explains how interviewees were selected (i.e.  |
-|                |     sampling strategy; see **The Sampling          |
-|                |     Supplement**)                                  |
-|                |                                                    |
-|                | -   describes interviewees (e.g. demographics,     |
-|                |     work roles)                                    |
-|                |                                                    |
-|                | -   presents clear chain of evidence from          |
-|                |     interviewee quotations to proposed concepts    |
-+----------------+----------------------------------------------------+
-| Desirable      | -   includes highly diverse participants           |
-|                |                                                    |
-|                | -   uses direct quotations extensively to support  |
-|                |     key points                                     |
-|                |                                                    |
-|                | -   EITHER: evaluates an a priori theory (or       |
-|                |     model, framework, taxonomy, etc.) using        |
-|                |     deductive coding with an a priori coding       |
-|                |     scheme based on the prior theory\              |
-|                |     OR: synthesizes results into a new, mature,    |
-|                |     fully-developed and clearly articulated theory |
-|                |     (or model, etc.) using some form of inductive  |
-|                |     coding (coding scheme generated from data)     |
-|                |                                                    |
-|                | -   validates results (e.g. using member checking  |
-|                |     or dialogical interviewing[^15])               |
-|                |                                                    |
-|                | -   EITHER uses audits (inductive coding)\         |
-|                |     OR uses multiple coders and reports agreement  |
-|                |     statistics (deductive coding)                  |
-|                |                                                    |
-|                | -   provides supplemental materials including      |
-|                |     interview guide(s), coding schemes, coding     |
-|                |     examples, decision rules, extended             |
-|                |     chain-of-evidence table(s)                     |
-|                |                                                    |
-|                | -   discusses transferability; findings plausibly  |
-|                |     transferable to different contexts             |
-|                |                                                    |
-|                | -   compares results with (or integrates them      |
-|                |     into) prior theory or related research         |
-|                |                                                    |
-|                | -   reflects on how researchers' biases may have   |
-|                |     affected their analysis                        |
-+----------------+----------------------------------------------------+
-| Extraordinary  | -   employs multiple methods of data analysis      |
-|                |     (e.g. open coding vs. process coding; manual   |
-|                |     coding vs. automated sentiment analysis) with  |
-|                |     method-triangulation                           |
-|                |                                                    |
-|                | -   employs longitudinal design (i.e. each         |
-|                |     interviewee participates multiple times) and   |
-|                |     analysis                                       |
-|                |                                                    |
-|                | -   employs probabilistic sampling strategy;       |
-|                |     statistical analysis of response bias          |
-+----------------+----------------------------------------------------+
+### Essential Attributes	
+-	explains how interviewees were selected (i.e. sampling strategy; see The Sampling Supplement)
+-	describes interviewees (e.g. demographics, work roles)
+-	presents clear chain of evidence from interviewee quotations to proposed concepts
 
-### General Quality Criteria {#general-quality-criteria-4 .Standard.Heading}
+### Desirable Attributes		
+-	includes highly diverse participants 
+-	uses direct quotations extensively to support key points
+-	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
+-	validates results (e.g. using member checking or dialogical interviewing )
+-	EITHER uses audits (inductive coding) OR uses multiple coders and reports agreement statistics (deductive coding)
+-	provides supplemental materials including interview guide(s), coding schemes, coding examples, decision rules, extended chain-of-evidence table(s) 
+-	discusses transferability; findings plausibly transferable to different contexts
+-	compares results with (or integrates them into) prior theory or related research
+-	reflects on how researchers’ biases may have affected their analysis
+
+### Extraordinary Attributes		
+-	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
+-	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis 
+-	employs probabilistic sampling strategy; statistical analysis of response bias
+
+
+## General Quality Criteria
 
 An interview study should address appropriate qualitative quality
 criteria such as: **credibility,** **resonance**, **usefulness**, and
@@ -94,7 +55,7 @@ criteria such as: **credibility,** **resonance**, **usefulness**, and
 such as internal validity, construct validity, generalizability and
 reliability typically do not apply.
 
-### Examples of Acceptable Deviations {#examples-of-acceptable-deviations-3 .Standard.Heading}
+## Examples of Acceptable Deviations
 
 -   In a study of deaf software developers, the interviews are conducted
     via text messages.
@@ -106,7 +67,7 @@ reliability typically do not apply.
 -   In a study of barriers faced by gay developers, participants are all
     gay (but should be diverse on other dimensions).
 
-### Antipatterns {#antipatterns-4 .Standard.Heading}
+## Antipatterns 
 
 -   Interviewing a small number of similar people, creating the illusion
     of convergence and saturation
@@ -114,7 +75,7 @@ reliability typically do not apply.
 -   Mis-presenting a qualitative survey as grounded theory or a case
     study.
 
-### Invalid Criticisms {#invalid-criticisms-4 .Standard.Heading}
+## Invalid Criticisms 
 
 -   Lack of quantitative data; causal analysis; objectivity, internal
     validity, reliability, or generalizability.
@@ -128,12 +89,12 @@ reliability typically do not apply.
 -   Failure to apply grounded theory or case study practices. A
     qualitative survey is not grounded theory or a case study.
 
-### Notes {#notes .Standard.Heading}
+## Notes 
 
 -   A qualitative survey generally has more interviews than a case study
     that triangulates across different kinds of data.
 
-### Suggested Readings {#suggested-readings-4 .Standard.Heading}
+## Suggested Readings 
 
 Michael Quinn Patton. 2002. *Qualitative Research and Evaluation
 Methods*. 3rd ed. Sage Publications.
@@ -144,19 +105,19 @@ The art of hearing data*. Sage.
 Johnny Saldaña. 2015. *The coding manual for qualitative researchers*.
 Sage.
 
-### Exemplars {#exemplars-4 .Standard.Heading}
+## Exemplars 
 
 Marian Petre. 2013. UML in practice. In *Proceedings of the 35th
 International Conference on Software Engineering,* San Francisco, USA,
-722-731.
+722–731.
 
 Paul Ralph and Paul Kelly. 2014. The dimensions of software engineering
 success. In *Proceedings of the 36th International Conference on
 Software Engineering (ICSE 2014)*. Association for Computing Machinery,
-New York, NY, USA, 24--35. DOI: 10.1145/2568225.2568261
+New York, NY, USA, 24–35. DOI: 10.1145/2568225.2568261
 
 Paul Ralph and Ewan Tempero. 2016. Characteristics of decision-making
 during coding. In *Proceedings of the 20th International Conference on
 Evaluation and Assessment in Software Engineering (EASE '16).*
 Association for Computing Machinery, New York, NY, USA, Article 34,
-1--10. DOI:10.1145/2915970.2915990
+1–10. DOI:10.1145/2915970.2915990
