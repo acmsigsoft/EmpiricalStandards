@@ -1,4 +1,5 @@
 # Experiments (with Human Participants) 
+<standard name="Experiments (with Human Participants)">
 
 A study in which an intervention is deliberately introduced to observe
 its effects on some aspects of reality under controlled conditions
@@ -24,7 +25,9 @@ Science Standard** or the **Engineering Research Standard**.
 
 ## Specific Attributes 
 
-### Essential Attributes	
+### Essential Attributes
+<checklist name="Essential">
+
 -	describes how characteristics of phenomenon under investigation relate to experimental constructs
 -	states formal hypotheses 
 -	justifies use of one-sided hypotheses (if any) based on face validity or previous work
@@ -42,8 +45,11 @@ Science Standard** or the **Engineering Research Standard**.
 -	EITHER: shares raw, de-identified data OR: explains why sharing raw data is impractical or unethical
 -	discusses construct, conclusion internal and external validity
 -	discusses alternative interpretations of results
+</checklist>
+     
+### Desirable Attributes
+<checklist name="Desirable">
 
-### Desirable Attributes		
 -	justifies hypotheses and Bayesian priors (if applicable) based on previous studies and theory
 -	discusses alternative experimental designs and why they were not used (e.g. validity trade-offs)
 -	includes visualizations of data distributions
@@ -55,12 +61,15 @@ Science Standard** or the **Engineering Research Standard**.
 -	analyzes construct validity of dependent variable
 -	uses and reports manipulation checks
 -	pre-registration of hypotheses and design where venue allows
+</checklist>
+     
+### Extraordinary Attributes
+<checklist name="Extraordinary">
 
-### Extraordinary Attributes		
 -   reports multiple experiments or replications in different cultures or regions 
 -	uses multiple methods of data collection; data triangulation
 -	longitudinal data collection with appropriate time-series analysis
-
+<checklist>
 
 ## General Quality Criteria 
 

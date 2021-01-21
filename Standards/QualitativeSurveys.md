@@ -1,5 +1,5 @@
 # Qualitative Surveys (Interview Studies) 
-
+<standard name="Qualitative Surveys (Interview Studies)">
 Research comprising semi-structured or open-ended interviews
 
 ## Application 
@@ -26,11 +26,16 @@ consider the **Discourse Analysis Standard**.
 ## Specific Attributes
 
 ### Essential Attributes	
+<checklist name="Essential">
+
 -	explains how interviewees were selected (i.e. sampling strategy; see The Sampling Supplement)
 -	describes interviewees (e.g. demographics, work roles)
 -	presents clear chain of evidence from interviewee quotations to proposed concepts
+</checklist>
+     
+### Desirable Attributes	
+<checklist name="Desirable">
 
-### Desirable Attributes		
 -	includes highly diverse participants 
 -	uses direct quotations extensively to support key points
 -	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
@@ -40,12 +45,15 @@ consider the **Discourse Analysis Standard**.
 -	discusses transferability; findings plausibly transferable to different contexts
 -	compares results with (or integrates them into) prior theory or related research
 -	reflects on how researchers’ biases may have affected their analysis
+</checklist>
+     
+### Extraordinary Attributes	
+<checklist name="Extraordinary">
 
-### Extraordinary Attributes		
 -	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
 -	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis 
 -	employs probabilistic sampling strategy; statistical analysis of response bias
-
+</checklist>
 
 ## General Quality Criteria
 

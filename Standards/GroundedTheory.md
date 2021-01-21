@@ -1,4 +1,5 @@
 # Grounded Theory
+<standard name="Grounded Theory">
 
 A study of a specific area of interest or phenomenon that involves
 iterative and interleaved rounds of qualitative data collection and
@@ -23,6 +24,7 @@ collection and analysis or do not use theoretical sampling, consider the
 **Case Study Standard** or the **Qualitative Survey Standard**.
 
 ## Specific Attributes 
+<checklist name="Essential">
 
 ### Essential Attributes 
 -	identifies the version of Grounded Theory used/adapted (Glaser, Strauss-Corbin, Charmaz, etc.)
@@ -31,8 +33,11 @@ collection and analysis or do not use theoretical sampling, consider the
 -	provides evidence of saturation; explains how saturation was achieved
 -	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
 -	provides clear chain of evidence from raw data (e.g. interviewee quotations) to derived codes, concepts, and categories
-
+</checklist>
+     
 ### Desirable Attributes 
+<checklist name="Desirable">
+
 -	explains how and why study adapts or deviates from claimed GT version
 -	presents a mature, fully-developed theory or taxonomy
 -	includes highly diverse participants and/or data sources (e.g. software repositories, forums)
@@ -45,11 +50,14 @@ collection and analysis or do not use theoretical sampling, consider the
 -	explains theoretical sampling vis-à-vis the interplay between the sampling process, the emerging findings, and theoretical gaps perceived therein
 -	reflects on how researcher’s biases may have affected their analysis 
 -	explains the role of literature, especially where an extensive review preceded the GT study
-
+</checklist>
+     
 ### Extraordinary Attributes 
+<checklist name="Extraordinary">
+
 -	triangulates with extensive quantitative data (e.g. questionnaires, sentiment analysis) 
 -	employs a team of researchers and explains their roles 
-
+</checklist>
 
 ## Quality Criteria 
 

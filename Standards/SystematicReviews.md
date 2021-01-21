@@ -1,5 +1,5 @@
 # Systematic Reviews 
-
+<standard name="Systematic Reviews">
 A study that appraises, analyses, and synthesizes primary or secondary
 literature to provide a complete, exhaustive summary of current evidence
 regarding one or more specific topics or research questions
@@ -15,6 +15,7 @@ regarding one or more specific topics or research questions
     advanced qualitative synthesis methods (e.g. meta-ethnography)
 
 ## Specific Attributes 
+<checklist name="Essential">
 
 ### Essential Attributes 
 -	presents step-by-step, systematic, replicable description of search process including search terms  
@@ -25,8 +26,11 @@ regarding one or more specific topics or research questions
 -	clear chain of evidence from the extracted data to the answers to the research question(s)
 -	presents conclusions or recommendations for practitioners/non-specialists
 -	identifies method (e.g. systematic review, meta-analysis, mapping study, narrative synthesis, etc.)
+</checklist>
 
-### Desirable Attributes 	
+### Desirable Attributes 
+<checklist name="Desirable">
+
 -	provides replication package including protocol, search terms, search results, selection process results; complete dataset, analysis scripts; examples of coding, decision rules or edge cases
 -	mitigates sampling bias and publication bias, using some combination of: (i) manual and keyword automated searches; (ii) backward and forward snowballing searches; (iii) checking profiles of prolific authors in the area; (iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar); (v) searching for relevant dissertations; (vi) searching pre-print servers (e.g. arXiv); (iiv) soliciting unpublished manuscripts through appropriate listservs or social media; (iiiv) contacting known authors in the area. 
 -	demonstrates that the search process is sufficiently rigorous for the systematic review goals  
@@ -39,11 +43,14 @@ regarding one or more specific topics or research questions
 -	uses meta-analysis methods appropriate for primary studies; does not use vote counting 
 -	integrates results into prior theory or research; identifies gaps, biases, or future directions
 -	presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
+</checklist>
+     
+### Extraordinary Attributes
+<checklist name="Extraordinary">
 
-### Extraordinary Attributes 	
 -	two or more researchers independently undertaking the preliminary search process before finalizing the search scope and search keywords
 -	contacted primary study authors to ensure interpretations are correct, and elicit additional details not found in the papers such as access to raw data
-
+</checklist>
 
 ## Examples of Acceptable Deviations 
 

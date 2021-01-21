@@ -1,4 +1,5 @@
 # Questionnaire Surveys 
+<standard name="Questionnaire Surveys">
 
 A study in which a sample of respondents answer a series of questions,
 typically through a computerized or paper form and mostly structured
@@ -23,7 +24,9 @@ typically given to participants in controlled experiments (see the
 
 ## Specific Attributes 
 
-### Essential Attributes 	
+### Essential Attributes 
+<checklist name="Essential">
+
 -	identifies the target population & defines the sampling strategy (see the Sampling Supplement)
 -	provides questionnaire instrument (e.g. as supplemental file)
 -	EITHER: provides study artifacts; i.e., instrument(s), code books, analysis scripts and dataset(s) (addressing potential anonymity and confidentiality issues) OR: describes in detail study artifacts and justifies why they are not provided
@@ -35,8 +38,11 @@ typically given to participants in controlled experiments (see the
 -	explains handling of missing data (e.g. imputation, weighting adjustments, discarding)
 -	acknowledges generalizability threats; discusses how respondents may differ from target population
 -	analyzes response rates
-
+</checklist>
+     
 ### Desirable Attributes 	
+<checklist name="Desirable">
+
 -	characterizes the target population including demographic information (e.g. culture, knowledge)
 -	defines and estimates the size of the population strata (if applicable)
 -	accounts for the principles of research ethics (e.g. informed consent, re-identification risk)
@@ -47,12 +53,15 @@ typically given to participants in controlled experiments (see the
 -	analyzes response bias (quantitatively)
 -	discusses possible effect of incentives (e.g. on voluntariness, response rates, response bias) if used
 -	describes the stratification of the analysis (if stratified sampling is used)
--	clearly distinguishes evidence-based results from interpretations and speculation 
-
+-	clearly distinguishes evidence-based results from interpretations and speculation
+ </checklist>
+     
 ### Extraordinary Attributes 	
+<checklist name="Extraordinary">
+
 -	provides feasibility check of the anticipated data analysis techniques
 -	reports on the scale validation in terms of dimensionality, reliability, and validity of measures
-
+</checklist>
 
 ## General Quality Criteria 
 

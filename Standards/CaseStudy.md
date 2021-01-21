@@ -1,4 +1,5 @@
 # Case Study and Ethnography 
+<standard name="Case Study and Ethnography">
 
 "An empirical inquiry that investigates a contemporary phenomenon (the
 "case") in depth and within its real-world context, especially when the
@@ -35,6 +36,8 @@ captures a large quantitative dataset with limited context, consider the
 ## Specific Attributes 
 
 ### Essential Attributes
+<checklist name="Essential">
+
 -   explains why the case study approach is appropriate for the research question
 
 -   justifies the selection of the case or site that was studied
@@ -46,8 +49,11 @@ captures a large quantitative dataset with limited context, consider the
 -   presents a clear and well-argued "chain of evidence" from observations to findings
 
 -   clearly answers the research question(s)
-
+</checklist
+    
 ### Desirable Attributes
+<checklist name="Desirable">
+
 -   reports the type of case study (see *Types of Case Studies*, below)
 
 -   describes external events and other factors that may have affected the case or site
@@ -57,8 +63,11 @@ captures a large quantitative dataset with limited context, consider the
 -   cross-checks interviewee statements (e.g. against direct observation or archival records)
 
 -   uses quotations to *illustrate* findings (note: quotations should not be *the only* representation of a finding; each finding should be described independently of supporting quotations)
-
+</checklist>
+    
 ### Extraordinary Attributes
+<checklist name="Extraordinary">
+
 -   multiple, deep, fully-developed cases with cross-case triangulation
 
 -   uses multiple judges and reports inter-rater reliability (cf. Gwet & Gwet 2002)
@@ -66,7 +75,8 @@ captures a large quantitative dataset with limited context, consider the
 -   uses direct observation and clearly integrates direct observations into results
 
 -   created a case study protocol beforehand and makes it publicly accessible
-
+</checklist>
+    
 ## General Quality Criteria 
 
 Case studies should be evaluated using qualitative validity criteria

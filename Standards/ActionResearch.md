@@ -1,4 +1,5 @@
 # Action Research 
+<standard name="Action Research">
 
 Empirical research that investigates how an intervention, like the
 introduction of a method or tool, affects a real-life context
@@ -28,6 +29,7 @@ standards.
 
 ## Specific Attributes
 ### Essential Attributes
+<checklist name="Essential">
 
 -	describes the context or site of the intervention(s)
 
@@ -52,8 +54,11 @@ standards.
 -   reports lessons learned by the organization
 
 -   researchers reflect on their own possible biases
-
+</checklist>
+    
 ### Desirable Attributes
+<checklist name="Desirable">
+
 -	uses direct quotations extensively
 
 -   uses member checking to assess resonance
@@ -61,11 +66,14 @@ standards.
 -   findings plausibly transferable to other contexts
 
 -   triangulation across quantitative and qualitative data
-
+</checklist>
+    
 ### Extraordinary Attributes
+<checklist name="Extraordinary">
 
 -	research team with triangulation across researchers (to mitigate researcher bias)
-
+</checklist>
+     
 ## General Quality Criteria 
 
 Example criteria include reflexivity, credibility, resonance, usefulness

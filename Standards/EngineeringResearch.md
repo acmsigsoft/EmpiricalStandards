@@ -1,4 +1,5 @@
 # Engineering Methods 
+<standard name="Engineering Methods">
 
 ## Engineering Research (AKA Design Science) 
 
@@ -20,6 +21,8 @@ standard is not appropriate for:
 ## Specific Attributes
 
 ### Essential Attributes
+<checklist name="Essential">
+
 -   describes the proposed artifact in adequate detail^1^
 
 -   justifies the need for, usefulness of, or relevance of the proposed artifact^2^
@@ -38,8 +41,11 @@ standard is not appropriate for:
 -   assumptions (if any) are explicit; do not contradict each other or the contribution's goals; plausibly hold for the evaluation subjects
 
 -   uses notation consistently (if any notation is used)
-
+</checklist>
+    
 ### Desirable Attributes
+<checklist name="Desirable">
+
 -   reviews the theoretical basis of the artifact
 
 -   provides correctness arguments of the key analytical and theoretical contributions (e.g. theorems, complexity analyses, mathematical proofs)
@@ -51,12 +57,15 @@ standard is not appropriate for:
 -   provides a replication package including datasets and analytical scripts and EITHER a comprehensive description of the artifact OR source code if artifact is virtual
 
 -   justifies any items missing from replication package based on practical or ethical grounds.
-
+</checklist>
+    
 ### Extraordinary Attributes
+<checklist name="Extraordinary">
 -   contributes to our collective understanding of design practices or principles
 
 -   presents ground-breaking innovations with obvious real-world benefits
-
+</checklist>
+    
 ## General Quality Criteria 
 
 -   Comprehensiveness of proposed artifact description
