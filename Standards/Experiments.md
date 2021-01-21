@@ -34,7 +34,8 @@ Science Standard** or the **Engineering Research Standard**.
 -	describes independent, dependent and extraneous variables; how extraneous vars are controlled
 -	describes the research design and protocol including treatments, materials, tasks, design (e.g. 2x2 factorial), participant allocation, period and sequences (for crossover designs), and logistics
 -	design and protocol appropriate (not optimal) for stated research questions and hypotheses
--	EITHER: uses random assignment; explains logistics (e.g. how random numbers were generated) OR: justifies why random assignment is impractical or unethical (compelling reason needed); and mitigates unequal groups threat to validity (e.g. using pre-test/post-test and matched subjects design)
+-	EITHER: uses random assignment; explains logistics (e.g. how random numbers were generated)  \
+     OR: justifies why random assignment is impractical or unethical (compelling reason needed); and mitigates unequal groups threat to validity (e.g. using pre-test/post-test and matched subjects design)
 -	describes experimental objects (e.g. real or toy system) and their characteristics (e.g. size, type); 
 -	justifies selection of experimental objects; checks for object-treatment confounds 
 -	describes and justifies how the dependent variable is measured (including units, instruments) 
@@ -42,7 +43,8 @@ Science Standard** or the **Engineering Research Standard**.
 -	describes participants (e.g. age, gender, education, relevant experience or preferences)
 -	reports distribution-appropriate descriptive and inferential statistics; enumerates and checks assumptions ; justifies tests used
 -	reports effects sizes with confidence intervals (if using frequentist approach)
--	EITHER: shares raw, de-identified data OR: explains why sharing raw data is impractical or unethical
+-	EITHER: shares raw, de-identified data  \
+     OR: explains why sharing raw data is impractical or unethical
 -	discusses construct, conclusion internal and external validity
 -	discusses alternative interpretations of results
 </checklist>
@@ -114,8 +116,8 @@ objectivity, reproducibility
 
 ## Suggested Reading
 
-Nathaniel L. Gage and Julian C. Stanley. 1963. Experimental and
-Quasi-experimental Designs For Research. Chicago: R. McNally.
+Donald Campbell and Julian C. Stanley. 1963. *Experimental and
+Quasi-experimental Designs For Research.* Boston: Houghton Mifflin.
 
 Andreas Jedlitschka, Marcus Ciolkowski, and Dietmar Pfahl. 2008.
 Reporting Experiments in Software Engineering. *Guide to Advanced
