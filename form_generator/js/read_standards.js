@@ -7,13 +7,12 @@ function getParameterByName(name, url = window.location.href){
     return a;
 }
 
-function readEmpiricalStandards(){
+function readAllEmpiricalStandards(){
     var mdFile = new XMLHttpRequest();
     var loc = window.location.pathname;
     var dir = loc.substring(0, loc.lastIndexOf('/'));
 	var empirical_standards = "";
-    mdFile.open("GET", dir + "/md/empiricalStandards.md", false);
-    keys = getParameterByName('standard');
+    //mdFile.open("GET", dir + "/md/empiricalStandards.md", false);
     mdFile.onreadystatechange = function(){
         if (mdFile.readyState === 4){
             if (mdFile.status === 200  || mdFile.status == 0)
@@ -28,16 +27,37 @@ function readEmpiricalStandards(){
 	return empirical_standards;
 }
 
+function readSpecificEmpiricalStandards(standard_name){
+    var mdFile = new XMLHttpRequest();
+    var loc = window.location.pathname;
+    var dir = loc.substring(0, loc.lastIndexOf('/'));
+	var standard_file_name = standard_name.replaceAll("\"", "").replace(" ", "");
+	var standard_file_path = "/EmpiricalStandards/Standards/" + standard_file_name + ".md";
+	var empirical_standard = "";
+    mdFile.open("GET", standard_file_path, false);
+    mdFile.onreadystatechange = function(){
+        if (mdFile.readyState === 4){
+            if (mdFile.status === 200  || mdFile.status == 0)
+                empirical_standard = mdFile.responseText;
+			else
+				alert("Can't read " + standard_file_name + ".md");
+        }
+		else
+			alert("Can't read " + standard_file_name + ".md");
+	}
+	mdFile.send(null);
+	return empirical_standard;
+}
+
 function convert_checklists_to_checkboxes(standardName, checklistName, checklistText){
 	var checkboxes = document.createElement("UL");
 	checkboxes.style = "list-style-type:none;list-style-position: inside; text-indent: -1.5em;";
-
 	lines = checklistText.split("<br/>");
 	var i = 0;
 	for(let line of lines){
-		line_text = line.trim().replace("- ", "").replace("-\t", " ").replace("---", "&mdash;").replace(/\^[0-9]+\^/, "");
-		if (line_text != ""){
+		if (line.startsWith("-")){
 			i++;
+			line_text = line.trim().replace("- ", "").replace("-\t", " ").replace("---", "&mdash;").replaceAll("[[OR]]", "<br/>OR");//.replace(/\^[0-9]+\^/, "");
 			checkbox_id = standardName + "-" + checklistName + ":" + i;
 			var checkboxLI = document.createElement("LI");
 			var checkboxInput = document.createElement("input");
@@ -58,37 +78,36 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 	}
 	return checkboxes;
 }
+
 function generateStandardChecklist(){
-    empirical_standards = readEmpiricalStandards()
-	var dom = document.createElement("div");
-	dom.innerHTML = empirical_standards;
-	var standardTags = dom.getElementsByTagName("standard");
+	keys = getParameterByName('standard');
 	var form = document.createElement("FORM");
 	form.id = "checklists";
 	form.name = "checklists";
-	for (let standardTag of standardTags){
+    for (let key of keys){
+		empirical_standard = readSpecificEmpiricalStandards(key);
+		var dom = document.createElement("div");
+		dom.innerHTML = empirical_standard;
+		var standardTag = dom.getElementsByTagName("standard")[0];
 		let standardName = "\"" + standardTag.getAttribute('name') + "\"";
-		if (keys.includes(standardName)){
-			var standardTitle = document.createElement("H2");
-			standardTitle.innerHTML = standardName.replaceAll("\"", "");
-			form.appendChild(standardTitle);
-			var checklistTags = standardTag.getElementsByTagName("checklist");
-
-			for (let checklistTag of checklistTags){
-				var checklistTitleUL = document.createElement("UL");
-				var checklistTitle = document.createElement("H3");
-				checklistTitle.innerHTML = checklistTag.getAttribute('name')
-				checklistTitleUL.appendChild(checklistTitle);
-				
-				// Reformat the checklists
-				checklistText = checklistTag.innerText.replaceAll("[ ]", "").
-													   replaceAll(">", "").
-													   replaceAll("\n\n", "<br/>").replaceAll("\n- ", "<LI>");
-				
-				checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText)
-				checklistTitleUL.appendChild(checkboxes);
-				form.appendChild(checklistTitleUL);
-			}
+		var standardTitle = document.createElement("H2");
+		standardTitle.innerHTML = standardName.replaceAll("\"", "");
+		form.appendChild(standardTitle);
+		var checklistTags = standardTag.getElementsByTagName("checklist");
+		for (let checklistTag of checklistTags){
+			var checklistTitleUL = document.createElement("UL");
+			var checklistTitle = document.createElement("H3");
+			checklistTitle.innerHTML = checklistTag.getAttribute('name')
+			checklistTitleUL.appendChild(checklistTitle);
+			
+			// Reformat the checklists from MD to HTML
+			checklistText = checklistTag.innerText.replaceAll(">", "").
+												   replaceAll(/\\\n\s*OR/ig, "[[OR]]").
+												   replaceAll("\n", "<br/>");
+												   
+			checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText)
+			checklistTitleUL.appendChild(checkboxes);
+			form.appendChild(checklistTitleUL);
 		}
 	}
 	var submit = document.createElement("input");
