@@ -12,20 +12,14 @@ guidelines where available.
 Reviewers should only be invited for papers with the following
 attributes. By assigning reviewers, the editor/chair/administrator is
 confirming that the manuscript meets these criteria:
-
 -   meets venue's requirements (e.g. length, author-blinding,
     appropriate keywords)
-
 -   within the venue's scope
-
 -   meets the minimum level of language quality acceptable to the
     journal
-
 -   cites other scholarly works
-
 -   presents new analysis not previously published in a peer-reviewed
     venue (i.e. preprints are fine)
-
 -   does not include unattributed verbatim published text (i.e.
     plagiarism)
 
@@ -33,13 +27,10 @@ confirming that the manuscript meets these criteria:
 
 Before beginning to review a paper, assigned reviewers should verify the
 following.
-
 -   reviewer has no conflicts of interest; if unsure, check with the
     chair or editor
-
 -   reviewer has sufficient expertise; if unsure, check with the chair
     or editor and clarify what you can(not) evaluate
-
 -   paper is clear enough (in language and presentation) to even review
 
 ## Specific Attributes 
@@ -112,81 +103,56 @@ if it is not important. A paper that is not trustworthy cannot be
 accepted, even if it seems important. Papers that are both trustworthy
 and important can have priority. Papers must be clear enough to judge
 their trustworthiness and importance. Reviewers should endeavor to:
-
 -   Reflect on and clearly state their own limitations and biases.
-
 -   Clarify which are necessary and which are suggested changes.
     Ideally, separate them.
-
 -   Identify parts of the paper that you cannot effectively judge or did
     not review.
 
 ## Invalid Criticisms and Reviewing Antipatterns
-
 -   Applying empirical standards in a mechanical, inflexible,
     box-ticking or gotcha-like manner.
-
 -   Rejecting a study because it uses a methodology for which no
     specific standard is available.
-
 -   Skimming a manuscript instead of carefully reading each word and
     inspecting each figure and table.
-
 -   Unprofessional or vitriolic tone, ad hominem attacks, disparaging or
     denigrating comments.
-
 -   Allowing the authors' identities or affiliations to affect the
     review.
-
 -   Focusing on superficial details of paper without engaging with its
     main claims or results.
-
 -   Stating that a study: (i) lacks detail without enumerating missing
     details; (ii) is of low quality without explaining specific
     problems; or (iii) is not new without providing citations to
     published studies that make the same contribution.
-
 -   Criticizing a study for limitations intrinsic to that kind of study
     or the methodology used.
-
 -   Cross paradigmatic criticism (e.g. attacking an interpretivist study
     for not conforming to positivist norms).
-
 -   Requesting additional analysis not directly related to a study's purpose or research question, 
     leading to results poorly linked to the article’s narrative.
-
 -   Using sub-reviewers when the venue does not explicitly allow it.
-
 -   Using the review to promote the reviewer\'s own views, theories,
     methods, or publications.
-
 -   Rejecting a study because the reviewer would have used a different
     methodology or design.
 
 ## Research and Reporting Antipatterns
-
 -   Attempting a study without reading, understanding and applying
     published guidelines for that kind of study.
-
 -   Unreasonably small, underpowered or limited studies.
-
 -   Hypothesizing After Results are Known (HARKing) in ostensibly
     confirmatory, (post-)positivist research.
-
 -   Reporting only the subset of statistical tests that produce
     significant results (p-hacking).
-
 -   Reporting---together in one paper---several immature or disjointed
     studies instead of one fully-developed study.
-
 -   Unnecessarily dividing the presentation of a single study into many
     papers (salami-slicing).
-
 -   Overreaching conclusions or generalizations; obfuscating,
     downplaying or dismissing a study's limitations.
-
 -   Mentioning related work only to dismiss it as irrelevant; listing
     rather than analyzing and synthesizing related work.
-
 -   Acknowledging limitations but then writing implications and
     conclusions as though the limitations don't exist
