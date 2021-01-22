@@ -22,6 +22,7 @@ standard is not appropriate for:
 
 ### Essential Attributes
 <checklist name="Essential">
+
 -   describes the proposed artifact in adequate detail^1^
 
 -   justifies the need for, usefulness of, or relevance of the proposed artifact^2^
@@ -46,6 +47,7 @@ standard is not appropriate for:
     
 ### Desirable Attributes
 <checklist name="Desirable">
+
 -   reviews the theoretical basis of the artifact
 
 -   provides correctness arguments of the key analytical and theoretical contributions (e.g. theorems, complexity analyses, mathematical proofs)
@@ -61,6 +63,7 @@ standard is not appropriate for:
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
+
 -   contributes to our collective understanding of design practices or principles
 
 -   presents ground-breaking innovations with obvious real-world benefits

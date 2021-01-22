@@ -27,6 +27,7 @@ Science Standard** or the **Engineering Research Standard**.
 
 ### Essential Attributes
 <checklist name="Essential">
+
 -	describes how characteristics of phenomenon under investigation relate to experimental constructs
 
 -	states formal hypotheses 
@@ -66,6 +67,7 @@ Science Standard** or the **Engineering Research Standard**.
      
 ### Desirable Attributes
 <checklist name="Desirable">
+
 -	justifies hypotheses and Bayesian priors (if applicable) based on previous studies and theory
 
 -	discusses alternative experimental designs and why they were not used (e.g. validity trade-offs)
@@ -91,6 +93,7 @@ Science Standard** or the **Engineering Research Standard**.
      
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
+
 -   reports multiple experiments or replications in different cultures or regions 
 
 -	uses multiple methods of data collection; data triangulation

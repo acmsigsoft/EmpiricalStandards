@@ -37,6 +37,7 @@ captures a large quantitative dataset with limited context, consider the
 
 ### Essential Attributes
 <checklist name="Essential">
+
 -   explains why the case study approach is appropriate for the research question
 
 -   justifies the selection of the case or site that was studied
@@ -52,6 +53,7 @@ captures a large quantitative dataset with limited context, consider the
     
 ### Desirable Attributes
 <checklist name="Desirable">
+
 -   reports the type of case study (see *Types of Case Studies*, below)
 
 -   describes external events and other factors that may have affected the case or site
@@ -65,6 +67,7 @@ captures a large quantitative dataset with limited context, consider the
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
+
 -   multiple, deep, fully-developed cases with cross-case triangulation
 
 -   uses multiple judges and reports inter-rater reliability (cf. Gwet & Gwet 2002)

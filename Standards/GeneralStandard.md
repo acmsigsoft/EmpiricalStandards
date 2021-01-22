@@ -44,6 +44,7 @@ following.
 
 ### Essential Attributes 
 <checklist name="Essential">
+
 -	states a purpose, problem, objective, or research question
 
 -	methodology is appropriate (not necessarily optimal) for stated purpose or questions
@@ -73,6 +74,7 @@ following.
      
 ### Desirable Attributes
 <checklist name="Desirable">
+
 -	summarizes and synthesizes a reasonable selection of related work
 
 -	clearly describes relationship between contribution(s) and related work
@@ -100,6 +102,7 @@ following.
      
 ### Extraordinary Attributes 	
 <checklist name="Extraordinary">
+
 -	applies two or more data collection or analysis strategies to the same research question (see Multimethodology Supplement)
 
 -	approaches the same research question(s) from multiple epistemological perspectives

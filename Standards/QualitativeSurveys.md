@@ -27,13 +27,17 @@ consider the **Discourse Analysis Standard**.
 
 ### Essential Attributes	
 <checklist name="Essential">
+
 -	explains how interviewees were selected (i.e. sampling strategy; see The Sampling Supplement)
+
 -	describes interviewees (e.g. demographics, work roles)
+
 -	presents clear chain of evidence from interviewee quotations to proposed concepts
 </checklist>
      
 ### Desirable Attributes	
 <checklist name="Desirable">
+
 -	includes highly diverse participants 
 
 -	uses direct quotations extensively to support key points
@@ -57,6 +61,7 @@ consider the **Discourse Analysis Standard**.
      
 ### Extraordinary Attributes	
 <checklist name="Extraordinary">
+
 -	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
 
 -	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis 

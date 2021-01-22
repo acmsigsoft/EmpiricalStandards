@@ -26,6 +26,7 @@ typically given to participants in controlled experiments (see the
 
 ### Essential Attributes 
 <checklist name="Essential">
+
 -	identifies the target population & defines the sampling strategy (see the Sampling Supplement)
 
 -	provides questionnaire instrument (e.g. as supplemental file)
@@ -53,6 +54,7 @@ typically given to participants in controlled experiments (see the
      
 ### Desirable Attributes 	
 <checklist name="Desirable">
+
 -	characterizes the target population including demographic information (e.g. culture, knowledge)
 
 -	defines and estimates the size of the population strata (if applicable)
@@ -78,6 +80,7 @@ typically given to participants in controlled experiments (see the
      
 ### Extraordinary Attributes 	
 <checklist name="Extraordinary">
+
 -	provides feasibility check of the anticipated data analysis techniques
 
 -	reports on the scale validation in terms of dimensionality, reliability, and validity of measures

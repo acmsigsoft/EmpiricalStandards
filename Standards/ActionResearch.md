@@ -30,6 +30,7 @@ standards.
 ## Specific Attributes
 ### Essential Attributes
 <checklist name="Essential">
+
 -	describes the context or site of the intervention(s)
 
 -   describes the intervention(s) in detail
@@ -57,6 +58,7 @@ standards.
     
 ### Desirable Attributes
 <checklist name="Desirable">
+
 -	uses direct quotations extensively
 
 -   uses member checking to assess resonance
@@ -68,6 +70,7 @@ standards.
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
+
 -	research team with triangulation across researchers (to mitigate researcher bias)
 </checklist>
      

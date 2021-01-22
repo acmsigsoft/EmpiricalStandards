@@ -27,6 +27,7 @@ collection and analysis or do not use theoretical sampling, consider the
 
 ### Essential Attributes 
 <checklist name="Essential">
+
 -	identifies the version of Grounded Theory used/adapted (Glaser, Strauss-Corbin, Charmaz, etc.)
 
 -	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
@@ -42,6 +43,7 @@ collection and analysis or do not use theoretical sampling, consider the
      
 ### Desirable Attributes 
 <checklist name="Desirable">
+
 -	explains how and why study adapts or deviates from claimed GT version
 
 -	presents a mature, fully-developed theory or taxonomy
@@ -69,6 +71,7 @@ collection and analysis or do not use theoretical sampling, consider the
      
 ### Extraordinary Attributes 
 <checklist name="Extraordinary">
+
 -	triangulates with extensive quantitative data (e.g. questionnaires, sentiment analysis) 
 
 -	employs a team of researchers and explains their roles 
