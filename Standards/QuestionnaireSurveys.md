@@ -10,13 +10,12 @@ This guideline applies to studies in which:
 
 -   a sample of participants answer predefined, mostly closed-ended
     questions (typically online or on paper)
-
 -   researchers systematically analyze participants' answers
 
 Surveys can be descriptive, exploratory or confirmatory. Confirmatory
 surveys can test individual propositions or complex theories. This
 standard does not apply to questionnaires comprising predominately
-open-ended questions[^23], literature surveys (see the **Systematic
+open-ended questions<sup>[13](#myfootnote13)</sup>, literature surveys (see the **Systematic
 Review Standard**), longitudinal or repeated measures studies (see the
 **Longitudinal Studies Standard**), or the demographic questionnaires
 typically given to participants in controlled experiments (see the
@@ -28,27 +27,17 @@ typically given to participants in controlled experiments (see the
 <checklist name="Essential">
 
 -	identifies the target population & defines the sampling strategy (see the Sampling Supplement)
-
 -	provides questionnaire instrument (e.g. as supplemental file)
-
 -	EITHER: provides study artifacts; i.e., instrument(s), code books, analysis scripts and dataset(s) (addressing potential anonymity and confidentiality issues) \
 	 OR: describes in detail study artifacts and justifies why they are not provided
-
 -	the questionnaire design matches the research aims (i.e. questions are mapped to research objectives) and the target population (wording and format of the questions)
-
 -	describes how participants were selected, including invitations and incentives
-
--	step-by-step, systematic, replicable description of data collection and analysis 
-
+-	step-by-step, systematic, replicable description of data collection and analysis
 -	describes how responses were managed/monitored, including contingency actions for non-responses and drop-outs
-
 -	EITHER: measures constructs using (or adapting) validated scales  \
 	 OR: analyzes construct validity (e.g. content, convergent, discriminant, predictive) ex post
-
 -	explains handling of missing data (e.g. imputation, weighting adjustments, discarding)
-
 -	acknowledges generalizability threats; discusses how respondents may differ from target population
-
 -	analyzes response rates
 </checklist>
      
@@ -56,33 +45,22 @@ typically given to participants in controlled experiments (see the
 <checklist name="Desirable">
 
 -	characterizes the target population including demographic information (e.g. culture, knowledge)
-
 -	defines and estimates the size of the population strata (if applicable)
-
 -	accounts for the principles of research ethics (e.g. informed consent, re-identification risk)
-
 -	explains and justifies instrument design and choice of scales (e.g. by research objectives or by analogy to similar studies).
-
 -	validates whether the items, layout, duration, and technology are appropriate (e.g. using pilots, test-retest, or expert and non-expert reviews).
-
 -	reports how the instrument has evolved through the validation process (if at all)
-
 -	applies techniques for improving response rates (e.g. incentives, reminders, targeted advertising)
-
 -	analyzes response bias (quantitatively)
-
 -	discusses possible effect of incentives (e.g. on voluntariness, response rates, response bias) if used
-
 -	describes the stratification of the analysis (if stratified sampling is used)
-
--	clearly distinguishes evidence-based results from interpretations and speculation
+-	clearly distinguishes evidence-based results from interpretations and speculation<sup>[14](#myfootnote14)</sup>
  </checklist>
      
 ### Extraordinary Attributes 	
 <checklist name="Extraordinary">
 
 -	provides feasibility check of the anticipated data analysis techniques
-
 -	reports on the scale validation in terms of dimensionality, reliability, and validity of measures
 </checklist>
 
@@ -96,10 +74,8 @@ as **internal validity**, **construct validity**, **external validity**,
 
 -   **Descriptive surveys** provide a detailed account of the properties
     of a phenomenon or population.
-
 -   **Exploratory surveys** generate insights, hypotheses or models for
     further research.
-
 -   **Confirmatory surveys** testing formal (e.g. causal) propositions
     to explain a phenomenon.
 
@@ -109,17 +85,12 @@ as **internal validity**, **construct validity**, **external validity**,
     (i.e. surveys open to the anonymous public so that everyone with a
     link---typically broadcasted among social networks---can
     participate).
-
 -   Failure to release full data sets despite the data being sensitive.
-
 -   Claiming the sample size is too small without justifying why the
     sample size is insufficient to answer the research questions.
-
 -   Criticizing the relevance of a survey on the basis that responses
     only capture general people's perceptions.
-
 -   The results are considered controversial or hardly surprising.
-
 -   The results do not accord with the reviewer's personal experience or
     previous studies.
 
@@ -178,3 +149,7 @@ Requirements Engineering: A Theory and a Global Family of Surveys. *ACM
 Trans. Softw. Eng. Methodol.* 28, 2, Article 9 (April 2019), 48 pages.
 DOI:10.1145/3306607
 </standard>
+
+---
+<sup>[13](#myfootnote13)</sup> There is currently no standard for predominately open-ended questionnaire surveys. One exemplar readers could draw from is: Daniel Graziotin, Fabian Fagerholm, Xiaofeng Wang, and Pekka Abrahamsson. 2018. "What happens when software developers are (un)happy." Journal of Systems and Software 140, 32-47.  
+<sup>[14](#myfootnote14)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section. 
