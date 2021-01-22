@@ -27,7 +27,6 @@ consider the **Discourse Analysis Standard**.
 
 ### Essential Attributes	
 <checklist name="Essential">
-
 -	explains how interviewees were selected (i.e. sampling strategy; see The Sampling Supplement)
 -	describes interviewees (e.g. demographics, work roles)
 -	presents clear chain of evidence from interviewee quotations to proposed concepts
@@ -35,12 +34,13 @@ consider the **Discourse Analysis Standard**.
      
 ### Desirable Attributes	
 <checklist name="Desirable">
-
 -	includes highly diverse participants 
 -	uses direct quotations extensively to support key points
--	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
+-	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory \
+	 OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
 -	validates results (e.g. using member checking or dialogical interviewing )
--	EITHER uses audits (inductive coding) OR uses multiple coders and reports agreement statistics (deductive coding)
+-	EITHER: uses audits (inductive coding) \
+	 OR: uses multiple coders and reports agreement statistics (deductive coding)
 -	provides supplemental materials including interview guide(s), coding schemes, coding examples, decision rules, extended chain-of-evidence table(s) 
 -	discusses transferability; findings plausibly transferable to different contexts
 -	compares results with (or integrates them into) prior theory or related research
@@ -49,7 +49,6 @@ consider the **Discourse Analysis Standard**.
      
 ### Extraordinary Attributes	
 <checklist name="Extraordinary">
-
 -	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
 -	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis 
 -	employs probabilistic sampling strategy; statistical analysis of response bias
@@ -129,3 +128,4 @@ during coding. In *Proceedings of the 20th International Conference on
 Evaluation and Assessment in Software Engineering (EASE '16).*
 Association for Computing Machinery, New York, NY, USA, Article 34,
 1–10. DOI:10.1145/2915970.2915990
+</standard>

@@ -24,9 +24,9 @@ collection and analysis or do not use theoretical sampling, consider the
 **Case Study Standard** or the **Qualitative Survey Standard**.
 
 ## Specific Attributes 
-<checklist name="Essential">
 
 ### Essential Attributes 
+<checklist name="Essential">
 -	identifies the version of Grounded Theory used/adapted (Glaser, Strauss-Corbin, Charmaz, etc.)
 -	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
 -	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
@@ -37,7 +37,6 @@ collection and analysis or do not use theoretical sampling, consider the
      
 ### Desirable Attributes 
 <checklist name="Desirable">
-
 -	explains how and why study adapts or deviates from claimed GT version
 -	presents a mature, fully-developed theory or taxonomy
 -	includes highly diverse participants and/or data sources (e.g. software repositories, forums)
@@ -54,7 +53,6 @@ collection and analysis or do not use theoretical sampling, consider the
      
 ### Extraordinary Attributes 
 <checklist name="Extraordinary">
-
 -	triangulates with extensive quantitative data (e.g. questionnaires, sentiment analysis) 
 -	employs a team of researchers and explains their roles 
 </checklist>
@@ -162,3 +160,4 @@ Michael Waterman, James Noble, and George Allan. 2015. How much
 up-front? A grounded theory of agile architecture. In *2015 IEEE/ACM
 37th IEEE International Conference on Software Engineering*. 1, (May
 2015), 347–357.
+</standard>

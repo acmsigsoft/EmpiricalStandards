@@ -27,7 +27,6 @@ Science Standard** or the **Engineering Research Standard**.
 
 ### Essential Attributes
 <checklist name="Essential">
-
 -	describes how characteristics of phenomenon under investigation relate to experimental constructs
 -	states formal hypotheses 
 -	justifies use of one-sided hypotheses (if any) based on face validity or previous work
@@ -51,7 +50,6 @@ Science Standard** or the **Engineering Research Standard**.
      
 ### Desirable Attributes
 <checklist name="Desirable">
-
 -	justifies hypotheses and Bayesian priors (if applicable) based on previous studies and theory
 -	discusses alternative experimental designs and why they were not used (e.g. validity trade-offs)
 -	includes visualizations of data distributions
@@ -67,11 +65,10 @@ Science Standard** or the **Engineering Research Standard**.
      
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
-
 -   reports multiple experiments or replications in different cultures or regions 
 -	uses multiple methods of data collection; data triangulation
 -	longitudinal data collection with appropriate time-series analysis
-<checklist>
+</checklist>
 
 ## General Quality Criteria 
 
@@ -201,3 +198,4 @@ Evrim Itir Karac, Burak Turhan, and Natalia Juristo. 2019. A Controlled
 Experiment with Novice Developers on the Impact of Task Description
 Granularity on Software Quality in Test-Driven Development. *IEEE
 Transactions on Software Engineering.* DOI: 10.1109/TSE.2019.2920377
+</standard>

@@ -15,9 +15,9 @@ regarding one or more specific topics or research questions
     advanced qualitative synthesis methods (e.g. meta-ethnography)
 
 ## Specific Attributes 
-<checklist name="Essential">
 
 ### Essential Attributes 
+<checklist name="Essential">
 -	presents step-by-step, systematic, replicable description of search process including search terms  
 -	defines clear inclusion and exclusion criteria
 -	specifies the data extracted from each primary study ; explains relationships to research questions
@@ -30,7 +30,6 @@ regarding one or more specific topics or research questions
 
 ### Desirable Attributes 
 <checklist name="Desirable">
-
 -	provides replication package including protocol, search terms, search results, selection process results; complete dataset, analysis scripts; examples of coding, decision rules or edge cases
 -	mitigates sampling bias and publication bias, using some combination of: (i) manual and keyword automated searches; (ii) backward and forward snowballing searches; (iii) checking profiles of prolific authors in the area; (iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar); (v) searching for relevant dissertations; (vi) searching pre-print servers (e.g. arXiv); (iiv) soliciting unpublished manuscripts through appropriate listservs or social media; (iiiv) contacting known authors in the area. 
 -	demonstrates that the search process is sufficiently rigorous for the systematic review goals  
@@ -47,7 +46,6 @@ regarding one or more specific topics or research questions
      
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
-
 -	two or more researchers independently undertaking the preliminary search process before finalizing the search scope and search keywords
 -	contacted primary study authors to ensure interpretations are correct, and elicit additional details not found in the papers such as access to raw data
 </checklist>
@@ -103,3 +101,4 @@ Kai Petersen, Robert Feldt, Shahid Mujtaba, and Michael Mattsson. 2008.
 Systematic mapping studies in software engineering. In *12th
 International Conference on Evaluation and Assessment in Software
 Engineering (EASE).* (Jun. 2008), 1–10.
+</standard>
