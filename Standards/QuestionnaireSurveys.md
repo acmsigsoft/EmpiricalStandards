@@ -27,38 +27,59 @@ typically given to participants in controlled experiments (see the
 ### Essential Attributes 
 <checklist name="Essential">
 -	identifies the target population & defines the sampling strategy (see the Sampling Supplement)
+
 -	provides questionnaire instrument (e.g. as supplemental file)
+
 -	EITHER: provides study artifacts; i.e., instrument(s), code books, analysis scripts and dataset(s) (addressing potential anonymity and confidentiality issues) \
 	 OR: describes in detail study artifacts and justifies why they are not provided
+
 -	the questionnaire design matches the research aims (i.e. questions are mapped to research objectives) and the target population (wording and format of the questions)
+
 -	describes how participants were selected, including invitations and incentives
+
 -	step-by-step, systematic, replicable description of data collection and analysis 
+
 -	describes how responses were managed/monitored, including contingency actions for non-responses and drop-outs
+
 -	EITHER: measures constructs using (or adapting) validated scales  \
 	 OR: analyzes construct validity (e.g. content, convergent, discriminant, predictive) ex post
+
 -	explains handling of missing data (e.g. imputation, weighting adjustments, discarding)
+
 -	acknowledges generalizability threats; discusses how respondents may differ from target population
+
 -	analyzes response rates
 </checklist>
      
 ### Desirable Attributes 	
 <checklist name="Desirable">
 -	characterizes the target population including demographic information (e.g. culture, knowledge)
+
 -	defines and estimates the size of the population strata (if applicable)
+
 -	accounts for the principles of research ethics (e.g. informed consent, re-identification risk)
+
 -	explains and justifies instrument design and choice of scales (e.g. by research objectives or by analogy to similar studies).
+
 -	validates whether the items, layout, duration, and technology are appropriate (e.g. using pilots, test-retest, or expert and non-expert reviews).
+
 -	reports how the instrument has evolved through the validation process (if at all)
+
 -	applies techniques for improving response rates (e.g. incentives, reminders, targeted advertising)
+
 -	analyzes response bias (quantitatively)
+
 -	discusses possible effect of incentives (e.g. on voluntariness, response rates, response bias) if used
+
 -	describes the stratification of the analysis (if stratified sampling is used)
+
 -	clearly distinguishes evidence-based results from interpretations and speculation
  </checklist>
      
 ### Extraordinary Attributes 	
 <checklist name="Extraordinary">
 -	provides feasibility check of the anticipated data analysis techniques
+
 -	reports on the scale validation in terms of dimensionality, reliability, and validity of measures
 </checklist>
 

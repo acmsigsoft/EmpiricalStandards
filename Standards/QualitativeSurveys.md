@@ -35,22 +35,32 @@ consider the **Discourse Analysis Standard**.
 ### Desirable Attributes	
 <checklist name="Desirable">
 -	includes highly diverse participants 
+
 -	uses direct quotations extensively to support key points
+
 -	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory \
 	 OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
+
 -	validates results (e.g. using member checking or dialogical interviewing )
+
 -	EITHER: uses audits (inductive coding) \
 	 OR: uses multiple coders and reports agreement statistics (deductive coding)
+
 -	provides supplemental materials including interview guide(s), coding schemes, coding examples, decision rules, extended chain-of-evidence table(s) 
+
 -	discusses transferability; findings plausibly transferable to different contexts
+
 -	compares results with (or integrates them into) prior theory or related research
+
 -	reflects on how researchers’ biases may have affected their analysis
 </checklist>
      
 ### Extraordinary Attributes	
 <checklist name="Extraordinary">
 -	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
+
 -	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis 
+
 -	employs probabilistic sampling strategy; statistical analysis of response bias
 </checklist>
 

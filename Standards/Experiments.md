@@ -28,45 +28,73 @@ Science Standard** or the **Engineering Research Standard**.
 ### Essential Attributes
 <checklist name="Essential">
 -	describes how characteristics of phenomenon under investigation relate to experimental constructs
+
 -	states formal hypotheses 
+
 -	justifies use of one-sided hypotheses (if any) based on face validity or previous work
+
 -	describes independent, dependent and extraneous variables; how extraneous vars are controlled
+
 -	describes the research design and protocol including treatments, materials, tasks, design (e.g. 2x2 factorial), participant allocation, period and sequences (for crossover designs), and logistics
+
 -	design and protocol appropriate (not optimal) for stated research questions and hypotheses
+
 -	EITHER: uses random assignment; explains logistics (e.g. how random numbers were generated)  \
      OR: justifies why random assignment is impractical or unethical (compelling reason needed); and mitigates unequal groups threat to validity (e.g. using pre-test/post-test and matched subjects design)
+
 -	describes experimental objects (e.g. real or toy system) and their characteristics (e.g. size, type); 
+
 -	justifies selection of experimental objects; checks for object-treatment confounds 
+
 -	describes and justifies how the dependent variable is measured (including units, instruments) 
+
 -	describes how independent and dependent variables are measured
+
 -	describes participants (e.g. age, gender, education, relevant experience or preferences)
+
 -	reports distribution-appropriate descriptive and inferential statistics; enumerates and checks assumptions ; justifies tests used
+
 -	reports effects sizes with confidence intervals (if using frequentist approach)
+
 -	EITHER: shares raw, de-identified data  \
      OR: explains why sharing raw data is impractical or unethical
+
 -	discusses construct, conclusion internal and external validity
+
 -	discusses alternative interpretations of results
 </checklist>
      
 ### Desirable Attributes
 <checklist name="Desirable">
 -	justifies hypotheses and Bayesian priors (if applicable) based on previous studies and theory
+
 -	discusses alternative experimental designs and why they were not used (e.g. validity trade-offs)
+
 -	includes visualizations of data distributions
+
 -	cites statistics papers to support any nuanced issues or unusual approaches
+
 -	explains deviations between design and execution, and their implications  
+
 -	includes supplementary material: complete, algorithmic research protocol, task materials, de-identified dataset, analyses scripts
+
 -	named experiment design (e.g. simple 2-group, 2x2 factorial, randomized block)
+
 -	presents a-priori power analysis and sufficient n for expected effect sizes.
+
 -	analyzes construct validity of dependent variable
+
 -	uses and reports manipulation checks
+
 -	pre-registration of hypotheses and design where venue allows
 </checklist>
      
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 -   reports multiple experiments or replications in different cultures or regions 
+
 -	uses multiple methods of data collection; data triangulation
+
 -	longitudinal data collection with appropriate time-series analysis
 </checklist>
 

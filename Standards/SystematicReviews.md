@@ -19,34 +19,53 @@ regarding one or more specific topics or research questions
 ### Essential Attributes 
 <checklist name="Essential">
 -	presents step-by-step, systematic, replicable description of search process including search terms  
+
 -	defines clear inclusion and exclusion criteria
+
 -	specifies the data extracted from each primary study ; explains relationships to research questions
+
 -	describes in detail how data were extracted and synthesized (can be qualitative or quantitative)
+
 -	describes coding scheme(s) and their use
+
 -	clear chain of evidence from the extracted data to the answers to the research question(s)
+
 -	presents conclusions or recommendations for practitioners/non-specialists
+
 -	identifies method (e.g. systematic review, meta-analysis, mapping study, narrative synthesis, etc.)
 </checklist>
 
 ### Desirable Attributes 
 <checklist name="Desirable">
 -	provides replication package including protocol, search terms, search results, selection process results; complete dataset, analysis scripts; examples of coding, decision rules or edge cases
+
 -	mitigates sampling bias and publication bias, using some combination of: (i) manual and keyword automated searches; (ii) backward and forward snowballing searches; (iii) checking profiles of prolific authors in the area; (iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar); (v) searching for relevant dissertations; (vi) searching pre-print servers (e.g. arXiv); (iiv) soliciting unpublished manuscripts through appropriate listservs or social media; (iiiv) contacting known authors in the area. 
+
 -	demonstrates that the search process is sufficiently rigorous for the systematic review goals  
+
 -	assesses quality of primary studies; explains how quality was assessed 
+
 -	assesses coverage using funnel plots or percentage of known papers found
+
 -	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (e.g. KALPHA) 
+
 -	(interpretivist reviews) reflects on how researcher’s biases may have affected their analysis
+
 -	consolidates results using tables, diagrams, or charts; PRISMA flow diagram (cf. Moher et al. 2009)
+
 -	performs analysis through an existing or new conceptual framework (qualitative synthesis)
+
 -	uses meta-analysis methods appropriate for primary studies; does not use vote counting 
+
 -	integrates results into prior theory or research; identifies gaps, biases, or future directions
+
 -	presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
 </checklist>
      
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 -	two or more researchers independently undertaking the preliminary search process before finalizing the search scope and search keywords
+
 -	contacted primary study authors to ensure interpretations are correct, and elicit additional details not found in the papers such as access to raw data
 </checklist>
 

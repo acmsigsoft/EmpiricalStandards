@@ -31,24 +31,38 @@ standards.
 ### Essential Attributes
 <checklist name="Essential">
 -	describes the context or site of the intervention(s)
+
 -   describes the intervention(s) in detail
+
 -   describes the relationship between the researcher and the host organization^5^
+
 -   reports the length of the project and describes the longitudinal dimension of the research design
+
 -   describes the interactions between researcher(s) and host organization(s)---what the interventions were, who intervened and with which part of the organization, as well as the outcome of the interventions
+
 -   describes how interventions were determined (by management, researchers, or participative/co- determination process)
+
 -   explains research cycles or phases, if any, and their relationship to the intervention(s)^6^
+
 -   explains how the interventions are evaluated^7^
+
 -   reports participant or stakeholder reactions to interventions
+
 -   presents a clear and well-argued chain-of-evidence from observations to findings
+
 -   reports lessons learned by the organization
+
 -   researchers reflect on their own possible biases
 </checklist>
     
 ### Desirable Attributes
 <checklist name="Desirable">
 -	uses direct quotations extensively
+
 -   uses member checking to assess resonance
+
 -   findings plausibly transferable to other contexts
+
 -   triangulation across quantitative and qualitative data
 </checklist>
     
