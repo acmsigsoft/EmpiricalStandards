@@ -152,6 +152,9 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Cross paradigmatic criticism (e.g. attacking an interpretivist study
     for not conforming to positivist norms).
 
+-   Requesting additional analysis not directly related to a study's purpose or research question, 
+    leading to results poorly linked to the article’s narrative.
+
 -   Using sub-reviewers when the venue does not explicitly allow it.
 
 -   Using the review to promote the reviewer\'s own views, theories,
