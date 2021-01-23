@@ -9,11 +9,8 @@ following criteria:
 
 -   Researcher(s) have synchronous conversations with one participant at
     a time
-
 -   Researchers ask, and participants answer, open-ended questions
-
 -   Participants' answers are recorded in some way
-
 -   Researchers apply some kind of qualitative data analysis to
     participants' answers
 
@@ -29,33 +26,21 @@ consider the **Discourse Analysis Standard**.
 <checklist name="Essential">
 
 -	explains how interviewees were selected (i.e. sampling strategy; see The Sampling Supplement)
-
 -	describes interviewees (e.g. demographics, work roles)
-
 -	presents clear chain of evidence from interviewee quotations to proposed concepts
 </checklist>
      
 ### Desirable Attributes	
 <checklist name="Desirable">
 
--	includes highly diverse participants 
-
+-	includes highly diverse participants
 -	uses direct quotations extensively to support key points
-
--	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory \
-	 OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
-
--	validates results (e.g. using member checking or dialogical interviewing )
-
--	EITHER: uses audits (inductive coding) \
-	 OR: uses multiple coders and reports agreement statistics (deductive coding)
-
--	provides supplemental materials including interview guide(s), coding schemes, coding examples, decision rules, extended chain-of-evidence table(s) 
-
+-	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory \ OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
+-	validates results (e.g. using member checking or dialogical interviewing<sup>[8](#myfootnote8)</sup>)
+-	EITHER: uses audits (inductive coding) \ OR: uses multiple coders and reports agreement statistics (deductive coding)
+-	provides supplemental materials including interview guide(s), coding schemes, coding examples, decision rules, extended chain-of-evidence table(s)
 -	discusses transferability; findings plausibly transferable to different contexts
-
 -	compares results with (or integrates them into) prior theory or related research
-
 -	reflects on how researchers’ biases may have affected their analysis
 </checklist>
      
@@ -63,9 +48,7 @@ consider the **Discourse Analysis Standard**.
 <checklist name="Extraordinary">
 
 -	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
-
--	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis 
-
+-	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis
 -	employs probabilistic sampling strategy; statistical analysis of response bias
 </checklist>
 
@@ -81,11 +64,9 @@ reliability typically do not apply.
 
 -   In a study of deaf software developers, the interviews are conducted
     via text messages.
-
 -   In a study of sexual harassment at named organizations, detailed
     description of interviewees and direct quotations are omitted to
     protect participants.
-
 -   In a study of barriers faced by gay developers, participants are all
     gay (but should be diverse on other dimensions).
 
@@ -93,7 +74,6 @@ reliability typically do not apply.
 
 -   Interviewing a small number of similar people, creating the illusion
     of convergence and saturation
-
 -   Mis-presenting a qualitative survey as grounded theory or a case
     study.
 
@@ -101,13 +81,10 @@ reliability typically do not apply.
 
 -   Lack of quantitative data; causal analysis; objectivity, internal
     validity, reliability, or generalizability.
-
 -   Lack of replicability or reproducibility; not releasing transcripts.
-
 -   Lack of probability sampling, statistical generalizability or
     representativeness unless representative sampling was an explicit
     goal of the study.
-
 -   Failure to apply grounded theory or case study practices. A
     qualitative survey is not grounded theory or a case study.
 
@@ -144,3 +121,6 @@ Evaluation and Assessment in Software Engineering (EASE '16).*
 Association for Computing Machinery, New York, NY, USA, Article 34,
 1–10. DOI:10.1145/2915970.2915990
 </standard>
+
+---
+<sup>[8](#myfootnote8)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.

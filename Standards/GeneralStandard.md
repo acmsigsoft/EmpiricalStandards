@@ -14,17 +14,12 @@ attributes. By assigning reviewers, the editor/chair/administrator is
 confirming that the manuscript meets these criteria:
 -   meets venue's requirements (e.g. length, author-blinding,
     appropriate keywords)
-
 -   within the venue's scope
-
 -   meets the minimum level of language quality acceptable to the
     journal
-
 -   cites other scholarly works
-
 -   presents new analysis not previously published in a peer-reviewed
     venue (i.e. preprints are fine)
-
 -   does not include unattributed verbatim published text (i.e.
     plagiarism)
 
@@ -34,10 +29,8 @@ Before beginning to review a paper, assigned reviewers should verify the
 following.
 -   reviewer has no conflicts of interest; if unsure, check with the
     chair or editor
-
 -   reviewer has sufficient expertise; if unsure, check with the chair
     or editor and clarify what you can(not) evaluate
-
 -   paper is clear enough (in language and presentation) to even review
 
 ## Specific Attributes 
@@ -46,29 +39,17 @@ following.
 <checklist name="Essential">
 
 -	states a purpose, problem, objective, or research question
-
 -	methodology is appropriate (not necessarily optimal) for stated purpose or questions
-
 -	describes in detail what, where, when and how data were collected
-
 -	describes in detail how the data were analyzed
-
--	discusses and validates assumptions of any statistical tests used 
-
+-	discusses and validates assumptions of any statistical tests used
 -	presents results; results directly address research questions
-
 -	discusses the importance, implications and limitations (validity threats) of the study
-
 -	contributes in some way to the collective body of knowledge (see Replications Supplement)
-
 -	supports claims and conclusions with explicit arguments or evidence (data/observations)
-
 -	defines jargon, acronyms and key concepts
-
 -	language is not misleading; any grammatical problems do not substantially hinder understanding
-
 -	visualizations/graphs are not misleading (see the Information Visualization Supplement)
-
 -	complies with all applicable empirical standards
 </checklist>
      
@@ -76,27 +57,16 @@ following.
 <checklist name="Desirable">
 
 -	summarizes and synthesizes a reasonable selection of related work
-
 -	clearly describes relationship between contribution(s) and related work
-
 -	states epistemological stance (e.g. post-positivism, interpretivism, critical realism)
-
 -	appropriate statistical power (for quantitative work) or saturation (for qualitative work)
-
 -	reasonable attempts to investigate or mitigate limitations
-
 -	discusses study’s realism, assumptions and sensitivity of the results to the realism/assumptions
-
 -	provides plausibly useful interpretations or recommendations for practice, education or research
-
 -	openly shares data and materials to the extent possible within practical and ethical limits
-
 -	concise, precise, well-organized and easy-to-read presentation
-
 -	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
-
 -	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
-
 -	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
 </checklist>
      
@@ -104,9 +74,7 @@ following.
 <checklist name="Extraordinary">
 
 -	applies two or more data collection or analysis strategies to the same research question (see Multimethodology Supplement)
-
 -	approaches the same research question(s) from multiple epistemological perspectives
-
 -	innovates on research methodology while completing an empirical study
 </checklist>
 
@@ -189,3 +157,5 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Acknowledging limitations but then writing implications and
     conclusions as though the limitations don't exist
 </standard>
+    
+---

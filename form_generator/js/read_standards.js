@@ -90,16 +90,17 @@ function generateStandardChecklist(){
 		dom.innerHTML = empirical_standard;
 		var standardTag = dom.getElementsByTagName("standard")[0];
 		let standardName = "\"" + standardTag.getAttribute('name') + "\"";
-		var standardTitle = document.createElement("H2");
+		/*var standardTitle = document.createElement("H2");
 		standardTitle.innerHTML = standardName.replaceAll("\"", "");
-		form.appendChild(standardTitle);
+		form.appendChild(standardTitle);*/
 		var checklistTags = standardTag.getElementsByTagName("checklist");
 		for (let checklistTag of checklistTags){
 			var checklistTitleUL = document.createElement("UL");
 			var checklistTitle = document.createElement("H3");
 			checklistTitle.innerHTML = checklistTag.getAttribute('name')
 			checklistTitleUL.appendChild(checklistTitle);
-			
+
+
 			// Reformat the checklists from MD to HTML
 			checklistText = checklistTag.innerText.replaceAll(">", "").
 												   replaceAll(/\\\n\s*OR/ig, "[[OR]]").

@@ -11,10 +11,8 @@ conditions.
 
 -   investigates a primarily social phenomenon within its real-life,
     organizational context
-
 -   intervenes in the real-life context (otherwise see the **Case Study
     Standard**)
-
 -   the change and its observation are an integral part of addressing
     the research question and contribute to research
 
@@ -32,27 +30,16 @@ standards.
 <checklist name="Essential">
 
 -	describes the context or site of the intervention(s)
-
 -   describes the intervention(s) in detail
-
--   describes the relationship between the researcher and the host organization^5^
-
+-   describes the relationship between the researcher and the host organization<sup>[5](#myfootnote5)</sup>
 -   reports the length of the project and describes the longitudinal dimension of the research design
-
 -   describes the interactions between researcher(s) and host organization(s)---what the interventions were, who intervened and with which part of the organization, as well as the outcome of the interventions
-
 -   describes how interventions were determined (by management, researchers, or participative/co- determination process)
-
--   explains research cycles or phases, if any, and their relationship to the intervention(s)^6^
-
--   explains how the interventions are evaluated^7^
-
+-   explains research cycles or phases, if any, and their relationship to the intervention(s)<sup>[6](#myfootnote6)</sup>
+-   explains how the interventions are evaluated<sup>[7](#myfootnote7)</sup>
 -   reports participant or stakeholder reactions to interventions
-
 -   presents a clear and well-argued chain-of-evidence from observations to findings
-
 -   reports lessons learned by the organization
-
 -   researchers reflect on their own possible biases
 </checklist>
     
@@ -60,11 +47,8 @@ standards.
 <checklist name="Desirable">
 
 -	uses direct quotations extensively
-
 -   uses member checking to assess resonance
-
 -   findings plausibly transferable to other contexts
-
 -   triangulation across quantitative and qualitative data
 </checklist>
     
@@ -86,7 +70,6 @@ reliability typically do not apply.
 -   In a study of deviations from organizational standards, detailed
     description of circumstances and direct quotations are omitted to
     protect participants.
-
 -   The article reports a negative outcome of an intervention and e.g.
     investigates why a certain method was not applicable.
 
@@ -94,13 +77,10 @@ reliability typically do not apply.
 
 -   Forcing interventions that are not acceptable to participants or the
     host organization.
-
 -   Losing professional distance and impartiality; getting too involved
     with the community under study.
-
 -   Over-selling a tool or method without regard for participants'
     problems, practices or values.
-
 -   Avoiding systematic evaluation; downplaying problems; simply
     reporting participants views of the intervention.
 
@@ -110,20 +90,15 @@ reliability typically do not apply.
     intervened in the context. Though reflexivity is crucial, the whole
     point of action research is to introduce a change and observe how
     participants react.
-
 -   This is merely consultancy or an experience report. Systematic
     observation and reflection should not be dismissed as consultancy or
     experience reports. Inversely, consultancy or experiences should not
     be falsely presented as action research.
-
 -   Lack of quantitative data; causal analysis; objectivity, internal
     validity, reliability, or generalizability.
-
 -   Sample not representative; lack of generalizability; generalizing
     from one organization.
-
 -   Lack of replicability or reproducibility; not releasing transcripts.
-
 -   Lack of control group or experimental protocols. An action research
     study is not an experiment.
 
@@ -131,14 +106,14 @@ reliability typically do not apply.
 
 Richard Baskerville and A. Trevor Wood-Harper. 1996. A critical
 perspective on action research as a method for information systems
-research.\" *Journal of information Technology* 11.3, 235-246.
+research.\" *Journal of information Technology* 11.3, 235–246.
 
 Peter Checkland and Sue Holwell. 1998. Action Research: Its Nature and
-Validity. *Systematic Practice and Action Research.* (Oct. 1997), 9--21.
+Validity. *Systematic Practice and Action Research.* (Oct. 1997), 9–21.
 
 Yvonne Dittrich. 2002. Doing Empirical Research on Software Development:
 Finding a Path between Understanding, Intervention, and Method
-Development. In *Social thinking---Software practice*. 243--262
+Development. In *Social thinking---Software practice*. 243–262
 
 Yvonne Dittrich, Kari Rönkkö, Jeanette Eriksson, Christina Hansson and
 Olle Lindeberg. 2008. Cooperative method development. *Empirical
@@ -148,10 +123,10 @@ Kurt Lewin. 1947. Frontiers in Group Dynamics. *Human Relations* 1, 2
 (1947), 143--153. DOI: 10.1177/001872674700100201
 
 Lars Mathiassen. 1998. Reflective systems development. *Scandinavian
-Journal of Information Systems* 10, 1 (1998), 67--118
+Journal of Information Systems* 10, 1 (1998), 67–118
 
 Lars Mathiassen. 2002. Collaborative practice research. *Information,
-Technology & People.* 15,4 (2002), 321--345
+Technology & People.* 15,4 (2002), 321–345
 
 Lars Mathiassen, Mike Chiasson, and Matt Germonprez. 2012. Style
 Composition in Action Research Publication. *MIS quarterly. JSTOR* 36, 2
@@ -213,7 +188,8 @@ product line architecture. In *Proc. IASTED Int. Conf. on Software
 Engineering*. 2008, 178-183.
 
 ---
-<sup>[1](#myfootnote1)</sup> E.g. project financing, potential conflicts of interest, professional relationship leading to access  
-<sup>[2](#myfootnote2)</sup> Action research projects are structured in interventions often described as action research cycles, which are often structured in distinct phases. It is a flexible methodology, where subsequent cycles are based on their predecessors.
-<sup>[3](#myfootnote3)</sup>Can include quantitative evaluation in addition to qualitative evaluation.
+
+<sup>[5](#myfootnote5)</sup> E.g. project financing, potential conflicts of interest, professional relationship leading to access  
+<sup>[6](#myfootnote6)</sup> Action research projects are structured in interventions often described as action research cycles, which are often structured in distinct phases. It is a flexible methodology, where subsequent cycles are based on their predecessors.  
+<sup>[7](#myfootnote7)</sup> Can include quantitative evaluation in addition to qualitative evaluation.
 </standard>
