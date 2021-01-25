@@ -26,36 +26,36 @@ collection and analysis or do not use theoretical sampling, consider the
 ### Essential Attributes 
 <checklist name="Essential">
 
--	identifies the version of Grounded Theory used/adapted (Glaser, Strauss-Corbin, Charmaz, etc.)
--	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
--	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
--	provides evidence of saturation; explains how saturation was achieved
--	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
--	provides clear chain of evidence from raw data (e.g. interviewee quotations) to derived codes, concepts, and categories
+- [ ]	identifies the version of Grounded Theory used/adapted (Glaser, Strauss-Corbin, Charmaz, etc.)
+- [ ]	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
+- [ ]	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
+- [ ]	provides evidence of saturation; explains how saturation was achieved
+- [ ]	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
+- [ ]	provides clear chain of evidence from raw data (e.g. interviewee quotations) to derived codes, concepts, and categories
 </checklist>
      
 ### Desirable Attributes 
 <checklist name="Desirable">
 
--	explains how and why study adapts or deviates from claimed GT version
--	presents a mature, fully-developed theory or taxonomy
--	includes highly diverse participants and/or data sources (e.g. software repositories, forums)
--	uses direct quotations extensively to support key points
--	explains how memo writing was used to drive the work
--	validates results (e.g. member checking, feedback from non-participant practitioners, research audits of coding with advisors/other researchers)
--	includes supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or chain-of-evidence tables too large for main text
--	discusses transferability; characterizes the setting such that readers can assess transferability
--	compares results with (or integrates them into) prior theory or related research
--	explains theoretical sampling vis-à-vis the interplay between the sampling process, the emerging findings, and theoretical gaps perceived therein
--	reflects on how researcher’s biases may have affected their analysis
--	explains the role of literature, especially where an extensive review preceded the GT study
+- [ ]	explains how and why study adapts or deviates from claimed GT version
+- [ ]	presents a mature, fully-developed theory or taxonomy
+- [ ]	includes highly diverse participants and/or data sources (e.g. software repositories, forums)
+- [ ]	uses direct quotations extensively to support key points
+- [ ]	explains how memo writing was used to drive the work
+- [ ]	validates results (e.g. member checking, feedback from non-participant practitioners, research audits of coding with advisors/other researchers)
+- [ ]	includes supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or chain-of-evidence tables too large for main text
+- [ ]	discusses transferability; characterizes the setting such that readers can assess transferability
+- [ ]	compares results with (or integrates them into) prior theory or related research
+- [ ]	explains theoretical sampling vis-à-vis the interplay between the sampling process, the emerging findings, and theoretical gaps perceived therein
+- [ ]	reflects on how researcher’s biases may have affected their analysis
+- [ ]	explains the role of literature, especially where an extensive review preceded the GT study
 </checklist>
      
 ### Extraordinary Attributes 
 <checklist name="Extraordinary">
 
--	triangulates with extensive quantitative data (e.g. questionnaires, sentiment analysis)
--	employs a team of researchers and explains their roles 
+- [ ]	triangulates with extensive quantitative data (e.g. questionnaires, sentiment analysis)
+- [ ]	employs a team of researchers and explains their roles 
 </checklist>
 
 ## Quality Criteria 

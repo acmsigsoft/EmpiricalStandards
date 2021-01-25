@@ -22,36 +22,38 @@ standard is not appropriate for:
 ### Essential Attributes
 <checklist name="Essential">
 
--   describes the proposed artifact in adequate detail<sup>[1](#myfootnote1)</sup>
--   justifies the need for, usefulness of, or relevance of the proposed artifact<sup>[2](#myfootnote2)</sup>
--   conceptually evaluates the artifact; discusses its strengths, weaknesses and limitations<sup>[3](#myfootnote3)</sup>
--   EITHER: discusses state-of-art alternatives (and their strengths, weaknesses and limitations) \
-	 OR: explains why no state-of-art alternatives exist OR: provides compelling argument that direct comparisons are impractical
--   Empirically evaluates the proposed artifact using:
+- [ ]   describes the proposed artifact in adequate detail<sup>[1](#myfootnote1)</sup>
+- [ ]   justifies the need for, usefulness of, or relevance of the proposed artifact<sup>[2](#myfootnote2)</sup>
+- [ ]   conceptually evaluates the artifact; discusses its strengths, weaknesses and limitations<sup>[3](#myfootnote3)</sup>
+- [ ]   EITHER: discusses state-of-art alternatives (and their strengths, weaknesses and limitations)   
+    OR: explains why no state-of-art alternatives exist   
+    OR: provides compelling argument that direct comparisons are impractical
+- [ ]   Empirically evaluates the proposed artifact using:
 	**action research**, in which the researchers intervene a real organization using the artifact, a **case study** in which a real organization uses the artifact without researcher intervention, a **controlled experiment** in which human participants use the  artifact, a **simulation** in which the artifact is used in an artificial environment, or another method for which a clear and convincing rationale is provided
--   clearly indicates the empirical methodology being used (e.g. action research, controlled experiment)
--   EITHER: empirically compares the artifact to one or more state-of-the-art alternative artifacts \
-    OR: empirically compares the artifact to one or more state-of-the-art benchmarks OR: provides a clear and convincing rationale for why comparative evaluation is impractical
--   assumptions (if any) are explicit; do not contradict each other or the contribution's goals; plausibly hold for the evaluation subjects
--   uses notation consistently (if any notation is used)
+- [ ]   clearly indicates the empirical methodology being used (e.g. action research, controlled experiment)
+- [ ]   EITHER: empirically compares the artifact to one or more state-of-the-art alternative artifacts   
+    OR: empirically compares the artifact to one or more state-of-the-art benchmarks   
+    OR: provides a clear and convincing rationale for why comparative evaluation is impractical
+- [ ]   assumptions (if any) are explicit; do not contradict each other or the contribution's goals; plausibly hold for the evaluation subjects
+- [ ]   uses notation consistently (if any notation is used)
 </checklist>
     
 ### Desirable Attributes
 <checklist name="Desirable">
 
--   reviews the theoretical basis of the artifact
--   provides correctness arguments of the key analytical and theoretical contributions (e.g. theorems, complexity analyses, mathematical proofs)
--   includes one or more running examples to elucidate the artifact
--   evaluates the artifact in an industry-relevant context (e.g. widely used open-source projects, professional programmers)
--   provides a replication package including datasets and analytical scripts and EITHER a comprehensive description of the artifact OR source code if artifact is virtual
--   justifies any items missing from replication package based on practical or ethical grounds.
+- [ ]   reviews the theoretical basis of the artifact
+- [ ]   provides correctness arguments of the key analytical and theoretical contributions (e.g. theorems, complexity analyses, mathematical proofs)
+- [ ]   includes one or more running examples to elucidate the artifact
+- [ ]   evaluates the artifact in an industry-relevant context (e.g. widely used open-source projects, professional programmers)
+- [ ]   provides a replication package including datasets and analytical scripts and EITHER a comprehensive description of the artifact OR source code if artifact is virtual
+- [ ]   justifies any items missing from replication package based on practical or ethical grounds.
 </checklist>
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
--   contributes to our collective understanding of design practices or principles
--   presents ground-breaking innovations with obvious real-world benefits
+- [ ]   contributes to our collective understanding of design practices or principles
+- [ ]   presents ground-breaking innovations with obvious real-world benefits
 </checklist>
     
 ## General Quality Criteria 

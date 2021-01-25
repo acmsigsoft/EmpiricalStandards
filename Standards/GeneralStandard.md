@@ -38,44 +38,44 @@ following.
 ### Essential Attributes 
 <checklist name="Essential">
 
--	states a purpose, problem, objective, or research question
--	methodology is appropriate (not necessarily optimal) for stated purpose or questions
--	describes in detail what, where, when and how data were collected
--	describes in detail how the data were analyzed
--	discusses and validates assumptions of any statistical tests used
--	presents results; results directly address research questions
--	discusses the importance, implications and limitations (validity threats) of the study
--	contributes in some way to the collective body of knowledge (see Replications Supplement)
--	supports claims and conclusions with explicit arguments or evidence (data/observations)
--	defines jargon, acronyms and key concepts
--	language is not misleading; any grammatical problems do not substantially hinder understanding
--	visualizations/graphs are not misleading (see the Information Visualization Supplement)
--	complies with all applicable empirical standards
+- [ ]	states a purpose, problem, objective, or research question
+- [ ]	methodology is appropriate (not necessarily optimal) for stated purpose or questions
+- [ ]	describes in detail what, where, when and how data were collected
+- [ ]	describes in detail how the data were analyzed
+- [ ]	discusses and validates assumptions of any statistical tests used
+- [ ]	presents results; results directly address research questions
+- [ ]	discusses the importance, implications and limitations (validity threats) of the study
+- [ ]	contributes in some way to the collective body of knowledge (see Replications Supplement)
+- [ ]	supports claims and conclusions with explicit arguments or evidence (data/observations)
+- [ ]	defines jargon, acronyms and key concepts
+- [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
+- [ ]	visualizations/graphs are not misleading (see the Information Visualization Supplement)
+- [ ]	complies with all applicable empirical standards
 </checklist>
      
 ### Desirable Attributes
 <checklist name="Desirable">
 
--	summarizes and synthesizes a reasonable selection of related work
--	clearly describes relationship between contribution(s) and related work
--	states epistemological stance (e.g. post-positivism, interpretivism, critical realism)
--	appropriate statistical power (for quantitative work) or saturation (for qualitative work)
--	reasonable attempts to investigate or mitigate limitations
--	discusses study’s realism, assumptions and sensitivity of the results to the realism/assumptions
--	provides plausibly useful interpretations or recommendations for practice, education or research
--	openly shares data and materials to the extent possible within practical and ethical limits
--	concise, precise, well-organized and easy-to-read presentation
--	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
--	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
--	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
+- [ ]	summarizes and synthesizes a reasonable selection of related work
+- [ ]	clearly describes relationship between contribution(s) and related work
+- [ ]	states epistemological stance (e.g. post-positivism, interpretivism, critical realism)
+- [ ]	appropriate statistical power (for quantitative work) or saturation (for qualitative work)
+- [ ]	reasonable attempts to investigate or mitigate limitations
+- [ ]	discusses study’s realism, assumptions and sensitivity of the results to the realism/assumptions
+- [ ]	provides plausibly useful interpretations or recommendations for practice, education or research
+- [ ]	openly shares data and materials to the extent possible within practical and ethical limits
+- [ ]	concise, precise, well-organized and easy-to-read presentation
+- [ ]	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
+- [ ]	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
+- [ ]	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
 </checklist>
      
 ### Extraordinary Attributes 	
 <checklist name="Extraordinary">
 
--	applies two or more data collection or analysis strategies to the same research question (see Multimethodology Supplement)
--	approaches the same research question(s) from multiple epistemological perspectives
--	innovates on research methodology while completing an empirical study
+- [ ]	applies two or more data collection or analysis strategies to the same research question (see Multimethodology Supplement)
+- [ ]	approaches the same research question(s) from multiple epistemological perspectives
+- [ ]	innovates on research methodology while completing an empirical study
 </checklist>
 
 ## General Quality Criteria 

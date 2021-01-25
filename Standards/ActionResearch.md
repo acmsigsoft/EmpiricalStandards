@@ -29,33 +29,33 @@ standards.
 ### Essential Attributes
 <checklist name="Essential">
 
--	describes the context or site of the intervention(s)
--   describes the intervention(s) in detail
--   describes the relationship between the researcher and the host organization<sup>[5](#myfootnote5)</sup>
--   reports the length of the project and describes the longitudinal dimension of the research design
--   describes the interactions between researcher(s) and host organization(s)---what the interventions were, who intervened and with which part of the organization, as well as the outcome of the interventions
--   describes how interventions were determined (by management, researchers, or participative/co- determination process)
--   explains research cycles or phases, if any, and their relationship to the intervention(s)<sup>[6](#myfootnote6)</sup>
--   explains how the interventions are evaluated<sup>[7](#myfootnote7)</sup>
--   reports participant or stakeholder reactions to interventions
--   presents a clear and well-argued chain-of-evidence from observations to findings
--   reports lessons learned by the organization
--   researchers reflect on their own possible biases
+- [ ]	describes the context or site of the intervention(s)
+- [ ]   describes the intervention(s) in detail
+- [ ]   describes the relationship between the researcher and the host organization<sup>[1](#myfootnote1)</sup>
+- [ ]   reports the length of the project and describes the longitudinal dimension of the research design
+- [ ]   describes the interactions between researcher(s) and host organization(s)---what the interventions were, who intervened and with which part of the organization, as well as the outcome of the interventions
+- [ ]   describes how interventions were determined (by management, researchers, or participative/co- determination process)
+- [ ]   explains research cycles or phases, if any, and their relationship to the intervention(s)<sup>[2](#myfootnote2)</sup>
+- [ ]   explains how the interventions are evaluated<sup>[3](#myfootnote3)</sup>
+- [ ]   reports participant or stakeholder reactions to interventions
+- [ ]   presents a clear and well-argued chain-of-evidence from observations to findings
+- [ ]   reports lessons learned by the organization
+- [ ]   researchers reflect on their own possible biases
 </checklist>
     
 ### Desirable Attributes
 <checklist name="Desirable">
 
--	uses direct quotations extensively
--   uses member checking to assess resonance
--   findings plausibly transferable to other contexts
--   triangulation across quantitative and qualitative data
+- [ ]	uses direct quotations extensively
+- [ ]   uses member checking to assess resonance
+- [ ]   findings plausibly transferable to other contexts
+- [ ]   triangulation across quantitative and qualitative data
 </checklist>
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
--	research team with triangulation across researchers (to mitigate researcher bias)
+- [ ]	research team with triangulation across researchers (to mitigate researcher bias)
 </checklist>
      
 ## General Quality Criteria 
@@ -189,7 +189,7 @@ Engineering*. 2008, 178-183.
 
 ---
 
-<sup>[5](#myfootnote5)</sup> E.g. project financing, potential conflicts of interest, professional relationship leading to access  
-<sup>[6](#myfootnote6)</sup> Action research projects are structured in interventions often described as action research cycles, which are often structured in distinct phases. It is a flexible methodology, where subsequent cycles are based on their predecessors.  
-<sup>[7](#myfootnote7)</sup> Can include quantitative evaluation in addition to qualitative evaluation.
+<sup>[1](#myfootnote1)</sup> E.g. project financing, potential conflicts of interest, professional relationship leading to access  
+<sup>[2](#myfootnote2)</sup> Action research projects are structured in interventions often described as action research cycles, which are often structured in distinct phases. It is a flexible methodology, where subsequent cycles are based on their predecessors.  
+<sup>[3](#myfootnote3)</sup> Can include quantitative evaluation in addition to qualitative evaluation.
 </standard>
