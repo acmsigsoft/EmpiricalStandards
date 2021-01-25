@@ -9,27 +9,27 @@ This standard applies to studies in which one or more human beings other than th
 ## Specific Attributes
 
 ### Essential Attributes
--[ ] describes all plausible, non-trivial potential risks or harms to participants (if any)
--[ ] describes any steps taken to mitigate risks or harms
--[ ] explains how benefits of the research justify any non-trivial risks or harms
--[ ] explains how participants were recruited
--[ ] explains the compensation (if any) offered for participation and how coercion was mitigated
--[ ] explains how participants&#39; free, individual, informed consent to participate was obtained
--[ ] explains how participants&#39; privacy and reputation was respected in the conduct and reporting of the research.
--[ ] explains how data about or supplied by participants was protected in the conduct of the research
--[ ] explains the permissions given by participants for publication and sharing of their data by the researchers, and the permissions given by participants for others to use this data in future
--[ ] states any barriers to participation in the research process and EITHER justifies them OR explains how they were minimized
+- [ ] describes all plausible, non-trivial potential risks or harms to participants (if any)
+- [ ] describes any steps taken to mitigate risks or harms
+- [ ] explains how benefits of the research justify any non-trivial risks or harms
+- [ ] explains how participants were recruited
+- [ ] explains the compensation (if any) offered for participation and how coercion was mitigated
+- [ ] explains how participants&#39; free, individual, informed consent to participate was obtained
+- [ ] explains how participants&#39; privacy and reputation was respected in the conduct and reporting of the research.
+- [ ] explains how data about or supplied by participants was protected in the conduct of the research
+- [ ] explains the permissions given by participants for publication and sharing of their data by the researchers, and the permissions given by participants for others to use this data in future
+- [ ] states any barriers to participation in the research process and EITHER justifies them OR explains how they were minimized
 
 ### Desirable Attributes
--[ ] cites (with application number) approval of a national, institutional, or other appropriate scholarly ethical review board
--[ ] cites the reference ethics framework(s) within which the work was conducted
--[ ] discusses justice, ethics, diversity and inclusion issues arising from eligibility and participation
--[ ] explains how the impact of the research process on participants was considered
--[ ] explains, where relevant, how risks to the researchers themselves were mitigated in the conduct of the research
--[ ] where the research refers to identifiable persons (other than participants), explains how their privacy is respected and protected (since they have not formally consented to participation)
+- [ ] cites (with application number) approval of a national, institutional, or other appropriate scholarly ethical review board
+- [ ] cites the reference ethics framework(s) within which the work was conducted
+- [ ] discusses justice, ethics, diversity and inclusion issues arising from eligibility and participation
+- [ ] explains how the impact of the research process on participants was considered
+- [ ] explains, where relevant, how risks to the researchers themselves were mitigated in the conduct of the research
+- [ ] where the research refers to identifiable persons (other than participants), explains how their privacy is respected and protected (since they have not formally consented to participation)
 
 ### Extraordinary Attributes
--[ ] supplementary materials include a complete application to a scholarly ethical review board and documentation of its approval
+- [ ] supplementary materials include a complete application to a scholarly ethical review board and documentation of its approval
 
 ## General Quality Criteria
 
