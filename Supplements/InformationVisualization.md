@@ -13,15 +13,8 @@ support the reader in a data understanding task. It does not apply to:
 
 -   Software visualization, such as showing structure or architecture of
     a software product.
-<<<<<<< HEAD
 -   Diagrams not encoding quantitative values, e.g. UML activity
     diagrams, BPMN diagrams, flow charts.
-=======
-
--   Diagrams not encoding quantitative values, e.g. UML activity
-    diagrams, BPMN diagrams, flow charts.
-
->>>>>>> 087885c549b61aae304d64a88d73b307cc999c91
 -   Tables that encode data in textual format.
 
 ## Attributes 
@@ -47,11 +40,7 @@ support the reader in a data understanding task. It does not apply to:
     -   encoding of ordinal measures through colors use saturation and lightness and avoid rainbow palettes
 
 
-<<<<<<< HEAD
 -[ ]   utility
-=======
-- [ ]   utility
->>>>>>> 087885c549b61aae304d64a88d73b307cc999c91
 
     -   all the elements in the diagram convey useful information or support clarity
     
@@ -67,11 +56,7 @@ support the reader in a data understanding task. It does not apply to:
     
     -   annotations are less prominent than data
 
-<<<<<<< HEAD
 -[ ]   clarity
-=======
-- [ ]   clarity
->>>>>>> 087885c549b61aae304d64a88d73b307cc999c91
 
     -   the diagram layout and text annotation support the understanding of the data and make the visualization as much self-contained as possible
     
@@ -91,13 +76,8 @@ support the reader in a data understanding task. It does not apply to:
     
     -   image format is preferably vectorial, if a raster format is used it must have sufficient resolution.
 
-<<<<<<< HEAD
 -[ ]   diagram design
 
-=======
-- [ ]   diagram design
- 
->>>>>>> 087885c549b61aae304d64a88d73b307cc999c91
     -   the diagram contains at most two axes unless a surface (function of two variables) is the standard representation
     
     -   use of logarithmic scales is explicitly highlighted
@@ -110,11 +90,7 @@ support the reader in a data understanding task. It does not apply to:
     
     -   *(optional)* several data series should usually be reported using multiple small diagrams rather than in a single crowded diagram
 
-<<<<<<< HEAD
 ###Table 1: When to use which visualization
-=======
-### Table 1: When to use which visualization
->>>>>>> 087885c549b61aae304d64a88d73b307cc999c91
 
 | Understanding task | Commonly used type of visualization                                                            |   
 |--------------------|------------------------------------------------------------------------------------------------|
@@ -132,22 +108,11 @@ support the reader in a data understanding task. It does not apply to:
 -   using truncated bars to exaggerate differences, compromising
     proportionality instead of using other representations (e.g. dot
     plots)
-<<<<<<< HEAD
 -   using pie charts for more than 5 categories and/or without direct
     labelling of the slices
 -   using dual vertical scales that are difficult to read and lend
     themselves to ambiguity due to the arbitrary selection of axis
     ranges
-=======
-
--   using pie charts for more than 5 categories and/or without direct
-    labelling of the slices
-
--   using dual vertical scales that are difficult to read and lend
-    themselves to ambiguity due to the arbitrary selection of axis
-    ranges
-
->>>>>>> 087885c549b61aae304d64a88d73b307cc999c91
 -   using any 3D effect or decoration that may alter perception
 
 ## Suggested Readings 
@@ -167,8 +132,4 @@ Retrieved July 12, 2020 from <https://serialmentor.com/dataviz/>
 
 Simon Fear. Publication quality tables in LATEX. 2020. Retrieved July
 12, 2020 from
-<<<<<<< HEAD
 <http://mirrors.ctan.org/macros/latex/contrib/booktabs/booktabs.pdf>
-=======
-<http://mirrors.ctan.org/macros/latex/contrib/booktabs/booktabs.pdf>
->>>>>>> 087885c549b61aae304d64a88d73b307cc999c91
