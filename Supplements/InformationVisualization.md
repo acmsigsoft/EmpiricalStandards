@@ -40,7 +40,7 @@ support the reader in a data understanding task. It does not apply to:
     -   encoding of ordinal measures through colors use saturation and lightness and avoid rainbow palettes
 
 
--[ ]   utility
+- [ ]   utility
 
     -   all the elements in the diagram convey useful information or support clarity
     
@@ -56,7 +56,7 @@ support the reader in a data understanding task. It does not apply to:
     
     -   annotations are less prominent than data
 
--[ ]   clarity
+- [ ]   clarity
 
     -   the diagram layout and text annotation support the understanding of the data and make the visualization as much self-contained as possible
     
@@ -76,7 +76,7 @@ support the reader in a data understanding task. It does not apply to:
     
     -   image format is preferably vectorial, if a raster format is used it must have sufficient resolution.
 
--[ ]   diagram design
+- [ ]   diagram design
 
     -   the diagram contains at most two axes unless a surface (function of two variables) is the standard representation
     
@@ -90,7 +90,7 @@ support the reader in a data understanding task. It does not apply to:
     
     -   *(optional)* several data series should usually be reported using multiple small diagrams rather than in a single crowded diagram
 
-###Table 1: When to use which visualization
+### Table 1: When to use which visualization
 
 | Understanding task | Commonly used type of visualization                                                            |   
 |--------------------|------------------------------------------------------------------------------------------------|
