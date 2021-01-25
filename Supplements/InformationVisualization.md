@@ -92,7 +92,7 @@ support the reader in a data understanding task. It does not apply to:
     
     -   *(optional)* several data series should usually be reported using multiple small diagrams rather than in a single crowded diagram
 
-###Table 1: When to use which visualization
+### Table 1: When to use which visualization
 
 | Understanding task | Commonly used type of visualization                                                            |   
 |--------------------|------------------------------------------------------------------------------------------------|
