@@ -17,12 +17,12 @@ provided that there are no ethical, legal, technical, economical, or practical b
 ## Specific Attributes
 
 ### Desirable Attributes
--[ ]  includes a section named _data availability_ (typically after conclusion)
--[ ] EITHER: links to supplementary materials   
+- [ ]  includes a section named _data availability_ (typically after conclusion)
+- [ ] EITHER: links to supplementary materials   
   OR explains why materials cannot be released (reasons for limited disclosure of data should be trusted)
--[ ] includes supplementary materials such as: raw, deidentified or transformed data, extended proofs, analysis scripts, software, virtual machines and containers, or qualitative codebooks.
--[ ] archives supplementary materials on preserved digital repositories such as [zenodo.org](https://zenodo.org/), [figshare.com](http://figshare.com/), [softwareheritage.org](https://www.softwareheritage.org/), [osf.io](https://osf.io/), or institutional repositories
--[ ] releases supplementary material under a clearly-identified open license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- [ ] includes supplementary materials such as: raw, deidentified or transformed data, extended proofs, analysis scripts, software, virtual machines and containers, or qualitative codebooks.
+- [ ] archives supplementary materials on preserved digital repositories such as [zenodo.org](https://zenodo.org/), [figshare.com](http://figshare.com/), [softwareheritage.org](https://www.softwareheritage.org/), [osf.io](https://osf.io/), or institutional repositories
+- [ ] releases supplementary material under a clearly-identified open license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ## General Criteria
 
