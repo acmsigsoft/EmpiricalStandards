@@ -13,18 +13,18 @@ This standard applies to papers that provide analysis of one or more methodologi
 ## Specific Attributes
 
 ### Essential Attributes
--[ ] presents information that is useful for other researchers
--[ ] presents clear, valid arguments supporting recommendations
+- [ ] presents information that is useful for other researchers
+- [ ] presents clear, valid arguments supporting recommendations
 
 ### Desirable Attributes
--[ ] synthesizes related work from reference disciplines
--[ ] provides insight specifically for software engineering; goes beyond summarizing methodological guidance from existing works or reference disciplines;
--[ ] results integrated back into prior theory or research
--[ ] develops helpful artifacts (e.g. checklists, templates, tests, tools, sets of criteria)
+- [ ] synthesizes related work from reference disciplines
+- [ ] provides insight specifically for software engineering; goes beyond summarizing methodological guidance from existing works or reference disciplines;
+- [ ] results integrated back into prior theory or research
+- [ ] develops helpful artifacts (e.g. checklists, templates, tests, tools, sets of criteria)
 
 ### Extraordinary Attributes
--[ ] includes an empirical study (e.g. a systematic literature review) that motivates the analysis of guidance
--[ ] quantitative simulation illustrating methodological issues
+- [ ] includes an empirical study (e.g. a systematic literature review) that motivates the analysis of guidance
+- [ ] quantitative simulation illustrating methodological issues
 
 ## General Criteria
 
