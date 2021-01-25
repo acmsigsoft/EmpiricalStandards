@@ -47,27 +47,27 @@ This standard applies to positivist, confirmatory (i.e. hypothesis-testing) stud
 ### Desirable Attributes
 - [ ] provides evidence that data was collected after RR1 plan is accepted
  
-###Extraordinary Attributes
+### Extraordinary Attributes
 - [ ] generates novel insights into the concept, process benefits, or limitations of registered reports
 
-### Antipatterns
+## Antipatterns
 
 - deviating from the RR1 plan because it constrains exploratory research, when the plan did not mention exploration
 - postdictive deviations from RR1 plan; i.e., changes made knowing how they would affect the outcome of the study
 - Pre-registrations that are not verifiably committed prior to data collection, e.g. not time-stamped.
 
-### Invalid Criticisms
+## Invalid Criticisms
 
 - RR1: Insisting on complete data collection or detailed analysis and results
 - RR1: Rejecting exploratory or qualitative research: all kinds of research can be pre-registered even it&#39;s not covered here
 - RR2: in hindsight, the RR1 plan was not appropriate (RR2 reviews should not criticize any aspect of the RR1 plan)
 - RR2: results are not statistically significant, novel, relevant or compelling; effect sizes too small
 
-### Justifying Deviations
+## Justifying Deviations
 
 Reviewers should not expect research to go exactly according to plan or authors to foresee every possible problem. Changes are acceptable as long as they are justified and not _postdictive_ (i.e. changes made knowing how they will affect results). For example, researchers might drop a mistranslated question in a multi-lingual questionnaire survey.
 
-### Suggested Readings
+## Suggested Readings
 
 Center for Open Science. Future-proof your research. Preregister your next study. Retrieved July 12, 2020 from [https://www.cos.io/our-services/prereg](https://www.cos.io/our-services/prereg)
 
