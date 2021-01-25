@@ -8,22 +8,22 @@ This standard applies to empirical research in which the researcher selects smal
 ## Specific Attributes
 
 ### Essential Attributes
--[ ] explains the goal of sampling (e.g. aiming for representativeness, identifying exceptional cases)
--[ ] explains the sampling strategy, in particular the different filtering steps involved or the reasons for selecting certain objects
--[ ] explains why the sampling strategy is reasonable (not necessarily optimal) for the sampling goal
--[ ] explains the reasoning behind the selection of study objects (especially qualitative studies)
--[ ] reports the sample size
+- [ ] explains the goal of sampling (e.g. aiming for representativeness, identifying exceptional cases)
+- [ ] explains the sampling strategy, in particular the different filtering steps involved or the reasons for selecting certain objects
+- [ ] explains why the sampling strategy is reasonable (not necessarily optimal) for the sampling goal
+- [ ] explains the reasoning behind the selection of study objects (especially qualitative studies)
+- [ ] reports the sample size
  
  #### Essential only if representativeness is a goal 
--[ ] states the theoretical population (what would the researcher like to generalize to?)
--[ ] presents a replicable, concise, algorithmic account of how other researchers could derive the same sample
--[ ] explicitly argues for representativeness (e.g. compares sample and population parameters, provides confidence interval and confidence level for sample size)
--[ ] explains how the sample could be biased along the sampling steps
+- [ ] states the theoretical population (what would the researcher like to generalize to?)
+- [ ] presents a replicable, concise, algorithmic account of how other researchers could derive the same sample
+- [ ] explicitly argues for representativeness (e.g. compares sample and population parameters, provides confidence interval and confidence level for sample size)
+- [ ] explains how the sample could be biased along the sampling steps
 
 ### Desirable Attributes
--[ ] reports the approximate or exact sizes of populations and sampling frames
--[ ] provides the sample, sampling frame, and sampling scripts as supplementary material (subject to the collected data containing sensitive or protected information).
--[ ] uses more sophisticated sampling strategies where appropriate, e.g.:
+- [ ] reports the approximate or exact sizes of populations and sampling frames
+- [ ] provides the sample, sampling frame, and sampling scripts as supplementary material (subject to the collected data containing sensitive or protected information).
+- [ ] uses more sophisticated sampling strategies where appropriate, e.g.:
 
     - exploratory research: using purposive rather than convenience sampling for unit of analysis
     - case study: using purposive rather than convenience sampling for site selection
