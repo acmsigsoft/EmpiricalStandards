@@ -8,22 +8,22 @@ This standard applies to studies in which data previously gathered from humans a
 
 ## Specific Attributes
 ### Essential Attributes
--[ ] describes all plausible, non-trivial potential risks or harms to data custodians and data subjects
--[ ] describes any steps taken to mitigate risks or harms
--[ ] justifies the taking of risks and/or the causing of harm in terms of the claimed benefits of the research.
--[ ] states the grounds on which the data used was legitimately available to the researchers
--[ ] explains how the research falls within the permissions given by the original data subjects
--[ ] explains the provenance of the original data in terms of the data custodian&#39;s documentation of the conditions of data capture, and whether this capture met the standards required for Studies with Human Participants (particularly in respect of consent for capture and future use).
--[ ] explains how participants&#39; privacy and reputation was respected in the conduct and reporting of the research. In particular, where multiple datasets are combined, explains how any additional privacy risks raised by this were mitigated.
--[ ] explains how the privacy and consent of data subjects was respected during the research with reference to the conditions under which data was made available to the researcher, and how any further publication of the data (in existing, combined, or transformed form) will respect the expectations and consent given by data subjects.
+- [ ] describes all plausible, non-trivial potential risks or harms to data custodians and data subjects
+- [ ] describes any steps taken to mitigate risks or harms
+- [ ] justifies the taking of risks and/or the causing of harm in terms of the claimed benefits of the research.
+- [ ] states the grounds on which the data used was legitimately available to the researchers
+- [ ] explains how the research falls within the permissions given by the original data subjects
+- [ ] explains the provenance of the original data in terms of the data custodian&#39;s documentation of the conditions of data capture, and whether this capture met the standards required for Studies with Human Participants (particularly in respect of consent for capture and future use).
+- [ ] explains how participants&#39; privacy and reputation was respected in the conduct and reporting of the research. In particular, where multiple datasets are combined, explains how any additional privacy risks raised by this were mitigated.
+- [ ] explains how the privacy and consent of data subjects was respected during the research with reference to the conditions under which data was made available to the researcher, and how any further publication of the data (in existing, combined, or transformed form) will respect the expectations and consent given by data subjects.
 
 ### Desirable Attributes
--[ ] explains how the researchers considered the impact of the research on those whose data was used
--[ ] cites, with application number, approval of a national, institutional, or other appropriate scholarly ethical review board
--[ ] cites the reference ethics framework(s) within which the work was conducted
+- [ ] explains how the researchers considered the impact of the research on those whose data was used
+- [ ] cites, with application number, approval of a national, institutional, or other appropriate scholarly ethical review board
+- [ ] cites the reference ethics framework(s) within which the work was conducted
 
 ### Extraordinary Attributes
--[ ] supplementary materials include a complete application to a scholarly ethical review board and documentation of its approval
+- [ ] supplementary materials include a complete application to a scholarly ethical review board and documentation of its approval
 
 ## General Quality Criteria
 
