@@ -22,38 +22,26 @@ support the reader in a data understanding task. It does not apply to:
 - [ ]   proportionality
     -   the values/measures are reported in a uniformly proportional way:
         the ratio of two values is equal to the geometrical ratio on paper (or screen) of the corresponding visual attributes (length, area, slope, etc.) \[lie factor\]
-    
     -   the visual attributes provide an accurate perception of the proportion, according to the attribute ranking:
     
         -   position along a common scale
-    
         -   position along identical scales
-    
         -   length
-    
         -   angle/slope
-    
         -   area
     
     -   diagrams are rendered in 2D and refrain from 3D perspectives that might alter the perception of dimensions
-    
     -   encoding of ordinal measures through colors use saturation and lightness and avoid rainbow palettes
 
 
 - [ ]   utility
 
-    -   all the elements in the diagram convey useful information or support clarity
-    
-    -   the diagram does not contain chartjunk or over-designed elements that interfere with perception or understanding
-    
+    -   all the elements in the diagram convey useful information or support clarity  
+    -   the diagram does not contain chartjunk or over-designed elements that interfere with perception or understanding 
     -   the background is light and uniform
-    
     -   there are no decorative 3D effects
-    
     -   bright and saturated colors are used solely for emphasis
-    
     -   grids are light and do not obscure data
-    
     -   annotations are less prominent than data
 
 - [ ]   clarity
@@ -65,29 +53,19 @@ support the reader in a data understanding task. It does not apply to:
         -   text annotations guide the reader in understanding the message
     
     -   direct labeling is used instead of a separate legend especially when there are more than two color codes
-    
     -   color encoding of categorical measures is limited to at most 5 distinct levels; more colors are too difficult to discriminate
-    
     -   when data points are very dense, appropriate techniques are applied to mitigate overplotting
-    
     -   axes and the relative tick marks are labelled
-    
     -   the size of text is large enough to make it readable.
-    
     -   image format is preferably vectorial, if a raster format is used it must have sufficient resolution.
 
 - [ ]   diagram design
 
     -   the diagram contains at most two axes unless a surface (function of two variables) is the standard representation
-    
     -   use of logarithmic scales is explicitly highlighted
-    
     -   data objects (e.g. bars) are sorted in a meaningful way (e.g. ascending, descending or grouped) to ease comparison
-    
     -   non-interactive visualization should serve a single understanding task
-    
     -   the type of visualization is appropriate for the visual understanding task that it is intended to support (Table 1)
-    
     -   *(optional)* several data series should usually be reported using multiple small diagrams rather than in a single crowded diagram
 
 ### Table 1: When to use which visualization
