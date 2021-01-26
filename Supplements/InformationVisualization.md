@@ -23,13 +23,11 @@ support the reader in a data understanding task. It does not apply to:
     -   the values/measures are reported in a uniformly proportional way:
         the ratio of two values is equal to the geometrical ratio on paper (or screen) of the corresponding visual attributes (length, area, slope, etc.) \[lie factor\]
     -   the visual attributes provide an accurate perception of the proportion, according to the attribute ranking:
-    
         -   position along a common scale
         -   position along identical scales
         -   length
         -   angle/slope
         -   area
-    
     -   diagrams are rendered in 2D and refrain from 3D perspectives that might alter the perception of dimensions
     -   encoding of ordinal measures through colors use saturation and lightness and avoid rainbow palettes
 
