@@ -45,11 +45,8 @@ support the reader in a data understanding task. It does not apply to:
 - [ ]   clarity
 
     -   the diagram layout and text annotation support the understanding of the data and make the visualization as much self-contained as possible
-    
         -   the title (or figure caption) concisely conveys what is the content of the visualization and the intended message
-    
         -   text annotations guide the reader in understanding the message
-    
     -   direct labeling is used instead of a separate legend especially when there are more than two color codes
     -   color encoding of categorical measures is limited to at most 5 distinct levels; more colors are too difficult to discriminate
     -   when data points are very dense, appropriate techniques are applied to mitigate overplotting
