@@ -28,7 +28,7 @@ typically given to participants in controlled experiments (see the
 
 - [ ]	identifies the target population & defines the sampling strategy (see the Sampling Supplement)
 - [ ]	provides questionnaire instrument (e.g. as supplemental file)
-- [ ]	EITHER: provides study artifacts; i.e., instrument(s), code books, analysis scripts and dataset(s) (addressing potential anonymity and confidentiality issues) \
+- [ ]	EITHER: provides study artifacts; i.e., instrument(s), code books, analysis scripts and dataset(s) (addressing potential anonymity and confidentiality issues)
 	 OR: describes in detail study artifacts and justifies why they are not provided
 - [ ]	the questionnaire design matches the research aims (i.e. questions are mapped to research objectives) and the target population (wording and format of the questions)
 - [ ]	describes how participants were selected, including invitations and incentives
