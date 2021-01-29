@@ -51,13 +51,14 @@ function readSpecificEmpiricalStandards(standard_name){
 
 function convert_checklists_to_checkboxes(standardName, checklistName, checklistText){
 	var checkboxes = document.createElement("UL");
-	checkboxes.style = "list-style-type:none;list-style-position: inside; text-indent: -1.5em;";
-	lines = checklistText.split("<br/>");
+	checkboxes.style = "list-style-type:none; list-style-position: inside; text-indent: -1.5em;";
+	lines = checklistText.includes("- [ ]") ? checklistText.split("- [ ]") : checklistText.includes("-	") ? checklistText.split("-	") : checklistText.split("");
 	var i = 0;
 	for(let line of lines){
-		if (line.startsWith("-")){
+		line_text = line.trim().replaceAll("<br/>", "");
+		if (line_text != ""){
 			i++;
-			line_text = line.trim().replace("- ", "").replace("-\t", " ").replace("---", "&mdash;").replaceAll("[[OR]]", "<br/>OR");//.replace(/\^[0-9]+\^/, "");
+			line_text = line.trim().replace("---", "&mdash;");//.replaceAll("[[OR]]", "<br/>OR");//.replace(/\^[0-9]+\^/, "");
 			checkbox_id = standardName + "-" + checklistName + ":" + i;
 			var checkboxLI = document.createElement("LI");
 			var checkboxInput = document.createElement("input");
@@ -69,7 +70,7 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 			checkboxInput.style = "color:#FFF";
 			checkboxInput.value = line_text;
 			checkboxLabel.htmlFor = checkbox_id;
-			checkboxText.innerHTML = line_text;
+			checkboxText.innerHTML = "&nbsp;" + line_text;
 			checkboxLabel.appendChild(checkboxText);
 			checkboxLI.appendChild(checkboxInput);
 			checkboxLI.appendChild(checkboxLabel);
@@ -84,6 +85,25 @@ function generateStandardChecklist(){
 	var form = document.createElement("FORM");
 	form.id = "checklists";
 	form.name = "checklists";
+
+	var EssentialUL = document.createElement("UL");
+	var EssentialH2 = document.createElement("H2");
+	EssentialH2.style = "padding: 0px; margin: 0px;";
+	EssentialH2.innerHTML = "Essential";
+	EssentialUL.appendChild(EssentialH2);
+
+	var DesirableUL = document.createElement("UL");
+	var DesirableH2 = document.createElement("H2");
+	DesirableH2.style = "padding: 0px; margin: 0px;";
+	DesirableH2.innerHTML = "Desirable";
+	DesirableUL.appendChild(DesirableH2);
+
+	var ExtraordinaryUL = document.createElement("UL");
+	var ExtraordinaryH2 = document.createElement("H2");	
+	ExtraordinaryH2.style = "padding: 0px; margin: 0px;";
+	ExtraordinaryH2.innerHTML = "Extraordinary";
+	ExtraordinaryUL.appendChild(ExtraordinaryH2);
+
     for (let key of keys){
 		empirical_standard = readSpecificEmpiricalStandards(key);
 		var dom = document.createElement("div");
@@ -94,23 +114,25 @@ function generateStandardChecklist(){
 		standardTitle.innerHTML = standardName.replaceAll("\"", "");
 		form.appendChild(standardTitle);*/
 		var checklistTags = standardTag.getElementsByTagName("checklist");
+		
 		for (let checklistTag of checklistTags){
-			var checklistTitleUL = document.createElement("UL");
-			var checklistTitle = document.createElement("H3");
-			checklistTitle.innerHTML = checklistTag.getAttribute('name')
-			checklistTitleUL.appendChild(checklistTitle);
-
-
 			// Reformat the checklists from MD to HTML
-			checklistText = checklistTag.innerText.replaceAll(">", "").
-												   replaceAll(/\\\n\s*OR/ig, "[[OR]]").
-												   replaceAll("\n", "<br/>");
+			checklistText = checklistTag.innerText.replaceAll(">", "").replaceAll("\n", "<br/>");
 												   
 			checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText)
-			checklistTitleUL.appendChild(checkboxes);
-			form.appendChild(checklistTitleUL);
+			
+			if (checklistTag.getAttribute('name') == "Essential")
+				EssentialUL.appendChild(checkboxes);
+			else if (checklistTag.getAttribute('name') == "Desirable")
+				DesirableUL.appendChild(checkboxes);
+			else if (checklistTag.getAttribute('name') == "Extraordinary")
+				ExtraordinaryUL.appendChild(checkboxes);
 		}
 	}
+	form.appendChild(EssentialUL);
+	form.appendChild(DesirableUL);
+	form.appendChild(ExtraordinaryUL);
+
 	var submit = document.createElement("input");
 	submit.type = "submit";
 	submit.id = "checklist_submit";
