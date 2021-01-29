@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html>
-<title>Empirical Standards</title>
-   <body>
+    <head>
+		<title>Empirical Standards</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script language="javascript" type="text/javascript">
+			$(document).ready(function(){
+				$('.none').on('click' , function() {
+					$('.standard').each(function(){
+						$(this).prop('checked', false);
+					})
+				});
+
+				$('.standard').on('click', function(){
+					$('.none').prop('checked', false);
+				});
+			});
+		</script>
+    </head>
+    <body>
       <form id="myForm" action="result.html" method="get">
       	<h2>Select all that apply:</h2>
-			<input type="checkbox" name="standard" value="Systematic Reviews">Systematic Reviews</input><br/><br/>
-			<input type="checkbox" name="standard" value="Action Research">Action Research</input><br/><br/>
-			<input type="checkbox" name="standard" value="Grounded Theory">Grounded Theory</input><br/><br/>
-			<input type="checkbox" name="standard" value="Qualitative Surveys">Qualitative Surveys</input><br/><br/>
-            <input type="checkbox" name="standard" value="Case Study">Case Study</input><br/><br/>
-            <input type="checkbox" name="standard" value="Questionnaire Surveys">Questionnaire Surveys</input><br/><br/>
-            <input type="checkbox" name="standard" value="Experiments">Experiments</input><br/><br/>
-            <input type="checkbox" name="standard" value="Engineering Research">Engineering Research</input><br/><br/>
-            <input type="checkbox" name="standard" value="General Standard">None of the above</input><br/><br/>
+			<input type="checkbox" class="standard" name="standard" id="Systematic_Reviews"    value="Systematic Reviews">Systematic Reviews</input><br/><br/>
+			<input type="checkbox" class="standard" name="standard" id="Action_Research"       value="Action Research">Action Research</input><br/><br/>
+			<input type="checkbox" class="standard" name="standard" id="Grounded_Theory"       value="Grounded Theory">Grounded Theory</input><br/><br/>
+			<input type="checkbox" class="standard" name="standard" id="Qualitative_Surveys"   value="Qualitative Surveys">Qualitative Surveys</input><br/><br/>
+            <input type="checkbox" class="standard" name="standard" id="Case_Study"            value="Case Study">Case Study</input><br/><br/>
+            <input type="checkbox" class="standard" name="standard" id="Questionnaire_Surveys" value="Questionnaire Surveys">Questionnaire Surveys</input><br/><br/>
+            <input type="checkbox" class="standard" name="standard" id="Experiments"           value="Experiments">Experiments</input><br/><br/>
+            <input type="checkbox" class="standard" name="standard" id="Engineering_Research"  value="Engineering Research">Engineering Research</input><br/><br/>
+            <input type="checkbox" class="none"     name="standard" id="General_Standard"      value="General Standard">None of the above</input><br/><br/>
             <input type="submit" value="Submit">
       </form>
-	  <!--
-      <form id="myForm" action="result.html" method="GET">
-      	<h1>Select all that applies:</h1>
-         <select multiple="multiple" id="myMulti">
-            <option>Systematic Reviews</option>
-            <option>Action Research</option>
-            <option>Mixed Methods</option>
-            <input type="submit" value="Submit">
-         </select>
-      </form>
-      <script type="text/javascript">
-		var myDrop = new drop({
-			selector:  '#myMulti'
-		});
-			var myDrop = new drop({
-			selector:  '#myMulti'
-			preselected: [0, 2]
-		});
-     </script>
-     -->
-   </body>
+    </body>
 </html>
