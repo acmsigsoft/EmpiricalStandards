@@ -51,11 +51,15 @@ function readSpecificEmpiricalStandards(standard_name){
 
 function convert_checklists_to_checkboxes(standardName, checklistName, checklistText){
 	var checkboxes = document.createElement("UL");
+	var standard_H3 = document.createElement("B");
+	standard_H3.style = "font-size:20px;";
+	standard_H3.innerHTML = standardName + ":";
 	checkboxes.style = "list-style-type:none; list-style-position: inside; text-indent: -1.5em;";
+	checkboxes.appendChild(standard_H3);
 	lines = checklistText.includes("- [ ]") ? checklistText.split("- [ ]") : checklistText.includes("-	") ? checklistText.split("-	") : checklistText.split("");
 	var i = 0;
 	for(let line of lines){
-		line_text = line.trim().replaceAll("<br/>", "");
+		line_text = line.trim().replaceAll("<br/>", "").replaceAll("\t", "");
 		if (line_text != ""){
 			i++;
 			line_text = line.trim().replace("---", "&mdash;");//.replaceAll("[[OR]]", "<br/>OR");//.replace(/\^[0-9]+\^/, "");
@@ -88,22 +92,25 @@ function generateStandardChecklist(){
 
 	var EssentialUL = document.createElement("UL");
 	var EssentialH2 = document.createElement("H2");
-	EssentialH2.style = "padding: 0px; margin: 0px;";
+	EssentialH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	EssentialH2.innerHTML = "Essential";
 	EssentialUL.appendChild(EssentialH2);
 
 	var DesirableUL = document.createElement("UL");
 	var DesirableH2 = document.createElement("H2");
-	DesirableH2.style = "padding: 0px; margin: 0px;";
+	DesirableH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	DesirableH2.innerHTML = "Desirable";
 	DesirableUL.appendChild(DesirableH2);
 
 	var ExtraordinaryUL = document.createElement("UL");
 	var ExtraordinaryH2 = document.createElement("H2");	
-	ExtraordinaryH2.style = "padding: 0px; margin: 0px;";
+	ExtraordinaryH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	ExtraordinaryH2.innerHTML = "Extraordinary";
 	ExtraordinaryUL.appendChild(ExtraordinaryH2);
-
+	
+	if (!keys.includes("\"General Standard\""))
+		keys.unshift("\"General Standard\"");
+	
     for (let key of keys){
 		empirical_standard = readSpecificEmpiricalStandards(key);
 		var dom = document.createElement("div");
