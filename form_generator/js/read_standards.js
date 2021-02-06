@@ -49,7 +49,20 @@ function readSpecificEmpiricalStandards(standard_name){
 	return empirical_standard;
 }
 
-function convert_checklists_to_checkboxes(standardName, checklistName, checklistText){
+function createTooltip(line_text, footnotes){
+	footnote_id = line_text.match(/\{sup_start\}(.*)\{sup_end\}/)[1];
+	footnote_text = footnotes[footnote_id];
+	var tooltip = document.createElement("sup");
+	tooltip.className = "tooltip";
+	tooltip.innerHTML = "<b>" + footnote_id.match(/\[([0-9]+)\]/)[1] + "</b>";
+	var tooltipText = document.createElement("span");
+	tooltipText.className = "tooltiptext";
+	tooltipText.innerHTML = footnote_text;
+	tooltip.appendChild(tooltipText);
+	return tooltip;
+}
+
+function convert_checklists_to_checkboxes(standardName, checklistName, checklistText, footnotes){
 	var checkboxes = document.createElement("UL");
 	var standard_H3 = document.createElement("B");
 	standard_H3.style = "font-size:20px;";
@@ -58,11 +71,12 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 	checkboxes.appendChild(standard_H3);
 	lines = checklistText.includes("- [ ]") ? checklistText.split("- [ ]") : checklistText.includes("-	") ? checklistText.split("-	") : checklistText.split("");
 	var i = 0;
+
 	for(let line of lines){
 		line_text = line.trim().replaceAll("<br/>", "").replaceAll("\t", "");
 		if (line_text != ""){
 			i++;
-			line_text = line.trim().replace("---", "&mdash;");//.replaceAll("[[OR]]", "<br/>OR");//.replace(/\^[0-9]+\^/, "");
+			line_text = line.trim().replace("---", "&mdash;");
 			checkbox_id = standardName + "-" + checklistName + ":" + i;
 			var checkboxLI = document.createElement("LI");
 			var checkboxInput = document.createElement("input");
@@ -74,7 +88,15 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 			checkboxInput.style = "color:#FFF";
 			checkboxInput.value = line_text;
 			checkboxLabel.htmlFor = checkbox_id;
-			checkboxText.innerHTML = "&nbsp;" + line_text;
+			if(line_text.includes("sup_start")){
+				var tooltip = createTooltip(line_text, footnotes);
+				checkboxText.innerHTML = "&nbsp;" + line_text.replace(/\{sup_start\}(.*)\{sup_end\}/, "");
+				checkboxText.innerHTML = checkboxText.innerHTML.replace("<br>", "");
+				checkboxText.appendChild(tooltip);
+			}
+			else{
+				checkboxText.innerHTML = "&nbsp;" + line_text;
+			}
 			checkboxLabel.appendChild(checkboxText);
 			checkboxLI.appendChild(checkboxInput);
 			checkboxLI.appendChild(checkboxLabel);
@@ -116,6 +138,12 @@ function generateStandardChecklist(){
 		var dom = document.createElement("div");
 		dom.innerHTML = empirical_standard;
 		var standardTag = dom.getElementsByTagName("standard")[0];
+		var supTags = dom.getElementsByTagName("sup");
+		var footnotes = {};
+		for(let supTag of supTags)
+			if(supTag.getAttribute('id') != null)
+				footnotes[supTag.getAttribute('id')] = supTag.innerHTML;
+
 		let standardName = "\"" + standardTag.getAttribute('name') + "\"";
 		/*var standardTitle = document.createElement("H2");
 		standardTitle.innerHTML = standardName.replaceAll("\"", "");
@@ -124,9 +152,10 @@ function generateStandardChecklist(){
 		
 		for (let checklistTag of checklistTags){
 			// Reformat the checklists from MD to HTML
+			checklistTag.innerHTML = checklistTag.innerHTML.replaceAll("<sup>", "{sup_start}").replaceAll("</sup>", "{sup_end}");
 			checklistText = checklistTag.innerText.replaceAll(">", "").replaceAll("\n", "<br/>");
 												   
-			checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText)
+			checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText, footnotes)
 			
 			if (checklistTag.getAttribute('name') == "Essential")
 				EssentialUL.appendChild(checkboxes);
