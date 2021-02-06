@@ -151,5 +151,5 @@ DOI:10.1145/3306607
 </standard>
 
 ---
-<sup>[1](#myfootnote1)</sup> There is currently no standard for predominately open-ended questionnaire surveys. One exemplar readers could draw from is: Daniel Graziotin, Fabian Fagerholm, Xiaofeng Wang, and Pekka Abrahamsson. 2018. "What happens when software developers are (un)happy." Journal of Systems and Software 140, 32-47.  
-<sup>[2](#myfootnote2)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section. 
+<sup id="[1](#myfootnote1)">There is currently no standard for predominately open-ended questionnaire surveys. One exemplar readers could draw from is: Daniel Graziotin, Fabian Fagerholm, Xiaofeng Wang, and Pekka Abrahamsson. 2018. "What happens when software developers are (un)happy." Journal of Systems and Software 140, 32-47.</sup>
+<sup id="[2](#myfootnote2)">Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</sup>

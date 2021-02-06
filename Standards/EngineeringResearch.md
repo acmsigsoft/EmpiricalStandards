@@ -157,7 +157,7 @@ Software Engineering.*
 </standard>
 
 ---
-<sup>[1](#myfootnote1)</sup> e.g., does the paper describe the overall workflow of the solution, showing how different techniques work together? Are algorithmic contributions presented in an unambiguous way? Are the key parts of a formal model presented explicitly? Are the novel components of the solution clearly singled out?  
-<sup>[2](#myfootnote2)</sup> i.e., is the problem the proposed approach tries to solve specific to a certain domain? If so, why? Why are state-of-the-art approaches not good enough to deal with the problem? How can the technical contribution be beneficial?  
-<sup>[3](#myfootnote3)</sup> e.g., time complexity of an algorithm; theoretical  
-<sup>[4](#myfootnote4)</sup> Note: Learning by building innovative artifacts is called engineering research. Some of the following readings incorrectly refer to engineering research as “design science” because the information systems community misappropriated that term circa 2004. Design science has referred to the study of designers and their processes since at least the 1940s, and still does outside of the information systems community.
+<sup id="[1](#myfootnote1)">e.g., does the paper describe the overall workflow of the solution, showing how different techniques work together? Are algorithmic contributions presented in an unambiguous way? Are the key parts of a formal model presented explicitly? Are the novel components of the solution clearly singled out?</sup>
+<sup id="[2](#myfootnote2)">i.e., is the problem the proposed approach tries to solve specific to a certain domain? If so, why? Why are state-of-the-art approaches not good enough to deal with the problem? How can the technical contribution be beneficial?</sup>
+<sup id="[3](#myfootnote3)">e.g., time complexity of an algorithm; theoretical.</sup>
+<sup id="[4](#myfootnote4)">Note: Learning by building innovative artifacts is called engineering research. Some of the following readings incorrectly refer to engineering research as “design science” because the information systems community misappropriated that term circa 2004. Design science has referred to the study of designers and their processes since at least the 1940s, and still does outside of the information systems community.</sup>

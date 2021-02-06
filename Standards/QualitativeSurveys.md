@@ -125,4 +125,4 @@ Association for Computing Machinery, New York, NY, USA, Article 34,
 </standard>
 
 ---
-<sup>[1](#myfootnote1)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.
+<sup id="[1](#myfootnote1)">L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</sup>

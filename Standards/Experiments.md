@@ -152,7 +152,7 @@ Andreas Zeller, Thomas Zimmermann, and Christian Bird. 2011. Failure is a four-l
 
 
 ---
-<sup>[1](#myfootnote1)</sup> e.g., in an experiment where control group applies Test-Last (TL) with Object 1 while treatment group applies Test-Driven-Development (TDD) with Object 2, the experimental object is confounded with the treatment.  
-<sup>[2](#myfootnote2)</sup> visual methods of checking assumptions are often as good as or better than statistical tests  
-<sup>[3](#myfootnote3)</sup> e.g. dropouts affecting balance between treatment and control group  
-<sup>[4](#myfootnote4)</sup> Quasi-experiments are appropriate for pilot studies or when assignment is beyond the researcher’s control (e.g. assigning students to two different sections of a course). Simply claiming that a study is “exploratory” is not sufficient justification. 
+<sup id="[1](#myfootnote1)">e.g., in an experiment where control group applies Test-Last (TL) with Object 1 while treatment group applies Test-Driven-Development (TDD) with Object 2, the experimental object is confounded with the treatment.</sup>
+<sup id="[2](#myfootnote2)">visual methods of checking assumptions are often as good as or better than statistical tests.</sup>
+<sup id="[3](#myfootnote3)">e.g. dropouts affecting balance between treatment and control group.</sup>
+<sup id="[4](#myfootnote4)">Quasi-experiments are appropriate for pilot studies or when assignment is beyond the researcher’s control (e.g. assigning students to two different sections of a course). Simply claiming that a study is “exploratory” is not sufficient justification.</sup>

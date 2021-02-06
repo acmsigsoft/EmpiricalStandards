@@ -101,6 +101,6 @@ Engineering (EASE).* (Jun. 2008), 1–10.
 </standard>
 
 ---
-<sup>[1](#myfootnote1)</sup> Searches can be manual or automated or a combination of both  
-<sup>[2](#myfootnote2)</sup> Primary studies are the studies that are being reviewed. In a tertiary study, the “primary studies” are themselves reviews.  
-<sup>[3](#myfootnote3)</sup> e.g. formal meta-analysis of experiments has higher requirements for completeness than mapping studies of broad topic areas
+<sup id="[1](#myfootnote1)">Searches can be manual or automated or a combination of both.</sup> 
+<sup id="[2](#myfootnote2)">Primary studies are the studies that are being reviewed. In a tertiary study, the “primary studies” are themselves reviews.</sup>
+<sup id="[3](#myfootnote3)">e.g. formal meta-analysis of experiments has higher requirements for completeness than mapping studies of broad topic areas.</sup>
