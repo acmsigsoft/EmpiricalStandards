@@ -29,7 +29,7 @@ standard is not appropriate for:
     OR: explains why no state-of-art alternatives exist   
     OR: provides compelling argument that direct comparisons are impractical
 - [ ]   Empirically evaluates the proposed artifact using:
-	 <b>action research</b>, in which the researchers intervene a real organization using the artifact, a **case study** in which a real organization uses the artifact without researcher intervention, a **controlled experiment** in which human participants use the  artifact, a **simulation** in which the artifact is used in an artificial environment, or another method for which a clear and convincing rationale is provided
+	 **action research**, in which the researchers intervene a real organization using the artifact, a **case study** in which a real organization uses the artifact without researcher intervention, a **controlled experiment** in which human participants use the  artifact, a **simulation** in which the artifact is used in an artificial environment, or another method for which a clear and convincing rationale is provided
 - [ ]   clearly indicates the empirical methodology being used (e.g. action research, controlled experiment)
 - [ ]   EITHER: empirically compares the artifact to one or more state-of-the-art alternative artifacts   
     OR: empirically compares the artifact to one or more state-of-the-art benchmarks   
@@ -154,10 +154,9 @@ Møller. 2016. Feedback-Directed Instrumentation for Deployed JavaScript
 Applications. In *Proceedings of the 38th International Conference on
 Software Engineering.*
 
-</standard>
-
 ---
-<sup id="[1](#myfootnote1)">e.g., does the paper describe the overall workflow of the solution, showing how different techniques work together? Are algorithmic contributions presented in an unambiguous way? Are the key parts of a formal model presented explicitly? Are the novel components of the solution clearly singled out?</sup>
-<sup id="[2](#myfootnote2)">i.e., is the problem the proposed approach tries to solve specific to a certain domain? If so, why? Why are state-of-the-art approaches not good enough to deal with the problem? How can the technical contribution be beneficial?</sup>
-<sup id="[3](#myfootnote3)">e.g., time complexity of an algorithm; theoretical.</sup>
-<sup id="[4](#myfootnote4)">Note: Learning by building innovative artifacts is called engineering research. Some of the following readings incorrectly refer to engineering research as “design science” because the information systems community misappropriated that term circa 2004. Design science has referred to the study of designers and their processes since at least the 1940s, and still does outside of the information systems community.</sup>
+<footnote><sup>[1](#myfootnote1)</sup> e.g., does the paper describe the overall workflow of the solution, showing how different techniques work together? Are algorithmic contributions presented in an unambiguous way? Are the key parts of a formal model presented explicitly? Are the novel components of the solution clearly singled out?</footnote><br>
+<footnote><sup>[2](#myfootnote2)</sup> i.e., is the problem the proposed approach tries to solve specific to a certain domain? If so, why? Why are state-of-the-art approaches not good enough to deal with the problem? How can the technical contribution be beneficial?</footnote><br>
+<footnote><sup>[3](#myfootnote3)</sup> e.g., time complexity of an algorithm; theoretical.</footnote><br>
+<footnote><sup>[4](#myfootnote4)</sup> Note: Learning by building innovative artifacts is called engineering research. Some of the following readings incorrectly refer to engineering research as “design science” because the information systems community misappropriated that term circa 2004. Design science has referred to the study of designers and their processes since at least the 1940s, and still does outside of the information systems community.</footnote><br>
+</standard>

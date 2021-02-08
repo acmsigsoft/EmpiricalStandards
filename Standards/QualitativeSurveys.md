@@ -122,7 +122,7 @@ during coding. In *Proceedings of the 20th International Conference on
 Evaluation and Assessment in Software Engineering (EASE '16).*
 Association for Computing Machinery, New York, NY, USA, Article 34,
 1–10. DOI:10.1145/2915970.2915990
-</standard>
 
 ---
-<sup id="[1](#myfootnote1)">L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</sup>
+<footnote><sup>[1](#myfootnote1)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
+</standard>
