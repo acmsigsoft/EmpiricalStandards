@@ -29,7 +29,7 @@ standard is not appropriate for:
     OR: explains why no state-of-art alternatives exist   
     OR: provides compelling argument that direct comparisons are impractical
 - [ ]   Empirically evaluates the proposed artifact using:
-	**action research**, in which the researchers intervene a real organization using the artifact, a **case study** in which a real organization uses the artifact without researcher intervention, a **controlled experiment** in which human participants use the  artifact, a **simulation** in which the artifact is used in an artificial environment, or another method for which a clear and convincing rationale is provided
+	 <b>action research</b>, in which the researchers intervene a real organization using the artifact, a **case study** in which a real organization uses the artifact without researcher intervention, a **controlled experiment** in which human participants use the  artifact, a **simulation** in which the artifact is used in an artificial environment, or another method for which a clear and convincing rationale is provided
 - [ ]   clearly indicates the empirical methodology being used (e.g. action research, controlled experiment)
 - [ ]   EITHER: empirically compares the artifact to one or more state-of-the-art alternative artifacts   
     OR: empirically compares the artifact to one or more state-of-the-art benchmarks   

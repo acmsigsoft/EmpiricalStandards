@@ -68,7 +68,7 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 	standard_H3.style = "font-size:20px;";
 	standard_H3.innerHTML = standardName + ":";
 	checkboxes.style = "list-style-type:none; list-style-position: inside; text-indent: -1.5em;";
-	checkboxes.appendChild(standard_H3);
+	//checkboxes.appendChild(standard_H3); //no subheadings
 	lines = checklistText.includes("- [ ]") ? checklistText.split("- [ ]") : checklistText.includes("-	") ? checklistText.split("-	") : checklistText.split("");
 	var i = 0;
 
@@ -88,6 +88,12 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 			checkboxInput.style = "color:#FFF";
 			checkboxInput.value = line_text;
 			checkboxLabel.htmlFor = checkbox_id;
+
+			//we dont need this part in the checklist
+			if(line_text.includes("complies with all applicable empirical standards")){
+				continue;
+			}
+
 			if(line_text.includes("sup_start")){
 				var tooltip = createTooltip(line_text, footnotes);
 				checkboxText.innerHTML = "&nbsp;" + line_text.replace(/\{sup_start\}(.*)\{sup_end\}/, "");
