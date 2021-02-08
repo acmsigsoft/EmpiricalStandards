@@ -50,7 +50,7 @@ function readSpecificEmpiricalStandards(standard_name){
 }
 
 function createTooltip(line_text, footnotes){
-	footnote_id = line_text.match(/\{sup_start\}(.*)\{sup_end\}/)[1];
+	footnote_id = line_text.match(/\{sup\}(.*)\{\/sup\}/)[1];
 	footnote_text = footnotes[footnote_id];
 	var tooltip = document.createElement("sup");
 	tooltip.className = "tooltip";
@@ -94,9 +94,9 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 				continue;
 			}
 
-			if(line_text.includes("sup_start")){
+			if(line_text.includes("footnote")){
 				var tooltip = createTooltip(line_text, footnotes);
-				checkboxText.innerHTML = "&nbsp;" + line_text.replace(/\{sup_start\}(.*)\{sup_end\}/, "");
+				checkboxText.innerHTML = "&nbsp;" + line_text.replace(/\{sup\}(.*)\{\/sup\}/, "");
 				checkboxText.innerHTML = checkboxText.innerHTML.replace("<br>", "");
 				checkboxText.appendChild(tooltip);
 			}
@@ -144,11 +144,14 @@ function generateStandardChecklist(){
 		var dom = document.createElement("div");
 		dom.innerHTML = empirical_standard;
 		var standardTag = dom.getElementsByTagName("standard")[0];
-		var supTags = dom.getElementsByTagName("sup");
+		var footnoteTags = dom.getElementsByTagName("footnote");
 		var footnotes = {};
-		for(let supTag of supTags)
-			if(supTag.getAttribute('id') != null)
-				footnotes[supTag.getAttribute('id')] = supTag.innerHTML;
+		for(let footnoteTag of footnoteTags){
+				supTag = footnoteTag.getElementsByTagName("sup")[0];
+				footnote_id = supTag.innerText.trim()
+				supTag.remove();
+				footnotes[footnote_id] = footnoteTag.innerText.trim();
+		}
 
 		let standardName = "\"" + standardTag.getAttribute('name') + "\"";
 		/*var standardTitle = document.createElement("H2");
@@ -158,7 +161,7 @@ function generateStandardChecklist(){
 		
 		for (let checklistTag of checklistTags){
 			// Reformat the checklists from MD to HTML
-			checklistTag.innerHTML = checklistTag.innerHTML.replaceAll("<sup>", "{sup_start}").replaceAll("</sup>", "{sup_end}");
+			checklistTag.innerHTML = checklistTag.innerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
 			checklistText = checklistTag.innerText.replaceAll(">", "").replaceAll("\n", "<br/>");
 												   
 			checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText, footnotes)
