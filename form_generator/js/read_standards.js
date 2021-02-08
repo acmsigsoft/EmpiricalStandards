@@ -62,6 +62,16 @@ function createTooltip(line_text, footnotes){
 	return tooltip;
 }
 
+function fromMDtoHTMLformat(text){
+	if (text.match(/\*(.*?)\*/g) != null){
+		text = text.replace(/\*(.*?)\*/g, "<i>$1</i>");
+	}
+	if (text.match(/\*\*(.*?)\*\*/g) != null){
+		text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+	}
+	return text;
+}
+
 function convert_checklists_to_checkboxes(standardName, checklistName, checklistText, footnotes){
 	var checkboxes = document.createElement("UL");
 	var standard_H3 = document.createElement("B");
@@ -163,7 +173,7 @@ function generateStandardChecklist(){
 			// Reformat the checklists from MD to HTML
 			checklistTag.innerHTML = checklistTag.innerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
 			checklistText = checklistTag.innerText.replaceAll(">", "").replaceAll("\n", "<br/>");
-												   
+			checklistText = fromMDtoHTMLformat(checklistText);
 			checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText, footnotes)
 			
 			if (checklistTag.getAttribute('name') == "Essential")
