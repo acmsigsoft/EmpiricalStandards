@@ -63,12 +63,11 @@ function createTooltip(line_text, footnotes){
 }
 
 function fromMDtoHTMLformat(text){
-	if (text.match(/\*(.*?)\*/g) != null){
-		text = text.replace(/\*(.*?)\*/g, "<i>$1</i>");
-	}
-	if (text.match(/\*\*(.*?)\*\*/g) != null){
+	if (text.match(/\*\*(.*?)\*\*/g) != null)
 		text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
-	}
+	if (text.match(/\*(.*?)\*/g) != null)
+		text = text.replace(/\*(.*?)\*/g, "<i>$1</i>");
+	
 	return text;
 }
 
