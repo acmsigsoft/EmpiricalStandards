@@ -121,7 +121,7 @@ different purposes, including:
 
 Line Dube and Guy Pare. Rigor in information systems positivist case
 re-search: current practices, trends, and recommendations. 2003. *MIS
-quarterly.* JSTOR 27, 4 (Dec. 2003), 597–636. DOI: 10.2307/30036550
+Quarterly.* 27, 4, 597–636. DOI: 10.2307/30036550
 
 Shiva Ebneyamini, and Mohammad Reza Sadeghi Moghadam. 2018. Toward
 Developing a Framework for Conducting Case Study Research.
@@ -137,10 +137,10 @@ Case studies for method and tool evaluation. *IEEE software.* 12, 4
 
 Timothy C. Lethbridge, Susan Elliott Sim, and Janice Singer. 2005.
 Studying software engineers: Data collection techniques for software
-field studies. *Empirical software engineering.* 10, 3 (2005), 311–341.
+field studies. *Empirical Software Engineering.* 10, 3 (2005), 311–341.
 
 Mathew Miles, A Michael Huberman and Saldana Johnny. 2014. *Qualitative
-data analysis: A methods sourcebook*.
+data analysis: A methods sourcebook*. Sage.
 
 Dewayne E. Perry, Susan Elliott Sim, and Steve M. Easterbrook. 2004.
 Case Studies for Software Engineers, In *Proceedings 26th International
@@ -149,14 +149,14 @@ Conference on Software Engineering.* 28 May 2008, Edinburgh, UK,
 
 Per Runeson and Martin Höst. 2009. Guidelines for conducting and
 reporting case study research in software engineering. *Empirical
-software engineering*. 14, 2, 131 pages.
+Software Engineering*. 14, 2, Article 131.
 
-Per Runeson, Martin Host, Austen Rainer, and Bjorn Regnell. 2012. Case
-study research in software engineering: Guidelines and examples. John
+Per Runeson, Martin Host, Austen Rainer, and Bjorn Regnell. 2012. *Case
+study research in software engineering: Guidelines and examples.* John
 Wiley & Sons.
 
 Sarah J. Tracy. 2010. Qualitative Quality: Eight "Big-Tent" Criteria for
-Excellent Qualitative Research. *Qualitative Inquiry*. *16*, 10,
+Excellent Qualitative Research. *Qualitative Inquiry*. 16, 10,
 837–851. DOI:
 [10.1177/1077800410383121](https://doi.org/10.1177/1077800410383121)
 
