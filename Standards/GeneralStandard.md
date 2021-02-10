@@ -49,7 +49,7 @@ following.
 - [ ]	supports claims and conclusions with explicit arguments or evidence (data/observations)
 - [ ]	defines jargon, acronyms and key concepts
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
-- [ ]	visualizations/graphs are not misleading (see the Information Visualization Supplement)
+- [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement)](Supplements/InformationVisualization.md)
 - [ ]	complies with all applicable empirical standards
 </checklist>
      
