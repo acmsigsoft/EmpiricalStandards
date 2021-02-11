@@ -63,13 +63,18 @@ function createTooltip(line_text, footnotes){
 }
 
 function fromMDtoHTMLformat(text){
+	// Bold text
 	if (text.match(/\*\*(.*?)\*\*/g) != null)
 		text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+
+	// Italic text
 	if (text.match(/\*(.*?)\*/g) != null)
 		text = text.replace(/\*(.*?)\*/g, "<i>$1</i>");
-	if (text.match("(see the Information Visualization Supplement)") != null)
-		text = text.replace("(see the Information Visualization Supplement)", "<a href='https://github.com/acmsigsoft/EmpiricalStandards/blob/development/Supplements/InformationVisualization.md'>(see the Information Visualization Supplement)</a>");
-	
+
+	// Supplements
+	if (text.match(/\(see(\s|\sthe\s)?\[(.*?)\]\((.*?)\)\)/g) != null)
+		text = text.replace(/\(see(\s|\sthe\s)?\[(.*?)\]\((.*?)\)\)/g, "(see $1<a href='$3'>$2</a>)");
+
 	return text;
 }
 
