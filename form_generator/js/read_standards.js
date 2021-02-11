@@ -67,6 +67,8 @@ function fromMDtoHTMLformat(text){
 		text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
 	if (text.match(/\*(.*?)\*/g) != null)
 		text = text.replace(/\*(.*?)\*/g, "<i>$1</i>");
+	if (text.match("(see the Information Visualization Supplement)") != null)
+		text = text.replace("(see the Information Visualization Supplement)", "<a href='https://github.com/acmsigsoft/EmpiricalStandards/blob/development/Supplements/InformationVisualization.md'>(see the Information Visualization Supplement)</a>");
 	
 	return text;
 }
@@ -155,6 +157,7 @@ function generateStandardChecklist(){
 		var standardTag = dom.getElementsByTagName("standard")[0];
 		var footnoteTags = dom.getElementsByTagName("footnote");
 		var footnotes = {};
+
 		for(let footnoteTag of footnoteTags){
 				supTag = footnoteTag.getElementsByTagName("sup")[0];
 				footnote_id = supTag.innerText.trim()
@@ -174,7 +177,7 @@ function generateStandardChecklist(){
 			checklistText = checklistTag.innerText.replaceAll(">", "").replaceAll("\n", "<br/>");
 			checklistText = fromMDtoHTMLformat(checklistText);
 			checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText, footnotes)
-			
+
 			if (checklistTag.getAttribute('name') == "Essential")
 				EssentialUL.appendChild(checkboxes);
 			else if (checklistTag.getAttribute('name') == "Desirable")

@@ -29,7 +29,25 @@
             <input type="checkbox" class="standard" name="standard" id="Questionnaire_Surveys" value="Questionnaire Surveys">Questionnaire Surveys</input><br/><br/>
             <input type="checkbox" class="standard" name="standard" id="Experiments"           value="Experiments">Experiments</input><br/><br/>
             <input type="checkbox" class="none"     name="standard" id="General_Standard"      value="General Standard">None of the above</input><br/><br/>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class="button">
       </form>
+      <script>
+          let input = document.querySelector(".standard");
+          let button = document.querySelector(".button");
+
+          button.disabled = true; //setting button state to disabled
+
+          input.addEventListener("change", stateHandle);
+
+          function stateHandle() {
+              if (document.querySelectorAll("form").value === "") {
+                  button.disabled = true; //button remains disabled
+              }
+              else {
+                  button.disabled = false; //button is enabled
+              }
+
+          }
+      </script>
     </body>
 </html>
