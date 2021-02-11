@@ -4,6 +4,11 @@
 		<title>Empirical Standards</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script language="javascript" type="text/javascript">
+			// Reset the form at the begining
+			$(window).bind("pageshow", function() {
+				$('form')[0].reset();
+			});
+			
 			$(document).ready(function(){
 				$('.none').on('click' , function() {
 					$('.standard').each(function(){
@@ -13,6 +18,14 @@
 
 				$('.standard').on('click', function(){
 					$('.none').prop('checked', false);
+				});
+				
+				// Enable the Submit button only when any of the checkboxes is checked; otherwise, disable.
+				$(".standard,.none").click(function() {
+					if ($("#myForm input[type=checkbox]:checked").length > 0)
+						$(".button").attr("disabled", false);
+					else
+					   $(".button").attr("disabled", true);
 				});
 			});
 		</script>
@@ -29,25 +42,8 @@
             <input type="checkbox" class="standard" name="standard" id="Questionnaire_Surveys" value="Questionnaire Surveys">Questionnaire Surveys</input><br/><br/>
             <input type="checkbox" class="standard" name="standard" id="Experiments"           value="Experiments">Experiments</input><br/><br/>
             <input type="checkbox" class="none"     name="standard" id="General_Standard"      value="General Standard">None of the above</input><br/><br/>
-            <input type="submit" value="Submit" class="button">
+            <input type="submit"   class="button"   value="Submit" disabled>
       </form>
-      <script>
-          let input = document.querySelector(".standard");
-          let button = document.querySelector(".button");
 
-          button.disabled = true; //setting button state to disabled
-
-          input.addEventListener("change", stateHandle);
-
-          function stateHandle() {
-              if (document.querySelectorAll("form").value === "") {
-                  button.disabled = true; //button remains disabled
-              }
-              else {
-                  button.disabled = false; //button is enabled
-              }
-
-          }
-      </script>
     </body>
 </html>
