@@ -199,6 +199,6 @@ function generateStandardChecklist(){
 	submit.type = "submit";
 	submit.id = "checklist_submit";
 	submit.name = "checklist_submit";
-	form.appendChild(submit);
+	//form.appendChild(submit);
 	document.body.appendChild(form);
 }
