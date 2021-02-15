@@ -65,42 +65,25 @@ OR:
 - IRR/IRA analysis not only indicates reliability and objectivity (in positivist research) but also improves reflexivity (in anti-positivist research).
 
 ## Suggested Readings
-
 FENG, G. C. 2014. Intercoder reliability indices: disuse, misuse, and abuse. _Quality &amp; Quantity_, 48 (3), 1803-1815.
-
 GISEV, N., BELL, J. S., &amp; CHEN, T. F. 2013. Interrater agreement and interrater reliability: key concepts, approaches, and applications. _Research in Social and Administrative Pharmacy_, 9 (3), 330-338.
-
 HENRICA C.W. DE VETA, CAROLINE B. TERWEEA, DIRK L. KNOLA,B, LEX M. BOUTER. 2006. When to use agreement versus reliability measures. _Journal of Clinical Epidemiology_ 59, 1033–1039.
-
 NILI, A., TATE, M., BARROS, A., &amp; JOHNSTONE, D. 2020. An approach for selecting and using a method of inter-coder reliability in information management research. _International Journal of Information Management_, 54.
-
 O&#39;CONNOR, C., &amp; JOFFE, H. 2020. Intercoder reliability in qualitative research: debates and practical guidelines. _International Journal of Qualitative Methods_, 19.
 
 ## Exemplars
-
 JESSICA DIAZ, DANIEL LÓPEZ-FERNÁNDEZ, JORGE PEREZ, ÁNGEL GONZÁLEZ-PRIETO (in press) Why are many businesses instilling a DevOps culture into their organization? _Empirical Software Engineering_
-
 JORGE PÉREZ, JESSICA DÍAZ, JAVIER GARCÍA-MARTÍN, AND BERNARDO TABUENCA. 2020. Systematic literature reviews in software engineering - enhancement of the study selection process using Cohen&#39;s Kappa statistic. _Journal of Systems and Software_, 168
-
 JORGE PÉREZ, CARMEN VIZCARRO, JAVIER GARCÍA, AURELIO BERMÚDEZ, AND RUTH COBOS.2017. Development of Procedures to Assess Problem-Solving Competence in Computing Engineering. _IEEE Transactions on Education_, 60 (1), 22-28
-
 R. MOHANANI, B. TURHAN, P. RALPH, (in press) Requirements framing affects design creativity. _IEEE Transactions on Software Engineering._ DOI: 10.1109/TSE.2019.2909033
-
 ZAPF, A., CASTELL, S., MORAWIETZ, L., &amp; KARCH, A. 2016. Measuring inter-rater reliability for nominal data–which coefficients and confidence intervals are appropriate? _BMC medical research methodology_, 16, article 93
 
 ---
 [1](#sdfootnote1anc) Assessing consistency among raters, where appropriate, promotes &quot;_systematicity, communicability and transparency of the coding process; reflexivity and dialogue within research teams; and helping to satisfy diverse audiences of the trustworthiness of the research_&quot; (O&#39;Connor &amp; Joffe 2020).
-
 [2](#sdfootnote2anc) See Gisev, Bell, &amp; Chen (2013)
-
 [3](#sdfootnote3anc) For example: (a) applying selection criteria in an SLR; (b) an experiment in which a dependent variable like code quality is scored by human; (c) deductive qualitative analysis with an a priori coding scheme in positivist case study.
-
 [4](#sdfootnote4anc) e.g. the ratings are uncontroversial; multiple raters would be impractical; multiple raters are inconsistent with the philosophical perspective of the work
-
 [5](#sdfootnote5anc) Such as Pearson&#39;s r, Kendall&#39;s tau, Spearman&#39;s rho, Cohen&#39;s Kappa, Fleiss Kappa, Krippendorff&#39;s Alpha or (rarely) percent agreement
-
 [6](#sdfootnote6anc) E.g. is the absolute value for each item being rated (IRA) or the trend in ratings (IRR) important?
-
 [7](#sdfootnote7anc) E.g. high value of the observed agreement, but low value of the statistic or vice versa
-
 [8](#sdfootnote8anc) See FEINSTEIN, A. R., &amp; CICCHETTI, D. V.1990. High Agreement But Low Kappa: I. the Problems of Two Paradoxes\*. _J Clin Epidemiol_, 43(6), 543–549.
