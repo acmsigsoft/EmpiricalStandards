@@ -14,15 +14,15 @@ This standard applies to studies in which one or more human beings other than th
 - [ ] explains how benefits of the research justify any non-trivial risks or harms
 - [ ] explains how participants were recruited
 - [ ] explains the compensation (if any) offered for participation and how coercion was mitigated
-- [ ] explains how participants&#39; free, individual, informed consent to participate was obtained
-- [ ] explains how participants&#39; privacy and reputation was respected in the conduct and reporting of the research.
-- [ ] explains how data about or supplied by participants was protected in the conduct of the research
+- [ ] explains how participants&#39; free, individual, informed consent to participate was obtained<sup>[1](myfootnote1)</sup> 
+- [ ] explains how participants&#39; privacy and reputation was respected in the conduct and reporting of the research.<sup>[2](myfootnote2)</sup> 
+- [ ] explains how data about or supplied by participants was protected in the conduct of the research<sup>[3](myfootnote3)</sup> 
 - [ ] explains the permissions given by participants for publication and sharing of their data by the researchers, and the permissions given by participants for others to use this data in future
-- [ ] states any barriers to participation in the research process and EITHER justifies them OR explains how they were minimized
+- [ ] states any barriers to participation in the research process and EITHER justifies them OR explains how they were minimized<sup>[4](myfootnote4)</sup> 
 
 ### Desirable Attributes
 - [ ] cites (with application number) approval of a national, institutional, or other appropriate scholarly ethical review board
-- [ ] cites the reference ethics framework(s) within which the work was conducted
+- [ ] cites the reference ethics framework(s) within which the work was conducted<sup>[5](myfootnote5)</sup> 
 - [ ] discusses justice, ethics, diversity and inclusion issues arising from eligibility and participation
 - [ ] explains how the impact of the research process on participants was considered
 - [ ] explains, where relevant, how risks to the researchers themselves were mitigated in the conduct of the research
@@ -41,8 +41,8 @@ Research should balance the anticipated benefits of a study with the potential r
 
 ## Examples of Acceptable Deviations
 
-- Potentially damaging the reputation of a named organization by responsibly disclosing or reporting impartial, corroborated evidence of illegal, dangerous or unethical behavior.
-- The requirement to explain informed consent procedures may be modified where deception is a necessary part of the research protocol (although this itself must be explained in full).
+- Potentially damaging the reputation of a named organization by responsibly disclosing or reporting impartial, corroborated evidence of illegal, dangerous or unethical behavior.<sup>[6](myfootnote6)</sup> 
+- The requirement to explain informed consent procedures may be modified where deception is a necessary part of the research protocol (although this itself must be explained in full<sup>[7](myfootnote7)</sup> ).
 - Maintaining participants&#39; privacy is not required where it is demonstrated that this was clearly explained and freely agreed to by the participants during recruitment and consent.
 
 ## Invalid Criticisms
