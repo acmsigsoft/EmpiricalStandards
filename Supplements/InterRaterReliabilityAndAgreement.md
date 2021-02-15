@@ -1,8 +1,8 @@
 # Inter-Rater Reliability and Agreement <sup>[1](#sdfootnote1anc)</sup>
-&quot;The extent to which different raters assign the same precise value for each item being rated&quot; (Inter-Rater Agreement; IRA) and &quot;the extent to which raters can consistently distinguish between different items on a measurement scale&quot; (Inter-Rater Reliability; IRR)<sup>[2]</sup>
+&quot;The extent to which different raters assign the same precise value for each item being rated&quot; (Inter-Rater Agreement; IRA) and &quot;the extent to which raters can consistently distinguish between different items on a measurement scale&quot; (Inter-Rater Reliability; IRR)<sup>[2](#sdfootnote2anc)</sup>
 ## Application
 
-Applies to studies in which one or more human raters (also called judges or coders) rate (or measure, label, judge, rank or categorize) one or more properties of one or more research objects.<sup>[3]</sup>
+Applies to studies in which one or more human raters (also called judges or coders) rate (or measure, label, judge, rank or categorize) one or more properties of one or more research objects.<sup>[3](#sdfootnote3anc)</sup>
 
 ## Are multiple raters needed?
 
@@ -17,19 +17,19 @@ There is no universal rule to determine when two or more raters are necessary. T
 ### Essential Attributes
 - [ ] clearly states what properties were rated
 - [ ] clearly states how many raters rated each property
-- [ ] EITHER: provides reasonable justification for using a single rater<sup>[4]</sup>
+- [ ] EITHER: provides reasonable justification for using a single rater<sup>[4](#sdfootnote4anc)</sup>
 
 OR:
   - [ ] describes the process by which two or more raters independently rated properties of research objects
   - [ ] describes how disagreements were resolved
   - [ ] indicates the variable type (nominal, ordinal, interval, ratio) of the ratings
-  - [ ] reports an appropriate statistical measure of IRR/IRA<sup>[5]</sup>
+  - [ ] reports an appropriate statistical measure of IRR/IRA<sup>[5](#sdfootnote5anc)</sup>
 
 ### Desirable Attributes
 - [ ] provides supplementary materials including: rating scheme(s), decision rules, example disagreements, IRR/IRA broken down by property or wave of analysis.
-- [ ] justifies the statistic used<sup>[6]</sup>
+- [ ] justifies the statistic used<sup>[6](#sdfootnote6anc)</sup>
 - [ ] reports established interpretations or thresholds for the statistics used
-- [ ] analyzes anomalous results<sup>[7]</sup> in light of the properties of the statistic used (e.g. Cohen&#39;s kappa anomalies<sup>[8]</sup>)
+- [ ] analyzes anomalous results<sup>[7](#sdfootnote7anc)</sup> in light of the properties of the statistic used (e.g. Cohen&#39;s kappa anomalies<sup>[8](#sdfootnote8anc)</sup>)
 - [ ] describes the raters&#39; training or experience in the research topic
 - [ ] resolves disagreements through discussion (rather than voting)
 
