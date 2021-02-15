@@ -35,7 +35,7 @@ This standard applies to papers that provide analysis of one or more methodologi
 
 ## Antipatterns
 
-- overreaching; informal logical fallacies (e.g. straw man argument, appeal to popularity, shifting the burden of proof)
+- overreaching; informal logical fallacies (e.g. straw man argument, appeal to popularity, shifting the burden of proof)<sup>[1](myfootnote1)</sup> 
 - discussing an issue without clear conclusions; failing to provide clear guidelines
 - attacking individual studies or researchers; hypothetical examples should be used to avoid engendering animosity
 
