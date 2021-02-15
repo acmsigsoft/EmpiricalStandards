@@ -1,4 +1,4 @@
-# Inter-Rater Reliability and Agreement <sup>[1]</sup>
+# Inter-Rater Reliability and Agreement <sup>[1](#sdfootnote1anc)</sup>
 &quot;The extent to which different raters assign the same precise value for each item being rated&quot; (Inter-Rater Agreement; IRA) and &quot;the extent to which raters can consistently distinguish between different items on a measurement scale&quot; (Inter-Rater Reliability; IRR)<sup>[2]</sup>
 ## Application
 
