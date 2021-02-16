@@ -49,12 +49,14 @@ function readSpecificEmpiricalStandards(standard_name){
 	return empirical_standard;
 }
 
-function createTooltip(line_text, footnotes){
+function createTooltip(checkboxText, line_text, footnotes){
 	footnote_id = line_text.match(/\{sup\}(.*)\{\/sup\}/)[1];
 	footnote_text = footnotes[footnote_id];
-	var tooltip = document.createElement("sup");
+	//var tooltip = document.createElement("sup");
+	var tooltip = checkboxText;
 	tooltip.className = "tooltip";
-	tooltip.innerHTML = "<b>" + footnote_id.match(/\[([0-9]+)\]/)[1] + "</b>";
+	//tooltip.innerHTML = "<b>" + footnote_id.match(/\[([0-9]+)\]/)[1] + "</b>";
+	tooltip.innerHTML = "&nbsp;" + line_text.replace(/\{sup\}(.*)\{\/sup\}/, "").replace("<br>", "");
 	var tooltipText = document.createElement("span");
 	tooltipText.className = "tooltiptext";
 	tooltipText.innerHTML = footnote_text;
@@ -111,10 +113,7 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 			}
 
 			if(line_text.includes("footnote")){
-				var tooltip = createTooltip(line_text, footnotes);
-				checkboxText.innerHTML = "&nbsp;" + line_text.replace(/\{sup\}(.*)\{\/sup\}/, "");
-				checkboxText.innerHTML = checkboxText.innerHTML.replace("<br>", "");
-				checkboxText.appendChild(tooltip);
+				checkboxText = createTooltip(checkboxText, line_text, footnotes);
 			}
 			else{
 				checkboxText.innerHTML = "&nbsp;" + line_text;
