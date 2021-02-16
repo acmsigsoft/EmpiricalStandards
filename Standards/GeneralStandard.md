@@ -137,6 +137,8 @@ their trustworthiness and importance. Reviewers should endeavor to:
     methods, or publications.
 -   Rejecting a study because the reviewer would have used a different
     methodology or design.
+-   Rejecting a study because it replicates or reproduces existing work (see Replications Supplement)
+-   Rejecting a study because it reports negative results
 
 ## Research and Reporting Antipatterns
 -   Attempting a study without reading, understanding and applying
