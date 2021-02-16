@@ -128,7 +128,7 @@ their trustworthiness and importance. Reviewers should endeavor to:
     published studies that make the same contribution.
 -   Criticizing a study for limitations intrinsic to that kind of study
     or the methodology used.
--   Cross paradigmatic criticism (e.g. attacking an interpretivist study
+-   Cross-paradigmatic criticism (e.g. attacking an interpretivist study
     for not conforming to positivist norms).
 -   Requesting additional analysis not directly related to a study's purpose or research question, 
     leading to results poorly linked to the article’s narrative.
