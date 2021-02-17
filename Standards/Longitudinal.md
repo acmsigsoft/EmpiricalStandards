@@ -5,7 +5,7 @@ A study focusing on the changes in and evolution of a phenomenon over time
 
 This standard applies to studies that involve repeated observations of the same variables (e.g., productivity or technical debt) over a period of time. Longitudinal studies include the analysis of datasets over time, such as the analysis of the evolution of the code. Longitudinal studies require to maintain identifiability of subjects (humans or artifacts) between data collection waves and to use at least two waves.
 
-For cross-sectional analysis, consider the **Exploratory**** Data Science Standard **or the** Experiments Standard** (if variables are manipulated).
+For cross-sectional analysis, consider the **Exploratory Data Science Standard ** or the ** Experiments Standard** (if variables are manipulated).
 
 ## Specific Attributes
 
@@ -37,7 +37,7 @@ For cross-sectional analysis, consider the **Exploratory**** Data Science Standa
 
 Reliability, internal validity, conclusion validity, construct validity, and external validity.
 
-Longitudinal studies seek to maximize their internal validity. In this regard, it is essential to consider two main aspects: the sample size and the selected population&#39;s representativeness (humans or artifacts). The sample needs to reflect the target population (e.g., software developers, Java libraries). .
+Longitudinal studies seek to maximize their internal validity. In this regard, it is essential to consider two main aspects: the sample size and the selected population&#39;s representativeness (humans or artifacts). The sample needs to reflect the target population (e.g., software developers, Java libraries).
 
 ## Antipatterns
 
