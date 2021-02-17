@@ -73,9 +73,13 @@ O&#39;CONNOR, C., &amp; JOFFE, H. 2020. Intercoder reliability in qualitative re
 
 ## Exemplars
 JESSICA DIAZ, DANIEL LÓPEZ-FERNÁNDEZ, JORGE PEREZ, ÁNGEL GONZÁLEZ-PRIETO (in press) Why are many businesses instilling a DevOps culture into their organization? _Empirical Software Engineering  
+
 JORGE PÉREZ, JESSICA DÍAZ, JAVIER GARCÍA-MARTÍN, AND BERNARDO TABUENCA. 2020. Systematic literature reviews in software engineering - enhancement of the study selection process using Cohen&#39;s Kappa statistic. _Journal of Systems and Software_, 168  
+
 JORGE PÉREZ, CARMEN VIZCARRO, JAVIER GARCÍA, AURELIO BERMÚDEZ, AND RUTH COBOS.2017. Development of Procedures to Assess Problem-Solving Competence in Computing Engineering. _IEEE Transactions on Education_, 60 (1), 22-28  
+
 R. MOHANANI, B. TURHAN, P. RALPH, (in press) Requirements framing affects design creativity. _IEEE Transactions on Software Engineering._ DOI: 10.1109/TSE.2019.2909033  
+
 ZAPF, A., CASTELL, S., MORAWIETZ, L., &amp; KARCH, A. 2016. Measuring inter-rater reliability for nominal data–which coefficients and confidence intervals are appropriate? _BMC medical research methodology_, 16, article 93  
 
 ---
