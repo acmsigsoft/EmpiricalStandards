@@ -63,36 +63,23 @@ Longitudinal studies seek to maximize their internal validity. In this regard, i
 
 ## Suggested Readings
 
-Franz Faul, et al. Statistical power analyses using G\* Power 3.1: Tests for correlation and regression analyses. In _Behavior Research Methods_. 41,4 (2009), 1149–1160.
-
-Flavius Kehr and Tobias Kowatsch. 2015. Quantitative Longitudinal Research: A Review of IS Literature, and a Set of Methodological Guidelines. In _Proceedings of the 23rd European Conference on Information Systems_ (ECIS). Münster, Germany.
-
-Hall, Sharon M., et al. &quot;Statistical analysis of randomized trials in tobacco treatment: longitudinal designs with dichotomous outcome.&quot; Nicotine &amp; Tobacco Research 3.3 (2001): 193–202.
-
-Duncan, Susan C., Terry E. Duncan, and Hyman Hops. &quot;Analysis of longitudinal data within accelerated longitudinal designs.&quot; Psychological Methods 1.3 (1996): 236.
-
-Langfred, Claus W. &quot;The downside of self-management: A longitudinal study of the effects tf conflict on trust, autonomy, and task interdependence in self-managing teams.&quot; Academy of Management Journal 50.4 (2007): 885–900.
-
-Benner, Mary J., and Michael Tushman. &quot;Process management and technological innovation: A longitudinal study of the photography and paint industries.&quot; Administrative Science Quarterly 47.4 (2002): 676–707.
-
-Joseph P. Simmons, Leif D. Nelson, and Uri Simonsohn. False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. In _Psychological Science._ 22,11 (2011), 1359—1366.
-
+Franz Faul, et al. Statistical power analyses using G\* Power 3.1: Tests for correlation and regression analyses. In _Behavior Research Methods_. 41,4 (2009), 1149–1160.  
+Flavius Kehr and Tobias Kowatsch. 2015. Quantitative Longitudinal Research: A Review of IS Literature, and a Set of Methodological Guidelines. In _Proceedings of the 23rd European Conference on Information Systems_ (ECIS). Münster, Germany.  
+Hall, Sharon M., et al. &quot;Statistical analysis of randomized trials in tobacco treatment: longitudinal designs with dichotomous outcome.&quot; Nicotine &amp; Tobacco Research 3.3 (2001): 193–202.  
+Duncan, Susan C., Terry E. Duncan, and Hyman Hops. &quot;Analysis of longitudinal data within accelerated longitudinal designs.&quot; Psychological Methods 1.3 (1996): 236.  
+Langfred, Claus W. &quot;The downside of self-management: A longitudinal study of the effects tf conflict on trust, autonomy, and task interdependence in self-managing teams.&quot; Academy of Management Journal 50.4 (2007): 885–900.  
+Benner, Mary J., and Michael Tushman. &quot;Process management and technological innovation: A longitudinal study of the photography and paint industries.&quot; Administrative Science Quarterly 47.4 (2002): 676–707.  
+Joseph P. Simmons, Leif D. Nelson, and Uri Simonsohn. False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. In _Psychological Science._ 22,11 (2011), 1359—1366.  
 Niels van Berkel, Denzil Ferreira, and Vassilis Kostakos. The experience sampling method on mobile devices. In _ACM Computing Surveys_. 50,6 (2017), 1—40.
 
 ## Exemplars
 
-Daniel Russo, Paul H.P. Hanel, Seraphina Altnickel, and Niels van Berkel. Predictors of Well-being and Productivity among Software Professionals during the COVID-19 Pandemic — A Longitudinal Study. _Empirical Software Engineering_ (2021).
-
-Chandrasekar Subramaniam, Sen Ravi, and Matthew L. Nelson. Determinants of open source software project success: A longitudinal study. In _Decision Support Systems._ 46, 2 (2009), 576—585.
-
-Davide Fucci, Simone Romano, Maria Teresa Baldassarre, Danilo Caivano, Giuseppe Scanniello, Burak Turhan, Natalia Juristo. A longitudinal cohort study on the retainment of test-driven development. _International Symposium on Empirical Software Engineering and Measurement._ (2018), 1-10
-
-Jingyue Li, Nils B Moe, and Tore Dybå. 2010. Transition from a plan-driven process to Scrum: a longitudinal case study on software quality. _International symposium on empirical software engineering and measurement_. (2010), 1-10
-
-Laurie McLeod, Stephen MacDonell, and Bill Doolin.Qualitative Research on software development: a longitudinal case study methodology. _Empirical software engineering_ 16, 4 (2011), 430–459.
-
-Jari Vanhanen, Casper Lassenius, and Mika V Mantyla. Issues and tactics when adopting pair programming: A longitudinal case study. _International Conference on Software Engineering Advances_. (2007)
-
+Daniel Russo, Paul H.P. Hanel, Seraphina Altnickel, and Niels van Berkel. Predictors of Well-being and Productivity among Software Professionals during the COVID-19 Pandemic — A Longitudinal Study. _Empirical Software Engineering_ (2021).  
+Chandrasekar Subramaniam, Sen Ravi, and Matthew L. Nelson. Determinants of open source software project success: A longitudinal study. In _Decision Support Systems._ 46, 2 (2009), 576—585.  
+Davide Fucci, Simone Romano, Maria Teresa Baldassarre, Danilo Caivano, Giuseppe Scanniello, Burak Turhan, Natalia Juristo. A longitudinal cohort study on the retainment of test-driven development. _International Symposium on Empirical Software Engineering and Measurement._ (2018), 1-10  
+Jingyue Li, Nils B Moe, and Tore Dybå. 2010. Transition from a plan-driven process to Scrum: a longitudinal case study on software quality. _International symposium on empirical software engineering and measurement_. (2010), 1-10  
+Laurie McLeod, Stephen MacDonell, and Bill Doolin.Qualitative Research on software development: a longitudinal case study methodology. _Empirical software engineering_ 16, 4 (2011), 430–459.  
+Jari Vanhanen, Casper Lassenius, and Mika V Mantyla. Issues and tactics when adopting pair programming: A longitudinal case study. _International Conference on Software Engineering Advances_. (2007)  
 Donald E Harter, Chris F Kemerer, and Sandra A Slaughter. 2012. Does software process improvement reduce the severity of defects? A longitudinal field study. _IEEE Transactions on Software Engineering_ 38, 4 (2012), 810–827.
 
 ---
