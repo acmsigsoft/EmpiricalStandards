@@ -5,7 +5,7 @@ A study focusing on the changes in and evolution of a phenomenon over time
 
 This standard applies to studies that involve repeated observations of the same variables (e.g., productivity or technical debt) over a period of time. Longitudinal studies include the analysis of datasets over time, such as the analysis of the evolution of the code. Longitudinal studies require to maintain identifiability of subjects (humans or artifacts) between data collection waves and to use at least two waves.
 
-For cross-sectional analysis, consider the **Exploratory Data Science Standard ** or the ** Experiments Standard** (if variables are manipulated).
+For cross-sectional analysis, consider the **Exploratory Data Science Standard** or the **Experiments Standard** (if variables are manipulated).
 
 ## Specific Attributes
 
