@@ -1,7 +1,7 @@
 # Longitudinal Studies
-A study focusing on the changes in and evolution of a phenomenon over time_
+A study focusing on the changes in and evolution of a phenomenon over time
 
-##Application
+## Application
 
 This standard applies to studies that involve repeated observations of the same variables (e.g., productivity or technical debt) over a period of time. Longitudinal studies include the analysis of datasets over time, such as the analysis of the evolution of the code. Longitudinal studies require to maintain identifiability of subjects (humans or artifacts) between data collection waves and to use at least two waves.
 
@@ -87,7 +87,7 @@ Chandrasekar Subramaniam, Sen Ravi, and Matthew L. Nelson. Determinants of open 
 
 Davide Fucci, Simone Romano, Maria Teresa Baldassarre, Danilo Caivano, Giuseppe Scanniello, Burak Turhan, Natalia Juristo. A longitudinal cohort study on the retainment of test-driven development. _International Symposium on Empirical Software Engineering and Measurement._ (2018), 1-10
 
-Jingyue Li, Nils B Moe, and Tore Dybå. 2010. Transition from a plan-driven process to Scrum: a longitudinal case study on software quality. _International symposium on empirical software engineering and measurement_. (2010), 1-10
+Jingyue Li, Nils B Moe, and Tore Dybå. 2010. Transition from a plan-driven process to Scrum: a longitudinal case study on software quality. _International symposium on empirical software engineering and measurement_. (2010), 1-10
 
 Laurie McLeod, Stephen MacDonell, and Bill Doolin.Qualitative Research on software development: a longitudinal case study methodology. _Empirical software engineering_ 16, 4 (2011), 430–459.
 
