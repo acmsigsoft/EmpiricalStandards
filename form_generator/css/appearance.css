@@ -1,0 +1,30 @@
+html {
+	box-sizing: border-box;
+}
+
+body {
+    max-width: 800px;
+	display: block;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 25px;
+	background: #f4f4f4;
+}
+ul{
+	padding-left: 20px;
+}
+form{
+	font-size: 120%;
+}
+@media screen and (min-width: 401px) and (max-width: 785px)
+{
+	#container
+	{
+		width: 100%;
+		position: static;
+		top: auto;
+		left: auto;
+		padding: 30px 20px;
+		margin: 0;
+	}
+}

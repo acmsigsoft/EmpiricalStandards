@@ -129,6 +129,12 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 
 function generateStandardChecklist(){
 	keys = getParameterByName('standard');
+	var container = document.createElement("DIV");
+	container.id = "container";
+
+	var heading = document.createElement("H1");
+	heading.innerHTML = "Pre-submission checklist";
+
 	var form = document.createElement("FORM");
 	form.id = "checklists";
 	form.name = "checklists";
@@ -199,5 +205,7 @@ function generateStandardChecklist(){
 	submit.id = "checklist_submit";
 	submit.name = "checklist_submit";
 	//form.appendChild(submit);
-	document.body.appendChild(form);
+	container.appendChild(heading);
+	container.appendChild(form);
+	document.body.appendChild(container);
 }

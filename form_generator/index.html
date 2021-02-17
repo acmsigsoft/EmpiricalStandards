@@ -3,6 +3,8 @@
     <head>
 		<title>Empirical Standards</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/appearance.css">
 		<script language="javascript" type="text/javascript">
 			// Reset the form at the begining
 			$(window).bind("pageshow", function() {
@@ -31,7 +33,8 @@
 		</script>
     </head>
     <body>
-    <h1>Pre-submission checklist form generator</h1>
+	<div id="container">
+	  <h1>Pre-submission checklist form generator</h1>
       <form id="myForm" action="result.html" method="get">
       	<h2>Select all that apply:</h2>
             <input type="checkbox" class="standard" name="standard" id="Engineering_Research"  value="Engineering Research">Engineering Research</input><br/><br/>
@@ -45,6 +48,6 @@
             <input type="checkbox" class="none"     name="standard" id="General_Standard"      value="General Standard">None of the above</input><br/><br/>
             <input type="submit"   class="button"   value="Submit" disabled>
       </form>
-
+    </div>
     </body>
 </html>
