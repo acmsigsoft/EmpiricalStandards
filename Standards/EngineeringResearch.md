@@ -1,9 +1,7 @@
-# Engineering Methods 
+# Engineering Research (AKA Design Science) 
 <standard name="Engineering Methods">
 
-## Engineering Research (AKA Design Science) 
-
-Research that invents and evaluates technological artifacts
+*Research that invents and evaluates technological artifacts*
 
 ## Application 
 
