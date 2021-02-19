@@ -140,19 +140,19 @@ function generateStandardChecklist(){
 	form.name = "checklists";
 
 	var EssentialUL = document.createElement("UL");
-	var EssentialH2 = document.createElement("H2");
+	var EssentialH2 = document.createElement("H3");
 	EssentialH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	EssentialH2.innerHTML = "Essential";
 	EssentialUL.appendChild(EssentialH2);
 
 	var DesirableUL = document.createElement("UL");
-	var DesirableH2 = document.createElement("H2");
+	var DesirableH2 = document.createElement("H3");
 	DesirableH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	DesirableH2.innerHTML = "Desirable";
 	DesirableUL.appendChild(DesirableH2);
 
 	var ExtraordinaryUL = document.createElement("UL");
-	var ExtraordinaryH2 = document.createElement("H2");	
+	var ExtraordinaryH2 = document.createElement("H3");	
 	ExtraordinaryH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	ExtraordinaryH2.innerHTML = "Extraordinary";
 	ExtraordinaryUL.appendChild(ExtraordinaryH2);
@@ -207,5 +207,28 @@ function generateStandardChecklist(){
 	//form.appendChild(submit);
 	container.appendChild(heading);
 	container.appendChild(form);
+	
+	BR = document.createElement("BR")
+	HR = document.createElement("HR")
+	container.appendChild(HR);
+
+	var for_more_info = document.createElement("H2");
+	for_more_info.innerHTML = "For more information, see:";
+	container.appendChild(for_more_info);
+	var standards_path = "https://github.com/acmsigsoft/EmpiricalStandards/tree/development/Standards/"
+	var UL = document.createElement("UL");
+	for (let key of keys){
+		key = key.replaceAll("\"", "");
+		var LI = document.createElement("LI");
+		var LINK = document.createElement("A");
+		LINK.innerHTML = key;
+		LINK.href = standards_path + key.replaceAll(" ", "") + ".md";
+		LINK.target = "_blank";
+		LINK.style = "font-size:23px;";
+		LI.appendChild(LINK);
+		UL.appendChild(LI);
+	}
+	container.appendChild(UL);
+
 	document.body.appendChild(container);
 }
