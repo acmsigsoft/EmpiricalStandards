@@ -1,4 +1,7 @@
 # Longitudinal Studies
+<standard name="Longitudinal">
+
+
 *A study focusing on the changes in and evolution of a phenomenon over time*
 
 ## Application
@@ -10,6 +13,8 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 ## Specific Attributes
 
 ### Essential Attributes 
+<checklist name="Essential">
+
 - [ ] subjects (humans or artifacts) are identifiable between waves
 - [ ] usage of at least two data collection waves
 - [ ] determination of the appropriate number of waves, following the natural oscillation of the research phenomenon<sup>[1](#myfootnote1)</sup>
@@ -21,8 +26,11 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 - [ ] description of the subjects&#39; data loss throughout the different waves
 - [ ] description of the research instrument (e.g., survey, software repository) and provide it as supplementary material
 - [ ] discussion of the operationalization of the research model (construct validity)<sup>[7](#myfootnote7)</sup>
+</checklist>
+    
+### Desirable Attributes
+<checklist name="Desirable">
 
-### Desirable Attributes 
 - [ ] discusses potential confounding variables
 - [ ] reports treatment of missing data
 - [ ] discusses data (in)consistency across waves (e.g., test-retest reliability)
@@ -30,9 +38,14 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 - [ ] describes the cost of gathering data and any incentives used
 - [ ] investigates causality by: (i) using the longitudinal nature of the data to establish precedence; (ii) statistically controlling for third-variable explanations
 - [ ] Provides supplementary materials including, a description of the data and how to report all the steps needed to replicate the work. The dataset used, the scripts adopted for the data analysis, and any further material adopted (e.g. questionnaires)
- 
-### Extraordinary Attributes 
+</checklist>
+    
+### Extraordinary Attributes
+<checklist name="Extraordinary">
+
 - [ ] uses a multi-stage selection process to identify the study&#39;s subjects<sup>[8](#myfootnote8)</sup>
+</checklist>
+
 ## General Quality Criteria
 
 Reliability, internal validity, conclusion validity, construct validity, and external validity.
@@ -83,11 +96,12 @@ Jari Vanhanen, Casper Lassenius, and Mika V Mantyla. Issues and tactics when ado
 Donald E Harter, Chris F Kemerer, and Sandra A Slaughter. 2012. Does software process improvement reduce the severity of defects? A longitudinal field study. _IEEE Transactions on Software Engineering_ 38, 4 (2012), 810–827.
 
 ---
-[1](#sdfootnote1anc) On the concept of natural oscillation cf. Kehr &amp; Kowatsch, 2015.  
-[2](#sdfootnote2anc) Several different statistical approaches are used to analyze longitudinal data (Kehr &amp; Kowatsch provide a partial overview).  
-[3](#sdfootnote3anc) Although there might not be one best method for a specific problem, it should still be discussed on a subjective level (e.g., why it fits best to the research question) and at an objective level (e.g., data normality).  
-[4](#sdfootnote4anc) The choice of thresholds (e.g., _p_-values \&lt; 0.05) should be discussed, to avoid Type I errors. Typically, longitudinal analyses deal with many variables and multiple comparisons, increasing the likelihood to obtain results within traditionally acceptable thresholds. For this reason, authors are advised to adjust the critical alpha level (e.g., using as a threshold _p_-values \&lt; 0.001) or use Bayesian statistics (Simmons et al., 2011).  
-[5](#sdfootnote5anc) Determining the sample size is of utter importance to avoid Type II errors. Thus, authors might define their sample size using a priori power calculations. At the same time, reviewers can control adequate size through a post hoc analysis (Faul, 2019).  
-[6](#sdfootnote6anc) The research design should explicitly state how the sample has been selected and filtered out through a selection process. For example, how are we sure to have included only software engineers when dealing with human subjects? Or, which type of quality controls have been performed on software repositories to ensure the consistency and homogeneity of artifacts?  
-[7](#sdfootnote7anc) It should be clear, which are the factors being investigated and how they have been selected. Similarly, measurements should show adequate reliability based on literature benchmarks (e.g., Cronbach&#39;s alpha, test-retest reliability between waves).  
-[8](#sdfootnote8anc) An example of such a selection process can be found in Russo, Daniel, and Klaas-Jan Stol. &quot;Gender differences in personality traits of software engineers.&quot; _IEEE Transactions on Software Engineering_ (2020).
+<footnote><sup>[1](#myfootnote1)</sup> On the concept of natural oscillation cf. Kehr &amp; Kowatsch, 2015.</footnote><br>
+<footnote><sup>[2](#myfootnote2)</sup> Several different statistical approaches are used to analyze longitudinal data (Kehr &amp; Kowatsch provide a partial overview).</footnote><br>
+<footnote><sup>[3](#myfootnote3)</sup> Although there might not be one best method for a specific problem, it should still be discussed on a subjective level (e.g., why it fits best to the research question) and at an objective level (e.g., data normality).</footnote><br>
+<footnote><sup>[4](#myfootnote4)</sup> The choice of thresholds (e.g., _p_-values \&lt; 0.05) should be discussed, to avoid Type I errors. Typically, longitudinal analyses deal with many variables and multiple comparisons, increasing the likelihood to obtain results within traditionally acceptable thresholds. For this reason, authors are advised to adjust the critical alpha level (e.g., using as a threshold _p_-values \&lt; 0.001) or use Bayesian statistics (Simmons et al., 2011).</footnote><br>
+<footnote><sup>[5](#myfootnote5)</sup> Determining the sample size is of utter importance to avoid Type II errors. Thus, authors might define their sample size using a priori power calculations. At the same time, reviewers can control adequate size through a post hoc analysis (Faul, 2019).</footnote><br>
+<footnote><sup>[6](#myfootnote6)</sup> The research design should explicitly state how the sample has been selected and filtered out through a selection process. For example, how are we sure to have included only software engineers when dealing with human subjects? Or, which type of quality controls have been performed on software repositories to ensure the consistency and homogeneity of artifacts?</footnote><br>
+<footnote><sup>[7](#myfootnote7)</sup> It should be clear, which are the factors being investigated and how they have been selected. Similarly, measurements should show adequate reliability based on literature benchmarks (e.g., Cronbach&#39;s alpha, test-retest reliability between waves).</footnote><br>
+<footnote><sup>[8](#myfootnote8)</sup> An example of such a selection process can be found in Russo, Daniel, and Klaas-Jan Stol. &quot;Gender differences in personality traits of software engineers.&quot; _IEEE Transactions on Software Engineering_ (2020).</footnote><br>
+</standard>

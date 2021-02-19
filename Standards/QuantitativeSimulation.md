@@ -1,4 +1,5 @@
 # Simulation (Quantitative)
+<standard name="Simulation">
 
 *A study that involves developing and using a mathematical model that imitates a real-world system's behavior, which often entails problem understanding, data collection, model development, verification, validation, design of experiments, data analysis, and implementation of results.*
 
@@ -7,7 +8,10 @@
 The standard applies to research studies that use simulation to understand, assess or improve a system or process and its behavior. Use this standard for _in silico_ simulations, i.e., studies representing everything using computational models. For _in virtuo_ simulations, i.e., human participants manipulating simulation models, use the **Experiments (with human participants) Standard**. For simulations used to assess a new or improved technological artifact, also consider the **Engineering Research** standard.
 
 ## Specific Attributes
+
 ### Essential Attributes
+<checklist name="Essential">
+
 - [ ] justifies that simulation is a suitable method for investigating the problem at hand.
 - [ ] describes the simulation model (conceptual, implementation, or hybrid abstraction levels), including input parameters and response variables.
 - [ ] describes the underlying simulation approach (discrete-event simulation, system dynamics, agent-based simulation, or others<sup>[1](#myfootnote1)</sup>).
@@ -18,16 +22,26 @@ The standard applies to research studies that use simulation to understand, asse
 - [ ] analyzes validity threats<sup>[3](#myfootnote3)</sup> considering the supporting data and the simulation model.
 - [ ] clearly explicates the assumptions in the simulation model.
 
+</checklist>
+    
 ### Desirable Attributes
+<checklist name="Desirable">
+
 - [ ] provides supplementary materials including raw data (for real data) or generation mechanism (for synthetic data) used for model calibration, all simulation models and source code, and analysis scripts.
 - [ ] characterizes reference behaviors<sup>[4](#myfootnote4)</sup>
 for the definition of simulation scenarios with representative and known values or probability distributions for input parameters.
 - [ ] separates conceptual and implementation levels of the simulation model.
 - [ ] reports sensitivity analysis for input parameters or factors.
 
+</checklist>
+    
 ### Extraordinary Attributes
+<checklist name="Extraordinary">
+
 - [ ] describes how stakeholders<sup>[5](#myfootnote5)</sup> were involved in developing and validating the simulation model.
 - [ ] provides a modular view<sup>[6](#myfootnote6)</sup> of the simulation model, allowing reuse in different contexts.
+- [ ] provides a modular view<sup>[6](#myfootnote6)</sup> of the simulation model, allowing reuse into different contexts.
+</checklist>
 
 ## General Quality Criteria
 
@@ -88,11 +102,12 @@ Garousi V, Khosrovian K, Pfahl D (2009) A customizable pattern-based software pr
 Smith, Neil, Andrea Capiluppi, and Juan F. Ramil. &quot;A study of open source software evolution data using qualitative simulation.&quot; _Software Process: Improvement and Practice_ 10, no. 3 (2005): 287-300. [an example of a simulation study using a unusual simulation approach: qualitative simulation].  
 
 ---
-[1](#sdfootnote1anc) de França, Breno Bernard Nicolau; Travassos, Guilherme Horta. Are We Prepared for Simulation Based Studies in Software Engineering Yet? _CLEI ELECTRONIC JOURNAL_, vol. 16 (1), paper 8. 2013.  
-[2](#sdfootnote2anc) Some verification and validation procedures may be applied to the model at the conceptual level (e.g., validating variables and relationships) down to an implementation level (e.g., using tests, reproducing reference behaviors, or performing simulated experiments).  
-[3](#sdfootnote3anc) Simulation studies are prone to several validity threats, including non-representative simulation scenarios, insufficient verification and validation, using different datasets (contexts) for model calibration and experimentation, and others (de França and Travassos, 2015),  
-[4](#sdfootnote4anc) Reference behaviors represent a real-world model (often based on actual measurement of a system or process), which is characterized by data distribution or series of model variables. Usually, these models are used for validating simulation outcomes. For instance, an effort and schedule baseline for software project simulation.  
-[5](#sdfootnote5anc) Apart from the developers of the simulation model, stakeholders could be data providers (for model calibration), domain experts (who may have hypotheses about causal relationships between model variables) and users of the simulation model. All of these stakeholders could, for example, be involved in checking the plausibility of the model output (face validity check).  
-[6](#sdfootnote6anc) Understanding simulation models as software, they may become too large and difficult to understand in a single view. So, the idea is to have a composite model, in which each module concerns a particular set of variables. The following book presents an entire model on software projects in a modular perspective: Abdel-Hamid, T. and Madnick, S.E., 1991. Software project dynamics: an integrated approach. Prentice-Hall, Inc.  
-[7](#sdfootnote7anc) For instance, implementing a specific model capable of only producing desired outcomes.  
-[8](#sdfootnote8anc) Houston et al. (2001) discusses some usual experimental design for software process simulation, such as (fractional) factorial designs. For a more general view on experimental designs for simulation, we suggest Kleijnen et al. (2005).
+<footnote><sup>[1](#myfootnote1)</sup> de França, Breno Bernard Nicolau; Travassos, Guilherme Horta. Are We Prepared for Simulation Based Studies in Software Engineering Yet? _CLEI ELECTRONIC JOURNAL_, vol. 16 (1), paper 8. 2013.</footnote><br>
+<footnote><sup>[2](#myfootnote2)</sup> Some verification and validation procedures may be applied to the model at the conceptual level (e.g., validating variables and relationships) down to an implementation level (e.g., using tests, reproducing reference behaviors, or performing simulated experiments).</footnote><br>
+<footnote><sup>[3](#myfootnote3)</sup> Simulation studies are prone to several validity threats, including non-representative simulation scenarios, insufficient verification and validation, using different datasets (contexts) for model calibration and experimentation, and others (de França and Travassos, 2015).</footnote><br>
+<footnote><sup>[4](#myfootnote4)</sup> Reference behaviors represent a real-world model (often based on actual measurement of a system or process), which is characterized by data distribution or series of model variables. Usually, these models are used for validating simulation outcomes. For instance, an effort and schedule baseline for software project simulation.</footnote><br>
+<footnote><sup>[5](#myfootnote5)</sup> Apart from the developers of the simulation model, stakeholders could be data providers (for model calibration), domain experts (who may have hypotheses about causal relationships between model variables) and users of the simulation model. All of these stakeholders could, for example, be involved in checking the plausibility of the model output (face validity check).</footnote><br>
+<footnote><sup>[6](#myfootnote6)</sup> Understanding simulation models as software, they may become too large and difficult to understand in a single view. So, the idea is to have a composite model, in which each module concerns a particular set of variables. The following book presents an entire model on software projects in a modular perspective: Abdel-Hamid, T. and Madnick, S.E., 1991. Software project dynamics: an integrated approach. Prentice-Hall, Inc.</footnote><br>
+<footnote><sup>[7](#myfootnote7)</sup> For instance, implementing a specific model capable of only producing desired outcomes.</footnote><br>
+<footnote><sup>[8](#myfootnote8)</sup> Houston et al. (2001) discusses some usual experimental design for software process simulation, such as (fractional) factorial designs. For a more general view on experimental designs for simulation, we suggest Kleijnen et al. (2005).</footnote><br>
+</standard>
