@@ -58,7 +58,7 @@ without justification.
 ## Examples of Acceptable Deviations
 
 - If insufficient data is available (or too costly to collect) to calibrate the model, assumptions can be used to implement parts of the model. These assumptions, however, must be explained and justified.
-- When the translation from a conceptual to implementation model is straightforward, authors may mix them up.
+- When the translation from a conceptual to implementation model is straightforward, authors may present them together.
 - If the simulation approach used is very common in software engineering (e.g. discrete-event simulation, system dynamics), it is sufficient to indicate which approach is used, citing appropriate references, rather than explaining in full how the approach works.
 
 ## Invalid Criticisms
