@@ -43,10 +43,11 @@ following.
 - [ ]	describes in detail what, where, when and how data were collected
 - [ ]	describes in detail how the data were analyzed
 - [ ]	discusses and validates assumptions of any statistical tests used
-- [ ]	presents results; results directly address research questions
+- [ ]	presents results
+- [ ]	results directly address research questions
+- [ ]	supports main claims or conclusions with explicit evidence (data/observations) or arguments
 - [ ]	discusses the importance, implications and limitations (validity threats) of the study
 - [ ]	contributes in some way to the collective body of knowledge (see Replications Supplement)
-- [ ]	supports claims and conclusions with explicit arguments or evidence (data/observations)
 - [ ]	defines jargon, acronyms and key concepts
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
 - [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/development/Supplements/InformationVisualization.md))
