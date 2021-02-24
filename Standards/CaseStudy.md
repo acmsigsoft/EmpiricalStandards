@@ -52,6 +52,7 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]   explains how researchers triangulated across data sources, informants or researchers
 - [ ]   cross-checks interviewee statements (e.g. against direct observation or archival records)
 - [ ]   uses quotations to *illustrate* findings (note: quotations should not be *the only* representation of a finding; each finding should be described independently of supporting quotations)
+- [ ]   validates results (e.g. member checking, feedback from non-participant practitioners, research audits of coding with advisors/other researchers)
 </checklist>
     
 ### Extraordinary Attributes
