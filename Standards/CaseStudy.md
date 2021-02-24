@@ -46,6 +46,7 @@ captures a large quantitative dataset with limited context, consider the
     
 ### Desirable Attributes
 <checklist name="Desirable">
+    
 - [ ]	includes supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or chain-of-evidence tables too large for main text
 - [ ]   reports the type of case study (see *Types of Case Studies*, below)
 - [ ]   describes external events and other factors that may have affected the case or site
