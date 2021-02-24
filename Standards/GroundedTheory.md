@@ -36,14 +36,13 @@ collection and analysis or do not use theoretical sampling, consider the
      
 ### Desirable Attributes 
 <checklist name="Desirable">
-
+- [ ]	includes supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or chain-of-evidence tables too large for main text
 - [ ]	explains how and why study adapts or deviates from claimed GT version
 - [ ]	presents a mature, fully-developed theory or taxonomy
 - [ ]	includes highly diverse participants and/or data sources (e.g. software repositories, forums)
 - [ ]	uses direct quotations extensively to support key points
 - [ ]	explains how memo writing was used to drive the work
 - [ ]	validates results (e.g. member checking, feedback from non-participant practitioners, research audits of coding with advisors/other researchers)
-- [ ]	includes supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or chain-of-evidence tables too large for main text
 - [ ]	discusses transferability; characterizes the setting such that readers can assess transferability
 - [ ]	compares results with (or integrates them into) prior theory or related research
 - [ ]	explains theoretical sampling vis-à-vis the interplay between the sampling process, the emerging findings, and theoretical gaps perceived therein
