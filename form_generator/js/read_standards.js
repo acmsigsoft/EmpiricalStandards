@@ -91,10 +91,10 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 	var i = 0;
 
 	for(let line of lines){
-		line_text = line.trim().replaceAll("<br/>", "").replaceAll("\t", "");
+		line_text = line.trim().replaceAll(" ", "").replaceAll("<br>", "").replaceAll("<br/>", "").replaceAll("\t", "");
 		if (line_text != ""){
 			i++;
-			line_text = line.trim().replace("---", "&mdash;");
+			line_text = line.trim().replace("---", "&mdash;").replace(/<br(\/)?>$/, "");
 			checkbox_id = standardName + "-" + checklistName + ":" + i;
 			var checkboxLI = document.createElement("LI");
 			var checkboxInput = document.createElement("input");
