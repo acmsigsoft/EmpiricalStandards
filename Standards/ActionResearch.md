@@ -45,7 +45,7 @@ standards.
     
 ### Desirable Attributes
 <checklist name="Desirable">
-
+- [ ]	includes supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or chain-of-evidence tables too large for main text
 - [ ]	uses direct quotations extensively
 - [ ]   validates results (e.g. member checking, feedback from non-participant practitioners, research audits of coding with advisors/other researchers)
 - [ ]   findings plausibly transferable to other contexts
