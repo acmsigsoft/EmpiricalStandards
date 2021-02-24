@@ -47,7 +47,7 @@ standards.
 <checklist name="Desirable">
 
 - [ ]	uses direct quotations extensively
-- [ ]   uses member checking to assess resonance
+- [ ]   validates results (e.g. member checking, feedback from non-participant practitioners, research audits of coding with advisors/other researchers)
 - [ ]   findings plausibly transferable to other contexts
 - [ ]   triangulation across quantitative and qualitative data
 </checklist>
