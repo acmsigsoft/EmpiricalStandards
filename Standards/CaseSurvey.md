@@ -21,7 +21,8 @@ This standard does not apply to studies collecting primary data from a large num
 - [ ]   defines clear inclusion and exclusion criteria for cases<sup>[1](#user-content-myfootnote1)</sup>  
 - [ ]   describes the sampling strategy (see the **Sampling Supplement**)
 - [ ]   defines a coding scheme to convert qualitative case descriptions into quantitative variables<sup>[2](#user-content-myfootnote2)</sup>  
-- [ ]   EITHER: describes the coding scheme in detail; OR: provides the coding scheme in supplementary materials
+- [ ]   EITHER: describes the coding scheme in detail;   
+OR: provides the coding scheme in supplementary materials
 - [ ]   draws conclusions based on the quantitative variables derived
 - [ ]   acknowledges generalizability threats; discusses how case studies reviewed may differ from target population
 - [ ]   clearly explains how missingness in the dataset was managed
