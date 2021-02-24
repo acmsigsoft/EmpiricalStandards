@@ -31,7 +31,14 @@ This standard does not apply to studies collecting primary data from a large num
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ]   mitigates sampling bias and publication bias, using some combination of: (i) manual and keyword automated searches; (ii) backward and forward snowballing searches; (iii) checking profiles of prolific authors in the area; (iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar); (v) searching for relevant dissertations; (vi) searching pre-print servers (e.g. arXiv); (vii) soliciting unpublished manuscripts through appropriate listservs or social media; (viii) contacting known authors in the area. 
+- [ ]   mitigates sampling bias and publication bias, using some combination of: 
+(i) manual and keyword automated searches;   
+(ii) backward and forward snowballing searches;   
+(iii) checking profiles of prolific authors in the area;   
+(iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar);   
+(v) searching for relevant dissertations; (vi) searching pre-print servers (e.g. arXiv);   
+(vii) soliciting unpublished manuscripts through appropriate listservs or social media;   
+(viii) contacting known authors in the area.   
 - [ ]   provides supplementary materials including: the list of primary studies, coding scheme, decision rules, complete dataset; analysis scripts<sup>[3](#user-content-myfootnote3)</sup> 
 - [ ]   explains and justifies the coding scheme instrument design 
 - [ ]   employs multiple coders and evaluates the inter-rater reliability 
