@@ -1,5 +1,5 @@
 # Case Survey
-<standard name="Case Survey" />
+<standard name="Case Survey">
 
 *A study that aims to generalize results about a complex phenomenon by systematically converting qualitative descriptions available in published case studies into quantitative data and analyzing the converted data*
 
@@ -18,15 +18,14 @@ This standard does not apply to studies collecting primary data from a large num
 <checklist name="Essential">
 
 - [ ]   presents step-by-step, systematic, replicable description of the search process for published case studies (not necessarily in peer-reviewed venues)
-- [ ]   defines clear inclusion and exclusion criteria for cases<sup>[1](#user-content-myfootnote1)</sup>  
+- [ ]   defines clear inclusion and exclusion criteria for cases<sup>[1](#myfootnote1)</sup>
 - [ ]   describes the sampling strategy (see the **Sampling Supplement**)
-- [ ]   defines a coding scheme to convert qualitative case descriptions into quantitative variables<sup>[2](#user-content-myfootnote2)</sup>  
+- [ ]   defines a coding scheme to convert qualitative case descriptions into quantitative variables<sup>[2](#myfootnote2)</sup>
 - [ ]   EITHER: describes the coding scheme in detail;   
 OR: provides the coding scheme in supplementary materials
 - [ ]   draws conclusions based on the quantitative variables derived
 - [ ]   acknowledges generalizability threats; discusses how case studies reviewed may differ from target population
 - [ ]   clearly explains how missingness in the dataset was managed
-
 </checklist>
 
 ### Desirable Attributes
@@ -40,16 +39,15 @@ OR: provides the coding scheme in supplementary materials
 (v) searching for relevant dissertations; (vi) searching pre-print servers (e.g. arXiv);   
 (vii) soliciting unpublished manuscripts through appropriate listservs or social media;   
 (viii) contacting known authors in the area.   
-- [ ]   provides supplementary materials including: the list of primary studies, coding scheme, decision rules, complete dataset; analysis scripts<sup>[3](#user-content-myfootnote3)</sup> 
+- [ ]   provides supplementary materials including: the list of primary studies, coding scheme, decision rules, complete dataset; analysis scripts<sup>[3](#myfootnote3)</sup>
 - [ ]   explains and justifies the coding scheme instrument design 
 - [ ]   employs multiple coders and evaluates the inter-rater reliability 
-- [ ]   explains how discrepancies among coders were resolved<sup>[4](#user-content-myfootnote4)</sup>  
+- [ ]   explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup>
 - [ ]   describes contacting authors of primary studies for more information, to check coding accuracy, or resolve coding disagreements
 - [ ]   assesses quality of primary studies using an a priori scheme (e.g. the **Case Survey Standard**); explains how quality was assessed; models study quality as a moderating variable  
 - [ ]   consolidates results using tables, diagrams, or charts
 - [ ]   integrates results into prior theory or research; identifies gaps, biases, or future directions
 - [ ]   presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
-
 </checklist>
 
 ### Extraordinary Attributes
@@ -60,7 +58,6 @@ OR: provides the coding scheme in supplementary materials
 - [ ]   adds data from other sources to the selected cases
 - [ ]   employs authors of primary studies to conduct the coding or ensure interpretations are correct
 - [ ]   analyzes if/how studies’ characteristics (e.g., research design, publication venue or date) influence the coding
-
 </checklist>
 
 ## General Quality Criteria
@@ -113,12 +110,11 @@ Mark de Reuver, Harry Bouwman, and Ian MacInnes. 2007. What drives business mode
 
 Mark de Reuver, Harry Bouwman, and Ian MacInnes. 2009. Business model dynamics: A case survey. *Journal of Theoretical and Applied Electronic Commerce Research*. 4, 1 (2009), 1–11. DOI:10.4067/S0718-18762009000100002.
 
-<hr>
-<footnote><sup id="myfootnote1">1</sup>e.g., reports at least two of the variables in the coding scheme</footnote><br/>
-<footnote><sup id="myfootnote2">2</sup>the coding scheme should balance simplicity and information richness</footnote><br/>
-<footnote><sup id="myfootnote3">3</sup>do provide data from multiple raters and scripts for calculating inter-rater agreement if possible but do not provide primary study author’s responses to any questionnaire unless authors gave explicit permission.</footnote><br/> 
-<footnote><sup id="myfootnote4">4</sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br/>
-
+---
+<footnote><sup>[1](#myfootnote1)</sup>e.g., reports at least two of the variables in the coding scheme</footnote><br>
+<footnote><sup>[2](#myfootnote2)</sup>the coding scheme should balance simplicity and information richness</footnote><br>
+<footnote><sup>[3](#myfootnote3)</sup>do provide data from multiple raters and scripts for calculating inter-rater agreement if possible but do not provide primary study author’s responses to any questionnaire unless authors gave explicit permission.</footnote><br> 
+<footnote><sup>[4](#myfootnote4)</sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
 </standard>
 
 
