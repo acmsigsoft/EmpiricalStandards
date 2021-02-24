@@ -36,7 +36,9 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 - [ ] discusses data (in)consistency across waves (e.g., test-retest reliability)
 - [ ] examines differences in distributions between waves and analyse data according to a parametric or non-parametric data analysis strategy
 - [ ] describes the cost of gathering data and any incentives used
-- [ ] investigates causality by: (i) using the longitudinal nature of the data to establish precedence; (ii) statistically controlling for third-variable explanations
+- [ ] investigates causality by: 
+(i) using the longitudinal nature of the data to establish precedence;   
+(ii) statistically controlling for third-variable explanations
 - [ ] Provides supplementary materials including, a description of the data and how to report all the steps needed to replicate the work. The dataset used, the scripts adopted for the data analysis, and any further material adopted (e.g. questionnaires)
 </checklist>
     
