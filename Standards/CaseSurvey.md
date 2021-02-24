@@ -112,6 +112,7 @@ Mark de Reuver, Harry Bouwman, and Ian MacInnes. 2007. What drives business mode
 
 Mark de Reuver, Harry Bouwman, and Ian MacInnes. 2009. Business model dynamics: A case survey. *Journal of Theoretical and Applied Electronic Commerce Research*. 4, 1 (2009), 1–11. DOI:10.4067/S0718-18762009000100002.
 
+<hr>
 <footnote><sup id="myfootnote1">1</sup>e.g., reports at least two of the variables in the coding scheme</footnote><br/>
 <footnote><sup id="myfootnote2">2</sup>the coding scheme should balance simplicity and information richness</footnote><br/>
 <footnote><sup id="myfootnote3">3</sup>do provide data from multiple raters and scripts for calculating inter-rater agreement if possible but do not provide primary study author’s responses to any questionnaire unless authors gave explicit permission.</footnote><br/> 
