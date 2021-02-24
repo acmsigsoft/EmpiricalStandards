@@ -29,7 +29,14 @@
 <checklist name="Desirable">
 	
 - [ ]	provides replication package including protocol, search terms, search results, selection process results; complete dataset, analysis scripts; examples of coding, decision rules or edge cases
-- [ ]	mitigates sampling bias and publication bias, using some combination of: (i) manual and keyword automated searches; (ii) backward and forward snowballing searches; (iii) checking profiles of prolific authors in the area; (iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar); (v) searching for relevant dissertations; (vi) searching pre-print servers (e.g. arXiv); (iiv) soliciting unpublished manuscripts through appropriate listservs or social media; (iiiv) contacting known authors in the area. 
+- [ ]	mitigates sampling bias and publication bias, using some combination of: 
+(i) manual and keyword automated searches;   
+(ii) backward and forward snowballing searches;  
+(iii) checking profiles of prolific authors in the area;   
+(iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar);   
+(v) searching for relevant dissertations; (vi) searching pre-print servers (e.g. arXiv);   
+(iiv) soliciting unpublished manuscripts through appropriate listservs or social media;  
+(iiiv) contacting known authors in the area. 
 - [ ]	demonstrates that the search process is sufficiently rigorous for the systematic review goals<sup>[3](#myfootnote3)</sup>  
 - [ ]	assesses quality of primary studies; explains how quality was assessed 
 - [ ]	assesses coverage using funnel plots or percentage of known papers found
