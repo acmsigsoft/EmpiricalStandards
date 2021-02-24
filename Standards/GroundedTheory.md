@@ -90,13 +90,13 @@ reliability typically do not apply.
 
 ## Invalid Criticisms
 
--   lack of quantitative data; causal analysis; objectivity, internal
-    validity, reliability, or generalizability
--   lack of replicability or reproducibility; not releasing transcripts
+-   Lack of quantitative data; causal analysis; objectivity, internal
+    validity, reliability, or generalizability.
+-   Lack of replicability or reproducibility; not releasing transcripts
 -   lack of representativeness (e.g. of a study of Turkish programmers,
     'how does this generalize to America?')
--   research questions should have been different
--   findings should have been presented as a different set of
+-   Research questions should have been different
+-   Findings should have been presented as a different set of
     relationships, hypotheses, or a different theory.
 
 ## Suggested Readings 
