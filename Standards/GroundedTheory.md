@@ -36,6 +36,7 @@ collection and analysis or do not use theoretical sampling, consider the
      
 ### Desirable Attributes 
 <checklist name="Desirable">
+    
 - [ ]	includes supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or chain-of-evidence tables too large for main text
 - [ ]	explains how and why study adapts or deviates from claimed GT version
 - [ ]	presents a mature, fully-developed theory or taxonomy
