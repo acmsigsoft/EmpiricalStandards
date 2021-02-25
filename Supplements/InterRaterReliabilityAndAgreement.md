@@ -16,14 +16,16 @@ There is no universal rule to determine when two or more raters are necessary. T
 
 ### Essential Attributes
 - [ ] clearly states what properties were rated
-- [ ] clearly states how many raters rated each property
-- [ ] EITHER: provides reasonable justification for using a single rater<sup>[4](#sdfootnote4anc)</sup>
+- [ ] clearly states how many raters rated each property  
 
-OR:
-  - [ ] describes the process by which two or more raters independently rated properties of research objects
-  - [ ] describes how disagreements were resolved
-  - [ ] indicates the variable type (nominal, ordinal, interval, ratio) of the ratings
-  - [ ] reports an appropriate statistical measure of IRR/IRA<sup>[5](#sdfootnote5anc)</sup>
+EITHER: 
+  - [ ] provides reasonable justification for using a single rater<sup>[4](#sdfootnote4anc)</sup>
+
+OR:  
+  - [ ] describes the process by which two or more raters independently rated properties of research objects; AND  
+  - [ ] describes how disagreements were resolved; AND  
+  - [ ] indicates the variable type (nominal, ordinal, interval, ratio) of the ratings; AND  
+  - [ ] reports an appropriate statistical measure of IRR/IRA<sup>[5](#sdfootnote5anc)</sup>  
 
 ### Desirable Attributes
 - [ ] provides supplementary materials including: rating scheme(s), decision rules, example disagreements, IRR/IRA broken down by property or wave of analysis.
