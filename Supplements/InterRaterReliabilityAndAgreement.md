@@ -66,9 +66,13 @@ OR:
 
 ## Suggested Readings
 FENG, G. C. 2014. Intercoder reliability indices: disuse, misuse, and abuse. _Quality &amp; Quantity_, 48 (3), 1803-1815.  
+
 GISEV, N., BELL, J. S., &amp; CHEN, T. F. 2013. Interrater agreement and interrater reliability: key concepts, approaches, and applications. _Research in Social and Administrative Pharmacy_, 9 (3), 330-338.  
+
 HENRICA C.W. DE VETA, CAROLINE B. TERWEEA, DIRK L. KNOLA,B, LEX M. BOUTER. 2006. When to use agreement versus reliability measures. _Journal of Clinical Epidemiology_ 59, 1033–1039.  
+
 NILI, A., TATE, M., BARROS, A., &amp; JOHNSTONE, D. 2020. An approach for selecting and using a method of inter-coder reliability in information management research. _International Journal of Information Management_, 54.  
+
 O&#39;CONNOR, C., &amp; JOFFE, H. 2020. Intercoder reliability in qualitative research: debates and practical guidelines. _International Journal of Qualitative Methods_, 19.  
 
 ## Exemplars
