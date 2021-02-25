@@ -87,7 +87,7 @@ Houston DX, Ferreira S, Collofello JS, Montgomery DC, Mackulak GT, Shunk DL. Beh
 
 Kleijnen JPC, Sanchez SM, Lucas TW, Cioppa TM. State-of-the-art review: A user&#39;s guide to the brave new world of designing simulation experiments. _INFORMS Journal on Computing_, 17, 3, 2005, 263–289. DOI 10.1287/ijoc.1050.0136.  
 
-Law AM. _Simulation modeling and analysis_. Vol 4, 2007, McGraw-Hill New York.  
+Law AM. _Simulation modeling and analysis_. 5th ed., 2015, McGraw-Hill, New York.  
 
 Madachy RJ. _Software Process Dynamics_, 2008, Wiley-IEEE Press.
 
