@@ -34,7 +34,8 @@
 (ii) backward and forward snowballing searches;  
 (iii) checking profiles of prolific authors in the area;   
 (iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar);   
-(v) searching for relevant dissertations; (vi) searching pre-print servers (e.g. arXiv);   
+(v) searching for relevant dissertations;   
+(vi) searching pre-print servers (e.g. arXiv);   
 (iiv) soliciting unpublished manuscripts through appropriate listservs or social media;  
 (iiiv) contacting known authors in the area. 
 - [ ]	demonstrates that the search process is sufficiently rigorous for the systematic review goals<sup>[3](#myfootnote3)</sup>  
