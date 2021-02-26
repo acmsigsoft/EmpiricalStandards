@@ -1,8 +1,8 @@
 # Questionnaire Surveys 
 <standard name="Questionnaire Surveys">
 
-*A study in which a sample of respondents answer a series of questions,
-typically through a computerized or paper form and mostly structured*
+*A study in which a sample of respondents answer a series of (mostly structured) questions,
+typically through a computerized or paper form*
 
 ## Application
 
@@ -12,9 +12,7 @@ This guideline applies to studies in which:
     questions (typically online or on paper)
 -   researchers systematically analyze participants' answers
 
-Surveys can be descriptive, exploratory or confirmatory. Confirmatory
-surveys can test individual propositions or complex theories. This
-standard does not apply to questionnaires comprising predominately
+This standard does not apply to questionnaires comprising predominately
 open-ended questions<sup>[1](#myfootnote1)</sup>, literature surveys (see the **Systematic
 Review Standard**), longitudinal or repeated measures studies (see the
 **Longitudinal Studies Standard**), or the demographic questionnaires
