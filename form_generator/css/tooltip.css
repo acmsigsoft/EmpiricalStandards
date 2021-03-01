@@ -2,9 +2,11 @@
   display: inline;
   position: relative;
   border-bottom: 2px dotted #ccc;
+  margin-left: 5px;
 }
 
 .tooltip .tooltiptext {
+  font-size: 80%; 
   position: absolute;
   visibility: hidden;
   width: 350px;

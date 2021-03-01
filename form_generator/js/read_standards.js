@@ -56,7 +56,7 @@ function createTooltip(checkboxText, line_text, footnotes){
 	var tooltip = checkboxText;
 	tooltip.className = "tooltip";
 	//tooltip.innerHTML = "<b>" + footnote_id.match(/\[([0-9]+)\]/)[1] + "</b>";
-	tooltip.innerHTML = "&nbsp;" + line_text.replace(/\{sup\}(.*)\{\/sup\}/, "").replace("<br>", "");
+	tooltip.innerHTML = line_text.replace(/\{sup\}(.*)\{\/sup\}/, "").replace("<br>", "");
 	var tooltipText = document.createElement("span");
 	tooltipText.className = "tooltiptext";
 	tooltipText.innerHTML = footnote_text;
@@ -80,13 +80,13 @@ function fromMDtoHTMLformat(text){
 	return text;
 }
 
-function convert_checklists_to_checkboxes(standardName, checklistName, checklistText, footnotes){
-	var checkboxes = document.createElement("UL");
+function convert_standard_checklists_to_html_checklists(standardName, checklistName, checklistText, footnotes){
+	var checklists = document.createElement("UL");
 	var standard_H3 = document.createElement("B");
 	standard_H3.style = "font-size:20px;";
 	standard_H3.innerHTML = standardName + ":";
-	checkboxes.style = "list-style-type:none; list-style-position: inside; text-indent: -1.5em;";
-	//checkboxes.appendChild(standard_H3); //no subheadings
+	checklists.style = "list-style-type:none; list-style-position:inside; padding-left:3em; text-indent:-2.4em;";
+	//checklists.appendChild(standard_H3); //no subheadings
 	lines = checklistText.includes("- [ ]") ? checklistText.split("- [ ]") : checklistText.includes("-	") ? checklistText.split("-	") : checklistText.split("");
 	var i = 0;
 
@@ -97,15 +97,15 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 			line_text = line.trim().replace("---", "&mdash;").replace(/<br(\/)?>$/, "");
 			checkbox_id = standardName + "-" + checklistName + ":" + i;
 			var checkboxLI = document.createElement("LI");
-			var checkboxInput = document.createElement("input");
-			var checkboxLabel = document.createElement("label");
+			var RadioInputYes = document.createElement("input");
+			var RadioInputNo = document.createElement("input");
 			var checkboxText = document.createElement("span");
-			checkboxInput.type = "checkbox";
-			checkboxInput.id = checkbox_id;
-			checkboxInput.name = checkbox_id;
-			checkboxInput.style = "color:#FFF";
-			checkboxInput.value = line_text;
-			checkboxLabel.htmlFor = checkbox_id;
+			RadioInputYes.id = checkbox_id;
+			RadioInputNo.id = checkbox_id;
+			RadioInputYes.type = "radio";
+			RadioInputNo.type = "radio";
+			RadioInputYes.name = "choice-radio:" + checkbox_id;
+			RadioInputNo.name = "choice-radio:" + checkbox_id;
 
 			//we dont need this part in the checklist
 			if(line_text.includes("complies with all applicable empirical standards")){
@@ -118,13 +118,13 @@ function convert_checklists_to_checkboxes(standardName, checklistName, checklist
 			else{
 				checkboxText.innerHTML = "&nbsp;" + line_text;
 			}
-			checkboxLabel.appendChild(checkboxText);
-			checkboxLI.appendChild(checkboxInput);
-			checkboxLI.appendChild(checkboxLabel);
-			checkboxes.appendChild(checkboxLI);
+			checkboxLI.appendChild(RadioInputYes);
+			checkboxLI.appendChild(RadioInputNo);
+			checkboxLI.appendChild(checkboxText);
+			checklists.appendChild(checkboxLI);
 		}
 	}
-	return checkboxes;
+	return checklists;
 }
 
 function generateStandardChecklist(){
@@ -187,24 +187,30 @@ function generateStandardChecklist(){
 			checklistTag.innerHTML = checklistTag.innerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
 			checklistText = checklistTag.innerText.replaceAll(">", "").replaceAll("\n", "<br/>");
 			checklistText = fromMDtoHTMLformat(checklistText);
-			checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText, footnotes)
+			checklists = convert_standard_checklists_to_html_checklists(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText, footnotes)
+			var Yes_No = document.createElement("div");
 			var standard_header_rule = document.createElement("div");
 			var standard_header_text = document.createElement("span");
 			standard_header_rule.className = "standardHeaderRule";
 			standard_header_text.className = "standardHeaderText";
 			standard_header_text.innerText = standardName;
+			Yes_No.style = "align:center; font-size: 80%; font-weight: bold;";
+			Yes_No.innerHTML = "&nbsp;&nbsp;&nbsp;Yes No";
 			standard_header_rule.appendChild(standard_header_text);
 			if (checklistTag.getAttribute('name') == "Essential") {
 				EssentialUL.appendChild(standard_header_rule);
-				EssentialUL.appendChild(checkboxes);
+				EssentialUL.appendChild(Yes_No);
+				EssentialUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Desirable") {
 				DesirableUL.appendChild(standard_header_rule);
-				DesirableUL.appendChild(checkboxes);
+				DesirableUL.appendChild(Yes_No);
+				DesirableUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Extraordinary") {
 				ExtraordinaryUL.appendChild(standard_header_rule);
-				ExtraordinaryUL.appendChild(checkboxes);
+				ExtraordinaryUL.appendChild(Yes_No);
+				ExtraordinaryUL.appendChild(checklists);
 			}
 		}
 	}
