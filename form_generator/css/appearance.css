@@ -28,3 +28,6 @@ form{
 		margin: 0;
 	}
 }
+
+.standardHeaderRule {width: 100%; height: 10px; border-bottom: 1px solid black; text-align: left; margin-top: 5px; margin-bottom: 15px;}
+.standardHeaderText {font-size: 100%; color: grey; background-color: #f4f4f4; padding-right: 5px;}

@@ -176,8 +176,9 @@ function generateStandardChecklist(){
 		}
 
 		let standardName = "\"" + standardTag.getAttribute('name') + "\"";
+		standardName = standardName.replaceAll("\"", "");
 		/*var standardTitle = document.createElement("H2");
-		standardTitle.innerHTML = standardName.replaceAll("\"", "");
+		standardTitle.innerHTML = standardName;
 		form.appendChild(standardTitle);*/
 		var checklistTags = standardTag.getElementsByTagName("checklist");
 		
@@ -187,18 +188,23 @@ function generateStandardChecklist(){
 			checklistText = checklistTag.innerText.replaceAll(">", "").replaceAll("\n", "<br/>");
 			checklistText = fromMDtoHTMLformat(checklistText);
 			checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText, footnotes)
-			var hr = document.createElement("hr");
+			var standard_header_rule = document.createElement("div");
+			var standard_header_text = document.createElement("span");
+			standard_header_rule.className = "standardHeaderRule";
+			standard_header_text.className = "standardHeaderText";
+			standard_header_text.innerText = standardName;
+			standard_header_rule.appendChild(standard_header_text);
 			if (checklistTag.getAttribute('name') == "Essential") {
+				EssentialUL.appendChild(standard_header_rule);
 				EssentialUL.appendChild(checkboxes);
-				EssentialUL.appendChild(hr);
 			}
 			else if (checklistTag.getAttribute('name') == "Desirable") {
+				DesirableUL.appendChild(standard_header_rule);
 				DesirableUL.appendChild(checkboxes);
-				DesirableUL.appendChild(hr);
 			}
 			else if (checklistTag.getAttribute('name') == "Extraordinary") {
+				ExtraordinaryUL.appendChild(standard_header_rule);
 				ExtraordinaryUL.appendChild(checkboxes);
-				ExtraordinaryUL.appendChild(hr);
 			}
 		}
 	}
