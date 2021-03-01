@@ -32,7 +32,7 @@ function readSpecificEmpiricalStandards(standard_name){
     var loc = window.location.pathname;
     var dir = loc.substring(0, loc.lastIndexOf('/'));
 	var standard_file_name = standard_name.replaceAll("\"", "").replace(" ", "");
-	var standard_file_path = "/EmpiricalStandards/Standards/" + standard_file_name + ".md";
+	var standard_file_path = "./Standards/" + standard_file_name + ".md";
 	var empirical_standard = "";
     mdFile.open("GET", standard_file_path, false);
     mdFile.onreadystatechange = function(){
@@ -133,7 +133,7 @@ function generateStandardChecklist(){
 	container.id = "container";
 
 	var heading = document.createElement("H1");
-	heading.innerHTML = "Pre-submission checklist";
+	heading.innerHTML = "Pre-Submission Checklist";
 
 	var form = document.createElement("FORM");
 	form.id = "checklists";
@@ -187,13 +187,19 @@ function generateStandardChecklist(){
 			checklistText = checklistTag.innerText.replaceAll(">", "").replaceAll("\n", "<br/>");
 			checklistText = fromMDtoHTMLformat(checklistText);
 			checkboxes = convert_checklists_to_checkboxes(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText, footnotes)
-
-			if (checklistTag.getAttribute('name') == "Essential")
+			var hr = document.createElement("hr");
+			if (checklistTag.getAttribute('name') == "Essential") {
 				EssentialUL.appendChild(checkboxes);
-			else if (checklistTag.getAttribute('name') == "Desirable")
+				EssentialUL.appendChild(hr);
+			}
+			else if (checklistTag.getAttribute('name') == "Desirable") {
 				DesirableUL.appendChild(checkboxes);
-			else if (checklistTag.getAttribute('name') == "Extraordinary")
+				DesirableUL.appendChild(hr);
+			}
+			else if (checklistTag.getAttribute('name') == "Extraordinary") {
 				ExtraordinaryUL.appendChild(checkboxes);
+				ExtraordinaryUL.appendChild(hr);
+			}
 		}
 	}
 	form.appendChild(EssentialUL);
@@ -208,8 +214,8 @@ function generateStandardChecklist(){
 	container.appendChild(heading);
 	container.appendChild(form);
 	
-	BR = document.createElement("BR")
-	HR = document.createElement("HR")
+	BR = document.createElement("BR");
+	HR = document.createElement("HR");
 	container.appendChild(HR);
 
 	var for_more_info = document.createElement("H2");

@@ -5,52 +5,32 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="css/appearance.css">
-		<script language="javascript" type="text/javascript">
-			// Reset the form at the begining
-			$(window).bind("pageshow", function() {
-				$('form')[0].reset();
-			});
-			
-			$(document).ready(function(){
-				$('.none').on('click' , function() {
-					$('.standard').each(function(){
-						$(this).prop('checked', false);
-					})
-				});
-
-				$('.standard').on('click', function(){
-					$('.none').prop('checked', false);
-				});
-				
-				// Enable the Submit button only when any of the checkboxes is checked; otherwise, disable.
-				$(".standard,.none").click(function() {
-					if ($("#myForm input[type=checkbox]:checked").length > 0)
-						$(".button").attr("disabled", false);
-					else
-					   $(".button").attr("disabled", true);
-				});
-			});
-		</script>
+        <link rel="stylesheet" href="css/tooltip.css">
     </head>
     <body>
 	<div id="container">
-	  <h1>Pre-submission Checklist Generator</h1>
-      <form id="myForm" action="result.html" method="get">
-      	<h2>Select all that apply:</h2>
-            <input type="checkbox" class="standard" name="standard" id="Engineering_Research"    value="Engineering Research">Engineering Research</input><br/><br/>
-			<input type="checkbox" class="standard" name="standard" id="Systematic_Reviews"      value="Systematic Reviews">Systematic Reviews</input><br/><br/>
-			<input type="checkbox" class="standard" name="standard" id="Action_Research"         value="Action Research">Action Research</input><br/><br/>
-			<input type="checkbox" class="standard" name="standard" id="Grounded_Theory"         value="Grounded Theory">Grounded Theory</input><br/><br/>
-			<input type="checkbox" class="standard" name="standard" id="Qualitative_Surveys"     value="Qualitative Surveys">Qualitative Surveys</input><br/><br/>
-            <input type="checkbox" class="standard" name="standard" id="Case_Study"              value="Case Study">Case Study</input><br/><br/>
-            <input type="checkbox" class="standard" name="standard" id="Case_Survey"              value="Case Survey">Case Survey</input><br/><br/>
-            <input type="checkbox" class="standard" name="standard" id="Questionnaire_Surveys"   value="Questionnaire Surveys">Questionnaire Surveys</input><br/><br/>
-            <input type="checkbox" class="standard" name="standard" id="Experiments"             value="Experiments">Experiments</input><br/><br/>
-            <input type="checkbox" class="standard" name="standard" id="Quantitative_Simulation" value="Quantitative Simulation">Quantitative Simulation</input><br/><br/>
-            <input type="checkbox" class="standard" name="standard" id="Longitudinal"            value="Longitudinal">Longitudinal</input><br/><br/>
-            <input type="checkbox" class="none"     name="standard" id="General_Standard"        value="General Standard">None of the above</input><br/><br/>
-            <input type="submit"   class="button"   value="Submit" disabled>
-      </form>
+	  <h1>Empirical Standards Checklist Generator</h1>
+        <h2><strong>Select from below: </strong></h2><br>
+        <select id="Opt">
+            <option>Authors</option>
+            <option>Reviewers</option>
+        </select>
+        <br>
+        <button onClick="redirectMe()">Submit</button>
+
+        <script>
+            function redirectMe() {
+                var selectedIndex = document.getElementById("Opt").selectedIndex;
+                var selectedText = document.getElementById("Opt").options[selectedIndex].text;
+
+                if (selectedText == "Authors") {
+                    location.href = "preSubmissionChecklist.html";
+                }
+                else {
+                    location.href = "reviewerChecklist.html";
+                }
+            }
+        </script>
     </div>
     </body>
 </html>
