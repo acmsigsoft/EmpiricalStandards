@@ -1,7 +1,7 @@
 # Optimization Studies in SE (including Search-Based Software Engineering)
 <standard name="Optimization Studies in SE (including Search-Based Software Engineering)">
 
-Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques to solve such problems<sup>[1](#footnote1)</sup>.  
+*Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques to solve such problems*<sup>[1](#footnote1)</sup>.  
 
 ## Application
 
@@ -113,7 +113,7 @@ The most valuable quality criteria for optimization studies in SE include reliab
 Regarding the difference between "significance" and "effect size" tests: "Significance" checks if distributions can be distinguished from each other while "Effect size" tests are required to check if the difference between distributions is "interesting" (and not just a trivially "small effect"). These tests can be parametric or non-parametric. For example, code for the parametric t-test/Hedges significance/effect tests endorsed by Kampenese et al. can be found at https://tinyurl.com/y4o7ucnx.  Code for a parametric Scott-Knot/Cohen test of the kind endorsed by Mittas et al. is available at https://tinyurl.com/y5tg37fp. Code for the non-parametric bootstrap/Cliffs Delta significant/effect tests of the  kind endorsed by  Efron et al. and Arcuri et al.
 can be found at https://tinyurl.com/y2ufofgu.  
 
-## Footnotes
+---
 
 <sup><a name="footnote1">1</a></sup>: Note that there are many such optimization techniques (metaheuristic; numerical optimizers; constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic. 
 
