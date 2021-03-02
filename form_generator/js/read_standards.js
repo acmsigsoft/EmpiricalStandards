@@ -113,7 +113,7 @@ function generate_author_deviation_block(checklistItem_id) {
 	var deviation_block = document.createElement("div");
 	deviation_block.id = "Deviation_Block:" + checklistItem_id;
 	deviation_block.style = "padding-left:2.4em; display:none";
-	deviation_block.innerHTML = "&rdsh;&nbsp; Does the manuscript explain the deviation?";
+	deviation_block.innerHTML = "&rdsh;&nbsp; Does the manuscript justify the deviation?";
 	var deviation_block_radios = document.createElement("div");
 	var deviationRadioYes = document.createElement("input");
 	var deviationRadioNo = document.createElement("input");
