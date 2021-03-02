@@ -1,5 +1,5 @@
 # Optimization Studies in SE (including Search-Based Software Engineering)
-<standard name="Optimization Studies in SE (including Search-Based Software Engineering)">
+<standard name="Optimization Studies">
 
 *Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques to solve such problems*<sup>[1](#footnote1)</sup>.  
 
@@ -15,7 +15,7 @@ This standard applies to empirical studies that meet the following criteria:
 We stress that the use of optimization in SE is still a rapidly evolving field. Hence, the following criteria are approximate and there may exist many exceptions to them. Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
 
 ### Essential
-<checklist name="Essential">
+<checklist name="Essential">  
 
 - [ ] Describe the search space (e.g., constraints, independent variables choices).
 - [ ] Explain why the problem cannot be optimized manually or by brute force within a reasonable timeframe<sup>[4](#footnote4)</sup>. 
@@ -31,7 +31,6 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
       OR, if the subjects are taken from previous work, fully reference the original source and explain whether any transformation or cleaning was applied to the datasets. 
 - [ ] Identify and explain all possible sources of stochasticity<sup>[12](#footnote12)</sup>.
 - [ ] EITHER execute stochastic approaches or elements multiple times OR explain why this is not possible<sup>[13](#footnote13)</sup>.
-
 </checklist>
 
 ### Desirable
@@ -49,16 +48,14 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Perform multiple trials either as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
 - [ ] Make available random data splits (e.g., those used in data-driven approaches) or, at least, ensure splits are reproducibile. 
 - [ ] Compare distributions (rather than means) of results using appropriate statistics.
-- [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[15](#footnote15)</sup>. Justify the chosen criteria. 
-
+- [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[15](#footnote15)</sup>. Justify the chosen criteria.
 </checklist>
 
 ### Extraordinary
 <checklist name="Extraordinary">
-    
+
 - [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[16](#footnote16)</sup>. 
 - [ ] Analyze the fitness landscape for one or more of the chosen fitness functions.
-
 </checklist>
 
 ## General Quality Criteria
@@ -114,35 +111,20 @@ Regarding the difference between "significance" and "effect size" tests: "Signif
 can be found at https://tinyurl.com/y2ufofgu.  
 
 ---
-
-<sup><a name="footnote1">1</a></sup>: Note that there are many such optimization techniques (metaheuristic; numerical optimizers; constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic. 
-
-<sup><a name="footnote2">2</a></sup>: E.g., test input creation, design refactoring, effort prediction.
-
-<sup><a name="footnote3">3</a></sup>: A "fitness function", or "objective function", is a numerical scoring function used to indicate the quality of a solution to a defined problem. Optimization approaches attempt to maximize or minimize such functions, depending on whether lower or higher scores indicate success.
-
-<sup><a name="footnote4">4</a></sup>: E.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow.
-
-<sup><a name="footnote5">5</a></sup>: E.g., the numerical optimizer, the specific metaheuristic, the constraint solving method, etc.
-
-<sup><a name="footnote6">6</a></sup>: For example, do not use an algorithm such as Simulated Annealing, or even a specific approach such as NSGA-II, to solve an optimization problem unless it is actually appropriate for that problem. While one rarely knows the *best* approach for a new problem, one should at least consider the algorithms applied to address similar problems and make an informed judgement. 
-
-<sup><a name="footnote7">7</a></sup>: If the approach addresses a problem never tackled before, then it should be compared - at least - to random search. Otherwise, compare the proposed approach to the existing state of the art.
-
-<sup><a name="footnote8">8</a></sup>: E.g., a test suite or test case in test generation.
-
-<sup><a name="footnote9">9</a></sup>: E.g., a tree or vector structure.
-
-<sup><a name="footnote10">10</a></sup>: Example techniques - Simulated Annealing, Genetic Algorithm. Example heuristic - single-point crossover. Example parameters - crossover and mutation rates.
-
-<sup><a name="footnote11">11</a></sup>: E.g., proprietary data, ethics issues, or a Non-Disclosure Agreement.
-
-<sup><a name="footnote12">12</a></sup>: For example, stochasticity may arise from the use of randomized algorithms, from the use of a fitness function that measures a random variable from the environment (e.g., a fitness function based on execution time may return different results across different executions), from the use of data sampling or cross-validation approaches.
-
-<sup><a name="footnote13">13</a></sup>: E.g., the approach is too slow, human-in-the-loop.
-
-<sup><a name="footnote14">14</a></sup>: Including, for example, source code (of approach, solution representation, and fitness calculations), datasets used as experiment input, and collected experiment data (e.g., output logs, generated solutions). 
-
-<sup><a name="footnote15">15</a></sup>: For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)
-
-<sup><a name="footnote16">16</a></sup>: E.g., applying hyperparameter optimization.
+<footnote><sup>[1](#myfootnote1)</sup>Note that there are many such optimization techniques (metaheuristic; numerical optimizers; constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic.</footnote><br> 
+<footnote><sup>[2](#myfootnote2)</sup>E.g., test input creation, design refactoring, effort prediction.</footnote><br> 
+<footnote><sup>[3](#myfootnote3)</sup>A "fitness function", or "objective function", is a numerical scoring function used to indicate the quality of a solution to a defined problem. Optimization approaches attempt to maximize or minimize such functions, depending on whether lower or higher scores indicate success.</footnote><br>
+<footnote><sup>[4](#myfootnote4)</sup>E.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow.</footnote><br>
+<footnote><sup>[5](#myfootnote5)</sup>E.g., the numerical optimizer, the specific metaheuristic, the constraint solving method, etc.</footnote><br>
+<footnote><sup>[6](#myfootnote6)</sup>For example, do not use an algorithm such as Simulated Annealing, or even a specific approach such as NSGA-II, to solve an optimization problem unless it is actually appropriate for that problem. While one rarely knows the *best* approach for a new problem, one should at least consider the algorithms applied to address similar problems and make an informed judgement.</footnote><br>
+<footnote><sup>[7](#myfootnote7)</sup>If the approach addresses a problem never tackled before, then it should be compared - at least - to random search. Otherwise, compare the proposed approach to the existing state of the art.</footnote><br>
+<footnote><sup>[8](#myfootnote8)</sup>E.g., a test suite or test case in test generation.</footnote><br>
+<footnote><sup>[9](#myfootnote9)</sup>E.g., a tree or vector structure.</footnote><br>
+<footnote><sup>[10](#myfootnote10)</sup>Example techniques - Simulated Annealing, Genetic Algorithm. Example heuristic - single-point crossover. Example parameters - crossover and mutation rates.</footnote><br>
+<footnote><sup>[11](#myfootnote11)</sup>E.g., proprietary data, ethics issues, or a Non-Disclosure Agreement.</footnote><br>
+<footnote><sup>[12](#myfootnote12)</sup>For example, stochasticity may arise from the use of randomized algorithms, from the use of a fitness function that measures a random variable from the environment (e.g., a fitness function based on execution time may return different results across different executions), from the use of data sampling or cross-validation approaches.</footnote><br>
+<footnote><sup>[13](#myfootnote13)</sup>E.g., the approach is too slow, human-in-the-loop.</footnote><br>
+<footnote><sup>[14](#myfootnote14)</sup>Including, for example, source code (of approach, solution representation, and fitness calculations), datasets used as experiment input, and collected experiment data (e.g., output logs, generated solutions).</footnote><br>
+<footnote><sup>[15](#myfootnote15)</sup>For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)</footnote><br>
+<footnote><sup>[16](#myfootnote16)</sup>E.g., applying hyperparameter optimization.</footnote><br>
+</standard>

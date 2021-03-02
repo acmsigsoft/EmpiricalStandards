@@ -10,27 +10,8 @@
     <body>
 	<div id="container">
 	  <h1>Empirical Standards Checklist Generator</h1>
-        <h2><strong>Select from below: </strong></h2><br>
-        <select id="Opt">
-            <option>Authors</option>
-            <option>Reviewers</option>
-        </select>
-        <br>
-        <button onClick="redirectMe()">Submit</button>
-
-        <script>
-            function redirectMe() {
-                var selectedIndex = document.getElementById("Opt").selectedIndex;
-                var selectedText = document.getElementById("Opt").options[selectedIndex].text;
-
-                if (selectedText == "Authors") {
-                    location.href = "preSubmissionChecklist.html";
-                }
-                else {
-                    location.href = "reviewerChecklist.html";
-                }
-            }
-        </script>
+        <h2><a href="preSubmissionChecklist.html">Authors: Generate a pre-submission checklist</a></h2>
+        <h2><a href="reviewerChecklist.html">Reviewers: Generate a review checklist</a></h2>
     </div>
     </body>
 </html>

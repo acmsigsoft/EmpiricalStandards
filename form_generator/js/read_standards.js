@@ -287,7 +287,7 @@ function generateStandardChecklist(){
 			var standard_header_text = document.createElement("span");
 			standard_header_rule.className = "standardHeaderRule";
 			standard_header_text.className = "standardHeaderText";
-			standard_header_text.innerText = standardName;
+			//standard_header_text.innerText = standardName;
 			Yes_No.style = "align:center; font-size: 80%; font-weight: bold;";
 			Yes_No.innerHTML = "&nbsp;&nbsp;&nbsp;Yes No";
 			standard_header_rule.appendChild(standard_header_text);
