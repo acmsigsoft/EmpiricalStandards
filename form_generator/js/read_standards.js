@@ -49,11 +49,11 @@ function readSpecificEmpiricalStandards(standard_name){
 	return empirical_standard;
 }
 
-function createTooltip(checkboxText, line_text, footnotes){
+function createTooltip(checklistItemText, line_text, footnotes){
 	footnote_id = line_text.match(/\{sup\}(.*)\{\/sup\}/)[1];
 	footnote_text = footnotes[footnote_id];
 	//var tooltip = document.createElement("sup");
-	var tooltip = checkboxText;
+	var tooltip = checklistItemText;
 	tooltip.className = "tooltip";
 	//tooltip.innerHTML = "<b>" + footnote_id.match(/\[([0-9]+)\]/)[1] + "</b>";
 	tooltip.innerHTML = line_text.replace(/\{sup\}(.*)\{\/sup\}/, "").replace("<br>", "");
@@ -85,7 +85,11 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 	var standard_H3 = document.createElement("B");
 	standard_H3.style = "font-size:20px;";
 	standard_H3.innerHTML = standardName + ":";
-	checklists.style = "list-style-type:none; list-style-position:inside; padding-left:3em; text-indent:-2.4em;";
+	if (checklistName == "Essential")
+		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:3em; text-indent:-2.4em;";
+	else
+		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:3em; text-indent:-1.3em;";
+	
 	//checklists.appendChild(standard_H3); //no subheadings
 	lines = checklistText.includes("- [ ]") ? checklistText.split("- [ ]") : checklistText.includes("-	") ? checklistText.split("-	") : checklistText.split("");
 	var i = 0;
@@ -99,11 +103,17 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			var checkboxLI = document.createElement("LI");
 			var RadioInputYes = document.createElement("input");
 			var RadioInputNo = document.createElement("input");
-			var checkboxText = document.createElement("span");
+			var checkboxInput = document.createElement("input");
+			var checklistItemText = document.createElement("span");
 			RadioInputYes.id = checkbox_id;
 			RadioInputNo.id = checkbox_id;
 			RadioInputYes.type = "radio";
 			RadioInputNo.type = "radio";
+			checkboxInput.type = "checkbox";
+			checkboxInput.id = checkbox_id;
+			checkboxInput.name = checkbox_id;
+			checkboxInput.style = "color:#FFF";
+			checkboxInput.value = line_text;
 			RadioInputYes.name = "choice-radio:" + checkbox_id;
 			RadioInputNo.name = "choice-radio:" + checkbox_id;
 
@@ -113,14 +123,19 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			}
 
 			if(line_text.includes("footnote")){
-				checkboxText = createTooltip(checkboxText, line_text, footnotes);
+				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			}
 			else{
-				checkboxText.innerHTML = "&nbsp;" + line_text;
+				checklistItemText.innerHTML = "&nbsp;" + line_text;
 			}
-			checkboxLI.appendChild(RadioInputYes);
-			checkboxLI.appendChild(RadioInputNo);
-			checkboxLI.appendChild(checkboxText);
+			if (checklistName == "Essential"){
+				checkboxLI.appendChild(RadioInputYes);
+				checkboxLI.appendChild(RadioInputNo);
+			}
+			else{
+				checkboxLI.appendChild(checkboxInput);
+			}
+			checkboxLI.appendChild(checklistItemText);
 			checklists.appendChild(checkboxLI);
 		}
 	}
@@ -204,12 +219,10 @@ function generateStandardChecklist(){
 			}
 			else if (checklistTag.getAttribute('name') == "Desirable") {
 				DesirableUL.appendChild(standard_header_rule);
-				DesirableUL.appendChild(Yes_No);
 				DesirableUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Extraordinary") {
 				ExtraordinaryUL.appendChild(standard_header_rule);
-				ExtraordinaryUL.appendChild(Yes_No);
 				ExtraordinaryUL.appendChild(checklists);
 			}
 		}
