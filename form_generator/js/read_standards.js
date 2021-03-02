@@ -80,6 +80,75 @@ function fromMDtoHTMLformat(text){
 	return text;
 }
 
+function show_deviation_block() {
+	id = this.id.replace("checklist-radio:No:", "")
+	var block = document.getElementById("Deviation_Block:" + id);
+	block.style.display = "block";
+}
+
+function hide_deviation_block() {
+	id = this.id.replace("checklist-radio:Yes:", "")
+	var block = document.getElementById("Deviation_Block:" + id);
+	block.style.display = "none";
+	var block = document.getElementById("deviation_explained:" + id);
+	block.style.display = "none";
+	deviation_radio_name = this.name.replace("checklist-radio", "deviation-radio");
+	document.getElementsByName(deviation_radio_name)[0].checked = false;
+	document.getElementsByName(deviation_radio_name)[1].checked = false;
+}
+
+function deviation_is_explained() {
+	id = this.id.replace("deviation-radio:Yes:", "")
+	var block = document.getElementById("deviation_explained:" + id);
+	block.style.display = "none";
+}
+
+function deviation_is_not_explained() {
+	id = this.id.replace("deviation-radio:No:", "")
+	var block = document.getElementById("deviation_explained:" + id);
+	block.style.display = "block";
+}
+
+function generate_author_deviation_block(checklistItem_id) {
+	var deviation_block = document.createElement("div");
+	deviation_block.id = "Deviation_Block:" + checklistItem_id;
+	deviation_block.style = "padding-left:2.4em; display:none";
+	deviation_block.innerHTML = "&rdsh;&nbsp; Does the manuscript explain the deviation?";
+	var deviation_block_radios = document.createElement("div");
+	var deviationRadioYes = document.createElement("input");
+	var deviationRadioNo = document.createElement("input");
+	var deviationLabelYes = document.createElement("label");
+	var deviationLabelNo = document.createElement("label");
+	deviationRadioYes.id = "deviation-radio:Yes:" + checklistItem_id;
+	deviationRadioNo.id = "deviation-radio:No:" + checklistItem_id;
+	deviationRadioYes.name = "deviation-radio:" + checklistItem_id;
+	deviationRadioNo.name = "deviation-radio:" + checklistItem_id;
+	deviationRadioYes.onclick = deviation_is_explained;
+	deviationRadioNo.onclick = deviation_is_not_explained;
+	deviationRadioYes.type = "radio";
+	deviationRadioNo.type = "radio";
+	deviationRadioYes.value = "Yes";
+	deviationRadioNo.value = "No";
+	deviation_block_radios.innerHTML = "&nbsp;&nbsp;&nbsp;";
+	deviationLabelYes.innerHTML = "Yes&nbsp;&nbsp;";
+	deviationLabelNo.innerHTML = "No";
+	deviationLabelYes.htmlFor = deviationRadioYes.id;
+	deviationLabelNo.htmlFor = deviationRadioNo.id;
+	deviation_block_radios.appendChild(deviationRadioYes);
+	deviation_block_radios.appendChild(deviationLabelYes);
+	deviation_block_radios.appendChild(deviationRadioNo);
+	deviation_block_radios.appendChild(deviationLabelNo);
+	deviation_block.appendChild(deviation_block_radios);
+	
+	var deviation_explained = document.createElement("div");
+	deviation_explained.id = "deviation_explained:" + checklistItem_id;
+	deviation_explained.innerHTML = "&rdsh;&nbsp; The manuscript has standard deviation problems!";
+	deviation_explained.style = "color:red; padding-left:1.2em; display:none";
+	deviation_block.appendChild(deviation_explained);
+	
+	return deviation_block;
+}
+
 function convert_standard_checklists_to_html_checklists(standardName, checklistName, checklistText, footnotes){
 	var checklists = document.createElement("UL");
 	var standard_H3 = document.createElement("B");
@@ -99,44 +168,54 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 		if (line_text != ""){
 			i++;
 			line_text = line.trim().replace("---", "&mdash;").replace(/<br(\/)?>$/, "");
-			checkbox_id = standardName + "-" + checklistName + ":" + i;
-			var checkboxLI = document.createElement("LI");
-			var RadioInputYes = document.createElement("input");
-			var RadioInputNo = document.createElement("input");
-			var checkboxInput = document.createElement("input");
+			checklistItem_id = standardName + "-" + checklistName + ":" + i;
+			var checklistItemLI = document.createElement("LI");
 			var checklistItemText = document.createElement("span");
-			RadioInputYes.id = checkbox_id;
-			RadioInputNo.id = checkbox_id;
-			RadioInputYes.type = "radio";
-			RadioInputNo.type = "radio";
-			checkboxInput.type = "checkbox";
-			checkboxInput.id = checkbox_id;
-			checkboxInput.name = checkbox_id;
-			checkboxInput.style = "color:#FFF";
-			checkboxInput.value = line_text;
-			RadioInputYes.name = "choice-radio:" + checkbox_id;
-			RadioInputNo.name = "choice-radio:" + checkbox_id;
 
 			//we dont need this part in the checklist
-			if(line_text.includes("complies with all applicable empirical standards")){
+			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
+
+			if(line_text.includes("footnote"))
+				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
+			else
+				checklistItemText.innerHTML = "&nbsp;" + line_text;
+
+			if (checklistName == "Essential"){
+				var checklistRadioYes = document.createElement("input");
+				var checklistRadioNo = document.createElement("input");
+				checklistRadioYes.id = "checklist-radio:Yes:" + checklistItem_id;
+				checklistRadioNo.id = "checklist-radio:No:" + checklistItem_id;
+				checklistRadioYes.name = "checklist-radio:" + checklistItem_id;
+				checklistRadioNo.name = "checklist-radio:" + checklistItem_id;
+				checklistRadioYes.onclick = hide_deviation_block;
+				checklistRadioNo.onclick = show_deviation_block;
+				checklistRadioYes.type = "radio";
+				checklistRadioNo.type = "radio";
+				checklistRadioYes.value = "Yes";
+				checklistRadioNo.value = "No";
+				
+				
+				// Generate a deviation block
+				var deviation_block = generate_author_deviation_block(checklistItem_id);
+				checklistItemText.appendChild(deviation_block);				
+				
+				checklistItemLI.appendChild(checklistRadioYes);
+				checklistItemLI.appendChild(checklistRadioNo);
+				checklistItemLI.appendChild(checklistItemText);
+			}
+			else{
+				var checkboxInput = document.createElement("input");
+				checkboxInput.type = "checkbox";
+				checkboxInput.id = checklistItem_id;
+				checkboxInput.name = checklistItem_id;
+				checkboxInput.style = "color:#FFF";
+				checkboxInput.value = line_text;
+				checklistItemLI.appendChild(checkboxInput);
+				checklistItemLI.appendChild(checklistItemText);
 			}
 
-			if(line_text.includes("footnote")){
-				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
-			}
-			else{
-				checklistItemText.innerHTML = "&nbsp;" + line_text;
-			}
-			if (checklistName == "Essential"){
-				checkboxLI.appendChild(RadioInputYes);
-				checkboxLI.appendChild(RadioInputNo);
-			}
-			else{
-				checkboxLI.appendChild(checkboxInput);
-			}
-			checkboxLI.appendChild(checklistItemText);
-			checklists.appendChild(checkboxLI);
+			checklists.appendChild(checklistItemLI);
 		}
 	}
 	return checklists;
