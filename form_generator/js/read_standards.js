@@ -1,10 +1,15 @@
-function getParameterByName(name, url = window.location.href){
-    var a = location.search&&location.search.substr(1).replace(/\+/gi," ").split("&");
-    for (var i in a){
-        var s = a[i].split("=");
-        a[i]  = a[unescape(s[0])] = "\"" + unescape(s[1]) + "\"";
+function getParameterByName(param_name, url = window.location.href){
+    var params = location.search&&location.search.substr(1).replace(/\+/gi," ").split("&");
+    var param_values = [];
+	var i = 0;
+	for (var param_index in params){
+        var param = params[param_index].split("=");
+		if(param[0] === param_name){
+			param_values[i] = "\"" + unescape(param[1]) + "\"";
+			i++;
+		}
     }
-    return a;
+	return param_values;
 }
 
 function readAllEmpiricalStandards(){
@@ -82,49 +87,67 @@ function fromMDtoHTMLformat(text){
 
 function show_deviation_block() {
 	id = this.id.replace("checklist-radio:No:", "")
-	var block = document.getElementById("Deviation_Block:" + id);
+	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "block";
 }
 
 function hide_deviation_block() {
 	id = this.id.replace("checklist-radio:Yes:", "")
-	var block = document.getElementById("Deviation_Block:" + id);
+	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "none";
-	var block = document.getElementById("deviation_explained:" + id);
+	var block = document.getElementById("deviation_justified:" + id);
 	block.style.display = "none";
-	deviation_radio_name = this.name.replace("checklist-radio", "deviation-radio");
+	var block = document.getElementById("deviation_not_justified:" + id);
+	block.style.display = "none";
+	deviation_radio_name = this.name.replace("checklist-radio", "deviation_block-radio");
+	document.getElementsByName(deviation_radio_name)[0].checked = false;
+	document.getElementsByName(deviation_radio_name)[1].checked = false;
+	deviation_radio_name = this.name.replace("checklist-radio", "deviation_justified-radio");
+	document.getElementsByName(deviation_radio_name)[0].checked = false;
+	document.getElementsByName(deviation_radio_name)[1].checked = false;
+	deviation_radio_name = this.name.replace("checklist-radio", "deviation_not_justified-radio");
 	document.getElementsByName(deviation_radio_name)[0].checked = false;
 	document.getElementsByName(deviation_radio_name)[1].checked = false;
 }
 
-function deviation_is_explained() {
-	id = this.id.replace("deviation-radio:Yes:", "")
-	var block = document.getElementById("deviation_explained:" + id);
+function deviation_is_justified() {
+	id = this.id.replace("deviation_block-radio:Yes:", "")
+	var block = document.getElementById("deviation_not_justified:" + id);
 	block.style.display = "none";
-}
-
-function deviation_is_not_explained() {
-	id = this.id.replace("deviation-radio:No:", "")
-	var block = document.getElementById("deviation_explained:" + id);
+	var block = document.getElementById("deviation_justified:" + id);
 	block.style.display = "block";
+	deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_not_justified-radio");
+	document.getElementsByName(deviation_radio_name)[0].checked = false;
+	document.getElementsByName(deviation_radio_name)[1].checked = false;
 }
 
-function generate_author_deviation_block(checklistItem_id) {
-	var deviation_block = document.createElement("div");
-	deviation_block.id = "Deviation_Block:" + checklistItem_id;
-	deviation_block.style = "padding-left:2.4em; display:none";
-	deviation_block.innerHTML = "&rdsh;&nbsp; Does the manuscript justify the deviation?";
+function deviation_is_not_justified() {
+	id = this.id.replace("deviation_block-radio:No:", "")
+	var block = document.getElementById("deviation_justified:" + id);
+	block.style.display = "none";
+	var block = document.getElementById("deviation_not_justified:" + id);
+	block.style.display = "block";
+	deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_justified-radio");
+	document.getElementsByName(deviation_radio_name)[0].checked = false;
+	document.getElementsByName(deviation_radio_name)[1].checked = false;
+}
+
+function generate_question_block_with_yes_no_radio_answers(id, question, checklistItem_id) {
+	var block = document.createElement("div");
+	block.id = id + ":" + checklistItem_id;
+	block.style = "padding-left:1.6em; display:none";
+	block.innerHTML = "&rdsh;&nbsp; " + question;
 	var deviation_block_radios = document.createElement("div");
 	var deviationRadioYes = document.createElement("input");
 	var deviationRadioNo = document.createElement("input");
 	var deviationLabelYes = document.createElement("label");
 	var deviationLabelNo = document.createElement("label");
-	deviationRadioYes.id = "deviation-radio:Yes:" + checklistItem_id;
-	deviationRadioNo.id = "deviation-radio:No:" + checklistItem_id;
-	deviationRadioYes.name = "deviation-radio:" + checklistItem_id;
-	deviationRadioNo.name = "deviation-radio:" + checklistItem_id;
-	deviationRadioYes.onclick = deviation_is_explained;
-	deviationRadioNo.onclick = deviation_is_not_explained;
+	deviationRadioYes.id = id + "-radio:Yes:" + checklistItem_id;
+	deviationRadioNo.id = id + "-radio:No:" + checklistItem_id;
+	deviationRadioYes.name = id + "-radio:" + checklistItem_id;
+	deviationRadioNo.name = id + "-radio:" + checklistItem_id;
+	deviationRadioYes.onclick = deviation_is_justified;
+	deviationRadioNo.onclick = deviation_is_not_justified;
 	deviationRadioYes.type = "radio";
 	deviationRadioNo.type = "radio";
 	deviationRadioYes.value = "Yes";
@@ -138,15 +161,42 @@ function generate_author_deviation_block(checklistItem_id) {
 	deviation_block_radios.appendChild(deviationLabelYes);
 	deviation_block_radios.appendChild(deviationRadioNo);
 	deviation_block_radios.appendChild(deviationLabelNo);
-	deviation_block.appendChild(deviation_block_radios);
+	block.appendChild(deviation_block_radios);
 	
-	var deviation_explained = document.createElement("div");
-	deviation_explained.id = "deviation_explained:" + checklistItem_id;
-	deviation_explained.innerHTML = "&rdsh;&nbsp; The manuscript has standard deviation problems!";
-	deviation_explained.style = "color:red; padding-left:1.2em; display:none";
-	deviation_block.appendChild(deviation_explained);
+	return block;
+}
+
+function generate_author_deviation_block(checklistItem_id) {
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "Does the manuscript justify the deviation?", checklistItem_id);
+	
+	// Author-specific deviation justification block
+	var deviation_justified = document.createElement("div");
+	deviation_justified.id = "deviation_justified:" + checklistItem_id;
+	deviation_justified.style = "padding-left:1.2em; display:none";
+
+	var deviation_not_justified = document.createElement("div");
+	deviation_not_justified.id = "deviation_not_justified:" + checklistItem_id;
+	deviation_not_justified.innerHTML = "&rdsh;&nbsp; The manuscript deviates from standard!";
+	deviation_not_justified.style = "color:red; padding-left:1.2em; display:none";
+	
+	deviation_block.appendChild(deviation_justified);
+	deviation_block.appendChild(deviation_not_justified);
 	
 	return deviation_block;
+}
+
+function generate_reviewer_deviation_block(checklistItem_id) {
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "Does the manuscript justify the deviation?", checklistItem_id);
+	
+	// Reviewer-specific deviation justification block
+	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "Is the justification reasonable?", checklistItem_id);
+	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "Is the deviation reasonable?", checklistItem_id);
+
+	deviation_block.appendChild(deviation_justified);
+	deviation_block.appendChild(deviation_not_justified);
+	
+	return deviation_block;
+
 }
 
 function convert_standard_checklists_to_html_checklists(standardName, checklistName, checklistText, footnotes){
@@ -197,7 +247,12 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 				
 				
 				// Generate a deviation block
-				var deviation_block = generate_author_deviation_block(checklistItem_id);
+				var deviation_block;
+				if(role == "\"author\"")
+					deviation_block = generate_author_deviation_block(checklistItem_id);
+				else if(role == "\"reviewer\"")
+					deviation_block = generate_reviewer_deviation_block(checklistItem_id);
+					
 				checklistItemText.appendChild(deviation_block);				
 				
 				checklistItemLI.appendChild(checklistRadioYes);
@@ -222,7 +277,8 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 }
 
 function generateStandardChecklist(){
-	keys = getParameterByName('standard');
+	standard_keys = getParameterByName('standard');
+	role = getParameterByName('role');
 	var container = document.createElement("DIV");
 	container.id = "container";
 
@@ -251,10 +307,10 @@ function generateStandardChecklist(){
 	ExtraordinaryH2.innerHTML = "Extraordinary";
 	ExtraordinaryUL.appendChild(ExtraordinaryH2);
 	
-	if (!keys.includes("\"General Standard\""))
-		keys.unshift("\"General Standard\"");
+	if (!standard_keys.includes("\"General Standard\""))
+		standard_keys.unshift("\"General Standard\"");
 	
-    for (let key of keys){
+    for (let key of standard_keys){
 		empirical_standard = readSpecificEmpiricalStandards(key);
 		var dom = document.createElement("div");
 		dom.innerHTML = empirical_standard;
@@ -327,7 +383,7 @@ function generateStandardChecklist(){
 	container.appendChild(for_more_info);
 	var standards_path = "https://github.com/acmsigsoft/EmpiricalStandards/tree/development/Standards/"
 	var UL = document.createElement("UL");
-	for (let key of keys){
+	for (let key of standard_keys){
 		key = key.replaceAll("\"", "");
 		var LI = document.createElement("LI");
 		var LINK = document.createElement("A");

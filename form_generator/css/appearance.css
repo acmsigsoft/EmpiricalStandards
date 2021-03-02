@@ -31,3 +31,5 @@ form{
 
 .standardHeaderRule {width: 100%; height: 10px; border-bottom: 1px solid black; text-align: left; margin-top: 5px; margin-bottom: 15px;}
 .standardHeaderText {font-size: 100%; color: grey; background-color: #f4f4f4; padding-right: 5px;}
+.btn-link {border:none; outline:none; background:none; cursor:pointer; color:#0000EE; padding:0; text-decoration:underline; font-family:inherit; font-size:inherit;
+}
