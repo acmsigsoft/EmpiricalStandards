@@ -11,37 +11,35 @@ This standard applies to empirical studies that meet the following criteria:
 - Applies one or more approaches that generate solutions to the problem in an attempt to maximize or minimize the specified fitness functions.
 
 ## Specific Attributes
-
 We stress that the use of optimization in SE is still a rapidly evolving field. Hence, the following criteria are approximate and there may exist many exceptions to them. Reviewers should reward sound and novel work and, where possible, support a diverse range of studies.
-
 ### Essential
 <checklist name="Essential">  
 
 - [ ] Describe the search space (e.g., constraints, independent variables choices).
-- [ ] Explain why the problem cannot be optimized manually or by brute force within a reasonable timeframe<sup>[4](#footnote4)</sup>. 
+- [ ] Explain why the problem cannot be optimized manually or by brute force within a reasonable timeframe<sup>[4](#myfootnote4)</sup>. 
 - [ ] Use realistic and limited simplifications and constraints for the optimization problem. Simplifications and constraints must not reduce the search to one where all solutions could be enumerated through brute force.
 - [ ] EITHER include a description of prior state of the art in this area,
       OR carefully motivate and define the problem tackled and the solution proposed. 
-- [ ] Justify the choice of algorithm<sup>[5](#footnote5)</sup> underlying an approach<sup>[6](#footnote6)</sup>.
-- [ ] Compare approaches to a justified and appropriate baseline<sup>[7](#footnote7)</sup>.
-- [ ] Explictly define the solution formulation, including a description of what a solution represents<sup>[8](#footnote8)</sup>, how it is represented<sup>[9](#footnote9)</sup>, and how it is manipulated. 
+- [ ] Justify the choice of algorithm<sup>[5](#myfootnote5)</sup> underlying an approach<sup>[6](#myfootnote6)</sup>.
+- [ ] Compare approaches to a justified and appropriate baseline<sup>[7](#myfootnote7)</sup>.
+- [ ] Explictly define the solution formulation, including a description of what a solution represents<sup>[8](#myfootnote8)</sup>, how it is represented<sup>[9](#myfootnote9)</sup>, and how it is manipulated. 
 - [ ] Explicitly define all fitness functions, including the type of goals that are optimized and the equations for calculating fitness values. 
-- [ ] Explicitly define evaluated approaches, including the techniques, specific heuristics, and the parameters and their values<sup>[10](#footnote10)</sup>. 
-- [ ] EITHER follow and clearly describe a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach and make data publicly available or explain why this is not possible<sup>[11](#footnote11)</sup>, 
+- [ ] Explicitly define evaluated approaches, including the techniques, specific heuristics, and the parameters and their values<sup>[10](#myfootnote10)</sup>. 
+- [ ] EITHER follow and clearly describe a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach and make data publicly available or explain why this is not possible<sup>[11](#myfootnote11)</sup>, 
       OR, if the subjects are taken from previous work, fully reference the original source and explain whether any transformation or cleaning was applied to the datasets. 
-- [ ] Identify and explain all possible sources of stochasticity<sup>[12](#footnote12)</sup>.
-- [ ] EITHER execute stochastic approaches or elements multiple times OR explain why this is not possible<sup>[13](#footnote13)</sup>.
+- [ ] Identify and explain all possible sources of stochasticity<sup>[12](#myfootnote12)</sup>.
+- [ ] EITHER execute stochastic approaches or elements multiple times OR explain why this is not possible<sup>[13](#myfootnote13)</sup>.
 </checklist>
 
 ### Desirable
 <checklist name="Desirable">
 
-- [ ] Motivate the novelty and soundness of the proposed approach<sup>[14](#footnote14)</sup>.
+- [ ] Motivate the novelty and soundness of the proposed approach<sup>[14](#myfootnote14)</sup>.
 - [ ] Explain whether the study explores a new problem type (or a new area within an existing problem space), or how it reproduces, replicates, or improves upon prior work. 
 - [ ] Explain in detail how subjects or datasets were collected/chosen to mitigate selection bias and improve the generalization of findings. 
 - [ ] Describe the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness". 
 - [ ] Justify the use of synthetic data (if any); explain why real-world data cannot be used; discusses the extent to which the proposed approach and the findings can apply to the real world.
-- [ ] Make available a replication package that conforms to SIGSOFT standards for artifacts<sup>[15](#footnote15)</sup>. 
+- [ ] Make available a replication package that conforms to SIGSOFT standards for artifacts<sup>[15](#myfootnote15)</sup>. 
 - [ ] If data cannot be shared, create a sample dataset that can be shared to illustrate the approach. 
 - [ ] Select a realistic option space for formulating a solution. Any values set for attributes should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
 - [ ] Justify the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
@@ -49,14 +47,14 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Perform multiple trials either as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
 - [ ] Make available random data splits (e.g., those used in data-driven approaches) or, at least, ensure splits are reproducibile. 
 - [ ] Compare distributions (rather than means) of results using appropriate statistics.
-- [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[16](#footnote16)</sup>. Justify the chosen criteria.
+- [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[16](#myfootnote16)</sup>. Justify the chosen criteria.
 </checklist>
 
 ### Extraordinary
 <checklist name="Extraordinary">
 
-- [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[17](#footnote17)</sup>. 
-- [ ] Analyze the fitness landscape for one or more of the chosen fitness functions.
+- [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[17](#myfootnote17)</sup>. 
+- [ ] Analyze the fitness landscape for one or more of the chosen fitness functions.  
 </checklist>
 
 ## General Quality Criteria
@@ -112,6 +110,7 @@ Regarding the difference between "significance" and "effect size" tests: "Signif
 can be found at https://tinyurl.com/y2ufofgu. 
 
 ---
+
 <footnote><sup>[1](#myfootnote1)</sup>Note that there are many such optimization techniques (metaheuristic; numerical optimizers; constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic.</footnote><br> 
 <footnote><sup>[2](#myfootnote2)</sup>E.g., test input creation, design refactoring, effort prediction.</footnote><br> 
 <footnote><sup>[3](#myfootnote3)</sup>A "fitness function", or "objective function", is a numerical scoring function used to indicate the quality of a solution to a defined problem. Optimization approaches attempt to maximize or minimize such functions, depending on whether lower or higher scores indicate success.</footnote><br>
