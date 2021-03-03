@@ -36,6 +36,7 @@ support the reader in a data understanding task. It does not apply to:
 
     -   all the elements in the diagram convey useful information or support clarity  
     -   the diagram does not contain chartjunk or over-designed elements that interfere with perception or understanding 
+    -   different colors represent data variation
     -   the background is light and uniform
     -   there are no decorative 3D effects
     -   bright and saturated colors are used solely for emphasis
@@ -52,6 +53,7 @@ support the reader in a data understanding task. It does not apply to:
     -   when data points are very dense, appropriate techniques are applied to mitigate overplotting
     -   axes and the relative tick marks are labelled
     -   the size of text is large enough to make it readable.
+    -   avoid rotated or vertical text 
     -   image format is preferably vectorial, if a raster format is used it must have sufficient resolution.
 
 - [ ]   diagram design
@@ -61,6 +63,7 @@ support the reader in a data understanding task. It does not apply to:
     -   data objects (e.g. bars) are sorted in a meaningful way (e.g. ascending, descending or grouped) to ease comparison
     -   non-interactive visualization should serve a single understanding task
     -   the type of visualization is appropriate for the visual understanding task that it is intended to support (Table 1)
+    -   the design is colorblind-friendly – it uses a colorblind-safe palette for color coding or a redundant visual variable (e.g., saturation, pattern)
     -   *(optional)* several data series should usually be reported using multiple small diagrams rather than in a single crowded diagram
 
 ### Table 1: When to use which visualization
@@ -87,6 +90,7 @@ support the reader in a data understanding task. It does not apply to:
     themselves to ambiguity due to the arbitrary selection of axis
     ranges
 -   using any 3D effect or decoration that may alter perception
+-   using line plots to display unordered variables
 
 ## Suggested Readings 
 
