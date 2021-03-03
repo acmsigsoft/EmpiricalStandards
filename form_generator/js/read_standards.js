@@ -167,7 +167,7 @@ function generate_question_block_with_yes_no_radio_answers(id, question, checkli
 }
 
 function generate_author_deviation_block(checklistItem_id) {
-	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "Does the manuscript justify the deviation?", checklistItem_id);
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id);
 	
 	// Author-specific deviation justification block
 	var deviation_justified = document.createElement("div");
@@ -176,7 +176,7 @@ function generate_author_deviation_block(checklistItem_id) {
 
 	var deviation_not_justified = document.createElement("div");
 	deviation_not_justified.id = "deviation_not_justified:" + checklistItem_id;
-	deviation_not_justified.innerHTML = "&rdsh;&nbsp; The manuscript deviates from standard!";
+	deviation_not_justified.innerHTML = "&rdsh;&nbsp; all deviations from the standards should be thoroughly justified";
 	deviation_not_justified.style = "color:red; padding-left:1.2em; display:none";
 	
 	deviation_block.appendChild(deviation_justified);
@@ -186,11 +186,11 @@ function generate_author_deviation_block(checklistItem_id) {
 }
 
 function generate_reviewer_deviation_block(checklistItem_id) {
-	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "Does the manuscript justify the deviation?", checklistItem_id);
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id);
 	
 	// Reviewer-specific deviation justification block
-	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "Is the justification reasonable?", checklistItem_id);
-	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "Is the deviation reasonable?", checklistItem_id);
+	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "is the justification reasonable?", checklistItem_id);
+	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "is the deviation reasonable?", checklistItem_id);
 
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
@@ -283,7 +283,11 @@ function generateStandardChecklist(){
 	container.id = "container";
 
 	var heading = document.createElement("H1");
-	heading.innerHTML = "Pre-Submission Checklist";
+	if(role == "\"author\"")
+		heading.innerHTML = "Pre-Submission Checklist";
+	else if(role == "\"reviewer\"")
+		heading.innerHTML = "Reviewer Checklist";
+	
 
 	var form = document.createElement("FORM");
 	form.id = "checklists";
@@ -309,8 +313,9 @@ function generateStandardChecklist(){
 	
 	if (!standard_keys.includes("\"General Standard\""))
 		standard_keys.unshift("\"General Standard\"");
-	
+	var i = 0;
     for (let key of standard_keys){
+		i++;
 		empirical_standard = readSpecificEmpiricalStandards(key);
 		var dom = document.createElement("div");
 		dom.innerHTML = empirical_standard;
@@ -331,7 +336,6 @@ function generateStandardChecklist(){
 		standardTitle.innerHTML = standardName;
 		form.appendChild(standardTitle);*/
 		var checklistTags = standardTag.getElementsByTagName("checklist");
-		
 		for (let checklistTag of checklistTags){
 			// Reformat the checklists from MD to HTML
 			checklistTag.innerHTML = checklistTag.innerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
@@ -348,16 +352,17 @@ function generateStandardChecklist(){
 			Yes_No.innerHTML = "&nbsp;&nbsp;&nbsp;Yes No";
 			standard_header_rule.appendChild(standard_header_text);
 			if (checklistTag.getAttribute('name') == "Essential") {
-				EssentialUL.appendChild(standard_header_rule);
-				EssentialUL.appendChild(Yes_No);
+				//EssentialUL.appendChild(standard_header_rule);
+				if (i == 1)
+					EssentialUL.appendChild(Yes_No);
 				EssentialUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Desirable") {
-				DesirableUL.appendChild(standard_header_rule);
+				//DesirableUL.appendChild(standard_header_rule);
 				DesirableUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Extraordinary") {
-				ExtraordinaryUL.appendChild(standard_header_rule);
+				//ExtraordinaryUL.appendChild(standard_header_rule);
 				ExtraordinaryUL.appendChild(checklists);
 			}
 		}
