@@ -22,7 +22,7 @@ This standard applies to studies that primarily analyze existing **software engi
 - [ ] Motivates which particular kinds of  statistics were used to analyse the experimental results   (descriptive or otherwise) 
 - [ ] Automated or manual heuristics used in this process must be documented.  
 - [ ] Describes the evaluation metrics used (and explains the motivation for choosing these metrics). 	
-- Analysis of results goes beyond single-dimensional summaries of performance (e.g., average; median) to include measures of variation, confidence, or other distributional information.
+- [ ] Analysis of results goes beyond single-dimensional summaries of performance (e.g., average; median) to include measures of variation, confidence, or other distributional information.
 - [ ] Discusses threats to validity identifying construct validity and limitations or technical assumptions (using an appropriate framework either using common standards [7] or a threat to validity appropriate to this study).
 </checklist>
 
@@ -32,9 +32,9 @@ This standard applies to studies that primarily analyze existing **software engi
 
 - [ ] Data is processed by multiple learners, of different types, e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); e.g. see [10] for guidance.
 - [ ] Data is processed multiple times with different randomly selected training/test examples; results of which are compared via significance tests and effect size tests.
-- [ ]- Study carefully selects the hyperparameters that control the data miners (e.g. via are a careful analysis of settings seen in related work; e.g. via some automatic hyperparameter optimizer).
+- [ ] Study carefully selects the hyperparameters that control the data miners (e.g. via are a careful analysis of settings seen in related work; e.g. via some automatic hyperparameter optimizer).
 - [ ] Compares against baselines; i.e. reproduces and/or replicates  prior work related work (perhaps with some small improvements or even a “negative” report commenting that it was not possible to achieve reproduction or replication).
-- For studies not based on proprietary  data:  a replication package is made available that conforms to SIGSOFT standards for a functional artifact. 
+- [ ] For studies not based on proprietary  data:  a replication package is made available that conforms to SIGSOFT standards for a functional artifact. 
   - And if  data cannot be shared (e.g. an  industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms.
 - Data sanity checks: some non-trivial portion of the data was selected and manually inspected. 
 </checklist>
