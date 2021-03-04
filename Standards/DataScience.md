@@ -25,8 +25,8 @@ This standard applies to studies that primarily analyze existing **software engi
 - [ ] discusses what (and why) prior work was selected as for the purposes of baseline comparisons.  
 - [ ] presents the experimental rig; e.g. a depiction and/or algorithm pseudocode.
 - [ ] discusses the computing infrastructure used for running experiments (hardware and software), including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks.  
-- [ ] motivates which particular kinds of  statistics were used to analyse the experimental results   (descriptive or otherwise) 
-- [ ] automated or manual heuristics used in this process must be documented.  
+- [ ] motivates which particular kinds of  statistics were used to analyse the experimental results (descriptive or otherwise) 
+- [ ] documents automated or manual heuristics used in this process.  
 - [ ] describes the evaluation metrics used (and explains the motivation for choosing these metrics). 	
 - [ ] analysis of results goes beyond single-dimensional summaries of performance (e.g., average; median) to include measures of variation, confidence, or other distributional information.
 - [ ] discusses threats to validity identifying construct validity and limitations or technical assumptions (using an appropriate framework either using common standards<sup>[2](#myfootnote2)</sup> or a threat to validity appropriate to this study).
@@ -41,13 +41,13 @@ This standard applies to studies that primarily analyze existing **software engi
 - [ ] compares against baselines; i.e. reproduces and/or replicates  prior work related work (perhaps with some small improvements or even a “negative” report commenting that it was not possible to achieve reproduction or replication).
 - [ ] for studies not based on proprietary  data:  a replication package is made available that conforms to SIGSOFT standards for a functional artifact. 
   - and if  data cannot be shared (e.g. an  industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms.
-- data sanity checks: some non-trivial portion of the data was selected and manually inspected. 
+- [ ] data sanity checks: some non-trivial portion of the data was selected and manually inspected. 
 </checklist>
 
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ] leverages temporal data via longitudinal (i.e. over large time) analyses when appropriate.
+- [ ] leverages temporal data via longitudinal (i.e. over large time) analyses when appropriate (see the **Longitudinal Studies Standard**)
 - [ ] triangulates with qualitative data analysis of selected samples of the data. 
 - [ ] triangulates with other data sources, such as surveys or interviews.
 - [ ] reports findings to, or interacts with, authors of SE artifacts to double check with them.
