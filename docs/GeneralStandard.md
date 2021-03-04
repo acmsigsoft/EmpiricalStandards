@@ -37,6 +37,7 @@ following.
 ## Specific Attributes 
 
 ### Essential Attributes 
+
 <checklist name="Essential">
 
 - [ ]	states a purpose, problem, objective, or research question
@@ -53,9 +54,11 @@ following.
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
 - [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/development/Supplements/InformationVisualization.md))
 - [ ]	complies with all applicable empirical standards
+
 </checklist>
      
 ### Desirable Attributes
+
 <checklist name="Desirable">
 
 - [ ]	summarizes and synthesizes a reasonable selection of related work
@@ -70,6 +73,7 @@ following.
 - [ ]	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
 - [ ]	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
 - [ ]	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
+
 </checklist>
      
 ### Extraordinary Attributes 	
@@ -78,6 +82,7 @@ following.
 - [ ]	applies two or more data collection or analysis strategies to the same research question (see Multimethodology Supplement)
 - [ ]	approaches the same research question(s) from multiple epistemological perspectives
 - [ ]	innovates on research methodology while completing an empirical study
+
 </checklist>
 
 ## General Quality Criteria 
@@ -160,6 +165,7 @@ their trustworthiness and importance. Reviewers should endeavor to:
     rather than analyzing and synthesizing related work.
 -   Acknowledging limitations but then writing implications and
     conclusions as though the limitations don't exist
+
 </standard>
     
 ---
