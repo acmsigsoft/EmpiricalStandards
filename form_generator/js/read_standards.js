@@ -176,7 +176,7 @@ function generate_author_deviation_block(checklistItem_id) {
 
 	var deviation_not_justified = document.createElement("div");
 	deviation_not_justified.id = "deviation_not_justified:" + checklistItem_id;
-	deviation_not_justified.innerHTML = "&rdsh;&nbsp; all deviations from the standards should be thoroughly justified";
+	deviation_not_justified.innerHTML = "&rdsh;&nbsp; the manuscript should either conform to the standard or clearly explain why it deviates from the standard";
 	deviation_not_justified.style = "color:red; padding-left:1.2em; display:none";
 	
 	deviation_block.appendChild(deviation_justified);
