@@ -4,17 +4,21 @@
 
 You can find the standards, our report and our presentation slides here: https://github.com/acmsigsoft/EmpiricalStandards
 
-## How do the standards define Usefulness and Significance? Do you think it is even possible to define such standards?
+## Will the standards lead to lower quality papers as researchers aim to do the bare mininimum to get publications?
 
-The general standard simply asks reviewers whether the study contributes to our collective body of knowledge. There is no rating of usefulness or significance. 
-
-Reviewers are not oracles and cannot reliably predict how research may be used or affect the world after publication. We take the position that all rigorous research should be published. It’s time to face the reality that usefulness and significance can only be assessed years after work has been published. Reviewers are not oracles. 
+We have three responses to this question: (1) If everyone did the bare minimum to comply with the standards, overall research quality would skyrocket. (2) Some researchers may do the minimum, but academia is a land of overachievers. For everyone aiming for a bare pass, there are problably two or three determined to get a best paper award. (3) Over time, we can raise the minimum bar by shifting making more attributes "essential."
 
 ## How do the standards affect incentives to produce unobjectionable but low-impact research vs. controversial but potentially high-impact research? Do they privilege rigour over relevance, interestingness and importance?
 
 Structured, standards-based review will make it easier to publish controversial research because reviewers won’t be able to reject research just because they don’t agree with the conclusions. Structured, standards-based review will also make it easier to publish relevant research because it will prevent reviewers from misapplying expectations for controlled experiments to in situ approaches like Action Research. 
 
 Researchers are not going to stop trying to do meaningful, impactful research because of (1) promotion criteria that are not limited to publication venues; (2) the way research grants work and (3) scholars’ own egos and ambitions pushing them to “put a ding in the universe.” 
+
+## How do the standards define Usefulness and Significance? Do you think it is even possible to define such standards?
+
+The general standard simply asks reviewers whether the study contributes to our collective body of knowledge. There is no rating of usefulness or significance. 
+
+Reviewers are not oracles and cannot reliably predict how research may be used or affect the world after publication. We take the position that all rigorous research should be published. It’s time to face the reality that usefulness and significance can only be assessed years after work has been published. Reviewers are not oracles. 
 
 ## Even if the paper follows the standard, to reject a paper, a reviewer can just say the paper is poorly written (maybe because he/she is working on the same topic). Where does that belong? How can that reviewer behavior be spotted? Is language considered a measure of rejection?
 
