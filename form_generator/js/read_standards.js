@@ -110,26 +110,70 @@ function hide_deviation_block() {
 	document.getElementsByName(deviation_radio_name)[1].checked = false;
 }
 
-function deviation_is_justified() {
-	id = this.id.replace("deviation_block-radio:Yes:", "")
-	var block = document.getElementById("deviation_not_justified:" + id);
-	block.style.display = "none";
-	var block = document.getElementById("deviation_justified:" + id);
-	block.style.display = "block";
-	deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_not_justified-radio");
-	document.getElementsByName(deviation_radio_name)[0].checked = false;
-	document.getElementsByName(deviation_radio_name)[1].checked = false;
+function hide_other_messages(id) {
+	try {
+		document.getElementById("deviation_reasonable:" + id).style.display = "none";
+		document.getElementById("deviation_unreasonable:" + id).style.display = "none";
+		document.getElementById("justification_reasonable:" + id).style.display = "none";
+		document.getElementById("justification_unreasonable:" + id).style.display = "none";
+	}
+	catch(err) {}
 }
 
-function deviation_is_not_justified() {
-	id = this.id.replace("deviation_block-radio:No:", "")
-	var block = document.getElementById("deviation_justified:" + id);
-	block.style.display = "none";
-	var block = document.getElementById("deviation_not_justified:" + id);
-	block.style.display = "block";
-	deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_justified-radio");
-	document.getElementsByName(deviation_radio_name)[0].checked = false;
-	document.getElementsByName(deviation_radio_name)[1].checked = false;
+function deviation_justification() {
+	// (No-Yes) deviation is justified
+	if(this.id.includes("deviation_block-radio:Yes:")){ 
+		id = this.id.replace("deviation_block-radio:Yes:", "")
+		hide_other_messages(id);
+		var block = document.getElementById("deviation_not_justified:" + id);
+		block.style.display = "none";
+		var block = document.getElementById("deviation_justified:" + id);
+		block.style.display = "block";
+		deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_not_justified-radio");
+		document.getElementsByName(deviation_radio_name)[0].checked = false;
+		document.getElementsByName(deviation_radio_name)[1].checked = false;
+	}
+	// (No-No) deviation is unjustified
+	else if(this.id.includes("deviation_block-radio:No:")){ 
+		id = this.id.replace("deviation_block-radio:No:", "")
+		hide_other_messages(id);
+		var empty_message = document.getElementById("deviation_justified:" + id);
+		empty_message.style.display = "none";
+		var message = document.getElementById("deviation_not_justified:" + id);
+		message.style.display = "block";
+		deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_justified-radio");
+		document.getElementsByName(deviation_radio_name)[0].checked = false;
+		document.getElementsByName(deviation_radio_name)[1].checked = false;
+	}
+	else{
+		// (No-Yes-Yes) => deviation is justified and justification is reasonable
+		if(this.id.includes("deviation_justified-radio:Yes:")){	
+			id = this.id.replace("deviation_justified-radio:Yes:", "")
+			hide_other_messages(id);
+			var message = document.getElementById("justification_reasonable:" + id);
+			message.style.display = "block";
+		}
+		// (No-Yes-No) => deviation is justified but justification is unreasonable
+		else if(this.id.includes("deviation_justified-radio:No:")){
+			id = this.id.replace("deviation_justified-radio:No:", "")
+			hide_other_messages(id);
+			var message = document.getElementById("justification_unreasonable:" + id);
+			message.style.display = "block";
+		}
+		// (No-No-Yes) => deviation is unjustified but reasonable
+		else if(this.id.includes("deviation_not_justified-radio:Yes:")){
+			id = this.id.replace("deviation_not_justified-radio:Yes:", "")
+			hide_other_messages(id);
+			var message = document.getElementById("deviation_reasonable:" + id);
+			message.style.display = "block";
+		}
+		// (No-No-No) => deviation is unjustified and unreasonable
+		else if(this.id.includes("deviation_not_justified-radio:No:")){
+			id = this.id.replace("deviation_not_justified-radio:No:", "")
+			hide_other_messages(id);
+			document.getElementById("deviation_unreasonable:" + id).style.display = "block";
+		}
+	}
 }
 
 function generate_question_block_with_yes_no_radio_answers(id, question, checklistItem_id) {
@@ -146,8 +190,8 @@ function generate_question_block_with_yes_no_radio_answers(id, question, checkli
 	deviationRadioNo.id = id + "-radio:No:" + checklistItem_id;
 	deviationRadioYes.name = id + "-radio:" + checklistItem_id;
 	deviationRadioNo.name = id + "-radio:" + checklistItem_id;
-	deviationRadioYes.onclick = deviation_is_justified;
-	deviationRadioNo.onclick = deviation_is_not_justified;
+	deviationRadioYes.onclick = deviation_justification;
+	deviationRadioNo.onclick = deviation_justification;
 	deviationRadioYes.type = "radio";
 	deviationRadioNo.type = "radio";
 	deviationRadioYes.value = "Yes";
@@ -166,6 +210,15 @@ function generate_question_block_with_yes_no_radio_answers(id, question, checkli
 	return block;
 }
 
+function generate_message(id, color, text) {
+	var message = document.createElement("div");
+	message.id = id;
+	message.innerHTML = text;
+	message.style = "color:" + color + "; padding-left:1.4em; text-indent:-1em; display:none";
+	
+	return message;
+}
+
 function generate_author_deviation_block(checklistItem_id) {
 	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id);
 	
@@ -174,10 +227,11 @@ function generate_author_deviation_block(checklistItem_id) {
 	deviation_justified.id = "deviation_justified:" + checklistItem_id;
 	deviation_justified.style = "padding-left:1.2em; display:none";
 
+	// Author-specific message
 	var deviation_not_justified = document.createElement("div");
 	deviation_not_justified.id = "deviation_not_justified:" + checklistItem_id;
-	deviation_not_justified.innerHTML = "&rdsh;&nbsp; all deviations from the standards should be thoroughly justified";
-	deviation_not_justified.style = "color:red; padding-left:1.2em; display:none";
+	deviation_not_justified.innerHTML = "&rdsh;&nbsp; the manuscript should either conform to the standard or clearly explain why it deviates from the standard";
+	deviation_not_justified.style = "color:red; padding-left:0em; text-indent:-1em; display:none";
 	
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
@@ -189,14 +243,31 @@ function generate_reviewer_deviation_block(checklistItem_id) {
 	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id);
 	
 	// Reviewer-specific deviation justification block
-	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "is the justification reasonable?", checklistItem_id);
-	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "is the deviation reasonable?", checklistItem_id);
+	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "is the <b>justification</b> reasonable?", checklistItem_id);
+	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "is the <b>deviation</b> reasonable?", checklistItem_id);
+
+	// Reviewer-specific messages
+	// (No-Yes-Yes)
+	var justification_reasonable = generate_message("justification_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Deviation is acceptable. <b>Not</b> grounds for rejection.");
+	
+	// (No-Yes-No)
+	var justification_unreasonable = generate_message("justification_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the justification is unreasonable and suggest possible fixes. This is grounds for rejection unless the fix is trivial.");
+	
+	// (No-No-Yes)
+	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review how the manuscript should justify the deviation. <b>Not</b> grounds for rejection.");
+
+	// (No-No-No)
+	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the deviation is unreasonable and suggest possible fixes. This is grounds for rejection.");
 
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
+
+	deviation_block.appendChild(justification_reasonable);
+	deviation_block.appendChild(justification_unreasonable);
+	deviation_block.appendChild(deviation_reasonable);
+	deviation_block.appendChild(deviation_unreasonable);
 	
 	return deviation_block;
-
 }
 
 function convert_standard_checklists_to_html_checklists(standardName, checklistName, checklistText, footnotes){
