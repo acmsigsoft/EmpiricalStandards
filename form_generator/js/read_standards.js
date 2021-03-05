@@ -12,27 +12,7 @@ function getParameterByName(param_name, url = window.location.href){
 	return param_values;
 }
 
-function readAllEmpiricalStandards(){
-    var mdFile = new XMLHttpRequest();
-    var loc = window.location.pathname;
-    var dir = loc.substring(0, loc.lastIndexOf('/'));
-	var empirical_standards = "";
-    //mdFile.open("GET", dir + "/md/empiricalStandards.md", false);
-    mdFile.onreadystatechange = function(){
-        if (mdFile.readyState === 4){
-            if (mdFile.status === 200  || mdFile.status == 0)
-                empirical_standards = mdFile.responseText;
-			else
-				alert("Can't read empiricalStandards.md.");
-        }
-		else
-			alert("Can't read empiricalStandards.md");
-	}
-	mdFile.send(null);
-	return empirical_standards;
-}
-
-function readSpecificEmpiricalStandards(standard_name){
+function readSpecificEmpiricalStandard(standard_name){
     var mdFile = new XMLHttpRequest();
     var loc = window.location.pathname;
     var dir = loc.substring(0, loc.lastIndexOf('/'));
@@ -93,6 +73,7 @@ function show_deviation_block() {
 
 function hide_deviation_block() {
 	id = this.id.replace("checklist-radio:Yes:", "")
+	hide_other_messages(id);
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "none";
 	var block = document.getElementById("deviation_justified:" + id);
@@ -176,11 +157,12 @@ function deviation_justification() {
 	}
 }
 
-function generate_question_block_with_yes_no_radio_answers(id, question, checklistItem_id) {
-	var block = document.createElement("div");
-	block.id = id + ":" + checklistItem_id;
-	block.style = "padding-left:1.6em; display:none";
-	block.innerHTML = "&rdsh;&nbsp; " + question;
+function generate_question_block_with_yes_no_radio_answers(id, question, checklistItem_id, padding) {
+	var question_block = document.createElement("div");
+	question_block.id = id + ":" + checklistItem_id;
+	question_block.className = "question_block";
+	question_block.style = "padding-left:"+padding+"em; display:none";
+	question_block.innerHTML = "&rdsh;&nbsp; " + question;
 	var deviation_block_radios = document.createElement("div");
 	var deviationRadioYes = document.createElement("input");
 	var deviationRadioNo = document.createElement("input");
@@ -205,33 +187,28 @@ function generate_question_block_with_yes_no_radio_answers(id, question, checkli
 	deviation_block_radios.appendChild(deviationLabelYes);
 	deviation_block_radios.appendChild(deviationRadioNo);
 	deviation_block_radios.appendChild(deviationLabelNo);
-	block.appendChild(deviation_block_radios);
+	question_block.appendChild(deviation_block_radios);
 	
-	return block;
+	return question_block;
 }
 
-function generate_message(id, color, text) {
+function generate_message(id, color, text, padding, indent) {
 	var message = document.createElement("div");
 	message.id = id;
+	message.className = "message";
 	message.innerHTML = text;
-	message.style = "color:" + color + "; padding-left:1.4em; text-indent:-1em; display:none";
+	message.style = "color:" + color + "; padding-left:"+padding+"em; text-indent:"+indent+"em; display:none";
 	
 	return message;
 }
 
 function generate_author_deviation_block(checklistItem_id) {
-	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id);
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id, 2.4);
 	
-	// Author-specific deviation justification block
-	var deviation_justified = document.createElement("div");
-	deviation_justified.id = "deviation_justified:" + checklistItem_id;
-	deviation_justified.style = "padding-left:1.2em; display:none";
-
-	// Author-specific message
-	var deviation_not_justified = document.createElement("div");
-	deviation_not_justified.id = "deviation_not_justified:" + checklistItem_id;
-	deviation_not_justified.innerHTML = "&rdsh;&nbsp; the manuscript should either conform to the standard or clearly explain why it deviates from the standard";
-	deviation_not_justified.style = "color:red; padding-left:0em; text-indent:-1em; display:none";
+	// Author-specific deviation justification message
+	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 0.65, -1);
+	
+	var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&rdsh;&nbsp; the manuscript should either conform to the standard or clearly explain why it deviates from the standard", 0.65, -1);
 	
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
@@ -240,24 +217,24 @@ function generate_author_deviation_block(checklistItem_id) {
 }
 
 function generate_reviewer_deviation_block(checklistItem_id) {
-	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id);
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id, 2.40);
 	
 	// Reviewer-specific deviation justification block
-	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "is the <b>justification</b> reasonable?", checklistItem_id);
-	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "is the <b>deviation</b> reasonable?", checklistItem_id);
+	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "is the <b>justification</b> reasonable?", checklistItem_id, 2.06);
+	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "is the <b>deviation</b> reasonable?", checklistItem_id, 2.06);
 
 	// Reviewer-specific messages
 	// (No-Yes-Yes)
-	var justification_reasonable = generate_message("justification_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Deviation is acceptable. <b>Not</b> grounds for rejection.");
+	var justification_reasonable = generate_message("justification_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Deviation is acceptable. <b>Not</b> grounds for rejection.", 2.80, -1.07);
 	
 	// (No-Yes-No)
-	var justification_unreasonable = generate_message("justification_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the justification is unreasonable and suggest possible fixes. This is grounds for rejection unless the fix is trivial.");
+	var justification_unreasonable = generate_message("justification_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the justification is unreasonable and suggest possible fixes. This is grounds for rejection unless the fix is trivial.", 2.80, -1.07);
 	
 	// (No-No-Yes)
-	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review how the manuscript should justify the deviation. <b>Not</b> grounds for rejection.");
+	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review how the manuscript should justify the deviation. <b>Not</b> grounds for rejection.", 2.80, -1.07);
 
 	// (No-No-No)
-	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the deviation is unreasonable and suggest possible fixes. This is grounds for rejection.");
+	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the deviation is unreasonable and suggest possible fixes. This is grounds for rejection.", 2.80, -1.07);
 
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
@@ -387,7 +364,7 @@ function generateStandardChecklist(){
 	var i = 0;
     for (let key of standard_keys){
 		i++;
-		empirical_standard = readSpecificEmpiricalStandards(key);
+		empirical_standard = readSpecificEmpiricalStandard(key);
 		var dom = document.createElement("div");
 		dom.innerHTML = empirical_standard;
 		var standardTag = dom.getElementsByTagName("standard")[0];
