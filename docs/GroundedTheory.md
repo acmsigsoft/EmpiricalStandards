@@ -28,6 +28,7 @@ collection and analysis or do not use theoretical sampling, consider the
 
 - [ ]	identifies the version of Grounded Theory used/adapted (Glaser, Strauss-Corbin, Charmaz, etc.)
 - [ ]	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
+- [ ]	describes data sources (e.g. participants' demographics, work roles)
 - [ ]	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
 - [ ]	provides evidence of saturation; explains how saturation was achieved
 - [ ]	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
@@ -37,13 +38,13 @@ collection and analysis or do not use theoretical sampling, consider the
 ### Desirable Attributes 
 <checklist name="Desirable">
     
-- [ ]	includes supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or chain-of-evidence tables too large for main text
+- [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]	explains how and why study adapts or deviates from claimed GT version
 - [ ]	presents a mature, fully-developed theory or taxonomy
 - [ ]	includes highly diverse participants and/or data sources (e.g. software repositories, forums)
 - [ ]	uses direct quotations extensively to support key points
 - [ ]	explains how memo writing was used to drive the work
-- [ ]	validates results (e.g. member checking, feedback from non-participant practitioners, research audits of coding with advisors/other researchers)
+- [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]	discusses transferability; characterizes the setting such that readers can assess transferability
 - [ ]	compares results with (or integrates them into) prior theory or related research
 - [ ]	explains theoretical sampling vis-à-vis the interplay between the sampling process, the emerging findings, and theoretical gaps perceived therein
