@@ -41,18 +41,20 @@ following.
 <checklist name="Essential">
 
 - [ ]	states a purpose, problem, objective, or research question
+- [ ]	defines jargon, acronyms and key concepts
 - [ ]	methodology is appropriate (not necessarily optimal) for stated purpose or questions
-- [ ]	describes in detail what, where, when and how data were collected
+- [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement] (Supplements/Sampling.md))
 - [ ]	describes in detail how the data were analyzed
 - [ ]	discusses and validates assumptions of any statistical tests used
 - [ ]	presents results
 - [ ]	results directly address research questions
 - [ ]	supports main claims or conclusions with explicit evidence (data/observations) or arguments
-- [ ]	discusses the importance, implications and limitations (validity threats) of the study
-- [ ]	contributes in some way to the collective body of knowledge (see Replications Supplement)
-- [ ]	defines jargon, acronyms and key concepts
+- [ ]	discusses the study's importance and implications
+- [ ]	discusses the study's limitations and threats to validity
+- [ ]	contributes in some way to the collective body of knowledge <!-- (see Replications Supplement) -->
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
-- [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/development/Supplements/InformationVisualization.md))
+- [ ]	balances the study's anticipated benefits with its potential risks or harms, minimizing risk or harm wherever possible (see the ethics supplements for studies with [human participants](/Supplements/Ethics(HumanParticipants).md) or [secondary data](/Supplements/EthicsSecondaryData.md).
+- [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](/Supplements/InformationVisualization.md))
 - [ ]	complies with all applicable empirical standards
 
 </checklist>
@@ -66,20 +68,21 @@ following.
 - [ ]	states epistemological stance (e.g. post-positivism, interpretivism, critical realism)
 - [ ]	appropriate statistical power (for quantitative work) or saturation (for qualitative work)
 - [ ]	reasonable attempts to investigate or mitigate limitations
-- [ ]	discusses study’s realism, assumptions and sensitivity of the results to the realism/assumptions
+- [ ]	discusses study’s realism, assumptions and sensitivity of the results to its realism/assumptions
 - [ ]	provides plausibly useful interpretations or recommendations for practice, education or research
-- [ ]	openly shares data and materials to the extent possible within practical and ethical limits
+- [ ]	openly shares data and materials to the extent possible within practical and ethical limits (see the [Open Science Supplement](/Supplements/OpenScience.md)
 - [ ]	concise, precise, well-organized and easy-to-read presentation
 - [ ]	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
 - [ ]	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
 - [ ]	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
+- [ ]	uses multiple raters for any subjective judgments see the [IRR/IRA Supplement](/Supplements/InterRaterReliabilityAndAgreement.md)
 
 </checklist>
      
 ### Extraordinary Attributes 	
 <checklist name="Extraordinary">
 
-- [ ]	applies two or more data collection or analysis strategies to the same research question (see Multimethodology Supplement)
+- [ ]	applies two or more data collection or analysis strategies to the same research question (see the [Multimethodology Standard](/docs/MixedMethods.md))
 - [ ]	approaches the same research question(s) from multiple epistemological perspectives
 - [ ]	innovates on research methodology while completing an empirical study
 
