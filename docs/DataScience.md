@@ -19,38 +19,38 @@ This standard applies to studies that primarily analyze existing **software engi
 ### Essential Attributes
 <checklist name="Essential">
 
-- [ ] discusses motivation. What claims are being investigated, why is it useful/timely to explore this  problem and/or data-scientific analysis method?
-- [ ] discusses data selection methods; e.g., discusses how and why the data was selected and what feature engineering approaches and transformations were applied
-- [ ] discusse how the data was  pre-processed, filtered, and categorized
-- [ ] discusses what (and why) prior work was selected as for the purposes of baseline comparisons.  
-- [ ] presents the experimental rig; e.g. a depiction and/or algorithm pseudocode.
-- [ ] discusses the computing infrastructure used for running experiments (hardware and software), including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks.  
+- [ ] discusses motivation; explains what claims are being investigated and why it is useful/timely to explore this problem using this method
+- [ ] explains how data was selected and what feature engineering approaches and transformations were applied
+- [ ] discusses how the data was pre-processed, filtered, and categorized
+- [ ] justifies selection of prior work for baseline comparisons 
+- [ ] presents the experimental rig; e.g. a depiction and/or algorithm pseudocode
+- [ ] discusses the computing infrastructure used (hardware and software), including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks <!--Make "including...frameworks" a footnote-->  
 - [ ] motivates which particular kinds of  statistics were used to analyse the experimental results (descriptive or otherwise) 
-- [ ] documents automated or manual heuristics used in this process.  
-- [ ] describes the evaluation metrics used (and explains the motivation for choosing these metrics). 	
-- [ ] analysis of results goes beyond single-dimensional summaries of performance (e.g., average; median) to include measures of variation, confidence, or other distributional information.
-- [ ] discusses threats to validity identifying construct validity and limitations or technical assumptions (using an appropriate framework either using common standards<sup>[2](#myfootnote2)</sup> or a threat to validity appropriate to this study).
+- [ ] documents automated or manual heuristics used in this process
+- [ ] describes the evaluation metrics used (and explains the motivation for choosing these metrics) 	
+- [ ] analysis of results goes beyond single-dimensional summaries of performance (e.g., average; median) to include measures of variation, confidence, or other distributional information
+- [ ] discusses threats to validity identifying construct validity and limitations or technical assumptions (using an appropriate framework either using common standards<sup>[2](#myfootnote2)</sup> or a threat to validity appropriate to this study)
 </checklist>
 
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ] data is processed by multiple learners, of different types, e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); e.g. see <sup>[4](#myfootnote4s)</sup> for guidance.
-- [ ] data is processed multiple times with different randomly selected training/test examples; results of which are compared via significance tests and effect size tests.
-- [ ] study carefully selects the hyperparameters that control the data miners (e.g. via are a careful analysis of settings seen in related work; e.g. via some automatic hyperparameter optimizer).
-- [ ] compares against baselines; i.e. reproduces and/or replicates  prior work related work (perhaps with some small improvements or even a “negative” report commenting that it was not possible to achieve reproduction or replication).
-- [ ] for studies not based on proprietary  data:  a replication package is made available that conforms to SIGSOFT standards for a functional artifact. 
-  - and if  data cannot be shared (e.g. an  industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms.
-- [ ] data sanity checks: some non-trivial portion of the data was selected and manually inspected. 
+- [ ] data is processed by multiple learners, of different types, e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); e.g. see <sup>[4](#myfootnote4s)</sup> for guidance
+- [ ] data is processed multiple times with different randomly selected training/test examples; results of which are compared via significance tests and effect size tests
+- [ ] study carefully selects the hyperparameters that control the data miners (e.g. via are a careful analysis of settings seen in related work; e.g. via some automatic hyperparameter optimizer)
+- [ ] compares against baselines; i.e. reproduces and/or replicates  prior work related work (perhaps with some small improvements or even a “negative” report commenting that it was not possible to achieve reproduction or replication)
+- [ ] for studies not based on proprietary  data:  a replication package is made available that conforms to SIGSOFT standards for a functional artifact
+  - and if  data cannot be shared (e.g. an  industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms
+- [ ] data sanity checks: some non-trivial portion of the data was selected and manually inspected
 </checklist>
 
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
 - [ ] leverages temporal data via longitudinal (i.e. over large time) analyses when appropriate (see the **Longitudinal Studies Standard**)
-- [ ] triangulates with qualitative data analysis of selected samples of the data. 
-- [ ] triangulates with other data sources, such as surveys or interviews.
-- [ ] reports findings to, or interacts with, authors of SE artifacts to double check with them.
+- [ ] triangulates with qualitative data analysis of selected samples of the data 
+- [ ] triangulates with other data sources, such as surveys or interviews
+- [ ] reports findings to, or interacts with, authors of SE artifacts to double check with them
 </checklist>
 
 ## Examples of Acceptable Deviations
@@ -62,8 +62,8 @@ This standard applies to studies that primarily analyze existing **software engi
 - Not using temporal analysis techniques such as time series when the data is not easily converted to time series (e.g. some aspects of source code evolution may not be easily modelled as time series).
 - Not all studies need statistics and hypotheses. Some studies can be purely or principally descriptive.
   - Different explanations  have different requirements<sup>[3](#myfootnote3)</sup>:
-      - For example, summarizing past data might only need some topic modeling regression on past data since the goal of that study is not to predict on figure cases). 
-      - But there are other kinds of studies that need extensive evaluation via “hold out sets” (where the available data is divided into multiple train and test sets) since the goal of those studies is to make predictions on as-yet-unseen data.
+  - For example, summarizing past data might only need some topic modeling regression on past data since the goal of that study is not to predict on figure cases). 
+  - But there are other kinds of studies that need extensive evaluation via “hold out sets” (where the available data is divided into multiple train and test sets) since the goal of those studies is to make predictions on as-yet-unseen data.
 
 ## Antipatterns
 
