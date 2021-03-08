@@ -25,22 +25,22 @@ consider the **Discourse Analysis Standard**.
 ### Essential Attributes	
 <checklist name="Essential">
 
-- [ ]	explains how interviewees were selected (i.e. sampling strategy; see The Sampling Supplement)
+- [ ]	explains how interviewees were selected (i.e. sampling strategy; see [The Sampling Supplement](/Supplements/Sampling.md))
 - [ ]	describes interviewees (e.g. demographics, work roles)
-- [ ]	presents clear chain of evidence from interviewee quotations to proposed concepts
+- [ ]	presents clear chain of evidence from interviewee quotations to findings (e.g. proposed concepts)
+- [ ]	clearly answers the research question(s)
+- [ ]	provides evidence of saturation; explains how saturation was achieved
 </checklist>
      
 ### Desirable Attributes	
 <checklist name="Desirable">
 
+- [ ]	provides supplemental materials including interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence table(s)
 - [ ]	includes highly diverse participants
 - [ ]	uses direct quotations extensively to support key points
 - [ ]	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory    
      OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
-- [ ]	validates results (e.g. using member checking or dialogical interviewing<sup>[1](#myfootnote1)</sup>)
-- [ ]	EITHER: uses audits (inductive coding)  
-     OR: uses multiple coders and reports agreement statistics (deductive coding)
-- [ ]	provides supplemental materials including interview guide(s), coding schemes, coding examples, decision rules, extended chain-of-evidence table(s)
+- [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers <sup>[1](#myfootnote1)</sup>)
 - [ ]	discusses transferability; findings plausibly transferable to different contexts
 - [ ]	compares results with (or integrates them into) prior theory or related research
 - [ ]	reflects on how researchers’ biases may have affected their analysis
@@ -52,6 +52,7 @@ consider the **Discourse Analysis Standard**.
 - [ ]	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
 - [ ]	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis
 - [ ]	employs probabilistic sampling strategy; statistical analysis of response bias
+- [ ]	uses multiple coders and analyzes inter-coder reliability (see [IRR/IRA Supplement](/Supplements/InterRaterReliabilityAndAgreement.md)
 </checklist>
 
 ## General Quality Criteria
