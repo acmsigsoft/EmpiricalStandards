@@ -52,7 +52,7 @@ consider the **Discourse Analysis Standard**.
 - [ ]	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
 - [ ]	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis
 - [ ]	employs probabilistic sampling strategy; statistical analysis of response bias
-- [ ]	uses multiple coders and analyzes inter-coder reliability (see [IRR/IRA Supplement](/Supplements/InterRaterReliabilityAndAgreement.md)
+- [ ]	uses multiple coders and analyzes inter-coder reliability (see [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md)
 </checklist>
 
 ## General Quality Criteria

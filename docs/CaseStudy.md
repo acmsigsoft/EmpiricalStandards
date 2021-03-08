@@ -61,7 +61,7 @@ captures a large quantitative dataset with limited context, consider the
 <checklist name="Extraordinary">
 
 - [ ]   multiple, deep, fully-developed cases with cross-case triangulation
-- [ ]   uses multiple judges and analyzes inter-rater reliability (see the [IRR/IRA Supplement](/Supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]   uses multiple judges and analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
 - [ ]   uses direct observation and clearly integrates direct observations into results
 - [ ]   published a case study protocol beforehand and made it publicly accessible
 </checklist>

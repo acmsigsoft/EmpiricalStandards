@@ -13,11 +13,11 @@
             var checklist_instructions = document.createElement("p");
             if (role == "author"){
                 checklist_name.innerHTML = "Pre-Submission Checklist Generator";
-                checklist_instructions.innerHTML = "To generate a pre-submission checklist, select all the methods that apply to your paper and click \"submit\". You can mouse-over each method for a brief description. If your manuscript proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research<em> and the empirical method used to assess the artifact. If your manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology<em> and both methods. If your manuscript uses an method not listed here, choose the last option. If your manuscript does not report an empirical study (e.g. it's an opinion paper) <em>do not use this generator<em>.";
+                checklist_instructions.innerHTML = "To generate a pre-submission checklist, select all the methods that apply to your paper and click \"submit\". You can mouse-over each method for a brief description. If your manuscript proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research</em> and the empirical method used to assess the artifact. If your manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology<em> and both methods. If your manuscript uses an method not listed here, choose the last option. If your manuscript does not report an empirical study (e.g. it's an opinion paper) <em>do not use this generator</em>.";
             }
             else if(role == "reviewer"){
                 checklist_name.innerHTML = "Review Checklist Generator";
-                checklist_instructions.innerHTML = "To generate a review checklist, select all the methods used in the manuscript and click \"submit\". You can mouse-over each method for a brief description. If the manuscripts proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research<em> and the empirical method used to assess the artifact. If the manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology<em> and both methods. If the mansucript uses a method not listed here, choose the last option. If the paper does not report an empirical study (e.g. it's an opinion paper) <em>do not use this generator<em>.";
+                checklist_instructions.innerHTML = "To generate a review checklist, select all the methods used in the manuscript and click \"submit\". You can mouse-over each method for a brief description. If the manuscripts proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research</em> and the empirical method used to assess the artifact. If the manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology<em> and both methods. If the mansucript uses a method not listed here, choose the last option. If the paper does not report an empirical study (e.g. it's an opinion paper) <em>do not use this generator</em>.";
             }
             var instructions_div = document.getElementById("instructions");
             instructions_div.appendChild(checklist_name);
@@ -78,12 +78,8 @@
         <input type="checkbox" class="standard" name="standard" id="Quantitative_Simulation" value="Quantitative Simulation"><div class="tooltip"> Quantitative Simulation<span class="tooltiptext">A study that involves developing and using a mathematical model that imitates a real-world system's behavior, which often entails problem understanding, data collection, model development, verification, validation, design of experiments, data analysis, and implementation of results.</span></div></input><br/><br/>
         <input type="checkbox" class="standard" name="standard" id="Systematic_Reviews"      value="Systematic Reviews"><div class="tooltip"> Systematic literature review<span class="tooltiptext">A study that appraises, analyses, and synthesizes primary or secondary literature to provide a complete, exhaustive summary of current evidence regarding one or more specific topics or research questions</span></div></input><br/><br/>
 
-
-<<<<<<< HEAD
-        <input type="checkbox" class="none"     name="standard" id="General_Standard"        value="General Standard"> A method not listed above</input><br/><br/>
-=======
+        
         <input type="checkbox" class="none"     name="standard" id="General_Standard"        value="General Standard"> An empirical method not listed above</input><br/><br/>
->>>>>>> bdacd5b19d6781946c745c7a735c3de57778e535
         <input type="submit"   class="button"   value="Submit" disabled>
     </form>
 </div>
