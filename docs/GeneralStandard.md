@@ -43,7 +43,7 @@ following.
 - [ ]	states a purpose, problem, objective, or research question
 - [ ]	defines jargon, acronyms and key concepts
 - [ ]	methodology is appropriate (not necessarily optimal) for stated purpose or questions
-- [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement] (Supplements/Sampling.md))
+- [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement](/Supplements/Sampling.md))
 - [ ]	describes in detail how the data were analyzed
 - [ ]	discusses and validates assumptions of any statistical tests used
 - [ ]	presents results
