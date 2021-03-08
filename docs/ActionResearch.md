@@ -29,16 +29,17 @@ standards.
 ### Essential Attributes
 <checklist name="Essential">
 
-- [ ]	describes the context or site of the intervention(s)
+- [ ]   justifies the selection of the case or site that was studied
+- [ ]   describes the site of the intervention(s) in rich detail
 - [ ]   describes the intervention(s) in detail
 - [ ]   describes the relationship between the researcher and the host organization<sup>[1](#myfootnote1)</sup>
-- [ ]   reports the length of the project and describes the longitudinal dimension of the research design
-- [ ]   describes the interactions between researcher(s) and host organization(s)---what the interventions were, who intervened and with which part of the organization, as well as the outcome of the interventions
+- [ ]   describes the longitudinal dimension of the research design (including the length of the study)
+- [ ]   describes the interactions between researcher(s) and host organization(s)---what the interventions were, who intervened and with which part of the organization, as well as the outcome of the interventions <!--Make what the...interventions a footnote-->
 - [ ]   describes how interventions were determined (by management, researchers, or participative/co- determination process)
 - [ ]   explains research cycles or phases, if any, and their relationship to the intervention(s)<sup>[2](#myfootnote2)</sup>
 - [ ]   explains how the interventions are evaluated<sup>[3](#myfootnote3)</sup>
 - [ ]   reports participant or stakeholder reactions to interventions
-- [ ]   presents a clear and well-argued chain-of-evidence from observations to findings
+- [ ]   presents a clear chain of evidence from observations to findings
 - [ ]   reports lessons learned by the organization
 - [ ]   researchers reflect on their own possible biases
 </checklist>
@@ -46,9 +47,9 @@ standards.
 ### Desirable Attributes
 <checklist name="Desirable">
     
-- [ ]	includes supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or chain-of-evidence tables too large for main text
+- [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]	uses direct quotations extensively
-- [ ]   validates results (e.g. member checking, feedback from non-participant practitioners, research audits of coding with advisors/other researchers)
+- [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]   findings plausibly transferable to other contexts
 - [ ]   triangulation across quantitative and qualitative data
 </checklist>
