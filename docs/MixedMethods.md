@@ -131,7 +131,7 @@ qualitative and quantitative data and subsequent interpretations”
   Qualitatively driven approaches/designs, Interactive or equal status designs are used by 
   Johnson, Onwuegbuzie, & Turner, 2007).   
 
-## Suggested Readings (in progress) 
+## Suggested Readings
 
 1. Bergman, M. M. (2011). The good, the bad, and the ugly in mixed methods research and design. 
 Journal of Mixed Methods Research, 5(4), 271-275. doi:10.1177/1558689811433236
@@ -177,7 +177,6 @@ mixed methods." Research in the Schools 13, no. 1 (2006): 12-28.
 12. https://en.wikipedia.org/wiki/Multimethodology 
 
 ## Exemplars 
-
 
 | **Paper reference** | **Methods used** |
 |------------------------------------- | ---------------- |
