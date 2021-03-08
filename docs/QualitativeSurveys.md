@@ -16,7 +16,7 @@ following criteria:
     participants' answers
 
 If researchers iterated between data collection and analysis, consider
-the **Grounded Theory Standard***.* If respondents are all from the same
+the **Grounded Theory Standard**. If respondents are all from the same
 organization, consider the **Case Study Standard**. If researchers
 collect written text or conversations (e.g. StackExchange threads),
 consider the **Discourse Analysis Standard**.
