@@ -23,10 +23,10 @@ This standard applies to studies that primarily analyze existing **software engi
 - [ ] explains how data was selected and what feature engineering approaches and transformations were applied
 - [ ] discusses how the data was pre-processed, filtered, and categorized
 - [ ] justifies selection of prior work for baseline comparisons 
-- [ ] presents the experimental rig; e.g. a depiction and/or algorithm pseudocode
-- [ ] discusses the computing infrastructure used (hardware and software), including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks <!--Make "including...frameworks" a footnote-->  
-- [ ] motivates which particular kinds of  statistics were used to analyse the experimental results (descriptive or otherwise) 
-- [ ] documents automated or manual heuristics used in this process
+- [ ] presents the experimental rig (e.g. a depiction and/or algorithm pseudocode)
+- [ ] discusses the hardware and software infrastructure used, including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks <!--Make "including...frameworks" a footnote-->  
+- [ ] motivates which particular kinds of statistics were used to analyse the experimental results (descriptive or otherwise) 
+- [ ] documents automated or manual heuristics used in this process <!--what process?-->
 - [ ] describes the evaluation metrics used (and explains the motivation for choosing these metrics) 	
 - [ ] analysis of results goes beyond single-dimensional summaries of performance (e.g., average; median) to include measures of variation, confidence, or other distributional information
 - [ ] discusses threats to validity identifying construct validity and limitations or technical assumptions (using an appropriate framework either using common standards<sup>[2](#myfootnote2)</sup> or a threat to validity appropriate to this study)
