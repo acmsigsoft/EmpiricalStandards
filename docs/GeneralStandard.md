@@ -53,7 +53,7 @@ following.
 - [ ]	discusses the study's limitations and threats to validity
 - [ ]	contributes in some way to the collective body of knowledge <!-- (see Replications Supplement) -->
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
-- [ ]	balances the study's anticipated benefits with its potential risks or harms, minimizing risk or harm wherever possible (see the ethics supplements for studies with [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Ethics(HumanParticipants).md)) or [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md)).
+- [ ]	balances the study's anticipated benefits with its potential risks or harms, minimizing risk or harm wherever possible (see the ethics supplements for studies with [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Ethics(HumanParticipants).md) or [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md)).
 - [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InformationVisualization.md))
 - [ ]	complies with all applicable empirical standards
 
