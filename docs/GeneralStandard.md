@@ -70,12 +70,12 @@ following.
 - [ ]	reasonable attempts to investigate or mitigate limitations
 - [ ]	discusses study’s realism, assumptions and sensitivity of the results to its realism/assumptions
 - [ ]	provides plausibly useful interpretations or recommendations for practice, education or research
-- [ ]	openly shares data and materials to the extent possible within practical and ethical limits (see the [Open Science Supplement](/Supplements/OpenScience.md)
+- [ ]	openly shares data and materials to the extent possible within practical and ethical limits (see the [Open Science Supplement](/Supplements/OpenScience.md))
 - [ ]	concise, precise, well-organized and easy-to-read presentation
 - [ ]	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
 - [ ]	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
 - [ ]	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
-- [ ]	uses multiple raters for any subjective judgments see the [IRR/IRA Supplement](/Supplements/InterRaterReliabilityAndAgreement.md)
+- [ ]	uses multiple raters for any subjective judgments (see the [IRR/IRA Supplement](/Supplements/InterRaterReliabilityAndAgreement.md))
 
 </checklist>
      
