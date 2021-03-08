@@ -41,7 +41,6 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]   describes data sources (e.g. participants' demographics and work roles,  )
 - [ ]   defines unit(s) of analysis
 - [ ]   presents a clear chain of evidence from observations to findings
-- [ ]   clearly answers the research question(s)
 </checklist>
     
 ### Desirable Attributes
