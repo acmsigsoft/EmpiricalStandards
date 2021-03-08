@@ -41,6 +41,7 @@ following.
 <checklist name="Essential">
 
 - [ ]	states a purpose, problem, objective, or research question
+- [ ]	explains why the problem, objective, or research question is important (motivation)
 - [ ]	defines jargon, acronyms and key concepts
 - [ ]	methodology is appropriate (not necessarily optimal) for stated purpose or questions
 - [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
@@ -49,7 +50,7 @@ following.
 - [ ]	presents results
 - [ ]	results directly address research questions
 - [ ]	supports main claims or conclusions with explicit evidence (data/observations) or arguments
-- [ ]	discusses the study's importance and implications
+- [ ]	discusses implications of the results
 - [ ]	discusses the study's limitations and threats to validity
 - [ ]	contributes in some way to the collective body of knowledge <!-- (see Replications Supplement) -->
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
