@@ -1,6 +1,6 @@
 # Methodological Guidelines and Meta-Science
 
-A paper that analyses an issue of research methodology or makes recommendations for conducting research_
+_A paper that analyses an issue of research methodology or makes recommendations for conducting research_
 
 ## Application
 
