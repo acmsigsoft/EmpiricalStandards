@@ -50,7 +50,7 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]   triangulates across data sources, informants or researchers
 - [ ]   cross-checks interviewee statements (e.g. against direct observation or archival records)
-- [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
+- [ ]   validates results using member checking, dialogical interviewing<sup>[1](#myfootnote1)</sup>, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]   reports the type of case study (see *Types of Case Studies*)
 - [ ]   describes external events and other factors that may have affected the case or site
 - [ ]   uses quotations to *illustrate* findings (note: quotations should not be *the only* representation of a finding; each finding should be described independently of supporting quotations)
@@ -195,4 +195,7 @@ Engineering*. (2019).
 Klaas-Jan Stol and Brian Fitzgerald. Two's company, three's a crowd: a
 case study of crowdsourcing software development. In *Proceedings of the
 36^th^ International Conference on Software Engineering*, 187–198, 2014.
+
+---
+<footnote><sup>[1](#myfootnote1)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
 </standard>

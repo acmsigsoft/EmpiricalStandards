@@ -37,7 +37,7 @@ function readSpecificEmpiricalStandards(standard_name){
     var loc = window.location.pathname;
     var dir = loc.substring(0, loc.lastIndexOf('/'));
 	var standard_file_name = standard_name.replaceAll("\"", "").replace(" ", "");
-	var standard_file_path = "./Standards/" + standard_file_name + ".md";
+	var standard_file_path = "./docs/" + standard_file_name + ".md";
 	var empirical_standard = "";
     mdFile.open("GET", standard_file_path, false);
     mdFile.onreadystatechange = function(){
@@ -457,7 +457,7 @@ function generateStandardChecklist(){
 	var for_more_info = document.createElement("H2");
 	for_more_info.innerHTML = "For more information, see:";
 	container.appendChild(for_more_info);
-	var standards_path = "https://github.com/acmsigsoft/EmpiricalStandards/tree/development/Standards/"
+	var standards_path = "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/"
 	var UL = document.createElement("UL");
 	for (let key of standard_keys){
 		key = key.replaceAll("\"", "");

@@ -1,6 +1,7 @@
 # Methodological Guidelines and Meta-Science
+<standard name="Meta Science">
 
-_A paper that analyses an issue of research methodology or makes recommendations for conducting research_
+A paper that analyses an issue of research methodology or makes recommendations for conducting research_
 
 ## Application
 
@@ -13,19 +14,28 @@ This standard applies to papers that provide analysis of one or more methodologi
 ## Specific Attributes
 
 ### Essential Attributes
+<checklist name="Essential">
+
 - [ ] presents information that is useful for other researchers
 - [ ] presents clear, valid arguments supporting recommendations
-
+  </checklist>
+  
 ### Desirable Attributes
+<checklist name="Desirable">
+
 - [ ] synthesizes related work from reference disciplines
 - [ ] provides insight specifically for software engineering; goes beyond summarizing methodological guidance from existing works or reference disciplines;
 - [ ] results integrated back into prior theory or research
 - [ ] develops helpful artifacts (e.g. checklists, templates, tests, tools, sets of criteria)
-
+  </checklist>
+  
 ### Extraordinary Attributes
+<checklist name="Extraordinary">
+
 - [ ] includes an empirical study (e.g. a systematic literature review) that motivates the analysis of guidance
 - [ ] quantitative simulation illustrating methodological issues
-
+  </checklist>
+  
 ## General Criteria
 
 - **comprehensiveness** of analysis or guidance provided
@@ -74,3 +84,5 @@ Yvonne Dittrich, Kari Rönkkö, Jeanette Eriksson, Christina Hansson, &amp; Olle
 
 ---
 <sup>[1](#myfootnote1)</sup>citing seminal works is not the “appeal to authority” fallacy
+
+</standard>
