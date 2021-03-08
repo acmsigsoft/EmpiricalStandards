@@ -119,5 +119,5 @@ This standard applies to studies that primarily analyze existing **software engi
 <footnote><sup>[2](#myfootnote2)</sup> Wohlin, C., Runeson, P., Höst, M., Ohlsson, M. C.,, Regnell, B. (2012). Experimentation in Software Engineering.. Springer. ISBN: 978-3-642-29043-5Wohlin’ standard thrrs</footnote><br>
 <footnote><sup>[3](#myfootnote3)</sup> Raymond P. L. Buse and Thomas Zimmermann. 2012. Information needs for software development analytics. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, 987–996.</footnote><br>
 <footnote><sup>[4](#myfootnote4)</sup> Baljinder Ghotra, Shane McIntosh, and Ahmed E. Hassan. 2015. Revisiting the impact of classification techniques on the performance of defect prediction models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, 789–800.</footnote><br>
-<footnote><sup>[1](#myfootnote1)</sup> including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks</footnote><br>
+<footnote><sup>[5](#myfootnote1)</sup> including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks</footnote><br>
 </standard>
