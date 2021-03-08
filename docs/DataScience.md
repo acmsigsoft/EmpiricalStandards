@@ -24,7 +24,7 @@ This standard applies to studies that primarily analyze existing **software engi
 - [ ] discusses how the data was pre-processed, filtered, and categorized
 - [ ] justifies selection of prior work for baseline comparisons 
 - [ ] presents the experimental rig (e.g. a depiction and/or algorithm pseudocode)
-- [ ] discusses the hardware and software infrastructure used <sup>[5](#myfootnote5)</sup>
+- [ ] discusses the hardware and software infrastructure used<sup>[5](#myfootnote5)</sup>
 - [ ] justifies all statistics and (automated or manual) heuristics used 
 - [ ] describes and justifies the evaluation metrics used	
 - [ ] goes beyond single-dimensional summaries of performance (e.g., average; median) to include measures of variation, confidence, or other distributional information
