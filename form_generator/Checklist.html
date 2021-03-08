@@ -8,30 +8,30 @@
     <link rel="stylesheet" href="css/tooltip.css">
     <script language="javascript" type="text/javascript">
         function showInstructions(){
-			role = location.search.split("=")[1];
-			var checklist_name = document.createElement("h1");
-			var checklist_instructions = document.createElement("p");
-			if (role == "author"){
-				checklist_name.innerHTML = "Pre-Submission Checklist Generator";
-				checklist_instructions.innerHTML = "To generate a pre-submission checklist, select all the methods that apply to your paper and click \"submit\". You can mouse-over each method for a brief description.";
-			}
-			else if(role == "reviewer"){
-				checklist_name.innerHTML = "Review Checklist Generator";
-				checklist_instructions.innerHTML = "To generate a review checklist, select all the methods that apply to the paper and click \"submit\". You can mouse-over each method for a brief description.";
-			}
-			var instructions_div = document.getElementById("instructions");
-			instructions_div.appendChild(checklist_name);
-			instructions_div.appendChild(checklist_instructions);
+            role = location.search.split("=")[1];
+            var checklist_name = document.createElement("h1");
+            var checklist_instructions = document.createElement("p");
+            if (role == "author"){
+                checklist_name.innerHTML = "Pre-Submission Checklist Generator";
+                checklist_instructions.innerHTML = "To generate a pre-submission checklist, select all the methods that apply to your paper and click \"submit\". You can mouse-over each method for a brief description. If your manuscript proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research<em> and the empirical method used to assess the artifact. If your manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology<em> and both methods. If your manuscript uses an method not listed here, choose the last option. If your manuscript does not report an empirical study (e.g. it's an opinion paper) <em>do not use this generator<em>.";
+            }
+            else if(role == "reviewer"){
+                checklist_name.innerHTML = "Review Checklist Generator";
+                checklist_instructions.innerHTML = "To generate a review checklist, select all the methods used in the manuscript and click \"submit\". You can mouse-over each method for a brief description. If the manuscripts proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research<em> and the empirical method used to assess the artifact. If the manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology<em> and both methods. If the mansucript uses a method not listed here, choose the last option. If the paper does not report an empirical study (e.g. it's an opinion paper) <em>do not use this generator<em>.";
+            }
+            var instructions_div = document.getElementById("instructions");
+            instructions_div.appendChild(checklist_name);
+            instructions_div.appendChild(checklist_instructions);
 
-			var role_input = document.createElement("input");
-			role_input.type = "hidden";
-			role_input.name = "role";
-			role_input.value = role;
-			var checklist_form = document.getElementById("checklistForm");
-			checklist_form.appendChild(role_input);
-		}
+            var role_input = document.createElement("input");
+            role_input.type = "hidden";
+            role_input.name = "role";
+            role_input.value = role;
+            var checklist_form = document.getElementById("checklistForm");
+            checklist_form.appendChild(role_input);
+        }
 
-		// Reset the form at the begining
+        // Reset the form at the begining
         $(window).bind("pageshow", function() {
             $('form')[0].reset();
         });
@@ -59,8 +59,8 @@
 </head>
 <body onload="showInstructions();">
 <div id="container">
-	<div id="instructions"></div>
-	
+    <div id="instructions"></div>
+    
     <form id="checklistForm" action="result.html" method="get">
         <h2>Select all that apply:</h2>
         <input type="checkbox" class="standard" name="standard" id="Action_Research"         value="Action Research"><div class="tooltip"> Action Research<span class="tooltiptext">Empirical research that investigates how an intervention, like the introduction of a method or tool, affects a real-life context</span></div></input><br/><br/>
@@ -79,9 +79,14 @@
         <input type="checkbox" class="standard" name="standard" id="Systematic_Reviews"      value="Systematic Reviews"><div class="tooltip"> Systematic literature review<span class="tooltiptext">A study that appraises, analyses, and synthesizes primary or secondary literature to provide a complete, exhaustive summary of current evidence regarding one or more specific topics or research questions</span></div></input><br/><br/>
 
 
+<<<<<<< HEAD
         <input type="checkbox" class="none"     name="standard" id="General_Standard"        value="General Standard"> A method not listed above</input><br/><br/>
+=======
+        <input type="checkbox" class="none"     name="standard" id="General_Standard"        value="General Standard"> An empirical method not listed above</input><br/><br/>
+>>>>>>> bdacd5b19d6781946c745c7a735c3de57778e535
         <input type="submit"   class="button"   value="Submit" disabled>
     </form>
 </div>
 </body>
 </html>
+
