@@ -105,6 +105,16 @@ Steve Adolph, Wendy Hall, and Philippe Kruchten. 2011. Using grounded
 theory to study the experience of software development. *Empirical
 Software Engineering*. 16, 4 (2011), 487–513.
 
+Kathy Charmaz. 2014. *Constructing grounded theory*. sage.
+
+Juliet Corbin and Anselm Strauss. 2014. *Basics of qualitative research:
+Techniques and procedures for developing grounded theory*. Sage
+publications.
+
+Dennis A. Gioia, Kevin G. Corley, and Aimee L. Hamilton. "Seeking qualitative rigor in inductive research: Notes on the Gioia methodology." _Organizational Research Methods_ 16, no. 1 (2013): 15-31.
+
+Janet Morse Morse, Barbara J. Bowers, Kathy Charmaz, Adele E. Clarke, Juliet Corbin, Caroline Jane Porr, and Phyllis Noerager Stern (eds). (2021) _Developing Grounded Theory: The Second Generation Revisited_. Routledge, New York, USA.
+
 Terry Rowlands, Neal Waddell, and Bernard McKenna. 2016. Are We There
 Yet? A Technique to Determine Theoretical Saturation. *Journal of
 Computer Information Systems*. 56, 1 (2016), 40–47.
@@ -115,14 +125,6 @@ in software engineering research: a critical review and guidelines. In
 Engineering (ICSE '16)*. Association for Computing Machinery, New York,
 NY, USA, 120–131. DOI: 10.1145/2884781.2884833
 
-Juliet Corbin and Anselm Strauss. 2014. *Basics of qualitative research:
-Techniques and procedures for developing grounded theory*. Sage
-publications.
-
-Kathy Charmaz. 2014. *Constructing grounded theory*. sage.
-
-Janet Morse et al. (eds). 2021.Developing Grounded Theory: The Second
-Generation Revisited. *Routledge*, New York, USA.
 
 ## Exemplars
 
