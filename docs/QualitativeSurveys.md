@@ -1,6 +1,6 @@
 # Qualitative Surveys (Interview Studies) 
 <standard name="Qualitative Surveys (Interview Studies)">
-*Research comprising semi-structured or open-ended interviews*
+_Research comprising semi-structured or open-ended interviews_
 
 ## Application 
 
