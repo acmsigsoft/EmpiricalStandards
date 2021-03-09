@@ -47,7 +47,8 @@
 - [ ]	performs analysis through an existing or new conceptual framework (qualitative synthesis)
 - [ ]	uses meta-analysis methods appropriate for primary studies; does not use vote counting 
 - [ ]	integrates results into prior theory or research; identifies gaps, biases, or future directions
-- [ ]	presents results as practical, evidence-based guidelines for practitioners, researchers, or educators	
+- [ ]	presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
+- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[4](#myfootnote4)</sup>	
 </checklist>
      
 ### Extraordinary Attributes
@@ -109,4 +110,5 @@ Engineering (EASE).* (Jun. 2008), 1–10.
 <footnote><sup>[1](#myfootnote1)</sup> Searches can be manual or automated or a combination of both.</footnote><br>
 <footnote><sup>[2](#myfootnote2)</sup> Primary studies are the studies that are being reviewed. In a tertiary study, the “primary studies” are themselves reviews.</footnote><br>
 <footnote><sup>[3](#myfootnote3)</sup> e.g. formal meta-analysis of experiments has higher requirements for completeness than mapping studies of broad topic areas.</footnote><br>
+<footnote><sup>[4](#myfootnote4)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>
