@@ -32,7 +32,7 @@ The standard applies to research studies that use simulation to understand, asse
 for the definition of simulation scenarios with representative and known values or probability distributions for input parameters.
 - [ ] separates conceptual and implementation levels of the simulation model.
 - [ ] reports sensitivity analysis for input parameters or factors.
-
+- [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup>[9](#myfootnote9)</sup>
 </checklist>
     
 ### Extraordinary Attributes
@@ -110,4 +110,5 @@ Smith, Neil, Andrea Capiluppi, and Juan F. Ramil. &quot;A study of open source s
 <footnote><sup>[6](#myfootnote6)</sup> Understanding simulation models as software, they may become too large and difficult to understand in a single view. So, the idea is to have a composite model, in which each module concerns a particular set of variables. The following book presents an entire model on software projects in a modular perspective: Abdel-Hamid, T. and Madnick, S.E., 1991. Software project dynamics: an integrated approach. Prentice-Hall, Inc.</footnote><br>
 <footnote><sup>[7](#myfootnote7)</sup> For instance, implementing a specific model capable of only producing desired outcomes.</footnote><br>
 <footnote><sup>[8](#myfootnote8)</sup> Houston et al. (2001) discusses some usual experimental design for software process simulation, such as (fractional) factorial designs. For a more general view on experimental designs for simulation, we suggest Kleijnen et al. (2005).</footnote><br>
+<footnote><sup>[9](#myfootnote9)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>
