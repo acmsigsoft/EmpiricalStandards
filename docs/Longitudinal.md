@@ -88,13 +88,13 @@ Longitudinal studies seek to maximize their internal validity. In this regard, i
 
 ## Exemplars
 
-Daniel Russo, Paul H.P. Hanel, Seraphina Altnickel, and Niels van Berkel. Predictors of Well-being and Productivity among Software Professionals during the COVID-19 Pandemic — A Longitudinal Study. _Empirical Software Engineering_ (2021).  
-Chandrasekar Subramaniam, Sen Ravi, and Matthew L. Nelson. Determinants of open source software project success: A longitudinal study. In _Decision Support Systems._ 46, 2 (2009), 576—585.  
-Davide Fucci, Simone Romano, Maria Teresa Baldassarre, Danilo Caivano, Giuseppe Scanniello, Burak Turhan, Natalia Juristo. A longitudinal cohort study on the retainment of test-driven development. _International Symposium on Empirical Software Engineering and Measurement._ (2018), 1-10  
-Jingyue Li, Nils B Moe, and Tore Dybå. 2010. Transition from a plan-driven process to Scrum: a longitudinal case study on software quality. _International symposium on empirical software engineering and measurement_. (2010), 1-10  
-Laurie McLeod, Stephen MacDonell, and Bill Doolin.Qualitative Research on software development: a longitudinal case study methodology. _Empirical software engineering_ 16, 4 (2011), 430–459.  
-Jari Vanhanen, Casper Lassenius, and Mika V Mantyla. Issues and tactics when adopting pair programming: A longitudinal case study. _International Conference on Software Engineering Advances_. (2007)  
-Donald E Harter, Chris F Kemerer, and Sandra A Slaughter. 2012. Does software process improvement reduce the severity of defects? A longitudinal field study. _IEEE Transactions on Software Engineering_ 38, 4 (2012), 810–827.
+- Daniel Russo, Paul H.P. Hanel, Seraphina Altnickel, and Niels van Berkel. Predictors of Well-being and Productivity among Software Professionals during the COVID-19 Pandemic — A Longitudinal Study. _Empirical Software Engineering_ (2021). 
+- Chandrasekar Subramaniam, Sen Ravi, and Matthew L. Nelson. Determinants of open source software project success: A longitudinal study. In _Decision Support Systems._ 46, 2 (2009), 576—585.  
+- Davide Fucci, Simone Romano, Maria Teresa Baldassarre, Danilo Caivano, Giuseppe Scanniello, Burak Turhan, Natalia Juristo. A longitudinal cohort study on the retainment of test-driven development. _International Symposium on Empirical Software Engineering and Measurement._ (2018), 1-10  
+- Jingyue Li, Nils B Moe, and Tore Dybå. 2010. Transition from a plan-driven process to Scrum: a longitudinal case study on software quality. _International symposium on empirical software engineering and measurement_. (2010), 1-10  
+- Laurie McLeod, Stephen MacDonell, and Bill Doolin.Qualitative Research on software development: a longitudinal case study methodology. _Empirical software engineering_ 16, 4 (2011), 430–459.  
+- Jari Vanhanen, Casper Lassenius, and Mika V Mantyla. Issues and tactics when adopting pair programming: A longitudinal case study. _International Conference on Software Engineering Advances_. (2007)  
+- Donald E Harter, Chris F Kemerer, and Sandra A Slaughter. 2012. Does software process improvement reduce the severity of defects? A longitudinal field study. _IEEE Transactions on Software Engineering_ 38, 4 (2012), 810–827.
 
 ---
 <footnote><sup>[1](#myfootnote1)</sup> On the concept of natural oscillation cf. Kehr &amp; Kowatsch, 2015.</footnote><br>
