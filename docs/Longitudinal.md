@@ -1,7 +1,6 @@
 # Longitudinal Studies
 <standard name="Longitudinal">
 
-
 *A study focusing on the changes in and evolution of a phenomenon over time*
 
 ## Application
@@ -16,36 +15,36 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 <checklist name="Essential">
 
 - [ ] subjects (humans or artifacts) are identifiable between waves
-- [ ] usage of at least two data collection waves
-- [ ] determination of the appropriate number of waves, following the natural oscillation of the research phenomenon<sup>[1](#myfootnote1)</sup>
-- [ ] explanation of the data analysis strategy appropriation for the interdependent nature of the data<sup>[2](#myfootnote2)</sup>
-- [ ] discussion of the choice of the method<sup>[3](#myfootnote3)</sup>
-- [ ] discussion of the critical alpha levels<sup>[4](#myfootnote4)</sup>
-- [ ] determination of the sample size of the research subjects based on a power calculation<sup>[5](#myfootnote5)</sup>
-- [ ] description of the subjects (e.g., demographic information in the case of humans)<sup>[6](#myfootnote6)</sup>
-- [ ] description of the subjects&#39; data loss throughout the different waves
-- [ ] description of the research instrument (e.g., survey, software repository) and provide it as supplementary material
-- [ ] discussion of the operationalization of the research model (construct validity)<sup>[7](#myfootnote7)</sup>
+- [ ] uses at least two data collection waves
+- [ ] determines the appropriate number of waves based on the natural oscillation of the research phenomenon<sup>[1](#myfootnote1)</sup>
+- [ ] the data analysis strategy is appropriate for the interdependent nature of the data<sup>[2](#myfootnote2)</sup>
+- [ ] justifies the data analysis strategy<sup>[3](#myfootnote3)</sup>
+- [ ] discusses the critical alpha levels<sup>[4](#myfootnote4)</sup>
+- [ ] determines appropriate sample size using a power calculation<sup>[5](#myfootnote5)</sup>
+- [ ] describes the subjects (e.g., demographic information in the case of humans)<sup>[6](#myfootnote6)</sup>
+- [ ] describes data loss throughout the different waves
+- [ ] describes the research instrument (e.g., survey, software repository) and provide it as supplementary material
+- [ ] discusses the operationalization of the research model (i.e. construct validity)<sup>[7](#myfootnote7)</sup>
+- [ ] reports treatment of missing data
 </checklist>
     
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ] discusses potential confounding variables
-- [ ] reports treatment of missing data
+- [ ] provides supplementary materials including the data sets, data collection scripts or instruments, analytical scripts, a description of how to reproduce the work and any other materials used
+- [ ] either builds new theory or tests existing theory
+- [ ] investigates causality using the longitudinal nature of the data to establish precedence and statistically controlling for third-variable explanations
+- [ ] discusses potential confounding factors (for inferential analyses) that cannot be statistically controlled
 - [ ] discusses data (in)consistency across waves (e.g., test-retest reliability)
-- [ ] examines differences in distributions between waves and analyse data according to a parametric or non-parametric data analysis strategy
+- [ ] examines differences in distributions between waves (and uses an appropriate parametric or non-parametric data analysis strategy)
 - [ ] describes the cost of gathering data and any incentives used
-- [ ] investigates causality by:   
-(i) using the longitudinal nature of the data to establish precedence;   
-(ii) statistically controlling for third-variable explanations
-- [ ] Provides supplementary materials including, a description of the data and how to report all the steps needed to replicate the work. The dataset used, the scripts adopted for the data analysis, and any further material adopted (e.g. questionnaires)
+
 </checklist>
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ] uses a multi-stage selection process to identify the study&#39;s subjects<sup>[8](#myfootnote8)</sup>
+- [ ] uses a multi-stage selection process to identify the study's subjects<sup>[8](#myfootnote8)</sup>
 </checklist>
 
 ## General Quality Criteria
@@ -56,8 +55,9 @@ Longitudinal studies seek to maximize their internal validity. In this regard, i
 
 ## Antipatterns
 
-- Subjects&#39; loss between waves is too high, leading to a severely underpowered study.
-- A too short or too wide in-between period between waves.
+- Subject loss between waves is too high, leading to a severely underpowered study.
+- The period between waves does not match the phenomenon's natural cycles
+- Treating longitudinal data as cross-sectional
 
 ## Variations
 
@@ -68,8 +68,7 @@ Longitudinal studies seek to maximize their internal validity. In this regard, i
 - Claiming that the time span between measurements is too short or too long.
 - Claiming that the number of waves is inadequate without a reasoned explanation.
 - Claiming that the sample size is too small without performing a _post hoc_ power calculation.
-- There are multiple approaches to analyze longitudinal data. If a specific data analysis strategy is grounded and addressess the research question, the paper cannot be rejected.
-- To prevent Type I errors, the paper did not use Bayesian statistics or did not apply overly conservative alpha corrections (e.g., Bonferroni).
+- Claiming that the paper with a modest number of comparisons should have used more conservative alphas or adopted a Bayesian approach.
 - Complaining about generalizability when the paper clearly acknowledges limitations to generalizability.
 
 ## Notes
@@ -78,14 +77,14 @@ Longitudinal studies seek to maximize their internal validity. In this regard, i
 
 ## Suggested Readings
 
-Franz Faul, et al. Statistical power analyses using G\* Power 3.1: Tests for correlation and regression analyses. In _Behavior Research Methods_. 41,4 (2009), 1149–1160.  
-Flavius Kehr and Tobias Kowatsch. 2015. Quantitative Longitudinal Research: A Review of IS Literature, and a Set of Methodological Guidelines. In _Proceedings of the 23rd European Conference on Information Systems_ (ECIS). Münster, Germany.  
-Hall, Sharon M., et al. &quot;Statistical analysis of randomized trials in tobacco treatment: longitudinal designs with dichotomous outcome.&quot; Nicotine &amp; Tobacco Research 3.3 (2001): 193–202.  
-Duncan, Susan C., Terry E. Duncan, and Hyman Hops. &quot;Analysis of longitudinal data within accelerated longitudinal designs.&quot; Psychological Methods 1.3 (1996): 236.  
-Langfred, Claus W. &quot;The downside of self-management: A longitudinal study of the effects tf conflict on trust, autonomy, and task interdependence in self-managing teams.&quot; Academy of Management Journal 50.4 (2007): 885–900.  
-Benner, Mary J., and Michael Tushman. &quot;Process management and technological innovation: A longitudinal study of the photography and paint industries.&quot; Administrative Science Quarterly 47.4 (2002): 676–707.  
-Joseph P. Simmons, Leif D. Nelson, and Uri Simonsohn. False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. In _Psychological Science._ 22,11 (2011), 1359—1366.  
-Niels van Berkel, Denzil Ferreira, and Vassilis Kostakos. The experience sampling method on mobile devices. In _ACM Computing Surveys_. 50,6 (2017), 1—40.
+- Franz Faul, et al. Statistical power analyses using G\* Power 3.1: Tests for correlation and regression analyses. In _Behavior Research Methods_. 41,4 (2009), 1149–1160.  
+- Flavius Kehr and Tobias Kowatsch. 2015. Quantitative Longitudinal Research: A Review of IS Literature, and a Set of Methodological Guidelines. In _Proceedings of the 23rd European Conference on Information Systems_ (ECIS). Münster, Germany.  
+- Hall, Sharon M., et al. &quot;Statistical analysis of randomized trials in tobacco treatment: longitudinal designs with dichotomous outcome.&quot; Nicotine &amp; Tobacco Research 3.3 (2001): 193–202.  
+- Duncan, Susan C., Terry E. Duncan, and Hyman Hops. &quot;Analysis of longitudinal data within accelerated longitudinal designs.&quot; Psychological Methods 1.3 (1996): 236.  
+- Langfred, Claus W. &quot;The downside of self-management: A longitudinal study of the effects tf conflict on trust, autonomy, and task interdependence in self-managing teams.&quot; Academy of Management Journal 50.4 (2007): 885–900.  
+- Benner, Mary J., and Michael Tushman. &quot;Process management and technological innovation: A longitudinal study of the photography and paint industries.&quot; Administrative Science Quarterly 47.4 (2002): 676–707.  
+- Joseph P. Simmons, Leif D. Nelson, and Uri Simonsohn. False-positive psychology: Undisclosed flexibility in data collection and analysis allows presenting anything as significant. In _Psychological Science._ 22,11 (2011), 1359—1366.  
+- Niels van Berkel, Denzil Ferreira, and Vassilis Kostakos. The experience sampling method on mobile devices. In _ACM Computing Surveys_. 50,6 (2017), 1—40.
 
 ## Exemplars
 
