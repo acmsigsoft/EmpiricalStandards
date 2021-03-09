@@ -30,17 +30,18 @@ _Studies that analyze software engineering phenomena or artifacts using data-cen
 - [ ] justifies all statistics and (automated or manual) heuristics used 
 - [ ] describes and justifies the evaluation metrics used	
 - [ ] goes beyond single-dimensional summaries of performance (e.g., average; median) to include measures of variation, confidence, or other distributional information
-- [ ] discusses technical assumptions and threats to validity that are specific to data science<sup>[2](#myfootnote2)</sup>
+- [ ] discusses technical assumptions and threats to validity that are specific to data science<sup>[6](#myfootnote6)</sup>
 </checklist>
 
 ### Desirable Attributes
 <checklist name="Desirable">
 
 - [ ] provides a replication package including source code and data set(s), or if data cannot be shared, synthetic data to illustrate the use of the algorithms <!--Add footnote: see: https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae -->
-- [ ] data is processed by multiple learners, of different types, e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); e.g. see <sup>[4](#myfootnote4)</sup> for guidance
+- [ ] data is processed by multiple learners, of different types, e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); e.g. see<sup>[4](#myfootnote4)</sup> for guidance
 - [ ] data is processed multiple times with different, randomly selected, training/test examples; the results of which are compared via significance tests and effect size tests (e.g. cross-validation)
 - [ ] carefully selects the hyperparameters that control the data miners (e.g. via analysis of settings in related work or some automatic hyperparameter optimizer such as grid search)
 - [ ] manually inspects some non-trivial portion of the data (i.e. data sanity checks)
+- [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup>[2](#myfootnote2)</sup>
 </checklist>
 
 ### Extraordinary Attributes
@@ -113,9 +114,10 @@ _Studies that analyze software engineering phenomena or artifacts using data-cen
 8. Tufano, M., Palomba, F., Bavota, G., Oliveto, R., Penta, M. D., Lucia, A. D. & Poshyvanyk, D. (2017). When and Why Your Code Starts to Smell Bad (and Whether the Smells Go Away).. IEEE Trans. Software Eng., 43, 1063-1088.
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> Berti-Équille, L. (2007). Measuring and Modelling Data Quality for Quality-Awareness in Data Mining.. In F. Guillet & H. J. Hamilton (ed.), Quality Measures in Data Mining , Vol. 43 (pp. 101-126) . Springer . ISBN: 978-3-540-44911-9.</footnote><br>
-<footnote><sup>[2](#myfootnote2)</sup> For example, failing to address variations in the size or complexity of training, testing and validation data sets</footnote><br>
-<footnote><sup>[3](#myfootnote3)</sup> Raymond P. L. Buse and Thomas Zimmermann. 2012. Information needs for software development analytics. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, 987–996.</footnote><br>
-<footnote><sup>[4](#myfootnote4)</sup> Baljinder Ghotra, Shane McIntosh, and Ahmed E. Hassan. 2015. Revisiting the impact of classification techniques on the performance of defect prediction models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, 789–800.</footnote><br>
-<footnote><sup>[5](#myfootnote1)</sup> including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks</footnote><br>
+<footnote><sup>[1](#myfootnote1)</sup>Berti-Équille, L. (2007). Measuring and Modelling Data Quality for Quality-Awareness in Data Mining.. In F. Guillet & H. J. Hamilton (ed.), Quality Measures in Data Mining , Vol. 43 (pp. 101-126) . Springer . ISBN: 978-3-540-44911-9.</footnote><br>
+<footnote><sup>[2](#myfootnote2)</sup>For example, failing to address variations in the size or complexity of training, testing and validation data sets</footnote><br>
+<footnote><sup>[3](#myfootnote3)</sup>Raymond P. L. Buse and Thomas Zimmermann. 2012. Information needs for software development analytics. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, 987–996.</footnote><br>
+<footnote><sup>[4](#myfootnote4)</sup>Baljinder Ghotra, Shane McIntosh, and Ahmed E. Hassan. 2015. Revisiting the impact of classification techniques on the performance of defect prediction models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, 789–800.</footnote><br>
+<footnote><sup>[5](#myfootnote1)</sup>including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks</footnote><br>
+<footnote><sup>[6](#myfootnote6)</sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>
