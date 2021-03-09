@@ -51,17 +51,18 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 
 Reliability, internal validity, conclusion validity, construct validity, and external validity.
 
-Longitudinal studies seek to maximize their internal validity. In this regard, it is essential to consider two main aspects: the sample size and the selected population&#39;s representativeness (humans or artifacts). The sample needs to reflect the target population (e.g., software developers, Java libraries).
+Longitudinal studies exploit the temporal nature of data to maximize internal validity. Other criteria are sometimes sacrificed to improve internal validity.   
 
 ## Antipatterns
 
-- Subject loss between waves is too high, leading to a severely underpowered study.
-- The period between waves does not match the phenomenon's natural cycles
-- Treating longitudinal data as cross-sectional
+- subject loss between waves is too high, leading to a severely underpowered study
+- the period between waves does not match the phenomenon's natural cycles
+- treating longitudinal data as cross-sectional
 
 ## Variations
 
-- **Experience sampling** provides a highly specific understanding of a phenomenon through multiple repeated measurements per day over a short period (typically one to three weeks). The focus is on the in-the-moment assessment rather than reflective assessment (van Berkel et al. 2017).
+- _Experience sampling_ provides a highly specific understanding of a phenomenon through multiple repeated measurements per day over a short period (typically one to three weeks). It emphasizes in-the-moment assessment rather than reflective assessment (van Berkel et al. 2017). This standard applies to experience sampling studies.
+- _Cohort studies_ are a type of analytical observational study where researchers investigate the relationship between an independent and dependent variable by observing subjects over time and comparing groups with different levels of exposure. Cohort studies follow more strict rules than presented here.<sup>[8](#myfootnote9)</sup>
 
 ## Invalid Criticisms
 
@@ -70,10 +71,6 @@ Longitudinal studies seek to maximize their internal validity. In this regard, i
 - Claiming that the sample size is too small without performing a _post hoc_ power calculation.
 - Claiming that the paper with a modest number of comparisons should have used more conservative alphas or adopted a Bayesian approach.
 - Complaining about generalizability when the paper clearly acknowledges limitations to generalizability.
-
-## Notes
-
-- Cohort Studies are a type of analytical observational study where researchers investigate the relationship between an independent and dependent variable. This is done by observing subjects over time and comparing groups with different levels of exposure. However, they follow a more strict set of rules than presented here.
 
 ## Suggested Readings
 
@@ -105,4 +102,5 @@ Longitudinal studies seek to maximize their internal validity. In this regard, i
 <footnote><sup>[6](#myfootnote6)</sup> The research design should explicitly state how the sample has been selected and filtered out through a selection process. For example, how are we sure to have included only software engineers when dealing with human subjects? Or, which type of quality controls have been performed on software repositories to ensure the consistency and homogeneity of artifacts?</footnote><br>
 <footnote><sup>[7](#myfootnote7)</sup> It should be clear, which are the factors being investigated and how they have been selected. Similarly, measurements should show adequate reliability based on literature benchmarks (e.g., Cronbach&#39;s alpha, test-retest reliability between waves).</footnote><br>
 <footnote><sup>[8](#myfootnote8)</sup> An example of such a selection process can be found in Russo, Daniel, and Klaas-Jan Stol. &quot;Gender differences in personality traits of software engineers.&quot; _IEEE Transactions on Software Engineering_ (2020).</footnote><br>
+<footnote><sup>[8](#myfootnote9)</sup> See: David A. Grimes and Kenneth F. Schulz. Cohort studies: marching towards outcomes. _The Lancet_ 359, no. 9303 (2002): 341-345. </footnote><br>
 </standard>
