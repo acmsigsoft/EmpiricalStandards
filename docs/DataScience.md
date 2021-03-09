@@ -1,7 +1,7 @@
-# Exploratory Data Science
+# Data Science
 <standard name="Data Science">
 
-Studies that analyze existing software engineering artifacts via data exploration including software repository mining and other data-centric analysis methods_
+_Studies that analyze existing software engineering artifacts via data exploration including software repository mining and other data-centric analysis methods_
 
 ## Application
 
@@ -20,33 +20,35 @@ This standard applies to studies that primarily analyze existing **software engi
 <checklist name="Essential">
 
 - [ ] discusses motivation; explains what claims are being investigated and why it is useful/timely to explore this problem using this method
-- [ ] explains how data was selected and what feature engineering approaches and transformations were applied
-- [ ] discusses how the data was pre-processed, filtered, and categorized
-- [ ] justifies selection of prior work for baseline comparisons 
-- [ ] presents the experimental rig (e.g. a depiction and/or algorithm pseudocode)
+- [ ] explains how data was selected
+- [ ] describes the feature engineering approaches (cf. Nargesian, Fatemeh, Horst Samulowitz, Udayan Khurana, Elias B. Khalil, and Deepak S. Turaga. "Learning Feature Engineering for Classification." In Ijcai, pp. 2529-2535. 2017.), and transformations were applied <!--push ref into footnote-->
+- [ ] explains how the data was pre-processed, filtered, and categorized
+- [ ] EITHER: discusses state-of-art baselines (and their strengths, weaknesses and limitations)
+	OR: explains why no state-of-art baselines exist
+	OR: provides compelling argument that direct comparisons are impractical
+- [ ] defines the modeling approach(es) used (e.g. clustering then decision tree learning), typically in pseudocode
+- [ ] presents the experimental setup (e.g. using a dataflow diagram) <!--Put this in a footnote: Akidau, Tyler, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety et al. "The dataflow model: a practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." (2015). Proceedings of the VLDB Endowment 8.12 -->
 - [ ] discusses the hardware and software infrastructure used<sup>[5](#myfootnote5)</sup>
 - [ ] justifies all statistics and (automated or manual) heuristics used 
 - [ ] describes and justifies the evaluation metrics used	
 - [ ] goes beyond single-dimensional summaries of performance (e.g., average; median) to include measures of variation, confidence, or other distributional information
-- [ ] discusses technical assumptions using an appropriate framework<sup>[2](#myfootnote2)</sup>
+- [ ] discusses technical assumptions and threats to validity that are specific to data science<sup>[2](#myfootnote2)</sup>
 </checklist>
 
 ### Desirable Attributes
 <checklist name="Desirable">
 
+- [ ] provides a replication package including source code and data set(s), or if data cannot be shared, synthetic data to illustrate the use of the algorithms <!--Add footnote: see: https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae -->
 - [ ] data is processed by multiple learners, of different types, e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); e.g. see <sup>[4](#myfootnote4)</sup> for guidance
-- [ ] data is processed multiple times with different randomly selected training/test examples; results of which are compared via significance tests and effect size tests
-- [ ] study carefully selects the hyperparameters that control the data miners (e.g. via are a careful analysis of settings seen in related work; e.g. via some automatic hyperparameter optimizer)
-- [ ] compares against baselines; i.e. reproduces and/or replicates  prior work related work (perhaps with some small improvements or even a “negative” report commenting that it was not possible to achieve reproduction or replication)
-- [ ] for studies not based on proprietary  data:  a replication package is made available that conforms to SIGSOFT standards for a functional artifact
-  - and if  data cannot be shared (e.g. an  industrial case study), it is desirable to create a sample dataset that can be shared to illustrate the use of the algorithms
-- [ ] data sanity checks: some non-trivial portion of the data was selected and manually inspected
+- [ ] data is processed multiple times with different, randomly selected, training/test examples; the results of which are compared via significance tests and effect size tests (e.g. cross-validation)
+- [ ] carefully selects the hyperparameters that control the data miners (e.g. via analysis of settings in related work or some automatic hyperparameter optimizer such as grid search)
+- [ ] manually inspects some non-trivial portion of the data (i.e. data sanity checks)
 </checklist>
 
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ] leverages temporal data via longitudinal (i.e. over large time) analyses when appropriate (see the **Longitudinal Studies Standard**)
+- [ ] leverages temporal data via longitudinal (i.e. over large time) analyses when appropriate (see the [Longitudinal Studies Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Longitudinal.md))
 - [ ] triangulates with qualitative data analysis of selected samples of the data 
 - [ ] triangulates with other data sources, such as surveys or interviews
 - [ ] reports findings to, or interacts with, authors of SE artifacts to double check with them
@@ -60,9 +62,7 @@ This standard applies to studies that primarily analyze existing **software engi
 - Data not shared since it is impractical to share (too large, too sensitive).
 - Not using temporal analysis techniques such as time series when the data is not easily converted to time series (e.g. some aspects of source code evolution may not be easily modelled as time series).
 - Not all studies need statistics and hypotheses. Some studies can be purely or principally descriptive.
-  - Different explanations  have different requirements<sup>[3](#myfootnote3)</sup>:
-  - For example, summarizing past data might only need some topic modeling regression on past data since the goal of that study is not to predict on figure cases). 
-  - But there are other kinds of studies that need extensive evaluation via “hold out sets” (where the available data is divided into multiple train and test sets) since the goal of those studies is to make predictions on as-yet-unseen data.
+- Different explanations  have different requirements<sup>[3](#myfootnote3)</sup>: For example, summarizing past data might only need some topic modeling regression on past data since the goal of that study is not to predict on figure cases). But there are other kinds of studies that need extensive evaluation via “hold out sets” (where the available data is divided into multiple train and test sets) since the goal of those studies is to make predictions on as-yet-unseen data.
 
 ## Antipatterns
 
@@ -116,7 +116,7 @@ This standard applies to studies that primarily analyze existing **software engi
 
 ---
 <footnote><sup>[1](#myfootnote1)</sup> Berti-Équille, L. (2007). Measuring and Modelling Data Quality for Quality-Awareness in Data Mining.. In F. Guillet & H. J. Hamilton (ed.), Quality Measures in Data Mining , Vol. 43 (pp. 101-126) . Springer . ISBN: 978-3-540-44911-9.</footnote><br>
-<footnote><sup>[2](#myfootnote2)</sup> Wohlin, C., Runeson, P., Höst, M., Ohlsson, M. C.,, Regnell, B. (2012). Experimentation in Software Engineering.. Springer. ISBN: 978-3-642-29043-5Wohlin’ standard thrrs</footnote><br>
+<footnote><sup>[2](#myfootnote2)</sup> For example, failing to address variations in the size or complexity of training, testing and validation data sets</footnote><br>
 <footnote><sup>[3](#myfootnote3)</sup> Raymond P. L. Buse and Thomas Zimmermann. 2012. Information needs for software development analytics. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, 987–996.</footnote><br>
 <footnote><sup>[4](#myfootnote4)</sup> Baljinder Ghotra, Shane McIntosh, and Ahmed E. Hassan. 2015. Revisiting the impact of classification techniques on the performance of defect prediction models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, 789–800.</footnote><br>
 <footnote><sup>[5](#myfootnote1)</sup> including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks</footnote><br>
