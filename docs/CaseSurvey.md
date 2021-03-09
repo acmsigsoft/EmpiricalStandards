@@ -117,7 +117,7 @@ Mark de Reuver, Harry Bouwman, and Ian MacInnes. 2009. Business model dynamics: 
 <footnote><sup>[2](#myfootnote2)</sup>the coding scheme should balance simplicity and information richness</footnote><br>
 <footnote><sup>[3](#myfootnote3)</sup>do provide data from multiple raters and scripts for calculating inter-rater agreement if possible but do not provide primary study author’s responses to any questionnaire unless authors gave explicit permission.</footnote><br> 
 <footnote><sup>[4](#myfootnote4)</sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
-<footnote><sup>[5](#myfootnote5)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[5](#myfootnote5)</sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>
 
 
