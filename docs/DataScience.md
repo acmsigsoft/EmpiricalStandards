@@ -122,5 +122,5 @@ Studies that analyze software engineering phenomena or artifacts using data-cent
 <footnote><sup>[6](#myfootnote6)</sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 <footnote><sup>[7](#myfootnote7)</sup>Akidau, Tyler, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety et al. "The dataflow model: a practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." (2015). Proceedings of the VLDB Endowment 8.12</footnote><br>
 <footnote><sup>[8](#myfootnote8)</sup>Acf. Nargesian, Fatemeh, Horst Samulowitz, Udayan Khurana, Elias B. Khalil, and Deepak S. Turaga. "Learning Feature Engineering for Classification." In Ijcai, pp. 2529-2535. 2017.</footnote><br>
-<footnote><sup>[9](#myfootnote9)</sup>Sarkar, Tirthajyoti. 2019. Synthetic data generation - a must-have skill for new data scientists. (July 2019).</footnote><br> 
+<footnote><sup>[9](#myfootnote9)</sup>Sarkar, T. (2019). Synthetic data generation - a must-have skill for new data scientists. (July 2019).</footnote><br> 
 </standard>
