@@ -32,15 +32,14 @@ The standard applies to research studies that use simulation to understand, asse
 for the definition of simulation scenarios with representative and known values or probability distributions for input parameters.
 - [ ] separates conceptual and implementation levels of the simulation model.
 - [ ] reports sensitivity analysis for input parameters or factors.
-- [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup>[9](#myfootnote9)</sup>
+- [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup>[5](#myfootnote5)</sup>
 </checklist>
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ] describes how stakeholders<sup>[5](#myfootnote5)</sup> were involved in developing and validating the simulation model.
-- [ ] provides a modular view<sup>[6](#myfootnote6)</sup> of the simulation model, allowing reuse in different contexts.
-- [ ] provides a modular view<sup>[6](#myfootnote6)</sup> of the simulation model, allowing reuse into different contexts.
+- [ ] describes how stakeholders<sup>[6](#myfootnote6)</sup> were involved in developing and validating the simulation model.
+- [ ] provides a modular view<sup>[7](#myfootnote7)</sup> of the simulation model, allowing reuse in different contexts.
 </checklist>
 
 ## General Quality Criteria
@@ -49,9 +48,9 @@ Conclusion validity, construct validity, internal validity (if examining causal 
 
 ## Antipatterns
 
-- Overfitting<sup>[7](#myfootnote7)</sup>
+- Overfitting<sup>[8](#myfootnote8)</sup>
 the simulation model to reproduce a reference behavior.
-- Use of non-standard experimental designs<sup>[8](#myfootnote8)</sup>
+- Use of non-standard experimental designs<sup>[9](#myfootnote9)</sup>
 without justification.
 - Using a single run instead of multiple runs to experiment with stochastic models.
 
@@ -106,9 +105,10 @@ Smith, Neil, Andrea Capiluppi, and Juan F. Ramil. &quot;A study of open source s
 <footnote><sup>[2](#myfootnote2)</sup> Some verification and validation procedures may be applied to the model at the conceptual level (e.g., validating variables and relationships) down to an implementation level (e.g., using tests, reproducing reference behaviors, or performing simulated experiments).</footnote><br>
 <footnote><sup>[3](#myfootnote3)</sup> Simulation studies are prone to several validity threats, including non-representative simulation scenarios, insufficient verification and validation, using different datasets (contexts) for model calibration and experimentation, and others (de França and Travassos, 2015).</footnote><br>
 <footnote><sup>[4](#myfootnote4)</sup> Reference behaviors represent a real-world model (often based on actual measurement of a system or process), which is characterized by data distribution or series of model variables. Usually, these models are used for validating simulation outcomes. For instance, an effort and schedule baseline for software project simulation.</footnote><br>
-<footnote><sup>[5](#myfootnote5)</sup> Apart from the developers of the simulation model, stakeholders could be data providers (for model calibration), domain experts (who may have hypotheses about causal relationships between model variables) and users of the simulation model. All of these stakeholders could, for example, be involved in checking the plausibility of the model output (face validity check).</footnote><br>
-<footnote><sup>[6](#myfootnote6)</sup> Understanding simulation models as software, they may become too large and difficult to understand in a single view. So, the idea is to have a composite model, in which each module concerns a particular set of variables. The following book presents an entire model on software projects in a modular perspective: Abdel-Hamid, T. and Madnick, S.E., 1991. Software project dynamics: an integrated approach. Prentice-Hall, Inc.</footnote><br>
-<footnote><sup>[7](#myfootnote7)</sup> For instance, implementing a specific model capable of only producing desired outcomes.</footnote><br>
-<footnote><sup>[8](#myfootnote8)</sup> Houston et al. (2001) discusses some usual experimental design for software process simulation, such as (fractional) factorial designs. For a more general view on experimental designs for simulation, we suggest Kleijnen et al. (2005).</footnote><br>
-<footnote><sup>[9](#myfootnote9)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[5](#myfootnote5)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[6](#myfootnote6)</sup> Apart from the developers of the simulation model, stakeholders could be data providers (for model calibration), domain experts (who may have hypotheses about causal relationships between model variables) and users of the simulation model. All of these stakeholders could, for example, be involved in checking the plausibility of the model output (face validity check).</footnote><br>
+<footnote><sup>[7](#myfootnote7)</sup> Understanding simulation models as software, they may become too large and difficult to understand in a single view. So, the idea is to have a composite model, in which each module concerns a particular set of variables. The following book presents an entire model on software projects in a modular perspective: Abdel-Hamid, T. and Madnick, S.E., 1991. Software project dynamics: an integrated approach. Prentice-Hall, Inc.</footnote><br>
+<footnote><sup>[8](#myfootnote8)</sup> For instance, implementing a specific model capable of only producing desired outcomes.</footnote><br>
+<footnote><sup>[9](#myfootnote9)</sup> Houston et al. (2001) discusses some usual experimental design for software process simulation, such as (fractional) factorial designs. For a more general view on experimental designs for simulation, we suggest Kleijnen et al. (2005).</footnote><br>
+
 </standard>
