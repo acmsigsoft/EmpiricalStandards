@@ -60,7 +60,7 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	analyzes construct validity of dependent variable
 - [ ]	uses and reports manipulation checks
 - [ ]	pre-registration of hypotheses and design where venue allows
-- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[5](#myfootnote5)</sup>
+- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[4](#myfootnote4)</sup>
 </checklist>
      
 ### Extraordinary Attributes
@@ -80,7 +80,7 @@ objectivity, reproducibility
 
 -   using bad proxies for dependent variables (e.g. task completion time
     as a proxy for task complexity)
--   quasi-experiments without a good reason<sup>[4](#myfootnote4)</sup>
+-   quasi-experiments without a good reason<sup>[5](#myfootnote5)</sup>
 -   treatments or response variables are poorly described
 -   inappropriate design for the conditions under which the experiment
     took place
