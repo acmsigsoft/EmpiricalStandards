@@ -27,12 +27,12 @@ typically given to participants in controlled experiments (see the
 - [ ]	identifies the target population & defines the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes how the questionnaire instrument was created
 - [ ]	provides the questionnaire instrument (as an appendix or supplementary materials) 
-- [ ]	the questionnaire design matches the research aims and the target population<sup>[3](#myfootnote3)</sup>
+- [ ]	the questionnaire design matches the research aims and the target population<sup>[2](#myfootnote2)</sup>
 - [ ]	describes how participants were selected, including invitations and incentives
 - [ ]	step-by-step, systematic, replicable description of data collection and analysis
 - [ ]	describes how responses were managed/monitored, including contingency actions for non-responses and drop-outs
 - [ ]	EITHER: measures constructs using (or adapting) validated scales    
-	 OR: analyzes construct validity (including content, convergent, discriminant and predictive validity) ex post<sup>[4](#myfootnote4)</sup>
+	 OR: analyzes construct validity (including content, convergent, discriminant and predictive validity) ex post<sup>[3](#myfootnote3)</sup>
 - [ ]	explains handling of missing data (e.g. imputation, weighting adjustments, discarding)
 - [ ]	acknowledges generalizability threats; discusses how respondents may differ from target population
 - [ ]	analyzes response rates
@@ -52,7 +52,7 @@ typically given to participants in controlled experiments (see the
 - [ ]	discusses possible effects of incentives (e.g. on voluntariness, response rates, response bias) if used
 - [ ]	describes the stratification of the analysis (if stratified sampling is used)
 - [ ]	defines and estimates the size of the population strata (if applicable)
-- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[2](#myfootnote2)</sup>
+- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[4](#myfootnote4)</sup>
  </checklist>
      
 ### Extraordinary Attributes 	
@@ -153,7 +153,7 @@ DOI:10.1145/3306607
 
 ---
 <footnote><sup>[1](#myfootnote1)</sup> There is currently no standard for predominately open-ended questionnaire surveys. One exemplar readers could draw from is: Daniel Graziotin, Fabian Fagerholm, Xiaofeng Wang, and Pekka Abrahamsson. 2018. "What happens when software developers are (un)happy." Journal of Systems and Software 140, 32-47.</footnote><br>
-<footnote><sup>[2](#myfootnote1)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
-<footnote><sup>[3](#myfootnote3)</sup> questions are mapped to research objectives and their wording and format is appropriate for their audience</footnote><br>
-<footnote><sup>[4](#myfootnote4)</sup> For advice on analyzing construct validity, see Ralph, Paul, and Ewan Tempero. "Construct validity in software engineering research and software metrics." In Proceedings of the 22nd International Conference on Evaluation and Assessment in Software Engineering 2018, pp. 13-23</footnote><br>
+<footnote><sup>[2](#myfootnote2)</sup> questions are mapped to research objectives and their wording and format is appropriate for their audience</footnote><br>
+<footnote><sup>[3](#myfootnote3)</sup> For advice on analyzing construct validity, see Ralph, Paul, and Ewan Tempero. "Construct validity in software engineering research and software metrics." In Proceedings of the 22nd International Conference on Evaluation and Assessment in Software Engineering 2018, pp. 13-23</footnote <br>
+<footnote><sup>[4](#myfootnote4)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>
