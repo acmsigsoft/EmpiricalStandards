@@ -48,13 +48,13 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] Make available random data splits (e.g., those used in data-driven approaches) or, at least, ensure splits are reproducibile. 
 - [ ] Compare distributions (rather than means) of results using appropriate statistics.
 - [ ] Compare solutions using an appropriate meta-evaluation criteria<sup>[16](#myfootnote16)</sup>. Justify the chosen criteria.
-- [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup>[18](#myfootnote18)</sup>
+- [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup>[17](#myfootnote17)</sup>
 </checklist>
 
 ### Extraordinary
 <checklist name="Extraordinary">
 
-- [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[17](#myfootnote17)</sup>. 
+- [ ] Analyze different parameter choices to the algorithm, indicating how the final parameters were selected<sup>[18](#myfootnote18)</sup>. 
 - [ ] Analyze the fitness landscape for one or more of the chosen fitness functions.  
 </checklist>
 
@@ -128,6 +128,7 @@ can be found at https://tinyurl.com/y2ufofgu.
 <footnote><sup>[14](#myfootnote14)</sup>Including, for example, source code (of approach, solution representation, and fitness calculations), datasets used as experiment input, and collected experiment data (e.g., output logs, generated solutions).</footnote><br>
 <footnote><sup>[15](#myfootnote15)</sup>For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)</footnote><br>
 <footnote><sup>[16](#myfootnote16)</sup>E.g., applying hyperparameter optimization.</footnote><br>
-<footnote><sup>[17](#myfootnote17)</sup>: E.g., applying hyperparameter optimization.</footnote><br>
-<footnote><sup>[18](#myfootnote18)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[17](#myfootnote17)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[18](#myfootnote18)</sup>: E.g., applying hyperparameter optimization.</footnote><br>
+
 </standard>
