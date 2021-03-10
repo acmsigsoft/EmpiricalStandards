@@ -62,7 +62,7 @@ Longitudinal studies exploit the temporal nature of data to maximize internal va
 ## Variations
 
 - _Experience sampling_ provides a highly specific understanding of a phenomenon through multiple repeated measurements per day over a short period (typically one to three weeks). It emphasizes in-the-moment assessment rather than reflective assessment (van Berkel et al. 2017). This standard applies to experience sampling studies.
-- _Cohort studies_ are a type of analytical observational study where researchers investigate the relationship between an independent and dependent variable by observing subjects over time and comparing groups with different levels of exposure. Cohort studies follow more strict rules than presented here.<sup>[8](#myfootnote9)</sup>
+- _Cohort studies_ are a type of analytical observational study where researchers investigate the relationship between an independent and dependent variable by observing subjects over time and comparing groups with different levels of exposure. Cohort studies follow more strict rules than presented here.<sup>[9](#myfootnote9)</sup>
 
 ## Invalid Criticisms
 
@@ -102,5 +102,5 @@ Longitudinal studies exploit the temporal nature of data to maximize internal va
 <footnote><sup>[6](#myfootnote6)</sup> The research design should explicitly state how the sample has been selected and filtered out through a selection process. For example, how are we sure to have included only software engineers when dealing with human subjects? Or, which type of quality controls have been performed on software repositories to ensure the consistency and homogeneity of artifacts?</footnote><br>
 <footnote><sup>[7](#myfootnote7)</sup> It should be clear, which are the factors being investigated and how they have been selected. Similarly, measurements should show adequate reliability based on literature benchmarks (e.g., Cronbach&#39;s alpha, test-retest reliability between waves).</footnote><br>
 <footnote><sup>[8](#myfootnote8)</sup> An example of such a selection process can be found in Russo, Daniel, and Klaas-Jan Stol. &quot;Gender differences in personality traits of software engineers.&quot; _IEEE Transactions on Software Engineering_ (2020).</footnote><br>
-<footnote><sup>[8](#myfootnote9)</sup> See: David A. Grimes and Kenneth F. Schulz. Cohort studies: marching towards outcomes. _The Lancet_ 359, no. 9303 (2002): 341-345. </footnote><br>
+<footnote><sup>[9](#myfootnote9)</sup> See: David A. Grimes and Kenneth F. Schulz. Cohort studies: marching towards outcomes. _The Lancet_ 359, no. 9303 (2002): 341-345. </footnote><br>
 </standard>
