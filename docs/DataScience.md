@@ -114,7 +114,7 @@ Studies that analyze software engineering phenomena or artifacts using data-cent
 8. Tufano, M., Palomba, F., Bavota, G., Oliveto, R., Penta, M. D., Lucia, A. D. & Poshyvanyk, D. (2017). When and Why Your Code Starts to Smell Bad (and Whether the Smells Go Away).. IEEE Trans. Software Eng., 43, 1063-1088.
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup>Dhar,V. (2013). Data Science and Prediciton, Communications of the ACM, December 2013, Vol. 56 No. 12, Pages 64-73. https://cacm.acm.org/magazines/2013/12/169933-data-science-and-prediction/fulltext</footnote><br>
+<footnote><sup>[1](#myfootnote1)</sup>Dhar, V. (2013). Data Science and Prediciton, Communications of the ACM, December 2013, Vol. 56 No. 12, Pages 64-73. https://cacm.acm.org/magazines/2013/12/169933-data-science-and-prediction/fulltext</footnote><br>
 <footnote><sup>[2](#myfootnote2)</sup>Akidau, Tyler, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety et al. "The dataflow model: a practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." (2015). Proceedings of the VLDB Endowment 8.12</footnote><br>
 <footnote><sup>[3](#myfootnote3)</sup>Acf. Nargesian, Fatemeh, Horst Samulowitz, Udayan Khurana, Elias B. Khalil, and Deepak S. Turaga. "Learning Feature Engineering for Classification." In Ijcai, pp. 2529-2535. 2017.</footnote><br>
 <footnote><sup>[4](#myfootnote4)</sup>including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks</footnote><br>
