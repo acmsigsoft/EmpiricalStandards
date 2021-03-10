@@ -1,7 +1,7 @@
 # Data Science
 <standard name="Data Science">
 
-_Studies that analyze software engineering phenomena or artifacts using data-centric analysis methods such as machine learning or other computational intelligence appraches as well as search-based approaches_ <!--Add ref in footnote: https://cacm.acm.org/magazines/2013/12/169933-data-science-and-prediction/fulltext -->
+Studies that analyze software engineering phenomena or artifacts using data-centric analysis methods such as machine learning or other computational intelligence appraches as well as search-based approaches<sup>[9](#myfootnote9)</sup> <!--Add ref in footnote: https://cacm.acm.org/magazines/2013/12/169933-data-science-and-prediction/fulltext -->
 
 ## Application
 
@@ -19,8 +19,8 @@ _Studies that analyze software engineering phenomena or artifacts using data-cen
 
 - [ ] discusses motivation; explains what claims are being investigated and why it is useful/timely to explore this problem using this method
 - [ ] explains how data was selected
-- [ ] presents the experimental setup (e.g. using a dataflow diagram) <!--Put this in a footnote: Akidau, Tyler, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety et al. "The dataflow model: a practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." (2015). Proceedings of the VLDB Endowment 8.12 -->
-- [ ] describes the feature engineering approaches (cf. Nargesian, Fatemeh, Horst Samulowitz, Udayan Khurana, Elias B. Khalil, and Deepak S. Turaga. "Learning Feature Engineering for Classification." In Ijcai, pp. 2529-2535. 2017.), and transformations were applied <!--push ref into footnote-->
+- [ ] presents the experimental setup (e.g. using a dataflow diagram)<sup>[7](#myfootnote7)</sup>
+- [ ] describes the feature engineering approaches<sup>[8](#myfootnote8)</sup>, and transformations were applied
 - [ ] explains how the data was pre-processed, filtered, and categorized
 - [ ] EITHER: discusses state-of-art baselines (and their strengths, weaknesses and limitations)
 	OR: explains why no state-of-art baselines exist
@@ -36,7 +36,7 @@ _Studies that analyze software engineering phenomena or artifacts using data-cen
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ] provides a replication package including source code and data set(s), or if data cannot be shared, synthetic data to illustrate the use of the algorithms <!--Add footnote: see: https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae -->
+- [ ] provides a replication package including source code and data set(s), or if data cannot be shared, synthetic data to illustrate the use of the algorithmshttps://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae  <!--Add footnote: see: https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae -->
 - [ ] data is processed by multiple learners, of different types, e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); e.g. see<sup>[4](#myfootnote4)</sup> for guidance
 - [ ] data is processed multiple times with different, randomly selected, training/test examples; the results of which are compared via significance tests and effect size tests (e.g. cross-validation)
 - [ ] carefully selects the hyperparameters that control the data miners (e.g. via analysis of settings in related work or some automatic hyperparameter optimizer such as grid search)
@@ -120,4 +120,7 @@ _Studies that analyze software engineering phenomena or artifacts using data-cen
 <footnote><sup>[4](#myfootnote4)</sup>Baljinder Ghotra, Shane McIntosh, and Ahmed E. Hassan. 2015. Revisiting the impact of classification techniques on the performance of defect prediction models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, 789–800.</footnote><br>
 <footnote><sup>[5](#myfootnote1)</sup>including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks</footnote><br>
 <footnote><sup>[6](#myfootnote6)</sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[7](#myfootnote7)</sup>Akidau, Tyler, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety et al. "The dataflow model: a practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." (2015). Proceedings of the VLDB Endowment 8.12</footnote><br>
+<footnote><sup>[8](#myfootnote8)</sup>Acf. Nargesian, Fatemeh, Horst Samulowitz, Udayan Khurana, Elias B. Khalil, and Deepak S. Turaga. "Learning Feature Engineering for Classification." In Ijcai, pp. 2529-2535. 2017.</footnote><br>
+<footnote><sup>[9](#myfootnote9)</sup>Sarkar, Tirthajyoti. 2019. Synthetic data generation - a must-have skill for new data scientists. (July 2019).</footnote><br> 
 </standard>
