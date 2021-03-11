@@ -65,13 +65,26 @@ function fromMDtoHTMLformat(text){
 	return text;
 }
 
+function show_hide_accept_message(display) {
+	if(display){
+		checklist_yes_not_checked_count = $('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length;
+		checklist_no_checked_count = $('input[class="checklistRadioNo"][type="radio"][value="no"]:checked').length;
+		deviation_yes_checked_count = $('input[class="deviationRadioYes"][type="radio"][value="yes"]:checked').length;
+		if(checklist_yes_not_checked_count-checklist_no_checked_count == 0 & checklist_no_checked_count == deviation_yes_checked_count)
+			document.getElementById("accept_manuscript").style.display = "block";
+	}
+	else{
+		if($('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length > 0)
+			document.getElementById("accept_manuscript").style.display = "none";
+	}
+}
+
 function show_deviation_block() {
 	id = this.id.replace("checklist-radio:No:", "")
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "block";
 	
-	if($('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length > 0)
-		document.getElementById("accept_manuscript").style.display = "none";
+	show_hide_accept_message(false);
 }
 
 function hide_deviation_block() {
@@ -98,9 +111,8 @@ function hide_deviation_block() {
 		document.getElementsByName(deviation_radio_name)[0].checked = false;
 		document.getElementsByName(deviation_radio_name)[1].checked = false;
 	}
-
-	if($('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length == 0)
-		document.getElementById("accept_manuscript").style.display = "block";
+	
+	show_hide_accept_message(true);
 }
 
 function hide_other_messages(id) {
@@ -123,8 +135,11 @@ function deviation_justification() {
 		var block = document.getElementById("deviation_justified:" + id);
 		block.style.display = "block";
 		deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_not_justified-radio");
-		document.getElementsByName(deviation_radio_name)[0].checked = false;
-		document.getElementsByName(deviation_radio_name)[1].checked = false;
+		if(document.getElementsByName(deviation_radio_name).length > 0){
+			document.getElementsByName(deviation_radio_name)[0].checked = false;
+			document.getElementsByName(deviation_radio_name)[1].checked = false;
+		}
+		show_hide_accept_message(true);
 	}
 	// (No-No) deviation is unjustified
 	else if(this.id.includes("deviation_block-radio:No:")){ 
@@ -135,8 +150,11 @@ function deviation_justification() {
 		var message = document.getElementById("deviation_not_justified:" + id);
 		message.style.display = "block";
 		deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_justified-radio");
-		document.getElementsByName(deviation_radio_name)[0].checked = false;
-		document.getElementsByName(deviation_radio_name)[1].checked = false;
+		if(document.getElementsByName(deviation_radio_name).length > 0){
+			document.getElementsByName(deviation_radio_name)[0].checked = false;
+			document.getElementsByName(deviation_radio_name)[1].checked = false;
+		}
+		show_hide_accept_message(false);
 	}
 	else{
 		// (No-Yes-Yes) => deviation is justified and justification is reasonable
@@ -182,6 +200,8 @@ function generate_question_block_with_yes_no_radio_answers(id, question, checkli
 	var deviationLabelNo = document.createElement("label");
 	deviationRadioYes.id = id + "-radio:Yes:" + checklistItem_id;
 	deviationRadioNo.id = id + "-radio:No:" + checklistItem_id;
+	deviationRadioYes.className = "deviationRadioYes";
+	deviationRadioNo.className = "deviationRadioYes";
 	deviationRadioYes.name = id + "-radio:" + checklistItem_id;
 	deviationRadioNo.name = id + "-radio:" + checklistItem_id;
 	deviationRadioYes.onclick = deviation_justification;
