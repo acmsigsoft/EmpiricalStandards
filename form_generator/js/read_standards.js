@@ -223,8 +223,19 @@ function generate_author_deviation_block(checklistItem_id) {
 }
 
 function generate_reviewer_deviation_block(checklistItem_id) {
-	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id, 2.40);
-	
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "<div class=\"tooltip\"> Is the deviation reasonable?<span class=\"tooltiptext\">If the manuscript justifies the deviation, consider the justification offered.</span></div>", checklistItem_id, 2.4);
+
+	// Author-specific deviation justification message
+	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "black", "<b>OK</b>. Not grounds for rejection", 0.65, -1);
+
+	var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&rdsh;&nbsp; Explain in your review why the deviation is unreasonable and suggest possible fixes. Reject the paper unless fixes are trivial.", 0.65, -1);
+
+	deviation_block.appendChild(deviation_justified);
+	deviation_block.appendChild(deviation_not_justified);
+
+	return deviation_block;
+	/*var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id, 2.40);
+
 	// Reviewer-specific deviation justification block
 	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "is the <b>justification</b> reasonable?", checklistItem_id, 2.06);
 	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "is the <b>deviation</b> reasonable?", checklistItem_id, 2.06);
@@ -232,10 +243,10 @@ function generate_reviewer_deviation_block(checklistItem_id) {
 	// Reviewer-specific messages
 	// (No-Yes-Yes)
 	var justification_reasonable = generate_message("justification_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Deviation is acceptable. <b>Not</b> grounds for rejection.", 2.80, -1.07);
-	
+
 	// (No-Yes-No)
 	var justification_unreasonable = generate_message("justification_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the justification is unreasonable and suggest possible fixes. This is grounds for rejection unless the fix is trivial.", 2.80, -1.07);
-	
+
 	// (No-No-Yes)
 	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review how the manuscript should justify the deviation. <b>Not</b> grounds for rejection.", 2.80, -1.07);
 
@@ -249,8 +260,8 @@ function generate_reviewer_deviation_block(checklistItem_id) {
 	deviation_block.appendChild(justification_unreasonable);
 	deviation_block.appendChild(deviation_reasonable);
 	deviation_block.appendChild(deviation_unreasonable);
-	
-	return deviation_block;
+
+	return deviation_block;*/
 }
 
 function convert_standard_checklists_to_html_checklists(standardName, checklistName, checklistText, footnotes){
