@@ -229,7 +229,7 @@ function generate_author_deviation_block(checklistItem_id) {
 }
 
 function generate_reviewer_deviation_block(checklistItem_id) {
-	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "<div class=\"tooltip\"> Is the deviation reasonable?<span class=\"tooltiptext\">If the manuscript justifies the deviation, consider the justification offered.</span></div>", checklistItem_id, 2.4);
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "<div class=\"tooltip\"> is the deviation reasonable?<span class=\"tooltiptext\">If the manuscript justifies the deviation, consider the justification offered.</span></div>", checklistItem_id, 2.4);
 
 	// Author-specific deviation justification message
 	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "black", "<b>OK</b>. Not grounds for rejection", 0.65, -1);
