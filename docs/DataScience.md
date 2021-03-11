@@ -36,7 +36,7 @@ Studies that analyze software engineering phenomena or artifacts using data-cent
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ] provides a replication package including source code and data set(s), or if data cannot be shared, synthetic data to illustrate the use of the algorithmshttps://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae <footnote><sup>[6](#myfootnote6)</sup>
+- [ ] provides a replication package including source code and data set(s), or if data cannot be shared, synthetic data to illustrate the use of the algorithms<sup>[6](#myfootnote6)</sup>
 - [ ] data is processed by multiple learners, of different types, e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); e.g. see<sup>[7](#myfootnote7)</sup> for guidance
 - [ ] data is processed multiple times with different, randomly selected, training/test examples; the results of which are compared via significance tests and effect size tests (e.g. cross-validation)
 - [ ] carefully selects the hyperparameters that control the data miners (e.g. via analysis of settings in related work or some automatic hyperparameter optimizer such as grid search)

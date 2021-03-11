@@ -26,7 +26,7 @@ consider the **Discourse Analysis Standard**.
 ### Essential Attributes	
 <checklist name="Essential">
 
-- [ ]	explains how interviewees were selected (i.e. sampling strategy; see [The Sampling Supplement](/Supplements/Sampling.md))
+- [ ]	explains how interviewees were selected (i.e. sampling strategy; see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes interviewees (e.g. demographics, work roles)
 - [ ]	presents clear chain of evidence from interviewee quotations to findings (e.g. proposed concepts)
 - [ ]	clearly answers the research question(s)
@@ -53,7 +53,7 @@ consider the **Discourse Analysis Standard**.
 - [ ]	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
 - [ ]	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis
 - [ ]	employs probabilistic sampling strategy; statistical analysis of response bias
-- [ ]	uses multiple coders and analyzes inter-coder reliability (see [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md)
+- [ ]	uses multiple coders and analyzes inter-coder reliability (see [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
 </checklist>
 
 ## General Quality Criteria

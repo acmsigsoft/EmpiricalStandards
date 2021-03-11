@@ -19,7 +19,7 @@ This standard does not apply to studies collecting primary data from a large num
 
 - [ ]   presents step-by-step, systematic, replicable description of the search process for published case studies (not necessarily in peer-reviewed venues)
 - [ ]   defines clear inclusion and exclusion criteria for cases<sup>[1](#myfootnote1)</sup>
-- [ ]   describes the sampling strategy (see the **Sampling Supplement**)
+- [ ]   describes the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]   defines a coding scheme to convert qualitative case descriptions into quantitative variables<sup>[2](#myfootnote2)</sup>
 - [ ]   EITHER: describes the coding scheme in detail;   
 OR: provides the coding scheme in supplementary materials
