@@ -53,7 +53,7 @@ function createTooltip(checklistItemText, line_text, footnotes){
 			
 			var tooltipText = document.createElement("span");
 			tooltipText.className = "tooltiptext";
-			tooltipText.innerHTML = footnotes[ftnt[2]];
+			tooltipText.innerHTML = fromMDtoHTMLformat(footnotes[ftnt[2]]);
 			tooltip.appendChild(tooltipText);
 			allTooltipsText.appendChild(tooltip);
 		}
