@@ -59,8 +59,8 @@ function fromMDtoHTMLformat(text){
 		text = text.replace(/\*(.*?)\*/g, "<i>$1</i>");
 
 	// Supplements
-	if (text.match(/\(see(\s|\sthe\s)?\[(.*?)\]\((.*?)\)\)/g) != null)
-		text = text.replace(/\(see(\s|\sthe\s)?\[(.*?)\]\((.*?)\)\)/g, "(see $1<a href='$3'>$2</a>)");
+	if (text.match(/\[([\w\s\d\.\-#\*_\/]+)\]\(((?:\/|https?:\/\/)[\w\d./?=#]+)\)/g) != null)
+		text = text.replace(/\[([\w\s\d\.\-#\*_\/]+)\]\(((?:\/|https?:\/\/)[\w\d./?=#]+)\)/g, "<a href='$2'>$1</a>");
 
 	return text;
 }
