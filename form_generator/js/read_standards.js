@@ -35,18 +35,36 @@ function readSpecificEmpiricalStandard(standard_name){
 }
 
 function createTooltip(checklistItemText, line_text, footnotes){
-	footnote_id = line_text.match(/\{sup\}(.*)\{\/sup\}/)[1];
-	footnote_text = footnotes[footnote_id];
-	//var tooltip = document.createElement("sup");
-	var tooltip = checklistItemText;
-	tooltip.className = "tooltip";
-	//tooltip.innerHTML = "<b>" + footnote_id.match(/\[([0-9]+)\]/)[1] + "</b>";
-	tooltip.innerHTML = line_text.replace(/\{sup\}(.*)\{\/sup\}/, "").replace("<br>", "");
-	var tooltipText = document.createElement("span");
-	tooltipText.className = "tooltiptext";
-	tooltipText.innerHTML = footnote_text;
-	tooltip.appendChild(tooltipText);
-	return tooltip;
+	footnote_sups = line_text.match(/(.*?)\{sup\}\[\d+\]\(#[\w\d_]+\)\{\/sup\}(.*?)/g);
+	if(footnote_sups){
+		footnote_rest = line_text.match(/(?!.*\})(.*?)$/g);
+		footnote_rest = footnote_rest.filter(function (el) {
+		  return el.trim() != "";
+		});
+		checklistItemText.innerHTML = checklistItemText.innerHTML.replace("<br>", "");
+		var allTooltipsText = checklistItemText;
+		var i = 0;
+		for (let footnote_sup of footnote_sups){
+			i++;
+			ftnt = footnote_sup.match(/(.*?)\{sup\}(.*?)\{\/sup\}(.*?)/);
+			var tooltip = document.createElement("span");
+			tooltip.className = "tooltip";
+			tooltip.innerHTML = ftnt[1].trim();
+			
+			var tooltipText = document.createElement("span");
+			tooltipText.className = "tooltiptext";
+			tooltipText.innerHTML = footnotes[ftnt[2]];
+			tooltip.appendChild(tooltipText);
+			allTooltipsText.appendChild(tooltip);
+		}
+		if(footnote_rest.length > 0){
+			var tooltip = document.createElement("span");
+			tooltip.innerHTML = footnote_rest[0].trim();
+			allTooltipsText.appendChild(tooltip);
+		}
+		return allTooltipsText;
+	}
+	return checklistItemText;
 }
 
 function fromMDtoHTMLformat(text){
