@@ -309,8 +309,8 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 				checklistRadioNo.onclick = show_deviation_block;
 				checklistRadioYes.type = "radio";
 				checklistRadioNo.type = "radio";
-				checklistRadioYes.value = "Yes";
-				checklistRadioNo.value = "No";
+				checklistRadioYes.value = "yes";
+				checklistRadioNo.value = "no";
 				
 				
 				// Generate a deviation block
@@ -431,7 +431,7 @@ function generateStandardChecklist(){
 			standard_header_text.className = "standardHeaderText";
 			//standard_header_text.innerText = standardName;
 			Yes_No.style = "align:center; font-size: 80%; font-weight: bold;";
-			Yes_No.innerHTML = "&nbsp;&nbsp;&nbsp;Yes No";
+			Yes_No.innerHTML = "&nbsp;&nbsp;&nbsp;yes no";
 			standard_header_rule.appendChild(standard_header_text);
 			if (checklistTag.getAttribute('name') == "Essential") {
 				//EssentialUL.appendChild(standard_header_rule);
