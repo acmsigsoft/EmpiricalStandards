@@ -324,8 +324,23 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 	return checklists;
 }
 
+function sortStandards(keys){
+	var sorted_keys = [];
+	if (keys.includes("\"Engineering Research\"")){
+		sorted_keys.push("\"Engineering Research\"")
+		keys.splice(keys.indexOf("\"Engineering Research\""), 1);
+	}
+	if (keys.includes("\"Mixed Methods\"")){
+		sorted_keys.push("\"Mixed Methods\"")
+		keys.splice(keys.indexOf("\"Mixed Methods\""), 1);
+	}
+	sorted_keys = sorted_keys.concat(keys.sort());
+	return sorted_keys;
+}
+
 function generateStandardChecklist(){
 	standard_keys = getParameterByName('standard');
+	standard_keys = sortStandards(standard_keys);
 	role = getParameterByName('role');
 	var container = document.createElement("DIV");
 	container.id = "container";
