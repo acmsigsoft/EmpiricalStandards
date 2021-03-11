@@ -84,15 +84,21 @@ function hide_deviation_block() {
 	var block = document.getElementById("deviation_not_justified:" + id);
 	block.style.display = "none";
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_block-radio");
-	document.getElementsByName(deviation_radio_name)[0].checked = false;
-	document.getElementsByName(deviation_radio_name)[1].checked = false;
+	if(document.getElementsByName(deviation_radio_name).length > 0){
+		document.getElementsByName(deviation_radio_name)[0].checked = false;
+		document.getElementsByName(deviation_radio_name)[1].checked = false;
+	}
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_justified-radio");
-	document.getElementsByName(deviation_radio_name)[0].checked = false;
-	document.getElementsByName(deviation_radio_name)[1].checked = false;
+	if(document.getElementsByName(deviation_radio_name).length > 0){
+		document.getElementsByName(deviation_radio_name)[0].checked = false;
+		document.getElementsByName(deviation_radio_name)[1].checked = false;
+	}
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_not_justified-radio");
-	document.getElementsByName(deviation_radio_name)[0].checked = false;
-	document.getElementsByName(deviation_radio_name)[1].checked = false;
-	
+	if(document.getElementsByName(deviation_radio_name).length > 0){
+		document.getElementsByName(deviation_radio_name)[0].checked = false;
+		document.getElementsByName(deviation_radio_name)[1].checked = false;
+	}
+
 	if($('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length == 0)
 		document.getElementById("accept_manuscript").style.display = "block";
 }
