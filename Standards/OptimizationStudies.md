@@ -1,6 +1,5 @@
 # Optimization Studies in SE (including Search-Based Software Engineering)
 <standard name="Optimization Studies">
-
 *Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques to solve such problems*<sup>[1](#myfootnote1)</sup>.  
 
 ## Application

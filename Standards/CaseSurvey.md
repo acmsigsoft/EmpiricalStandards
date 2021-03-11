@@ -1,6 +1,5 @@
 # Case Survey
 <standard name="Case Survey">
-
 *A study that aims to generalize results about a complex phenomenon by systematically converting qualitative descriptions available in published case studies into quantitative data and analyzing the converted data*
 
 ## Application

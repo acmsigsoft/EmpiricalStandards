@@ -1,7 +1,6 @@
 # Exploratory Data Science
 <standard name="Data Science">
-
-_Studies that analyze existing software engineering artifacts via data exploration including software repository mining and other data-centric analysis methods_
+*Studies that analyze existing software engineering artifacts via data exploration including software repository mining and other data-centric analysis methods*
 
 ## Application
 

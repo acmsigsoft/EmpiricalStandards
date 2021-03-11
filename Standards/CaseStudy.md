@@ -1,6 +1,5 @@
 # Case Study and Ethnography 
 <standard name="Case Study and Ethnography">
-
 *"An empirical inquiry that investigates a contemporary phenomenon (the
 "case") in depth and within its real-world context, especially when the
 boundaries between phenomenon and context \[are unclear\]" (Yin 2017)*
