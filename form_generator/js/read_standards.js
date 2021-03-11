@@ -70,7 +70,7 @@ function show_deviation_block() {
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "block";
 	
-	if($('input[class="checklistRadioYes"][type="radio"][value="Yes"]').not(':checked').length > 0)
+	if($('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length > 0)
 		document.getElementById("accept_manuscript").style.display = "none";
 }
 
@@ -93,7 +93,7 @@ function hide_deviation_block() {
 	document.getElementsByName(deviation_radio_name)[0].checked = false;
 	document.getElementsByName(deviation_radio_name)[1].checked = false;
 	
-	if($('input[class="checklistRadioYes"][type="radio"][value="Yes"]').not(':checked').length == 0)
+	if($('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length == 0)
 		document.getElementById("accept_manuscript").style.display = "block";
 }
 
@@ -182,11 +182,11 @@ function generate_question_block_with_yes_no_radio_answers(id, question, checkli
 	deviationRadioNo.onclick = deviation_justification;
 	deviationRadioYes.type = "radio";
 	deviationRadioNo.type = "radio";
-	deviationRadioYes.value = "Yes";
-	deviationRadioNo.value = "No";
+	deviationRadioYes.value = "yes";
+	deviationRadioNo.value = "no";
 	deviation_block_radios.innerHTML = "&nbsp;&nbsp;&nbsp;";
-	deviationLabelYes.innerHTML = "Yes&nbsp;&nbsp;";
-	deviationLabelNo.innerHTML = "No";
+	deviationLabelYes.innerHTML = "yes&nbsp;&nbsp;";
+	deviationLabelNo.innerHTML = "no";
 	deviationLabelYes.htmlFor = deviationRadioYes.id;
 	deviationLabelNo.htmlFor = deviationRadioNo.id;
 	deviation_block_radios.appendChild(deviationRadioYes);
