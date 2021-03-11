@@ -1,5 +1,6 @@
 # Grounded Theory
 <standard name="Grounded Theory">
+
 *A study of a specific area of interest or phenomenon that involves
 iterative and interleaved rounds of qualitative data collection and
 analysis, leading to key patterns (e.g. concepts, categories)*
