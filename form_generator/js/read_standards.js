@@ -69,6 +69,9 @@ function show_deviation_block() {
 	id = this.id.replace("checklist-radio:No:", "")
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "block";
+	
+	if($('input[class="checklistRadioYes"][type="radio"][value="Yes"]').not(':checked').length > 0)
+		document.getElementById("accept_manuscript").style.display = "none";
 }
 
 function hide_deviation_block() {
@@ -89,6 +92,9 @@ function hide_deviation_block() {
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_not_justified-radio");
 	document.getElementsByName(deviation_radio_name)[0].checked = false;
 	document.getElementsByName(deviation_radio_name)[1].checked = false;
+	
+	if($('input[class="checklistRadioYes"][type="radio"][value="Yes"]').not(':checked').length == 0)
+		document.getElementById("accept_manuscript").style.display = "block";
 }
 
 function hide_other_messages(id) {
@@ -284,6 +290,8 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 				var checklistRadioNo = document.createElement("input");
 				checklistRadioYes.id = "checklist-radio:Yes:" + checklistItem_id;
 				checklistRadioNo.id = "checklist-radio:No:" + checklistItem_id;
+				checklistRadioYes.className = "checklistRadioYes";
+				checklistRadioNo.className = "checklistRadioNo";
 				checklistRadioYes.name = "checklist-radio:" + checklistItem_id;
 				checklistRadioNo.name = "checklist-radio:" + checklistItem_id;
 				checklistRadioYes.onclick = hide_deviation_block;
@@ -431,6 +439,11 @@ function generateStandardChecklist(){
 		}
 	}
 	form.appendChild(EssentialUL);
+	
+	// (All Yes -> accept manuscript)
+	var accept_manuscript = generate_message("accept_manuscript", "red", (role == "\"reviewer\"" ? "The manuscript meets all essential criteria and should be accepted." : ""), 2, 0);
+	form.appendChild(accept_manuscript);
+	
 	form.appendChild(DesirableUL);
 	form.appendChild(ExtraordinaryUL);
 
