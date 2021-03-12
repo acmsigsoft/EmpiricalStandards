@@ -496,7 +496,7 @@ function generateStandardChecklist(){
 	form.appendChild(EssentialUL);
 	
 	// (All Yes -> accept manuscript)
-	var accept_manuscript = generate_message("accept_manuscript", "red", (role == "\"reviewer\"" ? "The manuscript meets all essential criteria and should be accepted." : ""), 2, 0);
+	var accept_manuscript = generate_message("accept_manuscript", "red", (role == "\"reviewer\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
 	form.appendChild(accept_manuscript);
 	
 	form.appendChild(DesirableUL);
