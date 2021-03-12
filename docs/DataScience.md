@@ -55,24 +55,22 @@ Studies that analyze software engineering phenomena or artifacts using data-cent
 
 ## Examples of Acceptable Deviations
 
-- Industry-based studies that cannot share their data do not provide a replication package. Nor do such studies
-  need to offer detailed internal descriptions of the data (caveat: but enough information  must be offered to assure the reader that this is real data addressing a real problem)
 - Using lighter and less precise data processing (e.g. keyword matching or random subsampling) if the scale of data is too large for a precise analysis to be practical.
-- Data not shared since it is impractical to share (too large, too sensitive).
+- Data not shared because it is impractical (e.g. too large) or unethical (e.g. too sensitive). Enough information should be offered to assure the reader that the data is real.
 - Not using temporal analysis techniques such as time series when the data is not easily converted to time series (e.g. some aspects of source code evolution may not be easily modelled as time series).
 - Not all studies need statistics and hypotheses. Some studies can be purely or principally descriptive.
-- Different explanations  have different requirements<sup>[9](#myfootnote9)</sup>: For example, summarizing past data might only need some topic modeling regression on past data since the goal of that study is not to predict on figure cases). But there are other kinds of studies that need extensive evaluation via “hold out sets” (where the available data is divided into multiple train and test sets) since the goal of those studies is to make predictions on as-yet-unseen data.
+- Different explanations have different requirements (e.g. hold out sets, cross-validation)<sup>[9](#myfootnote9)</sup>.
 
 ## Antipatterns
 
-- Use of statistical tests that assume normal distributions (without first checking for normality).
-- If using Bayesian statistics, not motivating the priors used in the study. 
-- Claims  causation unless an actual intervention took place; (e.g., installing a bot to monitor a repository), or the methodology is adequate to do so.
+- Using statistical tests without checking their assumptions.
+- Using Bayesian statistics without motivating priors. 
+- Claiming causation without not only establishing covariaton and precedence but also eliminating third variable explanations and at least hypothesizing a generative mechanism.
 - Pre-processing changes training and test data; e.g. while it may be useful to adjust training data class distributions via (say) sub-sampling of majority classes, that adjustment should not applied to the test data (since it is important to assess the learner on the kinds of data that might be seen “in the wild”).
--  Unethical data collection or analysis (e.g. harvest personal information unnecessarily).
-- Significant tests without effect size tests.
+- Unethical data collection or analysis (see the [Ethics (Secondary Data) supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md)
+- Significance tests without effect size tests; effect sizes without confidence intervals.
 - Reporting a median, without any indication of variance (e.g., a boxplot).
-- Multiple trials conducted, but no disclosure or discussion on the variation between trials. 
+- Conducting multiple trials without reporting variations between trials. 
 
 ## Invalid Criticisms 
 
@@ -122,6 +120,6 @@ Studies that analyze software engineering phenomena or artifacts using data-cent
 <footnote><sup>[6](#myfootnote6)</sup>Sarkar, T. (2019). Synthetic data generation - a must-have skill for new data scientists. (July 2019).https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae</footnote><br> 
 <footnote><sup>[7](#myfootnote7)</sup>Baljinder Ghotra, Shane McIntosh, and Ahmed E. Hassan. 2015. Revisiting the impact of classification techniques on the performance of defect prediction models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, 789–800.</footnote><br>
 <footnote><sup>[8](#myfootnote8)</sup>For example, failing to address variations in the size or complexity of training, testing and validation data sets</footnote <br>
-<footnote><sup>[9](#myfootnote9)</sup>Raymond P. L. Buse and Thomas Zimmermann. 2012. Information needs for software development analytics. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, 987–996.</footnote><br>	
+<footnote><sup>[9](#myfootnote9)</sup>c.f. Raymond P. L. Buse and Thomas Zimmermann. 2012. Information needs for software development analytics. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, 987–996.</footnote><br>	
 <footnote><sup>[10](#myfootnote10)</sup>Berti-Équille, L. (2007). Measuring and Modelling Data Quality for Quality-Awareness in Data Mining.. In F. Guillet & H. J. Hamilton (ed.), Quality Measures in Data Mining , Vol. 43 (pp. 101-126) . Springer . ISBN: 978-3-540-44911-9.</footnote><br>
 </standard>
