@@ -33,3 +33,9 @@ form{
 .standardHeaderText {font-size: 100%; color: grey; background-color: #f4f4f4; padding-right: 5px;}
 .btn-link {border:none; outline:none; background:none; cursor:pointer; color:#0000EE; padding:0; text-decoration:underline; font-family:inherit; font-size:inherit;
 }
+footer {
+	position: absolute;
+	bottom: 10px;
+	width: 50%;
+	border: 3px;
+}
