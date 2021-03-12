@@ -67,23 +67,20 @@ Studies that analyze software engineering phenomena or artifacts using data-cent
 - Using Bayesian statistics without motivating priors. 
 - Claiming causation without not only establishing covariaton and precedence but also eliminating third variable explanations and at least hypothesizing a generative mechanism.
 - Pre-processing changes training and test data; e.g. while it may be useful to adjust training data class distributions via (say) sub-sampling of majority classes, that adjustment should not applied to the test data (since it is important to assess the learner on the kinds of data that might be seen “in the wild”).
-- Unethical data collection or analysis (see the [Ethics (Secondary Data) supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md)
+- Unethical data collection or analysis (see the [Ethics (Secondary Data) supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md))
 - Significance tests without effect size tests; effect sizes without confidence intervals.
 - Reporting a median, without any indication of variance (e.g., a boxplot).
 - Conducting multiple trials without reporting variations between trials. 
 
 ## Invalid Criticisms 
 
--  Data is not appropriate for the study. Different domains support so many kinds of data that no researcher
-  can study them all. So if a researcher carefully justifies the used of data X from domain D, it may be
-	unfair for reviewers to demand the analysis of other data Y from the same domain.
-- Does not have a reproduction package. Currently, only 60% of SE papers from FSE,ASE, EMSE etc come with reproduction packages. Hence we say such packages are desirable, but not essential, since the community does not judge them as essential.
+-  You should have analyzed data ABC. The question reviewers should ask is whether the papers main claims are supported by the data that was analyzed, not whether some other data would have been better. 
+- Does not have a reproduction package. These are desirable, not essential (yet).
 - Findings are not actionable: not all studies may have directly actionable findings in the short term.
 - "Needs more data" as a generic criticism without a clear, justified reason.
 - Study does not use qualitative data.
 - Study does not make causal claims, when it cannot.
 - Study does not use the most precise data source, unless the data source is clearly problematic for the study at hand. Some data is impractical to collect at scale.
-- Study does not analyze data ABC. Apply this criticism with care. Data science is a very broad field and no paper can explore all parts.
 
 ## Suggested Readings
 
