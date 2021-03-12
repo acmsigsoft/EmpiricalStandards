@@ -272,7 +272,7 @@ function generate_reviewer_deviation_block(checklistItem_id) {
 	// Author-specific deviation justification message
 	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "black", "<b>OK</b>. Not grounds for rejection", 0.65, -1);
 
-	var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&rdsh;&nbsp; Explain in your review why the deviation is unreasonable and suggest possible fixes. Reject the paper unless fixes are trivial.", 0.65, -1);
+	var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&rdsh;&nbsp; Explain in your review why the deviation is unreasonable and suggest possible fixes. REJECT unless fixes are trivial.", 0.65, -1);
 
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
