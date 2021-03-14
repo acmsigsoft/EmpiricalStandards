@@ -120,55 +120,40 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Identify parts of the paper that you cannot effectively judge or did
     not review.
 
-## Invalid Criticisms and Reviewing Antipatterns
--   Applying empirical standards in a mechanical, inflexible,
-    box-ticking or gotcha-like manner.
--   Rejecting a study because it uses a methodology for which no
-    specific standard is available.
--   Skimming a manuscript instead of carefully reading each word and
-    inspecting each figure and table.
--   Unprofessional or vitriolic tone, ad hominem attacks, disparaging or
-    denigrating comments.
--   Allowing the authors' identities or affiliations to affect the
-    review.
--   Focusing on superficial details of paper without engaging with its
-    main claims or results.
--   Stating that a study: (i) lacks detail without enumerating missing
-    details; (ii) is of low quality without explaining specific
-    problems; or (iii) is not new without providing citations to
-    published studies that make the same contribution.
--   Criticizing a study for limitations intrinsic to that kind of study
-    or the methodology used.
--   Cross-paradigmatic criticism (e.g. attacking an interpretivist study
-    for not conforming to positivist norms).
+## Reviewing Antipatterns
+-   Applying empirical standards in a mechanical, inflexible, box-ticking or gotcha-like manner.
+-   Rejecting a study because it uses a methodology for which no specific standard is available.
+-   Skimming a manuscript instead of carefully reading each word and inspecting each figure and table.
+-   Unprofessional or vitriolic tone, ad hominem attacks, disparaging or denigrating comments.
+-   Allowing the authors' identities or affiliations to affect the review.
+-   Focusing on superficial details of paper without engaging with its main claims or results.
 -   Requesting additional analysis not directly related to a study's purpose or research question, 
     leading to results poorly linked to the article’s narrative.
 -   Using sub-reviewers when the venue does not explicitly allow it.
--   Using the review to promote the reviewer\'s own views, theories,
-    methods, or publications.
--   Rejecting a study because the reviewer would have used a different
-    methodology or design.
--   Rejecting a study because it replicates or reproduces existing work (see Replications Supplement)
--   Rejecting a study because it reports negative results
+-   Using the review to promote the reviewer's own views, theories, methods, or publications.
 
+## Invalid Criticisms
+-   Setting arbitrary minimum sample sizes or other data requirements, based on neither power analysis nor theoretical saturation
+-   Stating that a study: 
+-   (i) lacks detail without enumerating missing details; 
+    (ii) is of low quality without explaining specific problems; or 
+    (iii) is not new without providing citations to published studies that make **practically identical** contributions.
+-   Rejecting a study because it replicates or reproduces existing work <!--(see Replications Supplement)-->
+-   Cross-paradigmatic criticism (e.g. attacking an interpretivist study for not conforming to positivist norms).
+-   Criticizing a study for limitations intrinsic to that kind of study or the methodology used (e.g. attacking a case study for low generalizability) 
+-   Rejecting a study because the reviewer would have used a different methodology or design
+-   Rejecting a study because it reports negative results  
+    
 ## Research and Reporting Antipatterns
--   Attempting a study without reading, understanding and applying
-    published guidelines for that kind of study.
+-   Attempting a study without reading, understanding and applying published guidelines for that kind of study.
 -   Unreasonably small, underpowered or limited studies.
--   Hypothesizing After Results are Known (HARKing) in ostensibly
-    confirmatory, (post-)positivist research.
--   Reporting only the subset of statistical tests that produce
-    significant results (p-hacking).
--   Reporting---together in one paper---several immature or disjointed
-    studies instead of one fully-developed study.
--   Unnecessarily dividing the presentation of a single study into many
-    papers (salami-slicing).
--   Overreaching conclusions or generalizations; obfuscating,
-    downplaying or dismissing a study's limitations.
--   Mentioning related work only to dismiss it as irrelevant; listing
-    rather than analyzing and synthesizing related work.
--   Acknowledging limitations but then writing implications and
-    conclusions as though the limitations don't exist
+-   Hypothesizing After Results are Known (HARKing) in ostensibly confirmatory, (post-)positivist research.
+-   Reporting only the subset of statistical tests that produce significant results (p-hacking).
+-   Reporting---together in one paper---several immature or disjointed studies instead of one fully-developed study.
+-   Unnecessarily dividing the presentation of a single study into many papers (salami-slicing).
+-   Overreaching conclusions or generalizations; obfuscating, downplaying or dismissing a study's limitations.
+-   Mentioning related work only to dismiss it as irrelevant; listing rather than synthesizing related work.
+-   Acknowledging limitations but then writing implications and conclusions as though the limitations don't exist
 
 </standard>
     
