@@ -106,7 +106,7 @@ Marlen Jurisch, Christin Ikas, Petra Wolf and Helmut Krcmar. 2013. Key Differenc
 
 Marlen Jurisch, Wolfgang Palka, Petra Wolf, and Helmut Krcmar. 2014. Which capabilities matter for successful business process change? *Business Process Management Journal*. 20, 1 (2014), 47–67. DOI:10.1108/BPMJ-11-2012-0125.
 
-Rikard Larsson and Michael Lubatkin. 2001. Achieving acculturation in mergers and acquisitions: An international case survey. Human Relations. 54, 12 (2001), 1573–1601. DOI: 10.1177/00187267015412002.
+Rikard Larsson and Michael Lubatkin. 2001. Achieving acculturation in mergers and acquisitions: An international case survey. _Human Relations_. 54, 12 (2001), 1573–1601. DOI: 10.1177/00187267015412002.
 
 Mark de Reuver, Harry Bouwman, and Ian MacInnes. 2007. What drives business model dynamics? A case survey. *8th World Congress on the Management of e-Business, WCMeB 2007 - Conference Proceedings*. WCMeB (2007). DOI: 10.1109/WCMEB.2007.95.
 
