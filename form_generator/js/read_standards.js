@@ -97,6 +97,7 @@ function show_hide_accept_message(display) {
 	}
 }
 
+
 function show_deviation_block() {
 	id = this.id.replace("checklist-radio:No:", "")
 	var block = document.getElementById("deviation_block:" + id);
@@ -267,16 +268,15 @@ function generate_author_deviation_block(checklistItem_id) {
 }
 
 function generate_reviewer_deviation_block(checklistItem_id) {
-	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "<div class=\"tooltip\"> is the deviation reasonable?<span class=\"tooltiptext\">If the manuscript justifies the deviation, consider the justification offered.</span></div>", checklistItem_id, 2.4);
+		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "<div class=\"tooltip\"> is the deviation reasonable?<span class=\"tooltiptext\">If the manuscript justifies the deviation, consider the justification offered.</span></div>", checklistItem_id, 2.4);
 
-	// Author-specific deviation justification message
-	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "black", "<b>OK</b>. Not grounds for rejection", 0.65, -1);
+		// Author-specific deviation justification message
+		var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "black", "<b>OK</b>. Not grounds for rejection", 0.65, -1);
 
-	var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&rdsh;&nbsp; Explain in your review why the deviation is unreasonable and suggest possible fixes. REJECT unless fixes are trivial.", 0.65, -1);
+		var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&rdsh;&nbsp; Explain in your review why the deviation is unreasonable and suggest possible fixes. REJECT unless fixes are trivial.", 0.65, -1);
 
-	deviation_block.appendChild(deviation_justified);
-	deviation_block.appendChild(deviation_not_justified);
-
+		deviation_block.appendChild(deviation_justified);
+		deviation_block.appendChild(deviation_not_justified);
 	return deviation_block;
 	/*var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "does the manuscript justify the deviation?", checklistItem_id, 2.40);
 
@@ -306,6 +306,29 @@ function generate_reviewer_deviation_block(checklistItem_id) {
 	deviation_block.appendChild(deviation_unreasonable);
 
 	return deviation_block;*/
+}
+function generate_phase_deviation_block(checklistItem_id) {
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "is the deviation reasonable?", checklistItem_id, 2.40);
+
+	// Reviewer-specific deviation justification block
+	//var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "", checklistItem_id, 2.06);
+	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
+
+	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "<div class=\"tooltip\"> can it be trivially fixed?<span class=\"tooltiptext\">Fixable in one or two hours for e.g rewriting a paragraph.</span></div>", checklistItem_id, 2.06);
+
+	// (No-No-Yes)
+	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Explain how the manuscript should be fixed.", 2.80, -1.07);
+
+	// (No-No-No)
+	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; <b>REJECT</b>. In your review please explain the deviations why they are not reasonable. Give constructive suggestions.", 2.80, -1.07);
+
+	deviation_block.appendChild(deviation_justified);
+	deviation_block.appendChild(deviation_not_justified);
+
+	deviation_block.appendChild(deviation_reasonable);
+	deviation_block.appendChild(deviation_unreasonable);
+
+	return deviation_block;
 }
 
 function convert_standard_checklists_to_html_checklists(standardName, checklistName, checklistText, footnotes){
@@ -363,6 +386,8 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 					deviation_block = generate_author_deviation_block(checklistItem_id);
 				else if(role == "\"reviewer\"")
 					deviation_block = generate_reviewer_deviation_block(checklistItem_id);
+				else
+					deviation_block = generate_phase_deviation_block(checklistItem_id);
 					
 				checklistItemText.appendChild(deviation_block);				
 				
@@ -412,6 +437,8 @@ function generateStandardChecklist(){
 	if(role == "\"author\"")
 		heading.innerHTML = "Pre-Submission Checklist";
 	else if(role == "\"reviewer\"")
+		heading.innerHTML = "Reviewer Checklist";
+	else
 		heading.innerHTML = "Reviewer Checklist";
 	
 
@@ -498,7 +525,7 @@ function generateStandardChecklist(){
 	// (All Yes -> accept manuscript)
 	var accept_manuscript = generate_message("accept_manuscript", "red", (role == "\"reviewer\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
 	form.appendChild(accept_manuscript);
-	
+
 	form.appendChild(DesirableUL);
 	form.appendChild(ExtraordinaryUL);
 
