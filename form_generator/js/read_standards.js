@@ -84,6 +84,7 @@ function fromMDtoHTMLformat(text){
 }
 
 function show_hide_accept_message(display) {
+	role = getParameterByName('role');
 	if(display){
 		checklist_yes_not_checked_count = $('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length;
 		checklist_no_checked_count = $('input[class="checklistRadioNo"][type="radio"][value="no"]:checked').length;
@@ -93,6 +94,7 @@ function show_hide_accept_message(display) {
 			document.getElementById("accept_manuscript").style.display = "block";
 			document.getElementById("Desirable").style.display = "block";
 			document.getElementById("Extraordinary").style.display = "block";
+
 		}
 	}
 	else{
@@ -100,10 +102,10 @@ function show_hide_accept_message(display) {
 			document.getElementById("accept_manuscript").style.display = "none";
 			document.getElementById("Desirable").style.display = "none";
 			document.getElementById("Extraordinary").style.display = "none";
+
 		}
 	}
 }
-
 
 function show_deviation_block() {
 	id = this.id.replace("checklist-radio:No:", "")
@@ -326,10 +328,10 @@ function generate_phase_deviation_block(checklistItem_id) {
 	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "justificationRadio", "<div class=\"tooltip\"> can it be trivially fixed?<span class=\"tooltiptext\">Fixable in one or two hours for e.g rewriting a paragraph.</span></div>", checklistItem_id, 2.06);
 
 	// (No-No-Yes)
-	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Explain how the manuscript should be fixed.", 2.80, -1.07);
+	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&nbsp; Explain how the manuscript should be fixed.", 2.80, -5.07);
 
 	// (No-No-No)
-	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; <b>REJECT</b>. In your review please explain the deviations why they are not reasonable. Give constructive suggestions.", 2.80, -1.07);
+	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "&nbsp; <b>REJECT</b>. In your review please explain the deviations why they are not reasonable. Give constructive suggestions.", 2.80, -1.07);
 
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
@@ -465,7 +467,12 @@ function generateStandardChecklist(){
 	var DesirableUL = document.createElement("UL");
 	var DesirableH2 = document.createElement("H3");
 	DesirableUL.id = "Desirable";
-	DesirableUL.style = "display:none;";
+	if(role == "\"phase\"") {
+		DesirableUL.style = "display:none;";
+	}
+	else {
+		DesirableUL.style = "display:block;";
+	}
 	DesirableH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	DesirableH2.innerHTML = "Desirable";
 	DesirableUL.appendChild(DesirableH2);
@@ -473,7 +480,12 @@ function generateStandardChecklist(){
 	var ExtraordinaryUL = document.createElement("UL");
 	var ExtraordinaryH2 = document.createElement("H3");	
 	ExtraordinaryUL.id = "Extraordinary";
-	ExtraordinaryUL.style = "display:none;";
+	if(role == "\"phase\"") {
+		ExtraordinaryUL.style = "display:none;";
+	}
+	else {
+		ExtraordinaryUL.style = "display:block;";
+	}
 	ExtraordinaryH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	ExtraordinaryH2.innerHTML = "Extraordinary";
 	ExtraordinaryUL.appendChild(ExtraordinaryH2);
