@@ -83,26 +83,44 @@ function fromMDtoHTMLformat(text){
 	return text;
 }
 
-function show_hide_accept_message(display) {
+function show_hide_accept_message() {
 	role = getParameterByName('role');
-	if(display){
-		checklist_yes_not_checked_count = $('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length;
-		checklist_no_checked_count = $('input[class="checklistRadioNo"][type="radio"][value="no"]:checked').length;
-		deviation_yes_checked_count = $('input[class="deviationRadioYes"][type="radio"][value="yes"]:checked').length;
-		justification_yes_checked_count = $('input[class="justificationRadioYes"][type="radio"][value="yes"]:checked').length;
-		if(checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count)){
-			document.getElementById("accept_manuscript").style.display = "block";
+	checklist_yes_not_checked_count = $('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length;
+	checklist_no_checked_count = $('input[class="checklistRadioNo"][type="radio"][value="no"]:checked').length;
+	deviation_yes_checked_count = $('input[class="deviationRadioYes"][type="radio"][value="yes"]:checked').length;
+	justification_yes_checked_count = $('input[class="justificationRadioYes"][type="radio"][value="yes"]:checked').length;
+	justification_no_checked_count = $('input[class="justificationRadioNo"][type="radio"][value="no"]:checked').length;
+
+	if(checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count)){
+		document.getElementById("accept_manuscript").style.display = "block";
+		if (role == "\"phase\""){
+			document.getElementById("deviation_unreasonable").style.display = "none";
+			if (justification_yes_checked_count > 0 & justification_no_checked_count == 0)
+				document.getElementById("deviation_reasonable").style.display = "block";
+			else
+				document.getElementById("deviation_reasonable").style.display = "none";
 			document.getElementById("Desirable").style.display = "block";
 			document.getElementById("Extraordinary").style.display = "block";
-
 		}
+
 	}
 	else{
-		if($('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length > 0){
-			document.getElementById("accept_manuscript").style.display = "none";
+		document.getElementById("accept_manuscript").style.display = "none";
+		if (role == "\"phase\""){
 			document.getElementById("Desirable").style.display = "none";
 			document.getElementById("Extraordinary").style.display = "none";
-
+			if (justification_no_checked_count == 0 & justification_yes_checked_count == 0){
+				document.getElementById("deviation_reasonable").style.display = "none";
+				document.getElementById("deviation_unreasonable").style.display = "none";				
+			}
+			else if (justification_no_checked_count > 0){
+				document.getElementById("deviation_reasonable").style.display = "none";
+				document.getElementById("deviation_unreasonable").style.display = "block";				
+			}
+			else if (justification_yes_checked_count > 0){
+				document.getElementById("deviation_unreasonable").style.display = "none";
+				document.getElementById("deviation_reasonable").style.display = "block";
+			}
 		}
 	}
 }
@@ -112,7 +130,7 @@ function show_deviation_block() {
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "block";
 	
-	show_hide_accept_message(false);
+	show_hide_accept_message();
 }
 
 function hide_deviation_block() {
@@ -140,7 +158,7 @@ function hide_deviation_block() {
 		document.getElementsByName(deviation_radio_name)[1].checked = false;
 	}
 	
-	show_hide_accept_message(true);
+	show_hide_accept_message();
 }
 
 function hide_other_messages(id) {
@@ -167,7 +185,6 @@ function deviation_justification() {
 			document.getElementsByName(deviation_radio_name)[0].checked = false;
 			document.getElementsByName(deviation_radio_name)[1].checked = false;
 		}
-		show_hide_accept_message(true);
 	}
 	// (No-No) deviation is unjustified
 	else if(this.id.includes("deviation_block-radio:No:")){ 
@@ -182,7 +199,6 @@ function deviation_justification() {
 			document.getElementsByName(deviation_radio_name)[0].checked = false;
 			document.getElementsByName(deviation_radio_name)[1].checked = false;
 		}
-		show_hide_accept_message(false);
 	}
 	else{
 		// (No-Yes-Yes) => deviation is justified and justification is reasonable
@@ -205,16 +221,15 @@ function deviation_justification() {
 			hide_other_messages(id);
 			var message = document.getElementById("deviation_reasonable:" + id);
 			message.style.display = "block";
-			show_hide_accept_message(true);
 		}
 		// (No-No-No) => deviation is unjustified and unreasonable
 		else if(this.id.includes("deviation_not_justified-radio:No:")){
 			id = this.id.replace("deviation_not_justified-radio:No:", "")
 			hide_other_messages(id);
 			document.getElementById("deviation_unreasonable:" + id).style.display = "block";
-			show_hide_accept_message(false);
 		}
 	}
+	show_hide_accept_message();
 }
 
 function generate_question_block_with_yes_no_radio_answers(id, class_name, question, checklistItem_id, padding) {
@@ -328,10 +343,10 @@ function generate_phase_deviation_block(checklistItem_id) {
 	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "justificationRadio", "<div class=\"tooltip\"> can it be trivially fixed?<span class=\"tooltiptext\">Fixable in one or two hours for e.g rewriting a paragraph.</span></div>", checklistItem_id, 2.06);
 
 	// (No-No-Yes)
-	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&nbsp; Explain how the manuscript should be fixed.", 2.80, -5.07);
+	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
 
 	// (No-No-No)
-	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "&nbsp; <b>REJECT</b>. In your review please explain the deviations why they are not reasonable. Give constructive suggestions.", 2.80, -1.07);
+	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "", 0, 0);
 
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
@@ -467,28 +482,20 @@ function generateStandardChecklist(){
 	var DesirableUL = document.createElement("UL");
 	var DesirableH2 = document.createElement("H3");
 	DesirableUL.id = "Desirable";
-	if(role == "\"phase\"") {
-		DesirableUL.style = "display:none;";
-	}
-	else {
-		DesirableUL.style = "display:block;";
-	}
 	DesirableH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	DesirableH2.innerHTML = "Desirable";
 	DesirableUL.appendChild(DesirableH2);
+	if(role == "\"phase\"")
+		DesirableUL.style = "display:none;";
 
 	var ExtraordinaryUL = document.createElement("UL");
 	var ExtraordinaryH2 = document.createElement("H3");	
 	ExtraordinaryUL.id = "Extraordinary";
-	if(role == "\"phase\"") {
-		ExtraordinaryUL.style = "display:none;";
-	}
-	else {
-		ExtraordinaryUL.style = "display:block;";
-	}
 	ExtraordinaryH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	ExtraordinaryH2.innerHTML = "Extraordinary";
 	ExtraordinaryUL.appendChild(ExtraordinaryH2);
+	if(role == "\"phase\"") 
+		ExtraordinaryUL.style = "display:none;";
 	
 	if (!standard_keys.includes("\"General Standard\""))
 		standard_keys.unshift("\"General Standard\"");
@@ -548,9 +555,19 @@ function generateStandardChecklist(){
 	}
 	form.appendChild(EssentialUL);
 	
-	// (All Yes -> accept manuscript)
+	// (All 'Yes' -> accept manuscript)
 	var accept_manuscript = generate_message("accept_manuscript", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
 	form.appendChild(accept_manuscript);
+
+	if(role == "\"phase\""){
+		// (At least one 'No-No-No' -> reject manuscript)
+		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "<b>REJECT</b>. In your review please explain the deviations why they are not reasonable. Give constructive suggestions.", 2, 0);
+		form.appendChild(deviation_unreasonable);
+
+		// (At least one 'No-No-Yes' -> explain fix)
+		var deviation_reasonable = generate_message("deviation_reasonable", "red", "Explain how the manuscript should be fixed.", 2, 0);
+		form.appendChild(deviation_reasonable);
+	}
 
 	form.appendChild(DesirableUL);
 	form.appendChild(ExtraordinaryUL);
