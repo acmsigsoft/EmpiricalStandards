@@ -340,7 +340,7 @@ function generate_phase_deviation_block(checklistItem_id) {
 	//var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
 	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
 
-	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "justificationRadio", "<div class=\"tooltip\"> can it be trivially fixed?<span class=\"tooltiptext\">Fixable in one or two hours for e.g rewriting a paragraph.</span></div>", checklistItem_id, 2.06);
+	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "justificationRadio", "<div class=\"tooltip\"> can it be trivially fixed?<span class=\"tooltiptext\">Fixable in one or two hours e.g rewriting a paragraph.</span></div>", checklistItem_id, 2.06);
 
 	// (No-No-Yes)
 	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
@@ -561,7 +561,7 @@ function generateStandardChecklist(){
 
 	if(role == "\"phase\""){
 		// (At least one 'No-No-No' -> reject manuscript)
-		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "<b>REJECT</b>. In your review please explain the deviations why they are not reasonable. Give constructive suggestions.", 2, 0);
+		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "<b>REJECT</b>. In your review please explain the deviations and why they are not reasonable. Give constructive suggestions.", 2, 0);
 		form.appendChild(deviation_unreasonable);
 
 		// (At least one 'No-No-Yes' -> explain fix)
