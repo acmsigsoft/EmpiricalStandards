@@ -107,7 +107,7 @@ function show_hide_accept_message() {
 	}
 	else{
 		document.getElementById("accept_manuscript").style.display = "none";
-		document.getElementById("checklist_submit").disabled = true;
+		//document.getElementById("checklist_submit").disabled = true;
 		if (role == "\"phase\""){
 			document.getElementById("Desirable").style.display = "none";
 			document.getElementById("Extraordinary").style.display = "none";
@@ -117,11 +117,14 @@ function show_hide_accept_message() {
 			}
 			else if (justification_no_checked_count > 0){
 				document.getElementById("deviation_reasonable").style.display = "none";
-				document.getElementById("deviation_unreasonable").style.display = "block";				
+				document.getElementById("deviation_unreasonable").style.display = "block";
+				document.getElementById("checklist_submit").disabled = false;
+
 			}
 			else if (justification_yes_checked_count > 0){
 				document.getElementById("deviation_unreasonable").style.display = "none";
 				document.getElementById("deviation_reasonable").style.display = "block";
+				document.getElementById("checklist_submit").disabled = false;
 			}
 		}
 	}
@@ -575,15 +578,21 @@ function generateStandardChecklist(){
 	form.appendChild(ExtraordinaryUL);
 
 	var submit = document.createElement("button");
-	submit.innerHTML = "Submit";
+	submit.innerHTML = "Download";
 	//submit.type = "submit";
 	submit.id = "checklist_submit";
 	submit.name = "checklist_submit";
 	submit.disabled = true;
 	submit.addEventListener("click", saveFile);
-	form.appendChild(submit);
+
+	if(deviation_unreasonable.style == "block"){
+		submit.disabled = false;
+	}
 	container.appendChild(heading);
 	container.appendChild(form);
+	if(role == "\"phase\"") {
+		container.appendChild(submit);
+	}
 
 	BR = document.createElement("BR");
 	HR = document.createElement("HR");
@@ -613,7 +622,7 @@ function saveFile(){
 	var name = document.getElementById('checklists').innerText;
 	// This variable stores all the data.
 	let data = '\r ' + name + ' \r\n ';
-
+	
 	// Convert the text to BLOB.
 	const textToBLOB = new Blob([data], { type: 'text/plain' });
 	const sFileName = 'reviewChecklist.txt';	   // The file to save the data.
