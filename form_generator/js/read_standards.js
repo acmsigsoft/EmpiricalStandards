@@ -389,6 +389,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
 
+			checklistItemLI.setAttribute("text", line_text);
 			if(line_text.includes("footnote"))
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			else
@@ -619,11 +620,31 @@ function generateStandardChecklist(){
 	document.body.appendChild(container);
 }
 function saveFile(){
-	var name = document.getElementById('checklists').innerText;
+	var checklists = document.getElementById('checklists');
+	generated_text = '';
+	for (let list of checklists.children) {
+	    if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
+			generated_text += list.id + '\r\n';
+		    for (let ul of list.children) {
+			    if(ul.tagName.toLowerCase() == 'ul'){
+					for (let li of ul.children) {
+						li_text = li.getAttribute("text");
+						generated_text += '\t'+ (li.children[0].checked ? 'X' : 'O') + ' ' + li_text + '\r\n';
+				        if (list.id == 'Essential'){
+							// 
+				        }
+			      }
+			    }
+		    }
+	    }
+	}
+
+	//var name = document.getElementById('checklists').innerText;
 	// This variable stores all the data.
-	let data = '\r ' + name + ' \r\n ';
+	//let data = '\r ' + name + ' \r\n ';
 	
 	// Convert the text to BLOB.
+	let data = '\r ' + generated_text + ' \r\n ';
 	const textToBLOB = new Blob([data], { type: 'text/plain' });
 	const sFileName = 'reviewChecklist.txt';	   // The file to save the data.
 
