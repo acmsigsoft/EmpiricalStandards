@@ -1,32 +1,32 @@
 function getParameterByName(param_name, url = window.location.href){
-    var params = location.search&&location.search.substr(1).replace(/\+/gi," ").split("&");
-    var param_values = [];
+	var params = location.search&&location.search.substr(1).replace(/\+/gi," ").split("&");
+	var param_values = [];
 	var i = 0;
 	for (var param_index in params){
-        var param = params[param_index].split("=");
+		var param = params[param_index].split("=");
 		if(param[0] === param_name){
 			param_values[i] = "\"" + unescape(param[1]) + "\"";
 			i++;
 		}
-    }
+	}
 	return param_values;
 }
 
 function readSpecificEmpiricalStandard(standard_name){
-    var mdFile = new XMLHttpRequest();
-    var loc = window.location.pathname;
-    var dir = loc.substring(0, loc.lastIndexOf('/'));
+	var mdFile = new XMLHttpRequest();
+	var loc = window.location.pathname;
+	var dir = loc.substring(0, loc.lastIndexOf('/'));
 	var standard_file_name = standard_name.replaceAll("\"", "").replace(" ", "");
 	var standard_file_path = "./docs/" + standard_file_name + ".md";
 	var empirical_standard = "";
-    mdFile.open("GET", standard_file_path, false);
-    mdFile.onreadystatechange = function(){
-        if (mdFile.readyState === 4){
-            if (mdFile.status === 200  || mdFile.status == 0)
-                empirical_standard = mdFile.responseText;
+	mdFile.open("GET", standard_file_path, false);
+	mdFile.onreadystatechange = function(){
+		if (mdFile.readyState === 4){
+			if (mdFile.status === 200  || mdFile.status == 0)
+				empirical_standard = mdFile.responseText;
 			else
 				alert("Can't read " + standard_file_name + ".md");
-        }
+		}
 		else
 			alert("Can't read " + standard_file_name + ".md");
 	}
@@ -39,7 +39,7 @@ function createTooltip(checklistItemText, line_text, footnotes){
 	if(footnote_sups){
 		footnote_rest = line_text.match(/(?!.*\})(.*?)$/g);
 		footnote_rest = footnote_rest.filter(function (el) {
-		  return el.trim() != "";
+			return el.trim() != "";
 		});
 		checklistItemText.innerHTML = checklistItemText.innerHTML.replace("<br>", "");
 		var allTooltipsText = checklistItemText;
@@ -50,7 +50,7 @@ function createTooltip(checklistItemText, line_text, footnotes){
 			var tooltip = document.createElement("span");
 			tooltip.className = "tooltip";
 			tooltip.innerHTML = ftnt[1].trim();
-			
+
 			var tooltipText = document.createElement("span");
 			tooltipText.className = "tooltiptext";
 			tooltipText.innerHTML = fromMDtoHTMLformat(footnotes[ftnt[2]]);
@@ -107,24 +107,21 @@ function show_hide_accept_message() {
 	}
 	else{
 		document.getElementById("accept_manuscript").style.display = "none";
-		//document.getElementById("checklist_submit").disabled = true;
+		document.getElementById("checklist_submit").disabled = true;
 		if (role == "\"phase\""){
 			document.getElementById("Desirable").style.display = "none";
 			document.getElementById("Extraordinary").style.display = "none";
 			if (justification_no_checked_count == 0 & justification_yes_checked_count == 0){
 				document.getElementById("deviation_reasonable").style.display = "none";
-				document.getElementById("deviation_unreasonable").style.display = "none";				
+				document.getElementById("deviation_unreasonable").style.display = "none";
 			}
 			else if (justification_no_checked_count > 0){
 				document.getElementById("deviation_reasonable").style.display = "none";
 				document.getElementById("deviation_unreasonable").style.display = "block";
-				document.getElementById("checklist_submit").disabled = false;
-
 			}
 			else if (justification_yes_checked_count > 0){
 				document.getElementById("deviation_unreasonable").style.display = "none";
 				document.getElementById("deviation_reasonable").style.display = "block";
-				document.getElementById("checklist_submit").disabled = false;
 			}
 		}
 	}
@@ -134,7 +131,7 @@ function show_deviation_block() {
 	id = this.id.replace("checklist-radio:No:", "")
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "block";
-	
+
 	show_hide_accept_message();
 }
 
@@ -162,7 +159,7 @@ function hide_deviation_block() {
 		document.getElementsByName(deviation_radio_name)[0].checked = false;
 		document.getElementsByName(deviation_radio_name)[1].checked = false;
 	}
-	
+
 	show_hide_accept_message();
 }
 
@@ -178,7 +175,7 @@ function hide_other_messages(id) {
 
 function deviation_justification() {
 	// (No-Yes) deviation is justified
-	if(this.id.includes("deviation_block-radio:Yes:")){ 
+	if(this.id.includes("deviation_block-radio:Yes:")){
 		id = this.id.replace("deviation_block-radio:Yes:", "")
 		hide_other_messages(id);
 		var block = document.getElementById("deviation_not_justified:" + id);
@@ -192,7 +189,7 @@ function deviation_justification() {
 		}
 	}
 	// (No-No) deviation is unjustified
-	else if(this.id.includes("deviation_block-radio:No:")){ 
+	else if(this.id.includes("deviation_block-radio:No:")){
 		id = this.id.replace("deviation_block-radio:No:", "")
 		hide_other_messages(id);
 		var empty_message = document.getElementById("deviation_justified:" + id);
@@ -207,7 +204,7 @@ function deviation_justification() {
 	}
 	else{
 		// (No-Yes-Yes) => deviation is justified and justification is reasonable
-		if(this.id.includes("deviation_justified-radio:Yes:")){	
+		if(this.id.includes("deviation_justified-radio:Yes:")){
 			id = this.id.replace("deviation_justified-radio:Yes:", "")
 			hide_other_messages(id);
 			var message = document.getElementById("justification_reasonable:" + id);
@@ -270,7 +267,7 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	deviation_block_radios.appendChild(deviationRadioNo);
 	deviation_block_radios.appendChild(deviationLabelNo);
 	question_block.appendChild(deviation_block_radios);
-	
+
 	return question_block;
 }
 
@@ -280,62 +277,54 @@ function generate_message(id, color, text, padding, indent) {
 	message.className = "message";
 	message.innerHTML = text;
 	message.style = "color:" + color + "; padding-left:"+padding+"em; text-indent:"+indent+"em; display:none";
-	
+
 	return message;
 }
 
 function generate_author_deviation_block(checklistItem_id) {
 	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "does the manuscript justify the deviation?", checklistItem_id, 2.4);
-	
+
 	// Author-specific deviation justification message
 	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 0.65, -1);
-	
+
 	var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&rdsh;&nbsp; the manuscript should either conform to the standard or clearly explain why it deviates from the standard", 0.65, -1);
-	
+
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
-	
+
 	return deviation_block;
 }
 
 function generate_reviewer_deviation_block(checklistItem_id) {
-		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "<div class=\"tooltip\"> is the deviation reasonable?<span class=\"tooltiptext\">If the manuscript justifies the deviation, consider the justification offered.</span></div>", checklistItem_id, 2.4);
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "<div class=\"tooltip\"> is the deviation reasonable?<span class=\"tooltiptext\">If the manuscript justifies the deviation, consider the justification offered.</span></div>", checklistItem_id, 2.4);
 
-		// Author-specific deviation justification message
-		var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "black", "<b>OK</b>. Not grounds for rejection", 0.65, -1);
+	// Author-specific deviation justification message
+	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "black", "<b>OK</b>. Not grounds for rejection", 0.65, -1);
 
-		var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&rdsh;&nbsp; Explain in your review why the deviation is unreasonable and suggest possible fixes. REJECT unless fixes are trivial.", 0.65, -1);
-
-		deviation_block.appendChild(deviation_justified);
-		deviation_block.appendChild(deviation_not_justified);
-	return deviation_block;
-	/*var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "does the manuscript justify the deviation?", checklistItem_id, 2.40);
-
-	// Reviewer-specific deviation justification block
-	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "justificationRadio", "is the <b>justification</b> reasonable?", checklistItem_id, 2.06);
-	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "justificationRadio", "is the <b>deviation</b> reasonable?", checklistItem_id, 2.06);
-
-	// Reviewer-specific messages
-	// (No-Yes-Yes)
-	var justification_reasonable = generate_message("justification_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Deviation is acceptable. <b>Not</b> grounds for rejection.", 2.80, -1.07);
-
-	// (No-Yes-No)
-	var justification_unreasonable = generate_message("justification_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the justification is unreasonable and suggest possible fixes. This is grounds for rejection unless the fix is trivial.", 2.80, -1.07);
-
-	// (No-No-Yes)
-	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review how the manuscript should justify the deviation. <b>Not</b> grounds for rejection.", 2.80, -1.07);
-
-	// (No-No-No)
-	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the deviation is unreasonable and suggest possible fixes. This is grounds for rejection.", 2.80, -1.07);
+	var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&rdsh;&nbsp; Explain in your review why the deviation is unreasonable and suggest possible fixes. REJECT unless fixes are trivial.", 0.65, -1);
 
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
-
+	return deviation_block;
+	/*var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "does the manuscript justify the deviation?", checklistItem_id, 2.40);
+	// Reviewer-specific deviation justification block
+	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "justificationRadio", "is the <b>justification</b> reasonable?", checklistItem_id, 2.06);
+	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "justificationRadio", "is the <b>deviation</b> reasonable?", checklistItem_id, 2.06);
+	// Reviewer-specific messages
+	// (No-Yes-Yes)
+	var justification_reasonable = generate_message("justification_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Deviation is acceptable. <b>Not</b> grounds for rejection.", 2.80, -1.07);
+	// (No-Yes-No)
+	var justification_unreasonable = generate_message("justification_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the justification is unreasonable and suggest possible fixes. This is grounds for rejection unless the fix is trivial.", 2.80, -1.07);
+	// (No-No-Yes)
+	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review how the manuscript should justify the deviation. <b>Not</b> grounds for rejection.", 2.80, -1.07);
+	// (No-No-No)
+	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the deviation is unreasonable and suggest possible fixes. This is grounds for rejection.", 2.80, -1.07);
+	deviation_block.appendChild(deviation_justified);
+	deviation_block.appendChild(deviation_not_justified);
 	deviation_block.appendChild(justification_reasonable);
 	deviation_block.appendChild(justification_unreasonable);
 	deviation_block.appendChild(deviation_reasonable);
 	deviation_block.appendChild(deviation_unreasonable);
-
 	return deviation_block;*/
 }
 function generate_phase_deviation_block(checklistItem_id) {
@@ -371,7 +360,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:3em; text-indent:-2.4em;";
 	else
 		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:3em; text-indent:-1.3em;";
-	
+
 	//checklists.appendChild(standard_H3); //no subheadings
 	lines = checklistText.includes("- [ ]") ? checklistText.split("- [ ]") : checklistText.includes("-	") ? checklistText.split("-	") : checklistText.split("");
 	var i = 0;
@@ -388,8 +377,8 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			//we dont need this part in the checklist
 			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
-
 			checklistItemLI.setAttribute("text", line_text);
+
 			if(line_text.includes("footnote"))
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			else
@@ -410,8 +399,8 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 				checklistRadioNo.type = "radio";
 				checklistRadioYes.value = "yes";
 				checklistRadioNo.value = "no";
-				
-				
+
+
 				// Generate a deviation block
 				var deviation_block;
 				if(role == "\"author\"")
@@ -420,9 +409,9 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 					deviation_block = generate_reviewer_deviation_block(checklistItem_id);
 				else
 					deviation_block = generate_phase_deviation_block(checklistItem_id);
-					
-				checklistItemText.appendChild(deviation_block);				
-				
+
+				checklistItemText.appendChild(deviation_block);
+
 				checklistItemLI.appendChild(checklistRadioYes);
 				checklistItemLI.appendChild(checklistRadioNo);
 				checklistItemLI.appendChild(checklistItemText);
@@ -472,7 +461,7 @@ function generateStandardChecklist(){
 		heading.innerHTML = "Reviewer Checklist";
 	else
 		heading.innerHTML = "Reviewer Checklist";
-	
+
 
 	var form = document.createElement("FORM");
 	form.id = "checklists";
@@ -495,18 +484,18 @@ function generateStandardChecklist(){
 		DesirableUL.style = "display:none;";
 
 	var ExtraordinaryUL = document.createElement("UL");
-	var ExtraordinaryH2 = document.createElement("H3");	
+	var ExtraordinaryH2 = document.createElement("H3");
 	ExtraordinaryUL.id = "Extraordinary";
 	ExtraordinaryH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	ExtraordinaryH2.innerHTML = "Extraordinary";
 	ExtraordinaryUL.appendChild(ExtraordinaryH2);
-	if(role == "\"phase\"") 
+	if(role == "\"phase\"")
 		ExtraordinaryUL.style = "display:none;";
-	
+
 	if (!standard_keys.includes("\"General Standard\""))
 		standard_keys.unshift("\"General Standard\"");
 	var i = 0;
-    for (let key of standard_keys){
+	for (let key of standard_keys){
 		i++;
 		empirical_standard = readSpecificEmpiricalStandard(key);
 		var dom = document.createElement("div");
@@ -516,10 +505,10 @@ function generateStandardChecklist(){
 		var footnotes = {};
 
 		for(let footnoteTag of footnoteTags){
-				supTag = footnoteTag.getElementsByTagName("sup")[0];
-				footnote_id = supTag.innerText.trim()
-				supTag.remove();
-				footnotes[footnote_id] = footnoteTag.innerText.trim();
+			supTag = footnoteTag.getElementsByTagName("sup")[0];
+			footnote_id = supTag.innerText.trim()
+			supTag.remove();
+			footnotes[footnote_id] = footnoteTag.innerText.trim();
 		}
 
 		let standardName = "\"" + standardTag.getAttribute('name') + "\"";
@@ -560,7 +549,7 @@ function generateStandardChecklist(){
 		}
 	}
 	form.appendChild(EssentialUL);
-	
+
 	// (All 'Yes' -> accept manuscript)
 	var accept_manuscript = generate_message("accept_manuscript", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
 	form.appendChild(accept_manuscript);
@@ -580,20 +569,13 @@ function generateStandardChecklist(){
 
 	var submit = document.createElement("button");
 	submit.innerHTML = "Download";
-	//submit.type = "submit";
 	submit.id = "checklist_submit";
 	submit.name = "checklist_submit";
 	submit.disabled = true;
 	submit.addEventListener("click", saveFile);
-
-	if(deviation_unreasonable.style == "block"){
-		submit.disabled = false;
-	}
+	form.appendChild(submit);
 	container.appendChild(heading);
 	container.appendChild(form);
-	if(role == "\"phase\"") {
-		container.appendChild(submit);
-	}
 
 	BR = document.createElement("BR");
 	HR = document.createElement("HR");
@@ -623,26 +605,26 @@ function saveFile(){
 	var checklists = document.getElementById('checklists');
 	generated_text = '';
 	for (let list of checklists.children) {
-	    if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
+		if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
 			generated_text += list.id + '\r\n';
-		    for (let ul of list.children) {
-			    if(ul.tagName.toLowerCase() == 'ul'){
+			for (let ul of list.children) {
+				if(ul.tagName.toLowerCase() == 'ul'){
 					for (let li of ul.children) {
 						li_text = li.getAttribute("text");
 						generated_text += '\t'+ (li.children[0].checked ? 'X' : 'O') + ' ' + li_text + '\r\n';
-				        if (list.id == 'Essential'){
-							// 
-				        }
-			      }
-			    }
-		    }
-	    }
+						if (list.id == 'Essential'){
+							//
+						}
+					}
+				}
+			}
+		}
 	}
 
 	//var name = document.getElementById('checklists').innerText;
 	// This variable stores all the data.
 	//let data = '\r ' + name + ' \r\n ';
-	
+
 	// Convert the text to BLOB.
 	let data = '\r ' + generated_text + ' \r\n ';
 	const textToBLOB = new Blob([data], { type: 'text/plain' });
