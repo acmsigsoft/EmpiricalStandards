@@ -559,7 +559,7 @@ function generateStandardChecklist(){
 	submit.id = "checklist_submit";
 	submit.name = "checklist_submit";
 	submit.disabled = true;
-	submit.addEventListener("click", saveFile);
+	submit.onclick = saveFile;
 
 	// (All 'Yes' -> accept manuscript)
 	var accept_manuscript = generate_message("accept_manuscript", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
@@ -645,14 +645,30 @@ function saveFile(){
 		}
 	}
 
-	generated_text += "\n==============\n" +
+	generated_text += "\n" +
+		"======\n" +
 		"Legend\n" +
-		"==============\n" +
+		"======\n" +
 		"Y = Yes, the paper has this attribute\n" +
 		"R = Reasonable deviation\n" +
 		"F = (easily) Fixable deviation\n" +
 		"U = Unfixable (or not easily fixable) deviation\n" +
 		"N = No, the paper does not have this attribute";
+	
+	var newLink = document.createElement('a');
+	newLink.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(generated_text);
+	newLink.download = 'reviewChecklist.txt';
+
+    if (document.createEvent) {
+        var event = document.createEvent('MouseEvents');
+        event.initEvent('click', true, true);
+        newLink.dispatchEvent(event);
+    }
+    else
+        newLink.click();
+	return false;
+	
+	/*
 	// Convert the text to BLOB.
 	let data = '\r ' + generated_text + ' \r\n ';
 	const textToBLOB = new Blob([data], { type: 'text/plain' });
@@ -671,4 +687,5 @@ function saveFile(){
 	}
 
 	newLink.click();
+	*/
 }
