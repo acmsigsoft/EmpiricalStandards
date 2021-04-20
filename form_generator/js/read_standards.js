@@ -91,25 +91,27 @@ function show_hide_accept_message() {
 	justification_yes_checked_count = $('input[class="justificationRadioYes"][type="radio"][value="yes"]:checked').length;
 	justification_no_checked_count = $('input[class="justificationRadioNo"][type="radio"][value="no"]:checked').length;
 
+	if (role == "\"phase\""){
+		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count+justification_no_checked_count))
+			document.getElementById("checklist_submit").disabled = false;
+		else
+			document.getElementById("checklist_submit").disabled = true;
+	}
+	
 	if(checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count)){
 		document.getElementById("accept_manuscript").style.display = "block";
-		document.getElementById("checklist_submit").disabled = false;
 		if (role == "\"phase\""){
 			document.getElementById("deviation_unreasonable").style.display = "none";
-			if (justification_yes_checked_count > 0 & justification_no_checked_count == 0) {
+			if (justification_yes_checked_count > 0 & justification_no_checked_count == 0)
 				document.getElementById("deviation_reasonable").style.display = "block";
-				document.getElementById("checklist_submit").disabled = true;
-			}
 			else
 				document.getElementById("deviation_reasonable").style.display = "none";
 			document.getElementById("Desirable").style.display = "block";
 			document.getElementById("Extraordinary").style.display = "block";
 		}
-
 	}
 	else{
 		document.getElementById("accept_manuscript").style.display = "none";
-		document.getElementById("checklist_submit").disabled = true;
 		if (role == "\"phase\""){
 			document.getElementById("Desirable").style.display = "none";
 			document.getElementById("Extraordinary").style.display = "none";
@@ -120,12 +122,10 @@ function show_hide_accept_message() {
 			else if (justification_no_checked_count > 0){
 				document.getElementById("deviation_reasonable").style.display = "none";
 				document.getElementById("deviation_unreasonable").style.display = "block";
-				document.getElementById("checklist_submit").disabled = false;
 			}
 			else if (justification_yes_checked_count > 0){
 				document.getElementById("deviation_unreasonable").style.display = "none";
 				document.getElementById("deviation_reasonable").style.display = "block";
-				document.getElementById("checklist_submit").disabled = true;
 			}
 		}
 	}
