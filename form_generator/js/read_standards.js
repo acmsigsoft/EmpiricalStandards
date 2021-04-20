@@ -96,8 +96,10 @@ function show_hide_accept_message() {
 		document.getElementById("checklist_submit").disabled = false;
 		if (role == "\"phase\""){
 			document.getElementById("deviation_unreasonable").style.display = "none";
-			if (justification_yes_checked_count > 0 & justification_no_checked_count == 0)
+			if (justification_yes_checked_count > 0 & justification_no_checked_count == 0) {
 				document.getElementById("deviation_reasonable").style.display = "block";
+				document.getElementById("checklist_submit").disabled = true;
+			}
 			else
 				document.getElementById("deviation_reasonable").style.display = "none";
 			document.getElementById("Desirable").style.display = "block";
@@ -118,10 +120,12 @@ function show_hide_accept_message() {
 			else if (justification_no_checked_count > 0){
 				document.getElementById("deviation_reasonable").style.display = "none";
 				document.getElementById("deviation_unreasonable").style.display = "block";
+				document.getElementById("checklist_submit").disabled = false;
 			}
 			else if (justification_yes_checked_count > 0){
 				document.getElementById("deviation_unreasonable").style.display = "none";
 				document.getElementById("deviation_reasonable").style.display = "block";
+				document.getElementById("checklist_submit").disabled = true;
 			}
 		}
 	}
@@ -550,6 +554,13 @@ function generateStandardChecklist(){
 	}
 	form.appendChild(EssentialUL);
 
+	var submit = document.createElement("button");
+	submit.innerHTML = "Download";
+	submit.id = "checklist_submit";
+	submit.name = "checklist_submit";
+	submit.disabled = true;
+	submit.addEventListener("click", saveFile);
+
 	// (All 'Yes' -> accept manuscript)
 	var accept_manuscript = generate_message("accept_manuscript", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
 	form.appendChild(accept_manuscript);
@@ -562,18 +573,18 @@ function generateStandardChecklist(){
 		// (At least one 'No-No-Yes' -> explain fix)
 		var deviation_reasonable = generate_message("deviation_reasonable", "red", "Explain how the manuscript should be fixed.", 2, 0);
 		form.appendChild(deviation_reasonable);
+
+		if(deviation_unreasonable.style.display == "block"){
+			submit.disabled = false;
+		}
 	}
 
 	form.appendChild(DesirableUL);
 	form.appendChild(ExtraordinaryUL);
 
-	var submit = document.createElement("button");
-	submit.innerHTML = "Download";
-	submit.id = "checklist_submit";
-	submit.name = "checklist_submit";
-	submit.disabled = true;
-	submit.addEventListener("click", saveFile);
-	form.appendChild(submit);
+	if(role == "\"phase\"") {
+		form.appendChild(submit);
+	}
 	container.appendChild(heading);
 	container.appendChild(form);
 
@@ -611,20 +622,26 @@ function saveFile(){
 				if(ul.tagName.toLowerCase() == 'ul'){
 					for (let li of ul.children) {
 						li_text = li.getAttribute("text");
-						generated_text += '\t'+ (li.children[0].checked ? 'X' : 'O') + ' ' + li_text + '\r\n';
 						if (list.id == 'Essential'){
-							//
+							generated_text += ($('input[class="justificationRadioNo"][type="radio"][value="no"]:checked') ? 'U' : 'F') + '\t' + ' ' + li_text + '\r\n';
+
 						}
+						else
+							generated_text += (li.children[0].checked ? 'Y' : 'N') + '\t' + ' ' + li_text + '\r\n';
 					}
 				}
 			}
 		}
 	}
 
-	//var name = document.getElementById('checklists').innerText;
-	// This variable stores all the data.
-	//let data = '\r ' + name + ' \r\n ';
-
+	generated_text += "\n==============\n" +
+		"Legend\n" +
+		"==============\n" +
+		"Y = Yes, the paper has this attribute\n" +
+		"R = Reasonable deviation\n" +
+		"F = (easily) Fixable deviation\n" +
+		"U = Unfixable (or not easily fixable) deviation\n" +
+		"N = No, the paper does not have this attribute";
 	// Convert the text to BLOB.
 	let data = '\r ' + generated_text + ' \r\n ';
 	const textToBLOB = new Blob([data], { type: 'text/plain' });
