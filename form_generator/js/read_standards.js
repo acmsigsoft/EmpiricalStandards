@@ -614,20 +614,31 @@ function generateStandardChecklist(){
 }
 function saveFile(){
 	var checklists = document.getElementById('checklists');
-	generated_text = '';
+	var generated_text = '';
 	for (let list of checklists.children) {
 		if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
 			generated_text += list.id + '\r\n';
 			for (let ul of list.children) {
 				if(ul.tagName.toLowerCase() == 'ul'){
+					var i = 0;
 					for (let li of ul.children) {
-						li_text = li.getAttribute("text");
+						i++;
+						var li_text = li.getAttribute("text");
 						if (list.id == 'Essential'){
-							generated_text += ($('input[class="justificationRadioNo"][type="radio"][value="no"]:checked') ? 'U' : 'F') + '\t' + ' ' + li_text + '\r\n';
-
+							if (li.children[0].checked)
+								generated_text += '  ' + 'Y' + '   ' + li_text + '\r\n';
+							else{
+								var reasonable_deviation = li.getElementsByClassName('deviationRadioYes')[0];
+								if (reasonable_deviation.checked)
+									generated_text += '  ' + 'R' + '   ' + li_text + '\r\n';
+								else{
+									var fixable_deviation = li.getElementsByClassName('justificationRadioYes')[0];
+									generated_text += '  ' + (fixable_deviation.checked ? 'F' : 'U') + '   ' + li_text + '\r\n';
+								}
+							}
 						}
 						else
-							generated_text += (li.children[0].checked ? 'Y' : 'N') + '\t' + ' ' + li_text + '\r\n';
+							generated_text += '  ' + (li.children[0].checked ? 'Y' : 'N') + '   ' + li_text + '\r\n';
 					}
 				}
 			}
