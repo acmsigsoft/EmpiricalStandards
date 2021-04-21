@@ -617,7 +617,7 @@ function saveFile(){
 	var generated_text = '';
 	for (let list of checklists.children) {
 		if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
-			generated_text += list.id + '\r\n';
+			generated_text += '\n' + list.id + '\r\n';
 			for (let ul of list.children) {
 				if(ul.tagName.toLowerCase() == 'ul'){
 					var i = 0;
@@ -626,19 +626,19 @@ function saveFile(){
 						var li_text = li.getAttribute("text");
 						if (list.id == 'Essential'){
 							if (li.children[0].checked)
-								generated_text += '  ' + 'Y' + '   ' + li_text + '\r\n';
+								generated_text +=  'Y' + '\t   ' + li_text + '\r\n';
 							else{
 								var reasonable_deviation = li.getElementsByClassName('deviationRadioYes')[0];
 								if (reasonable_deviation.checked)
-									generated_text += '  ' + 'R' + '   ' + li_text + '\r\n';
+									generated_text += 'R' + '\t   ' + li_text + '\r\n';
 								else{
 									var fixable_deviation = li.getElementsByClassName('justificationRadioYes')[0];
-									generated_text += '  ' + (fixable_deviation.checked ? 'F' : 'U') + '   ' + li_text + '\r\n';
+									generated_text += (fixable_deviation.checked ? 'F' : 'U') + '  \t ' + li_text + '\r\n';
 								}
 							}
 						}
 						else
-							generated_text += '  ' + (li.children[0].checked ? 'Y' : 'N') + '   ' + li_text + '\r\n';
+							generated_text += (li.children[0].checked ? 'Y' : 'N') + ' \t  ' + li_text + '\r\n';
 					}
 				}
 			}
@@ -667,25 +667,4 @@ function saveFile(){
     else
         newLink.click();
 	return false;
-	
-	/*
-	// Convert the text to BLOB.
-	let data = '\r ' + generated_text + ' \r\n ';
-	const textToBLOB = new Blob([data], { type: 'text/plain' });
-	const sFileName = 'reviewChecklist.txt';	   // The file to save the data.
-
-	let newLink = document.createElement("a");
-	newLink.download = sFileName;
-
-	if (window.webkitURL != null) {
-		newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-	}
-	else {
-		newLink.href = window.URL.createObjectURL(textToBLOB);
-		newLink.style.display = "none";
-		document.body.appendChild(newLink);
-	}
-
-	newLink.click();
-	*/
 }
