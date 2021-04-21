@@ -100,6 +100,7 @@ function show_hide_accept_message() {
 	
 	if(checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count)){
 		document.getElementById("accept_manuscript").style.display = "block";
+		//document.getElementById("deviation_unreasonable").style.display = "block";
 		if (role == "\"phase\""){
 			document.getElementById("deviation_unreasonable").style.display = "none";
 			if (justification_yes_checked_count > 0 & justification_no_checked_count == 0)
@@ -119,7 +120,7 @@ function show_hide_accept_message() {
 				document.getElementById("deviation_reasonable").style.display = "none";
 				document.getElementById("deviation_unreasonable").style.display = "none";
 			}
-			else if (justification_no_checked_count > 0){
+			else if (justification_no_checked_count > 0 & checklist_yes_not_checked_count == checklist_no_checked_count){
 				document.getElementById("deviation_reasonable").style.display = "none";
 				document.getElementById("deviation_unreasonable").style.display = "block";
 			}
@@ -605,6 +606,7 @@ function generateStandardChecklist(){
 		LINK.href = standards_path + key.replaceAll(" ", "") + ".md";
 		LINK.target = "_blank";
 		LINK.style = "font-size:23px;";
+		LINK.id = "standardNames";
 		LI.appendChild(LINK);
 		UL.appendChild(LI);
 	}
@@ -614,7 +616,9 @@ function generateStandardChecklist(){
 }
 function saveFile(){
 	var checklists = document.getElementById('checklists');
-	var generated_text = '';
+	var generated_text = '=================\n' +
+		'Review Checklist\n' +
+		'=================\n';
 	for (let list of checklists.children) {
 		if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
 			generated_text += '\n' + list.id + '\r\n';
@@ -646,15 +650,21 @@ function saveFile(){
 	}
 
 	generated_text += "\n" +
-		"======\n" +
+		"=======\n" +
 		"Legend\n" +
-		"======\n" +
+		"=======\n" +
 		"Y = Yes, the paper has this attribute\n" +
 		"R = Reasonable deviation\n" +
 		"F = (easily) Fixable deviation\n" +
 		"U = Unfixable (or not easily fixable) deviation\n" +
-		"N = No, the paper does not have this attribute";
-	
+		"N = No, the paper does not have this attribute\n\n";
+
+	generated_text+= "Standards Used: ";
+
+	var elms = document.querySelectorAll("[id='standardNames']");
+	for(var i = 0; i < elms.length; i++)
+		generated_text += elms[i].innerHTML + ', ';
+
 	var newLink = document.createElement('a');
 	newLink.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(generated_text);
 	newLink.download = 'reviewChecklist.txt';
