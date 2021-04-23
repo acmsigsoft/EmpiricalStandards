@@ -124,7 +124,7 @@ function show_hide_accept_message() {
 				document.getElementById("deviation_reasonable").style.display = "none";
 				document.getElementById("deviation_unreasonable").style.display = "block";
 			}
-			else if (justification_yes_checked_count > 0){
+			else if (justification_yes_checked_count > 0 & checklist_yes_not_checked_count == checklist_no_checked_count){
 				document.getElementById("deviation_unreasonable").style.display = "none";
 				document.getElementById("deviation_reasonable").style.display = "block";
 			}
@@ -628,6 +628,15 @@ function saveFile(){
 					for (let li of ul.children) {
 						i++;
 						var li_text = li.getAttribute("text");
+						var regex = /<a+\n*.+<\/a>/g;
+						if (li_text.match(regex) != null)
+							li_text = li_text.replace(regex, "");
+						var regex2 = /\{sup\}.+\{\/sup\}/g;
+						if (li_text.match(regex2) != null)
+							li_text = li_text.replace(regex2, "");
+						li_text = li_text.replace("<br/>","")
+						li_text = li_text.replace("(see the )", "");
+
 						if (list.id == 'Essential'){
 							if (li.children[0].checked)
 								generated_text +=  'Y' + '\t   ' + li_text + '\r\n';
@@ -657,13 +666,15 @@ function saveFile(){
 		"R = Reasonable deviation\n" +
 		"F = (easily) Fixable deviation\n" +
 		"U = Unfixable (or not easily fixable) deviation\n" +
-		"N = No, the paper does not have this attribute\n\n";
+		"N = No, the paper does not have this attribute\n\n\n";
 
-	generated_text+= "Standards Used: ";
+	generated_text+= "=================\n" +
+		"Standards Used\n" +
+		"=================\n";
 
 	var elms = document.querySelectorAll("[id='standardNames']");
 	for(var i = 0; i < elms.length; i++)
-		generated_text += elms[i].innerHTML + ', ';
+		generated_text += elms[i].innerHTML + '\n';
 
 	var newLink = document.createElement('a');
 	newLink.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(generated_text);
