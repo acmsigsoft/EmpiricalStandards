@@ -632,9 +632,17 @@ function saveFile(){
 						if (li_text.match(regex) != null)
 							li_text = li_text.replace(regex, "");
 						var regex2 = /\{sup\}.+\{\/sup\}/g;
+						var regex3 = /<br\/>/g;
+						var regex4 = /<\/b>/g;
+						var regex5 = /<b>/g;
 						if (li_text.match(regex2) != null)
 							li_text = li_text.replace(regex2, "");
-						li_text = li_text.replace("<br/>","")
+						if (li_text.match(regex3) != null)
+							li_text = li_text.replace(regex3,"\n");
+						if (li_text.match(regex4) != null)
+							li_text = li_text.replace(regex4,"");
+						if (li_text.match(regex5) != null)
+							li_text = li_text.replace(regex5,"");
 						li_text = li_text.replace("(see the )", "");
 
 						if (list.id == 'Essential'){
@@ -658,6 +666,20 @@ function saveFile(){
 		}
 	}
 
+	var accept = document.getElementById("accept_manuscript");
+	var unreasonable = document.getElementById("deviation_unreasonable");
+	var reasonable = document.getElementById("deviation_reasonable");
+
+	if(accept.style.display == "block")
+		generated_text += "\n" + accept.innerText + "\n";
+	else if(unreasonable.style.display == "block")
+		generated_text += "\n" + unreasonable.innerText + "\n";
+
+	if(reasonable.style.display == "block")
+		generated_text += reasonable.innerText + "\n";
+	else
+		generated_text += "";
+
 	generated_text += "\n" +
 		"=======\n" +
 		"Legend\n" +
@@ -675,6 +697,9 @@ function saveFile(){
 	var elms = document.querySelectorAll("[id='standardNames']");
 	for(var i = 0; i < elms.length; i++)
 		generated_text += elms[i].innerHTML + '\n';
+
+	pageURL = window.location.href;
+	generated_text += "\nURL: " + pageURL;
 
 	var newLink = document.createElement('a');
 	newLink.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(generated_text);
