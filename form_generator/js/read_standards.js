@@ -631,10 +631,17 @@ function saveFile(){
 						var regex = /<a+\n*.+<\/a>/g;
 						if (li_text.match(regex) != null)
 							li_text = li_text.replace(regex, "");
+
 						var regex2 = /\{sup\}.+\{\/sup\}/g;
 						var regex3 = /<br\/>/g;
 						var regex4 = /<\/b>/g;
 						var regex5 = /<b>/g;
+						var regex6 = /[\r\n]+/g;
+						var regex7 =/ \(.+\)/g;
+						var regex8 = /<i>/g;
+						var regex9 = /<\/i>/g;
+
+
 						if (li_text.match(regex2) != null)
 							li_text = li_text.replace(regex2, "");
 						if (li_text.match(regex3) != null)
@@ -643,7 +650,14 @@ function saveFile(){
 							li_text = li_text.replace(regex4,"");
 						if (li_text.match(regex5) != null)
 							li_text = li_text.replace(regex5,"");
-						li_text = li_text.replace("(see the )", "");
+						if (li_text.match(regex6) != null)
+							li_text = li_text.replace(regex6,"");
+						if (li_text.match(regex7) != null)
+							li_text = li_text.replace(regex7,"");
+						if (li_text.match(regex8) != null)
+							li_text = li_text.replace(regex8,"");
+						if (li_text.match(regex9) != null)
+							li_text = li_text.replace(regex9,"");
 
 						if (list.id == 'Essential'){
 							if (li.children[0].checked)
