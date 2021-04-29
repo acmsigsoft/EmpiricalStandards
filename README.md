@@ -4,21 +4,28 @@ This repository contains the ACM SIGSOFT Empirical Standards for researchers, pe
 
 ## What's an Empirical Standard?
 
-An _Empirical Standard_ is a brief public document that communicates expectations for emprical research. Here _empirical_ just means that the researches uses data. The data can be qualitative or quantitative; real or synthetic. _Empirical_ distinguishes research that involves collecting and analyzing data from other kinds of scholarship like a mathematical proof or a philosophical treatise. 
+An _Empirical Standard_ is a brief public document that communicates expectations for emprical research. Here _empirical_ denotes research that uses data. The data can be qualitative or quantitative; real or synthetic. _Empirical_ distinguishes research that involves collecting and analyzing data from other kinds of scholarship like a mathematical proof or a philosophical treatise. 
 
 Moreover, our empirical standards are:
 
-1. Method-specific. Software engineering researchers use lots and lots of different research methods. If we tried to write one standard for all empirical research, it would either be biased against some methods or be so vague as to be almost useless. Our expectations for a controlled experiment are quite different from our expectations from an ethnographic case study. Therefore, we have different standards for different methods (e.g. questionnaire survey, systematic literature review, action research).
-2. Models of the software engineering community's expectations. That is, we don't just make up the empirical standards based on a single person's opinion. The standards should reflect the views of the community. Obviously not everyone agrees on every point. However, most of a standard should appear reasonable to most of the subset of our community that's familiar with that kind of research. Over time should help build consensus over time.
+1. Method-specific. Software engineering researchers use many different research methods. A single standard for all empirical research would either be biased against some methods or vague to the point of uselessness. We have totally different expectations for a controlled experiment and an ethnographic case study. Therefore, we need different standards for different methods.
+2. Models of the software engineering community's expectations. That is, most of a standard should appear reasonable to most of the subset of our community that's familiar with that kind of research. The standards should both reflect, and help build, consensus. 
   
 ## What are Empirical Standards for?
 
-The empirical standards have two main use cases:
+The empirical standards have three main uses:
 
 1. Fixing peer review
-2. Educating graduate students
+2. Designing better studies
+3. Educating graduate students
 
-Scholarly peer review is simultaneously “the lynchpin about which the wholebusiness of science is pivoted" [1] and "prejudiced, capricious, inefficient, ineffective, and generally unscientific” [2]. Peer review has many problems, but many of them boil down to this: reviewers make up their own evaluation criteria. Devising appropriate evaluation criteria for any given manuscript is really, really difficult, so most reviewers' criteria are not very good. Reviewers create criteria that are inconsistent with each others', the venue's, the editors, the methodological literature and---crucially---the authors. Reviewers create criteria that are factually wrong, unreasonable, and unforeseeable. In effect, the real criteria by which our research is judged are not merely opaque; they don't even exist until the manuscript is submitted. This is why peer review is so frustrating, unpredictable, and unscientific.   
+Scholarly peer review is simultaneously “the lynchpin about which the whole business of science is pivoted" [1] and "prejudiced, capricious, inefficient, ineffective, and generally unscientific” [2]. Many of the problems with peer review boild down to reviewers inventing their own evaluation criteria. Devising appropriate evaluation criteria for any given manuscript is extraordinarily difficult, so most reviewers' criteria are not very good. Reviewers create criteria that are inconsistent with other reviewers', the venue's, the editor's, the methodological literature and---crucially---the author's. In effect, the real criteria by which our research is judged are not merely opaque; they don't even exist until after the manuscript is submitted. This is why peer review is so frustrating, unpredictable, and unscientific. 
+
+Empirical standards are the secret to fixing this situation. With the standards, all the reviewers use the same criteria and the authors know the criteria in advance. Used appropriately, the standards discourage or prevent reviewers from either accepting research with fatal flaws or rejecting research based on bogus criteria. 
+
+Obviously, if authors have these criteria in advance, they can use the criteria to design more rigorous studies. There's a lot to remember when designing a study, and robust methodological training is rare in our community. The standards provide concise, convenient checklists to help us remember all the core practices for a given method.  
+
+The standards can also be used for educational purposes. While they cannot replace a good methods textbook, the lists of references and exemplars can be used to construct reading lists, and the specific attributes can be used to sheppherd graduate students through their study designs and paper write-ups.  
 
 ## Repository Structure
 
