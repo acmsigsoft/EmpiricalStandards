@@ -1,8 +1,8 @@
-# EmpiricalStandards
+# Empirical Standards
 
 This repository contains the ACM SIGSOFT Empirical Standards for researchers, peer reviewers, editors and publications venues.
 
-The standards themselves can be found in the _Standards_ directory. There is a **General Standard**, which applies to all empirical research, and a set of specific standards, which apply to specific research methods such as **Case Studies**, **Controlled Experiments** and **Systematic Literature Reviews**.
+The standards themselves can be found in the _docs_ directory. There is a **General Standard**, which applies to all empirical research, and a set of specific standards, which apply to specific research methods such as **Case Studies**, **Controlled Experiments** and **Systematic Literature Reviews**.
 
 In the _Supplements_ directory, you will find a set of supplemental standards that address cross-cutting concerns including **Information Visualization**,  **Sampling** and **Inter-rater Reliability and Agreement**. 
 
