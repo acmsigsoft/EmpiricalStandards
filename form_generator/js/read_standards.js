@@ -1,3 +1,4 @@
+//This function reads in the file name and passes it onto the next method
 function getParameterByName(param_name, url = window.location.href){
 	var params = location.search&&location.search.substr(1).replace(/\+/gi," ").split("&");
 	var param_values = [];
@@ -11,7 +12,7 @@ function getParameterByName(param_name, url = window.location.href){
 	}
 	return param_values;
 }
-
+//Generate relative path for each standard document
 function readSpecificEmpiricalStandard(standard_name){
 	var mdFile = new XMLHttpRequest();
 	var loc = window.location.pathname;
@@ -34,6 +35,8 @@ function readSpecificEmpiricalStandard(standard_name){
 	return empirical_standard;
 }
 
+//This function creates tooltips for text
+// Anything between / and / are known as regular expressions
 function createTooltip(checklistItemText, line_text, footnotes){
 	footnote_sups = line_text.match(/(.*?)\{sup\}\[\d+\]\(#[\w\d_]+\)\{\/sup\}(.*?)/g);
 	if(footnote_sups){
@@ -67,6 +70,7 @@ function createTooltip(checklistItemText, line_text, footnotes){
 	return checklistItemText;
 }
 
+//The text from the MD file is converted to HTML using this method
 function fromMDtoHTMLformat(text){
 	// Bold text
 	if (text.match(/\*\*(.*?)\*\*/g) != null)
@@ -83,6 +87,8 @@ function fromMDtoHTMLformat(text){
 	return text;
 }
 
+//This function is primarily responsible for controlling the displaying of the deviation blocks
+// in the checklist.
 function show_hide_accept_message() {
 	role = getParameterByName('role');
 	checklist_yes_not_checked_count = $('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length;
@@ -91,13 +97,15 @@ function show_hide_accept_message() {
 	justification_yes_checked_count = $('input[class="justificationRadioYes"][type="radio"][value="yes"]:checked').length;
 	justification_no_checked_count = $('input[class="justificationRadioNo"][type="radio"][value="no"]:checked').length;
 
+	//check if the role selected is phase review (one phase or two phase)
 	if (role == "\"phase\""){
 		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count+justification_no_checked_count))
 			document.getElementById("checklist_submit").disabled = false;
 		else
 			document.getElementById("checklist_submit").disabled = true;
 	}
-	
+
+	//check if all 'yes' are checked
 	if(checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count)){
 		document.getElementById("accept_manuscript").style.display = "block";
 		//document.getElementById("deviation_unreasonable").style.display = "block";
@@ -131,15 +139,14 @@ function show_hide_accept_message() {
 		}
 	}
 }
-
+//this function manages the display of the deviation block, which is dependent upon user input
 function show_deviation_block() {
 	id = this.id.replace("checklist-radio:No:", "")
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "block";
-
 	show_hide_accept_message();
 }
-
+//this function manages the display of the deviation block, which is dependent upon user input
 function hide_deviation_block() {
 	id = this.id.replace("checklist-radio:Yes:", "")
 	hide_other_messages(id);
@@ -178,6 +185,7 @@ function hide_other_messages(id) {
 	catch(err) {}
 }
 
+//this function creates a deviation block for all Essential items in the standards
 function deviation_justification() {
 	// (No-Yes) deviation is justified
 	if(this.id.includes("deviation_block-radio:Yes:")){
@@ -311,26 +319,6 @@ function generate_reviewer_deviation_block(checklistItem_id) {
 	deviation_block.appendChild(deviation_justified);
 	deviation_block.appendChild(deviation_not_justified);
 	return deviation_block;
-	/*var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "does the manuscript justify the deviation?", checklistItem_id, 2.40);
-	// Reviewer-specific deviation justification block
-	var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "justificationRadio", "is the <b>justification</b> reasonable?", checklistItem_id, 2.06);
-	var deviation_not_justified = generate_question_block_with_yes_no_radio_answers("deviation_not_justified", "justificationRadio", "is the <b>deviation</b> reasonable?", checklistItem_id, 2.06);
-	// Reviewer-specific messages
-	// (No-Yes-Yes)
-	var justification_reasonable = generate_message("justification_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Deviation is acceptable. <b>Not</b> grounds for rejection.", 2.80, -1.07);
-	// (No-Yes-No)
-	var justification_unreasonable = generate_message("justification_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the justification is unreasonable and suggest possible fixes. This is grounds for rejection unless the fix is trivial.", 2.80, -1.07);
-	// (No-No-Yes)
-	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review how the manuscript should justify the deviation. <b>Not</b> grounds for rejection.", 2.80, -1.07);
-	// (No-No-No)
-	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "&rdsh;&nbsp; Please explain in your review why the deviation is unreasonable and suggest possible fixes. This is grounds for rejection.", 2.80, -1.07);
-	deviation_block.appendChild(deviation_justified);
-	deviation_block.appendChild(deviation_not_justified);
-	deviation_block.appendChild(justification_reasonable);
-	deviation_block.appendChild(justification_unreasonable);
-	deviation_block.appendChild(deviation_reasonable);
-	deviation_block.appendChild(deviation_unreasonable);
-	return deviation_block;*/
 }
 function generate_phase_deviation_block(checklistItem_id) {
 	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40);
@@ -405,7 +393,6 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 				checklistRadioYes.value = "yes";
 				checklistRadioNo.value = "no";
 
-
 				// Generate a deviation block
 				var deviation_block;
 				if(role == "\"author\"")
@@ -437,7 +424,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 	}
 	return checklists;
 }
-
+//sorting all the standards, engineering research and mixed methods always displayed before any other standards regardless of any input
 function sortStandards(keys){
 	var sorted_keys = [];
 	if (keys.includes("\"Engineering Research\"")){
@@ -614,6 +601,7 @@ function generateStandardChecklist(){
 
 	document.body.appendChild(container);
 }
+//download the file as a checklist
 function saveFile(){
 	var checklists = document.getElementById('checklists');
 	var generated_text = '=================\n' +
@@ -640,7 +628,6 @@ function saveFile(){
 						var regex7 =/ \(.+\)/g;
 						var regex8 = /<i>/g;
 						var regex9 = /<\/i>/g;
-
 
 						if (li_text.match(regex2) != null)
 							li_text = li_text.replace(regex2, "");
