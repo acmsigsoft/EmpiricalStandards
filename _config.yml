@@ -2,7 +2,7 @@ theme: minima
 markdown: kramdown
 title: Empirical Standards
 description: Empirical standards for conducting and evaluating research in software engineering
-menu_pages:
+header_pages:
   - tab_01_about.md
   - tab_02_tools.md
   - tab_03_standards.md
