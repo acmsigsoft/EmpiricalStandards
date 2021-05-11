@@ -7,27 +7,27 @@ layout: default
 		<title>Empirical Standards</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="/form_generator/css/appearance.css">
-        <link rel="stylesheet" href="/form_generator/css/tooltip.css">
+		<link rel="stylesheet" href="../form_generator/css/appearance.css">
+        <link rel="stylesheet" href="../form_generator/css/tooltip.css">
     </head>
     <body>
 	<div id="container">
 	  <h1>Empirical Standards Checklist Generator</h1>
-	  <form id="authorForm" action="/form_generator/Checklist.html" method="get">
+	  <form id="authorForm" action="../form_generator/Checklist.html" method="get">
 	    <input type="hidden" name="role" value="author">
 		  <h3>Authors:</h3> 
 		  <ul>
 		  		<li><input type="submit" class="btn-link" value="Generate a generic pre-submission checklist"></li>
 		  </ul>
       </form>
-	  <form id="reviewerForm" action="/form_generator/Checklist.html" method="get">
+	  <form id="reviewerForm" action="../form_generator/Checklist.html" method="get">
 	    <input type="hidden" name="role" value="reviewer">
         <h3>Reviewers:</h3>
 			<ul>
 				<!--<li><input type="submit" class="btn-link" value="Generate a review checklist for EASE 2021"></li>-->
 			</ul>
       </form>
-		<form id="revieweForm" action="/form_generator/Checklist.html" method="get">
+		<form id="revieweForm" action="../form_generator/Checklist.html" method="get">
 			<input type="hidden" name="role" value="phase">
 			<ul>
 				<li><input type="submit" class="btn-link" value="Generate a checklist for one-phase review (most conferences)"></li><br>
