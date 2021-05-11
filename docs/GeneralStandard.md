@@ -1,6 +1,6 @@
 # The General Standard 
 
-<standard name = "General Standard">
+<standard name="General Standard">
 
 ## Application 
 

@@ -18,7 +18,7 @@ function readSpecificEmpiricalStandard(standard_name){
 	var loc = window.location.pathname;
 	var dir = loc.substring(0, loc.lastIndexOf('/'));
 	var standard_file_name = standard_name.replaceAll("\"", "").replace(" ", "");
-	var standard_file_path = "./docs/" + standard_file_name + ".md";
+	var standard_file_path = "/docs/" + standard_file_name + ".md";
 	var empirical_standard = "";
 	mdFile.open("GET", standard_file_path, false);
 	mdFile.onreadystatechange = function(){
@@ -26,10 +26,10 @@ function readSpecificEmpiricalStandard(standard_name){
 			if (mdFile.status === 200  || mdFile.status == 0)
 				empirical_standard = mdFile.responseText;
 			else
-				alert("Can't read " + standard_file_name + ".md");
+				alert("Can't read " + standard_file_path);
 		}
 		else
-			alert("Can't read " + standard_file_name + ".md");
+			alert("Can't read " + standard_file_path);
 	}
 	mdFile.send(null);
 	return empirical_standard;
@@ -443,6 +443,12 @@ function generateStandardChecklist(){
 	standard_keys = getParameterByName('standard');
 	standard_keys = sortStandards(standard_keys);
 	role = getParameterByName('role');
+	
+	var wrappers = document.getElementsByClassName('wrapper');
+	var wrapper = null;
+	if (wrappers.length > 0)
+		wrapper = wrappers[1];
+
 	var container = document.createElement("DIV");
 	container.id = "container";
 
@@ -599,7 +605,11 @@ function generateStandardChecklist(){
 	}
 	container.appendChild(UL);
 
-	document.body.appendChild(container);
+	if (wrapper == null)
+		document.body.appendChild(container);
+	else
+		wrapper.appendChild(container);
+		
 }
 //download the file as a checklist
 function saveFile(){
@@ -655,12 +665,12 @@ function saveFile(){
 									generated_text += 'R' + '\t   ' + li_text + '\r\n';
 								else{
 									var fixable_deviation = li.getElementsByClassName('justificationRadioYes')[0];
-									generated_text += (fixable_deviation.checked ? 'F' : 'U') + '  \t ' + li_text + '\r\n';
+									generated_text += (fixable_deviation.checked ? 'F' : 'U') + '\t   ' + li_text + '\r\n';
 								}
 							}
 						}
 						else
-							generated_text += (li.children[0].checked ? 'Y' : 'N') + ' \t  ' + li_text + '\r\n';
+							generated_text += (li.children[0].checked ? 'Y' : 'N') + '\t   ' + li_text + '\r\n';
 					}
 				}
 			}
