@@ -1,13 +1,4 @@
-html {
-	box-sizing: border-box;
-}
 
-body {
-	display: block;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 25px;
-}
 ul{
 	padding-left: 20px;
 }
