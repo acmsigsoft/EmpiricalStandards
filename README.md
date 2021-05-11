@@ -1,9 +1,5 @@
 # Empirical Standards
 
-This repository contains the ACM SIGSOFT Empirical Standards for researchers, peer reviewers, editors and publications venues.
-
-## What's an Empirical Standard?
-
 An _Empirical Standard_ is a brief public document that communicates expectations for emprical research. Here _empirical_ denotes research that uses data. The data can be qualitative or quantitative; real or synthetic. _Empirical_ distinguishes research that involves collecting and analyzing data from other kinds of scholarship like a mathematical proof or a philosophical treatise. 
 
 Moreover, our empirical standards are:
@@ -27,21 +23,24 @@ Obviously, if authors have these criteria in advance, they can use the criteria 
 
 The standards can also be used for educational purposes. While they cannot replace a good methods textbook, the lists of references and exemplars can be used to construct reading lists, and the specific attributes can be used to sheppherd graduate students through their study designs and paper write-ups.  
 
+## Creation and Maintenance
+
+You can learn more about how the standards were created and are maintained by reading the empirical standards report [3].
+
+<!--
 ## Repository Structure
-
 The standards themselves can be found in the _docs_ directory. There is a **General Standard**, which applies to all empirical research, and a set of specific standards, which apply to specific research methods such as **Case Studies**, **Controlled Experiments** and **Systematic Literature Reviews**.
-
 In the _Supplements_ directory, you will find a set of supplemental standards that address cross-cutting concerns including **Information Visualization**,  **Sampling** and **Inter-rater Reliability and Agreement**. 
-
 In the _Resources_ directory you'll find slide decks, links to videos and other materials about the standards.
-
 In the main directory: 
  - Contributing.md gives advice on contributing to the standards
  - Empirical_Standards_Report.pdf explains how the standards were created, their costs and benefits, how they should be used and governed, and the scientific basis of the empirical standards initiative. 
  - HowToCite.md explains how to reference the standards 
  - LICENSE.md explains the creative commons license used by the standards
+-->
 
 ## References
 
 [1] John M Ziman. 1968.Public knowledge: An essay concerning the socialdimension of science. Vol. 519. CUP Archive.
 [2] Paul Ralph. 2016. Practical suggestions for improving scholarly peer review quality and reducing cycle times. _Communications of the Association for Information Systems_ 38, 1 (2016), Article 13.
+[3] Paul Ralph et al. 2020 "Empirical Standards for Software Engineering Research." _arXiv_:2010.03525.
