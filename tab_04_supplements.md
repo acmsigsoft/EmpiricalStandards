@@ -55,49 +55,49 @@ permalink: /Supplements/
 <div id="EthicsHumanParticipants" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/EthicsHumanParticipants.md %}{% endcapture %}
-    {{ std | markdownify }}
+    {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="EthicsSecondaryData" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/EthicsSecondaryData.md %}{% endcapture %}
-    {{ std | markdownify }}
+    {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="InformationVisualization" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/InformationVisualization.md %}{% endcapture %}
-    {{ std | markdownify }}
+    {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="InterRaterReliabilityAndAgreement" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/InterRaterReliabilityAndAgreement.md %}{% endcapture %}
-    {{ std | markdownify }}
+    {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="OpenScience" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/OpenScience.md %}{% endcapture %}
-    {{ std | markdownify }}
+    {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="RegisteredReports" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/RegisteredReports.md %}{% endcapture %}
-    {{ std | markdownify }}
+    {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="Sampling" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/Sampling.md %}{% endcapture %}
-    {{ std | markdownify }}
+    {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 

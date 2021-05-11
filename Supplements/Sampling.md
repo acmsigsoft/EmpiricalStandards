@@ -14,7 +14,7 @@ This standard applies to empirical research in which the researcher selects smal
 - [ ] explains the reasoning behind the selection of study objects (especially qualitative studies)
 - [ ] reports the sample size
  
- #### Essential only if representativeness is a goal 
+#### Essential only if representativeness is a goal 
 - [ ] states the theoretical population (what would the researcher like to generalize to?)
 - [ ] presents a replicable, concise, algorithmic account of how other researchers could derive the same sample
 - [ ] explicitly argues for representativeness (e.g. compares sample and population parameters, provides confidence interval and confidence level for sample size)
