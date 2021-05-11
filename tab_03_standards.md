@@ -62,7 +62,7 @@ permalink: /docs/
 <div id="GeneralStandard" class="tabcontent">
   <p>
     {% capture std %}{% include_relative docs/GeneralStandard.md %}{% endcapture %}
-    {{ std | remove: '<standard name="General Standard">' | remove: '<checklist name="Essential">' | remove: '<checklist name="Desirable">' | remove: '<checklist name="Extraordinary">' | remove: '</checklist>' | remove: '</standard>' | remove: '<footnote>' | remove: '</footnote>' | replace: '- [ ]', '- [ ]' | markdownify }}
+    {{ std | remove: '<standard name="General Standard">' | remove: '<checklist name="Essential">' | remove: '<checklist name="Desirable">' | remove: '<checklist name="Extraordinary">' | remove: '</checklist>' | remove: '</standard>' | remove: '<footnote>' | remove: '</footnote>' | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
