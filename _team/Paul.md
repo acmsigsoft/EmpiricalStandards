@@ -5,8 +5,8 @@ affiliation: Dalhousie University
 ---
 Paul has worked on designing the standards and the website.
 ---
-name: Paul Ralph
-title: Professor
+name: Arham Arshad
+title: Undergraduate Student
 affiliation: Dalhousie University
 ---
-Paul has worked on designing the standards and the website.
+Arham has worked on designing the standards and the website.
