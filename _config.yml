@@ -8,7 +8,7 @@ header_pages:
   - tab_03_standards.md
   - tab_04_supplements.md
   - tab_05_faq.md
-  - tab_06_people.md
+  - _team/contributors.md
 collections:
   team:
     output: true
