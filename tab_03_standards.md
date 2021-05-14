@@ -48,9 +48,11 @@ permalink: /docs/
   <button class="tablinks" onclick="openStandard(event, 'CaseStudy')">Case Study</button>
   <button class="tablinks" onclick="openStandard(event, 'CaseSurvey')">Case Survey</button>
   <button class="tablinks" onclick="openStandard(event, 'DataScience')">Data Science</button>
+  <button class="tablinks" onclick="openStandard(event, 'EngineeringResearch')">Engineering Research</button>
   <button class="tablinks" onclick="openStandard(event, 'Experiments')">Experiments</button>
   <button class="tablinks" onclick="openStandard(event, 'GroundedTheory')">Grounded Theory</button>
   <button class="tablinks" onclick="openStandard(event, 'Longitudinal')">Longitudinal</button>
+  <button class="tablinks" onclick="openStandard(event, 'MetaScience')">Meta Science </button>
   <button class="tablinks" onclick="openStandard(event, 'MixedMethods')">Mixed Methods </button>
   <button class="tablinks" onclick="openStandard(event, 'OptimizationStudies')">Optimization Studies</button>
   <button class="tablinks" onclick="openStandard(event, 'QualitativeSurveys')">Qualitative Surveys</button>
@@ -121,7 +123,12 @@ permalink: /docs/
     {{ std | remove: '<standard name="Longitudinal">' | remove: '<checklist name="Essential">' | remove: '<checklist name="Desirable">' | remove: '<checklist name="Extraordinary">' | remove: '</checklist>' | remove: '</standard>' | remove: '<footnote>' | remove: '</footnote>' | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
-
+<div id="MetaScience" class="tabcontent">
+  <p>
+    {% capture std %}{% include_relative docs/MetaScience.md %}{% endcapture %}
+    {{ std | remove: '<standard name="Meta Science">' | remove: '<checklist name="Essential">' | remove: '<checklist name="Desirable">' | remove: '<checklist name="Extraordinary">' | remove: '</checklist>' | remove: '</standard>' | remove: '<footnote>' | remove: '</footnote>' | replace: '- [ ]', '-' | markdownify }}
+  </p>
+</div>
 <div id="MixedMethods" class="tabcontent">
   <p>
     {% capture std %}{% include_relative docs/MixedMethods.md %}{% endcapture %}
