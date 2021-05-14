@@ -2,7 +2,7 @@
 
 ### Editor
 
-**Paul Ralph** ,_ PhD (British Columbia), B.Sc. / B.Comm (Memorial),_ is an award-winning scientist, author, consultant and Professor of Software Engineering at Dalhousie University in Halifax, Canada. Paul co-chaired the ACM SIGSOFT Paper and Peer Review Quality Initiative and has written extensively on research methodology for software engineering.
+**Paul Ralph** , *PhD (British Columbia), B.Sc. / B.Comm (Memorial),* is an award-winning scientist, author, consultant and Professor of Software Engineering at Dalhousie University in Halifax, Canada. Paul co-chaired the ACM SIGSOFT Paper and Peer Review Quality Initiative and has written extensively on research methodology for software engineering.
 
 ### Content Contributors
 
