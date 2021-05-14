@@ -1,4 +1,4 @@
-### List of Contributors
+## Contributors
 
 ### Director
 
@@ -44,7 +44,7 @@
 
 **Valentina Lenarduzzi**, LUT University, Finland [Longitudinal Studies]
 
-**Jorge**** Martínez**, Universidad Politécnica de Madrid, Spain [IRR/IRA]
+**Jorge Martínez**, Universidad Politécnica de Madrid, Spain [IRR/IRA]
 
 **Jorge Melegati**, Free University of Bozen-Bolzano, Italy [Case Survey]
 
