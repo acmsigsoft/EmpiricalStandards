@@ -1,4 +1,4 @@
-# Frequently Asked Questions about the Software Engineering Empirical Standards
+# Frequently Asked Questions
 
 ### Where can I find the standards?
 
