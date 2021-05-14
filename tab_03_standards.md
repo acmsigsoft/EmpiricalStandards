@@ -60,7 +60,7 @@ permalink: /docs/
   <button class="tablinks" onclick="openStandard(event, 'QuestionnaireSurveys')">Questionnaire Surveys</button>
   <button class="tablinks" onclick="openStandard(event, 'SystematicReviews')">Systematic Reviews</button>
 </div>
-
+<br>
 <div id="GeneralStandard" class="tabcontent">
   <p>
     {% capture std %}{% include_relative docs/GeneralStandard.md %}{% endcapture %}
