@@ -29,8 +29,8 @@ standards.
 ### Essential Attributes
 <checklist name="Essential">
 
-- [ ]   justifies the selection of the case or site that was studied
-- [ ]   describes the site of the intervention(s) in rich detail
+- [ ]   justifies the selection of the site(s) that was(were) studied
+- [ ]   describes the site(s) in rich detail
 - [ ]   describes the intervention(s) in detail
 - [ ]   describes the relationship between the researcher and the host organization<sup>[1](#myfootnote1)</sup>
 - [ ]   describes the longitudinal dimension of the research design (including the length of the study)
