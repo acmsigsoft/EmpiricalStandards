@@ -351,9 +351,9 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 	standard_H3.style = "font-size:20px;";
 	standard_H3.innerHTML = standardName + ":";
 	if (checklistName == "Essential")
-		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:3em; text-indent:-2.4em;";
+		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:1.2em; text-indent:-2.4em;";
 	else
-		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:3em; text-indent:-1.3em;";
+		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:0em; text-indent:-1.3em;";
 
 	//checklists.appendChild(standard_H3); //no subheadings
 	lines = checklistText.includes("- [ ]") ? checklistText.split("- [ ]") : checklistText.includes("-	") ? checklistText.split("-	") : checklistText.split("");
@@ -400,7 +400,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 					deviation_block = generate_author_deviation_block(checklistItem_id);
 				else if(role == "\"reviewer\"")
 					deviation_block = generate_reviewer_deviation_block(checklistItem_id);
-				else
+				else if(role == "\"phase\"")
 					deviation_block = generate_phase_deviation_block(checklistItem_id);
 
 				checklistItemText.appendChild(deviation_block);
@@ -458,7 +458,7 @@ function generateStandardChecklist(){
 		heading.innerHTML = "Pre-Submission Checklist";
 	else if(role == "\"reviewer\"")
 		heading.innerHTML = "Reviewer Checklist";
-	else
+	else if(role == "\"phase\"")
 		heading.innerHTML = "Reviewer Checklist";
 
 
@@ -469,6 +469,7 @@ function generateStandardChecklist(){
 	var EssentialUL = document.createElement("UL");
 	var EssentialH2 = document.createElement("H3");
 	EssentialUL.id = "Essential";
+	EssentialUL.style = "padding: 0px;";
 	EssentialH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	EssentialH2.innerHTML = "Essential";
 	EssentialUL.appendChild(EssentialH2);
@@ -476,20 +477,22 @@ function generateStandardChecklist(){
 	var DesirableUL = document.createElement("UL");
 	var DesirableH2 = document.createElement("H3");
 	DesirableUL.id = "Desirable";
+	DesirableUL.style = "padding: 0px;";
 	DesirableH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	DesirableH2.innerHTML = "Desirable";
 	DesirableUL.appendChild(DesirableH2);
 	if(role == "\"phase\"")
-		DesirableUL.style = "display:none;";
+		DesirableUL.style = "padding: 0px; display:none;";
 
 	var ExtraordinaryUL = document.createElement("UL");
 	var ExtraordinaryH2 = document.createElement("H3");
 	ExtraordinaryUL.id = "Extraordinary";
+	ExtraordinaryUL.style = "padding: 0px;";
 	ExtraordinaryH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	ExtraordinaryH2.innerHTML = "Extraordinary";
 	ExtraordinaryUL.appendChild(ExtraordinaryH2);
 	if(role == "\"phase\"")
-		ExtraordinaryUL.style = "display:none;";
+		ExtraordinaryUL.style = "padding: 0px; display:none;";
 
 	if (!standard_keys.includes("\"General Standard\""))
 		standard_keys.unshift("\"General Standard\"");
@@ -529,7 +532,7 @@ function generateStandardChecklist(){
 			standard_header_text.className = "standardHeaderText";
 			//standard_header_text.innerText = standardName;
 			Yes_No.style = "align:center; font-size: 80%; font-weight: bold;";
-			Yes_No.innerHTML = "&nbsp;&nbsp;&nbsp;yes no";
+			Yes_No.innerHTML = "&nbsp;yes no";
 			standard_header_rule.appendChild(standard_header_text);
 			if (checklistTag.getAttribute('name') == "Essential") {
 				//EssentialUL.appendChild(standard_header_rule);
