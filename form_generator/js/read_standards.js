@@ -57,7 +57,7 @@ function createTooltip(checklistItemText, line_text, footnotes){
 
 			var tooltipText = document.createElement("span");
 			tooltipText.className = "tooltiptext";
-			tooltipText.innerHTML = fromMDtoHTMLformat(footnotes[ftnt[2]]);
+			tooltipText.innerHTML = fromMDtoHTMLformat(footnotes[ftnt[2]]);			
 			tooltip.appendChild(tooltipText);
 			allTooltipsText.appendChild(tooltip);
 		}
@@ -372,7 +372,6 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
 			checklistItemLI.setAttribute("text", line_text);
-
 			if(line_text.includes("footnote"))
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			else
@@ -524,6 +523,10 @@ function generateStandardChecklist(){
 			checklistTag.innerHTML = checklistTag.innerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
 			checklistText = checklistTag.innerText.replaceAll(">", "").replaceAll("\n", "<br/>");
 			checklistText = fromMDtoHTMLformat(checklistText);
+
+			checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/', '/docs?standard=').replaceAll('.md', '');
+			checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/', '/Supplements?supplement=').replaceAll('.md', '');
+
 			checklists = convert_standard_checklists_to_html_checklists(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText, footnotes)
 			var Yes_No = document.createElement("div");
 			var standard_header_rule = document.createElement("div");
@@ -593,14 +596,14 @@ function generateStandardChecklist(){
 	var for_more_info = document.createElement("H2");
 	for_more_info.innerHTML = "For more information, see:";
 	container.appendChild(for_more_info);
-	var standards_path = "https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/"
+	var standards_path = "/docs?standard="
 	var UL = document.createElement("UL");
 	for (let key of standard_keys){
 		key = key.replaceAll("\"", "");
 		var LI = document.createElement("LI");
 		var LINK = document.createElement("A");
 		LINK.innerHTML = key;
-		LINK.href = standards_path + key.replaceAll(" ", "") + ".md";
+		LINK.href = standards_path + key.replaceAll(" ", "");
 		LINK.target = "_blank";
 		LINK.style = "font-size:23px;";
 		LINK.id = "standardNames";
