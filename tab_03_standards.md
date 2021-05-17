@@ -39,8 +39,26 @@ permalink: /docs/
   height: 100%;
 }
 </style>
+<script src="../form_generator/js/read_standards.js"></script>
+<script>
+function openStandardFromURL(evt) {
+  standardName = getParameterByName('standard')[0].replaceAll('"', '');
+
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(standardName).style.display = "block";
+  document.getElementById(standardName).className += " active";
+}
+</script>
 </head>
-<body>
+<body onload="openStandardFromURL(event)">
 
 <div class="tab">
   <button class="tablinks" onclick="openStandard(event, 'GeneralStandard')">General Standard</button>
@@ -175,6 +193,7 @@ permalink: /docs/
 <script>
 function openStandard(evt, standardName) {
   var i, tabcontent, tablinks;
+
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -184,7 +203,8 @@ function openStandard(evt, standardName) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(standardName).style.display = "block";
-  evt.currentTarget.className += " active";
+  document.getElementById(standardName).className += " active";
+  window.history.replaceState('', '', '?standard='+standardName);
 }
 </script>
    
