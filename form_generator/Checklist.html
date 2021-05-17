@@ -22,6 +22,10 @@ layout: default
                 checklist_name.innerHTML = "Review Checklist Generator";
                 checklist_instructions.innerHTML = "To generate a review checklist, select all the methods used in the manuscript and click \"submit\". You can mouse-over each method for a brief description or click on the method name to read the full standard. If the manuscripts proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research</em> and the empirical method used to assess the artifact. If the manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology</em> and both methods. If the mansucript does not report an empirical study (e.g. it's an opinion paper) or uses a method not listed here, do not use this generator.";
             }
+            else if(role == "phase"){
+                checklist_name.innerHTML = "Review Checklist Generator";
+                checklist_instructions.innerHTML = "To generate a review checklist, select all the methods used in the manuscript and click \"submit\". You can mouse-over each method for a brief description or click on the method name to read the full standard. If the manuscripts proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research</em> and the empirical method used to assess the artifact. If the manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology</em> and both methods. If the mansucript does not report an empirical study (e.g. it's an opinion paper) or uses a method not listed here, do not use this generator.";
+            }
             var instructions_div = document.getElementById("instructions");
             instructions_div.appendChild(checklist_name);
             instructions_div.appendChild(checklist_instructions);
