@@ -39,17 +39,35 @@ permalink: /Supplements/
   height: 100%;
 }
 </style>
+<script src="../form_generator/js/read_standards.js"></script>
+<script>
+function openSupplementFromURL(evt) {
+  supplementName = getParameterByName('supplement')[0].replaceAll('"', '');
+
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(supplementName).style.display = "block";
+  document.getElementById(supplementName).className += " active";
+}
+</script>
 </head>
-<body>
+<body onload="openSupplementFromURL(event)">
 
 <div class="tab">
-  <button class="tablinks" onclick="openStandard(event, 'EthicsHumanParticipants')">Ethics (Human Participants)</button>
-  <button class="tablinks" onclick="openStandard(event, 'EthicsSecondaryData')">Ethics (Secondary Human Data)</button>
-  <button class="tablinks" onclick="openStandard(event, 'InformationVisualization')">Information Visualization</button>
-  <button class="tablinks" onclick="openStandard(event, 'InterRaterReliabilityAndAgreement')">Inter-Rater Reliability and Agreement</button>
-  <button class="tablinks" onclick="openStandard(event, 'OpenScience')">Open Science</button>
-  <button class="tablinks" onclick="openStandard(event, 'RegisteredReports')">Registered Reports</button>
-  <button class="tablinks" onclick="openStandard(event, 'Sampling')">Sampling</button>
+  <button class="tablinks" onclick="openSupplement(event, 'EthicsHumanParticipants')">Ethics (Human Participants)</button>
+  <button class="tablinks" onclick="openSupplement(event, 'EthicsSecondaryData')">Ethics (Secondary Human Data)</button>
+  <button class="tablinks" onclick="openSupplement(event, 'InformationVisualization')">Information Visualization</button>
+  <button class="tablinks" onclick="openSupplement(event, 'InterRaterReliabilityAndAgreement')">Inter-Rater Reliability and Agreement</button>
+  <button class="tablinks" onclick="openSupplement(event, 'OpenScience')">Open Science</button>
+  <button class="tablinks" onclick="openSupplement(event, 'RegisteredReports')">Registered Reports</button>
+  <button class="tablinks" onclick="openSupplement(event, 'Sampling')">Sampling</button>
 </div>
 
 <div id="EthicsHumanParticipants" class="tabcontent">
@@ -102,8 +120,9 @@ permalink: /Supplements/
 </div>
 
 <script>
-function openStandard(evt, standardName) {
+function openSupplement(evt, supplementName) {
   var i, tabcontent, tablinks;
+
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
@@ -112,8 +131,9 @@ function openStandard(evt, standardName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(standardName).style.display = "block";
-  evt.currentTarget.className += " active";
+  document.getElementById(supplementName).style.display = "block";
+  document.getElementById(supplementName).className += " active";
+  window.history.replaceState('', '', '?supplement='+supplementName);
 }
 </script>
    
