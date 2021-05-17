@@ -596,7 +596,7 @@ function generateStandardChecklist(){
 	var for_more_info = document.createElement("H2");
 	for_more_info.innerHTML = "For more information, see:";
 	container.appendChild(for_more_info);
-	var standards_path = "/docs?standard="
+	var standards_path = "../docs?standard="
 	var UL = document.createElement("UL");
 	for (let key of standard_keys){
 		key = key.replaceAll("\"", "");
