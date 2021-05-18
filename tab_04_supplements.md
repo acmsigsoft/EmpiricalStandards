@@ -54,20 +54,20 @@ function openSupplementFromURL(evt) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(supplementName).style.display = "block";
-  document.getElementById(supplementName).className += " active";
+  document.getElementById(supplementName+'_b').className += " active";
 }
 </script>
 </head>
 <body onload="openSupplementFromURL(event)">
 
 <div class="tab">
-  <button class="tablinks" onclick="openSupplement(event, 'EthicsHumanParticipants')">Ethics (Human Participants)</button>
-  <button class="tablinks" onclick="openSupplement(event, 'EthicsSecondaryData')">Ethics (Secondary Human Data)</button>
-  <button class="tablinks" onclick="openSupplement(event, 'InformationVisualization')">Information Visualization</button>
-  <button class="tablinks" onclick="openSupplement(event, 'InterRaterReliabilityAndAgreement')">Inter-Rater Reliability and Agreement</button>
-  <button class="tablinks" onclick="openSupplement(event, 'OpenScience')">Open Science</button>
-  <button class="tablinks" onclick="openSupplement(event, 'RegisteredReports')">Registered Reports</button>
-  <button class="tablinks" onclick="openSupplement(event, 'Sampling')">Sampling</button>
+  <button id="EthicsHumanParticipants_b"           class="tablinks" onclick="openSupplement(event, 'EthicsHumanParticipants')">Ethics (Human Participants)</button>
+  <button id="EthicsSecondaryData_b"               class="tablinks" onclick="openSupplement(event, 'EthicsSecondaryData')">Ethics (Secondary Human Data)</button>
+  <button id="InformationVisualization_b"          class="tablinks" onclick="openSupplement(event, 'InformationVisualization')">Information Visualization</button>
+  <button id="InterRaterReliabilityAndAgreement_b" class="tablinks" onclick="openSupplement(event, 'InterRaterReliabilityAndAgreement')">Inter-Rater Reliability and Agreement</button>
+  <button id="OpenScience_b"                       class="tablinks" onclick="openSupplement(event, 'OpenScience')">Open Science</button>
+  <button id="RegisteredReports_b"                 class="tablinks" onclick="openSupplement(event, 'RegisteredReports')">Registered Reports</button>
+  <button id="Sampling_b"                          class="tablinks" onclick="openSupplement(event, 'Sampling')">Sampling</button>
 </div>
 
 <div id="EthicsHumanParticipants" class="tabcontent">
@@ -132,7 +132,7 @@ function openSupplement(evt, supplementName) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(supplementName).style.display = "block";
-  document.getElementById(supplementName).className += " active";
+  evt.currentTarget.className += " active";
   window.history.replaceState('', '', '?supplement='+supplementName);
 }
 </script>

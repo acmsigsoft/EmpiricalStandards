@@ -54,29 +54,29 @@ function openStandardFromURL(evt) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(standardName).style.display = "block";
-  document.getElementById(standardName).className += " active";
+  document.getElementById(standardName+'_b').className += " active";
 }
 </script>
 </head>
 <body onload="openStandardFromURL(event)">
 
 <div class="tab">
-  <button class="tablinks" onclick="openStandard(event, 'GeneralStandard')">General Standard</button>
-  <button class="tablinks" onclick="openStandard(event, 'ActionResearch')">Action Research</button>
-  <button class="tablinks" onclick="openStandard(event, 'CaseStudy')">Case Study</button>
-  <button class="tablinks" onclick="openStandard(event, 'CaseSurvey')">Case Survey</button>
-  <button class="tablinks" onclick="openStandard(event, 'DataScience')">Data Science</button>
-  <button class="tablinks" onclick="openStandard(event, 'EngineeringResearch')">Engineering Research</button>
-  <button class="tablinks" onclick="openStandard(event, 'Experiments')">Experiments</button>
-  <button class="tablinks" onclick="openStandard(event, 'GroundedTheory')">Grounded Theory</button>
-  <button class="tablinks" onclick="openStandard(event, 'Longitudinal')">Longitudinal</button>
-  <button class="tablinks" onclick="openStandard(event, 'MetaScience')">Meta Science </button>
-  <button class="tablinks" onclick="openStandard(event, 'MixedMethods')">Mixed Methods </button>
-  <button class="tablinks" onclick="openStandard(event, 'OptimizationStudies')">Optimization Studies</button>
-  <button class="tablinks" onclick="openStandard(event, 'QualitativeSurveys')">Qualitative Surveys</button>
-  <button class="tablinks" onclick="openStandard(event, 'QuantitativeSimulation')">Quantitative Simulation</button>
-  <button class="tablinks" onclick="openStandard(event, 'QuestionnaireSurveys')">Questionnaire Surveys</button>
-  <button class="tablinks" onclick="openStandard(event, 'SystematicReviews')">Systematic Reviews</button>
+  <button id="GeneralStandard_b"        class="tablinks" onclick="openStandard(event, 'GeneralStandard')">General Standard</button>
+  <button id="ActionResearch_b"         class="tablinks" onclick="openStandard(event, 'ActionResearch')">Action Research</button>
+  <button id="CaseStudy_b"              class="tablinks" onclick="openStandard(event, 'CaseStudy')">Case Study</button>
+  <button id="CaseSurvey_b"             class="tablinks" onclick="openStandard(event, 'CaseSurvey')">Case Survey</button>
+  <button id="DataScience_b"            class="tablinks" onclick="openStandard(event, 'DataScience')">Data Science</button>
+  <button id="EngineeringResearch_b"    class="tablinks" onclick="openStandard(event, 'EngineeringResearch')">Engineering Research</button>
+  <button id="Experiments_b"            class="tablinks" onclick="openStandard(event, 'Experiments')">Experiments</button>
+  <button id="GroundedTheory_b"         class="tablinks" onclick="openStandard(event, 'GroundedTheory')">Grounded Theory</button>
+  <button id="Longitudinal_b"           class="tablinks" onclick="openStandard(event, 'Longitudinal')">Longitudinal</button>
+  <button id="MetaScience_b"            class="tablinks" onclick="openStandard(event, 'MetaScience')">Meta Science </button>
+  <button id="MixedMethods_b"           class="tablinks" onclick="openStandard(event, 'MixedMethods')">Mixed Methods </button>
+  <button id="OptimizationStudies_b"    class="tablinks" onclick="openStandard(event, 'OptimizationStudies')">Optimization Studies</button>
+  <button id="QualitativeSurveys_b"     class="tablinks" onclick="openStandard(event, 'QualitativeSurveys')">Qualitative Surveys</button>
+  <button id="QuantitativeSimulation_b" class="tablinks" onclick="openStandard(event, 'QuantitativeSimulation')">Quantitative Simulation</button>
+  <button id="QuestionnaireSurveys_b"   class="tablinks" onclick="openStandard(event, 'QuestionnaireSurveys')">Questionnaire Surveys</button>
+  <button id="SystematicReviews_b"      class="tablinks" onclick="openStandard(event, 'SystematicReviews')">Systematic Reviews</button>
 </div>
 <br>
 <br>
@@ -203,7 +203,7 @@ function openStandard(evt, standardName) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
   document.getElementById(standardName).style.display = "block";
-  document.getElementById(standardName).className += " active";
+  evt.currentTarget.className += " active";
   window.history.replaceState('', '', '?standard='+standardName);
 }
 </script>
