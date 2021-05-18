@@ -98,8 +98,8 @@ function show_hide_accept_message() {
 	justification_yes_checked_count = $('input[class="justificationRadioYes"][type="radio"][value="yes"]:checked').length;
 	justification_no_checked_count = $('input[class="justificationRadioNo"][type="radio"][value="no"]:checked').length;
 
-	//check if the role selected is phase review (one phase or two phase)
-	if (role == "\"phase\""){
+	//check if the role selected is 'reviewer' (one-phase or two-phase)
+	if (role == "\"reviewer\""){
 		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count+justification_no_checked_count))
 			document.getElementById("checklist_submit").disabled = false;
 		else
@@ -110,7 +110,7 @@ function show_hide_accept_message() {
 	if(checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count)){
 		document.getElementById("accept_manuscript").style.display = "block";
 		//document.getElementById("deviation_unreasonable").style.display = "block";
-		if (role == "\"phase\""){
+		if (role == "\"reviewer\""){
 			document.getElementById("deviation_unreasonable").style.display = "none";
 			if (justification_yes_checked_count > 0 & justification_no_checked_count == 0)
 				document.getElementById("deviation_reasonable").style.display = "block";
@@ -122,7 +122,7 @@ function show_hide_accept_message() {
 	}
 	else{
 		document.getElementById("accept_manuscript").style.display = "none";
-		if (role == "\"phase\""){
+		if (role == "\"reviewer\""){
 			document.getElementById("Desirable").style.display = "none";
 			document.getElementById("Extraordinary").style.display = "none";
 			if (justification_no_checked_count == 0 & justification_yes_checked_count == 0){
@@ -309,7 +309,7 @@ function generate_author_deviation_block(checklistItem_id) {
 	return deviation_block;
 }
 
-function generate_reviewer_deviation_block(checklistItem_id) {
+function generate_ease_reviewer_deviation_block(checklistItem_id) {
 	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "<div class=\"tooltip\"> is the deviation reasonable?<span class=\"tooltiptext\">If the manuscript justifies the deviation, consider the justification offered.</span></div>", checklistItem_id, 2.4);
 
 	// Author-specific deviation justification message
@@ -321,7 +321,7 @@ function generate_reviewer_deviation_block(checklistItem_id) {
 	deviation_block.appendChild(deviation_not_justified);
 	return deviation_block;
 }
-function generate_phase_deviation_block(checklistItem_id) {
+function generate_reviewer_deviation_block(checklistItem_id) {
 	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40);
 
 	// Reviewer-specific deviation justification block
@@ -397,10 +397,10 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 				var deviation_block;
 				if(role == "\"author\"")
 					deviation_block = generate_author_deviation_block(checklistItem_id);
+				else if(role == "\"ease-reviewer\"")
+					deviation_block = generate_ease_reviewer_deviation_block(checklistItem_id);
 				else if(role == "\"reviewer\"")
 					deviation_block = generate_reviewer_deviation_block(checklistItem_id);
-				else if(role == "\"phase\"")
-					deviation_block = generate_phase_deviation_block(checklistItem_id);
 
 				checklistItemText.appendChild(deviation_block);
 
@@ -455,9 +455,9 @@ function generateStandardChecklist(){
 	var heading = document.createElement("H1");
 	if(role == "\"author\"")
 		heading.innerHTML = "Pre-Submission Checklist";
-	else if(role == "\"reviewer\"")
+	else if(role == "\"ease-reviewer\"")
 		heading.innerHTML = "Reviewer Checklist";
-	else if(role == "\"phase\"")
+	else if(role == "\"reviewer\"")
 		heading.innerHTML = "Reviewer Checklist";
 
 
@@ -480,7 +480,7 @@ function generateStandardChecklist(){
 	DesirableH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	DesirableH2.innerHTML = "Desirable";
 	DesirableUL.appendChild(DesirableH2);
-	if(role == "\"phase\"")
+	if(role == "\"reviewer\"")
 		DesirableUL.style = "padding: 0px; display:none;";
 
 	var ExtraordinaryUL = document.createElement("UL");
@@ -490,7 +490,7 @@ function generateStandardChecklist(){
 	ExtraordinaryH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
 	ExtraordinaryH2.innerHTML = "Extraordinary";
 	ExtraordinaryUL.appendChild(ExtraordinaryH2);
-	if(role == "\"phase\"")
+	if(role == "\"reviewer\"")
 		ExtraordinaryUL.style = "padding: 0px; display:none;";
 
 	if (!standard_keys.includes("\"General Standard\""))
@@ -566,7 +566,7 @@ function generateStandardChecklist(){
 	var accept_manuscript = generate_message("accept_manuscript", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
 	form.appendChild(accept_manuscript);
 
-	if(role == "\"phase\""){
+	if(role == "\"reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
 		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "<b>REJECT</b>. In your review please explain the deviations and why they are not reasonable. Give constructive suggestions.", 2, 0);
 		form.appendChild(deviation_unreasonable);
@@ -583,7 +583,7 @@ function generateStandardChecklist(){
 	form.appendChild(DesirableUL);
 	form.appendChild(ExtraordinaryUL);
 
-	if(role == "\"phase\"") {
+	if(role == "\"reviewer\"") {
 		form.appendChild(submit);
 	}
 	container.appendChild(heading);
