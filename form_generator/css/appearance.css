@@ -1,7 +1,7 @@
 form{
 	font-size: 120%;
 }
-a:active {
+input:active {
   color: blue;
 }
 @media screen and (min-width: 401px) and (max-width: 785px)
