@@ -624,6 +624,21 @@ function saveFile(){
 	var generated_text = '=================\n' +
 		'Review Checklist\n' +
 		'=================\n';
+		
+	var accept = document.getElementById("accept_manuscript");
+	var unreasonable = document.getElementById("deviation_unreasonable");
+	var reasonable = document.getElementById("deviation_reasonable");
+
+	if(accept.style.display == "block")
+		generated_text += "\n" + accept.innerText + "\n";
+	else if(unreasonable.style.display == "block")
+		generated_text += "\n" + unreasonable.innerText + "\n";
+
+	if(reasonable.style.display == "block")
+		generated_text += reasonable.innerText + "\n";
+	else
+		generated_text += "";
+	
 	for (let list of checklists.children) {
 		if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
 			generated_text += '\n' + list.id + '\r\n';
@@ -683,20 +698,6 @@ function saveFile(){
 			}
 		}
 	}
-
-	var accept = document.getElementById("accept_manuscript");
-	var unreasonable = document.getElementById("deviation_unreasonable");
-	var reasonable = document.getElementById("deviation_reasonable");
-
-	if(accept.style.display == "block")
-		generated_text += "\n" + accept.innerText + "\n";
-	else if(unreasonable.style.display == "block")
-		generated_text += "\n" + unreasonable.innerText + "\n";
-
-	if(reasonable.style.display == "block")
-		generated_text += reasonable.innerText + "\n";
-	else
-		generated_text += "";
 
 	generated_text += "\n" +
 		"=======\n" +
