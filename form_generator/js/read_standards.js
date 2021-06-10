@@ -629,19 +629,25 @@ function saveFile(){
 	var unreasonable = document.getElementById("deviation_unreasonable");
 	var reasonable = document.getElementById("deviation_reasonable");
 
-	if(accept.style.display == "block")
+	if(accept.style.display == "block") {
 		generated_text += "\n" + accept.innerText + "\n";
-	else if(unreasonable.style.display == "block")
+	} else if(unreasonable.style.display == "block") {
 		generated_text += "\n" + unreasonable.innerText + "\n";
+		generated_text += "\nReasons for Rejection\n";
+	}
 
-	if(reasonable.style.display == "block")
+	if(reasonable.style.display == "block") {
 		generated_text += reasonable.innerText + "\n";
-	else
+		generated_text += "\nUnreasonable Deviations Requiring Revision\n";
+	} else {
 		generated_text += "";
+	}
+	
+	var accepted_list = "";
 	
 	for (let list of checklists.children) {
 		if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
-			generated_text += '\n' + list.id + '\r\n';
+			accepted_list += '\n' + list.id + '\r\n';
 			for (let ul of list.children) {
 				if(ul.tagName.toLowerCase() == 'ul'){
 					var i = 0;
@@ -680,11 +686,11 @@ function saveFile(){
 
 						if (list.id == 'Essential'){
 							if (li.children[0].checked)
-								generated_text +=  'Y' + '\t   ' + li_text + '\r\n';
+								accepted_list +=  'Y' + '\t   ' + li_text + '\r\n';
 							else{
 								var reasonable_deviation = li.getElementsByClassName('deviationRadioYes')[0];
 								if (reasonable_deviation.checked)
-									generated_text += 'R' + '\t   ' + li_text + '\r\n';
+									accepted_list += 'R' + '\t   ' + li_text + '\r\n';
 								else{
 									var fixable_deviation = li.getElementsByClassName('justificationRadioYes')[0];
 									generated_text += (fixable_deviation.checked ? 'F' : 'U') + '\t   ' + li_text + '\r\n';
@@ -692,12 +698,14 @@ function saveFile(){
 							}
 						}
 						else
-							generated_text += (li.children[0].checked ? 'Y' : 'N') + '\t   ' + li_text + '\r\n';
+							accepted_list += (li.children[0].checked ? 'Y' : 'N') + '\t   ' + li_text + '\r\n';
 					}
 				}
 			}
 		}
 	}
+	
+	generated_text += accepted_list;
 
 	generated_text += "\n" +
 		"=======\n" +
