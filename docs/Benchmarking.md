@@ -1,7 +1,7 @@
 # Benchmarking
-<standard name="Benchmarking">
+<standard name="Benchmarking (of Software Systems)">
 
-*In empirical software engineering research, benchmarking can be used for comparing different methods, techniques, and tools.*
+*In empirical software engineering research, benchmarking can be used for comparing different methods, techniques, and tools for developing software systems.*
 
 ## Application 
 
