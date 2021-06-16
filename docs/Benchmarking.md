@@ -91,13 +91,15 @@ Walter F. Tichy. 2014. Where’s the Science in Software Engineering? Ubiquity S
 
 Sören Henning and Wilhelm Hasselbring. 2021. Theodolite: Scalability Benchmarking
 of Distributed Stream Processing Engines in Microservice Architectures.
-Big Data Research 25 (July 2021), 1–17. DOI: 10.1016/j.bdr.2021.100209
+Big Data Research 25 (July 2021), 1–17. DOI: [10.1016/j.bdr.2021.100209](https://doi.org/10.1016/j.bdr.2021.100209)
 
-Martin Grambow, Erik Wittern, and David Bermbach. 2020. Benchmarking the Performance of Microservice Applications. ACM SIGAPP Applied Computing Review, vol 20, issue 3, 20-34. DOI: 10.1145/3429204.3429206
+Guenter Hesse, Christoph Matthies, Michael Perscheid, Matthias Uflacker, and Hasso Plattner. 2021. ESPBench: The Enterprise Stream Processing Benchmark. In ACM/SPEC International Conference on Performance Engineering (ICPE '21). ACM, 201–212. DOI: [10.1145/3427921.3450242](https://doi.org/10.1016/j.bdr.2021.100209)
+
+Martin Grambow, Erik Wittern, and David Bermbach. 2020. Benchmarking the Performance of Microservice Applications. ACM SIGAPP Applied Computing Review, vol 20, issue 3, 20-34. DOI: [10.1145/3429204.3429206](https://doi.org/10.1016/j.bdr.2021.100209)
     
-Joakim von Kistowski, Simon Eismann, Norbert Schmitt, Andre Bauer, Johannes Grohmann, and Samuel Kounev. 2018. TeaStore: A Micro-Service Reference Application for Benchmarking, Modeling and Resource Management Research. In 2018 IEEE 26th International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS). IEEE, 223–236. DOI: 10.1109/mascots.2018.00030
+Joakim von Kistowski, Simon Eismann, Norbert Schmitt, Andre Bauer, Johannes Grohmann, and Samuel Kounev. 2018. TeaStore: A Micro-Service Reference Application for Benchmarking, Modeling and Resource Management Research. In 2018 IEEE 26th International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS). IEEE, 223–236. DOI: [10.1109/mascots.2018.00030](https://doi.org/10.1016/j.bdr.2021.100209)
 
-Jan Waller, Nils C. Ehmke, and Wilhelm Hasselbring. 2015. Including Performance Benchmarks into Continuous Integration to Enable DevOps. SIGSOFT Softw. Eng. Notes 40, 2 (March 2015), 1–4. DOI: 10.1145/2735399.2735416
+Jan Waller, Nils C. Ehmke, and Wilhelm Hasselbring. 2015. Including Performance Benchmarks into Continuous Integration to Enable DevOps. SIGSOFT Softw. Eng. Notes 40, 2 (March 2015), 1–4. DOI: [10.1145/2735399.2735416](https://doi.org/10.1016/j.bdr.2021.100209)
 
 ---
 
