@@ -45,7 +45,8 @@ If the study is conducted within a real-world context, see the **Case Study and 
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ]	tbd
+- [ ] provides empirical evidence for the relevance of a benchmark, e.g., by applying the **Systematic Reviews Standard**
+- [ ] provides empirical evidence for the usability of a benchmark, e.g., by applying the **Action Research Standard**
 
 </checklist>
      
