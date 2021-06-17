@@ -29,7 +29,7 @@
 <checklist name="Desirable">
 	
 - [ ]	provides replication package including protocol, search terms, search results, selection process results; complete dataset, analysis scripts; examples of coding, decision rules or edge cases
-- [ ]	mitigates sampling bias and publication bias, using some combination of: 
+- [ ]	mitigates sampling bias and publication bias, using some combination of:  
 (i) manual and keyword automated searches;   
 (ii) backward and forward snowballing searches;  
 (iii) checking profiles of prolific authors in the area;   
