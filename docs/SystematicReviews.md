@@ -22,7 +22,7 @@
 - [ ]	describes coding scheme(s) and their use
 - [ ]	clear chain of evidence from the extracted data to the answers to the research question(s)
 - [ ]	presents conclusions or recommendations for practitioners/non-specialists
-- [ ]	identifies method (e.g. systematic review, meta-analysis, mapping study, narrative synthesis, etc.)
+- [ ]	identifies type of review (e.g. scoping review, meta-analysis, systematic mapping study, narrative synthesis, case survey, critical review)
 </checklist>
 
 ### Desirable Attributes 
