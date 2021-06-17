@@ -27,9 +27,10 @@ If the study is conducted within a real-world context, see the **Case Study and 
 - [ ]   uses a standard benchmark or provides all details necessary for turning it into a standard benchmark, including making the benchmark tools available as open source
 - [ ]   allows different configurations of a system under test to compete on their merits without artificial limitations
 - [ ]   provides confidence that a benchmark result is accurate
+- [ ]   draws statistically grounded conclusions, e.g., by means of appropriate statistical methods, sufficiently long execution duration and sufficient number of experiment repetitions
 - [ ]   avoids roadblocks for users to run the benchmark in their test environments
 - [ ]   provides a replication package including datasets and analysis scripts (for the **Engineering Research (AKA Design Science) Standard** this a desirable attribute, for benchmarks this is an essential attribute)
-- [ ]   adheres to benchmarking best practices, e.g., regarding execution duration and experiment repetitions
+
 </checklist>
     
 ### Desirable Attributes
