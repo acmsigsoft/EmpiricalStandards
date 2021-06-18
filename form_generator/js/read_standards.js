@@ -92,87 +92,165 @@ function fromMDtoHTMLformat(text){
 // in the checklist.
 function show_hide_accept_message() {
 	role = getParameterByName('role');
-	checklist_yes_not_checked_count = $('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length;
-	checklist_no_checked_count = $('input[class="checklistRadioNo"][type="radio"][value="no"]:checked').length;
-	deviation_yes_checked_count = $('input[class="deviationRadioYes"][type="radio"][value="yes"]:checked').length;
-	justification_yes_checked_count = $('input[class="justificationRadioYes"][type="radio"][value="yes"]:checked').length;
-	justification_no_checked_count = $('input[class="justificationRadioNo"][type="radio"][value="no"]:checked').length;
 
+	// Number of yes's that are not checked
+	checklist_yes_not_checked_count = $('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length;
+
+	// First level no - Number of nos checked
+	checklist_no_checked_count = $('input[class="checklistRadioNo"][type="radio"][value="no"]:checked').length;
+
+	// Second level yes
+	deviation_yes_checked_count = $('input[class="deviationRadioYes"][type="radio"][value="yes"]:checked').length;
+
+	// Need to change to types
+	// justification_yes_checked_count = $('input[class="justificationRadioYes"][type="radio"][value="yes"]:checked').length;
+	// justification_no_checked_count = $('input[class="justificationRadioNo"][type="radio"][value="no"]:checked').length;
+
+	justification_type1_checked_count = $('input[class="justificationRadioType"][type="radio"][value="type1"]:checked').length;
+	justification_type2_checked_count = $('input[class="justificationRadioType"][type="radio"][value="type2"]:checked').length;
+	justification_type3_checked_count = $('input[class="justificationRadioType"][type="radio"][value="type3"]:checked').length;
+	justification_type4_checked_count = $('input[class="justificationRadioType"][type="radio"][value="type4"]:checked').length;
+
+	var msg = "";
+
+	// FOR SAVING THE FILE
+	// Making sure every attribute has an option selected. 
 	//check if the role selected is 'reviewer' (one-phase or two-phase)
 	if (role == "\"one-phase-reviewer\""){
-		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count+justification_no_checked_count))
+		
+		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_type1_checked_count+justification_type2_checked_count+justification_type3_checked_count+justification_type4_checked_count)){
+
 			document.getElementById("checklist_submit").disabled = false;
-		else
+
+
+			if (justification_type3_checked_count + justification_type4_checked_count > 0 ){
+
+				msg = "REJECT";
+
+			} else if (justification_type2_checked_count > 0) {
+				msg = "GATEKEEP";
+
+			} else if (justification_type1_checked_count > 0) {
+				msg = "ACCEPT";
+
+			} else {
+				msg = "ACCEPT";
+
+			}
+
+			document.getElementById("accept_manuscript").innerHTML = msg;
+
+
+			document.getElementById("accept_manuscript").style.display = "block";
+		}
+			
+		else{
 			document.getElementById("checklist_submit").disabled = true;
+
+			
+			document.getElementById("accept_manuscript").style.display = "none";
+		}
 	}
 
 	else if (role == "\"two-phase-reviewer\""){
-		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count+justification_no_checked_count))
+		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_type1_checked_count+justification_type2_checked_count+justification_type3_checked_count+justification_type4_checked_count)){
+
 			document.getElementById("checklist_submit").disabled = false;
-		else
+
+			if (justification_type4_checked_count > 0 ){
+
+				msg = "REJECT";
+
+			} else if (justification_type3_checked_count > 0) {
+				msg = "REJECT BUT INVITE RESUBMISSION";
+
+			} else if (justification_type2_checked_count > 0) {
+				msg = "MAJOR REVISION";
+			}
+			
+			else if (justification_type1_checked_count > 0) {
+				msg = "MINOR REVISION";
+
+			} else {
+				msg = "ACCEPT";
+
+			}
+
+			document.getElementById("accept_manuscript").innerHTML = msg;
+			document.getElementById("accept_manuscript").style.display = "block";
+		}
+			
+		else{
 			document.getElementById("checklist_submit").disabled = true;
-	}
-
-	//check if all 'yes' are checked
-	if(checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count)){
-		document.getElementById("accept_manuscript").style.display = "block";
-		//document.getElementById("deviation_unreasonable").style.display = "block";
-		if (role == "\"one-phase-reviewer\""){
-			document.getElementById("deviation_unreasonable").style.display = "none";
-			if (justification_yes_checked_count > 0 & justification_no_checked_count == 0)
-				document.getElementById("deviation_reasonable").style.display = "block";
-			else
-				document.getElementById("deviation_reasonable").style.display = "none";
-			document.getElementById("Desirable").style.display = "block";
-			document.getElementById("Extraordinary").style.display = "block";
+			document.getElementById("accept_manuscript").style.display = "none";
 		}
 
-		else if (role == "\"two-phase-reviewer\""){
-			document.getElementById("deviation_unreasonable").style.display = "none";
-			if (justification_yes_checked_count > 0 & justification_no_checked_count == 0)
-				document.getElementById("deviation_reasonable").style.display = "block";
-			else
-				document.getElementById("deviation_reasonable").style.display = "none";
-			document.getElementById("Desirable").style.display = "block";
-			document.getElementById("Extraordinary").style.display = "block";
-		}
 	}
-	else{
-		document.getElementById("accept_manuscript").style.display = "none";
-		if (role == "\"one-phase-reviewer\""){
-			document.getElementById("Desirable").style.display = "none";
-			document.getElementById("Extraordinary").style.display = "none";
-			if (justification_no_checked_count == 0 & justification_yes_checked_count == 0){
-				document.getElementById("deviation_reasonable").style.display = "none";
-				document.getElementById("deviation_unreasonable").style.display = "none";
-			}
-			else if (justification_no_checked_count > 0 & checklist_yes_not_checked_count == checklist_no_checked_count){
-				document.getElementById("deviation_reasonable").style.display = "none";
-				document.getElementById("deviation_unreasonable").style.display = "block";
-			}
-			else if (justification_yes_checked_count > 0 & checklist_yes_not_checked_count == checklist_no_checked_count){
-				document.getElementById("deviation_unreasonable").style.display = "none";
-				document.getElementById("deviation_reasonable").style.display = "block";
-			}
-		}
 
-		else if (role == "\"two-phase-reviewer\""){
-			document.getElementById("Desirable").style.display = "none";
-			document.getElementById("Extraordinary").style.display = "none";
-			if (justification_no_checked_count == 0 & justification_yes_checked_count == 0){
-				document.getElementById("deviation_reasonable").style.display = "none";
-				document.getElementById("deviation_unreasonable").style.display = "none";
-			}
-			else if (justification_no_checked_count > 0 & checklist_yes_not_checked_count == checklist_no_checked_count){
-				document.getElementById("deviation_reasonable").style.display = "none";
-				document.getElementById("deviation_unreasonable").style.display = "block";
-			}
-			else if (justification_yes_checked_count > 0 & checklist_yes_not_checked_count == checklist_no_checked_count){
-				document.getElementById("deviation_unreasonable").style.display = "none";
-				document.getElementById("deviation_reasonable").style.display = "block";
-			}
-		}
-	}
+
+	// // This is what I need to fix
+	// //check if all 'yes' are checked
+	// if(checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count)){
+	// 	document.getElementById("accept_manuscript").style.display = "block";
+	// 	//document.getElementById("deviation_unreasonable").style.display = "block";
+	// 	if (role == "\"one-phase-reviewer\""){
+	// 		document.getElementById("deviation_unreasonable").style.display = "none";
+	// 		if (justification_yes_checked_count > 0 & justification_no_checked_count == 0)
+	// 			document.getElementById("deviation_reasonable").style.display = "block";
+	// 		else
+	// 			document.getElementById("deviation_reasonable").style.display = "none";
+	// 		document.getElementById("Desirable").style.display = "block";
+	// 		document.getElementById("Extraordinary").style.display = "block";
+	// 	}
+
+	// 	else if (role == "\"two-phase-reviewer\""){
+	// 		document.getElementById("deviation_unreasonable").style.display = "none";
+	// 		if (justification_yes_checked_count > 0 & justification_no_checked_count == 0)
+	// 			document.getElementById("deviation_reasonable").style.display = "block";
+	// 		else
+	// 			document.getElementById("deviation_reasonable").style.display = "none";
+	// 		document.getElementById("Desirable").style.display = "block";
+	// 		document.getElementById("Extraordinary").style.display = "block";
+	// 	}
+	// }
+
+	// // Not all "yes" are checked
+	// else{
+	// 	document.getElementById("accept_manuscript").style.display = "none";
+	// 	if (role == "\"one-phase-reviewer\""){
+	// 		document.getElementById("Desirable").style.display = "none";
+	// 		document.getElementById("Extraordinary").style.display = "none";
+	// 		if (justification_no_checked_count == 0 & justification_yes_checked_count == 0){
+	// 			document.getElementById("deviation_reasonable").style.display = "none";
+	// 			document.getElementById("deviation_unreasonable").style.display = "none";
+	// 		}
+	// 		else if (justification_no_checked_count > 0 & checklist_yes_not_checked_count == checklist_no_checked_count){
+	// 			document.getElementById("deviation_reasonable").style.display = "none";
+	// 			document.getElementById("deviation_unreasonable").style.display = "block";
+	// 		}
+	// 		else if (justification_yes_checked_count > 0 & checklist_yes_not_checked_count == checklist_no_checked_count){
+	// 			document.getElementById("deviation_unreasonable").style.display = "none";
+	// 			document.getElementById("deviation_reasonable").style.display = "block";
+	// 		}
+	// 	}
+
+	// 	else if (role == "\"two-phase-reviewer\""){
+	// 		document.getElementById("Desirable").style.display = "none";
+	// 		document.getElementById("Extraordinary").style.display = "none";
+	// 		if (justification_no_checked_count == 0 & justification_yes_checked_count == 0){
+	// 			document.getElementById("deviation_reasonable").style.display = "none";
+	// 			document.getElementById("deviation_unreasonable").style.display = "none";
+	// 		}
+	// 		else if (justification_no_checked_count > 0 & checklist_yes_not_checked_count == checklist_no_checked_count){
+	// 			document.getElementById("deviation_reasonable").style.display = "none";
+	// 			document.getElementById("deviation_unreasonable").style.display = "block";
+	// 		}
+	// 		else if (justification_yes_checked_count > 0 & checklist_yes_not_checked_count == checklist_no_checked_count){
+	// 			document.getElementById("deviation_unreasonable").style.display = "none";
+	// 			document.getElementById("deviation_reasonable").style.display = "block";
+	// 		}
+	// 	}
+	// }
 }
 //this function manages the display of the deviation block, which is dependent upon user input
 function show_deviation_block() {
@@ -391,7 +469,7 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
     
     
         // className - deal with all of them
-        deviationRadioType.className = class_name + "Type"+i;
+        deviationRadioType.className = class_name + "Type";
     
     
         // These are the radio buttons of that element regardless of Type1 or Type2
