@@ -27,9 +27,10 @@ If the study is conducted within a real-world context, see the **Case Study and 
 - [ ]   uses a standard benchmark or provides all details necessary for turning it into a standard benchmark, including making the benchmark tools available as open source
 - [ ]   allows different configurations of a system under test to compete on their merits without artificial limitations
 - [ ]   provides confidence that a benchmark result is accurate
+- [ ]   draws statistically grounded conclusions, e.g., by means of appropriate statistical methods, sufficiently long execution duration and sufficient number of experiment repetitions
 - [ ]   avoids roadblocks for users to run the benchmark in their test environments
 - [ ]   provides a replication package including datasets and analysis scripts (for the **Engineering Research (AKA Design Science) Standard** this a desirable attribute, for benchmarks this is an essential attribute)
-- [ ]   adheres to benchmarking best practices, e.g., regarding execution duration and experiment repetitions
+
 </checklist>
     
 ### Desirable Attributes
@@ -44,7 +45,8 @@ If the study is conducted within a real-world context, see the **Case Study and 
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ]	tbd
+- [ ] provides empirical evidence for the relevance of a benchmark, e.g., by applying the **Systematic Reviews Standard**
+- [ ] provides empirical evidence for the usability of a benchmark, e.g., by applying the **Action Research Standard**
 
 </checklist>
      
@@ -98,6 +100,8 @@ Guenter Hesse, Christoph Matthies, Michael Perscheid, Matthias Uflacker, and Has
 Martin Grambow, Erik Wittern, and David Bermbach. 2020. Benchmarking the Performance of Microservice Applications. ACM SIGAPP Applied Computing Review, vol 20, issue 3, 20-34. DOI: [10.1145/3429204.3429206](https://doi.org/10.1145/3429204.3429206)
     
 Joakim von Kistowski, Simon Eismann, Norbert Schmitt, Andre Bauer, Johannes Grohmann, and Samuel Kounev. 2018. TeaStore: A Micro-Service Reference Application for Benchmarking, Modeling and Resource Management Research. In 2018 IEEE 26th International Symposium on Modeling, Analysis, and Simulation of Computer and Telecommunication Systems (MASCOTS). IEEE, 223–236. DOI: [10.1109/mascots.2018.00030](https://doi.org/10.1109/mascots.2018.00030)
+
+Christoph Laaber, Joel Scheuner, and Philipp Leitner. 2019. Software microbenchmarking in the cloud. How bad is it really?. Empirical Software Engineering 24, 2469–2508. DOI: [10.1007/s10664-019-09681-1](https://doi.org/10.1007/s10664-019-09681-1)
 
 Jan Waller, Nils C. Ehmke, and Wilhelm Hasselbring. 2015. Including Performance Benchmarks into Continuous Integration to Enable DevOps. SIGSOFT Softw. Eng. Notes 40, 2 (March 2015), 1–4. DOI: [10.1145/2735399.2735416](https://doi.org/10.1145/2735399.2735416)
 
