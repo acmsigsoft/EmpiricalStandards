@@ -191,20 +191,20 @@ function hide_deviation_block() {
 	block.style.display = "none";
 	var block = document.getElementById("deviation_not_justified:" + id);
 	block.style.display = "none";
+
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_block-radio");
-	if(document.getElementsByName(deviation_radio_name).length > 0){
-		document.getElementsByName(deviation_radio_name)[0].checked = false;
-		document.getElementsByName(deviation_radio_name)[1].checked = false;
+	for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
+		document.getElementsByName(deviation_radio_name)[i].checked = false;
 	}
+
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_justified-radio");
-	if(document.getElementsByName(deviation_radio_name).length > 0){
-		document.getElementsByName(deviation_radio_name)[0].checked = false;
-		document.getElementsByName(deviation_radio_name)[1].checked = false;
+	for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
+		document.getElementsByName(deviation_radio_name)[i].checked = false;
 	}
+
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_not_justified-radio");
-	if(document.getElementsByName(deviation_radio_name).length > 0){
-		document.getElementsByName(deviation_radio_name)[0].checked = false;
-		document.getElementsByName(deviation_radio_name)[1].checked = false;
+	for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
+		document.getElementsByName(deviation_radio_name)[i].checked = false;
 	}
 
 	show_hide_accept_message();
@@ -231,9 +231,9 @@ function deviation_justification() {
 		var block = document.getElementById("deviation_justified:" + id);
 		block.style.display = "block";
 		deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_not_justified-radio");
-		if(document.getElementsByName(deviation_radio_name).length > 0){
-			document.getElementsByName(deviation_radio_name)[0].checked = false;
-			document.getElementsByName(deviation_radio_name)[1].checked = false;
+
+		for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
+			document.getElementsByName(deviation_radio_name)[i].checked = false;
 		}
 	}
 	// (No-No) deviation is unjustified
@@ -245,9 +245,9 @@ function deviation_justification() {
 		var message = document.getElementById("deviation_not_justified:" + id);
 		message.style.display = "block";
 		deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_justified-radio");
-		if(document.getElementsByName(deviation_radio_name).length > 0){
-			document.getElementsByName(deviation_radio_name)[0].checked = false;
-			document.getElementsByName(deviation_radio_name)[1].checked = false;
+
+		for(let i = 0; i <document.getElementsByName(deviation_radio_name).length; i++){
+			document.getElementsByName(deviation_radio_name)[i].checked = false;
 		}
 	}
 	else{
@@ -348,6 +348,87 @@ function generate_question_block_with_radio_answers(id, class_name, question, ch
 	return question_block;
 }
 
+function generate_question_block_with_type_radio_answers(id, class_name, question, checklistItem_id, padding) {
+	var question_block = document.createElement("div");
+
+	// checklistItem_id = 1,2,3,4
+
+	question_block.id = id + ":" + checklistItem_id;
+	// className - deal with all of them
+	question_block.className = "question_block";
+	question_block.style = "padding-left:"+padding+"em; display:none";
+
+	// &rdsh: is for the arrows.
+	// &nbsh: HTML can't do spaces. This is for spaces. 
+	question_block.innerHTML = "&rdsh;&nbsp; " + question;
+
+	var deviation_block_radios = document.createElement("div");
+
+    deviation_block_radios.innerHTML = "&nbsp;&nbsp;&nbsp;";
+
+
+{/* <span class="tooltiptext">Empirical research that investigates how an intervention, like the introduction of a method or tool, affects a real-life context</span> */}
+
+	var dict = {};
+
+	dict[1] = "can be fixed by editing text only; e.g. clarifying text, adding references, changing a diagram, describing an additional limitation, copyediting.";
+	dict[2] = "can be fixed by doing some new data analysis, redoing some existing data analysis, or collecting a small amount of additional data (e.g. going back to one interviewee, collecting some additional primary studies for a systematic review).";
+	dict[3] = "can be fixed completely redoing data analysis, OR collecting additional data (e.g. conducting new or additional experiments or case studies; several new interviews, one or more additional rounds of questionnaire data collection).";
+	dict[4] = "unacceptable conduct (e.g. plagiarism, p-hacking, HARKing, unethical data collection) OR problems the cannot be fixed without doing a brand new study (e.g. fundamentally invalid measures, data collection or analysis insufficient by an order of magnitude, no chain of evidence whatsoever from data to conclusions).";
+
+
+
+    for (let i = 1; i <= 4; i++) {
+
+
+        var deviationRadioType = document.createElement("input");
+
+        var deviationLabelType = document.createElement("label");
+
+
+        // Identify each radio button
+        deviationRadioType.id = id + "-radio:Type"+i+":" + checklistItem_id;
+    
+    
+        // className - deal with all of them
+        deviationRadioType.className = class_name + "Type"+i;
+    
+    
+        // These are the radio buttons of that element regardless of Type1 or Type2
+        // For Hiding Buttons
+        deviationRadioType.name = id + "-radio:" + checklistItem_id;
+    
+    
+        // deviation_justification is a function
+        deviationRadioType.onclick = deviation_justification;
+    
+        deviationRadioType.type = "radio";
+    
+        // Value for comparisons
+        deviationRadioType.value = "type"+i;
+    
+        // Actual Text of the Radio button
+        // deviationLabelType.innerHTML = "type "+i+"&nbsp;&nbsp;";
+		deviationLabelType.innerHTML = "<div class=\"tooltip\">type "+i+ "<span class=\"tooltiptext\"> "+dict[i]+"</span></div>" + "&nbsp;&nbsp;";
+    
+        // For Labels
+        // Click on the label, click that radio button
+        deviationLabelType.htmlFor = deviationRadioType.id;
+    
+        deviation_block_radios.appendChild(deviationRadioType);
+        deviation_block_radios.appendChild(deviationLabelType);
+
+        
+    }
+
+
+    question_block.appendChild(deviation_block_radios);
+
+
+	return question_block;
+}
+
+
 
 function generate_message(id, color, text, padding, indent) {
 	var message = document.createElement("div");
@@ -396,7 +477,8 @@ function generate_one_phase_reviewer_deviation_block(checklistItem_id) {
 	//var deviation_justified = generate_question_block_with_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
 	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
 
-	var deviation_not_justified = generate_question_block_with_radio_answers("deviation_not_justified", "justificationRadio", "<div class=\"tooltip\"> Which error does this statement fall under? <span class=\"tooltiptext\">Fixable in one or two hours e.g rewriting a paragraph.</span></div>", checklistItem_id, 2.06);
+	// change this and it will break
+	var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06);
 
 	// (No-No-Yes)
 	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
@@ -423,7 +505,7 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id) {
 	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
 
 	// 3rd Question
-	var deviation_not_justified = generate_question_block_with_radio_answers("deviation_not_justified", "justificationRadio", "<div class=\"tooltip\"> Which error does this statement fall under?<span class=\"tooltiptext\">Fixable in one or two hours e.g rewriting a paragraph.</span></div>", checklistItem_id, 2.06);
+	var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06);
 
 	// (No-No-Yes)
 	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
