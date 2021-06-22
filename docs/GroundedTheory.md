@@ -94,7 +94,7 @@ reliability typically do not apply.
 -   Lack of quantitative data; causal analysis; objectivity, internal
     validity, reliability, or generalizability.
 -   Lack of replicability or reproducibility; not releasing transcripts
--   lack of representativeness (e.g. of a study of Turkish programmers,
+-   Lack of representativeness (e.g. of a study of Turkish programmers,
     'how does this generalize to America?')
 -   Research questions should have been different
 -   Findings should have been presented as a different set of
