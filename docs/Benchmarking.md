@@ -29,6 +29,13 @@ If the study is conducted within a real-world context, see the **Case Study and 
 - [ ]   provides confidence that a benchmark result is accurate
 - [ ]   draws statistically grounded conclusions, e.g., by means of appropriate statistical methods, sufficiently long execution duration and sufficient number of experiment repetitions
 - [ ]   avoids roadblocks for users to run the benchmark in their test environments
+- [ ]   describes all components of the benchmark design, which are usually    
+        (i)   the quality to be benchmarked (e.g., performance, availability, scalability, security),  
+        (ii)  the metric to quantify the quality,   
+        (iii) the measurement method for the metric (if not obvious),   
+        (iv)  the load profile the system under test is subject to, and   
+        (v)   the operational profile or task sample, which is to be implemented by the system under test
+- [ ]   reuses existing benchmark design components from established benchmarks or discusses why new components are introduced
 - [ ]   provides a replication package including datasets and analysis scripts (for the **Engineering Research (AKA Design Science) Standard** this a desirable attribute, for benchmarks this is an essential attribute)
 
 </checklist>
@@ -57,6 +64,7 @@ Fairness of measurements, reproducibility of results across experiment repetitio
 ## Examples of Acceptable Deviations 
 
 -   The article reports on problems with executing benchmark runs.
+-   The article compares methods, techniques, or tools by running an existing benchmark and, hence, does not report on properties such as relevance, fairness or usability of the benchmark itself.
 
 ## Antipatterns 
 
