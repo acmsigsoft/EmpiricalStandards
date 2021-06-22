@@ -57,6 +57,7 @@ Fairness of measurements, reproducibility of results across experiment repetitio
 ## Examples of Acceptable Deviations 
 
 -   The article reports on problems with executing benchmark runs.
+-   The article compares methods, techniques, or tools by running an existing benchmark and, hence, does not report on properties such as relevance, fairness or usability of the benchmark itself.
 
 ## Antipatterns 
 
