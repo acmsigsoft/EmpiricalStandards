@@ -82,19 +82,21 @@ Fairness of measurements, reproducibility of results across experiment repetitio
 
 ## Suggested Readings
 
-David Bermbach, Erik Wittern, and Stefan Tai. 2017. Cloud service benchmarking: Measuring Quality of Cloud Services from a Client Perspective. Springer.
+David Bermbach, Erik Wittern, and Stefan Tai. 2017. Cloud service benchmarking: Measuring Quality of Cloud Services from a Client Perspective. Springer. DOI: [10.1007/978-3-319-55483-9](https://doi.org/10.1007/978-3-319-55483-9)
 
-Susan Elliott Sim, Steve Easterbrook, and Richard C. Holt. 2003. Using benchmarking to advance research: a challenge to software engineering. In 25th International Conference on Software Engineering. IEEE. DOI: 10.1109/icse.2003.1201189
+Susan Elliott Sim, Steve Easterbrook, and Richard C. Holt. 2003. Using benchmarking to advance research: a challenge to software engineering. In 25th International Conference on Software Engineering. IEEE. DOI: [10.1109/icse.2003.1201189](https://doi.org/10.1109/icse.2003.1201189)
 
 Jim Gray (Ed.). 1993. The Benchmark Handbook for Database and Transaction Systems (2nd ed.). Morgan Kaufmann.
 
-Jóakim v. Kistowski, Jeremy A. Arnold, Karl Huppler, Klaus-Dieter Lange, John L. Henning, and Paul Cao. 2015. How to Build a Benchmark. In Proceedings of the 6th ACM/SPEC International Conference on Performance Engineering. DOI: 10.1145/2668930.2688819
+Wilhelm Hasselbring. 2021. Benchmarking as Empirical Standard in Software Engineering Research. In Proceedings of the 25th International Conference on Evaluation and Assessment in Software Engineering (EASE 2021). 365-372. DOI: [10.1145/3463274.3463361](https://doi.org/10.1145/3463274.3463361)
 
-Samuel Kounev, Klaus-Dieter Lange, and Jóakim von Kistowski. 2020. Systems Benchmarking for Scientists and Engineers. Springer.
+Jóakim v. Kistowski, Jeremy A. Arnold, Karl Huppler, Klaus-Dieter Lange, John L. Henning, and Paul Cao. 2015. How to Build a Benchmark. In Proceedings of the 6th ACM/SPEC International Conference on Performance Engineering. DOI: [10.1145/2668930.2688819](https://doi.org/10.1145/2668930.2688819)
 
-Walter F. Tichy. 1998. Should computer scientists experiment more? Computer 31, 5 (May 1998), 32–40. DOI: 10.1109/2.675631
+Samuel Kounev, Klaus-Dieter Lange, and Jóakim von Kistowski. 2020. Systems Benchmarking for Scientists and Engineers. Springer. DOI: [10.1007/978-3-030-41705-5](https://doi.org/10.1007/978-3-030-41705-5)
 
-Walter F. Tichy. 2014. Where’s the Science in Software Engineering? Ubiquity Symposium: The Science in Computer Science. Ubiquity 2014 (March 2014), 1–6. DOI: 10.1145/2590528.2590529
+Walter F. Tichy. 1998. Should computer scientists experiment more? Computer 31, 5 (May 1998), 32–40. DOI: [10.1109/2.675631](https://doi.org/10.1109/2.675631)
+
+Walter F. Tichy. 2014. Where’s the Science in Software Engineering? Ubiquity Symposium: The Science in Computer Science. Ubiquity 2014 (March 2014), 1–6.  DOI: [10.1145/2590528.2590529](https://doi.org/10.1145/2590528.2590529)
 
 
 ## Exemplars

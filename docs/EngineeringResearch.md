@@ -11,7 +11,7 @@ methods, systems, tools, and other computer-based technologies. This
 standard is not appropriate for:
 
 -   evaluations of pre-existing engineering research approaches
-    (consider the Experiments Standard)
+    (consider the **Experiments** Standard)
 -   experience reports of applying pre-existing engineering research
     approaches
 
@@ -30,11 +30,11 @@ standard is not appropriate for:
 	 **action research**, in which the researchers intervene a real organization using the artifact,  
 	 a **case study** in which a real organization uses the artifact without researcher intervention,  
 	 a **controlled experiment** in which human participants use the  artifact,  
-	 a **simulation** in which the artifact is used in an artificial environment, or  
+	 a **simulation** or **benchmarking** in which the artifact is used in an artificial environment, or  
 	 another method for which a clear and convincing rationale is provided
 - [ ]   clearly indicates the empirical methodology being used (e.g. action research, controlled experiment)
 - [ ]   EITHER: empirically compares the artifact to one or more state-of-the-art alternative artifacts   
-    OR: empirically compares the artifact to one or more state-of-the-art benchmarks   
+    OR: empirically compares the artifact to one or more state-of-the-art benchmarks (see also the **Benchmarking (of Software Systems)** Standard)  
     OR: provides a clear and convincing rationale for why comparative evaluation is impractical
 - [ ]   assumptions (if any) are explicit; do not contradict each other or the contribution's goals; plausibly hold for the evaluation subjects
 - [ ]   uses notation consistently (if any notation is used)
