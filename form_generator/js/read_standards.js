@@ -120,6 +120,8 @@ function show_hide_decision_message() {
 
 		document.getElementById("Desirable").style.display = "none";
 		document.getElementById("Extraordinary").style.display = "none";
+		// checkboxInput.className = "checkbox_attributes";
+		$('.checkbox_attributes').prop('checked', false);
 
 		
 		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_type1_checked_count+justification_type2_checked_count+justification_type3_checked_count+justification_type4_checked_count)){
@@ -164,6 +166,7 @@ function show_hide_decision_message() {
 
 		document.getElementById("Desirable").style.display = "none";
 		document.getElementById("Extraordinary").style.display = "none";
+		$('.checkbox_attributes').prop('checked', false);
 
 		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_type1_checked_count+justification_type2_checked_count+justification_type3_checked_count+justification_type4_checked_count)){
 
@@ -684,6 +687,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 				var checkboxInput = document.createElement("input");
 				checkboxInput.type = "checkbox";
 				checkboxInput.id = checklistItem_id;
+				checkboxInput.className = "checkbox_attributes";
 				checkboxInput.name = checklistItem_id;
 				checkboxInput.style = "color:#FFF";
 				checkboxInput.value = line_text;
