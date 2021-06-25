@@ -135,9 +135,9 @@ their trustworthiness and importance. Reviewers should endeavor to:
 ## Invalid Criticisms
 -   Setting arbitrary minimum sample sizes or other data requirements, based on neither power analysis nor theoretical saturation
 -   Stating that a study: 
--   (i) lacks detail without enumerating missing details; 
-    (ii) is of low quality without explaining specific problems; or 
-    (iii) is not new without providing citations to published studies that make **practically identical** contributions.
+    - lacks detail without enumerating missing details;  
+    - is of low quality without explaining specific problems; or  
+    - is not new without providing citations to published studies that make **practically identical** contributions.  
 -   Rejecting a study because it replicates or reproduces existing work <!--(see Replications Supplement)-->
 -   Cross-paradigmatic criticism (e.g. attacking an interpretivist study for not conforming to positivist norms).
 -   Criticizing a study for limitations intrinsic to that kind of study or the methodology used (e.g. attacking a case study for low generalizability) 
