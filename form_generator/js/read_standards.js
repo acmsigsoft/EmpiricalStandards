@@ -997,7 +997,7 @@ function saveFile(){
 								if (reasonable_deviation.checked)
 									accepted_list += 'R' + '\t   ' + li_text + '\r\n';
 								else{
-									var fixable_deviation = li.getElementsByClassName('justificationRadioYes')[0];
+									var fixable_deviation = li.getElementsByClassName('justificationRadioType')[0];
 									generated_text += (fixable_deviation.checked ? 'F' : 'U') + '\t   ' + li_text + '\r\n';
 								}
 							}
