@@ -90,7 +90,7 @@ function fromMDtoHTMLformat(text){
 
 //This function is primarily responsible for controlling the displaying of the deviation blocks
 // in the checklist.
-function show_hide_accept_message() {
+function show_hide_decision_message() {
 	role = getParameterByName('role');
 
 	// Number of yes's that are not checked
@@ -117,6 +117,10 @@ function show_hide_accept_message() {
 	// Making sure every attribute has an option selected. 
 	//check if the role selected is 'reviewer' (one-phase or two-phase)
 	if (role == "\"one-phase-reviewer\""){
+
+		document.getElementById("Desirable").style.display = "none";
+		document.getElementById("Extraordinary").style.display = "none";
+
 		
 		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_type1_checked_count+justification_type2_checked_count+justification_type3_checked_count+justification_type4_checked_count)){
 
@@ -132,27 +136,35 @@ function show_hide_accept_message() {
 
 			} else if (justification_type1_checked_count > 0) {
 				msg = "ACCEPT";
+				document.getElementById("Desirable").style.display = "block";
+				document.getElementById("Extraordinary").style.display = "block";
 
 			} else {
 				msg = "ACCEPT";
+				document.getElementById("Desirable").style.display = "block";
+				document.getElementById("Extraordinary").style.display = "block";
 
 			}
 
-			document.getElementById("accept_manuscript").innerHTML = msg;
+			document.getElementById("decision_msg").innerHTML = msg;
 
 
-			document.getElementById("accept_manuscript").style.display = "block";
+			document.getElementById("decision_msg").style.display = "block";
 		}
 			
 		else{
 			document.getElementById("checklist_submit").disabled = true;
 
 			
-			document.getElementById("accept_manuscript").style.display = "none";
+			document.getElementById("decision_msg").style.display = "none";
 		}
 	}
 
 	else if (role == "\"two-phase-reviewer\""){
+
+		document.getElementById("Desirable").style.display = "none";
+		document.getElementById("Extraordinary").style.display = "none";
+
 		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_type1_checked_count+justification_type2_checked_count+justification_type3_checked_count+justification_type4_checked_count)){
 
 			document.getElementById("checklist_submit").disabled = false;
@@ -173,16 +185,18 @@ function show_hide_accept_message() {
 
 			} else {
 				msg = "ACCEPT";
+				document.getElementById("Desirable").style.display = "block";
+				document.getElementById("Extraordinary").style.display = "block";
 
 			}
 
-			document.getElementById("accept_manuscript").innerHTML = msg;
-			document.getElementById("accept_manuscript").style.display = "block";
+			document.getElementById("decision_msg").innerHTML = msg;
+			document.getElementById("decision_msg").style.display = "block";
 		}
 			
 		else{
 			document.getElementById("checklist_submit").disabled = true;
-			document.getElementById("accept_manuscript").style.display = "none";
+			document.getElementById("decision_msg").style.display = "none";
 		}
 
 	}
@@ -191,7 +205,7 @@ function show_hide_accept_message() {
 	// // This is what I need to fix
 	// //check if all 'yes' are checked
 	// if(checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_yes_checked_count)){
-	// 	document.getElementById("accept_manuscript").style.display = "block";
+	// 	document.getElementById("decision_msg").style.display = "block";
 	// 	//document.getElementById("deviation_unreasonable").style.display = "block";
 	// 	if (role == "\"one-phase-reviewer\""){
 	// 		document.getElementById("deviation_unreasonable").style.display = "none";
@@ -216,7 +230,7 @@ function show_hide_accept_message() {
 
 	// // Not all "yes" are checked
 	// else{
-	// 	document.getElementById("accept_manuscript").style.display = "none";
+	// 	document.getElementById("decision_msg").style.display = "none";
 	// 	if (role == "\"one-phase-reviewer\""){
 	// 		document.getElementById("Desirable").style.display = "none";
 	// 		document.getElementById("Extraordinary").style.display = "none";
@@ -257,7 +271,7 @@ function show_deviation_block() {
 	id = this.id.replace("checklist-radio:No:", "")
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "block";
-	show_hide_accept_message();
+	show_hide_decision_message();
 }
 //this function manages the display of the deviation block, which is dependent upon user input
 function hide_deviation_block() {
@@ -285,7 +299,7 @@ function hide_deviation_block() {
 		document.getElementsByName(deviation_radio_name)[i].checked = false;
 	}
 
-	show_hide_accept_message();
+	show_hide_decision_message();
 }
 
 function hide_other_messages(id) {
@@ -357,7 +371,7 @@ function deviation_justification() {
 			document.getElementById("deviation_unreasonable:" + id).style.display = "block";
 		}
 	}
-	show_hide_accept_message();
+	show_hide_decision_message();
 }
 
 
@@ -833,8 +847,8 @@ function generateStandardChecklist(){
 	submit.onclick = saveFile;
 
 	// (All 'Yes' -> accept manuscript)
-	var accept_manuscript = generate_message("accept_manuscript", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
-	form.appendChild(accept_manuscript);
+	var decision_msg = generate_message("decision_msg", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
+	form.appendChild(decision_msg);
 
 	if(role == "\"one-phase-reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
@@ -912,7 +926,7 @@ function saveFile(){
 		'Review Checklist\n' +
 		'=================\n';
 		
-	var accept = document.getElementById("accept_manuscript");
+	var accept = document.getElementById("decision_msg");
 	var unreasonable = document.getElementById("deviation_unreasonable");
 	var reasonable = document.getElementById("deviation_reasonable");
 
