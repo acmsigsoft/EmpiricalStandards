@@ -118,6 +118,8 @@ function show_hide_decision_message() {
 	//check if the role selected is 'reviewer' (one-phase or two-phase)
 	if (role == "\"one-phase-reviewer\""){
 
+		document.getElementById("deviation_reasonable").style.display = "none";
+		document.getElementById("deviation_unreasonable").style.display = "none";
 		document.getElementById("Desirable").style.display = "none";
 		document.getElementById("Extraordinary").style.display = "none";
 		// checkboxInput.className = "checkbox_attributes";
@@ -130,14 +132,16 @@ function show_hide_decision_message() {
 
 
 			if (justification_type3_checked_count + justification_type4_checked_count > 0 ){
-
 				msg = "REJECT";
+				document.getElementById("deviation_unreasonable").style.display = "block";
 
 			} else if (justification_type2_checked_count > 0) {
 				msg = "GATEKEEP";
+				document.getElementById("deviation_reasonable").style.display = "block";
 
 			} else if (justification_type1_checked_count > 0) {
 				msg = "ACCEPT";
+				document.getElementById("deviation_reasonable").style.display = "block";
 				document.getElementById("Desirable").style.display = "block";
 				document.getElementById("Extraordinary").style.display = "block";
 
@@ -163,7 +167,9 @@ function show_hide_decision_message() {
 	}
 
 	else if (role == "\"two-phase-reviewer\""){
-
+		
+		document.getElementById("deviation_reasonable").style.display = "none";
+		document.getElementById("deviation_unreasonable").style.display = "none";
 		document.getElementById("Desirable").style.display = "none";
 		document.getElementById("Extraordinary").style.display = "none";
 		$('.checkbox_attributes').prop('checked', false);
@@ -175,16 +181,20 @@ function show_hide_decision_message() {
 			if (justification_type4_checked_count > 0 ){
 
 				msg = "REJECT";
+				document.getElementById("deviation_unreasonable").style.display = "block";
 
 			} else if (justification_type3_checked_count > 0) {
 				msg = "REJECT BUT INVITE RESUBMISSION";
+				document.getElementById("deviation_unreasonable").style.display = "block";
 
 			} else if (justification_type2_checked_count > 0) {
 				msg = "MAJOR REVISION";
+				document.getElementById("deviation_reasonable").style.display = "block";
 			}
 			
 			else if (justification_type1_checked_count > 0) {
 				msg = "MINOR REVISION";
+				document.getElementById("deviation_reasonable").style.display = "block";
 
 			} else {
 				msg = "ACCEPT";
@@ -856,7 +866,7 @@ function generateStandardChecklist(){
 
 	if(role == "\"one-phase-reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
-		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "<b>REJECT</b>. In your review please explain the deviations and why they are not reasonable. Give constructive suggestions.", 2, 0);
+		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In your review please explain the deviations and why they are not reasonable. Give constructive suggestions.", 2, 0);
 		form.appendChild(deviation_unreasonable);
 		// (At least one 'No-No-Yes' -> explain fix)
 		var deviation_reasonable = generate_message("deviation_reasonable", "red", "Explain how the manuscript should be fixed.", 2, 0);
@@ -869,7 +879,7 @@ function generateStandardChecklist(){
 
 	else if(role == "\"two-phase-reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
-		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "<b>REJECT</b>. In your review please explain the deviations and why they are not reasonable. Give constructive suggestions.", 2, 0);
+		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In your review please explain the deviations and why they are not reasonable. Give constructive suggestions.", 2, 0);
 		form.appendChild(deviation_unreasonable);
 
 		// (At least one 'No-No-Yes' -> explain fix)
@@ -935,14 +945,14 @@ function saveFile(){
 	var reasonable = document.getElementById("deviation_reasonable");
 
 	if(accept.style.display == "block") {
-		generated_text += "\n" + accept.innerText + "\n";
-	} else if(unreasonable.style.display == "block") {
-		generated_text += "\n" + unreasonable.innerText + "\n";
+		generated_text += "\nRecommended Decision: " + accept.innerText + "\n";
+	}
+	
+	if(unreasonable.style.display == "block") {
 		generated_text += "\nReasons for Rejection\n";
 	}
 
 	if(reasonable.style.display == "block") {
-		generated_text += reasonable.innerText + "\n";
 		generated_text += "\nUnreasonable Deviations Requiring Revision\n";
 	} else {
 		generated_text += "";
