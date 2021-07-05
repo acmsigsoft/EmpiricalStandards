@@ -959,6 +959,10 @@ function saveFile(){
 	}
 	
 	var accepted_list = "";
+	var type1_list = "";
+	var type2_list = "";
+	var type3_list = "";
+	var type4_list = "";
 	
 	for (let list of checklists.children) {
 		if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
@@ -1007,8 +1011,16 @@ function saveFile(){
 								if (reasonable_deviation.checked)
 									accepted_list += 'R' + '\t   ' + li_text + '\r\n';
 								else{
-									var fixable_deviation = li.getElementsByClassName('justificationRadioType')[0];
-									generated_text += (fixable_deviation.checked ? 'F' : 'U') + '\t   ' + li_text + '\r\n';
+									var fixable_deviation = li.getElementsByClassName('justificationRadioType');
+									if (fixable_deviation[0].checked) {
+										type1_list += '1\t   ' + li_text + '\r\n';
+									} else if (fixable_deviation[1].checked) {
+										type2_list += '2\t   ' + li_text + '\r\n';
+									}  else if (fixable_deviation[2].checked) {
+										type3_list += '3\t   ' + li_text + '\r\n';
+									}  else if (fixable_deviation[3].checked) {
+										type4_list += '4\t   ' + li_text + '\r\n';
+									}
 								}
 							}
 						}
@@ -1020,17 +1032,20 @@ function saveFile(){
 		}
 	}
 	
+	generated_text += type4_list + type3_list + type2_list + type1_list;
+	
 	generated_text += accepted_list;
 
 	generated_text += "\n" +
 		"=======\n" +
 		"Legend\n" +
 		"=======\n" +
-		"Y = Yes, the paper has this attribute\n" +
-		"R = Reasonable deviation\n" +
-		"F = (easily) Fixable deviation\n" +
-		"U = Unfixable (or not easily fixable) deviation\n" +
-		"N = No, the paper does not have this attribute\n\n\n";
+		"Y = yes, the paper has this attribute\n" +
+		"R = a reasonable, acceptable deviation from the standards\n" +
+		"1 = can be fixed by editing text only\n" +
+		"2 = can be fixed by doing some new data analysis, redoing some existing data analysis, or collecting a small amount of additional data\n" +
+		"3 = can be fixed completely redoing data analysis, or collecting additional data\n" +
+		"4 = unacceptable conduct or problems the cannot be fixed without doing a brand new study\n\n\n";
 
 	generated_text+= "=================\n" +
 		"Standards Used\n" +
