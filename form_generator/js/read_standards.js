@@ -1024,9 +1024,12 @@ function saveFile(){
 								}
 							}
 						}
-						else
-							accepted_list += (li.children[0].checked ? 'Y' : 'N') + '\t   ' + li_text + '\r\n';
+						else if(li.children[0].checked) {
+							accepted_list += 'Y' + '\t   ' + li_text + '\r\n';
+						}
+
 					}
+
 				}
 			}
 		}
