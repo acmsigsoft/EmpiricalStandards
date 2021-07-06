@@ -958,7 +958,13 @@ function saveFile(){
 		generated_text += "";
 	}
 	
-	var accepted_list = "";
+	var essential_list = "\nEssential\r\n";
+	var desirable_list = "\nDesirable\r\n";
+	var extraordinary_list = "\nExtraordinary\r\n";
+	
+	var include_desirable = false;
+	var include_extraordinary = false;
+	
 	var type1_list = "";
 	var type2_list = "";
 	var type3_list = "";
@@ -966,7 +972,6 @@ function saveFile(){
 	
 	for (let list of checklists.children) {
 		if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
-			accepted_list += '\n' + list.id + '\r\n';
 			for (let ul of list.children) {
 				if(ul.tagName.toLowerCase() == 'ul'){
 					var i = 0;
@@ -1005,11 +1010,11 @@ function saveFile(){
 
 						if (list.id == 'Essential'){
 							if (li.children[0].checked)
-								accepted_list +=  'Y' + '\t   ' + li_text + '\r\n';
+								essential_list +=  'Y' + '\t   ' + li_text + '\r\n';
 							else{
 								var reasonable_deviation = li.getElementsByClassName('deviationRadioYes')[0];
 								if (reasonable_deviation.checked)
-									accepted_list += 'R' + '\t   ' + li_text + '\r\n';
+									essential_list += 'R' + '\t   ' + li_text + '\r\n';
 								else{
 									var fixable_deviation = li.getElementsByClassName('justificationRadioType');
 									if (fixable_deviation[0].checked) {
@@ -1024,8 +1029,14 @@ function saveFile(){
 								}
 							}
 						}
-						else if(li.children[0].checked) {
-							accepted_list += 'Y' + '\t   ' + li_text + '\r\n';
+						else if (list.id == 'Desirable') {
+							if (li.children[0].checked) {
+								include_desirable = true;
+								desirable_list += 'Y' + '\t   ' + li_text + '\r\n';
+							}
+						} else if (li.children[0].checked) {
+							include_extraordinary = true;
+							extraordinary_list += 'Y' + '\t   ' + li_text + '\r\n';
 						}
 
 					}
@@ -1037,7 +1048,14 @@ function saveFile(){
 	
 	generated_text += type4_list + type3_list + type2_list + type1_list;
 	
-	generated_text += accepted_list;
+	generated_text += essential_list;
+	
+	if (include_desirable) {
+		generated_text += desirable_list;
+	}
+	if (include_extraordinary) {
+		generated_text += extraordinary_list;
+	}
 
 	generated_text += "\n" +
 		"=======\n" +
