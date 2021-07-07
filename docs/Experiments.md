@@ -25,25 +25,41 @@ Science Standard** or the **Engineering Research Standard**.
 ### Essential Attributes
 <checklist name="Essential">
 
+<intro>
+
+
+<method>
+
 - [ ]	describes how characteristics of phenomenon under investigation relate to experimental constructs
 - [ ]	states formal hypotheses
 - [ ]	justifies use of one-sided hypotheses (if any) based on face validity or previous work
 - [ ]	describes independent, dependent and extraneous variables; how extraneous vars are controlled
+- [ ]	describes and justifies how the dependent variable is measured (including units, instruments)
+- [ ]	describes how independent variables are determined or measured
 - [ ]	describes the research design and protocol including treatments, materials, tasks, design (e.g. 2x2 factorial), participant allocation, period and sequences (for crossover designs), and logistics
 - [ ]	design and protocol appropriate (not optimal) for stated research questions and hypotheses
 - [ ]	EITHER: uses random assignment; explains logistics (e.g. how random numbers were generated)   
     OR: justifies why random assignment is impractical or unethical (compelling reason needed); and mitigates unequal groups threat to validity (e.g. using pre-test/post-test and matched subjects design)
 - [ ]	describes experimental objects (e.g. real or toy system) and their characteristics (e.g. size, type);
-- [ ]	justifies selection of experimental objects; checks for object-treatment confounds<sup>[1](#myfootnote1)</sup>
-- [ ]	describes and justifies how the dependent variable is measured (including units, instruments)
-- [ ]	describes how independent and dependent variables are measured
+- [ ]	justifies selection of experimental objects; acknowledge object-treatment confounds, if any<sup>[1](#myfootnote1)</sup>
+
+<results>
+
 - [ ]	describes participants (e.g. age, gender, education, relevant experience or preferences)
 - [ ]	reports distribution-appropriate descriptive and inferential statistics; enumerates and checks assumptions<sup>[2](#myfootnote2)</sup>; justifies tests used
 - [ ]	reports effects sizes with confidence intervals (if using frequentist approach)
-- [ ]	EITHER: shares raw, de-identified data    
-    OR: explains why sharing raw data is impractical or unethical
+
+
+<discussion>
+
 - [ ]	discusses construct, conclusion internal and external validity
 - [ ]	discusses alternative interpretations of results
+
+<other>    
+    
+- [ ]	EITHER: shares raw, de-identified data    
+    OR: explains why sharing raw data is impractical or unethical
+
 </checklist>
      
 ### Desirable Attributes
@@ -164,7 +180,7 @@ Andreas Zeller, Thomas Zimmermann, and Christian Bird. 2011. Failure is a four-l
 
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> e.g., in an experiment where control group applies Test-Last (TL) with Object 1 while treatment group applies Test-Driven-Development (TDD) with Object 2, the experimental object is confounded with the treatment.</footnote><br>
+<footnote><sup>[1](#myfootnote1)</sup> For example, in an experiment where the control group applies Test-Driven Development (TDD) with Object 1 while the treatment group applies Test-Last-Development (TDD) with Object 2, the experimental object is confounded with the treatment.</footnote><br>
 <footnote><sup>[2](#myfootnote2)</sup> visual methods of checking assumptions are often as good as or better than statistical tests.</footnote><br>
 <footnote><sup>[3](#myfootnote3)</sup> e.g. dropouts affecting balance between treatment and control group.</footnote><br>
 <footnote><sup>[4](#myfootnote4)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
