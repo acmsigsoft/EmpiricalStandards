@@ -38,9 +38,9 @@ standards.
 - [ ]   describes the site(s) in rich detail     
 - [ ]   describes the intervention(s) in detail
 - [ ]   describes how interventions were determined (by management, researchers, or participative/co- determination process)
-- [ ]   explains how the interventions are evaluated<sup>[3](#myfootnote3)</sup>
+- [ ]   explains how the interventions are evaluated<sup>[4](#myfootnote3)</sup>
 - [ ]   describes the longitudinal dimension of the research design (including the length of the study)
-- [ ]   describes the interactions between researcher(s) and host organization(s)---what the interventions were, who intervened and with which part of the organization, as well as the outcome of the interventions <!--Make what the...interventions a footnote-->
+- [ ]   describes the interactions between researcher(s) and host organization(s)<sup>[1](#myfootnote1)</sup>
 - [ ]   explains research cycles or phases, if any, and their relationship to the intervention(s)<sup>[2](#myfootnote2)</sup>
 
 
@@ -54,7 +54,7 @@ standards.
 
 - [ ]   reports lessons learned by the organization
 - [ ]   researchers reflect on their own possible biases
-- [ ]   describes the relationship between the researcher and the host organization<sup>[1](#myfootnote1)</sup>
+- [ ]   describes the relationship between the researcher and the host organization<sup>[3](#myfootnote1)</sup>
 
 <other>
 
@@ -65,7 +65,7 @@ standards.
     
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]	uses direct quotations extensively
-- [ ]   validates results using member checking, dialogical interviewing<sup>[4](#myfootnote1)</sup>, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
+- [ ]   validates results using member checking, dialogical interviewing<sup>[5](#myfootnote1)</sup>, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]   findings plausibly transferable to other contexts
 - [ ]   triangulation across quantitative and qualitative data
 </checklist>
@@ -206,9 +206,9 @@ product line architecture. In *Proc. IASTED Int. Conf. on Software
 Engineering*. 2008, 178-183.
 
 ---
-
-<footnote><sup>[1](#myfootnote1)</sup> E.g. project financing, potential conflicts of interest, professional relationship leading to access.</footnote><br>
+<footnote><sup>[1](#myfootnote1)</sup> What the interventions were, who intervened and with which part of the organization, as well as the outcome of the interventions.</footnote><br>
 <footnote><sup>[2](#myfootnote2)</sup> Action research projects are structured in interventions often described as action research cycles, which are often structured in distinct phases. It is a flexible methodology, where subsequent cycles are based on their predecessors.</footnote><br>
-<footnote><sup>[3](#myfootnote3)</sup> Can include quantitative evaluation in addition to qualitative evaluation.</footnote><br>
-<footnote><sup>[4](#myfootnote1)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
+<footnote><sup>[3](#myfootnote1)</sup> E.g. project financing, potential conflicts of interest, professional relationship leading to access.</footnote><br>
+<footnote><sup>[4](#myfootnote3)</sup> Can include quantitative evaluation in addition to qualitative evaluation.</footnote><br>
+<footnote><sup>[5](#myfootnote1)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
 </standard>
