@@ -28,20 +28,36 @@ standards.
 ## Specific Attributes
 ### Essential Attributes
 <checklist name="Essential">
+    
+<intro>
 
+
+<method>
+    
 - [ ]   justifies the selection of the site(s) that was(were) studied
-- [ ]   describes the site(s) in rich detail
+- [ ]   describes the site(s) in rich detail     
 - [ ]   describes the intervention(s) in detail
-- [ ]   describes the relationship between the researcher and the host organization<sup>[1](#myfootnote1)</sup>
+- [ ]   describes how interventions were determined (by management, researchers, or participative/co- determination process)
+- [ ]   explains how the interventions are evaluated<sup>[3](#myfootnote3)</sup>
 - [ ]   describes the longitudinal dimension of the research design (including the length of the study)
 - [ ]   describes the interactions between researcher(s) and host organization(s)---what the interventions were, who intervened and with which part of the organization, as well as the outcome of the interventions <!--Make what the...interventions a footnote-->
-- [ ]   describes how interventions were determined (by management, researchers, or participative/co- determination process)
 - [ ]   explains research cycles or phases, if any, and their relationship to the intervention(s)<sup>[2](#myfootnote2)</sup>
-- [ ]   explains how the interventions are evaluated<sup>[3](#myfootnote3)</sup>
-- [ ]   reports participant or stakeholder reactions to interventions
+
+
+<results>
+    
 - [ ]   presents a clear chain of evidence from observations to findings
+- [ ]   reports participant or stakeholder reactions to interventions
+    
+    
+<discussion>
+
 - [ ]   reports lessons learned by the organization
 - [ ]   researchers reflect on their own possible biases
+- [ ]   describes the relationship between the researcher and the host organization<sup>[1](#myfootnote1)</sup>
+
+<other>
+
 </checklist>
     
 ### Desirable Attributes
