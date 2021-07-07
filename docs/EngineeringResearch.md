@@ -20,13 +20,13 @@ standard is not appropriate for:
 ### Essential Attributes
 <checklist name="Essential">
 
-<!--intro-->
+<intro>
 
 - [ ]   describes the proposed artifact in adequate detail<sup>[1](#myfootnote1)</sup>
 - [ ]   justifies the need for, usefulness of, or relevance of the proposed artifact<sup>[2](#myfootnote2)</sup>
 - [ ]   conceptually evaluates the artifact; discusses its strengths, weaknesses and limitations<sup>[3](#myfootnote3)</sup>
 
-<!--method-->
+<method>
 
 - [ ]   Empirically evaluates the proposed artifact using:  
 	 **action research**, in which the researchers intervene a real organization using the artifact,  
@@ -42,13 +42,13 @@ standard is not appropriate for:
     OR: empirically compares the artifact to one or more state-of-the-art benchmarks   
     OR: provides a clear and convincing rationale for why comparative evaluation is impractical	
 
-<!--results-->
+<results>
 
 
-<!--discussion-->
+<discussion>
 
 
-<!--other-->
+<other>
 	
 - [ ]   assumptions (if any) are explicit; do not contradict each other or the contribution's goals; plausibly hold for the evaluation subjects
 - [ ]   uses notation consistently (if any notation is used)
