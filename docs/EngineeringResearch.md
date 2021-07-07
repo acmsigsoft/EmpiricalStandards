@@ -20,24 +20,39 @@ standard is not appropriate for:
 ### Essential Attributes
 <checklist name="Essential">
 
+<!--intro-->
+
 - [ ]   describes the proposed artifact in adequate detail<sup>[1](#myfootnote1)</sup>
 - [ ]   justifies the need for, usefulness of, or relevance of the proposed artifact<sup>[2](#myfootnote2)</sup>
 - [ ]   conceptually evaluates the artifact; discusses its strengths, weaknesses and limitations<sup>[3](#myfootnote3)</sup>
-- [ ]   EITHER: discusses state-of-art alternatives (and their strengths, weaknesses and limitations)   
-    OR: explains why no state-of-art alternatives exist   
-    OR: provides compelling argument that direct comparisons are impractical
+
+<!--method-->
+
 - [ ]   Empirically evaluates the proposed artifact using:  
 	 **action research**, in which the researchers intervene a real organization using the artifact,  
 	 a **case study** in which a real organization uses the artifact without researcher intervention,  
 	 a **controlled experiment** in which human participants use the  artifact,  
-	 a **simulation** in which the artifact is used in an artificial environment, or  
+	 a **quantitative simulation** in which the artifact is used in an artificial environment, or  
 	 another method for which a clear and convincing rationale is provided
 - [ ]   clearly indicates the empirical methodology being used (e.g. action research, controlled experiment)
+- [ ]   EITHER: discusses state-of-art alternatives (and their strengths, weaknesses and limitations)   
+    OR: explains why no state-of-art alternatives exist   
+    OR: provides compelling argument that direct comparisons are impractical
 - [ ]   EITHER: empirically compares the artifact to one or more state-of-the-art alternative artifacts   
     OR: empirically compares the artifact to one or more state-of-the-art benchmarks   
-    OR: provides a clear and convincing rationale for why comparative evaluation is impractical
+    OR: provides a clear and convincing rationale for why comparative evaluation is impractical	
+
+<!--results-->
+
+
+<!--discussion-->
+
+
+<!--other-->
+	
 - [ ]   assumptions (if any) are explicit; do not contradict each other or the contribution's goals; plausibly hold for the evaluation subjects
 - [ ]   uses notation consistently (if any notation is used)
+
 </checklist>
     
 ### Desirable Attributes
