@@ -36,11 +36,25 @@ captures a large quantitative dataset with limited context, consider the
 ### Essential Attributes
 <checklist name="Essential">
 
+<intro>
+
+
+<method>
+
 - [ ]   justifies the selection of the case or site that was studied
 - [ ]   describes the site in rich detail
-- [ ]   describes data sources (e.g. participants' demographics and work roles,  )
-- [ ]   defines unit(s) of analysis
+- [ ]   describes data sources (e.g. participants' demographics and work roles)
+- [ ]   defines unit(s) of analysis or observation
+
+<results>
+
 - [ ]   presents a clear chain of evidence from observations to findings
+
+<discussion>
+
+
+<other>    
+    
 </checklist>
     
 ### Desirable Attributes
