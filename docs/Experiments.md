@@ -55,16 +55,13 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	discusses alternative interpretations of results
 
 <other>    
-    
-- [ ]	EITHER: shares raw, de-identified data    
-    OR: explains why sharing raw data is impractical or unethical
 
 </checklist>
      
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ]	provides supplementary material such as (complete, algorithmic) research protocol, task materials, de-identified dataset, analysis scripts
+- [ ]	provides supplementary material such as complete, algorithmic research protocol; task materials; raw, de-identified dataset; analysis scripts
 - [ ]	justifies hypotheses and Bayesian priors (if applicable) based on previous studies and theory
 - [ ]	discusses alternative experimental designs and why they were not used (e.g. validity trade-offs)
 - [ ]	includes visualizations of data distributions
