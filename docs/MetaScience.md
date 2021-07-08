@@ -16,9 +16,12 @@ This standard applies to papers that provide analysis of one or more methodologi
 ### Essential Attributes
 <checklist name="Essential">
 
+<other>  
+  
 - [ ] presents information that is useful for other researchers
 - [ ] presents clear, valid arguments supporting recommendations
-  </checklist>
+
+</checklist>
   
 ### Desirable Attributes
 <checklist name="Desirable">
@@ -55,7 +58,7 @@ This standard applies to papers that provide analysis of one or more methodologi
 
 ## Notes
 
-Because metascientific claims cannot be justified empirically:
+Because metascientific claims often cannot be justified empirically:
 
 - reviewers of methodology papers must themselves be experts in the methodology, so that they can evaluate the reasonableness of the guidelines
 - reviewers should be more pedantic in critiquing the discussion and guidelines than for an empirical paper
