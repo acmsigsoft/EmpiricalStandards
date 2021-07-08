@@ -1,51 +1,50 @@
 # Benchmarking (of Software Systems)
 <standard name="Benchmarking (of Software Systems)">
 
-*In empirical software engineering research, benchmarking can be used for comparing different methods, techniques, and tools for developing software systems.*
+A study in which a software system is assessed using a standard tool (i.e. a benchmark) for competitively evaluating and comparing methods, techniques or systems "according to specific characteristics such as performance, dependability, or security” (Kistowski et al. 2015).          
 
 ## Application 
 
 This standard applies to empirical research that meets the following conditions.
 
 -   investigates software systems within a defined context with an automated, repeatable procedure
--   studies the software system’s quality of service under a specific workload
--   compares different artifacts that are the result of applying the **Engineering Research (AKA Design Science) Standard**
+-   studies the software system’s quality of service under a specific workload or usage profile
 
 If the benchmark experiments primarily study software systems, use this standard. 
 For experiments with human participants, see the **Experiments (with Human Participants) Standard**.
 For simulation of models of the software systems, see the **Simulation (Quantitative) Standard**.
 If the study is conducted within a real-world context, see the **Case Study and Ethnography Standard**.
-
+Benchmarking is often used with Engineering Research (see the **Engineering Research (AKA Design Science) Standard**)
 
 ## Specific Attributes
 ### Essential Attributes
 <checklist name="Essential">
 
-- [ ]   justifies the relevance of the benchmark
-- [ ]   describes the experimental setup for the benchmark with sufficient detail
-- [ ]   specifies the workload with sufficient detail
-- [ ]   uses a standard benchmark or provides all details necessary for turning it into a standard benchmark, including making the benchmark tools available as open source
+- [ ]   justifies the selection of the benchmark (in terms of relevance, timeliness, etc.)
+- [ ]   describes the experimental setup for the benchmark in sufficient detail to support independent replication (or refers to such description in supplementary materials)
+- [ ]   specifies the workload or usage profile in sufficient detail to support independent replication (or refers to such description in supplementary materials)
+- [ ]   EITHER: uses an existing, publicly available or standard benchmark 
+        OR: defines a new benchmark and describes all components of its design, typically:   
+        (i)   the quality to be benchmarked (e.g., performance, availability, scalability, security),  
+        (ii)  the metric(s) to quantify the quality,   
+        (iii) the measurement method(s) for the metric (if not obvious),   
+        (iv)  the workload, usage profile and/or task sample the system under test is subject to (i.e. what the system is doing when the measures are taken)
 - [ ]   allows different configurations of a system under test to compete on their merits without artificial limitations
 - [ ]   provides confidence that a benchmark result is accurate
 - [ ]   draws statistically grounded conclusions, e.g., by means of appropriate statistical methods, sufficiently long execution duration and sufficient number of experiment repetitions
 - [ ]   avoids roadblocks for users to run the benchmark in their test environments
-- [ ]   describes all components of the benchmark design, which are usually    
-        (i)   the quality to be benchmarked (e.g., performance, availability, scalability, security),  
-        (ii)  the metric to quantify the quality,   
-        (iii) the measurement method for the metric (if not obvious),   
-        (iv)  the load profile the system under test is subject to, and   
-        (v)   the operational profile or task sample, which is to be implemented by the system under test
 - [ ]   reuses existing benchmark design components from established benchmarks or discusses why new components are introduced
-- [ ]   provides a replication package including datasets and analysis scripts (for the **Engineering Research (AKA Design Science) Standard** this a desirable attribute, for benchmarks this is an essential attribute)
 
 </checklist>
     
 ### Desirable Attributes
 <checklist name="Desirable">
     
+- [ ]   provides a replication package including datasets and analysis scripts (for the **Engineering Research (AKA Design Science) Standard** this a desirable attribute, for benchmarks this is an essential attribute)        
 - [ ]	reports on independent replication of the benchmark results
 - [ ]	reports on a large community that uses the benchmark
 - [ ]	reports on an independent organization that maintains the benchmark.
+- [ ]	uses or creates open source benchmarks
 
 </checklist>
     
