@@ -14,17 +14,31 @@ the mixing of methodologies, not the methodologies themselves. For the latter, r
 
 ### Essential
 <checklist name="Essential">
+  
+<intro>
 
 - [ ] **justifies** using multiple methodologies and/or methods
 - [ ] provides a **purpose statement** that conveys the overarching multi or 
   mixed method design intent (why)
+
+<method>
+
 - [ ] describes the **multi-methodology**, **multi-method** or **mixed method** design (what) 
 - [ ] describes **which phases** of the research study the different methods or 
   methodologies are used in (when)
 - [ ] describes how the design aligns with the research question or objective
+
+<results>
+
 - [ ] **integrates the findings** from all methods to address the research 
   question/objective
+
+<discussion>
+
 - [ ] acknowledges the **limitations** associated with integrating findings (e.g., samples that are drawn from different populations may introduce limitations when the findings are integrated, or biases may be introduced by the sequential or parallel nature of a mixed design).
+
+<other>
+
  </checklist>
 
 ### Desirable
