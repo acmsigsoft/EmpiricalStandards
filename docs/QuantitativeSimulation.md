@@ -12,7 +12,12 @@ The standard applies to research studies that use simulation to understand, asse
 ### Essential Attributes
 <checklist name="Essential">
 
+<intro>
+
 - [ ] justifies that simulation is a suitable method for investigating the problem at hand.
+
+<method>
+
 - [ ] describes the simulation model (conceptual, implementation, or hybrid abstraction levels), including input parameters and response variables.
 - [ ] describes the underlying simulation approach (discrete-event simulation, system dynamics, agent-based simulation, or others<sup>[1](#myfootnote1)</sup>).
 - [ ] describes simulation packages or tools used to develop and run the simulation model, as well as their associated versions, and computational environment.
@@ -21,6 +26,12 @@ The standard applies to research studies that use simulation to understand, asse
 - [ ] describes the study protocol, including independent variables, scenarios, number of runs per scenario (in case of using stochastic simulation), and steady-state or terminating conditions.
 - [ ] analyzes validity threats<sup>[3](#myfootnote3)</sup> considering the supporting data and the simulation model.
 - [ ] clearly explicates the assumptions in the simulation model.
+
+<results>
+
+<discussion>
+
+<other>    
 
 </checklist>
     

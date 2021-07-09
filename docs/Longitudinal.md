@@ -13,19 +13,31 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 
 ### Essential Attributes 
 <checklist name="Essential">
+    
+<intro>
 
-- [ ] subjects (humans or artifacts) are identifiable between waves
-- [ ] uses at least two data collection waves
+<method>
+    
 - [ ] determines the appropriate number of waves based on the natural oscillation of the research phenomenon<sup>[1](#myfootnote1)</sup>
-- [ ] the data analysis strategy is appropriate for the interdependent nature of the data<sup>[2](#myfootnote2)</sup>
+- [ ] uses at least two data collection waves
+- [ ] subjects (humans or artifacts) are identifiable between waves
 - [ ] justifies the data analysis strategy<sup>[3](#myfootnote3)</sup>
+- [ ] the data analysis strategy is appropriate for the interdependent nature of the data<sup>[2](#myfootnote2)</sup>
 - [ ] discusses the critical alpha levels<sup>[4](#myfootnote4)</sup>
 - [ ] determines appropriate sample size using a power calculation<sup>[5](#myfootnote5)</sup>
-- [ ] describes the subjects (e.g., demographic information in the case of humans)<sup>[6](#myfootnote6)</sup>
 - [ ] describes data loss throughout the different waves
-- [ ] describes the research instrument (e.g., survey, software repository) and provide it as supplementary material
+- [ ] explains how missing data are handled
+
+<results>
+
+- [ ] describes the subjects (e.g., demographic information in the case of humans)<sup>[6](#myfootnote6)</sup>
+
+<discussion>
+
 - [ ] discusses the operationalization of the research model (i.e. construct validity)<sup>[7](#myfootnote7)</sup>
-- [ ] reports treatment of missing data
+
+<other>
+    
 </checklist>
     
 ### Desirable Attributes

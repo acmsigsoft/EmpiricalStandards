@@ -24,18 +24,32 @@ typically given to participants in controlled experiments (see the
 ### Essential Attributes 
 <checklist name="Essential">
 
+<intro>
+
+<method>
+
 - [ ]	identifies the target population & defines the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes how the questionnaire instrument was created
-- [ ]	provides the questionnaire instrument (as an appendix or supplementary materials) 
-- [ ]	the questionnaire design matches the research aims and the target population<sup>[2](#myfootnote2)</sup>
 - [ ]	describes how participants were selected, including invitations and incentives
 - [ ]	step-by-step, systematic, replicable description of data collection and analysis
 - [ ]	describes how responses were managed/monitored, including contingency actions for non-responses and drop-outs
 - [ ]	EITHER: measures constructs using (or adapting) validated scales    
 	 OR: analyzes construct validity (including content, convergent, discriminant and predictive validity) ex post<sup>[3](#myfootnote3)</sup>
 - [ ]	explains handling of missing data (e.g. imputation, weighting adjustments, discarding)
-- [ ]	acknowledges generalizability threats; discusses how respondents may differ from target population
+
+<results>
+
 - [ ]	analyzes response rates
+
+<discussion>
+
+- [ ]	acknowledges generalizability threats; discusses how respondents may differ from target population
+
+<other>	
+	
+- [ ]	provides the questionnaire instrument (as an appendix or supplementary materials) 	
+- [ ]	the questionnaire design matches the research aims and the target population<sup>[2](#myfootnote2)</sup>
+	
 </checklist>
      
 ### Desirable Attributes 	

@@ -38,20 +38,34 @@ following.
 
 ### Essential Attributes 
 
-<checklist name="Essential">
+<checklist name="Essential"> 
 
-- [ ]	states a purpose, problem, objective, or research question
-- [ ]	explains why the problem, objective, or research question is important (motivation)
-- [ ]	defines jargon, acronyms and key concepts
+<intro>    
+    
+- [ ]	states a purpose, problem, objective, or research question  
+- [ ]	explains why the problem, objective, or research question is important (motivation)  
+- [ ]	defines jargon, acronyms and key concepts  
+
+<method>
+    
 - [ ]	methodology is appropriate (not necessarily optimal) for stated purpose or questions
 - [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes in detail how the data were analyzed
-- [ ]	discusses and validates assumptions of any statistical tests used
+- [ ]	discusses and validates assumptions of statistical tests used (if any)
+
+<results>
+    
 - [ ]	presents results
 - [ ]	results directly address research questions
-- [ ]	supports main claims or conclusions with explicit evidence (data/observations) or arguments
+
+<discussion>
+    
 - [ ]	discusses implications of the results
 - [ ]	discusses the study's limitations and threats to validity
+- [ ]	supports main claims or conclusions with explicit evidence (data/observations) or arguments
+
+<other> 
+    
 - [ ]	contributes in some way to the collective body of knowledge <!-- (see Replications Supplement) -->
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
 - [ ]	balances the study's anticipated benefits with its potential risks or harms, minimizing risk or harm wherever possible (see the ethics supplements for studies with [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsHumanParticipants.md) or [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md))
@@ -135,9 +149,9 @@ their trustworthiness and importance. Reviewers should endeavor to:
 ## Invalid Criticisms
 -   Setting arbitrary minimum sample sizes or other data requirements, based on neither power analysis nor theoretical saturation
 -   Stating that a study: 
--   (i) lacks detail without enumerating missing details; 
-    (ii) is of low quality without explaining specific problems; or 
-    (iii) is not new without providing citations to published studies that make **practically identical** contributions.
+    - lacks detail without enumerating missing details;  
+    - is of low quality without explaining specific problems; or  
+    - is not new without providing citations to published studies that make **practically identical** contributions.  
 -   Rejecting a study because it replicates or reproduces existing work <!--(see Replications Supplement)-->
 -   Cross-paradigmatic criticism (e.g. attacking an interpretivist study for not conforming to positivist norms).
 -   Criticizing a study for limitations intrinsic to that kind of study or the methodology used (e.g. attacking a case study for low generalizability) 

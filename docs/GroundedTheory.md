@@ -26,15 +26,28 @@ collection and analysis or do not use theoretical sampling, consider the
 ### Essential Attributes 
 <checklist name="Essential">
 
+<intro>
+
+
+<method>
+
 - [ ]	identifies the version of Grounded Theory used/adapted (Glaser, Strauss-Corbin, Charmaz, etc.)
 - [ ]	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
 - [ ]	describes data sources (e.g. participants' demographics, work roles)
 - [ ]	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
 - [ ]	provides evidence of saturation; explains how saturation was achieved
 - [ ]	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
+    
+<results>
+
 - [ ]	provides clear chain of evidence from raw data (e.g. interviewee quotations) to derived codes, concepts, and categories
-</checklist>
+
+<discussion>
+
+<other>
      
+</checklist>    
+    
 ### Desirable Attributes 
 <checklist name="Desirable">
     
@@ -106,7 +119,7 @@ Steve Adolph, Wendy Hall, and Philippe Kruchten. 2011. Using grounded
 theory to study the experience of software development. *Empirical
 Software Engineering*. 16, 4 (2011), 487–513.
 
-Kathy Charmaz. 2014. *Constructing grounded theory*. sage.
+Kathy Charmaz. 2014. *Constructing grounded theory*. Sage.
 
 Juliet Corbin and Anselm Strauss. 2014. *Basics of qualitative research:
 Techniques and procedures for developing grounded theory*. Sage

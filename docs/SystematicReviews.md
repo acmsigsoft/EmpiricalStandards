@@ -14,15 +14,29 @@
 
 ### Essential Attributes 
 <checklist name="Essential">
-	
+
+<intro>
+
+- [ ]	identifies type of review (e.g. scoping review, meta-analysis, systematic mapping study, narrative synthesis, case survey, critical review)
+
+<method>
+
 - [ ]	presents step-by-step, systematic, replicable description of search process including search terms<sup>[1](#myfootnote1)</sup>  
 - [ ]	defines clear inclusion and exclusion criteria
 - [ ]	specifies the data extracted from each primary study<sup>[2](#myfootnote2)</sup>  ; explains relationships to research questions
 - [ ]	describes in detail how data were extracted and synthesized (can be qualitative or quantitative)
 - [ ]	describes coding scheme(s) and their use
+
+<results>
+
 - [ ]	clear chain of evidence from the extracted data to the answers to the research question(s)
+
+<discussion>
+
 - [ ]	presents conclusions or recommendations for practitioners/non-specialists
-- [ ]	identifies type of review (e.g. scoping review, meta-analysis, systematic mapping study, narrative synthesis, case survey, critical review)
+
+<other>		
+
 </checklist>
 
 ### Desirable Attributes 

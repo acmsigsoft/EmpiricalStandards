@@ -26,11 +26,17 @@ consider the **Discourse Analysis Standard**.
 ### Essential Attributes	
 <checklist name="Essential">
 
-- [ ]	explains how interviewees were selected (i.e. sampling strategy; see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+<method>    
+    
+- [ ]	explains how interviewees were selected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes interviewees (e.g. demographics, work roles)
+- [ ]	provides evidence of saturation; explains how saturation was achieved
+    
+<results>    
+    
 - [ ]	presents clear chain of evidence from interviewee quotations to findings (e.g. proposed concepts)
 - [ ]	clearly answers the research question(s)
-- [ ]	provides evidence of saturation; explains how saturation was achieved
+    
 </checklist>
      
 ### Desirable Attributes	

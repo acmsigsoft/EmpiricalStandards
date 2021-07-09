@@ -18,8 +18,13 @@ Applies to studies that primarily analyze existing software phenomena using pred
 
 ### Essential Attributes
 <checklist name="Essential">
+	
+<intro>
 
 - [ ] discusses motivation; explains what claims are being investigated and why it is useful/timely to explore this problem using this method
+
+<method>
+
 - [ ] explains how data was selected
 - [ ] presents the experimental setup (e.g. using a dataflow diagram)<sup>[2](#myfootnote2)</sup>
 - [ ] describes the feature engineering approaches<sup>[3](#myfootnote3)</sup>, and transformations were applied
@@ -31,8 +36,17 @@ Applies to studies that primarily analyze existing software phenomena using pred
 - [ ] discusses the hardware and software infrastructure used<sup>[4](#myfootnote4)</sup>
 - [ ] justifies all statistics and (automated or manual) heuristics used 
 - [ ] describes and justifies the evaluation metrics used	
+
+<results>
+
 - [ ] goes beyond single-dimensional summaries of performance (e.g., average; median) to include measures of variation, confidence, or other distributional information
+
+<discussion>
+
 - [ ] discusses technical assumptions and threats to validity that are specific to data science<sup>[5](#myfootnote5)</sup>
+	
+<other>
+
 </checklist>
 
 ### Desirable Attributes
