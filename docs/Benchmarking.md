@@ -29,27 +29,30 @@ Benchmarking is often used with Engineering Research (see the **Engineering Rese
         (iii) the measurement method(s) for the metric (if not obvious),   
         (iv)  the workload, usage profile and/or task sample the system under test is subject to (i.e. what the system is doing when the measures are taken)
         and justifies the design of the benchmark (in terms of relevance, timeliness, etc.)
+        and reuses existing benchmark design components from established benchmarks or justifies new components
 - [ ]   describes the experimental setup for the benchmark in sufficient detail to support independent replication (or refers to such description in supplementary materials)
 - [ ]   specifies the workload or usage profile in sufficient detail to support independent replication (or refers to such description in supplementary materials)
 - [ ]   allows different configurations of a system under test to compete on their merits without artificial limitations
-
-<other>        
+- [ ]   assesses stability or reliability using sufficiently experiment repetitions and execution duration 
         
-- [ ]   provides confidence that a benchmark result is accurate
-- [ ]   draws statistically grounded conclusions, e.g., by means of appropriate statistical methods, sufficiently long execution duration and sufficient number of experiment repetitions
-- [ ]   avoids roadblocks for users to run the benchmark in their test environments
-- [ ]   reuses existing benchmark design components from established benchmarks or discusses why new components are introduced
+<discussion>
+            
+- [ ]   discusses the construct validity of the benchmark; that is, does the benchmark measure what it is supposed to measure?  
+        
+<other>                
+
 
 </checklist>
     
 ### Desirable Attributes
 <checklist name="Desirable">
     
-- [ ]   provides supplementary materials including datasets, analysis scripts and (for novel benchmarks) extended documentation  
+- [ ]   provides supplementary materials including datasets, analysis scripts and (for novel benchmarks) extended documentation - [ ]   provides benchmark(s) in a usable form that facillitates independent replication  
 - [ ]	reports on independent replication of the benchmark results
 - [ ]	reports on a large community that uses the benchmark
 - [ ]	reports on an independent organization that maintains the benchmark
 - [ ]	uses or creates open source benchmarks
+- [ ]   transparently reports on problems with executing benchmark runs, if any
 
 </checklist>
     
@@ -67,8 +70,9 @@ Fairness of measurements, reproducibility of results across experiment repetitio
 
 ## Examples of Acceptable Deviations 
 
--   The article reports on problems with executing benchmark runs.
--   The article compares methods, techniques, or tools by running an existing benchmark and, hence, does not report on properties such as relevance, fairness or usability of the benchmark itself.
+-   the nature of the benchmark requires specialized hardware (e.g. a quantum computer) so it not easy to replicate
+-   in a study that replicates published existing work, the description of the experimental setup could be quite brief
+-   the study only employs a one (or a few) runs because prior work has shown that single run is sufficient
 
 ## Antipatterns 
 
@@ -79,7 +83,7 @@ Fairness of measurements, reproducibility of results across experiment repetitio
 
 ## Invalid Criticisms 
 
--   The benchmark is not widely used. It should be sufficient to start the development process of a new benchmark with a small group of researchers as an offer to a larger scientific community. Such a proto-benchmark<footnote><sup>[1](#myfootnote1)</sup> can act as a template to further the discussion of the topic and to initialize the consensus process.
+-   The benchmark is not widely used. It is sufficient to start developing a new benchmark with a small group of researchers as an offer to a larger scientific community. Such a proto-benchmark (Sim et al. 2003) can act as a template to further the discussion of the topic and to initialize the consensus process.
 -   No independent replication of the benchmark results is reported.
 -   There is no independent organization that maintains the benchmark.
 
@@ -117,9 +121,5 @@ Joakim von Kistowski, Simon Eismann, Norbert Schmitt, Andre Bauer, Johannes Groh
 Christoph Laaber, Joel Scheuner, and Philipp Leitner. 2019. Software microbenchmarking in the cloud. How bad is it really?. Empirical Software Engineering 24, 2469–2508. DOI: [10.1007/s10664-019-09681-1](https://doi.org/10.1007/s10664-019-09681-1)
 
 Jan Waller, Nils C. Ehmke, and Wilhelm Hasselbring. 2015. Including Performance Benchmarks into Continuous Integration to Enable DevOps. SIGSOFT Softw. Eng. Notes 40, 2 (March 2015), 1–4. DOI: [10.1145/2735399.2735416](https://doi.org/10.1145/2735399.2735416)
-
----
-
-<footnote><sup>[1](#myfootnote1)</sup> Susan Elliott Sim, Steve Easterbrook, and Richard C. Holt. 2003. Using benchmarking to advance research: a challenge to software engineering. In 25th International Conference on Software Engineering. IEEE. DOI: 10.1109/icse.2003.1201189.</footnote><br>
 
 </standard>
