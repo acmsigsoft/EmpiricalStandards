@@ -20,16 +20,21 @@ Benchmarking is often used with Engineering Research (see the **Engineering Rese
 ### Essential Attributes
 <checklist name="Essential">
 
-- [ ]   justifies the selection of the benchmark (in terms of relevance, timeliness, etc.)
-- [ ]   describes the experimental setup for the benchmark in sufficient detail to support independent replication (or refers to such description in supplementary materials)
-- [ ]   specifies the workload or usage profile in sufficient detail to support independent replication (or refers to such description in supplementary materials)
-- [ ]   EITHER: uses an existing, publicly available or standard benchmark 
-        OR: defines a new benchmark and describes all components of its design, typically:   
+<method>        
+        
+- [ ]   EITHER: justifies the selection of an existing, publicly available or standard benchmark (in terms of relevance, timeliness, etc.)  
+        OR: defines a new benchmark, including:   
         (i)   the quality to be benchmarked (e.g., performance, availability, scalability, security),  
         (ii)  the metric(s) to quantify the quality,   
         (iii) the measurement method(s) for the metric (if not obvious),   
         (iv)  the workload, usage profile and/or task sample the system under test is subject to (i.e. what the system is doing when the measures are taken)
+        and justifies the design of the benchmark (in terms of relevance, timeliness, etc.)
+- [ ]   describes the experimental setup for the benchmark in sufficient detail to support independent replication (or refers to such description in supplementary materials)
+- [ ]   specifies the workload or usage profile in sufficient detail to support independent replication (or refers to such description in supplementary materials)
 - [ ]   allows different configurations of a system under test to compete on their merits without artificial limitations
+
+<other>        
+        
 - [ ]   provides confidence that a benchmark result is accurate
 - [ ]   draws statistically grounded conclusions, e.g., by means of appropriate statistical methods, sufficiently long execution duration and sufficient number of experiment repetitions
 - [ ]   avoids roadblocks for users to run the benchmark in their test environments
@@ -40,10 +45,10 @@ Benchmarking is often used with Engineering Research (see the **Engineering Rese
 ### Desirable Attributes
 <checklist name="Desirable">
     
-- [ ]   provides a replication package including datasets and analysis scripts (for the **Engineering Research (AKA Design Science) Standard** this a desirable attribute, for benchmarks this is an essential attribute)        
+- [ ]   provides supplementary materials including datasets, analysis scripts and (for novel benchmarks) extended documentation  
 - [ ]	reports on independent replication of the benchmark results
 - [ ]	reports on a large community that uses the benchmark
-- [ ]	reports on an independent organization that maintains the benchmark.
+- [ ]	reports on an independent organization that maintains the benchmark
 - [ ]	uses or creates open source benchmarks
 
 </checklist>
@@ -51,8 +56,8 @@ Benchmarking is often used with Engineering Research (see the **Engineering Rese
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ] provides empirical evidence for the relevance of a benchmark, e.g., by applying the **Systematic Reviews Standard**
-- [ ] provides empirical evidence for the usability of a benchmark, e.g., by applying the **Action Research Standard**
+- [ ] provides empirical evidence for the relevance of a benchmark, e.g., using a Systematic Review
+- [ ] provides empirical evidence for the usability of a benchmark, e.g., using Action Research
 
 </checklist>
      
@@ -67,15 +72,14 @@ Fairness of measurements, reproducibility of results across experiment repetitio
 
 ## Antipatterns 
 
--   Tailoring benchmarks toward a specific method, technique or tool, which is evaluated with the benchmark.
+-   Tailoring the benchmark for a specific method, technique or tool, which is evaluated with the benchmark.
 -   Using benchmarking experiments that are irrelevant for the problem studied to obfuscate weaknesses in the proposed approach
--   Running a benchmark experiment only once
--   Not running a benchmark experiment for a sufficiently long duration
+-   Insufficient repitions or duration to assess stability of results 
 -   Collecting aggregated measurements instead of persisting all raw results and running an offline analysis
 
 ## Invalid Criticisms 
 
--   There is no large community using the benchmark. It should be sufficient to start the development process of a new benchmark with a small group of researchers as an offer to a larger scientific community. Such a proto-benchmark<footnote><sup>[1](#myfootnote1)</sup> can act as a template to further the discussion of the topic and to initialize the consensus process.
+-   The benchmark is not widely used. It should be sufficient to start the development process of a new benchmark with a small group of researchers as an offer to a larger scientific community. Such a proto-benchmark<footnote><sup>[1](#myfootnote1)</sup> can act as a template to further the discussion of the topic and to initialize the consensus process.
 -   No independent replication of the benchmark results is reported.
 -   There is no independent organization that maintains the benchmark.
 
