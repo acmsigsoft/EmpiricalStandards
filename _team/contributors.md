@@ -10,6 +10,8 @@
 
 **Sebastian Baltes**, University of Adelaide, Australia [Sampling]
 
+**David Bermbach**, TU Berlin, Germany [Benchmarking]
+
 **Domenico Bianculli**, University of Luxemburg, Luxemburg [Engineering]
 
 **Jessica Diaz**, Technical University of Madrid, Spain [IRR/IRA]
@@ -34,7 +36,11 @@
 
 **Daniel Graziotin**, University of Stuttgart, Germany [Open Science]
 
+**Wilhelm Hasselbring**, Kiel University, Germany [Benchmarking]
+
 **Pinjia He**, ETH Zurich, Switzerland [General]
+
+**Sören Henning**, Kiel University, Germany [Benchmarking]
 
 **Rashina Hoda**, Monash University, Australia [Grounded Theory]
 
