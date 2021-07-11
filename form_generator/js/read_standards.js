@@ -645,7 +645,8 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 		line_text = line.trim().replaceAll(" ", "").replaceAll("<br>", "").replaceAll("<br/>", "").replaceAll("\t", "");
 		if (line_text != ""){
 			i++;
-			line_text = line.trim().replace("---", "&mdash;").replace(/<br(\/)?>$/, "");
+			// Trim and remove line breaks in markdown text
+			line_text = line.trim().replace("---", "&mdash;").replaceAll("<br>", "").replaceAll("<br/>", "");
 			checklistItem_id = standardName + "-" + checklistName + ":" + i;
 			var checklistItemLI = document.createElement("LI");
 			var checklistItemText = document.createElement("span");
