@@ -101,3 +101,6 @@
 **Arham Arshad**, Dalhousie University, Canada
 
 **Taher Ghaleb**, Queen&#39;s University, Canada
+
+**Erin Schultz**, Dalhousie University, Canada
+
