@@ -63,6 +63,7 @@ function openStandardFromURL(evt) {
 <div class="tab">
   <button id="GeneralStandard_b"        class="tablinks" onclick="openStandard(event, 'GeneralStandard')">General Standard</button>
   <button id="ActionResearch_b"         class="tablinks" onclick="openStandard(event, 'ActionResearch')">Action Research</button>
+  <button id="Benchmarking_b"           class="tablinks" onclick="openStandard(event, 'Benchmarking')">Benchmarking</button>
   <button id="CaseStudy_b"              class="tablinks" onclick="openStandard(event, 'CaseStudy')">Case Study</button>
   <button id="CaseSurvey_b"             class="tablinks" onclick="openStandard(event, 'CaseSurvey')">Case Survey</button>
   <button id="DataScience_b"            class="tablinks" onclick="openStandard(event, 'DataScience')">Data Science</button>
