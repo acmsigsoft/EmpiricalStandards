@@ -63,7 +63,7 @@ function openStandardFromURL(evt) {
 <div class="tab">
   <button id="GeneralStandard_b"        class="tablinks" onclick="openStandard(event, 'GeneralStandard')">General Standard</button>
   <button id="ActionResearch_b"         class="tablinks" onclick="openStandard(event, 'ActionResearch')">Action Research</button>
-  <button id="Benchmarking (of Software Systems)_b"           class="tablinks" onclick="openStandard(event, 'Benchmarking')">Benchmarking</button>
+  <button id="Benchmarking_b"           class="tablinks" onclick="openStandard(event, 'Benchmarking')">Benchmarking</button>
   <button id="CaseStudy_b"              class="tablinks" onclick="openStandard(event, 'CaseStudy')">Case Study</button>
   <button id="CaseSurvey_b"             class="tablinks" onclick="openStandard(event, 'CaseSurvey')">Case Survey</button>
   <button id="DataScience_b"            class="tablinks" onclick="openStandard(event, 'DataScience')">Data Science</button>
@@ -94,7 +94,7 @@ function openStandardFromURL(evt) {
     {{ std | remove: '<standard name="Action Research">' | remove: '<checklist name="Essential">' | remove: '<checklist name="Desirable">' | remove: '<checklist name="Extraordinary">' | remove: '</checklist>' | remove: '</standard>' | remove: '<footnote>' | remove: '</footnote>' | remove: '<intro>' | remove: '<method>' | remove: '<results>' | remove: '<discussion>' | remove: '<other>' | replace: '- [ ]', '-' | replace: 'https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/', '../docs?standard=' | replace: 'https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/', '../Supplements?supplement=' | replace: '.md', '' | markdownify }}
   </p>
 </div>
-    <div id="Benchmarking (of Software Systems)" class="tabcontent">
+    <div id="Benchmarking" class="tabcontent">
   <p>
     {% capture std %}{% include_relative docs/ActionResearch.md %}{% endcapture %}
     {{ std | remove: '<standard name="Benchmarking">' | remove: '<checklist name="Essential">' | remove: '<checklist name="Desirable">' | remove: '<checklist name="Extraordinary">' | remove: '</checklist>' | remove: '</standard>' | remove: '<footnote>' | remove: '</footnote>' | remove: '<intro>' | remove: '<method>' | remove: '<results>' | remove: '<discussion>' | remove: '<other>' | replace: '- [ ]', '-' | replace: 'https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/', '../docs?standard=' | replace: 'https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/', '../Supplements?supplement=' | replace: '.md', '' | markdownify }}
