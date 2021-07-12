@@ -47,7 +47,8 @@ Benchmarking is often used with Engineering Research (see the **Engineering Rese
 ### Desirable Attributes
 <checklist name="Desirable">
     
-- [ ]   provides supplementary materials including datasets, analysis scripts and (for novel benchmarks) extended documentation - [ ]   provides benchmark(s) in a usable form that facillitates independent replication  
+- [ ]   provides supplementary materials including datasets, analysis scripts and (for novel benchmarks) extended documentation
+- [ ]   provides benchmark(s) in a usable form that facillitates independent replication  
 - [ ]	reports on independent replication of the benchmark results
 - [ ]	reports on a large community that uses the benchmark
 - [ ]	reports on an independent organization that maintains the benchmark
