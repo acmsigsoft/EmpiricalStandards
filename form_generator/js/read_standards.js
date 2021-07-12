@@ -835,6 +835,7 @@ function generateStandardChecklist(){
 			//standard_header_text.innerText = standardName;
 			Yes_No.style = "align:center; font-size: 80%; font-weight: bold;";
 			Yes_No.innerHTML = "&nbsp;yes no";
+
 			standard_header_rule.appendChild(standard_header_text);
 			if (checklistTag.getAttribute('name') == "Essential") {
 				//EssentialUL.appendChild(standard_header_rule);
