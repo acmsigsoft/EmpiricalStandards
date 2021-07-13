@@ -29,11 +29,11 @@ standard is not appropriate for:
 <method>
 
 - [ ]   Empirically evaluates the proposed artifact using:  
-	 **action research**, in which the researchers intervene a real organization using the artifact,  
-	 a **case study** in which a real organization uses the artifact without researcher intervention,  
-	 a **controlled experiment** in which human participants use the  artifact,  
-	 a **quantitative simulation** or **benchmarking** in which the artifact is used in an artificial environment, or  
-	 another method for which a clear and convincing rationale is provided
+  - **action research**, in which the researchers intervene a real organization using the artifact,  
+  - a **case study** in which a real organization uses the artifact without researcher intervention,  
+  - a **controlled experiment** in which human participants use the  artifact,  
+  - a **quantitative simulation** or **benchmarking** in which the artifact is used in an artificial environment, or  
+  - another method for which a clear and convincing rationale is provided
 - [ ]   clearly indicates the empirical methodology being used (e.g. action research, controlled experiment)
 - [ ]   EITHER: discusses state-of-art alternatives (and their strengths, weaknesses and limitations)   
     OR: explains why no state-of-art alternatives exist   
