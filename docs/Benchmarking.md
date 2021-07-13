@@ -33,7 +33,7 @@ Benchmarking is often used with Engineering Research (see the **Engineering Rese
 - [ ]   describes the experimental setup for the benchmark in sufficient detail to support independent replication (or refers to such description in supplementary materials)
 - [ ]   specifies the workload or usage profile in sufficient detail to support independent replication (or refers to such description in supplementary materials)
 - [ ]   allows different configurations of a system under test to compete on their merits without artificial limitations
-- [ ]   assesses stability or reliability using sufficiently experiment repetitions and execution duration 
+- [ ]   assesses stability or reliability using sufficient experiment repetitions and execution duration 
         
 <discussion>
             
