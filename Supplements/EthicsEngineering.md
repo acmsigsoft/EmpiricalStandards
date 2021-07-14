@@ -30,7 +30,7 @@ methods, systems, tools, and other computer-based technologies.
 
 ## General Quality Criteria
 
-Assessing the ethicality of a new technology is mainly about (1) the degree to which potential harms are acknowledged and mitigated, and (2) juxtaposing harms and benefits. We do not reject a new technology because of the potential for harm---virtually every technology has costs and potential for harms and misuse. Rather, we reject a paper when it evincees a general lack of awareness or consideration of potential harms, obfuscation of harms, when the harms outweigh the benefits, or when benefits accrue to people who don't really need them (e.g. the rich and powerful) while the costs are borne by different people who cannot afford them (e.g. the poor and vulnerable).  
+Assessing the ethicality of a new technology is mainly about (1) the degree to which potential harms are acknowledged and mitigated, and (2) juxtaposing harms and benefits. We do not reject a new technology because of the potential for harm---virtually every technology has costs and potential for harms and misuse. Rather, we reject a paper when it evinces a general lack of awareness or consideration of potential harms, obfuscation of harms, when the harms outweigh the benefits, or when benefits accrue to people who don't really need them (e.g. the rich and powerful) while the costs are borne by different people who cannot afford them (e.g. the poor and vulnerable).  
 
 ## Antipatterns
 
