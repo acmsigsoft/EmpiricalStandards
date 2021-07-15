@@ -61,6 +61,8 @@ function openSupplementFromURL(evt) {
 <body onload="openSupplementFromURL(event)">
 
 <div class="tab">
+  <button id="EthicsEngineering_b"           class="tablinks" onclick="openSupplement(event, 'EthicsEngineering')">Ethics (Human Participants)</button>
+<div class="tab">
   <button id="EthicsHumanParticipants_b"           class="tablinks" onclick="openSupplement(event, 'EthicsHumanParticipants')">Ethics (Human Participants)</button>
   <button id="EthicsSecondaryData_b"               class="tablinks" onclick="openSupplement(event, 'EthicsSecondaryData')">Ethics (Secondary Human Data)</button>
   <button id="InformationVisualization_b"          class="tablinks" onclick="openSupplement(event, 'InformationVisualization')">Information Visualization</button>
@@ -70,13 +72,21 @@ function openSupplementFromURL(evt) {
   <button id="Sampling_b"                          class="tablinks" onclick="openSupplement(event, 'Sampling')">Sampling</button>
 </div>
 
+<div id="EthicsEngineering" class="tabcontent">
+  <p>
+    {% capture std %}{% include_relative Supplements/EthicsEngineering.md %}{% endcapture %}
+    {{ std | replace: '- [ ]', '-' | markdownify }}
+  </p>
+</div>
+
 <div id="EthicsHumanParticipants" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/EthicsHumanParticipants.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
-
+  
+  
 <div id="EthicsSecondaryData" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/EthicsSecondaryData.md %}{% endcapture %}
