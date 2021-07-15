@@ -1072,10 +1072,10 @@ function saveFile(){
 		"=======\n" +
 		"Y = yes, the paper has this attribute\n" +
 		"R = a reasonable, acceptable deviation from the standards\n" +
-		"1 = can be fixed by editing text only\n" +
-		"2 = can be fixed by doing some new data analysis, redoing some existing data analysis, or collecting a small amount of additional data\n" +
-		"3 = can be fixed completely redoing data analysis, or collecting additional data\n" +
-		"4 = unacceptable conduct or problems the cannot be fixed without doing a brand new study\n\n\n";
+		"1 = a deviation that can be fixed by editing text only\n" +
+		"2 = a deviation that can be fixed by doing some new data analysis, redoing some existing data analysis, or collecting a small amount of additional data\n" +
+		"3 = a deviation that can be fixed by completely redoing data analysis, or collecting additional data\n" +
+		"4 = a deviation that cannot be fixed, or at least not without doing a brand new study\n\n\n";
 
 	generated_text+= "=================\n" +
 		"Standards Used\n" +
