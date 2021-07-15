@@ -61,10 +61,10 @@ function openSupplementFromURL(evt) {
 <body onload="openSupplementFromURL(event)">
 
 <div class="tab">
-  <button id="EthicsEngineering_b"           class="tablinks" onclick="openSupplement(event, 'EthicsEngineering')">Ethics (Human Participants)</button>
+  <button id="EthicsEngineering_b"           class="tablinks" onclick="openSupplement(event, 'EthicsEngineering')">Ethics (Engineering Research)</button>
 <div class="tab">
   <button id="EthicsHumanParticipants_b"           class="tablinks" onclick="openSupplement(event, 'EthicsHumanParticipants')">Ethics (Human Participants)</button>
-  <button id="EthicsSecondaryData_b"               class="tablinks" onclick="openSupplement(event, 'EthicsSecondaryData')">Ethics (Secondary Human Data)</button>
+  <button id="EthicsSecondaryData_b"               class="tablinks" onclick="openSupplement(event, 'EthicsSecondaryData')">Ethics (Secondary Data)</button>
   <button id="InformationVisualization_b"          class="tablinks" onclick="openSupplement(event, 'InformationVisualization')">Information Visualization</button>
   <button id="InterRaterReliabilityAndAgreement_b" class="tablinks" onclick="openSupplement(event, 'InterRaterReliabilityAndAgreement')">Inter-Rater Reliability and Agreement</button>
   <button id="OpenScience_b"                       class="tablinks" onclick="openSupplement(event, 'OpenScience')">Open Science</button>
