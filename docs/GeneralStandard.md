@@ -68,7 +68,10 @@ following.
     
 - [ ]	contributes in some way to the collective body of knowledge <!-- (see Replications Supplement) -->
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
-- [ ]	balances the study's anticipated benefits with its potential risks or harms, minimizing risk or harm wherever possible (see the ethics supplements for studies with [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsHumanParticipants.md), [Engineering Research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsEngineering.md) or [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md))
+- [ ]	acknowledges and mitigates potential risks, harms, burdens or unintended consequences of the research (see the ethics supplements for 
+    [Engineering Research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsEngineering.md), 
+    [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsHumanParticipants.md),  or 
+    [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md))
 - [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InformationVisualization.md))
 - [ ]	complies with all applicable empirical standards
 
@@ -78,19 +81,19 @@ following.
 
 <checklist name="Desirable">
 
-- [ ]	summarizes and synthesizes a reasonable selection of related work
-- [ ]	clearly describes relationship between contribution(s) and related work
 - [ ]	states epistemological stance (e.g. post-positivism, interpretivism, critical realism)
-- [ ]	appropriate statistical power (for quantitative work) or saturation (for qualitative work)
-- [ ]	reasonable attempts to investigate or mitigate limitations
+- [ ]	summarizes and synthesizes a reasonable selection of related work (not every single relevant study)
+- [ ]	clearly describes relationship between contribution(s) and related work
+- [ ]	demonstrates appropriate statistical power (for quantitative work) or saturation (for qualitative work)
+- [ ]	describes reasonable attempts to investigate or mitigate limitations
 - [ ]	discusses study’s realism, assumptions and sensitivity of the results to its realism/assumptions
 - [ ]	provides plausibly useful interpretations or recommendations for practice, education or research
-- [ ]	openly shares data and materials to the extent possible within practical and ethical limits (see the [Open Science Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/OpenScience.md))
 - [ ]	concise, precise, well-organized and easy-to-read presentation
 - [ ]	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
 - [ ]	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
 - [ ]	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
-- [ ]	uses multiple raters for any subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]   publishes the study in two phases: a plan and the results of executing the plan (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/Supplements)) 
+- [ ]	uses multiple raters, where philosophically apporpriate, for making subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
 
 </checklist>
      
