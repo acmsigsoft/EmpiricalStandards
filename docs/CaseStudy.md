@@ -41,8 +41,9 @@ captures a large quantitative dataset with limited context, consider the
 
 <method>
 
-- [ ]   justifies the selection of the case or site that was studied
-- [ ]   describes the site in rich detail
+- [ ]   justifies the selection of the case(s) or site(s) that was(were) studied
+- [ ]   describes the site(s) in rich detail
+- [ ]   reports the type of case study<sup>[1](#myfootnote1)</sup>
 - [ ]   describes data sources (e.g. participants' demographics and work roles)
 - [ ]   defines unit(s) of analysis or observation
 
@@ -63,21 +64,21 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]   triangulates across data sources, informants or researchers
 - [ ]   cross-checks interviewee statements (e.g. against direct observation or archival records)
-- [ ]   validates results using member checking, dialogical interviewing<sup>[1](#myfootnote1)</sup>, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
-- [ ]   reports the type of case study (see *Types of Case Studies*)
+- [ ]   uses participant observation (ethnography) or direct observation (non-ethnography) and clearly integrates these observations into results<sup>[2](#myfootnote2)</sup>    
+- [ ]   validates results using member checking, dialogical interviewing<sup>[3](#myfootnote3)</sup>, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]   describes external events and other factors that may have affected the case or site
-- [ ]   uses quotations to *illustrate* findings (note: quotations should not be *the only* representation of a finding; each finding should be described independently of supporting quotations)
+- [ ]   uses quotations to *illustrate* findings<sup>[4](#myfootnote4)</sup>
 - [ ]   EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory    
      OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
+- [ ]   researchers reflect on their own possible biases
 </checklist>
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
 - [ ]   multiple, deep, fully-developed cases with cross-case triangulation
-- [ ]   uses multiple judges and analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
-- [ ]   uses direct observation and clearly integrates direct observations into results
-- [ ]   published a case study protocol beforehand and made it publicly accessible
+- [ ]   uses a team-based approach; e.g., multiple raters with analysis of inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]   published a case study protocol beforehand and made it publicly accessible (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/Supplements)) 
 </checklist>
     
 ## General Quality Criteria 
@@ -210,5 +211,8 @@ case study of crowdsourcing software development. In *Proceedings of the
 36^th^ International Conference on Software Engineering*, 187–198, 2014.
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
+<footnote><sup>[1](#myfootnote1)</sup>e.g. descriptive, emancipatory, evaluative, explanatory, exploratory, historical, revelatory</footnote><br> 
+<footnote><sup>[2](#myfootnote2)</sup> Direct observation means watching research subjects without getting involved; participant observation means joining in with whatever participants are doing</footnote><br>
+<footnote><sup>[3](#myfootnote3)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
+<footnote><sup>[4](#myfootnote4)</sup> Quotations should not be *the only* representation of a finding; each finding should be described independently of supporting quotations</footnote><br>    
 </standard>
