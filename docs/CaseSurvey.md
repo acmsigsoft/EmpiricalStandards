@@ -25,6 +25,15 @@ This standard does not apply to studies collecting primary data from a large num
 - [ ]   presents step-by-step, systematic, replicable description of the search process for published case studies (not necessarily in peer-reviewed venues)
 - [ ]   defines clear inclusion and exclusion criteria for cases<sup>[1](#myfootnote1)</sup>
 - [ ]   describes the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ]   mitigates sampling bias and publication bias, using some (not all) of:   
+(i) manual and keyword automated searches;   
+(ii) backward and forward snowballing searches;   
+(iii) checking profiles of prolific authors in the area;   
+(iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar);   
+(v) searching for relevant dissertations;  
+(vi) searching pre-print servers (e.g. arXiv);   
+(vii) soliciting unpublished manuscripts through appropriate listservs or social media;   
+(viii) contacting known authors in the area.   
 - [ ]   defines a coding scheme to convert qualitative case descriptions into quantitative variables<sup>[2](#myfootnote2)</sup>
 - [ ]   EITHER: describes the coding scheme in detail;   
 OR: provides the coding scheme in supplementary materials
@@ -45,22 +54,12 @@ OR: provides the coding scheme in supplementary materials
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ]   mitigates sampling bias and publication bias, using some combination of:   
-(i) manual and keyword automated searches;   
-(ii) backward and forward snowballing searches;   
-(iii) checking profiles of prolific authors in the area;   
-(iv) searching both formal databases (e.g. ACM Digital Library) and indexes (e.g. Google Scholar);   
-(v) searching for relevant dissertations;  
-  (vi) searching pre-print servers (e.g. arXiv);   
-(vii) soliciting unpublished manuscripts through appropriate listservs or social media;   
-(viii) contacting known authors in the area.   
-- [ ]   provides supplementary materials including: the list of primary studies, coding scheme, decision rules, complete dataset; analysis scripts<sup>[3](#myfootnote3)</sup>
-- [ ]   explains and justifies the coding scheme instrument design 
-- [ ]   employs multiple coders and evaluates the inter-rater reliability 
-- [ ]   explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup>
+- [ ]   provides supplementary materials such as  protocol, search terms, search results, selection process results, coding scheme, examples of coding, decision rules, complete dataset, analysis scripts, descriptions of edge cases<sup>[3](#myfootnote3)</sup>
+- [ ]   explains and justifies the design of the coding scheme 
+- [ ]   uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup>
 - [ ]   describes contacting authors of primary studies for more information, to check coding accuracy, or resolve coding disagreements
 - [ ]   assesses quality of primary studies using an a priori scheme (e.g. the **Case Survey Standard**); explains how quality was assessed; models study quality as a moderating variable  
-- [ ]   consolidates results using tables, diagrams, or charts
+- [ ]   consolidates results using tables, diagrams, or charts; includes PRISMA flow diagram (cf. Moher et al. 2009)
 - [ ]   integrates results into prior theory or research; identifies gaps, biases, or future directions
 - [ ]   presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
 - [ ]   clearly distinguishes evidence-based results from interpretations and speculation<sup>[5](#myfootnote5)</sup>
@@ -107,6 +106,8 @@ William Lucas. 1974. The Case Survey Method: Aggregating Case Experience. Rand C
 
 Jorge Melegati and Xiaofeng Wang. 2020. Case Survey Studies in Software Engineering Research. *Proceedings of the 14th ACM / IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM)* (Oct. 2020), 1–12.
 
+Moher D, Liberati A, Tetzlaff J, Altman DG, The PRISMA Group (2009). *P*referred *R*eporting *I*tems for *S*ystematic Reviews and *M*eta-*A*nalyses: The PRISMA Statement. PLoS Med 6, 7: e1000097. doi:10.1371/journal.pmed1000097  
+  
 Robert Yin and Karen Heald. 1975. Using the Case Survey Method to Analyze Policy Studies. *Administrative Science Quarterly*. 20, 3 (1975), 371. DOI:10.2307/2391997.
 
 
