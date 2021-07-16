@@ -21,18 +21,18 @@ Applies to studies that primarily analyze existing software phenomena using pred
 	
 <intro>
 
-- [ ] discusses motivation; explains what claims are being investigated and why it is useful/timely to explore this problem using this method
+- [ ] explains why it is timely to investigate the proposed problem using the proposed method
 
 <method>
 
-- [ ] explains how data was selected
+- [ ] explains how and why the data was selected
 - [ ] presents the experimental setup (e.g. using a dataflow diagram)<sup>[2](#myfootnote2)</sup>
-- [ ] describes the feature engineering approaches<sup>[3](#myfootnote3)</sup>, and transformations were applied
+- [ ] describes the feature engineering approaches<sup>[3](#myfootnote3)</sup>, and transformations that were applied
 - [ ] explains how the data was pre-processed, filtered, and categorized
 - [ ] EITHER: discusses state-of-art baselines (and their strengths, weaknesses and limitations)
 	OR: explains why no state-of-art baselines exist
 	OR: provides compelling argument that direct comparisons are impractical
-- [ ] defines the modeling approach(es) used (e.g. clustering then decision tree learning), typically in pseudocode
+- [ ] defines the modeling approach(es) used (e.g. clustering then decision tree learning), typically using pseudocode
 - [ ] discusses the hardware and software infrastructure used<sup>[4](#myfootnote4)</sup>
 - [ ] justifies all statistics and (automated or manual) heuristics used 
 - [ ] describes and justifies the evaluation metrics used	
