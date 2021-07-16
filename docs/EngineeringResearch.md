@@ -24,22 +24,23 @@ standard is not appropriate for:
 
 - [ ]   describes the proposed artifact in adequate detail<sup>[1](#myfootnote1)</sup>
 - [ ]   justifies the need for, usefulness of, or relevance of the proposed artifact<sup>[2](#myfootnote2)</sup>
-- [ ]   conceptually evaluates the artifact; discusses its strengths, weaknesses and limitations<sup>[3](#myfootnote3)</sup>
+- [ ]   conceptually evaluates the proposed artifact; discusses its strengths, weaknesses and limitations<sup>[3](#myfootnote3)</sup>
 
 <method>
 
 - [ ]   Empirically evaluates the proposed artifact using:  
-  **action research**, in which the researchers intervene a real organization using the artifact,  
-  a **case study** in which a real organization uses the artifact without researcher intervention,  
-  a **controlled experiment** in which human participants use the  artifact,  
-  a **quantitative simulation** or **benchmarking** in which the artifact is used in an artificial environment, or  
+  [action research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/ActionResearch.md), in which the researchers intervene in a real organization using the artifact,  
+  a [case study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/CaseStudy.md) in which the researchers obsevere a real organization using the artifact,  
+  a [controlled experiment](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Experiments.md) in which human participants use the artifact,  
+  a [quantitative simulation](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/QuantitativeSimulation.md) in which the artifact is assessed (usually against a competing artifact) in an artificial environment,  
+  a [benchmarking study](https://github.com/acmsigsoft/EmpiricalStandards/edit/master/docs/Benchmarking.md), in which the artifact is assessed using one or more benchmarks, or  
   another method for which a clear and convincing rationale is provided
-- [ ]   clearly indicates the empirical methodology being used (e.g. action research, controlled experiment)
+- [ ]   clearly indicates which of the above empirical methodology is used
 - [ ]   EITHER: discusses state-of-art alternatives (and their strengths, weaknesses and limitations)   
     OR: explains why no state-of-art alternatives exist   
     OR: provides compelling argument that direct comparisons are impractical
-- [ ]   EITHER: empirically compares the artifact to one or more state-of-the-art alternative artifacts   
-    OR: empirically compares the artifact to one or more state-of-the-art benchmarks (see also the **Benchmarking (of Software Systems)** Standard)  
+- [ ]   EITHER: empirically compares the artifact to one or more state-of-the-art alternatives   
+    OR: empirically compares the artifact to one or more state-of-the-art benchmarks  
     OR: provides a clear and convincing rationale for why comparative evaluation is impractical
 
 <results>
@@ -50,7 +51,7 @@ standard is not appropriate for:
 
 <other>
 	
-- [ ]   assumptions (if any) are explicit; do not contradict each other or the contribution's goals; plausibly hold for the evaluation subjects
+- [ ]   assumptions (if any) are explicit, plausible and do not contradict each other or the contribution's goals
 - [ ]   uses notation consistently (if any notation is used)
 
 </checklist>
