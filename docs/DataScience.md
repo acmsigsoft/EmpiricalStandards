@@ -53,7 +53,7 @@ Applies to studies that primarily analyze existing software phenomena using pred
 <checklist name="Desirable">
 
 - [ ] provides a replication package including source code and data set(s), or if data cannot be shared, synthetic data to illustrate the use of the algorithms<sup>[6](#myfootnote6)</sup>
-- [ ] data is processed by multiple learners, of different types, e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); e.g. see<sup>[7](#myfootnote7)</sup> for guidance
+- [ ] data is processed by multiple learners, of different types<sup>[7](#myfootnote7)</sup> for guidance
 - [ ] data is processed multiple times with different, randomly selected, training/test examples; the results of which are compared via significance tests and effect size tests (e.g. cross-validation)
 - [ ] carefully selects the hyperparameters that control the data miners (e.g. via analysis of settings in related work or some automatic hyperparameter optimizer such as grid search)
 - [ ] manually inspects some non-trivial portion of the data (i.e. data sanity checks)
@@ -129,10 +129,9 @@ Applies to studies that primarily analyze existing software phenomena using pred
 <footnote><sup>[2](#myfootnote2)</sup>Akidau, Tyler, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety et al. "The dataflow model: a practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." (2015). Proceedings of the VLDB Endowment 8.12</footnote><br>
 <footnote><sup>[3](#myfootnote3)</sup>Acf. Nargesian, Fatemeh, Horst Samulowitz, Udayan Khurana, Elias B. Khalil, and Deepak S. Turaga. "Learning Feature Engineering for Classification." In Ijcai, pp. 2529-2535. 2017.</footnote><br>
 <footnote><sup>[4](#myfootnote4)</sup>including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks</footnote><br>
-<footnote><sup>[5](#myfootnote5)</sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[5](#myfootnote5)</sup> For example, failing to address variations in the size or complexity of training, testing and validation data sets</footnote. For more, see: Wohlin, C., Runeson, P., Höst, M., Ohlsson, M. C.,,Regnell, B. (2012). Experimentation in Software Engineering. Springer. ISBN: 978-3-642-29043-5</footnote><br>	
 <footnote><sup>[6](#myfootnote6)</sup>Sarkar, T. (2019). Synthetic data generation - a must-have skill for new data scientists. (July 2019).https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae</footnote><br> 
-<footnote><sup>[7](#myfootnote7)</sup>Baljinder Ghotra, Shane McIntosh, and Ahmed E. Hassan. 2015. Revisiting the impact of classification techniques on the performance of defect prediction models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, 789–800.</footnote><br>
-<footnote><sup>[8](#myfootnote8)</sup>For example, failing to address variations in the size or complexity of training, testing and validation data sets</footnote <br>
-<footnote><sup>[9](#myfootnote9)</sup>c.f. Raymond P. L. Buse and Thomas Zimmermann. 2012. Information needs for software development analytics. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, 987–996.</footnote><br>	
-<footnote><sup>[10](#myfootnote10)</sup>Berti-Équille, L. (2007). Measuring and Modelling Data Quality for Quality-Awareness in Data Mining.. In F. Guillet & H. J. Hamilton (ed.), Quality Measures in Data Mining , Vol. 43 (pp. 101-126) . Springer . ISBN: 978-3-540-44911-9.</footnote><br>
+<footnote><sup>[7](#myfootnote7)</sup>e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); for guidance, see Baljinder Ghotra, Shane McIntosh, and Ahmed E. Hassan. 2015. Revisiting the impact of classification techniques on the performance of defect prediction models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, 789–800.</footnote><br>
+<footnote><sup>[8](#myfootnote8)</sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[9](#myfootnote9)</sup>c.f. Raymond P. L. Buse and Thomas Zimmermann. 2012. Information needs for software development analytics. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, 987–996.</footnote><br>
 </standard>
