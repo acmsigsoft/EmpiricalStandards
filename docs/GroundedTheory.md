@@ -35,7 +35,7 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
 - [ ]	describes data sources (e.g. participants' demographics, work roles)
 - [ ]	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
-- [ ]	provides evidence of saturation; explains how saturation was achieved
+- [ ]	provides evidence of saturation; explains how saturation was achieved<sup>[1](#myfootnote1)</sup> 
 - [ ]	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
     
 <results>
@@ -54,7 +54,7 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]	explains how and why study adapts or deviates from claimed GT version
 - [ ]	presents a mature, fully-developed theory or taxonomy
-- [ ]	includes highly diverse participants and/or data sources (e.g. software repositories, forums)
+- [ ]	includes diverse participants and/or data sources (e.g. software repositories, forums)
 - [ ]	uses direct quotations extensively to support key points
 - [ ]	explains how memo writing was used to drive the work
 - [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
@@ -118,6 +118,8 @@ reliability typically do not apply.
 Steve Adolph, Wendy Hall, and Philippe Kruchten. 2011. Using grounded
 theory to study the experience of software development. *Empirical
 Software Engineering*. 16, 4 (2011), 487–513.
+    
+Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.    
 
 Kathy Charmaz. 2014. *Constructing grounded theory*. Sage.
 
@@ -128,10 +130,6 @@ publications.
 Dennis A. Gioia, Kevin G. Corley, and Aimee L. Hamilton. "Seeking qualitative rigor in inductive research: Notes on the Gioia methodology." _Organizational Research Methods_ 16, no. 1 (2013): 15-31.
 
 Janet Morse Morse, Barbara J. Bowers, Kathy Charmaz, Adele E. Clarke, Juliet Corbin, Caroline Jane Porr, and Phyllis Noerager Stern (eds). (2021) _Developing Grounded Theory: The Second Generation Revisited_. Routledge, New York, USA.
-
-Terry Rowlands, Neal Waddell, and Bernard McKenna. 2016. Are We There
-Yet? A Technique to Determine Theoretical Saturation. *Journal of
-Computer Information Systems*. 56, 1 (2016), 40–47.
 
 Klaas-Jan Stol, Paul Ralph, and Brian Fitzgerald. 2016. Grounded theory
 in software engineering research: a critical review and guidelines. In
@@ -169,4 +167,7 @@ Michael Waterman, James Noble, and George Allan. 2015. How much
 up-front? A grounded theory of agile architecture. In *2015 IEEE/ACM
 37th IEEE International Conference on Software Engineering*. 1, (May
 2015), 347–357.
+    
+---
+<footnote><sup>[1](#myfootnote1)</sup> cf. Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.</footnote><br>    
 </standard>
