@@ -49,20 +49,20 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 ### Desirable
 <checklist name="Desirable">
 
-- [ ] provides a replication package that conforms to SIGSOFT standards for artifacts<sup>[15](#myfootnote15)</sup>. 
-- [ ] motivates the novelty and soundness of the proposed approach<sup>[14](#myfootnote14)</sup>
-- [ ] explains whether the study explores a new problem type (or a new area within an existing problem space), or how it reproduces, replicates, or improves upon prior work. 
-- [ ] explains in detail how subjects or datasets were collected/chosen to mitigate selection bias and improve the generalization of findings. 
-- [ ] describes the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness". 
-- [ ] justifies the use of synthetic data (if any); explain why real-world data cannot be used; discusses the extent to which the proposed approach and the findings can apply to the real world.
-- [ ] (if data cannot be shared) provides a sample dataset that can be shared to illustrate the approach. 
-- [ ] selects a realistic option space for formulating a solution; any values set for attributes should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution.
-- [ ] justifies the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below). 
-- [ ] samples from data multiple times in a controlled manner (where appropriate and possible).
-- [ ] performs multiple trials either as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand. 
+- [ ] provides a replication package that conforms to SIGSOFT standards for artifacts<sup>[14](#myfootnote14)</sup>. 
+- [ ] motivates the novelty and soundness of the proposed approach<sup>[15](#myfootnote15)</sup>
+- [ ] explains whether the study explores a new problem type (or a new area within an existing problem space), or how it reproduces, replicates, or improves upon prior work 
+- [ ] explains in detail how subjects or datasets were collected/chosen to mitigate selection bias and improve the generalization of findings 
+- [ ] describes the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness" 
+- [ ] justifies the use of synthetic data (if any); explain why real-world data cannot be used; discusses the extent to which the proposed approach and the findings can apply to the real world
+- [ ] (if data cannot be shared) provides a sample dataset that can be shared to illustrate the approach 
+- [ ] selects a realistic option space for formulating a solution; any values set for attributes should reflect one that might be chosen in a "real-world" solution, and not generated from an arbitrary distribution
+- [ ] justifies the parameter values used when executing the evaluated approaches (and note that experiments trying a wide range of different parameter values would be extraordinary, see below) 
+- [ ] samples from data multiple times in a controlled manner (where appropriate and possible)
+- [ ] performs multiple trials either as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand 
 - [ ] provides random data splits (e.g., those used in data-driven approaches) or ensures splits are reproducibile. 
-- [ ] compares distributions (rather than means) of results using appropriate statistics.
-- [ ] compares solutions using an appropriate meta-evaluation criteria<sup>[16](#myfootnote16)</sup>; justifies the chosen criteria.
+- [ ] compares distributions (rather than means) of results using appropriate statistics
+- [ ] compares solutions using an appropriate meta-evaluation criteria<sup>[16](#myfootnote16)</sup>; justifies the chosen criteria
 - [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup>[17](#myfootnote17)</sup>
 </checklist>
 
