@@ -51,12 +51,13 @@ following.
 - [ ]	methodology is appropriate (not necessarily optimal) for stated purpose, problem, etc.
 - [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes in detail how the data were analyzed
-- [ ]	discusses and validates assumptions of statistical tests used (if any)
+
 
 <results>
     
 - [ ]	presents results
 - [ ]	results directly address research questions
+- [ ]	enumerates and validates assumptions of statistical tests used (if any)<sup>[1](#myfootnote1)</sup>;
 
 <discussion>
     
@@ -169,5 +170,7 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Mentioning related work only to dismiss it as irrelevant; listing rather than synthesizing related work.
 -   Acknowledging limitations but then writing implications and conclusions as though the limitations don't exist
 
+---    
+<footnote><sup>[1](#myfootnote1)</sup> visual methods of checking assumptions are often as good as or better than statistical tests.</footnote><br>    
 </standard>
     
