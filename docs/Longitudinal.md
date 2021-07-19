@@ -23,8 +23,8 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 - [ ] subjects (humans or artifacts) are identifiable between waves
 - [ ] justifies the data analysis strategy<sup>[3](#myfootnote3)</sup>
 - [ ] the data analysis strategy is appropriate for the interdependent nature of the data<sup>[2](#myfootnote2)</sup>
-- [ ] discusses the critical alpha levels<sup>[4](#myfootnote4)</sup>
-- [ ] determines appropriate sample size using a power calculation<sup>[5](#myfootnote5)</sup>
+- [ ] discusses the critical alpha levels or justifies Bayesian priors<sup>[4](#myfootnote4)</sup>
+- [ ] justifies sample size (e.g. using power analysis)<sup>[5](#myfootnote5)</sup>
 - [ ] describes data loss throughout the different waves
 - [ ] explains how missing data are handled
 
@@ -43,21 +43,23 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ] provides supplementary materials including the data sets, data collection scripts or instruments, analytical scripts, a description of how to reproduce the work and any other materials used
+- [ ] provides supplementary materials including data sets, data collection scripts or instruments, analytical scripts, a description of how to reproduce the work and any other materials used
 - [ ] either builds new theory or tests existing theory
 - [ ] investigates causality using the longitudinal nature of the data to establish precedence and statistically controlling for third-variable explanations
 - [ ] discusses potential confounding factors (for inferential analyses) that cannot be statistically controlled
 - [ ] discusses data (in)consistency across waves (e.g., test-retest reliability)
-- [ ] examines differences in distributions between waves (and uses an appropriate parametric or non-parametric data analysis strategy)
+- [ ] examines differences in distributions between waves (and uses an appropriate data analysis strategy)
 - [ ] describes the cost of gathering data and any incentives used
+- [ ] addresses survivorship bias<sup>[8](#myfootnote8)</sup>     
 
 </checklist>
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ] uses a multi-stage selection process to identify the study's subjects<sup>[8](#myfootnote8)</sup>
+- [ ] uses a multi-stage selection process to identify the study's subjects<sup>[9](#myfootnote9)</sup>
 </checklist>
+- [ ] follows subjects for an exceptionally long period (e.g. more than five years)    
 
 ## General Quality Criteria
 
@@ -74,7 +76,7 @@ Longitudinal studies exploit the temporal nature of data to maximize internal va
 ## Variations
 
 - _Experience sampling_ provides a highly specific understanding of a phenomenon through multiple repeated measurements per day over a short period (typically one to three weeks). It emphasizes in-the-moment assessment rather than reflective assessment (van Berkel et al. 2017). This standard applies to experience sampling studies.
-- _Cohort studies_ are a type of analytical observational study where researchers investigate the relationship between an independent and dependent variable by observing subjects over time and comparing groups with different levels of exposure. Cohort studies follow more strict rules than presented here.<sup>[9](#myfootnote9)</sup>
+- _Cohort studies_ are a type of analytical observational study where researchers investigate the relationship between an independent and dependent variable by observing subjects over time and comparing groups with different levels of exposure. Cohort studies follow more strict rules than presented here.<sup>[10](#myfootnote10)</sup>
 
 ## Invalid Criticisms
 
@@ -113,6 +115,7 @@ Longitudinal studies exploit the temporal nature of data to maximize internal va
 <footnote><sup>[5](#myfootnote5)</sup> Determining the sample size is of utter importance to avoid Type II errors. Thus, authors might define their sample size using a priori power calculations. At the same time, reviewers can control adequate size through a post hoc analysis (Faul, 2019).</footnote><br>
 <footnote><sup>[6](#myfootnote6)</sup> The research design should explicitly state how the sample has been selected and filtered out through a selection process. For example, how are we sure to have included only software engineers when dealing with human subjects? Or, which type of quality controls have been performed on software repositories to ensure the consistency and homogeneity of artifacts?</footnote><br>
 <footnote><sup>[7](#myfootnote7)</sup> It should be clear, which are the factors being investigated and how they have been selected. Similarly, measurements should show adequate reliability based on literature benchmarks (e.g., Cronbach&#39;s alpha, test-retest reliability between waves).</footnote><br>
-<footnote><sup>[8](#myfootnote8)</sup> An example of such a selection process can be found in Russo, Daniel, and Klaas-Jan Stol. &quot;Gender differences in personality traits of software engineers.&quot; _IEEE Transactions on Software Engineering_ (2020).</footnote><br>
-<footnote><sup>[9](#myfootnote9)</sup> See: David A. Grimes and Kenneth F. Schulz. Cohort studies: marching towards outcomes. _The Lancet_ 359, no. 9303 (2002): 341-345. </footnote><br>
+<footnote><sup>[8](#myfootnote8)</sup> For example, if you analyze the past 100 years of stock market performance based on the markets that exist today, you get much higher average returns than if you analyze all the markets that existed 100 years ago. </footnote><br>
+<footnote><sup>[9](#myfootnote9)</sup> An example of such a selection process can be found in Russo, Daniel, and Klaas-Jan Stol. &quot;Gender differences in personality traits of software engineers.&quot; _IEEE Transactions on Software Engineering_ (2020).</footnote><br>
+<footnote><sup>[10](#myfootnote10)</sup> See: David A. Grimes and Kenneth F. Schulz. Cohort studies: marching towards outcomes. _The Lancet_ 359, no. 9303 (2002): 341-345. </footnote><br>
 </standard>
