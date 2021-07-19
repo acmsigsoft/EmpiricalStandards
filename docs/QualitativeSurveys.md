@@ -31,12 +31,16 @@ consider the **Discourse Analysis Standard**.
 - [ ]	explains how interviewees were selected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes interviewees (e.g. demographics, work roles)
 - [ ]   describes interviewer(s) (e.g. experience, perspective)     
-- [ ]	provides evidence of saturation; explains how saturation was achieved<sup>[1](#myfootnote1)</sup>
     
 <results>    
     
 - [ ]	presents clear chain of evidence from interviewee quotations to findings (e.g. proposed concepts)
 - [ ]	clearly answers the research question(s)
+- [ ]	provides evidence of saturation; explains how saturation was achieved<sup>[1](#myfootnote1)</sup>
+    
+<discussion>
+    
+ - [ ]   researchers reflect on their own possible biases   
     
 </checklist>
      
