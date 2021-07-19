@@ -1,4 +1,4 @@
-# Ethics (Engineering Methods)
+# Ethics (Engineering Research)
 
 A study in which a novel technological or socio-technical artifact is created and evaluated.
 
