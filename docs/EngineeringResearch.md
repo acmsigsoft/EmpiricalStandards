@@ -53,18 +53,20 @@ standard is not appropriate for:
 	
 - [ ]   assumptions (if any) are explicit, plausible and do not contradict each other or the contribution's goals
 - [ ]   uses notation consistently (if any notation is used)
+	
 
 </checklist>
     
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ]   reviews the theoretical basis of the artifact
-- [ ]   provides correctness arguments of the key analytical and theoretical contributions (e.g. theorems, complexity analyses, mathematical proofs)
-- [ ]   includes one or more running examples to elucidate the artifact
-- [ ]   evaluates the artifact in an industry-relevant context (e.g. widely used open-source projects, professional programmers)
-- [ ]   provides a replication package including datasets and analytical scripts and EITHER a comprehensive description of the artifact OR source code if artifact is virtual
+- [ ]   provides supplementary materials including source code (if the artifact is software) or a comprehensive description of the artifact (if not software), and any input datasets (if applicable)
 - [ ]   justifies any items missing from replication package based on practical or ethical grounds.
+- [ ]   discusses the theoretical basis of the artifact
+- [ ]   provides correctness arguments for the key analytical and theoretical contributions (e.g. theorems, complexity analyses, mathematical proofs)
+- [ ]   includes one or more running examples to elucidate the artifact
+- [ ]   evaluates the artifact in an industry-relevant context (e.g. widely used open-source projects, professional programmers)	
+
 </checklist>
     
 ### Extraordinary Attributes
