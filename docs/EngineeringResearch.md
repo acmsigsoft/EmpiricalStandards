@@ -61,7 +61,7 @@ standard is not appropriate for:
 <checklist name="Desirable">
 
 - [ ]   provides supplementary materials including source code (if the artifact is software) or a comprehensive description of the artifact (if not software), and any input datasets (if applicable)
-- [ ]   justifies any items missing from replication package based on practical or ethical grounds.
+- [ ]   justifies any items missing from replication package based on practical or ethical grounds
 - [ ]   discusses the theoretical basis of the artifact
 - [ ]   provides correctness arguments for the key analytical and theoretical contributions (e.g. theorems, complexity analyses, mathematical proofs)
 - [ ]   includes one or more running examples to elucidate the artifact
