@@ -30,7 +30,8 @@ consider the **Discourse Analysis Standard**.
     
 - [ ]	explains how interviewees were selected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes interviewees (e.g. demographics, work roles)
-- [ ]	provides evidence of saturation; explains how saturation was achieved
+- [ ]   describes interviewer(s) (e.g. experience, perspective)     
+- [ ]	provides evidence of saturation; explains how saturation was achieved<sup>[1](#myfootnote1)</sup>
     
 <results>    
     
@@ -47,7 +48,7 @@ consider the **Discourse Analysis Standard**.
 - [ ]	uses direct quotations extensively to support key points
 - [ ]	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory    
      OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
-- [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers <sup>[1](#myfootnote1)</sup>)
+- [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers<sup>[2](#myfootnote2)</sup>)
 - [ ]	discusses transferability; findings plausibly transferable to different contexts
 - [ ]	compares results with (or integrates them into) prior theory or related research
 - [ ]	reflects on how researchers’ biases may have affected their analysis
@@ -105,32 +106,23 @@ reliability typically do not apply.
 
 ## Suggested Readings 
 
-Michael Quinn Patton. 2002. *Qualitative Research and Evaluation
-Methods*. 3rd ed. Sage Publications.
+Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.
+    
+Michael Quinn Patton. 2002. *Qualitative Research and Evaluation Methods*. 3rd ed. Sage Publications.
 
-Herbert J. Rubin and Irene S. Rubin. 2011. *Qualitative interviewing:
-The art of hearing data*. Sage.
+Herbert J. Rubin and Irene S. Rubin. 2011. *Qualitative interviewing: The art of hearing data*. Sage.
 
-Johnny Saldaña. 2015. *The coding manual for qualitative researchers*.
-Sage.
+Johnny Saldaña. 2015. *The coding manual for qualitative researchers*. Sage.
 
 ## Exemplars 
 
-Marian Petre. 2013. UML in practice. In *Proceedings of the 35th
-International Conference on Software Engineering,* San Francisco, USA,
-722–731.
+Marian Petre. 2013. UML in practice. In *Proceedings of the 35th International Conference on Software Engineering,* San Francisco, USA, 722–731.
 
-Paul Ralph and Paul Kelly. 2014. The dimensions of software engineering
-success. In *Proceedings of the 36th International Conference on
-Software Engineering (ICSE 2014)*. Association for Computing Machinery,
-New York, NY, USA, 24–35. DOI: 10.1145/2568225.2568261
+Paul Ralph and Paul Kelly. 2014. The dimensions of software engineering success. In *Proceedings of the 36th International Conference on Software Engineering (ICSE 2014)*. Association for Computing Machinery, New York, NY, USA, 24–35. DOI: 10.1145/2568225.2568261
 
-Paul Ralph and Ewan Tempero. 2016. Characteristics of decision-making
-during coding. In *Proceedings of the 20th International Conference on
-Evaluation and Assessment in Software Engineering (EASE '16).*
-Association for Computing Machinery, New York, NY, USA, Article 34,
-1–10. DOI:10.1145/2915970.2915990
+Paul Ralph and Ewan Tempero. 2016. Characteristics of decision-making during coding. In *Proceedings of the 20th International Conference on Evaluation and Assessment in Software Engineering (EASE '16).* Association for Computing Machinery, New York, NY, USA, Article 34, 1–10. DOI:10.1145/2915970.2915990
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
+<footnote><sup>[1](#myfootnote1)</sup>cf. Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.</footnote><br> 
+<footnote><sup>[2](#myfootnote2)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
 </standard>
