@@ -46,12 +46,12 @@ Science Standard** or the **Engineering Research Standard**.
 <results>
 
 - [ ]	describes participants (e.g. age, gender, education, relevant experience or preferences)
-- [ ]	reports distribution-appropriate descriptive and inferential statistics; enumerates and checks assumptions<sup>[2](#myfootnote2)</sup>; justifies tests used
+- [ ]	reports distribution-appropriate descriptive and inferential statistics; justifies tests used
 - [ ]	reports effects sizes with confidence intervals (if using frequentist approach)
 
 <discussion>
 
-- [ ]	discusses construct, conclusion internal and external validity
+- [ ]	discusses construct, conclusion, internal, and external validity
 - [ ]	discusses alternative interpretations of results
 
 <other>    
@@ -65,14 +65,14 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	justifies hypotheses and Bayesian priors (if applicable) based on previous studies and theory
 - [ ]	discusses alternative experimental designs and why they were not used (e.g. validity trade-offs)
 - [ ]	includes visualizations of data distributions
-- [ ]	cites statistics papers to support any nuanced issues or unusual approaches
-- [ ]	explains deviations between design and execution, and their implications<sup>[3](#myfootnote3)</sup>
+- [ ]	cites statistics research to support any nuanced issues or unusual approaches
+- [ ]	explains deviations between design and execution, and their implications<sup>[2](#myfootnote2)</sup>
 - [ ]	named experiment design (e.g. simple 2-group, 2x2 factorial, randomized block)
-- [ ]	presents a-priori power analysis and sufficient n for expected effect sizes.
+- [ ]	justifies sample size (e.g. using power analysis) 
 - [ ]	analyzes construct validity of dependent variable
-- [ ]	uses and reports manipulation checks
-- [ ]	pre-registration of hypotheses and design where venue allows
-- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[4](#myfootnote4)</sup>
+- [ ]	reports manipulation checks
+- [ ]	pre-registration of hypotheses and design (where venue allows)
+- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[3](#myfootnote3)</sup>
 </checklist>
      
 ### Extraordinary Attributes
@@ -80,7 +80,7 @@ Science Standard** or the **Engineering Research Standard**.
 
 - [ ]	reports multiple experiments or replications in different cultures or regions
 - [ ]	uses multiple methods of data collection; data triangulation
-- [ ]	longitudinal data collection with appropriate time-series analysis
+- [ ]	longitudinal data collection with appropriate time-series analysis (see the [Longitudinal Studies Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Longitudinal.md))
 </checklist>
 
 ## General Quality Criteria 
@@ -92,7 +92,7 @@ objectivity, reproducibility
 
 -   using bad proxies for dependent variables (e.g. task completion time
     as a proxy for task complexity)
--   quasi-experiments without a good reason<sup>[5](#myfootnote5)</sup>
+-   quasi-experiments without a good reason<sup>[4](#myfootnote4)</sup>
 -   treatments or response variables are poorly described
 -   inappropriate design for the conditions under which the experiment
     took place
@@ -177,8 +177,7 @@ Andreas Zeller, Thomas Zimmermann, and Christian Bird. 2011. Failure is a four-l
 
 ---
 <footnote><sup>[1](#myfootnote1)</sup> For example, in an experiment where the control group applies Test-Driven Development (TDD) with Object 1 while the treatment group applies Test-Last-Development (TDD) with Object 2, the experimental object is confounded with the treatment.</footnote><br>
-<footnote><sup>[2](#myfootnote2)</sup> visual methods of checking assumptions are often as good as or better than statistical tests.</footnote><br>
-<footnote><sup>[3](#myfootnote3)</sup> e.g. dropouts affecting balance between treatment and control group.</footnote><br>
-<footnote><sup>[4](#myfootnote4)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
-<footnote><sup>[5](#myfootnote5)</sup> Quasi-experiments are appropriate for pilot studies or when assignment is beyond the researcher’s control (e.g. assigning students to two different sections of a course). Simply claiming that a study is “exploratory” is not sufficient justification.</footnote><br>
+<footnote><sup>[2](#myfootnote2)</sup> e.g. dropouts affecting balance between treatment and control group.</footnote><br>
+<footnote><sup>[3](#myfootnote3)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[4](#myfootnote4)</sup> Quasi-experiments are appropriate for pilot studies or when assignment is beyond the researcher’s control (e.g. assigning students to two different sections of a course). Simply claiming that a study is “exploratory” is not sufficient justification.</footnote><br>
 </standard>
