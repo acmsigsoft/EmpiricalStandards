@@ -91,7 +91,7 @@ following.
 - [ ]	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
 - [ ]	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
 - [ ]   publishes the study in two phases: a plan and the results of executing the plan (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/Supplements)) 
-- [ ]	uses multiple raters, where philosophically apporpriate, for making subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]	uses multiple raters, where philosophically appropriate, for making subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
 
 </checklist>
      
