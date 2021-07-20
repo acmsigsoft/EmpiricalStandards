@@ -47,7 +47,7 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 - [ ] either builds new theory or tests existing theory
 - [ ] investigates causality using the longitudinal nature of the data to establish precedence and statistically controlling for third-variable explanations
 - [ ] discusses potential confounding factors (for inferential analyses) that cannot be statistically controlled
-- [ ] discusses data (in)consistency across waves (e.g., test-retest reliability)
+- [ ] discusses data (in)consistency across waves (e.g. test-retest reliability)
 - [ ] examines differences in distributions between waves (and uses an appropriate data analysis strategy)
 - [ ] describes the cost of gathering data and any incentives used
 - [ ] addresses survivorship bias<sup>[8](#myfootnote8)</sup>     
