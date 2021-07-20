@@ -28,9 +28,9 @@ typically given to participants in controlled experiments (see the
 
 <method>
 
-- [ ]	identifies the target population & defines the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ]	identifies the target population and defines the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes how the questionnaire instrument was created
-- [ ]	describes how participants were selected, including invitations and incentives
+- [ ]	describes how participants were selected or recruited (e.g. sampling frame, advertising, invitations, incentives)
 - [ ]	step-by-step, systematic, replicable description of data collection and analysis
 - [ ]	describes how responses were managed/monitored, including contingency actions for non-responses and drop-outs
 - [ ]	EITHER: measures constructs using (or adapting) validated scales    
@@ -58,8 +58,8 @@ typically given to participants in controlled experiments (see the
 - [ ]	provides supplementary materials including instrument(s), code books, analysis scripts and dataset(s)
 - [ ]	characterizes the target population including demographic information (e.g. culture, knowledge)
 - [ ]	accounts for the principles of research ethics (e.g. informed consent, re-identification risk)
-- [ ]	explains and justifies instrument design and choice of scales (e.g. by research objectives or by analogy to similar studies).
-- [ ]	validates whether the instrument's items, layout, duration, and technology are appropriate (e.g. using pilots, test-retest, or expert and non-expert reviews).
+- [ ]	explains and justifies instrument design and choice of scales (e.g. by research objectives or by analogy to similar studies)
+- [ ]	validates whether the instrument's items, layout, duration, and technology are appropriate (e.g. using pilots, test-retest, or expert and non-expert reviews)
 - [ ]	reports how the instrument has evolved through the validation process (if at all)
 - [ ]	analyzes response bias (quantitatively)
 - [ ]	applies techniques for improving response rates (e.g. incentives, reminders, targeted advertising)
@@ -74,6 +74,7 @@ typically given to participants in controlled experiments (see the
 
 - [ ]	provides feasibility check of the anticipated data analysis techniques
 - [ ]	reports on the scale validation in terms of dimensionality, reliability, and validity of measures
+- [ ]   longitudinal design in which each respondent participates two or more times	
 </checklist>
 
 ## General Quality Criteria 
