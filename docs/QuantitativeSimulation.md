@@ -14,18 +14,18 @@ The standard applies to research studies that use simulation to understand, asse
 
 <intro>
 
-- [ ] justifies that simulation is a suitable method for investigating the problem at hand.
+- [ ] justifies that simulation is a suitable method for investigating the problem (or research question, etc.)
 
 <method>
 
-- [ ] describes the simulation model (conceptual, implementation, or hybrid abstraction levels), including input parameters and response variables.
-- [ ] describes the underlying simulation approach (discrete-event simulation, system dynamics, agent-based simulation, or others<sup>[1](#myfootnote1)</sup>).
-- [ ] describes simulation packages or tools used to develop and run the simulation model, as well as their associated versions, and computational environment.
-- [ ] describes the data used for model calibration, the calibration procedures, and contextual information.
-- [ ] describes how the simulation model was verified and validated at different abstraction levels<sup>[2](#myfootnote2)</sup>.
-- [ ] describes the study protocol, including independent variables, scenarios, number of runs per scenario (in case of using stochastic simulation), and steady-state or terminating conditions.
-- [ ] analyzes validity threats<sup>[3](#myfootnote3)</sup> considering the supporting data and the simulation model.
-- [ ] clearly explicates the assumptions in the simulation model.
+- [ ] describes the simulation model (conceptual, implementation, or hybrid abstraction levels), including input parameters and response variables
+- [ ] describes the underlying simulation approach<sup>[1](#myfootnote1)</sup>)
+- [ ] describes simulation packages or tools used to develop and run the simulation model, including version numbers, and computational environments
+- [ ] describes the data used for model calibration, the calibration procedures, and contextual information
+- [ ] describes how the simulation model was verified and validated at different abstraction levels<sup>[2](#myfootnote2)</sup>
+- [ ] describes the study protocol, including independent variables, scenarios, number of runs per scenario (in case of using stochastic simulation), and steady-state or terminating conditions
+- [ ] analyzes validity threats considering the supporting data and the simulation model<sup>[3](#myfootnote3)</sup>
+- [ ] clearly explicates the assumptions of the simulation model
 
 <results>
 
@@ -38,19 +38,18 @@ The standard applies to research studies that use simulation to understand, asse
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ] provides supplementary materials including raw data (for real data) or generation mechanism (for synthetic data) used for model calibration, all simulation models and source code, and analysis scripts.
-- [ ] characterizes reference behaviors<sup>[4](#myfootnote4)</sup>
-for the definition of simulation scenarios with representative and known values or probability distributions for input parameters.
-- [ ] separates conceptual and implementation levels of the simulation model.
-- [ ] reports sensitivity analysis for input parameters or factors.
+- [ ] provides supplementary materials including the raw data (for real data) or generation mechanism (for synthetic data) used for model calibration, all simulation models and source code, analysis scripts
+- [ ] characterizes reference behaviors for the definition of simulation scenarios with representative and known values or probability distributions for input parameters<sup>[4](#myfootnote4)</sup> 
+- [ ] separates conceptual and implementation levels of the simulation model
+- [ ] reports sensitivity analysis for input parameters or factors
 - [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup>[5](#myfootnote5)</sup>
 </checklist>
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ] describes how stakeholders<sup>[6](#myfootnote6)</sup> were involved in developing and validating the simulation model.
-- [ ] provides a modular view<sup>[7](#myfootnote7)</sup> of the simulation model, allowing reuse in different contexts.
+- [ ] describes how stakeholders were involved in developing and validating the simulation model<sup>[6](#myfootnote6)</sup>
+- [ ] provides a modular view of the simulation model, allowing reuse in different contexts<sup>[7](#myfootnote7)</sup>
 </checklist>
 
 ## General Quality Criteria
@@ -112,7 +111,7 @@ Garousi V, Khosrovian K, Pfahl D (2009) A customizable pattern-based software pr
 Smith, Neil, Andrea Capiluppi, and Juan F. Ramil. &quot;A study of open source software evolution data using qualitative simulation.&quot; _Software Process: Improvement and Practice_ 10, no. 3 (2005): 287-300. [an example of a simulation study using a unusual simulation approach: qualitative simulation].  
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> de França, Breno Bernard Nicolau; Travassos, Guilherme Horta. Are We Prepared for Simulation Based Studies in Software Engineering Yet? _CLEI ELECTRONIC JOURNAL_, vol. 16 (1), paper 8. 2013.</footnote><br>
+<footnote><sup>[1](#myfootnote1)</sup> e.g. discrete-event simulation, system dynamics, agent-based simulation</footnote><br>
 <footnote><sup>[2](#myfootnote2)</sup> Some verification and validation procedures may be applied to the model at the conceptual level (e.g., validating variables and relationships) down to an implementation level (e.g., using tests, reproducing reference behaviors, or performing simulated experiments).</footnote><br>
 <footnote><sup>[3](#myfootnote3)</sup> Simulation studies are prone to several validity threats, including non-representative simulation scenarios, insufficient verification and validation, using different datasets (contexts) for model calibration and experimentation, and others (de França and Travassos, 2015).</footnote><br>
 <footnote><sup>[4](#myfootnote4)</sup> Reference behaviors represent a real-world model (often based on actual measurement of a system or process), which is characterized by data distribution or series of model variables. Usually, these models are used for validating simulation outcomes. For instance, an effort and schedule baseline for software project simulation.</footnote><br>
