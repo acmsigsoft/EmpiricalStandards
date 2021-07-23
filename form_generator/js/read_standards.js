@@ -663,7 +663,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			if(line_text.includes("footnote"))
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			else
-				checklistItemText.innerHTML = "&nbsp;" + line_text;
+				checklistItemText.innerHTML = "&nbsp;" + line_text.replaceAll("_hr_", "<hr class='IMRaDhr'>");
 
 			if (checklistName == "Essential"){
 				var checklistRadioYes = document.createElement("input");
@@ -730,6 +730,52 @@ function sortStandards(keys){
 	}
 	sorted_keys = sorted_keys.concat(keys.sort());
 	return sorted_keys;
+}
+
+all_intro_items = "";
+all_method_items = "";
+all_results_items = "";
+all_discussion_items = "";
+all_other_items = "";
+
+function separate_essential_attributes_based_on_IMRaD_tags(checklistType, checklistHTML){
+	if (checklistType == "Essential"){
+		splitted_text = checklistHTML.split("<method>")
+		intro = splitted_text[0].replace("<intro>", "")
+		rest  = splitted_text[1]
+		splitted_rest = rest.split("<results>")
+		method = splitted_rest[0]
+		rest  = splitted_rest[1]
+		splitted_rest = rest.split("<discussion>")
+		results = splitted_rest[0]
+		rest  = splitted_rest[1]
+		splitted_rest = rest.split("<other>")
+		discussion = splitted_rest[0]
+		rest  = splitted_rest[1]
+		other = rest.replace("</other></discussion></results></method></intro>", "")
+
+		all_intro_items = all_intro_items + intro;
+		all_method_items = all_method_items + method;
+		all_results_items = all_results_items + results;
+		all_discussion_items = all_discussion_items + discussion;
+		all_other_items = all_other_items + other;
+	}
+}
+function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHTML, footnotes){
+	checklistInnerHTML = checklistInnerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
+
+    var tempDivElement = document.createElement("div");
+    tempDivElement.innerHTML = checklistInnerHTML;
+	checklistInnerText = tempDivElement.innerText;
+
+	checklistText = checklistInnerText.replaceAll(">", "").replaceAll("\r\n", "<br/>");
+	checklistText = fromMDtoHTMLformat(checklistText);
+	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/', '../docs?standard=').replaceAll('.md', '');
+	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/', '../Supplements?supplement=').replaceAll('.md', '');
+
+	checklists = convert_standard_checklists_to_html_checklists(standardTagName, checklistTagName, checklistText, footnotes)
+
+	return checklists;
 }
 
 function generateStandardChecklist(){
@@ -824,41 +870,45 @@ function generateStandardChecklist(){
 		form.appendChild(standardTitle);*/
 		var checklistTags = standardTag.getElementsByTagName("checklist");
 		for (let checklistTag of checklistTags){
+			// ------ ----- //
+			separate_essential_attributes_based_on_IMRaD_tags(checklistTag.getAttribute('name'), checklistTag.innerHTML)
+			// ------ ----- //
+
 			// Reformat the checklists from MD to HTML
-			checklistTag.innerHTML = checklistTag.innerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
-			checklistText = checklistTag.innerText.replaceAll(">", "").replaceAll("\n", "<br/>");
-			checklistText = fromMDtoHTMLformat(checklistText);
-
-			checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/', '../docs?standard=').replaceAll('.md', '');
-			checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/', '../Supplements?supplement=').replaceAll('.md', '');
-
-			checklists = convert_standard_checklists_to_html_checklists(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistText, footnotes)
 			var Yes_No = document.createElement("div");
+			Yes_No.style = "align:center; font-size: 80%; font-weight: bold;";
+			Yes_No.innerHTML = "&nbsp;yes no";
+
 			var standard_header_rule = document.createElement("div");
 			var standard_header_text = document.createElement("span");
 			standard_header_rule.className = "standardHeaderRule";
 			standard_header_text.className = "standardHeaderText";
 			//standard_header_text.innerText = standardName;
-			Yes_No.style = "align:center; font-size: 80%; font-weight: bold;";
-			Yes_No.innerHTML = "&nbsp;yes no";
-
 			standard_header_rule.appendChild(standard_header_text);
+
 			if (checklistTag.getAttribute('name') == "Essential") {
 				//EssentialUL.appendChild(standard_header_rule);
 				if (i == 1)
 					EssentialUL.appendChild(Yes_No);
-				EssentialUL.appendChild(checklists);
+				//EssentialUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Desirable") {
 				//DesirableUL.appendChild(standard_header_rule);
+				checklists = prepare_UL_elements(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistTag.innerHTML, footnotes);
 				DesirableUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Extraordinary") {
 				//ExtraordinaryUL.appendChild(standard_header_rule);
+				checklists = prepare_UL_elements(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistTag.innerHTML, footnotes);
 				ExtraordinaryUL.appendChild(checklists);
 			}
 		}
 	}
+	
+	all_essential_IMRaD_items_innerHTML = "" + all_intro_items + "_hr_" + all_method_items + "_hr_" + all_results_items + "_hr_" + all_discussion_items + "_hr_" + all_other_items
+	checklists = prepare_UL_elements("", 'Essential', all_essential_IMRaD_items_innerHTML, footnotes);
+	EssentialUL.appendChild(checklists);
+	
 	form.appendChild(EssentialUL);
 
 	var submit = document.createElement("button");
