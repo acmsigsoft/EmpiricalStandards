@@ -660,7 +660,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
 			checklistItemLI.setAttribute("text", line_text);
-			line_text = line_text.replaceAll("_hr_", "<hr class='IMRaDhr'>");
+			line_text = line_text.replaceAll("_hr_", "<br>");
 			if(line_text.includes("footnote"))
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			else
