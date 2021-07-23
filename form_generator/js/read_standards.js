@@ -6,7 +6,7 @@ function getParameterByName(param_name, url = window.location.href){
 	for (var param_index in params){
 		var param = params[param_index].split("=");
 		if(param[0] === param_name){
-			param_values[i] = "\"" + unescape(param[1]) + "\"";
+			param_values[i] = param.length > 1 ? "\"" + unescape(param[1]) + "\"" : "noval";
 			i++;
 		}
 	}
@@ -628,6 +628,7 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id) {
 }
 
 function convert_standard_checklists_to_html_checklists(standardName, checklistName, checklistText, footnotes){
+	tester = getParameterByName('y')[0] == 'noval' ? true : false;
 	var checklists = document.createElement("UL");
 	var standard_H3 = document.createElement("B");
 	standard_H3.style = "font-size:20px;";
@@ -646,7 +647,11 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 		if (line_text != ""){
 			i++;
 			// Trim and remove line breaks in markdown text
-			line_text = line.trim().replace("---", "&mdash;").replaceAll("<br>", "").replaceAll("<br/>", "");
+			line_text = line.trim().replace("---", "&mdash;");
+			while (line_text.match(/<br(\/)?>$/)) {
+				line_text = line_text.replace(/<br(\/)?>$/, "");
+				line_text = line_text.trim();
+			}
 			checklistItem_id = standardName + "-" + checklistName + ":" + i;
 			var checklistItemLI = document.createElement("LI");
 			var checklistItemText = document.createElement("span");
@@ -675,6 +680,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 				checklistRadioNo.type = "radio";
 				checklistRadioYes.value = "yes";
 				checklistRadioNo.value = "no";
+				checklistRadioYes.checked = tester;
 
 				// Generate a deviation block
 				var deviation_block;
@@ -868,10 +874,10 @@ function generateStandardChecklist(){
 
 	if(role == "\"one-phase-reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
-		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In your review please explain the deviations and why they are not reasonable. Give constructive suggestions.", 2, 0);
+		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
 		form.appendChild(deviation_unreasonable);
 		// (At least one 'No-No-Yes' -> explain fix)
-		var deviation_reasonable = generate_message("deviation_reasonable", "red", "Explain how the manuscript should be fixed.", 2, 0);
+		var deviation_reasonable = generate_message("deviation_reasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", 2, 0);
 		form.appendChild(deviation_reasonable);
 
 		if(deviation_unreasonable.style.display == "block"){
@@ -881,11 +887,11 @@ function generateStandardChecklist(){
 
 	else if(role == "\"two-phase-reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
-		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In your review please explain the deviations and why they are not reasonable. Give constructive suggestions.", 2, 0);
+		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
 		form.appendChild(deviation_unreasonable);
 
 		// (At least one 'No-No-Yes' -> explain fix)
-		var deviation_reasonable = generate_message("deviation_reasonable", "red", "Explain how the manuscript should be fixed.", 2, 0);
+		var deviation_reasonable = generate_message("deviation_reasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", 2, 0);
 		form.appendChild(deviation_reasonable);
 
 		if(deviation_unreasonable.style.display == "block"){
@@ -933,7 +939,8 @@ function generateStandardChecklist(){
 		document.body.appendChild(container);
 	else
 		wrapper.appendChild(container);
-		
+	
+	show_hide_decision_message();
 }
 //download the file as a checklist
 function saveFile(){
@@ -1065,10 +1072,10 @@ function saveFile(){
 		"=======\n" +
 		"Y = yes, the paper has this attribute\n" +
 		"R = a reasonable, acceptable deviation from the standards\n" +
-		"1 = can be fixed by editing text only\n" +
-		"2 = can be fixed by doing some new data analysis, redoing some existing data analysis, or collecting a small amount of additional data\n" +
-		"3 = can be fixed completely redoing data analysis, or collecting additional data\n" +
-		"4 = unacceptable conduct or problems the cannot be fixed without doing a brand new study\n\n\n";
+		"1 = a deviation that can be fixed by editing text only\n" +
+		"2 = a deviation that can be fixed by doing some new data analysis, redoing some existing data analysis, or collecting a small amount of additional data\n" +
+		"3 = a deviation that can be fixed by completely redoing data analysis, or collecting additional data\n" +
+		"4 = a deviation that cannot be fixed, or at least not without doing a brand new study\n\n\n";
 
 	generated_text+= "=================\n" +
 		"Standards Used\n" +

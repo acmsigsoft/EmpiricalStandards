@@ -36,25 +36,23 @@ standards.
     
 - [ ]   justifies the selection of the site(s) that was(were) studied
 - [ ]   describes the site(s) in rich detail     
+- [ ]   describes the relationship between the researcher and the host organization<sup>[3](#myfootnote1)</sup>
 - [ ]   describes the intervention(s) in detail
-- [ ]   describes how interventions were determined (by management, researchers, or participative/co- determination process)
+- [ ]   describes how interventions were determined (e.g. by management, researchers, or a participative/co-determination process)
 - [ ]   explains how the interventions are evaluated<sup>[4](#myfootnote3)</sup>
 - [ ]   describes the longitudinal dimension of the research design (including the length of the study)
 - [ ]   describes the interactions between researcher(s) and host organization(s)<sup>[1](#myfootnote1)</sup>
 - [ ]   explains research cycles or phases, if any, and their relationship to the intervention(s)<sup>[2](#myfootnote2)</sup>
 
-
 <results>
     
 - [ ]   presents a clear chain of evidence from observations to findings
-- [ ]   reports participant or stakeholder reactions to interventions
-    
+- [ ]   reports participant or stakeholder reactions to interventions  
     
 <discussion>
 
 - [ ]   reports lessons learned by the organization
 - [ ]   researchers reflect on their own possible biases
-- [ ]   describes the relationship between the researcher and the host organization<sup>[3](#myfootnote1)</sup>
 
 <other>
 
@@ -206,7 +204,7 @@ product line architecture. In *Proc. IASTED Int. Conf. on Software
 Engineering*. 2008, 178-183.
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> What the interventions were, who intervened and with which part of the organization, as well as the outcome of the interventions.</footnote><br>
+<footnote><sup>[1](#myfootnote1)</sup> i.e. who intervened and with which part of the organization? </footnote><br>
 <footnote><sup>[2](#myfootnote2)</sup> Action research projects are structured in interventions often described as action research cycles, which are often structured in distinct phases. It is a flexible methodology, where subsequent cycles are based on their predecessors.</footnote><br>
 <footnote><sup>[3](#myfootnote1)</sup> E.g. project financing, potential conflicts of interest, professional relationship leading to access.</footnote><br>
 <footnote><sup>[4](#myfootnote3)</sup> Can include quantitative evaluation in addition to qualitative evaluation.</footnote><br>

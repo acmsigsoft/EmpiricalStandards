@@ -43,20 +43,21 @@ following.
 <intro>    
     
 - [ ]	states a purpose, problem, objective, or research question  
-- [ ]	explains why the problem, objective, or research question is important (motivation)  
+- [ ]	explains why the purpose, problem, etc. is important (motivation)  
 - [ ]	defines jargon, acronyms and key concepts  
 
 <method>
     
-- [ ]	methodology is appropriate (not necessarily optimal) for stated purpose or questions
+- [ ]	methodology is appropriate (not necessarily optimal) for stated purpose, problem, etc.
 - [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes in detail how the data were analyzed
-- [ ]	discusses and validates assumptions of statistical tests used (if any)
+
 
 <results>
     
 - [ ]	presents results
 - [ ]	results directly address research questions
+- [ ]	enumerates and validates assumptions of statistical tests used (if any)<sup>[1](#myfootnote1)</sup>
 
 <discussion>
     
@@ -68,7 +69,7 @@ following.
     
 - [ ]	contributes in some way to the collective body of knowledge <!-- (see Replications Supplement) -->
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
-- [ ]	balances the study's anticipated benefits with its potential risks or harms, minimizing risk or harm wherever possible (see the ethics supplements for studies with [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsHumanParticipants.md) or [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md))
+- [ ]	acknowledges and mitigates potential risks, harms, burdens or unintended consequences of the research (see the ethics supplements for [Engineering Research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsEngineering.md), [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsHumanParticipants.md), or [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md))
 - [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InformationVisualization.md))
 - [ ]	complies with all applicable empirical standards
 
@@ -78,19 +79,19 @@ following.
 
 <checklist name="Desirable">
 
-- [ ]	summarizes and synthesizes a reasonable selection of related work
+- [ ]	states epistemological stance<sup>[2](#myfootnote2)</sup>
+- [ ]	summarizes and synthesizes a reasonable selection of related work (not every single relevant study)
 - [ ]	clearly describes relationship between contribution(s) and related work
-- [ ]	states epistemological stance (e.g. post-positivism, interpretivism, critical realism)
-- [ ]	appropriate statistical power (for quantitative work) or saturation (for qualitative work)
-- [ ]	reasonable attempts to investigate or mitigate limitations
+- [ ]	demonstrates appropriate statistical power (for quantitative work) or saturation (for qualitative work)
+- [ ]	describes reasonable attempts to investigate or mitigate limitations
 - [ ]	discusses study’s realism, assumptions and sensitivity of the results to its realism/assumptions
 - [ ]	provides plausibly useful interpretations or recommendations for practice, education or research
-- [ ]	openly shares data and materials to the extent possible within practical and ethical limits (see the [Open Science Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/OpenScience.md))
 - [ ]	concise, precise, well-organized and easy-to-read presentation
 - [ ]	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
 - [ ]	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
 - [ ]	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
-- [ ]	uses multiple raters for any subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]   publishes the study in two phases: a plan and the results of executing the plan (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/Supplements)) 
+- [ ]	uses multiple raters, where philosophically appropriate, for making subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
 
 </checklist>
      
@@ -169,5 +170,8 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Mentioning related work only to dismiss it as irrelevant; listing rather than synthesizing related work.
 -   Acknowledging limitations but then writing implications and conclusions as though the limitations don't exist
 
+---    
+<footnote><sup>[1](#myfootnote1)</sup> visual methods of checking assumptions are often as good as or better than statistical tests</footnote><br>
+<footnote><sup>[2](#myfootnote2)</sup>e.g. positivism, falisificationism, interpretivism, critical realism, postmodernism)</footnote><br>
 </standard>
     

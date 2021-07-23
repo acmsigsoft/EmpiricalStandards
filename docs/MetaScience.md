@@ -16,10 +16,14 @@ This standard applies to papers that provide analysis of one or more methodologi
 ### Essential Attributes
 <checklist name="Essential">
 
-<other>  
+<results>
   
 - [ ] presents information that is useful for other researchers
+- [ ] makes recommendations for future research  
 - [ ] presents clear, valid arguments supporting recommendations
+  
+<other>  
+ 
 
 </checklist>
   

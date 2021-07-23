@@ -28,12 +28,12 @@ Benchmarking is often used with Engineering Research (see the **Engineering Rese
         (ii)  the metric(s) to quantify the quality,   
         (iii) the measurement method(s) for the metric (if not obvious),   
         (iv)  the workload, usage profile and/or task sample the system under test is subject to (i.e. what the system is doing when the measures are taken)
-        and justifies the design of the benchmark (in terms of relevance, timeliness, etc.)
-        and reuses existing benchmark design components from established benchmarks or justifies new components
+        AND justifies the design of the benchmark (in terms of relevance, timeliness, etc.)
+        AND reuses existing benchmark design components from established benchmarks or justifies new components
 - [ ]   describes the experimental setup for the benchmark in sufficient detail to support independent replication (or refers to such description in supplementary materials)
 - [ ]   specifies the workload or usage profile in sufficient detail to support independent replication (or refers to such description in supplementary materials)
 - [ ]   allows different configurations of a system under test to compete on their merits without artificial limitations
-- [ ]   assesses stability or reliability using sufficiently experiment repetitions and execution duration 
+- [ ]   assesses stability or reliability using sufficient experiment repetitions and execution duration 
         
 <discussion>
             

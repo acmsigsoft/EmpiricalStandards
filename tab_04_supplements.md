@@ -61,13 +61,22 @@ function openSupplementFromURL(evt) {
 <body onload="openSupplementFromURL(event)">
 
 <div class="tab">
+  <button id="EthicsEngineering_b"           class="tablinks" onclick="openSupplement(event, 'EthicsEngineering')">Ethics (Engineering Research)</button>
+<div class="tab">
   <button id="EthicsHumanParticipants_b"           class="tablinks" onclick="openSupplement(event, 'EthicsHumanParticipants')">Ethics (Human Participants)</button>
-  <button id="EthicsSecondaryData_b"               class="tablinks" onclick="openSupplement(event, 'EthicsSecondaryData')">Ethics (Secondary Human Data)</button>
+  <button id="EthicsSecondaryData_b"               class="tablinks" onclick="openSupplement(event, 'EthicsSecondaryData')">Ethics (Secondary Data)</button>
   <button id="InformationVisualization_b"          class="tablinks" onclick="openSupplement(event, 'InformationVisualization')">Information Visualization</button>
   <button id="InterRaterReliabilityAndAgreement_b" class="tablinks" onclick="openSupplement(event, 'InterRaterReliabilityAndAgreement')">Inter-Rater Reliability and Agreement</button>
   <button id="OpenScience_b"                       class="tablinks" onclick="openSupplement(event, 'OpenScience')">Open Science</button>
   <button id="RegisteredReports_b"                 class="tablinks" onclick="openSupplement(event, 'RegisteredReports')">Registered Reports</button>
   <button id="Sampling_b"                          class="tablinks" onclick="openSupplement(event, 'Sampling')">Sampling</button>
+</div>
+
+<div id="EthicsEngineering" class="tabcontent">
+  <p>
+    {% capture std %}{% include_relative Supplements/EthicsEngineering.md %}{% endcapture %}
+    {{ std | replace: '- [ ]', '-' | markdownify }}
+  </p>
 </div>
 
 <div id="EthicsHumanParticipants" class="tabcontent">
@@ -76,7 +85,8 @@ function openSupplementFromURL(evt) {
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
-
+  
+  
 <div id="EthicsSecondaryData" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/EthicsSecondaryData.md %}{% endcapture %}

@@ -18,14 +18,12 @@ the mixing of methodologies, not the methodologies themselves. For the latter, r
 <intro>
 
 - [ ] **justifies** using multiple methodologies and/or methods
-- [ ] provides a **purpose statement** that conveys the overarching multi or 
-  mixed method design intent (why)
+- [ ] provides a **purpose statement** that conveys the overarching multi or mixed method design intent (why)
 
 <method>
 
 - [ ] describes the **multi-methodology**, **multi-method** or **mixed method** design (what) 
-- [ ] describes **which phases** of the research study the different methods or 
-  methodologies are used in (when)
+- [ ] describes **which phases** of the research study the different methods or methodologies are used in (when)
 - [ ] describes how the design aligns with the research question or objective
 
 <results>
@@ -35,7 +33,7 @@ the mixing of methodologies, not the methodologies themselves. For the latter, r
 
 <discussion>
 
-- [ ] acknowledges the **limitations** associated with integrating findings (e.g., samples that are drawn from different populations may introduce limitations when the findings are integrated, or biases may be introduced by the sequential or parallel nature of a mixed design).
+- [ ] acknowledges the **limitations** associated with integrating findings<sup>[1](#myfootnote1)</sup>
 
 <other>
 
@@ -45,25 +43,16 @@ the mixing of methodologies, not the methodologies themselves. For the latter, r
 <checklist name="Desirable">
 
 - [ ] **defines** the multi-methodology or mixed method design used
-- [ ] describes and justifies **sample reuse** (or no reuse, or partial reuse) across 
-  methods
-- [ ] illustrated the research design using a **visual model** (diagram)
+- [ ] describes and justifies **sample reuse** (or no reuse, or partial reuse) across methods
+- [ ] illustrates the research design using a **visual model** (diagram)
 - [ ] indicates the use of multiple methods or mixed method design in the **title** 
-- [ ] (for mixed-methods) includes, in the **literature review**, a mixture of quantitative, 
-  qualitative, and mixed methods related work
-- [ ] **distinguishes the additional value** from using a multi-methodology or mixed 
-  method design in terms of corroboration, complementarity, and expansion 
-  (breadth and depth)
-- [ ] discusses **discrepancies and incongruent findings** from the use of multiple 
-  methods
-- [ ] describes the main **philosophical, epistemological, and/or theoretical foundations** 
-  that the authors use and relate those to the planned use of multi or mixed methods in the study
-- [ ] describes the **challenges** faced in the design and how those were or could be 
-  mitigated
-- [ ] describes how the methods and their findings relate to one or more 
-      **theories or theoretical frameworks**
-- [ ] describes **ethical issues** that may have been presented through the blend of 
-  multi- or mixed methods
+- [ ] (for mixed-methods) includes, in the **literature review**, a mixture of quantitative, qualitative, and mixed methods related work
+- [ ] **distinguishes the additional value** from using a multi-methodology or mixed method design in terms of corroboration, complementarity, and expansion (breadth and depth)
+- [ ] discusses **discrepancies and incongruent findings** from the use of multiple methods
+- [ ] describes the main **philosophical, epistemological, and/or theoretical foundations** that the authors use and relate those to the planned use of multi or mixed methods in the study
+- [ ] describes the **challenges** faced in the design and how those were or could be mitigated
+- [ ] describes how the methods and their findings relate to one or more **theories or theoretical frameworks**
+- [ ] describes **ethical issues** that may have been presented through the blend of multi- or mixed methods
  </checklist>
 
 ### Extraordinary
@@ -231,4 +220,6 @@ mixed methods." Research in the Schools 13, no. 1 (2006): 12-28.
 |Vidoni, Melina, "Evaluating Unit Testing Practices in R Packages",To appear ICSE 2021. [[pdf]](https://melvidoni.rbind.io/publication/2021-rttd-icse/) | Combined an MSR (mining software repositories) with a developers' survey. |
 |A. AlSubaihin, F. Sarro, S. Black, L. Capra and M. Harman, "App Store Effects on Software Engineering Practices," in IEEE Transactions on Software Engineering (Early Access). DOI:https://doi.org/10.1109/TSE.2019.2891715. [[pdf]](https://discovery.ucl.ac.uk/id/eprint/10065145/1/TSEAlSubaihin.pdf)|Interviews + Questionnairs, Deductive, mixed method drawing from survey and case study empirical research methodologies, exploratory + descriptive |
 
+---
+<footnote><sup>[1](#myfootnote1)</sup> e.g., samples that are drawn from different populations may introduce limitations when the findings are integrated, or biases may be introduced by the sequential or parallel nature of a mixed design</footnote><br>
 </standard>

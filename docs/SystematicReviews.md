@@ -42,8 +42,8 @@
 ### Desirable Attributes 
 <checklist name="Desirable">
 	
-- [ ]	provides replication package including protocol, search terms, search results, selection process results; complete dataset, analysis scripts; examples of coding, decision rules or edge cases
-- [ ]	mitigates sampling bias and publication bias, using some combination of:  
+- [ ]	provides supplementary materials such as protocol, search terms, search results, selection process results; complete dataset, analysis scripts; coding scheme, examples of coding, decision rules, descriptions of edge cases
+- [ ]	mitigates sampling bias and publication bias, using some (not all) of:  
 (i) manual and keyword automated searches;   
 (ii) backward and forward snowballing searches;  
 (iii) checking profiles of prolific authors in the area;   
@@ -53,16 +53,16 @@
 (iiv) soliciting unpublished manuscripts through appropriate listservs or social media;  
 (iiiv) contacting known authors in the area. 
 - [ ]	demonstrates that the search process is sufficiently rigorous for the systematic review goals<sup>[3](#myfootnote3)</sup>  
-- [ ]	assesses quality of primary studies; explains how quality was assessed 
+- [ ]	assesses quality of primary studies using an a priori coding scheme (e.g. the *Systematic Reviews Standard*); explains how quality was assessed; excludes low quality studies (ok) or models study quality as a moderating variable (better) 
 - [ ]	assesses coverage using funnel plots or percentage of known papers found
-- [ ]	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (e.g. KALPHA) 
+- [ ]	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup> 
 - [ ]	(interpretivist reviews) reflects on how researcher’s biases may have affected their analysis
 - [ ]	consolidates results using tables, diagrams, or charts; PRISMA flow diagram (cf. Moher et al. 2009)
 - [ ]	performs analysis through an existing or new conceptual framework (qualitative synthesis)
 - [ ]	uses meta-analysis methods appropriate for primary studies; does not use vote counting 
 - [ ]	integrates results into prior theory or research; identifies gaps, biases, or future directions
 - [ ]	presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
-- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[4](#myfootnote4)</sup>	
+- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[5](#myfootnote5)</sup>	
 </checklist>
      
 ### Extraordinary Attributes
@@ -124,5 +124,6 @@ Engineering (EASE).* (Jun. 2008), 1–10.
 <footnote><sup>[1](#myfootnote1)</sup> Searches can be manual or automated or a combination of both.</footnote><br>
 <footnote><sup>[2](#myfootnote2)</sup> Primary studies are the studies that are being reviewed. In a tertiary study, the “primary studies” are themselves reviews.</footnote><br>
 <footnote><sup>[3](#myfootnote3)</sup> e.g. formal meta-analysis of experiments has higher requirements for completeness than mapping studies of broad topic areas.</footnote><br>
-<footnote><sup>[4](#myfootnote4)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[4](#myfootnote4)</sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
+<footnote><sup>[5](#myfootnote5)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>
