@@ -660,10 +660,11 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
 			checklistItemLI.setAttribute("text", line_text);
+			line_text = line_text.replaceAll("_hr_", "<hr class='IMRaDhr'>");
 			if(line_text.includes("footnote"))
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			else
-				checklistItemText.innerHTML = "&nbsp;" + line_text.replaceAll("_hr_", "<hr class='IMRaDhr'>");
+				checklistItemText.innerHTML = "&nbsp;" + line_text;
 
 			if (checklistName == "Essential"){
 				var checklistRadioYes = document.createElement("input");
@@ -768,7 +769,7 @@ function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHT
     tempDivElement.innerHTML = checklistInnerHTML;
 	checklistInnerText = tempDivElement.innerText;
 
-	checklistText = checklistInnerText.replaceAll(">", "").replaceAll("\r\n", "<br/>");
+	checklistText = checklistInnerText.replaceAll(">", "").replaceAll(/\n\s*\n/g, '\n').replaceAll("\n", "<br/>");
 	checklistText = fromMDtoHTMLformat(checklistText);
 	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/', '../docs?standard=').replaceAll('.md', '');
 	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/', '../Supplements?supplement=').replaceAll('.md', '');
