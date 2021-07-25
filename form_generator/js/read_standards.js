@@ -660,7 +660,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
 			checklistItemLI.setAttribute("text", line_text);
-			line_text = line_text.replaceAll("_hr_", "<br>");
+			line_text = line_text.replace(/(<br\/>_hr_)+/g, '<br\/>_hr_').replaceAll("_hr_", "<br>");
 			if(line_text.includes("footnote"))
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			else
@@ -741,20 +741,12 @@ all_other_items = "";
 
 function separate_essential_attributes_based_on_IMRaD_tags(checklistType, checklistHTML){
 	if (checklistType == "Essential"){
-		splitted_text = checklistHTML.split("<method>")
-		intro = splitted_text[0].replace("<intro>", "")
-		rest  = splitted_text[1]
-		splitted_rest = rest.split("<results>")
-		method = splitted_rest[0]
-		rest  = splitted_rest[1]
-		splitted_rest = rest.split("<discussion>")
-		results = splitted_rest[0]
-		rest  = splitted_rest[1]
-		splitted_rest = rest.split("<other>")
-		discussion = splitted_rest[0]
-		rest  = splitted_rest[1]
-		other = rest.replace("</other></discussion></results></method></intro>", "")
-
+		var intro = checklistHTML.includes("<intro>") ? checklistHTML.match(/<intro>([\s\S]*?)<\/?\w+>/i)[1] : "";
+		var method = checklistHTML.includes("<method>") ? checklistHTML.match(/<method>([\s\S]*?)<\/?\w+>/i)[1] : "";
+		var results = checklistHTML.includes("<results>") ? checklistHTML.match(/<results>([\s\S]*?)<\/?\w+>/i)[1] : "";
+		var discussion = checklistHTML.includes("<discussion>") ? checklistHTML.match(/<discussion>([\s\S]*?)<\/?\w+>/i)[1] : "";
+		var other = checklistHTML.includes("<other>") ? checklistHTML.match(/<other>([\s\S]*?)<\/?\w+>/i)[1] : "";
+		
 		all_intro_items = all_intro_items + intro;
 		all_method_items = all_method_items + method;
 		all_results_items = all_results_items + results;
@@ -905,8 +897,8 @@ function generateStandardChecklist(){
 			}
 		}
 	}
-	
-	all_essential_IMRaD_items_innerHTML = "" + all_intro_items + "_hr_" + all_method_items + "_hr_" + all_results_items + "_hr_" + all_discussion_items + "_hr_" + all_other_items
+	all_essential_IMRaD_items_innerHTML = "" + all_intro_items + "\n_hr_" + all_method_items + "\n_hr_" + all_results_items + "\n_hr_" + all_discussion_items + "\n_hr_" + all_other_items
+	all_essential_IMRaD_items_innerHTML = all_essential_IMRaD_items_innerHTML.replaceAll("\n_hr_", "").length > 0 ? all_essential_IMRaD_items_innerHTML : "";
 	checklists = prepare_UL_elements("", 'Essential', all_essential_IMRaD_items_innerHTML, footnotes);
 	EssentialUL.appendChild(checklists);
 	
