@@ -660,7 +660,9 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
 			checklistItemLI.setAttribute("text", line_text);
-			line_text = line_text.replaceAll("_hr_", "<br>");
+			line_text = line_text.replace(/(<br\/>_hr_)+/g, '<br\/>_hr_').replaceAll("_hr_", "<br>");
+			if(line_text.replaceAll("<br/><br>", "") == "")
+				continue;
 			if(line_text.includes("footnote"))
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			else
@@ -738,23 +740,43 @@ all_method_items = "";
 all_results_items = "";
 all_discussion_items = "";
 all_other_items = "";
+unrecognized_tags = "";
+standards_with_no_tags = "";
+standards_with_untagged_attributes = "";
 
-function separate_essential_attributes_based_on_IMRaD_tags(checklistType, checklistHTML){
+function separate_essential_attributes_based_on_IMRaD_tags(standardName, checklistType, checklistHTML){
 	if (checklistType == "Essential"){
-		splitted_text = checklistHTML.split("<method>")
-		intro = splitted_text[0].replace("<intro>", "")
-		rest  = splitted_text[1]
-		splitted_rest = rest.split("<results>")
-		method = splitted_rest[0]
-		rest  = splitted_rest[1]
-		splitted_rest = rest.split("<discussion>")
-		results = splitted_rest[0]
-		rest  = splitted_rest[1]
-		splitted_rest = rest.split("<other>")
-		discussion = splitted_rest[0]
-		rest  = splitted_rest[1]
-		other = rest.replace("</other></discussion></results></method></intro>", "")
+		const IMRaD_tags = ["<intro>", "<method>", "<results>", "<discussion>", "<other>"]; // Known IMRaD tags
 
+		// Attributes of each IMRaD tag
+		var intro = checklistHTML.includes("<intro>") ? checklistHTML.match(/<intro>([\s\S]*?)<\/?\w+>/i)[1] : "";
+		var method = checklistHTML.includes("<method>") ? checklistHTML.match(/<method>([\s\S]*?)<\/?\w+>/i)[1] : "";
+		var results = checklistHTML.includes("<results>") ? checklistHTML.match(/<results>([\s\S]*?)<\/?\w+>/i)[1] : "";
+		var discussion = checklistHTML.includes("<discussion>") ? checklistHTML.match(/<discussion>([\s\S]*?)<\/?\w+>/i)[1] : "";
+		var other = checklistHTML.includes("<other>") ? checklistHTML.match(/<other>([\s\S]*?)<\/?\w+>/i)[1] : "";
+
+		tags = checklistHTML.match(/\n\s*<\w+>/g);
+		// No tags at all => treat as '<other>'
+		if (tags === null){
+			other = checklistHTML;
+			standards_with_no_tags += "[" + standardName + "]\n";
+		}
+		// Unrecognized tags => treat as '<other>'
+		else for (const tag of tags){
+			if (!IMRaD_tags.includes(tag.trim())){
+				unrecognized_tags += "[" + tag.trim() + " @ " + standardName + "]\n";
+				var unrecognized = checklistHTML.match(new RegExp(tag.trim()+"([\\s\\S]*?)<\\/?\\w+>", "i"))[1];
+				other = unrecognized + other;
+			}
+		}
+		// Attributes that do not belong under any tag => treat as '<other>'
+		untaged = checklistHTML.match(/^[\s\r\n]+-([\s\S]*?)\n(<\w+>)/i);
+		if(untaged != null){
+			other = "-" + untaged[1] + other;
+			standards_with_untagged_attributes += "[" + standardName + "]\n";
+		}
+
+		// Combine IMRaD tags of all standards
 		all_intro_items = all_intro_items + intro;
 		all_method_items = all_method_items + method;
 		all_results_items = all_results_items + results;
@@ -762,6 +784,7 @@ function separate_essential_attributes_based_on_IMRaD_tags(checklistType, checkl
 		all_other_items = all_other_items + other;
 	}
 }
+
 function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHTML, footnotes){
 	checklistInnerHTML = checklistInnerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
 
@@ -872,7 +895,7 @@ function generateStandardChecklist(){
 		var checklistTags = standardTag.getElementsByTagName("checklist");
 		for (let checklistTag of checklistTags){
 			// ------ ----- //
-			separate_essential_attributes_based_on_IMRaD_tags(checklistTag.getAttribute('name'), checklistTag.innerHTML)
+			separate_essential_attributes_based_on_IMRaD_tags(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistTag.innerHTML)
 			// ------ ----- //
 
 			// Reformat the checklists from MD to HTML
@@ -905,8 +928,23 @@ function generateStandardChecklist(){
 			}
 		}
 	}
+	all_essential_IMRaD_items_innerHTML = "" + all_intro_items + "\n_hr_" + all_method_items + "\n_hr_" + all_results_items + "\n_hr_" + all_discussion_items + "\n_hr_" + all_other_items
+	all_essential_IMRaD_items_innerHTML = all_essential_IMRaD_items_innerHTML.replaceAll("\n_hr_", "").length > 0 ? all_essential_IMRaD_items_innerHTML : "";
 	
-	all_essential_IMRaD_items_innerHTML = "" + all_intro_items + "_hr_" + all_method_items + "_hr_" + all_results_items + "_hr_" + all_discussion_items + "_hr_" + all_other_items
+	// Notify testers in the case of unrecognized tags, no tags at all, or untagged attributes
+	tester = getParameterByName('y')[0] == 'noval' ? true : false;
+	if(tester){
+		alert_msg = "";
+		if(unrecognized_tags != "")
+			alert_msg += "Warning — unrecognized tag(s):\n" + unrecognized_tags;
+		if(standards_with_no_tags != "")
+			alert_msg += "\nWarning — there are no tags at:\n" + standards_with_no_tags;
+		if(standards_with_untagged_attributes != "")
+			alert_msg += "\nWarning — there are untagged attributes at:\n" + standards_with_untagged_attributes;
+		if(alert_msg != "")
+		  alert(alert_msg);
+	}
+	
 	checklists = prepare_UL_elements("", 'Essential', all_essential_IMRaD_items_innerHTML, footnotes);
 	EssentialUL.appendChild(checklists);
 	
