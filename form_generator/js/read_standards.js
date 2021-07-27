@@ -39,7 +39,7 @@ function readSpecificEmpiricalStandard(standard_name){
 //This function creates tooltips for text
 // Anything between / and / are known as regular expressions
 function createTooltip(checklistItemText, line_text, footnotes){
-	footnote_sups = line_text.match(/(.*?)\{sup\}\[\d+\]\(#[\w\d_]+\)\{\/sup\}(.*?)/g);
+	footnote_sups = line_text.match(/(.*?)\{sup\}.+?\[\d+\]\(#[\w\d_]+\)\{\/sup\}(.*?)/g);
 	if(footnote_sups){
 		footnote_rest = line_text.match(/(?!.*\})(.*?)$/g);
 		footnote_rest = footnote_rest.filter(function (el) {
@@ -749,11 +749,11 @@ function separate_essential_attributes_based_on_IMRaD_tags(standardName, checkli
 		const IMRaD_tags = ["<intro>", "<method>", "<results>", "<discussion>", "<other>"]; // Known IMRaD tags
 
 		// Attributes of each IMRaD tag
-		var intro = checklistHTML.includes("<intro>") ? checklistHTML.match(/<intro>([\s\S]*?)<\/?\w+>/i)[1] : "";
-		var method = checklistHTML.includes("<method>") ? checklistHTML.match(/<method>([\s\S]*?)<\/?\w+>/i)[1] : "";
-		var results = checklistHTML.includes("<results>") ? checklistHTML.match(/<results>([\s\S]*?)<\/?\w+>/i)[1] : "";
-		var discussion = checklistHTML.includes("<discussion>") ? checklistHTML.match(/<discussion>([\s\S]*?)<\/?\w+>/i)[1] : "";
-		var other = checklistHTML.includes("<other>") ? checklistHTML.match(/<other>([\s\S]*?)<\/?\w+>/i)[1] : "";
+		var intro = checklistHTML.includes("<intro>") ? checklistHTML.match(/<intro>([\s\S]*?)\n\s*<\/?\w+>/i)[1] : "";
+		var method = checklistHTML.includes("<method>") ? checklistHTML.match(/<method>([\s\S]*?)\n\s*<\/?\w+>/i)[1] : "";
+		var results = checklistHTML.includes("<results>") ? checklistHTML.match(/<results>([\s\S]*?)\n\s*<\/?\w+>/i)[1] : "";
+		var discussion = checklistHTML.includes("<discussion>") ? checklistHTML.match(/<discussion>([\s\S]*?)\n\s*<\/?\w+>/i)[1] : "";
+		var other = checklistHTML.includes("<other>") ? checklistHTML.match(/<other>([\s\S]*?)\n\s*<\/?\w+>/i)[1] : "";
 
 		tags = checklistHTML.match(/\n\s*<\w+>/g);
 		// No tags at all => treat as '<other>'
@@ -801,6 +801,8 @@ function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHT
 
 	return checklists;
 }
+
+var footnotes = {};
 
 function generateStandardChecklist(){
 	standard_keys = getParameterByName('standard');
@@ -878,11 +880,10 @@ function generateStandardChecklist(){
 		dom.innerHTML = empirical_standard;
 		var standardTag = dom.getElementsByTagName("standard")[0];
 		var footnoteTags = dom.getElementsByTagName("footnote");
-		var footnotes = {};
 
 		for(let footnoteTag of footnoteTags){
 			supTag = footnoteTag.getElementsByTagName("sup")[0];
-			footnote_id = supTag.innerText.trim()
+			footnote_id = standardTag.getAttribute('name')+"--"+supTag.innerText.trim() // Make footnotes belong to their standards
 			supTag.remove();
 			footnotes[footnote_id] = footnoteTag.innerText.trim();
 		}
@@ -894,8 +895,10 @@ function generateStandardChecklist(){
 		form.appendChild(standardTitle);*/
 		var checklistTags = standardTag.getElementsByTagName("checklist");
 		for (let checklistTag of checklistTags){
+			checklistHTML = checklistTag.innerHTML.replaceAll("<sup>", "<sup>"+standardName+"--") // Make footnotes belong to their standards 
+
 			// ------ ----- //
-			separate_essential_attributes_based_on_IMRaD_tags(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistTag.innerHTML)
+			separate_essential_attributes_based_on_IMRaD_tags(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML)
 			// ------ ----- //
 
 			// Reformat the checklists from MD to HTML
@@ -918,12 +921,12 @@ function generateStandardChecklist(){
 			}
 			else if (checklistTag.getAttribute('name') == "Desirable") {
 				//DesirableUL.appendChild(standard_header_rule);
-				checklists = prepare_UL_elements(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistTag.innerHTML, footnotes);
+				checklists = prepare_UL_elements(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
 				DesirableUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Extraordinary") {
 				//ExtraordinaryUL.appendChild(standard_header_rule);
-				checklists = prepare_UL_elements(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistTag.innerHTML, footnotes);
+				checklists = prepare_UL_elements(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
 				ExtraordinaryUL.appendChild(checklists);
 			}
 		}
