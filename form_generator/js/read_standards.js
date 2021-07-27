@@ -461,7 +461,7 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
 	question_block.id = id + ":" + checklistItem_id;
 	// className - deal with all of them
 	question_block.className = "question_block";
-	question_block.style = "padding-left:"+padding+"em; display:none";
+	question_block.style = "text-indent: -1.1em; display:none"; // Adjust indentation instead of padding
 
 	// &rdsh: is for the arrows.
 	// &nbsh: HTML can't do spaces. This is for spaces. 
@@ -641,7 +641,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 	//checklists.appendChild(standard_H3); //no subheadings
 	lines = checklistText.includes("- [ ]") ? checklistText.split("- [ ]") : checklistText.includes("-	") ? checklistText.split("-	") : checklistText.split("");
 	var i = 0;
-
+	var IMRaD_line_break = false;
 	for(let line of lines){
 		line_text = line.trim().replaceAll(" ", "").replaceAll("<br>", "").replaceAll("<br/>", "").replaceAll("\t", "");
 		if (line_text != ""){
@@ -655,12 +655,15 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			checklistItem_id = standardName + "-" + checklistName + ":" + i;
 			var checklistItemLI = document.createElement("LI");
 			var checklistItemText = document.createElement("span");
+			if(IMRaD_line_break)
+				checklists.appendChild(document.createElement("br"));
 
 			//we dont need this part in the checklist
 			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
+			IMRaD_line_break = line_text.includes('<br\/>_hr_') ? true : false;
+			line_text = line_text.replace(/(<br\/>_hr_)+/g, '');
 			checklistItemLI.setAttribute("text", line_text);
-			line_text = line_text.replace(/(<br\/>_hr_)+/g, '<br\/>_hr_').replaceAll("_hr_", "<br>");
 			if(line_text.replaceAll("<br/><br>", "") == "")
 				continue;
 			if(line_text.includes("footnote"))
