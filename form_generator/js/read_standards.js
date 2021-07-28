@@ -1080,6 +1080,8 @@ function saveFile(){
 				if(ul.tagName.toLowerCase() == 'ul'){
 					var i = 0;
 					for (let li of ul.children) {
+						if (li.tagName.toLowerCase() != 'li')
+						   continue;
 						i++;
 						var li_text = li.getAttribute("text");
 						var regex = /<a+\n*.+<\/a>/g;
