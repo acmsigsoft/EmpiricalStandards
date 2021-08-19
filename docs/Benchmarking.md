@@ -102,7 +102,7 @@ Jóakim v. Kistowski, Jeremy A. Arnold, Karl Huppler, Klaus-Dieter Lange, John L
 
 Samuel Kounev, Klaus-Dieter Lange, and Jóakim von Kistowski. 2020. Systems Benchmarking for Scientists and Engineers. Springer. DOI: [10.1007/978-3-030-41705-5](https://doi.org/10.1007/978-3-030-41705-5)
 
-Alessandro Vittorio Papadopoulos,  Laurens Versluis, André Bauer, Nikolas Herbst,  Jóakim von Kistowski, Ahmed Ali-Eldin, Cristina L. Abad,  José Nelson Amaral, Petr Tůma, Alexandru Iosup. 2021. Methodological Principles for Reproducible Performance Evaluation in Cloud Computing. In IEEE Transactions on Software Engineering, vol. 47, no. 8, pp. 1528-1543. DOI: 10.1109/TSE.2019.2927908](https://doi.org/10.1109/TSE.2019.2927908)
+Alessandro Vittorio Papadopoulos,  Laurens Versluis, André Bauer, Nikolas Herbst,  Jóakim von Kistowski, Ahmed Ali-Eldin, Cristina L. Abad,  José Nelson Amaral, Petr Tůma, Alexandru Iosup. 2021. Methodological Principles for Reproducible Performance Evaluation in Cloud Computing. In IEEE Transactions on Software Engineering, vol. 47, no. 8, pp. 1528-1543. DOI: [10.1109/TSE.2019.2927908](https://doi.org/10.1109/TSE.2019.2927908)
 
 Walter F. Tichy. 1998. Should computer scientists experiment more? Computer 31, 5 (May 1998), 32–40. DOI: [10.1109/2.675631](https://doi.org/10.1109/2.675631)
 
