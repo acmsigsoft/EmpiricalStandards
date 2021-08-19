@@ -38,7 +38,7 @@ function readSpecificEmpiricalStandard(standard_name){
 }
 
 //This function creates tooltips for text
-// Anything between / and / is known as regular expressions
+//Anything between / and / is known as regular expressions
 function createTooltip(checklistItemText, line_text, footnotes){
 	footnote_sups = line_text.match(/(.*?)\{sup\}.+?\[\d+\]\(#[\w\d_]+\)\{\/sup\}(.*?)/g);
 	if(footnote_sups){
@@ -559,9 +559,7 @@ function generate_author_deviation_block(checklistItem_id) {
 	return deviation_block;
 }
 
-
 // DEPRECATED: Ease-reviewer is a deprecated role
-
 // function generate_ease_reviewer_deviation_block(checklistItem_id) {
 // 	var deviation_block = generate_question_block_with_radio_answers("deviation_block", "deviationRadio", "<div class=\"tooltip\"> is the deviation reasonable?<span class=\"tooltiptext\">If the manuscript justifies the deviation, consider the justification offered.</span></div>", checklistItem_id, 2.4);
 
@@ -723,6 +721,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 	}
 	return checklists;
 }
+
 //sorting all the standards, engineering research and mixed methods always displayed before any other standards regardless of any input
 function sortStandards(keys){
 	var sorted_keys = [];
@@ -789,6 +788,21 @@ function separate_essential_attributes_based_on_IMRaD_tags(standardName, checkli
 	}
 }
 
+function create_heading(){
+	var heading = document.createElement("H1");
+	if(role == "\"author\"")
+		heading.innerHTML = "Pre-Submission Checklist";
+	else if(role == "\"one-phase-reviewer\"")
+		heading.innerHTML = "Reviewer Checklist";
+	else if(role == "\"two-phase-reviewer\"")
+		heading.innerHTML = "Reviewer Checklist";
+	// DEPRECATED
+	// else if(role == "\"ease-reviewer\"") 
+	// 	  heading.innerHTML = "Reviewer Checklist";
+	
+	return heading;
+}	
+
 function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHTML, footnotes){
 	checklistInnerHTML = checklistInnerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
 
@@ -831,30 +845,6 @@ function create_download_button(){
 	return download;
 }
 
-function create_for_more_info_part(standard_keys){
-	var more_info_DIV = document.createElement("DIV");
-	var more_info_H2 = document.createElement("H2");
-	more_info_H2.innerHTML = "For more information, see:";
-	
-	var standards_path = "../docs?standard="
-	var more_info_UL = document.createElement("UL");
-	for (let key of standard_keys){
-		key = key.replaceAll("\"", "");
-		var LI = document.createElement("LI");
-		var LINK = document.createElement("A");
-		LINK.innerHTML = key;
-		LINK.href = standards_path + key.replaceAll(" ", "");
-		LINK.target = "_blank";
-		LINK.style = "font-size:23px;";
-		LINK.id = "standardNames";
-		LI.appendChild(LINK);
-		more_info_UL.appendChild(LI);
-	}
-	more_info_DIV.appendChild(more_info_H2);
-	more_info_DIV.appendChild(more_info_UL);
-	return more_info_DIV;
-}
-
 function create_UL_with_H3(title){
 	var H3_ = document.createElement("H3");
 	var UL_ = document.createElement("UL");
@@ -877,31 +867,7 @@ function collect_footnotes(dom, standardTag){
 	}
 }
 
-function generateStandardChecklist(){
-	standard_keys = getParameterByName('standard');
-	standard_keys = sortStandards(standard_keys);
-	role = getParameterByName('role');
-	
-	var wrappers = document.getElementsByClassName('wrapper');
-	var wrapper = null;
-	if (wrappers.length > 0)
-		wrapper = wrappers[1];
-
-	var container = document.createElement("DIV");
-	container.id = "container";
-
-	var heading = document.createElement("H1");
-	if(role == "\"author\"")
-		heading.innerHTML = "Pre-Submission Checklist";
-	else if(role == "\"one-phase-reviewer\"")
-		heading.innerHTML = "Reviewer Checklist";
-	else if(role == "\"two-phase-reviewer\"")
-		heading.innerHTML = "Reviewer Checklist";
-	
-	// DEPRECATED
-	// else if(role == "\"ease-reviewer\"") 
-	// 	  heading.innerHTML = "Reviewer Checklist";
-
+function create_form(){
 	var form = document.createElement("FORM");
 	form.id = "checklists";
 	form.name = "checklists";
@@ -1033,6 +999,51 @@ function generateStandardChecklist(){
 	if(role == "\"two-phase-reviewer\"") {
 		form.appendChild(download);
 	}
+	
+	return form;
+}
+	
+function create_for_more_info_part(standard_keys){
+	var more_info_DIV = document.createElement("DIV");
+	var more_info_H2 = document.createElement("H2");
+	more_info_H2.innerHTML = "For more information, see:";
+	
+	var standards_path = "../docs?standard="
+	var more_info_UL = document.createElement("UL");
+	for (let key of standard_keys){
+		key = key.replaceAll("\"", "");
+		var LI = document.createElement("LI");
+		var LINK = document.createElement("A");
+		LINK.innerHTML = key;
+		LINK.href = standards_path + key.replaceAll(" ", "");
+		LINK.target = "_blank";
+		LINK.style = "font-size:23px;";
+		LINK.id = "standardNames";
+		LI.appendChild(LINK);
+		more_info_UL.appendChild(LI);
+	}
+	more_info_DIV.appendChild(more_info_H2);
+	more_info_DIV.appendChild(more_info_UL);
+	return more_info_DIV;
+}
+
+function generateStandardChecklist(){
+	standard_keys = getParameterByName('standard');
+	standard_keys = sortStandards(standard_keys);
+	role = getParameterByName('role');
+	
+	var wrappers = document.getElementsByClassName('wrapper');
+	var wrapper = null;
+	if (wrappers.length > 0)
+		wrapper = wrappers[1];
+
+	var container = document.createElement("DIV");
+	container.id = "container";
+
+	var heading = create_heading();
+
+	var form = create_form();
+
 	container.appendChild(heading);
 	container.appendChild(form);
 
