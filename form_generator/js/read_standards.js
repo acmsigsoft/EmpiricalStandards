@@ -12,6 +12,7 @@ function getParameterByName(param_name, url = window.location.href){
 	}
 	return param_values;
 }
+
 //Generate relative path for each standard document
 function readSpecificEmpiricalStandard(standard_name){
 	var mdFile = new XMLHttpRequest();
@@ -37,7 +38,7 @@ function readSpecificEmpiricalStandard(standard_name){
 }
 
 //This function creates tooltips for text
-// Anything between / and / are known as regular expressions
+//Anything between / and / is known as regular expressions
 function createTooltip(checklistItemText, line_text, footnotes){
 	footnote_sups = line_text.match(/(.*?)\{sup\}.+?\[\d+\]\(#[\w\d_]+\)\{\/sup\}(.*?)/g);
 	if(footnote_sups){
@@ -88,8 +89,7 @@ function fromMDtoHTMLformat(text){
 	return text;
 }
 
-//This function is primarily responsible for controlling the displaying of the deviation blocks
-// in the checklist.
+//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
 function show_hide_decision_message() {
 	role = getParameterByName('role');
 
@@ -128,7 +128,7 @@ function show_hide_decision_message() {
 		
 		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_type1_checked_count+justification_type2_checked_count+justification_type3_checked_count+justification_type4_checked_count)){
 
-			document.getElementById("checklist_submit").disabled = false;
+			document.getElementById("checklist_download").disabled = false;
 
 
 			if (justification_type3_checked_count + justification_type4_checked_count > 0 ){
@@ -159,7 +159,7 @@ function show_hide_decision_message() {
 		}
 			
 		else{
-			document.getElementById("checklist_submit").disabled = true;
+			document.getElementById("checklist_download").disabled = true;
 
 			
 			document.getElementById("decision_msg").style.display = "none";
@@ -176,7 +176,7 @@ function show_hide_decision_message() {
 
 		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_type1_checked_count+justification_type2_checked_count+justification_type3_checked_count+justification_type4_checked_count)){
 
-			document.getElementById("checklist_submit").disabled = false;
+			document.getElementById("checklist_download").disabled = false;
 
 			if (justification_type4_checked_count > 0 ){
 
@@ -208,7 +208,7 @@ function show_hide_decision_message() {
 		}
 			
 		else{
-			document.getElementById("checklist_submit").disabled = true;
+			document.getElementById("checklist_download").disabled = true;
 			document.getElementById("decision_msg").style.display = "none";
 		}
 
@@ -279,6 +279,7 @@ function show_hide_decision_message() {
 	// 	}
 	// }
 }
+
 //this function manages the display of the deviation block, which is dependent upon user input
 function show_deviation_block() {
 	id = this.id.replace("checklist-radio:No:", "")
@@ -286,6 +287,7 @@ function show_deviation_block() {
 	block.style.display = "block";
 	show_hide_decision_message();
 }
+
 //this function manages the display of the deviation block, which is dependent upon user input
 function hide_deviation_block() {
 	id = this.id.replace("checklist-radio:Yes:", "")
@@ -315,6 +317,7 @@ function hide_deviation_block() {
 	show_hide_decision_message();
 }
 
+//this function is responsible for hiding all messages displayed as a result of selecting 'No'
 function hide_other_messages(id) {
 	try {
 		document.getElementById("deviation_reasonable:" + id).style.display = "none";
@@ -386,7 +389,6 @@ function deviation_justification() {
 	}
 	show_hide_decision_message();
 }
-
 
 function generate_question_block_with_radio_answers(id, class_name, question, checklistItem_id, padding) {
 	var question_block = document.createElement("div");
@@ -533,8 +535,6 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
 	return question_block;
 }
 
-
-
 function generate_message(id, color, text, padding, indent) {
 	var message = document.createElement("div");
 	message.id = id;
@@ -559,9 +559,7 @@ function generate_author_deviation_block(checklistItem_id) {
 	return deviation_block;
 }
 
-
 // DEPRECATED: Ease-reviewer is a deprecated role
-
 // function generate_ease_reviewer_deviation_block(checklistItem_id) {
 // 	var deviation_block = generate_question_block_with_radio_answers("deviation_block", "deviationRadio", "<div class=\"tooltip\"> is the deviation reasonable?<span class=\"tooltiptext\">If the manuscript justifies the deviation, consider the justification offered.</span></div>", checklistItem_id, 2.4);
 
@@ -723,6 +721,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 	}
 	return checklists;
 }
+
 //sorting all the standards, engineering research and mixed methods always displayed before any other standards regardless of any input
 function sortStandards(keys){
 	var sorted_keys = [];
@@ -738,6 +737,7 @@ function sortStandards(keys){
 	return sorted_keys;
 }
 
+var footnotes = {};
 all_intro_items = "";
 all_method_items = "";
 all_results_items = "";
@@ -788,6 +788,21 @@ function separate_essential_attributes_based_on_IMRaD_tags(standardName, checkli
 	}
 }
 
+function create_heading(){
+	var heading = document.createElement("H1");
+	if(role == "\"author\"")
+		heading.innerHTML = "Pre-Submission Checklist";
+	else if(role == "\"one-phase-reviewer\"")
+		heading.innerHTML = "Reviewer Checklist";
+	else if(role == "\"two-phase-reviewer\"")
+		heading.innerHTML = "Reviewer Checklist";
+	// DEPRECATED
+	// else if(role == "\"ease-reviewer\"") 
+	// 	  heading.innerHTML = "Reviewer Checklist";
+	
+	return heading;
+}	
+
 function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHTML, footnotes){
 	checklistInnerHTML = checklistInnerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
 
@@ -805,76 +820,74 @@ function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHT
 	return checklists;
 }
 
-var footnotes = {};
+function notify_testers(){
+	tester = getParameterByName('y')[0] == 'noval' ? true : false;
+	if(tester){
+		alert_msg = "";
+		if(unrecognized_tags != "")
+			alert_msg += "Warning — unrecognized tag(s):\n" + unrecognized_tags;
+		if(standards_with_no_tags != "")
+			alert_msg += "\nWarning — there are no tags at:\n" + standards_with_no_tags;
+		if(standards_with_untagged_attributes != "")
+			alert_msg += "\nWarning — there are untagged attributes at:\n" + standards_with_untagged_attributes;
+		if(alert_msg != "")
+		    alert(alert_msg);
+	}
+}
 
-function generateStandardChecklist(){
-	standard_keys = getParameterByName('standard');
-	standard_keys = sortStandards(standard_keys);
-	role = getParameterByName('role');
-	
-	var wrappers = document.getElementsByClassName('wrapper');
-	var wrapper = null;
-	if (wrappers.length > 0)
-		wrapper = wrappers[1];
+function create_download_button(){
+	var download = document.createElement("button");
+	download.innerHTML = "Download";
+	download.id = "checklist_download";
+	download.name = "checklist_download";
+	download.disabled = true;
+	download.onclick = saveFile;
+	return download;
+}
 
-	var container = document.createElement("DIV");
-	container.id = "container";
+function create_UL_with_H3(title){
+	var H3_ = document.createElement("H3");
+	var UL_ = document.createElement("UL");
+	H3_.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
+	H3_.innerHTML = title;
+	UL_.id = title;
+	UL_.style = "padding: 0px;";
+	UL_.appendChild(H3_);
+	return UL_;
+}
 
-	var heading = document.createElement("H1");
-	if(role == "\"author\"")
-		heading.innerHTML = "Pre-Submission Checklist";
-	// else if(role == "\"ease-reviewer\"")
-	// 	heading.innerHTML = "Reviewer Checklist";
-	else if(role == "\"one-phase-reviewer\"")
-		heading.innerHTML = "Reviewer Checklist";
-	else if(role == "\"two-phase-reviewer\"")
-		heading.innerHTML = "Reviewer Checklist";
+function collect_footnotes(dom, standardTag){
+	var footnoteTags = dom.getElementsByTagName("footnote");
 
+	for(let footnoteTag of footnoteTags){
+		supTag = footnoteTag.getElementsByTagName("sup")[0];
+		footnote_id = standardTag.getAttribute('name')+"--"+supTag.innerText.trim() // To make footnotes belong to their standards
+		supTag.remove();
+		footnotes[footnote_id] = footnoteTag.innerText.trim();
+	}
+}
 
+function create_form(){
 	var form = document.createElement("FORM");
 	form.id = "checklists";
 	form.name = "checklists";
 
-	var EssentialUL = document.createElement("UL");
-	var EssentialH2 = document.createElement("H3");
-	EssentialUL.id = "Essential";
-	EssentialUL.style = "padding: 0px;";
-	EssentialH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
-	EssentialH2.innerHTML = "Essential";
-	EssentialUL.appendChild(EssentialH2);
+	var EssentialUL = create_UL_with_H3("Essential");
+	var DesirableUL = create_UL_with_H3("Desirable");
+	var ExtraordinaryUL = create_UL_with_H3("Extraordinary");
 
-	var DesirableUL = document.createElement("UL");
-	var DesirableH2 = document.createElement("H3");
-	DesirableUL.id = "Desirable";
-	DesirableUL.style = "padding: 0px;";
-	DesirableH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
-	DesirableH2.innerHTML = "Desirable";
-	DesirableUL.appendChild(DesirableH2);
-	// if(role == "\"reviewer\"")
-	// 	DesirableUL.style = "padding: 0px; display:none;";
-
-	if(role == "\"one-phase-reviewer\"")
+	if(role == "\"one-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
-	else if(role == "\"two-phase-reviewer\"")
+		ExtraordinaryUL.style = "padding: 0px; display:none;";
+	}
+	else if(role == "\"two-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
-
-	var ExtraordinaryUL = document.createElement("UL");
-	var ExtraordinaryH2 = document.createElement("H3");
-	ExtraordinaryUL.id = "Extraordinary";
-	ExtraordinaryUL.style = "padding: 0px;";
-	ExtraordinaryH2.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
-	ExtraordinaryH2.innerHTML = "Extraordinary";
-	ExtraordinaryUL.appendChild(ExtraordinaryH2);
-	// if(role == "\"reviewer\"")
-	// 	ExtraordinaryUL.style = "padding: 0px; display:none;";
-
-	if(role == "\"one-phase-reviewer\"")
-		ExtraordinaryUL.style = "padding: 0px; display:none;";
-	else if(role == "\"two-phase-reviewer\"")
-		ExtraordinaryUL.style = "padding: 0px; display:none;";
+		ExtraordinaryUL.style = "padding: 0px; display:none;";		
+	}
 
 	if (!standard_keys.includes("\"General Standard\""))
 		standard_keys.unshift("\"General Standard\"");
+	
 	var i = 0;
 	for (let key of standard_keys){
 		i++;
@@ -882,23 +895,20 @@ function generateStandardChecklist(){
 		var dom = document.createElement("div");
 		dom.innerHTML = empirical_standard;
 		var standardTag = dom.getElementsByTagName("standard")[0];
-		var footnoteTags = dom.getElementsByTagName("footnote");
-
-		for(let footnoteTag of footnoteTags){
-			supTag = footnoteTag.getElementsByTagName("sup")[0];
-			footnote_id = standardTag.getAttribute('name')+"--"+supTag.innerText.trim() // Make footnotes belong to their standards
-			supTag.remove();
-			footnotes[footnote_id] = footnoteTag.innerText.trim();
-		}
-
+		
+		collect_footnotes(dom, standardTag);
+		
 		let standardName = "\"" + standardTag.getAttribute('name') + "\"";
 		standardName = standardName.replaceAll("\"", "");
-		/*var standardTitle = document.createElement("H2");
-		standardTitle.innerHTML = standardName;
-		form.appendChild(standardTitle);*/
+		
+		// DEPRECATED
+		//var standardTitle = document.createElement("H2");
+		//standardTitle.innerHTML = standardName;
+		//form.appendChild(standardTitle);
+		
 		var checklistTags = standardTag.getElementsByTagName("checklist");
 		for (let checklistTag of checklistTags){
-			checklistHTML = checklistTag.innerHTML.replaceAll("<sup>", "<sup>"+standardName+"--") // Make footnotes belong to their standards 
+			checklistHTML = checklistTag.innerHTML.replaceAll("<sup>", "<sup>"+standardName+"--") // To make footnotes belong to their standards 
 
 			// ------ ----- //
 			separate_essential_attributes_based_on_IMRaD_tags(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML)
@@ -909,12 +919,13 @@ function generateStandardChecklist(){
 			Yes_No.style = "align:center; font-size: 80%; font-weight: bold;";
 			Yes_No.innerHTML = "&nbsp;yes no";
 
-			var standard_header_rule = document.createElement("div");
-			var standard_header_text = document.createElement("span");
-			standard_header_rule.className = "standardHeaderRule";
-			standard_header_text.className = "standardHeaderText";
+			// DEPRECATED
+			//var standard_header_rule = document.createElement("div");
+			//var standard_header_text = document.createElement("span");
+			//standard_header_rule.className = "standardHeaderRule";
+			//standard_header_text.className = "standardHeaderText";
 			//standard_header_text.innerText = standardName;
-			standard_header_rule.appendChild(standard_header_text);
+			//standard_header_rule.appendChild(standard_header_text);
 
 			if (checklistTag.getAttribute('name') == "Essential") {
 				//EssentialUL.appendChild(standard_header_rule);
@@ -937,31 +948,17 @@ function generateStandardChecklist(){
 	all_essential_IMRaD_items_innerHTML = "" + all_intro_items + "\n_hr_" + all_method_items + "\n_hr_" + all_results_items + "\n_hr_" + all_discussion_items + "\n_hr_" + all_other_items
 	all_essential_IMRaD_items_innerHTML = all_essential_IMRaD_items_innerHTML.replaceAll("\n_hr_", "").length > 0 ? all_essential_IMRaD_items_innerHTML : "";
 	
+	
 	// Notify testers in the case of unrecognized tags, no tags at all, or untagged attributes
-	tester = getParameterByName('y')[0] == 'noval' ? true : false;
-	if(tester){
-		alert_msg = "";
-		if(unrecognized_tags != "")
-			alert_msg += "Warning — unrecognized tag(s):\n" + unrecognized_tags;
-		if(standards_with_no_tags != "")
-			alert_msg += "\nWarning — there are no tags at:\n" + standards_with_no_tags;
-		if(standards_with_untagged_attributes != "")
-			alert_msg += "\nWarning — there are untagged attributes at:\n" + standards_with_untagged_attributes;
-		if(alert_msg != "")
-		  alert(alert_msg);
-	}
+	notify_testers();
 	
 	checklists = prepare_UL_elements("", 'Essential', all_essential_IMRaD_items_innerHTML, footnotes);
 	EssentialUL.appendChild(checklists);
 	
 	form.appendChild(EssentialUL);
 
-	var submit = document.createElement("button");
-	submit.innerHTML = "Download";
-	submit.id = "checklist_submit";
-	submit.name = "checklist_submit";
-	submit.disabled = true;
-	submit.onclick = saveFile;
+	// Create download button
+	var download = create_download_button();
 
 	// (All 'Yes' -> accept manuscript)
 	var decision_msg = generate_message("decision_msg", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
@@ -976,10 +973,9 @@ function generateStandardChecklist(){
 		form.appendChild(deviation_reasonable);
 
 		if(deviation_unreasonable.style.display == "block"){
-			submit.disabled = false;
+			download.disabled = false;
 		}
 	}
-
 	else if(role == "\"two-phase-reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
 		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
@@ -990,7 +986,7 @@ function generateStandardChecklist(){
 		form.appendChild(deviation_reasonable);
 
 		if(deviation_unreasonable.style.display == "block"){
-			submit.disabled = false;
+			download.disabled = false;
 		}
 	}
 
@@ -998,24 +994,22 @@ function generateStandardChecklist(){
 	form.appendChild(ExtraordinaryUL);
 
 	if(role == "\"one-phase-reviewer\"") {
-		form.appendChild(submit);
+		form.appendChild(download);
 	}
-
-	else if(role == "\"two-phase-reviewer\"") {
-		form.appendChild(submit);
+	if(role == "\"two-phase-reviewer\"") {
+		form.appendChild(download);
 	}
-	container.appendChild(heading);
-	container.appendChild(form);
-
-	BR = document.createElement("BR");
-	HR = document.createElement("HR");
-	container.appendChild(HR);
-
-	var for_more_info = document.createElement("H2");
-	for_more_info.innerHTML = "For more information, see:";
-	container.appendChild(for_more_info);
+	
+	return form;
+}
+	
+function create_for_more_info_part(standard_keys){
+	var more_info_DIV = document.createElement("DIV");
+	var more_info_H2 = document.createElement("H2");
+	more_info_H2.innerHTML = "For more information, see:";
+	
 	var standards_path = "../docs?standard="
-	var UL = document.createElement("UL");
+	var more_info_UL = document.createElement("UL");
 	for (let key of standard_keys){
 		key = key.replaceAll("\"", "");
 		var LI = document.createElement("LI");
@@ -1026,9 +1020,38 @@ function generateStandardChecklist(){
 		LINK.style = "font-size:23px;";
 		LINK.id = "standardNames";
 		LI.appendChild(LINK);
-		UL.appendChild(LI);
+		more_info_UL.appendChild(LI);
 	}
-	container.appendChild(UL);
+	more_info_DIV.appendChild(more_info_H2);
+	more_info_DIV.appendChild(more_info_UL);
+	return more_info_DIV;
+}
+
+function generateStandardChecklist(){
+	standard_keys = getParameterByName('standard');
+	standard_keys = sortStandards(standard_keys);
+	role = getParameterByName('role');
+	
+	var wrappers = document.getElementsByClassName('wrapper');
+	var wrapper = null;
+	if (wrappers.length > 0)
+		wrapper = wrappers[1];
+
+	var container = document.createElement("DIV");
+	container.id = "container";
+
+	var heading = create_heading();
+
+	var form = create_form();
+
+	container.appendChild(heading);
+	container.appendChild(form);
+
+	HR = document.createElement("HR");
+	container.appendChild(HR);
+
+	var more_info_DIV = create_for_more_info_part(standard_keys);
+	container.appendChild(more_info_DIV);
 
 	if (wrapper == null)
 		document.body.appendChild(container);
@@ -1037,6 +1060,7 @@ function generateStandardChecklist(){
 	
 	show_hide_decision_message();
 }
+
 //download the file as a checklist
 function saveFile(){
 	var checklists = document.getElementById('checklists');
@@ -1044,12 +1068,12 @@ function saveFile(){
 		'Review Checklist\n' +
 		'=================\n';
 		
-	var accept = document.getElementById("decision_msg");
+	var decision = document.getElementById("decision_msg");
 	var unreasonable = document.getElementById("deviation_unreasonable");
 	var reasonable = document.getElementById("deviation_reasonable");
 
-	if(accept.style.display == "block") {
-		generated_text += "\nRecommended Decision: " + accept.innerText + "\n";
+	if(decision.style.display == "block") {
+		generated_text += "\nRecommended Decision: " + decision.innerText + "\n";
 	}
 	
 	if(unreasonable.style.display == "block") {
