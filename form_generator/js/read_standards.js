@@ -142,6 +142,8 @@ function generate_decision_message_block() {
 			} else if (justification_type2_checked_count > 0) {
 				msg = "GATEKEEP";
 				document.getElementById("deviation_reasonable").style.display = "block";
+				document.getElementById("Desirable").style.display = "block";
+				document.getElementById("Extraordinary").style.display = "block";
 
 			// if number of type 1 is greater than 0
 			} else if (justification_type1_checked_count > 0) {
@@ -198,12 +200,16 @@ function generate_decision_message_block() {
 			} else if (justification_type2_checked_count > 0) {
 				msg = "MAJOR REVISION";
 				document.getElementById("deviation_reasonable").style.display = "block";
+				document.getElementById("Desirable").style.display = "block";
+				document.getElementById("Extraordinary").style.display = "block";
 			}
 			
 			// if number of type 1 is greater than 0
 			else if (justification_type1_checked_count > 0) {
 				msg = "MINOR REVISION";
 				document.getElementById("deviation_reasonable").style.display = "block";
+				document.getElementById("Desirable").style.display = "block";
+				document.getElementById("Extraordinary").style.display = "block";
 
 			// ELSE: ACCEPT
 			} else {
