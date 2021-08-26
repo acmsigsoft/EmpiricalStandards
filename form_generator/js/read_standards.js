@@ -58,7 +58,7 @@ function createTooltip(checklistItemText, line_text, footnotes){
 
 			var tooltipText = document.createElement("span");
 			tooltipText.className = "tooltiptext";
-			tooltipText.innerHTML = fromMDtoHTMLformat(footnotes[ftnt[2]]);			
+			tooltipText.innerHTML = convert_MD_tags_to_HTML_tags(footnotes[ftnt[2]]);			
 			tooltip.appendChild(tooltipText);
 			allTooltipsText.appendChild(tooltip);
 		}
@@ -73,7 +73,7 @@ function createTooltip(checklistItemText, line_text, footnotes){
 }
 
 //The text from the MD file is converted to HTML using this method
-function fromMDtoHTMLformat(text){
+function convert_MD_tags_to_HTML_tags(text){
 	// Bold text - Convert from MD to HTML tags
 	if (text.match(/\*\*(.*?)\*\*/g) != null)
 		text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
@@ -90,7 +90,7 @@ function fromMDtoHTMLformat(text){
 }
 
 //This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-function show_hide_decision_message() {
+function generate_decision_message_block() {
 
 	// Get the role (author, one-phase, two-phase)
 	role = getParameterByName('role');
@@ -297,7 +297,7 @@ function show_deviation_block() {
 	block.style.display = "block";
 
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-	show_hide_decision_message();
+	generate_decision_message_block();
 }
 
 //this function manages the display of the deviation block, which is dependent upon user input
@@ -334,7 +334,7 @@ function hide_deviation_block() {
 	}
 
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-	show_hide_decision_message();
+	generate_decision_message_block();
 }
 
 //this function is responsible for hiding all messages displayed as a result of selecting 'No'
@@ -350,7 +350,7 @@ function hide_other_messages(id) {
 }
 
 //this function creates a deviation block for all Essential items in the standards
-function deviation_justification() {
+function create_deviation_justification_block() {
 	// (No-Yes) deviation is justified
 	if(this.id.includes("deviation_block-radio:Yes:")){
 		id = this.id.replace("deviation_block-radio:Yes:", "")
@@ -410,10 +410,10 @@ function deviation_justification() {
 	}
 	
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-	show_hide_decision_message();
+	generate_decision_message_block();
 }
 
-function generate_question_block_with_radio_answers(id, class_name, question, checklistItem_id, padding) {
+function generate_question_block_with_yes_no_radio_answers(id, class_name, question, checklistItem_id, padding) {
 	var question_block = document.createElement("div");
 
 	// checklistItem_id = 1,2,3,4
@@ -448,9 +448,9 @@ function generate_question_block_with_radio_answers(id, class_name, question, ch
 	deviationRadioYes.name = id + "-radio:" + checklistItem_id;
 	deviationRadioNo.name = id + "-radio:" + checklistItem_id;
 
-	// deviation_justification is a function
-	deviationRadioYes.onclick = deviation_justification;
-	deviationRadioNo.onclick = deviation_justification;
+	// deviation justification is a function
+	deviationRadioYes.onclick = create_deviation_justification_block;
+	deviationRadioNo.onclick = create_deviation_justification_block;
 
 	// Set type of input to "radio"
 	deviationRadioYes.type = "radio";
@@ -541,8 +541,8 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
         deviationRadioType.name = id + "-radio:" + checklistItem_id;
     
     
-        // deviation_justification is a function
-        deviationRadioType.onclick = deviation_justification;
+        // deviation justification is a function
+        deviationRadioType.onclick = create_deviation_justification_block;
     
         deviationRadioType.type = "radio";
     
@@ -584,7 +584,7 @@ function generate_message(id, color, text, padding, indent) {
 
 // generate the deviation block for Author Role
 function generate_author_deviation_block(checklistItem_id) {
-	var deviation_block = generate_question_block_with_radio_answers("deviation_block", "deviationRadio", "does the manuscript justify the deviation?", checklistItem_id, 2.4);
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "does the manuscript justify the deviation?", checklistItem_id, 2.4);
 
 	// Author-specific deviation justification message
 	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 0.65, -1);
@@ -616,7 +616,7 @@ function generate_one_phase_reviewer_deviation_block(checklistItem_id) {
 
 	// Create a question block with Yes-No radio answers
 	// 2nd Question
-	var deviation_block = generate_question_block_with_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40);
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40);
 
 	// Reviewer-specific deviation justification block
 	//var deviation_justified = generate_question_block_with_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
@@ -646,7 +646,7 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id) {
 
 	// Create a question block with Yes-No radio answers
 	// 2nd Question
-	var deviation_block = generate_question_block_with_radio_answers("deviation_block", "deviationRadio", "Is the deviation reasonable?", checklistItem_id, 2.40);
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "Is the deviation reasonable?", checklistItem_id, 2.40);
 
 	// Reviewer-specific deviation justification block
 	//var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
@@ -672,7 +672,7 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id) {
 }
 
 // convert from Markdown to HTML checklists
-function convert_standard_checklists_to_html_checklists(standardName, checklistName, checklistText, footnotes){
+function convert_MD_standard_checklists_to_html_standard_checklists(standardName, checklistName, checklistText, footnotes){
 
 	// ???????
 	tester = getParameterByName('y')[0] == 'noval' ? true : false;
@@ -878,7 +878,7 @@ function separate_essential_attributes_based_on_IMRaD_tags(standardName, checkli
 }
 
 // Create Role Heading (Pre-Submission Checklist, Reviewer Checklist)
-function create_heading(){
+function create_role_heading(){
 	var heading = document.createElement("H1");
 	if(role == "\"author\"")
 		heading.innerHTML = "Pre-Submission Checklist";
@@ -894,7 +894,7 @@ function create_heading(){
 }	
 
 // Prepare unordered lists
-function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHTML, footnotes){
+function preparation_to_convert_MD_to_HTML(standardTagName, checklistTagName, checklistInnerHTML, footnotes){
 
 	// superscript tags
 	checklistInnerHTML = checklistInnerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
@@ -906,7 +906,7 @@ function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHT
 	checklistText = checklistInnerText.replaceAll(">", "").replaceAll(/\n\s*\n/g, '\n').replaceAll("\n", "<br/>");
 
 	// Transform Markdown tags to HTMLtags
-	checklistText = fromMDtoHTMLformat(checklistText);
+	checklistText = convert_MD_tags_to_HTML_tags(checklistText);
 
 	// Standard Files - Change from docs to link, change from .md file to nothing
 	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/', '../docs?standard=').replaceAll('.md', '');
@@ -915,7 +915,7 @@ function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHT
 	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/', '../Supplements?supplement=').replaceAll('.md', '');
 
 	// Convert Markdown Checklists to HTML checklists
-	checklists = convert_standard_checklists_to_html_checklists(standardTagName, checklistTagName, checklistText, footnotes)
+	checklists = convert_MD_standard_checklists_to_html_standard_checklists(standardTagName, checklistTagName, checklistText, footnotes)
 
 	return checklists;
 }
@@ -948,7 +948,7 @@ function create_download_button(){
 }
 
 // create Header with Unordered List (Essential, Desirable, Extraordinary)
-function create_UL_with_H3(title){
+function create_requirements_heading_with_UL(title){
 	var H3_ = document.createElement("H3");
 	var UL_ = document.createElement("UL");
 	H3_.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
@@ -971,7 +971,7 @@ function collect_footnotes(dom, standardTag){
 	}
 }
 
-function create_form(){
+function create_requirements_checklist(){
 
 	// Create Element "FORM"
 	var form = document.createElement("FORM");
@@ -979,13 +979,13 @@ function create_form(){
 	form.name = "checklists";
 
 	// create Header for Essential Requirements with an unordered list
-	var EssentialUL = create_UL_with_H3("Essential");
+	var EssentialUL = create_requirements_heading_with_UL("Essential");
 
 	// create Header for Desirable Requirements with an unordered list
-	var DesirableUL = create_UL_with_H3("Desirable");
+	var DesirableUL = create_requirements_heading_with_UL("Desirable");
 
 	// create Header for Extraordinary Requirements with an unordered list
-	var ExtraordinaryUL = create_UL_with_H3("Extraordinary");
+	var ExtraordinaryUL = create_requirements_heading_with_UL("Extraordinary");
 
 	// hide desirable and extraordinary list of requirements for One Phase Reviewer
 	if(role == "\"one-phase-reviewer\""){
@@ -1056,14 +1056,14 @@ function create_form(){
 				//DesirableUL.appendChild(standard_header_rule);
 
 				// Change from Markdown to HTML elements
-				checklists = prepare_UL_elements(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
+				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
 				DesirableUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Extraordinary") {
 				//ExtraordinaryUL.appendChild(standard_header_rule);
 
 				// Change from Markdown to HTML elements
-				checklists = prepare_UL_elements(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
+				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
 				ExtraordinaryUL.appendChild(checklists);
 			}
 		}
@@ -1076,7 +1076,7 @@ function create_form(){
 	notify_testers();
 	
 	// Change from Markdown to HTML elements
-	checklists = prepare_UL_elements("", 'Essential', all_essential_IMRaD_items_innerHTML, footnotes);
+	checklists = preparation_to_convert_MD_to_HTML("", 'Essential', all_essential_IMRaD_items_innerHTML, footnotes);
 	EssentialUL.appendChild(checklists);
 	
 	// Add Essential Attributes to the form
@@ -1183,10 +1183,10 @@ function generateStandardChecklist(){
 	container.id = "container";
 
 	// Create header (Pre-submission Checklist, Reviewer Checklist)
-	var heading = create_heading();
+	var heading = create_role_heading();
 
 	// Create Checklist
-	var form = create_form();
+	var form = create_requirements_checklist();
 
 	// Append header and form to container
 	container.appendChild(heading);
@@ -1206,7 +1206,7 @@ function generateStandardChecklist(){
 		wrapper.appendChild(container);
 	
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-	show_hide_decision_message();
+	generate_decision_message_block();
 }
 
 //Download the checklist with a specific format
