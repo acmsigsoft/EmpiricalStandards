@@ -74,15 +74,15 @@ function createTooltip(checklistItemText, line_text, footnotes){
 
 //The text from the MD file is converted to HTML using this method
 function fromMDtoHTMLformat(text){
-	// Bold text
+	// Bold text - Convert from MD to HTML tags
 	if (text.match(/\*\*(.*?)\*\*/g) != null)
 		text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
 
-	// Italic text
+	// Italic text - Convert from MD to HTML tags
 	if (text.match(/\*(.*?)\*/g) != null)
 		text = text.replace(/\*(.*?)\*/g, "<i>$1</i>");
 
-	// Supplements
+	// Supplements/Links? - Convert from MD to HTML tags
 	if (text.match(/\[([\w\s\d\.\-#\*_\/]+)\]\(((?:\/|https?:\/\/)[\w\d./?=#]+)\)/g) != null)
 		text = text.replace(/\[([\w\s\d\.\-#\*_\/]+)\]\(((?:\/|https?:\/\/)[\w\d./?=#]+)\)/g, "<a target='_blank' href='$2'>$1</a>");
 
@@ -91,6 +91,8 @@ function fromMDtoHTMLformat(text){
 
 //This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
 function show_hide_decision_message() {
+
+	// Get the role (author, one-phase, two-phase)
 	role = getParameterByName('role');
 
 	// Number of yes's that are not checked
@@ -106,6 +108,7 @@ function show_hide_decision_message() {
 	// justification_yes_checked_count = $('input[class="justificationRadioYes"][type="radio"][value="yes"]:checked').length;
 	// justification_no_checked_count = $('input[class="justificationRadioNo"][type="radio"][value="no"]:checked').length;
 
+	// Count the number of types (type1, type2, type3, type4)
 	justification_type1_checked_count = $('input[class="justificationRadioType"][type="radio"][value="type1"]:checked').length;
 	justification_type2_checked_count = $('input[class="justificationRadioType"][type="radio"][value="type2"]:checked').length;
 	justification_type3_checked_count = $('input[class="justificationRadioType"][type="radio"][value="type3"]:checked').length;
@@ -130,15 +133,17 @@ function show_hide_decision_message() {
 
 			document.getElementById("checklist_download").disabled = false;
 
-
+			// if number of type 3 + type 4 is greater than 0
 			if (justification_type3_checked_count + justification_type4_checked_count > 0 ){
 				msg = "REJECT";
 				document.getElementById("deviation_unreasonable").style.display = "block";
 
+			// if number of type 2 is greater than 0
 			} else if (justification_type2_checked_count > 0) {
 				msg = "GATEKEEP";
 				document.getElementById("deviation_reasonable").style.display = "block";
 
+			// if number of type 1 is greater than 0
 			} else if (justification_type1_checked_count > 0) {
 				msg = "ACCEPT";
 				document.getElementById("deviation_reasonable").style.display = "block";
@@ -178,24 +183,29 @@ function show_hide_decision_message() {
 
 			document.getElementById("checklist_download").disabled = false;
 
+			// if number of type 4 is greater than 0
 			if (justification_type4_checked_count > 0 ){
 
 				msg = "REJECT";
 				document.getElementById("deviation_unreasonable").style.display = "block";
 
+			// if number of type 3 is greater than 0
 			} else if (justification_type3_checked_count > 0) {
 				msg = "REJECT BUT INVITE RESUBMISSION";
 				document.getElementById("deviation_unreasonable").style.display = "block";
 
+			// if number of type 2 is greater than 0
 			} else if (justification_type2_checked_count > 0) {
 				msg = "MAJOR REVISION";
 				document.getElementById("deviation_reasonable").style.display = "block";
 			}
 			
+			// if number of type 1 is greater than 0
 			else if (justification_type1_checked_count > 0) {
 				msg = "MINOR REVISION";
 				document.getElementById("deviation_reasonable").style.display = "block";
 
+			// ELSE: ACCEPT
 			} else {
 				msg = "ACCEPT";
 				document.getElementById("Desirable").style.display = "block";
@@ -285,13 +295,19 @@ function show_deviation_block() {
 	id = this.id.replace("checklist-radio:No:", "")
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "block";
+
+	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
 	show_hide_decision_message();
 }
 
 //this function manages the display of the deviation block, which is dependent upon user input
 function hide_deviation_block() {
+
+	// Replace ID from Yes to an empty string
 	id = this.id.replace("checklist-radio:Yes:", "")
 	hide_other_messages(id);
+
+	// Hide all Deviation Blocks
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "none";
 	var block = document.getElementById("deviation_justified:" + id);
@@ -299,25 +315,30 @@ function hide_deviation_block() {
 	var block = document.getElementById("deviation_not_justified:" + id);
 	block.style.display = "none";
 
+	// Uncheck all deviation-block-radio
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_block-radio");
 	for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
 		document.getElementsByName(deviation_radio_name)[i].checked = false;
 	}
 
+	// Uncheck all deviation-justified-radio
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_justified-radio");
 	for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
 		document.getElementsByName(deviation_radio_name)[i].checked = false;
 	}
 
+	// Uncheck all deviation-not-justified-radio
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_not_justified-radio");
 	for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
 		document.getElementsByName(deviation_radio_name)[i].checked = false;
 	}
 
+	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
 	show_hide_decision_message();
 }
 
 //this function is responsible for hiding all messages displayed as a result of selecting 'No'
+// ??????????????????????????????????????
 function hide_other_messages(id) {
 	try {
 		document.getElementById("deviation_reasonable:" + id).style.display = "none";
@@ -387,6 +408,8 @@ function deviation_justification() {
 			document.getElementById("deviation_unreasonable:" + id).style.display = "block";
 		}
 	}
+	
+	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
 	show_hide_decision_message();
 }
 
@@ -429,6 +452,7 @@ function generate_question_block_with_radio_answers(id, class_name, question, ch
 	deviationRadioYes.onclick = deviation_justification;
 	deviationRadioNo.onclick = deviation_justification;
 
+	// Set type of input to "radio"
 	deviationRadioYes.type = "radio";
 	deviationRadioNo.type = "radio";
 
@@ -455,6 +479,7 @@ function generate_question_block_with_radio_answers(id, class_name, question, ch
 	return question_block;
 }
 
+// generate the question block with the type radio buttons (type 1, type 2, type 3, type 4)
 function generate_question_block_with_type_radio_answers(id, class_name, question, checklistItem_id, padding) {
 	var question_block = document.createElement("div");
 
@@ -471,16 +496,26 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
 
 	var deviation_block_radios = document.createElement("div");
 
+	// &nbsh: HTML can't do spaces. This is for spaces. 
+	// 3 spaces
     deviation_block_radios.innerHTML = "&nbsp;&nbsp;&nbsp;";
 
-
+	// ???????????????????
 {/* <span class="tooltiptext">Empirical research that investigates how an intervention, like the introduction of a method or tool, affects a real-life context</span> */}
 
+	// dictionary of tooltips text for each type of unreasonable deviation
 	var dict = {};
 
+	// type 1
 	dict[1] = "can be fixed by editing text only; e.g. clarifying text, adding references, changing a diagram, describing an additional limitation, copyediting.";
+	
+	// type 2
 	dict[2] = "can be fixed by doing some new data analysis, redoing some existing data analysis, or collecting a small amount of additional data (e.g. going back to one interviewee, collecting some additional primary studies for a systematic review).";
+	
+	// type 3
 	dict[3] = "can be fixed completely redoing data analysis, OR collecting additional data (e.g. conducting new or additional experiments or case studies; several new interviews, one or more additional rounds of questionnaire data collection).";
+	
+	// type 4
 	dict[4] = "unacceptable conduct (e.g. plagiarism, p-hacking, HARKing, unethical data collection) OR problems the cannot be fixed without doing a brand new study (e.g. fundamentally invalid measures, data collection or analysis insufficient by an order of magnitude, no chain of evidence whatsoever from data to conclusions).";
 
 
@@ -515,6 +550,7 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
         deviationRadioType.value = "type"+i;
     
         // Actual Text of the Radio button
+		// Adding tooltip to type Radio button
         // deviationLabelType.innerHTML = "type "+i+"&nbsp;&nbsp;";
 		deviationLabelType.innerHTML = "<div class=\"tooltip\">type "+i+ "<span class=\"tooltiptext\"> "+dict[i]+"</span></div>" + "&nbsp;&nbsp;";
     
@@ -535,6 +571,7 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
 	return question_block;
 }
 
+//generate a message with a specific style
 function generate_message(id, color, text, padding, indent) {
 	var message = document.createElement("div");
 	message.id = id;
@@ -545,6 +582,7 @@ function generate_message(id, color, text, padding, indent) {
 	return message;
 }
 
+// generate the deviation block for Author Role
 function generate_author_deviation_block(checklistItem_id) {
 	var deviation_block = generate_question_block_with_radio_answers("deviation_block", "deviationRadio", "does the manuscript justify the deviation?", checklistItem_id, 2.4);
 
@@ -573,40 +611,18 @@ function generate_author_deviation_block(checklistItem_id) {
 // 	return deviation_block;
 // }
 
+// generate the deviation block for One Phase Reviewer Role
 function generate_one_phase_reviewer_deviation_block(checklistItem_id) {
+
+	// Create a question block with Yes-No radio answers
+	// 2nd Question
 	var deviation_block = generate_question_block_with_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40);
 
 	// Reviewer-specific deviation justification block
 	//var deviation_justified = generate_question_block_with_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
 	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
 
-	// change this and it will break
-	var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06);
-
-	// (No-No-Yes)
-	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
-
-	// (No-No-No)
-	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "", 0, 0);
-
-	deviation_block.appendChild(deviation_justified);
-	deviation_block.appendChild(deviation_not_justified);
-
-	deviation_block.appendChild(deviation_reasonable);
-	deviation_block.appendChild(deviation_unreasonable);
-
-	return deviation_block;
-}
-
-function generate_two_phase_reviewer_deviation_block(checklistItem_id) {
-
-	// 2nd Question
-	var deviation_block = generate_question_block_with_radio_answers("deviation_block", "deviationRadio", "Is the deviation reasonable?", checklistItem_id, 2.40);
-
-	// Reviewer-specific deviation justification block
-	//var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
-	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
-
+	// Create a question block with type radio answers
 	// 3rd Question
 	var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06);
 
@@ -625,27 +641,79 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id) {
 	return deviation_block;
 }
 
+// generate the deviation block for Two Phase Reviewer Role
+function generate_two_phase_reviewer_deviation_block(checklistItem_id) {
+
+	// Create a question block with Yes-No radio answers
+	// 2nd Question
+	var deviation_block = generate_question_block_with_radio_answers("deviation_block", "deviationRadio", "Is the deviation reasonable?", checklistItem_id, 2.40);
+
+	// Reviewer-specific deviation justification block
+	//var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
+	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
+
+	// Create a question block with type radio answers
+	// 3rd Question
+	var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06);
+
+	// (No-No-Yes)
+	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
+
+	// (No-No-No)
+	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "", 0, 0);
+
+	deviation_block.appendChild(deviation_justified);
+	deviation_block.appendChild(deviation_not_justified);
+
+	deviation_block.appendChild(deviation_reasonable);
+	deviation_block.appendChild(deviation_unreasonable);
+
+	return deviation_block;
+}
+
+// convert from Markdown to HTML checklists
 function convert_standard_checklists_to_html_checklists(standardName, checklistName, checklistText, footnotes){
+
+	// ???????
 	tester = getParameterByName('y')[0] == 'noval' ? true : false;
+
+	// Create Unordered List
 	var checklists = document.createElement("UL");
+
+	// Create a Bold Header
 	var standard_H3 = document.createElement("B");
 	standard_H3.style = "font-size:20px;";
 	standard_H3.innerHTML = standardName + ":";
+
+	// Positioning Essential, Desirable, Extraordinary lines on page
+	// Essential needs more room for radio buttons
 	if (checklistName == "Essential")
 		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:1.2em; text-indent:-2.4em;";
 	else
 		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:0em; text-indent:-1.3em;";
 
 	//checklists.appendChild(standard_H3); //no subheadings
+
+	// splitting lines on bullet points from markdown file
 	lines = checklistText.includes("- [ ]") ? checklistText.split("- [ ]") : checklistText.includes("-	") ? checklistText.split("-	") : checklistText.split("");
+
 	var i = 0;
+
+	// IMRaD line break flag is set to equal false
 	var IMRaD_line_break = false;
 	for(let line of lines){
+
+		// removes whitespace
+		// replace all line breaks (<br> </br>)
+		// replace all tab character(\t)
 		line_text = line.trim().replaceAll(" ", "").replaceAll("<br>", "").replaceAll("<br/>", "").replaceAll("\t", "");
+
 		if (line_text != ""){
 			i++;
-			// Trim and remove line breaks in markdown text
+
+			// ?????????????????????
 			line_text = line.trim().replace("---", "&mdash;");
+			// Trim and remove line breaks in markdown text
 			while (line_text.match(/<br(\/)?>$/)) {
 				line_text = line_text.replace(/<br(\/)?>$/, "");
 				line_text = line_text.trim();
@@ -656,32 +724,52 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 			if(IMRaD_line_break)
 				checklists.appendChild(document.createElement("br"));
 
-			//we dont need this part in the checklist
+			// !!!!!!!!!!!!!!!! we dont need this part in the checklist
 			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
+			
+			// if line_text includes a specific regex set to true ( line break with horizontal rule)
 			IMRaD_line_break = line_text.includes('<br\/>_hr_') ? true : false;
+
+			// Replace line break and horizontal rule with empty string
 			line_text = line_text.replace(/(<br\/>_hr_)+/g, '');
+
+			// Change the text to the string held in line_text
 			checklistItemLI.setAttribute("text", line_text);
+
 			if(line_text.replaceAll("<br/><br>", "") == "")
 				continue;
 			if(line_text.includes("footnote"))
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			else
 				checklistItemText.innerHTML = "&nbsp;" + line_text;
+				// ???????????????????? previous line does what?
 
 			if (checklistName == "Essential"){
+				// create Input Elements
 				var checklistRadioYes = document.createElement("input");
 				var checklistRadioNo = document.createElement("input");
+
+				// Set the IDs
 				checklistRadioYes.id = "checklist-radio:Yes:" + checklistItem_id;
 				checklistRadioNo.id = "checklist-radio:No:" + checklistItem_id;
+
+				// Set the names of the class
 				checklistRadioYes.className = "checklistRadioYes";
 				checklistRadioNo.className = "checklistRadioNo";
 				checklistRadioYes.name = "checklist-radio:" + checklistItem_id;
 				checklistRadioNo.name = "checklist-radio:" + checklistItem_id;
+
+				// in the case of YES, hide the deviation block
 				checklistRadioYes.onclick = hide_deviation_block;
+				// in the case of NO, show the deviation block
 				checklistRadioNo.onclick = show_deviation_block;
+
+				// set the type of the input to "radio"
 				checklistRadioYes.type = "radio";
 				checklistRadioNo.type = "radio";
+
+				// set the value to yes or no
 				checklistRadioYes.value = "yes";
 				checklistRadioNo.value = "no";
 				checklistRadioYes.checked = tester;
@@ -704,6 +792,7 @@ function convert_standard_checklists_to_html_checklists(standardName, checklistN
 				checklistItemLI.appendChild(checklistRadioNo);
 				checklistItemLI.appendChild(checklistItemText);
 			}
+			// ?????????????????????????????
 			else{
 				var checkboxInput = document.createElement("input");
 				checkboxInput.type = "checkbox";
@@ -788,6 +877,7 @@ function separate_essential_attributes_based_on_IMRaD_tags(standardName, checkli
 	}
 }
 
+// Create Role Heading (Pre-Submission Checklist, Reviewer Checklist)
 function create_heading(){
 	var heading = document.createElement("H1");
 	if(role == "\"author\"")
@@ -803,7 +893,10 @@ function create_heading(){
 	return heading;
 }	
 
+// Prepare unordered lists
 function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHTML, footnotes){
+
+	// superscript tags
 	checklistInnerHTML = checklistInnerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
 
     var tempDivElement = document.createElement("div");
@@ -811,15 +904,23 @@ function prepare_UL_elements(standardTagName, checklistTagName, checklistInnerHT
 	checklistInnerText = tempDivElement.innerText;
 
 	checklistText = checklistInnerText.replaceAll(">", "").replaceAll(/\n\s*\n/g, '\n').replaceAll("\n", "<br/>");
+
+	// Transform Markdown tags to HTMLtags
 	checklistText = fromMDtoHTMLformat(checklistText);
+
+	// Standard Files - Change from docs to link, change from .md file to nothing
 	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/', '../docs?standard=').replaceAll('.md', '');
+
+	// Supplement Files - Change from docs to link, change from .md file to nothing
 	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/', '../Supplements?supplement=').replaceAll('.md', '');
 
+	// Convert Markdown Checklists to HTML checklists
 	checklists = convert_standard_checklists_to_html_checklists(standardTagName, checklistTagName, checklistText, footnotes)
 
 	return checklists;
 }
 
+// Notify testers in the case of unrecognized tags, no tags at all, or untagged attributes
 function notify_testers(){
 	tester = getParameterByName('y')[0] == 'noval' ? true : false;
 	if(tester){
@@ -835,6 +936,7 @@ function notify_testers(){
 	}
 }
 
+// Create download button to download text file
 function create_download_button(){
 	var download = document.createElement("button");
 	download.innerHTML = "Download";
@@ -845,6 +947,7 @@ function create_download_button(){
 	return download;
 }
 
+// create Header with Unordered List (Essential, Desirable, Extraordinary)
 function create_UL_with_H3(title){
 	var H3_ = document.createElement("H3");
 	var UL_ = document.createElement("UL");
@@ -856,6 +959,7 @@ function create_UL_with_H3(title){
 	return UL_;
 }
 
+// collect footnotes
 function collect_footnotes(dom, standardTag){
 	var footnoteTags = dom.getElementsByTagName("footnote");
 
@@ -868,34 +972,47 @@ function collect_footnotes(dom, standardTag){
 }
 
 function create_form(){
+
+	// Create Element "FORM"
 	var form = document.createElement("FORM");
 	form.id = "checklists";
 	form.name = "checklists";
 
+	// create Header for Essential Requirements with an unordered list
 	var EssentialUL = create_UL_with_H3("Essential");
+
+	// create Header for Desirable Requirements with an unordered list
 	var DesirableUL = create_UL_with_H3("Desirable");
+
+	// create Header for Extraordinary Requirements with an unordered list
 	var ExtraordinaryUL = create_UL_with_H3("Extraordinary");
 
+	// hide desirable and extraordinary list of requirements for One Phase Reviewer
 	if(role == "\"one-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
 		ExtraordinaryUL.style = "padding: 0px; display:none;";
 	}
+	// hide desirable and extraordinary list of requirements for Two Phase Reviewer
 	else if(role == "\"two-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
 		ExtraordinaryUL.style = "padding: 0px; display:none;";		
 	}
 
+	// unshift() method adds new items to the beginning of an array, and returns the new length
 	if (!standard_keys.includes("\"General Standard\""))
 		standard_keys.unshift("\"General Standard\"");
 	
 	var i = 0;
 	for (let key of standard_keys){
 		i++;
+
+		// Obtain all the information for a Standard
 		empirical_standard = readSpecificEmpiricalStandard(key);
 		var dom = document.createElement("div");
 		dom.innerHTML = empirical_standard;
 		var standardTag = dom.getElementsByTagName("standard")[0];
 		
+		// collect all the footnotes
 		collect_footnotes(dom, standardTag);
 		
 		let standardName = "\"" + standardTag.getAttribute('name') + "\"";
@@ -908,11 +1025,12 @@ function create_form(){
 		
 		var checklistTags = standardTag.getElementsByTagName("checklist");
 		for (let checklistTag of checklistTags){
+
+			// dealing with footnotes
 			checklistHTML = checklistTag.innerHTML.replaceAll("<sup>", "<sup>"+standardName+"--") // To make footnotes belong to their standards 
 
-			// ------ ----- //
+			// Add all information for "all_intro_items", etc.
 			separate_essential_attributes_based_on_IMRaD_tags(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML)
-			// ------ ----- //
 
 			// Reformat the checklists from MD to HTML
 			var Yes_No = document.createElement("div");
@@ -929,17 +1047,22 @@ function create_form(){
 
 			if (checklistTag.getAttribute('name') == "Essential") {
 				//EssentialUL.appendChild(standard_header_rule);
+
 				if (i == 1)
 					EssentialUL.appendChild(Yes_No);
 				//EssentialUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Desirable") {
 				//DesirableUL.appendChild(standard_header_rule);
+
+				// Change from Markdown to HTML elements
 				checklists = prepare_UL_elements(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
 				DesirableUL.appendChild(checklists);
 			}
 			else if (checklistTag.getAttribute('name') == "Extraordinary") {
 				//ExtraordinaryUL.appendChild(standard_header_rule);
+
+				// Change from Markdown to HTML elements
 				checklists = prepare_UL_elements(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
 				ExtraordinaryUL.appendChild(checklists);
 			}
@@ -952,9 +1075,11 @@ function create_form(){
 	// Notify testers in the case of unrecognized tags, no tags at all, or untagged attributes
 	notify_testers();
 	
+	// Change from Markdown to HTML elements
 	checklists = prepare_UL_elements("", 'Essential', all_essential_IMRaD_items_innerHTML, footnotes);
 	EssentialUL.appendChild(checklists);
 	
+	// Add Essential Attributes to the form
 	form.appendChild(EssentialUL);
 
 	// Create download button
@@ -964,6 +1089,8 @@ function create_form(){
 	var decision_msg = generate_message("decision_msg", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
 	form.appendChild(decision_msg);
 
+
+	/// ???????????????????????????????????
 	if(role == "\"one-phase-reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
 		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
@@ -990,9 +1117,11 @@ function create_form(){
 		}
 	}
 
+	// Add Desirable and Extraordinary Unordered List to Form
 	form.appendChild(DesirableUL);
 	form.appendChild(ExtraordinaryUL);
 
+	// Add Download Button for One Phase Reviewer and Two Phase Reviewer
 	if(role == "\"one-phase-reviewer\"") {
 		form.appendChild(download);
 	}
@@ -1002,7 +1131,8 @@ function create_form(){
 	
 	return form;
 }
-	
+
+// Add the bottom of checklist "For more information, see: "
 function create_for_more_info_part(standard_keys){
 	var more_info_DIV = document.createElement("DIV");
 	var more_info_H2 = document.createElement("H2");
@@ -1010,6 +1140,8 @@ function create_for_more_info_part(standard_keys){
 	
 	var standards_path = "../docs?standard="
 	var more_info_UL = document.createElement("UL");
+
+	// Adding Standards as a list with a link to the correct page
 	for (let key of standard_keys){
 		key = key.replaceAll("\"", "");
 		var LI = document.createElement("LI");
@@ -1027,9 +1159,18 @@ function create_for_more_info_part(standard_keys){
 	return more_info_DIV;
 }
 
+
+// Overview function that calls other functions to build the Checklist
+/// FUNCTION IS CALLED IN "result.html"
 function generateStandardChecklist(){
+	
+	// list of Standards
 	standard_keys = getParameterByName('standard');
+
+	// return sorted list of Standards
 	standard_keys = sortStandards(standard_keys);
+
+	// return the role (author, one-phase, two-phase)
 	role = getParameterByName('role');
 	
 	var wrappers = document.getElementsByClassName('wrapper');
@@ -1037,19 +1178,25 @@ function generateStandardChecklist(){
 	if (wrappers.length > 0)
 		wrapper = wrappers[1];
 
+	// Create container that holds header, checklist, etc.
 	var container = document.createElement("DIV");
 	container.id = "container";
 
+	// Create header (Pre-submission Checklist, Reviewer Checklist)
 	var heading = create_heading();
 
+	// Create Checklist
 	var form = create_form();
 
+	// Append header and form to container
 	container.appendChild(heading);
 	container.appendChild(form);
 
+	// Creates line separating from checklist and "for more information, see:"
 	HR = document.createElement("HR");
 	container.appendChild(HR);
 
+	// Create "For more information, see:"
 	var more_info_DIV = create_for_more_info_part(standard_keys);
 	container.appendChild(more_info_DIV);
 
@@ -1058,10 +1205,11 @@ function generateStandardChecklist(){
 	else
 		wrapper.appendChild(container);
 	
+	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
 	show_hide_decision_message();
 }
 
-//download the file as a checklist
+//Download the checklist with a specific format
 function saveFile(){
 	var checklists = document.getElementById('checklists');
 	var generated_text = '=================\n' +
