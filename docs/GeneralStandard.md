@@ -148,16 +148,16 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Using the review to promote the reviewer's own views, theories, methods, or publications.
 
 ## Invalid Criticisms
--   Setting arbitrary minimum sample sizes or other data requirements, based on neither power analysis nor theoretical saturation
+-   Setting arbitrary minimum sample sizes or other data requirements, based on neither power analysis nor theoretical saturation.
 -   Stating that a study: 
     - lacks detail without enumerating missing details;  
     - is of low quality without explaining specific problems; or  
     - is not new without providing citations to published studies that make **practically identical** contributions.  
--   Rejecting a study because it replicates or reproduces existing work <!--(see Replications Supplement)-->
+-   Rejecting a study because it replicates or reproduces existing work. <!--(see Replications Supplement)-->
 -   Cross-paradigmatic criticism (e.g. attacking an interpretivist study for not conforming to positivist norms).
--   Criticizing a study for limitations intrinsic to that kind of study or the methodology used (e.g. attacking a case study for low generalizability) 
--   Rejecting a study because the reviewer would have used a different methodology or design
--   Rejecting a study because it reports negative results  
+-   Criticizing a study for limitations intrinsic to that kind of study or the methodology used (e.g. attacking a case study for low generalizability).
+-   Rejecting a study because the reviewer would have used a different methodology or design.
+-   Rejecting a study because it reports negative results.
     
 ## Research and Reporting Antipatterns
 -   Attempting a study without reading, understanding and applying published guidelines for that kind of study.
@@ -168,10 +168,10 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Unnecessarily dividing the presentation of a single study into many papers (salami-slicing).
 -   Overreaching conclusions or generalizations; obfuscating, downplaying or dismissing a study's limitations.
 -   Mentioning related work only to dismiss it as irrelevant; listing rather than synthesizing related work.
--   Acknowledging limitations but then writing implications and conclusions as though the limitations don't exist
+-   Acknowledging limitations but then writing implications and conclusions as though the limitations don't exist.
 
 ---    
 <footnote><sup>[1](#myfootnote1)</sup> visual methods of checking assumptions are often as good as or better than statistical tests</footnote><br>
-<footnote><sup>[2](#myfootnote2)</sup>e.g. positivism, falisificationism, interpretivism, critical realism, postmodernism)</footnote><br>
+<footnote><sup>[2](#myfootnote2)</sup>e.g. positivism, falisificationism, interpretivism, critical realism, postmodernism</footnote><br>
 </standard>
     
