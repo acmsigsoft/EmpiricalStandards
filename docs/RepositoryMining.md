@@ -47,6 +47,7 @@ The standard applies to software engineering studies that mine large-scale softw
 
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
+
 - Considers and discusses ethical issues in mining of software repositories<sup>[1](#footnote1)</sup> (e.g., data privacy).
 - Performs testing (e.g., unit testing) to avoid bugs in the proposed tool.
 
