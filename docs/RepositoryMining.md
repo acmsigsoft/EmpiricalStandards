@@ -16,24 +16,19 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 ### Essential Attributes
 <checklist name="Essential">
 
-- [ ] Explains why repository mining is appropriate for the proposed research problem
-- [ ] Defines unit(s) of analysis or observation
-- [ ] Justifies the selection of the datasets that were studied including specific selection criteria (e.g., number of stars, availability of tests, minimum lines of code and relevant code quality aspects for repository selection)
-- [ ] Justifies that the above-mentioned selection criteria is appropriate for the study
-- [ ] Describes dataset characteristics; it includes data sources, size of the selected repositories, and dataset attributes relevant to the study at hand (e.g., number of commit messages)
-- [ ] Describes data preprocessing steps
-- [ ] If manual annotations are carried out:
+- [ ] explains why repository mining is appropriate for the proposed research problem
+- [ ] defines unit(s) of analysis or observation
+- [ ] justifies the selection of the datasets that were studied including specific selection criteria (e.g., number of stars, availability of tests, minimum lines of code and relevant code quality aspects for repository selection)
+- [ ] justifies that the above-mentioned selection criteria is appropriate for the study
+- [ ] describes dataset characteristics; it includes data sources, size of the selected repositories, and dataset attributes relevant to the study at hand (e.g., number of commit messages)
+- [ ] describes data preprocessing steps
+- [ ] if manual annotations are carried out:
     - uses multiple annotators; reports the number of annotators
     - describes the annotators (e.g. demographics, experience, training),
     - describes in detail the annotation procedure (e.g. what types of questions were asked to the annotators),
     - assesses inter-rater reliability (see the Inter-Rater Reliability Supplement)
-- [ ] If predictive modeling is used:
-    - describes the heuristics or rules (if applicable),
-    - justifies the modeling approach used.
-    - EITHER: discusses state-of-art baselines (and their strengths, weaknesses and limitations)
-    - OR: explains why no state-of-art baselines exist
-    - OR: provides a compelling argument that direct comparisons are impractical
-- [ ] Describes and justifies measures or metrics used to quantify a characteristic or phenomenon. Provides a reasonable construct validity for the considered measures (e.g., are the used measures proxy metrics? Or, do they actually measure what they supposed to measure?)
+- [ ] if predictive modeling is used, complies with the *Data Science Standard*
+- [ ] describes and justifies measures or metrics used to quantify a characteristic or phenomenon. Provides a reasonable construct validity for the considered measures (e.g., are the used measures proxy metrics? Or, do they actually measure what they supposed to measure?)
 - [ ] describes and justifies the evaluation metrics (such as precision and recall) used
 - [ ] discusses assumptions involved, either concerning problem space or solution space including method design and evaluation, in the study
 
@@ -42,19 +37,19 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ] Provides supplemental materials (e.g., interview guide(s), coding schemes, coding examples, decision rules, list of heuristics)
-- [ ] Triangulates across data sources, informants or researchers
-- [ ] Reflects on their own possible biases
-- [ ] Offers a comprehensive public replication package including dataset(s) and tool(s) to download, select, pre-process, and post-process the selected repositories
-- [ ] Qualitative analysis of scenarios where the automatic tool didn’t work well.
+- [ ] provides supplemental materials (e.g., interview guide(s), coding schemes, coding examples, decision rules, list of heuristics)
+- [ ] triangulates across data sources, informants or researchers
+- [ ] reflects on their own possible biases
+- [ ] offers a comprehensive public replication package including dataset(s) and tool(s) to download, select, pre-process, and post-process the selected repositories
+- [ ] qualitative analysis of scenarios where the automatic tool didn’t work well
 
 </checklist>
 
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- Considers and discusses ethical issues in mining of software repositories<sup>[1](#footnote1)</sup> (e.g., data privacy).
-- Performs testing (e.g., unit testing) to avoid bugs in the proposed tool.
+- considers and discusses ethical issues in mining of software repositories<sup>[1](#footnote1)</sup> (e.g., data privacy)
+- performs testing (e.g., unit testing) to avoid bugs in the proposed tool
 
 </checklist>
 
