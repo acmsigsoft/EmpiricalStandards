@@ -47,27 +47,28 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- considers and discusses ethical issues in mining of software repositories<sup>[1](#footnote1)</sup> (e.g., data privacy)
+- discusses ethical issues in mining of software repositories<sup>[1](#footnote1)</sup> (e.g., data privacy)
 - performs testing (e.g., unit testing) to avoid bugs in the proposed tool
 
 </checklist>
 
 ## General Quality Criteria
-Internal validity, external validity, and construct validity.
+Internal validity, external validity, construct validity, reliability.
 
 ## Examples of Acceptable Deviations
-- Studies that focus on specific ecosystems (such as Apache) may choose specific repositories.
+- studies that focus on specific ecosystems (such as Apache) may choose specific repositories
 
 ## Antipatterns
-- Use open-source repositories without any filtering criteria i.e., Convenience sampling<sup>[2](#footnote2)</sup>.
-- Repository filtering criteria is not discussed in the manuscript.
-- In a study where *all* the commits of a project need to be analyzed, only the GitHub repository is considered. A GitHub repository does not necessarily contain all commits of a project<sup>[3](#footnote3)</sup>.
-- Conclusions must be derived in the context of the selected repositories. Deriving generic conclusions applicable to the selected repositories but necessarily to a larger generic set is an antipattern.
-- Insufficient details about the applied processing steps of the selected repositories.
+- limiting a study to quantitative description; failing to test, build or extend theory
+- unvalidated, uni-dimensional operationalizations of multidimensional constructs (e.g. using github stars as a proxy for popularity) 
+- using open-source repositories without any filtering criteria; i.e., convenience sampling<sup>[2](#footnote2)</sup>.
+- in a study where *all* the commits of a project need to be analyzed, only the GitHub repository is considered; a GitHub repository does not necessarily contain all commits of a project<sup>[3](#footnote3)</sup>.
+- conclusions must be derived in the context of the selected repositories; deriving generic conclusions applicable to the selected repositories but necessarily to a larger generic set is an antipattern
+- insufficient details about the applied processing steps of the selected repositories
 
 ## Invalid Criticisms
-- More data (or more repositories) required without appropriate justification.
-- Study doesn’t use qualitative analysis/data.
+- more data (or more repositories) required without appropriate justification
+- study doesn’t use qualitative analysis/data
 
 
 ## Suggested Readings
