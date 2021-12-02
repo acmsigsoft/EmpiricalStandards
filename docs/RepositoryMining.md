@@ -1,6 +1,8 @@
 # Repository Mining
 <standard name="Repository Mining">   
 
+*A study that quantitatively analyzes a dataset extracted from a platform hosting of structured or semi-structured text (e.g a source code repository)*    
+    
 ## Application    
     
 The standard applies to software engineering studies that: 
