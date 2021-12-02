@@ -18,9 +18,8 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 
 - [ ] explains why repository mining is appropriate for the proposed research problem
 - [ ] defines unit(s) of analysis or observation
-- [ ] justifies the selection of the datasets that were studied including specific selection criteria (e.g., number of stars, availability of tests, minimum lines of code and relevant code quality aspects for repository selection)
-- [ ] justifies that the above-mentioned selection criteria is appropriate for the study
-- [ ] describes dataset characteristics; it includes data sources, size of the selected repositories, and dataset attributes relevant to the study at hand (e.g., number of commit messages)
+- [ ] describes and justifies selection criteria (e.g., number of stars, availability of tests, minimum lines of code and relevant code quality aspects for repository selection)
+- [ ] describes dataset characteristics including data sources, size of the selected repositories, and dataset attributes relevant to the study at hand (e.g., number of commit messages)
 - [ ] describes data preprocessing steps
 - [ ] if manual annotations are carried out:
     - uses multiple annotators; reports the number of annotators
@@ -37,11 +36,11 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ] provides supplemental materials (e.g., interview guide(s), coding schemes, coding examples, decision rules, list of heuristics)
+- [ ] provides supplemental materials (e.g. complete dataset, tool(s) used to download, select, pre-process, and post-process the selected repositories)
+- [ ] uses probability sampling (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ] triangulates across data sources, informants or researchers
-- [ ] reflects on their own possible biases
-- [ ] offers a comprehensive public replication package including dataset(s) and tool(s) to download, select, pre-process, and post-process the selected repositories
-- [ ] qualitative analysis of scenarios where the automatic tool didn’t work well
+- [ ] annotators reflect on their own possible biases
+- [ ] qualitative analysis of scenarios where the data collection or analysis tools were ineffective
 
 </checklist>
 
