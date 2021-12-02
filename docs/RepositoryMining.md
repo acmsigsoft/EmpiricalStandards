@@ -9,7 +9,7 @@ The standard applies to software engineering studies that:
     - use automated techniques to extract data from large-scale data repositories such as source code repositories, mailing list archives, bug tracking systems, Q&A forums and chat communication platforms
     - quantitatively analyze the contents mined from the repositories
 
-If the study focuses on machine learning, consider the **Data Science Standard**. If the subject systems are a few context-rich repositories, consider the **Case Study Standard**. If the analysis is predominately qualitative, refer to methodological guidelines for qualitative content analysis or discourse analysis (standard TBD).  
+If the study focuses on predictive modeling (e.g. machine learning) consider the **Data Science Standard**. If the subject systems are a few context-rich repositories, consider the **Case Study Standard**. If the analysis is predominately qualitative, refer to methodological guidelines for qualitative content analysis or discourse analysis (standard TBD).  
 
 ## Specific Attributes
 
