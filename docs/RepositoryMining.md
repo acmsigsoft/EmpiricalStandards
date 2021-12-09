@@ -1,7 +1,7 @@
 # Repository Mining
 <standard name="Repository Mining">   
 
-*A study that quantitatively analyzes a dataset extracted from a platform hosting of structured or semi-structured text (e.g a source code repository)*    
+*A study that quantitatively analyzes a dataset extracted from a platform hosting of structured or semi-structured text (e.g a source code repository), allowing empirical exploration of a range of questions.*    
     
 ## Application    
     
@@ -18,9 +18,25 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 
 - [ ] explains why repository mining is appropriate for the proposed research problem
 - [ ] defines unit(s) of analysis or observation
-- [ ] describes and justifies selection criteria (e.g., number of stars, availability of tests, minimum lines of code and relevant code quality aspects for repository selection)
-- [ ] describes dataset characteristics including data sources, size of the selected repositories, and dataset attributes relevant to the study at hand (e.g., number of commit messages)
+    - research questions must be clearly stated
+- [ ] describes and justifies the selection criteria of the sources (i.e., where the repositories will be mined from). It must include:
+    - sources types considered, and what information is available in them
+    - a statement of purpose on why this source provides a set of reasons or goals for collecting the data/repositories (e.g., why choose one version control over another). Consider: number of repositories to obtain and their suitability for the study, the data quality, terms and conditions that may limit access to information, and other factors of influence (e.g., enabling future works)
+    - describes how the repositories will be searched for, including use of third-party tools, APIs, languages of choice (e.g., both programming language, and natural language if relevant)
+    - describes how the search may pose a threat to the validity (e.g., need to sample the results, the search algorithm may be obscure, the search string may produce false positive or omit relevant repositories)
+- [ ] describes and justifies how the repositories are selected
+    - describes the nature of the repositories being selected
+    - describes the timing of the search (e.g., some search algorithm may produce different results based on stars, commits, etc.)
+    - describes the inclusion and exclusion criteria (e.g., number of stars, availability of tests, minimum lines of code and relevant code quality aspects for repository selection, project structure, type of repositories)
+    - describes how the inclusion and exclusion criteria was validated (e.g., by manually inspecting the results of the automated search)
+    - describes the procedure for the acquisition (e.g., first selecting repositories and then downloading, or all completed together)
+- [ ] describes dataset characteristics including data sources, size of the selected repositories, and dataset attributes relevant to the study at hand (e.g., number of commit messages), if this is not limited by an Ethical Protocol
 - [ ] describes data preprocessing steps
+- [ ] if the data obtained is too largee to be processed in its entirety
+    - explains the reason of the constraint (e.g., unfeasibility of a manual study, processing limitations, scope limitations)
+    - explains how this was narrowed
+    - if samples were used, details the calculation, if it was randomly selected or not
+    - mitigates possible threats to the validity of the study (e.g., generalizability), steps taken, and includes the threat. May explain future works that continue or validate the sample
 - [ ] if manual annotations are carried out:
     - uses multiple annotators; reports the number of annotators
     - describes the annotators (e.g. demographics, experience, training),
@@ -67,8 +83,11 @@ Internal validity, external validity, construct validity, reliability.
 - insufficient details about the applied processing steps of the selected repositories
 
 ## Invalid Criticisms
-- more data (or more repositories) required without appropriate justification
+- more data (or more sources, or more repositories) required without appropriate justification
 - study doesn’t use qualitative analysis/data
+- use of another source when there is an appropriate justification for the selection
+- revealing the name, statistics, code snippets, or statistics of the repositories used, if the omission of such information aims to protect the privacy of participants of a mixed-method study (e.g., the contributors answered a survey, and their names and details could be inferred if the repositories names are revealed). This also applies when the limitation is caused by an approved Ethical Protocol
+- in manual studies, requiring the disclosure of the time required for completion
 
 
 ## Suggested Readings
@@ -81,7 +100,8 @@ Internal validity, external validity, construct validity, reliability.
 - A. E. Hassan, "The road ahead for Mining Software Repositories," 2008 Frontiers of Software Maintenance, 2008, pp. 48-57.
 - V. Thakur, M. Kessentini and T. Sharma, "QScored: An Open Platform for Code Quality Ranking and Visualization," 2020 IEEE International Conference on Software Maintenance and Evolution (ICSME), 2020, pp. 818-821.
 - Georgios Gousios. 2013. The GHTorent dataset and tool suite. In Proceedings of the 10th Working Conference on Mining Software Repositories (MSR '13). IEEE Press, 233–236.
-- Gold, N.E., Krinke, J. Ethics in the mining of software repositories. Empir Software Eng 27, 17 (2022). https://doi.org/10.1007/s10664-021-10057-7
+- Gold, N.E., Krinke, J. Ethics in the mining of software repositories. Empirical Software Engineering 27, 17 (2022). https://doi.org/10.1007/s10664-021-10057-7
+- Vidoni, M., A Systematic Process for Mining Software Repositories: Results From a Systematic Literature Review. Information and Software Technology 144 (2022). https://doi.org/10.1016/j.infsof.2021.106791
 
 ## Exemplars
 - M. Beller, G. Gousios and A. Zaidman, "Oops, My Tests Broke the Build: An Explorative Analysis of Travis CI with GitHub," 2017 IEEE/ACM 14th International Conference on Mining Software Repositories (MSR), 2017, pp. 356-367.
