@@ -96,6 +96,14 @@
 
 **Sira Vegas**, Technical University of Madrid, Spain [Controlled Experiment]
 
+**Tushar Sharma**, Dalhousie University, Canada [Repository Mining]
+
+**Preetha Chatterjee**, Drexel University, USA [Repository Mining]
+
+**Daniel German**, University of Victoria, Canada [Repository Mining]
+
+**Melina Vidoni**, The Australian National University, Australia [Repository Mining]
+
 ### Technical Contributors
 
 **Arham Arshad**, Dalhousie University, Canada
