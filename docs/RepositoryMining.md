@@ -1,7 +1,7 @@
 # Repository Mining
 <standard name="Repository Mining">   
 
-*A study that quantitatively analyzes a dataset extracted from a platform hosting of structured or semi-structured text (e.g a source code repository), allowing empirical exploration of a range of questions.*    
+*A study that quantitatively analyzes a dataset extracted from a platform hosting of structured or semi-structured text (e.g a source code repository)*    
     
 ## Application    
     
@@ -22,7 +22,7 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 - [ ] describes and justifies the selection criteria of the sources (i.e., where the repositories will be mined from). It must include:
     - sources types considered, and what information is available in them
     - a statement of purpose on why this source provides a set of reasons or goals for collecting the data/repositories (e.g., why choose one version control over another). Consider: number of repositories to obtain and their suitability for the study, the data quality, terms and conditions that may limit access to information, and other factors of influence (e.g., enabling future works)
-    - describes how the repositories will be searched for, including use of third-party tools, APIs, languages of choice (e.g., both programming language, and natural language if relevant)
+    - describes how the repositories are searched, including use of third-party tools, APIs, languages of choice (e.g., both programming language, and natural language if relevant)
     - describes how the search may pose a threat to the validity (e.g., need to sample the results, the search algorithm may be obscure, the search string may produce false positive or omit relevant repositories)
 - [ ] describes and justifies how the repositories are selected
     - describes the nature of the repositories being selected
@@ -30,9 +30,9 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
     - describes the inclusion and exclusion criteria (e.g., number of stars, availability of tests, minimum lines of code and relevant code quality aspects for repository selection, project structure, type of repositories)
     - describes how the inclusion and exclusion criteria was validated (e.g., by manually inspecting the results of the automated search)
     - describes the procedure for the acquisition (e.g., first selecting repositories and then downloading, or all completed together)
-- [ ] describes dataset characteristics including data sources, size of the selected repositories, and dataset attributes relevant to the study at hand (e.g., number of commit messages), if this is not limited by an Ethical Protocol
+- [ ] describes dataset characteristics including data sources, size of the selected repositories, and dataset attributes relevant to the study at hand (e.g., number of commit messages)
 - [ ] describes data preprocessing steps
-- [ ] if the data obtained is too largee to be processed in its entirety
+- [ ] if the data obtained is too large to be processed in its entirety
     - explains the reason of the constraint (e.g., unfeasibility of a manual study, processing limitations, scope limitations)
     - explains how this was narrowed
     - if samples were used, details the calculation, if it was randomly selected or not
@@ -42,7 +42,7 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
     - describes the annotators (e.g. demographics, experience, training),
     - describes in detail the annotation procedure (e.g. what types of questions were asked to the annotators),
     - assesses inter-rater reliability (see the Inter-Rater Reliability Supplement)
-- [ ] if predictive modeling is used, complies with the *Data Science Standard*
+- [ ] if predictive modeling is used, complies with the [Data Science Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/DataScience.md)
 - [ ] describes and justifies measures or metrics used to quantify a characteristic or phenomenon. Provides a reasonable construct validity for the considered measures (e.g., are the used measures proxy metrics? Or, do they actually measure what they supposed to measure?)
 - [ ] describes and justifies the evaluation metrics (such as precision and recall) used
 - [ ] discusses assumptions involved, either concerning problem space or solution space including method design and evaluation, in the study
@@ -73,6 +73,7 @@ Internal validity, external validity, construct validity, reliability.
 
 ## Examples of Acceptable Deviations
 - studies that focus on specific ecosystems (such as Apache) may choose specific repositories
+- obfuscating some details of the dataset due to ethical concerns 
 
 ## Antipatterns
 - limiting a study to quantitative description; failing to test, build or extend theory
@@ -83,10 +84,10 @@ Internal validity, external validity, construct validity, reliability.
 - insufficient details about the applied processing steps of the selected repositories
 
 ## Invalid Criticisms
-- more data (or more sources, or more repositories) required without appropriate justification
-- study doesn’t use qualitative analysis/data
-- use of another source when there is an appropriate justification for the selection
-- revealing the name, statistics, code snippets, or statistics of the repositories used, if the omission of such information aims to protect the privacy of participants of a mixed-method study (e.g., the contributors answered a survey, and their names and details could be inferred if the repositories names are revealed). This also applies when the limitation is caused by an approved Ethical Protocol
+- more data, sources, or repositories required without appropriate justification
+- study doesn’t use qualitative analysis or data
+- a different source should have been used when the selected source(s) are justified
+- complaining about intentional obfuscation of repository details to protect participant's identities
 - in manual studies, requiring the disclosure of the time required for completion
 
 
