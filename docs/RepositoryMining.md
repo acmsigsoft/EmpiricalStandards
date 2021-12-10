@@ -15,37 +15,42 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 
 ### Essential Attributes
 <checklist name="Essential">
+    
+<intro>
 
 - [ ] explains why repository mining is appropriate for the proposed research problem
+
+<method>
+    
 - [ ] defines unit(s) of analysis or observation
-    - research questions must be clearly stated
-- [ ] describes and justifies the selection criteria of the sources (i.e., where the repositories will be mined from). It must include:
-    - sources types considered, and what information is available in them
-    - a statement of purpose on why this source provides a set of reasons or goals for collecting the data/repositories (e.g., why choose one version control over another). Consider: number of repositories to obtain and their suitability for the study, the data quality, terms and conditions that may limit access to information, and other factors of influence (e.g., enabling future works)
-    - describes how the repositories are searched, including use of third-party tools, APIs, languages of choice (e.g., both programming language, and natural language if relevant)
-    - describes how the search may pose a threat to the validity (e.g., need to sample the results, the search algorithm may be obscure, the search string may produce false positive or omit relevant repositories)
-- [ ] describes and justifies how the repositories are selected
-    - describes the nature of the repositories being selected
-    - describes the timing of the search (e.g., some search algorithm may produce different results based on stars, commits, etc.)
-    - describes the inclusion and exclusion criteria (e.g., number of stars, availability of tests, minimum lines of code and relevant code quality aspects for repository selection, project structure, type of repositories)
-    - describes how the inclusion and exclusion criteria was validated (e.g., by manually inspecting the results of the automated search)
-    - describes the procedure for the acquisition (e.g., first selecting repositories and then downloading, or all completed together)
-- [ ] describes dataset characteristics including data sources, size of the selected repositories, and dataset attributes relevant to the study at hand (e.g., number of commit messages)
-- [ ] describes data preprocessing steps
+- [ ] describes and justifies the data sources (e.g. GitHub, StackOverflow)
+    - (if the selected data source(s) are obscure) explains in detail why they are appopriate for the goals of the study (e.g. consider number of repositories data quality, terms and conditions that may limit access to information)
+- [ ] describes and justifies how the repositories are selected from the data sources (e.g. selection criteria, use of third-party tools, APIs, programming languages of choice)
+- [ ] describes how the inclusion and exclusion criteria was validated (e.g., by manually inspecting the results of the automated search)
+- [ ] describes the selected repositories     
+- [ ] describes the procedure for the acquisition (e.g., first selecting repositories and then downloading, or all completed together)
 - [ ] if the data obtained is too large to be processed in its entirety
-    - explains the reason of the constraint (e.g., unfeasibility of a manual study, processing limitations, scope limitations)
-    - explains how this was narrowed
-    - if samples were used, details the calculation, if it was randomly selected or not
-    - mitigates possible threats to the validity of the study (e.g., generalizability), steps taken, and includes the threat. May explain future works that continue or validate the sample
+    - explains why (e.g., unfeasibility of a manual study, processing limitations, scope limitations)
+    - explains the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ] describes dataset characteristics including size of the selected repositories, and dataset attributes relevant to the study at hand (e.g., number of commit messages) 
+- [ ] describes data preprocessing steps
 - [ ] if manual annotations are carried out:
     - uses multiple annotators; reports the number of annotators
     - describes the annotators (e.g. demographics, experience, training),
     - describes in detail the annotation procedure (e.g. what types of questions were asked to the annotators),
     - assesses inter-rater reliability (see the Inter-Rater Reliability Supplement)
+- [ ] describes and justifies measures or metrics used
+- [ ] EITHER: uses previously validated measures, OR: assesses construct validity
+
 - [ ] if predictive modeling is used, complies with the [Data Science Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/DataScience.md)
-- [ ] describes and justifies measures or metrics used to quantify a characteristic or phenomenon. Provides a reasonable construct validity for the considered measures (e.g., are the used measures proxy metrics? Or, do they actually measure what they supposed to measure?)
-- [ ] describes and justifies the evaluation metrics (such as precision and recall) used
-- [ ] discusses assumptions involved, either concerning problem space or solution space including method design and evaluation, in the study
+
+<results>
+    
+<discussion>
+    
+- [ ] discusses threats to external validity (e.g. caused by selection of data source(s) and repositories, selection criteria, search strings)
+
+<other>
 
 </checklist>
 
@@ -54,17 +59,23 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 
 - [ ] provides supplemental materials (e.g. complete dataset, tool(s) used to download, select, pre-process, and post-process the selected repositories)
 - [ ] uses probability sampling (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ] suggests future work that validates or uses the same sample
+- [ ] quantitatively assess construct validity (e.g. using factor analysis)
 - [ ] triangulates across data sources, informants or researchers
 - [ ] annotators reflect on their own possible biases
 - [ ] qualitative analysis of scenarios where the data collection or analysis tools were ineffective
-
+- [ ] performs testing (e.g., unit testing) to avoid bugs in the proposed tool
+- [ ] builds, tests or extends theory
+- [ ] tests formal hypotheses
+- [ ] discusses ethical issues in mining of software repositories<sup>[1](#footnote1)</sup> (e.g., data privacy)    
+    
 </checklist>
 
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- discusses ethical issues in mining of software repositories<sup>[1](#footnote1)</sup> (e.g., data privacy)
-- performs testing (e.g., unit testing) to avoid bugs in the proposed tool
+- [ ] establishes causality, e.g. using longitidunal analyses
+
 
 </checklist>
 
