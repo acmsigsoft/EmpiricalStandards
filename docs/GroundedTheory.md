@@ -123,9 +123,7 @@ Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterio
 
 Kathy Charmaz. 2014. *Constructing grounded theory*. Sage.
 
-Juliet Corbin and Anselm Strauss. 2014. *Basics of qualitative research:
-Techniques and procedures for developing grounded theory*. Sage
-publications.
+Juliet Corbin and Anselm Strauss. 2014. *Basics of qualitative research: Techniques and procedures for developing grounded theory*. Sage publications.
 
 Dennis A. Gioia, Kevin G. Corley, and Aimee L. Hamilton. "Seeking qualitative rigor in inductive research: Notes on the Gioia methodology." _Organizational Research Methods_ 16, no. 1 (2013): 15-31.
 
@@ -136,6 +134,9 @@ in software engineering research: a critical review and guidelines. In
 *Proceedings of the 38th International Conference on Software
 Engineering (ICSE '16)*. Association for Computing Machinery, New York,
 NY, USA, 120–131. DOI: 10.1145/2884781.2884833
+    
+Rashina Hoda (in press). Socio-Technical Grounded Theory for Software Engineering, *IEEE Transactions on Software Engineering*.
+DOI: 10.1109/TSE.2021.3106280
 
 
 ## Exemplars
