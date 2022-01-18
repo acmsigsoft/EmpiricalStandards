@@ -108,6 +108,8 @@ Jorge Melegati and Xiaofeng Wang. 2020. Case Survey Studies in Software Engineer
 
 Moher D, Liberati A, Tetzlaff J, Altman DG, The PRISMA Group (2009). *P*referred *R*eporting *I*tems for *S*ystematic Reviews and *M*eta-*A*nalyses: The PRISMA Statement. PLoS Med 6, 7: e1000097. doi:10.1371/journal.pmed1000097  
   
+Petersen K. (2020) Guidelines for Case Survey Research in Software Engineering. In: Felderer M., Travassos G. (eds) _Contemporary Empirical Methods in Software Engineering_. Springer, Cham. https://doi.org/10.1007/978-3-030-32489-6_3
+  
 Robert Yin and Karen Heald. 1975. Using the Case Survey Method to Analyze Policy Studies. *Administrative Science Quarterly*. 20, 3 (1975), 371. DOI:10.2307/2391997.
 
 
