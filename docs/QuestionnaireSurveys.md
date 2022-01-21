@@ -113,34 +113,34 @@ as **internal validity**, **construct validity**, **external validity**,
 
 ## Suggested Readings 
 
-Don Dillman, Jolene Smyth, and Leah Christian. 2014. Internet, phone,
-mail, and mixed-mode surveys: the tailored design method. John Wiley &
+Don Dillman, Jolene Smyth, and Leah Christian. 2014. *Internet, phone,
+mail, and mixed-mode surveys: the tailored design method.* John Wiley &
 Sons.
 
 Mark Kasunic. 2005. Designing an effective survey. Tech report
 \#CMU/SEI-2005-GB-004, Carnegie-Mellon University, Pittsburgh, USA.
 
-Jefferson Seide Molléri, Kai Petersen, and Emilia Mendes. *An
+Jefferson Seide Molléri, Kai Petersen, and Emilia Mendes. 2020. An
 empirically evaluated checklist for surveys in software engineering.*
-Information and Software Technology*.* 119 (2020).
+Information and Software Technology*. 119.
 
 Stefan Wagner, Daniel Mendez, Michael Felderer, Daniel Graziotin, Marcos
-Kalinowski. Challenges in Survey Research. In: Contemporary Empirical
-Methods in Software Engineering, *Springer,* 2020.
+Kalinowski. 2020. Challenges in Survey Research. In: _Contemporary Empirical
+Methods in Software Engineering_, Springer.
 
 Paul Ralph and Ewan Tempero. 2018. Construct Validity in Software
 Engineering Research and Software Metrics. In *Proceedings of the 22nd
 International Conference on Evaluation and Assessment in Software
-Engineering* 2018 (EASE'18), 13–23. DOI:10.1145/3210459.3210461
+Engineering (EASE'18)*, 13–23. DOI:10.1145/3210459.3210461
 
 Marco Torchiano, Daniel Méndez, Guilherme Horta Travassos, and Rafael
 Maiani de Mello. 2017. Lessons learnt in conducting survey research. In
 *Proceedings of the 5th International Workshop on Conducting Empirical
 Studies in Industry (CESI '17)*, 33–39. DOI:10.1109/CESI.2017.5
 
-Torchiano Marco and Filippo Ricca. Six reasons for rejecting an
+Torchiano Marco and Filippo Ricca. 2013. Six reasons for rejecting an
 industrial survey paper. In *2013 1st International Workshop on
-Conducting Empirical Studies in Industry (CESI).* (2013), 21–26.
+Conducting Empirical Studies in Industry (CESI)*, 21–26.
 
 ## Exemplars 
 
