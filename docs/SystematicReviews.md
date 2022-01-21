@@ -119,6 +119,14 @@ Kai Petersen, Robert Feldt, Shahid Mujtaba, and Michael Mattsson. 2008.
 Systematic mapping studies in software engineering. In *12th
 International Conference on Evaluation and Assessment in Software
 Engineering (EASE).* (Jun. 2008), 1–10.
+	
+## Exemplars
+
+Jo Hannay, Tore Dybå, Erik Arisholm, and Dag IK Sjøberg. 2009. The effectiveness of pair programming: A meta-analysis. _Information and software technology_ 51,7: 1110-1122.
+	
+Yahya Rafique, and Vojislav B. Mišić. 2012. The effects of test-driven development on external quality and productivity: A meta-analysis. _IEEE Transactions on Software Engineering_ 39,6: 835-856.
+	
+Martin Shepperd, David Bowes, and Tracy Hall. (2014) Researcher bias: The use of machine learning in software defect prediction. _IEEE Transactions on Software Engineering_ 40,6: 603-616.
 
 ---
 <footnote><sup>[1](#myfootnote1)</sup> Searches can be manual or automated or a combination of both.</footnote><br>
