@@ -123,16 +123,18 @@ Mark Kasunic. 2005. Designing an effective survey. Tech report
 Jefferson Seide Molléri, Kai Petersen, and Emilia Mendes. 2020. An
 empirically evaluated checklist for surveys in software engineering.*
 Information and Software Technology*. 119.
-
-Stefan Wagner, Daniel Mendez, Michael Felderer, Daniel Graziotin, Marcos
-Kalinowski. 2020. Challenges in Survey Research. In: _Contemporary Empirical
-Methods in Software Engineering_, Springer.
+	
+Gary C. Moore, and Izak Benbasat. Development of an instrument to measure the perceptions of adopting an information technology innovation. *Information systems research* 2.3 (1991): 192-222.	
 
 Paul Ralph and Ewan Tempero. 2018. Construct Validity in Software
 Engineering Research and Software Metrics. In *Proceedings of the 22nd
 International Conference on Evaluation and Assessment in Software
 Engineering (EASE'18)*, 13–23. DOI:10.1145/3210459.3210461
 
+Stefan Wagner, Daniel Mendez, Michael Felderer, Daniel Graziotin, Marcos
+Kalinowski. 2020. Challenges in Survey Research. In: _Contemporary Empirical
+Methods in Software Engineering_, Springer.
+		
 Marco Torchiano, Daniel Méndez, Guilherme Horta Travassos, and Rafael
 Maiani de Mello. 2017. Lessons learnt in conducting survey research. In
 *Proceedings of the 5th International Workshop on Conducting Empirical
