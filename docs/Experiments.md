@@ -134,11 +134,7 @@ a controlled experiment. In *Proceedings of the Second ACM-IEEE
 International Symposium on Empirical Software Engineering and
 Measurement (ESEM '08)*, 139–148. DOI:10.1145/1414004.1414029
 
-Eduard P. Enoiu, Adnan Cauevic, Daniel Sundmark, and Paul Pettersson.
-2016. A controlled experiment in testing of safety-critical embedded
-software. In *2016 IEEE International Conference on Software Testing,
-Verification and Validation (ICST),* 11-15 April, Chicago, IL, USA.
-IEEE. 1-11.
+Eduard P. Enoiu, Adnan Cauevic, Daniel Sundmark, and Paul Pettersson. 2016. A controlled experiment in testing of safety-critical embedded software. In *2016 IEEE International Conference on Software Testing, Verification and Validation (ICST),* 11-15 April, Chicago, IL, USA. IEEE. 1-11.
 
 Yang Wang and Stefan Wagner. 2018. Combining STPA and BDD for safety
 analysis and verification in agile development. In *Proceedings of the
