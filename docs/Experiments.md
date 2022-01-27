@@ -118,6 +118,21 @@ objectivity, reproducibility
 
 ## Exemplars
 
+Eduard P. Enoiu, Adnan Cauevic, Daniel Sundmark, and Paul Pettersson. 2016. A controlled experiment in testing of safety-critical embedded software. In *2016 IEEE International Conference on Software Testing, Verification and Validation (ICST),* 11-15 April, Chicago, IL, USA. IEEE. 1-11.
+    
+Evrim Itir Karac, Burak Turhan, and Natalia Juristo. 2019. A Controlled
+Experiment with Novice Developers on the Impact of Task Description
+Granularity on Software Quality in Test-Driven Development. *IEEE
+Transactions on Software Engineering.* DOI: 10.1109/TSE.2019.2920377
+    
+Rahul Mohanani, Burak Turhan, and Paul Ralph, 2019. Requirements framing affects design creativity. _IEEE Transactions on Software Engineering_. DOI:10.1109/TSE.2019.2909033
+    
+Kai Petersen, Kari Rönkkö, and Claes Wohlin. 2008. The impact of time
+controlled reading on software inspection effectiveness and efficiency:
+a controlled experiment. In *Proceedings of the Second ACM-IEEE
+International Symposium on Empirical Software Engineering and
+Measurement (ESEM '08)*, 139–148. DOI:10.1145/1414004.1414029
+
 Dag IK Sjøberg, Aiko Yamashita, Bente CD Anda, Audris Mockus, and Tore
 Dybå. 2012. Quantifying the Effect of Code Smells on Maintenance Effort.
 *IEEE Transactions on Software Engineering*. 39, 8 (Dec. 2012),
@@ -128,45 +143,34 @@ Erdogmus, Adrian Santos et al. 2017. An industry experiment on the
 effects of test-driven development on external quality and productivity.
 *Empirical Software Engineering*. *22*, 6 (Dec. 2016), 2763–2805.
 
-Kai Petersen, Kari Rönkkö, and Claes Wohlin. 2008. The impact of time
-controlled reading on software inspection effectiveness and efficiency:
-a controlled experiment. In *Proceedings of the Second ACM-IEEE
-International Symposium on Empirical Software Engineering and
-Measurement (ESEM '08)*, 139–148. DOI:10.1145/1414004.1414029
-
-Eduard P. Enoiu, Adnan Cauevic, Daniel Sundmark, and Paul Pettersson. 2016. A controlled experiment in testing of safety-critical embedded software. In *2016 IEEE International Conference on Software Testing, Verification and Validation (ICST),* 11-15 April, Chicago, IL, USA. IEEE. 1-11.
 
 Yang Wang and Stefan Wagner. 2018. Combining STPA and BDD for safety
 analysis and verification in agile development. In *Proceedings of the
 40th International Conference on Software Engineering: Companion
 Proceeedings (ICSE '18)*, 286–287. DOI:10.1145/3183440.3194973
 
-Evrim Itir Karac, Burak Turhan, and Natalia Juristo. 2019. A Controlled
-Experiment with Novice Developers on the Impact of Task Description
-Granularity on Software Quality in Test-Driven Development. *IEEE
-Transactions on Software Engineering.* DOI: 10.1109/TSE.2019.2920377
 
 ## Suggested Reading
 
-Nathaniel L. Gage and Julian C. Stanley. 1963. Experimental and Quasi-experimental Designs For Research. Chicago: R. McNally.
+Donald Campbell and Julian C. Stanley. 1963. Experimental and Quasi-experimental Designs For Research. Chicago: R. McNally.
 
 Andreas Jedlitschka, Marcus Ciolkowski, and Dietmar Pfahl. 2008. Reporting Experiments in Software Engineering. _Guide to Advanced Empirical Software Engineering_. 201-228.
 
 Natalia Juristo and Ana M. Moreno. 2001. Basics of Software Engineering Experimentation. Springer Science & Business Media.
 
-Claes Wohlin, Per Runeson, Martin Höst, Magnus C. Ohlsson, Björn Regnell, and Anders Wesslén. 2012. Experimentation in Software Engineering. Springer Science & Business Media.
-
-Martín Solari, Sira Vegas, and Natalia Juristo. 2018. Content and structure of laboratory packages for software engineering experiments. _Information and Software Technology_. 97, 64-79.
-
-Sira Vegas, Cecilia Apa, and Natalia Juristo. 2015. Crossover designs in software engineering experiments: Benefits and perils. _IEEE Transactions on Software Engineering_. IEEE 42, 2 (2015), 120-135.
-
-Vigdis By Kampenes, Tore Dybå, Jo E. Hannay, and Dag IK Sjøberg. 2009. A systematic review of quasi-experiments in software engineering. _Information and Software Technology_. 51, 1 (2009), 71-82.
-
 Davide Falessi, Natalia Juristo, Claes Wohlin, Burak Turhan, Jürgen Münch, Andreas Jedlitschka, and Markku Oivo, Empirical Software Engineering Experts on the Use of Students and Professionals in Experiments, _Empirical Software Engineering_. 23, 1 (2018), 452-489.
 
 Robert Feldt, Thomas Zimmermann, Gunnar R. Bergersen, Davide Falessi, Andreas Jedlitschka, Natalia Juristo, Jürgen Münch et al. 2018. Four commentaries on the use of students and professionals in empirical software engineering experiments. _Empirical Software Engineering_. 23, 6 (Nov. 2018), 3801-3820.
 
+Vigdis By Kampenes, Tore Dybå, Jo E. Hannay, and Dag IK Sjøberg. 2009. A systematic review of quasi-experiments in software engineering. _Information and Software Technology_. 51, 1 (2009), 71-82.
+
 Kitchenham, Barbara, Lech Madeyski, David Budgen, Jacky Keung, Pearl Brereton, Stuart Charters, Shirley Gibbs, and Amnart Pohthong. 2017. Robust statistical methods for empirical software engineering. _Empirical Software Engineering_. 22, 2 (2018), 579-630.
+
+Martín Solari, Sira Vegas, and Natalia Juristo. 2018. Content and structure of laboratory packages for software engineering experiments. _Information and Software Technology_. 97, 64-79.
+
+Claes Wohlin, Per Runeson, Martin Höst, Magnus C. Ohlsson, Björn Regnell, and Anders Wesslén. 2012. Experimentation in Software Engineering. Springer Science & Business Media.
+
+Sira Vegas, Cecilia Apa, and Natalia Juristo. 2015. Crossover designs in software engineering experiments: Benefits and perils. _IEEE Transactions on Software Engineering_. IEEE 42, 2 (2015), 120-135.
 
 Andreas Zeller, Thomas Zimmermann, and Christian Bird. 2011. Failure is a four-letter word: a parody in empirical research. In Proceedings of the _7th International Conference on Predictive Models in Software Engineering (Promise ’11)_. Association for Computing Machinery, New York, NY, USA, Article 5, 1–7. DOI: 10.1145/2020390.2020395
 
