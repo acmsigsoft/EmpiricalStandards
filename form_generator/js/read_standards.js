@@ -1271,7 +1271,7 @@ function saveFile(){
 						var regex4 = /<\/b>/g;
 						var regex5 = /<b>/g;
 						var regex6 = /[\r\n]+/g;
-						var regex7 =/ \(.+\)/g;
+						var regex7 =/ \(.+?\)/g;
 						var regex8 = /<i>/g;
 						var regex9 = /<\/i>/g;
 
