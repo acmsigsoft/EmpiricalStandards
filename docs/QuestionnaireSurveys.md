@@ -62,6 +62,7 @@ typically given to participants in controlled experiments (see the
 - [ ]	validates whether the instrument's items, layout, duration, and technology are appropriate (e.g. using pilots, test-retest, or expert and non-expert reviews)
 - [ ]	reports how the instrument has evolved through the validation process (if at all)
 - [ ]	analyzes response bias (quantitatively)
+- [ ]   includes attention-check items in the questionnaire, and excludes participants who fail one or more of these checks
 - [ ]	applies techniques for improving response rates (e.g. incentives, reminders, targeted advertising)
 - [ ]	discusses possible effects of incentives (e.g. on voluntariness, response rates, response bias) if used
 - [ ]	describes the stratification of the analysis (if stratified sampling is used)
