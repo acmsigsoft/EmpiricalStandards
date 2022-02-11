@@ -131,7 +131,7 @@ different purposes, including:
     explanatory case studies that seek to establish causality.
 -   Lack of reproducibility or a "replication package"; Data are not
     disclosed (qualitative data are often confidential).
--   Insufficient number of length of interviews. There is no magic
+-   Insufficient number or length of interviews. There is no magic
     number; what matters is that there is enough data that the findings
     are credible, and the description is deep and rich.
 
