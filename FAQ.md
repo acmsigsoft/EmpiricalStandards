@@ -2,7 +2,7 @@
 
 ### Where can I find the standards?
 
-You can find the standards, our report and our presentation slides here: https://github.com/acmsigsoft/EmpiricalStandards
+You can find the standards, our report and our presentation slides here: [https://github.com/acmsigsoft/EmpiricalStandards](https://github.com/acmsigsoft/EmpiricalStandards)
 
 ### Will the standards lead to lower quality papers as researchers aim to do the bare mininimum to get publications?
 
