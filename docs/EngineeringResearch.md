@@ -144,7 +144,7 @@ Design Science in Information Systems Research. *MIS Quarterly*, 28, 1
 (Mar. 2004), 75–105. DOI:10.2307/25148625.
 
 Roel Wieringa. 2014. *Design science methodology for information systems
-and software engineering.* Springer*.*
+and software engineering.* Springer, Berlin.
 
 ## Exemplars
 
