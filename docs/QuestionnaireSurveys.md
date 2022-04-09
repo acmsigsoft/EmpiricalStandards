@@ -117,6 +117,8 @@ as **internal validity**, **construct validity**, **external validity**,
 Don Dillman, Jolene Smyth, and Leah Christian. 2014. *Internet, phone,
 mail, and mixed-mode surveys: the tailored design method.* John Wiley &
 Sons.
+	
+Daniel Graziotin, Per Lenberg, Robert Feldt, and Stefan Wagner. 2021. Psychometrics in behavioral software engineering: A methodological introduction with guidelines. _ACM Transactions on Software Engineering and Methodology (TOSEM)_, 31(1), 1-36. DOI:10.1145/3469888
 
 Mark Kasunic. 2005. Designing an effective survey. Tech report
 \#CMU/SEI-2005-GB-004, Carnegie-Mellon University, Pittsburgh, USA.
