@@ -174,6 +174,6 @@ DOI:10.1145/3306607
 ---
 <footnote><sup>[1](#myfootnote1)</sup> There is currently no standard for predominately open-ended questionnaire surveys. One exemplar readers could draw from is: Daniel Graziotin, Fabian Fagerholm, Xiaofeng Wang, and Pekka Abrahamsson. 2018. "What happens when software developers are (un)happy." Journal of Systems and Software 140, 32-47.</footnote><br>
 <footnote><sup>[2](#myfootnote2)</sup> questions are mapped to research objectives and their wording and format is appropriate for their audience</footnote><br>
-<footnote><sup>[3](#myfootnote3)</sup> For advice on analyzing construct validity, see Ralph, Paul, and Ewan Tempero. "Construct validity in software engineering research and software metrics." In Proceedings of the 22nd International Conference on Evaluation and Assessment in Software Engineering 2018, pp. 13-23</footnote <br>
+<footnote><sup>[3](#myfootnote3)</sup> For advice on analyzing construct validity, see recommended readings Graziotin et al. (2021) and Ralph and Tempero (2018)</footnote <br>
 <footnote><sup>[4](#myfootnote4)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>
