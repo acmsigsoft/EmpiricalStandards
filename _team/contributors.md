@@ -52,7 +52,7 @@
 
 **Barbara Kitchenham**, Keele University, UK [Systematic Reviews]
 
-**Valentina Lenarduzzi**, LUT University, Finland [Longitudinal Studies]
+**Valentina Lenarduzzi**, University of Oulu, Finland [Longitudinal Studies]
 
 **Jorge Martínez**, Universidad Politécnica de Madrid, Spain [IRR/IRA]
 
@@ -92,7 +92,7 @@
 
 **Marco Torchiano**, Polytechnic University of Turin, Italy [Information Visualization, Questionnaire]
 
-**Christoph Treude**, University of Adelaide, Australia [Grounded Theory]
+**Christoph Treude**, University of Melbourne, Australia [Grounded Theory]
 
 **Burak Turhan**, Monash University, Australia [Controlled Experiment]
 
