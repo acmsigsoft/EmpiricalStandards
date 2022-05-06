@@ -146,6 +146,3 @@ function openSupplement(evt, supplementName) {
   window.history.replaceState('', '', '?supplement='+supplementName);
 }
 </script>
-   
-</body>
-</html> 

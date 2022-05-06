@@ -222,6 +222,3 @@ function openStandard(evt, standardName) {
   window.history.replaceState('', '', '?standard='+standardName);
 }
 </script>
-   
-</body>
-</html> 
