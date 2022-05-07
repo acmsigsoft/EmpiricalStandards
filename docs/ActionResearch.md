@@ -1,9 +1,9 @@
 # Action Research 
 <standard name="Action Research">
 
-*Empirical research that investigates how an intervention, like the
-introduction of a method or tool, affects a real-life context*
+<!-- AUTO-GENERATED-CONTENT:START (CODE:src=./docs/standard_desc/ActionResearch.js)-->
 
+<!-- AUTO-GENERATED-CONTENT:END *-->
 ## Application 
 
 This standard applies to empirical research that meets the following
