@@ -1387,6 +1387,17 @@ function viewStandardDescription(){
 	var dom = document.createElement("div");
 	dom.innerHTML = empirical_standard;
 	var standardTag = dom.getElementsByTagName("standard")[0];
-	return standardTag;
+
+	var descTags = standardTag.getElementsByTagName("desc");
+	console.log(descTags)
+	for (let descTag of descTags) {
+
+		// dealing with footnotes
+		//descHTML = descTag.innerHTML.replaceAll("<sup>", "<sup>" + standardName + "--") // To make footnotes belong to their standards
+		descHTML = descTag.innerHTML.replaceAll(">", "").replaceAll(/\n\s*\n/g, '\n').replaceAll("\n", "<br/>");
+
+		console.log(descHTML)
+	}
+	return descHTML;
 }
 

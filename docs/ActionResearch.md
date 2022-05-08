@@ -1,10 +1,12 @@
 # Action Research 
 <standard name="Action Research">
 
+<desc>
+
 *Empirical research that investigates how an intervention, like the
 introduction of a method or tool, affects a real-life context*
 
-
+</desc>
 ## Application 
 
 This standard applies to empirical research that meets the following
