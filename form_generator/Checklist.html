@@ -75,12 +75,6 @@ layout: default
         });
     </script>
 
-    <script>
-        standardTag =  viewStandardDescription()
-        var spanToChange = document.getElementById("tooltipar");
-        console.log(standardTag)
-        spanToChange.innerHTML = standardTag;
-    </script>
 </head>
 <body onload="showInstructions();">
 <div id="container">
@@ -110,5 +104,13 @@ layout: default
     </form>
 </div>
 </body>
+
+
+<script>
+    standardTag =  viewStandardDescription()
+    var spanToChange = document.getElementById("tooltipar");
+    console.log(standardTag)
+    spanToChange.innerHTML = standardTag;
+</script>
 </html>
 
