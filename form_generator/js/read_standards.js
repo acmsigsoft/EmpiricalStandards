@@ -1389,7 +1389,7 @@ function viewStandardDescription(){
 	var standardTag = dom.getElementsByTagName("standard")[0];
 
 	var spanToChange = document.getElementById("tooltipar");
-	alert(standardTag)
+	console.log(standardTag)
 	spanToChange.innerHTML = standardTag;
 	//return standardTag;
 }
