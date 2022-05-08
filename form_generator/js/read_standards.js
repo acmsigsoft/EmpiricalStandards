@@ -37,6 +37,8 @@ function readSpecificEmpiricalStandard(standard_name){
 	return empirical_standard;
 }
 
+
+
 //This function creates tooltips for text
 //Anything between / and / is known as regular expressions
 function createTooltip(checklistItemText, line_text, footnotes){
@@ -1215,6 +1217,7 @@ function generateStandardChecklist(){
 	generate_decision_message_block();
 }
 
+
 //Download the checklist with a specific format
 function saveFile(){
 	var checklists = document.getElementById('checklists');
@@ -1376,3 +1379,14 @@ function saveFile(){
         newLink.click();
 	return false;
 }
+
+function viewStandardDescription(){
+
+	// Obtain all the information for a Standard
+	empirical_standard = readSpecificEmpiricalStandard("ActionResearch");
+	var dom = document.createElement("div");
+	dom.innerHTML = empirical_standard;
+	var standardTag = dom.getElementsByTagName("standard")[0];
+	return standardTag;
+}
+

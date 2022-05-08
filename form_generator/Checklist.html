@@ -6,9 +6,16 @@ layout: default
 <head>
     <title>Empirical Standards</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../form_generator/js/read_standards.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../form_generator/css/appearance.css">
     <link rel="stylesheet" href="../form_generator/css/tooltip.css">
+    <!-- Lightweight client-side loader that feature-detects and load polyfills only when necessary -->
+    <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+
+    <!-- Load the element definition -->
+    <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
+
     <script language="javascript" type="text/javascript">
         function showInstructions(){
             role = location.search.split("=")[1];
@@ -74,7 +81,7 @@ layout: default
     
     <form id="checklistForm" action="../form_generator/result.html" method="get">
         <h2>Select all that apply:</h2>
-        <input type="checkbox" class="standard" name="standard" id="Action_Research"          value="Action Research"><div class="tooltip"> <a href="../docs?standard=ActionResearch" target="_blank">Action research</a><span class="tooltiptext">Empirical research that investigates how an intervention, like the introduction of a method or tool, affects a real-life context</span></div></input><br/><br/>
+        <input type="checkbox" class="standard" name="standard" id="Action_Research"          value="Action Research"><div class="tooltip"> <a href="../docs?standard=ActionResearch" target="_blank">Action research</a><span class="tooltiptext">viewStandardDescription()</span></div></input><br/><br/>
         <input type="checkbox" class="standard" name="standard" id="Benchmarking (of Software Systems)"              value="Benchmarking"><div class="tooltip"><a href="../docs?standard=Benchmarking" target="_blank"> Benchmarking</a><span class="tooltiptext">"A study in which a software system is assessed using a standard tool (i.e. a benchmark) for competitively evaluating and comparing methods, techniques or systems "according to specific characteristics such as performance, dependability, or security” (Kistowski et al. 2015).</span></div></input><br/><br/>
         <input type="checkbox" class="standard" name="standard" id="Case_Study"              value="Case Study"><div class="tooltip"><a href="../docs?standard=CaseStudy" target="_blank"> Case study</a><span class="tooltiptext">"An empirical inquiry that investigates a contemporary phenomenon (the "case") in depth and within its real-world context, especially when the boundaries between phenomenon and context [are unclear]" (Yin 2017)</span></div></input><br/><br/>
         <input type="checkbox" class="standard" name="standard" id="Case_Survey"             value="Case Survey"><div class="tooltip"><a href="../docs?standard=CaseSurvey" target="_blank"> Case survey</a><span class="tooltiptext">A study that aims to generalize results about a complex phenomenon by systematically converting qualitative descriptions available in published case studies into quantitative data and analyzing the converted data</span></div></input><br/><br/>
