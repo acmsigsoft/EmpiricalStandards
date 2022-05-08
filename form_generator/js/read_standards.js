@@ -1394,7 +1394,7 @@ function viewStandardDescription(){
 
 		// dealing with footnotes
 		//descHTML = descTag.innerHTML.replaceAll("<sup>", "<sup>" + standardName + "--") // To make footnotes belong to their standards
-		descHTML = descTag.innerHTML.replaceAll(">", "").replaceAll(/\n\s*\n/g, '\n').replaceAll("\n", "<br/>");
+		descHTML = descTag.innerHTML.replaceAll(">", "").replaceAll(/\n\s*\n/g, '\n').replaceAll("\n", " ").replaceAll("*", "");
 
 		console.log(descHTML)
 	}
