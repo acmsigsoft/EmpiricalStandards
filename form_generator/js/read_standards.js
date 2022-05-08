@@ -1387,8 +1387,6 @@ function viewStandardDescription(){
 	var dom = document.createElement("div");
 	dom.innerHTML = empirical_standard;
 	var standardTag = dom.getElementsByTagName("standard")[0];
-
-
 	return standardTag;
 }
 
