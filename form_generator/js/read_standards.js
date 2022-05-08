@@ -1388,7 +1388,7 @@ function viewStandardDescription(){
 	dom.innerHTML = empirical_standard;
 	var standardTag = dom.getElementsByTagName("standard")[0];
 
-	var spanToChange = document.getElementById("#tooltipar");
+	var spanToChange = document.getElementById("tooltipar");
 	spanToChange.innerHTML = standardTag;
 	//return standardTag;
 }
