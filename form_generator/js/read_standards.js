@@ -1381,7 +1381,6 @@ function saveFile(){
 }
 
 function viewStandardDescription(standard_name){
-	console.log(standard_name)
 	// Obtain all the information for a Standard
 	empirical_standard = readSpecificEmpiricalStandard(standard_name);
 	var dom = document.createElement("div");
