@@ -1,6 +1,14 @@
 # Systematic Reviews 
 <standard name="Systematic Reviews">
-<em>A study that appraises, analyses, and synthesizes primary or secondary literature to provide a complete, exhaustive summary of current evidence regarding one or more specific topics or research questions</em>
+
+
+<desc>
+
+A study that appraises, analyses, and synthesizes primary or secondary literature to provide a complete, exhaustive summary of current evidence regarding one or more specific topics or research questions
+
+</desc>
+
+
 
 ## Application 
 

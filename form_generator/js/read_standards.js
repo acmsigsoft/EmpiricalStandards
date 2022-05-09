@@ -37,6 +37,8 @@ function readSpecificEmpiricalStandard(standard_name){
 	return empirical_standard;
 }
 
+
+
 //This function creates tooltips for text
 //Anything between / and / is known as regular expressions
 function createTooltip(checklistItemText, line_text, footnotes){
@@ -1215,6 +1217,7 @@ function generateStandardChecklist(){
 	generate_decision_message_block();
 }
 
+
 //Download the checklist with a specific format
 function saveFile(){
 	var checklists = document.getElementById('checklists');
@@ -1376,3 +1379,17 @@ function saveFile(){
         newLink.click();
 	return false;
 }
+
+function viewStandardDescription(standard_name){
+	// Obtain all the information for a Standard
+	empirical_standard = readSpecificEmpiricalStandard(standard_name);
+	var dom = document.createElement("div");
+	dom.innerHTML = empirical_standard;
+	var standardTag = dom.getElementsByTagName("standard")[0];
+	var descTags = standardTag.getElementsByTagName("desc");
+	for (let descTag of descTags) {
+		descHTML = descTag.innerHTML.replaceAll(">", "").replaceAll(/\n\s*\n/g, '\n').replaceAll("\n", " ").replaceAll("*", "");
+	}
+	return descHTML;
+}
+
