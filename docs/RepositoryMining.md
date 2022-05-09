@@ -1,11 +1,11 @@
 # Repository Mining
 <standard name="Repository Mining">   
 
-<desc>
 
-*A study that quantitatively analyzes a dataset extracted from a platform hosting of structured or semi-structured text (e.g a source code repository)*    
+
+*<desc>A study that quantitatively analyzes a dataset extracted from a platform hosting of structured or semi-structured text (e.g a source code repository)</desc>*    
  
-</desc>
+
 
 ## Application    
     

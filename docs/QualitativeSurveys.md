@@ -1,11 +1,11 @@
 # Qualitative Surveys (Interview Studies) 
 <standard name="Qualitative Surveys (Interview Studies)">
 
-<desc>
 
-_Research comprising semi-structured or open-ended interviews_
 
-</desc>
+_<desc>Research comprising semi-structured or open-ended interviews</desc>_
+
+
 ## Application 
 
 This standard applies to empirical inquiries that meet all of the
