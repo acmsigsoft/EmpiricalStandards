@@ -843,7 +843,6 @@ all_other_items = "";
 unrecognized_tags = "";
 standards_with_no_tags = "";
 standards_with_untagged_attributes = "";
-all_desc_items = "";
 
 function separate_essential_attributes_based_on_IMRaD_tags(standardName, checklistType, checklistHTML){
 	if (checklistType == "Essential"){
@@ -854,7 +853,6 @@ function separate_essential_attributes_based_on_IMRaD_tags(standardName, checkli
 		var method = checklistHTML.includes("<method>") ? checklistHTML.match(/<method>([\s\S]*?)\n\s*<\/?\w+>/i)[1] : "";
 		var results = checklistHTML.includes("<results>") ? checklistHTML.match(/<results>([\s\S]*?)\n\s*<\/?\w+>/i)[1] : "";
 		var discussion = checklistHTML.includes("<discussion>") ? checklistHTML.match(/<discussion>([\s\S]*?)\n\s*<\/?\w+>/i)[1] : "";
-		var desc = checklistHTML.includes("<desc>") ? checklistHTML.match(/<desc>([\s\S]*?)\n\s*<\/?\w+>/i)[1] : "";
 		var other = checklistHTML.includes("<other>") ? checklistHTML.match(/<other>([\s\S]*?)\n\s*<\/?\w+>/i)[1] : "";
 
 		tags = checklistHTML.match(/\n\s*<\w+>/g);
@@ -883,7 +881,6 @@ function separate_essential_attributes_based_on_IMRaD_tags(standardName, checkli
 		all_method_items = all_method_items + method;
 		all_results_items = all_results_items + results;
 		all_discussion_items = all_discussion_items + discussion;
-		all_desc_items = all_desc_items + desc;
 		all_other_items = all_other_items + other;
 	}
 }
@@ -1389,10 +1386,8 @@ function viewStandardDescription(standard_name){
 	var dom = document.createElement("div");
 	dom.innerHTML = empirical_standard;
 	var standardTag = dom.getElementsByTagName("standard")[0];
-
 	var descTags = standardTag.getElementsByTagName("desc");
 	for (let descTag of descTags) {
-
 		descHTML = descTag.innerHTML.replaceAll(">", "").replaceAll(/\n\s*\n/g, '\n').replaceAll("\n", " ").replaceAll("*", "");
 	}
 	return descHTML;
