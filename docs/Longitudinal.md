@@ -1,7 +1,11 @@
 # Longitudinal Studies
 <standard name="Longitudinal">
 
+<desc>
+
 *A study focusing on the changes in and evolution of a phenomenon over time*
+
+</desc>
 
 ## Application
 

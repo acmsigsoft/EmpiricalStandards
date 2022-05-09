@@ -1,8 +1,12 @@
 # Questionnaire Surveys 
 <standard name="Questionnaire Surveys">
 
+<desc>
+
 *A study in which a sample of respondents answer a series of (mostly structured) questions,
 typically through a computerized or paper form*
+
+</desc>
 
 ## Application
 

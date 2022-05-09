@@ -1,7 +1,11 @@
 # Methodological Guidelines and Meta-Science
 <standard name="Meta Science">
 
+<desc>
+
 A paper that analyses an issue of research methodology or makes recommendations for conducting research
+
+</desc>
 
 ## Application
 
