@@ -1,7 +1,11 @@
 # Case Survey (AKA Case Meta-Analysis)
 <standard name="Case Survey">
 
+<desc>
+
 *A study that aims to generalize results about a complex phenomenon by systematically converting qualitative descriptions available in published case studies into quantitative data and analyzing the converted data*
+
+</desc>
 
 ## Application
 

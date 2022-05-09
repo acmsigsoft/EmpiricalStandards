@@ -1380,23 +1380,16 @@ function saveFile(){
 	return false;
 }
 
-function viewStandardDescription(){
+function viewStandardDescription(standard_name){
 
 	// Obtain all the information for a Standard
-	empirical_standard = readSpecificEmpiricalStandard("ActionResearch");
+	empirical_standard = readSpecificEmpiricalStandard(standard_name);
 	var dom = document.createElement("div");
 	dom.innerHTML = empirical_standard;
 	var standardTag = dom.getElementsByTagName("standard")[0];
-
 	var descTags = standardTag.getElementsByTagName("desc");
-	console.log(descTags)
 	for (let descTag of descTags) {
-
-		// dealing with footnotes
-		//descHTML = descTag.innerHTML.replaceAll("<sup>", "<sup>" + standardName + "--") // To make footnotes belong to their standards
 		descHTML = descTag.innerHTML.replaceAll(">", "").replaceAll(/\n\s*\n/g, '\n').replaceAll("\n", " ").replaceAll("*", "");
-
-		console.log(descHTML)
 	}
 	return descHTML;
 }
