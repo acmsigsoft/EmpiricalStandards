@@ -989,6 +989,9 @@ function create_requirements_checklist(){
 	// create Header for Essential Requirements with an unordered list
 	var EssentialUL = create_requirements_heading_with_UL("Essential");
 
+	// create Header for Supplementary Requirements with an unordered list
+	var SupplementaryUL = create_requirements_heading_with_UL("Supplementary Materials");
+
 	// create Header for Desirable Requirements with an unordered list
 	var DesirableUL = create_requirements_heading_with_UL("Desirable");
 
@@ -998,12 +1001,14 @@ function create_requirements_checklist(){
 	// hide desirable and extraordinary list of requirements for One Phase Reviewer
 	if(role == "\"one-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
+		SupplementaryUL.style = "padding: 0px; display:none;";
 		ExtraordinaryUL.style = "padding: 0px; display:none;";
 	}
 	// hide desirable and extraordinary list of requirements for Two Phase Reviewer
 	else if(role == "\"two-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
-		ExtraordinaryUL.style = "padding: 0px; display:none;";		
+		SupplementaryUL.style = "padding: 0px; display:none;";
+		ExtraordinaryUL.style = "padding: 0px; display:none;";
 	}
 
 	// unshift() method adds new items to the beginning of an array, and returns the new length

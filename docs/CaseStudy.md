@@ -59,6 +59,12 @@ captures a large quantitative dataset with limited context, consider the
 <other>    
     
 </checklist>
+
+### Supplementary Material
+<checklist name="Supplementary Materials">
+- [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
+- [ ]   triangulates across data sources, informants or researchers
+</checklist>
     
 ### Desirable Attributes
 <checklist name="Desirable">
