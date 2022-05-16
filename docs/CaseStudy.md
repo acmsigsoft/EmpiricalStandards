@@ -48,6 +48,14 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]   reports the type of case study<sup>[1](#myfootnote1)</sup>
 - [ ]   describes data sources (e.g. participants' demographics and work roles)
 - [ ]   defines unit(s) of analysis or observation
+- [ ]	<supplement> coding scheme (required)
+- [ ]	<supplement> coding examples (required)
+- [ ]	<supplement> extended chain-of-evidence table(s) (required)
+
+
+
+
+
 
 <results>
 
@@ -60,16 +68,13 @@ captures a large quantitative dataset with limited context, consider the
     
 </checklist>
 
-### Supplementary Material
-<checklist name="Supplementary Materials">
-- [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
-- [ ]   triangulates across data sources, informants or researchers
-</checklist>
-    
+
 ### Desirable Attributes
 <checklist name="Desirable">
     
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
+- [ ]	<supplement> interview guide(s) (optional)
+- [ ]	<supplement> decision rules (optional)
 - [ ]   triangulates across data sources, informants or researchers
 - [ ]   cross-checks interviewee statements (e.g. against direct observation or archival records)
 - [ ]   uses participant observation (ethnography) or direct observation (non-ethnography) and clearly integrates these observations into results<sup>[2](#myfootnote2)</sup>    

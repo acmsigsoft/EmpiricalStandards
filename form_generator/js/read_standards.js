@@ -144,6 +144,7 @@ function generate_decision_message_block() {
 			} else if (justification_type2_checked_count > 0) {
 				msg = "GATEKEEP";
 				document.getElementById("deviation_reasonable").style.display = "block";
+				document.getElementById("Supplementary Materials").style.display = "block";
 				document.getElementById("Desirable").style.display = "block";
 				document.getElementById("Extraordinary").style.display = "block";
 
@@ -151,11 +152,13 @@ function generate_decision_message_block() {
 			} else if (justification_type1_checked_count > 0) {
 				msg = "ACCEPT";
 				document.getElementById("deviation_reasonable").style.display = "block";
+				document.getElementById("Supplementary Materials").style.display = "block";
 				document.getElementById("Desirable").style.display = "block";
 				document.getElementById("Extraordinary").style.display = "block";
 
 			} else {
 				msg = "ACCEPT";
+				document.getElementById("Supplementary Materials").style.display = "block";
 				document.getElementById("Desirable").style.display = "block";
 				document.getElementById("Extraordinary").style.display = "block";
 
@@ -679,8 +682,9 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id) {
 	return deviation_block;
 }
 
+
 // convert from Markdown to HTML checklists
-function convert_MD_standard_checklists_to_html_standard_checklists(standardName, checklistName, checklistText, footnotes){
+function convert_MD_standard_checklists_to_html_standard_checklists(standardName, checklistName, checklistText, footnotes,supCheckList){
 
 	// ???????
 	tester = getParameterByName('y')[0] == 'noval' ? true : false;
@@ -735,12 +739,18 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			// !!!!!!!!!!!!!!!! we dont need this part in the checklist
 			if(line_text.includes("complies with all applicable empirical standards"))
 				continue;
-			
+
 			// if line_text includes a specific regex set to true ( line break with horizontal rule)
 			IMRaD_line_break = line_text.includes('<br\/>_hr_') ? true : false;
 
 			// Replace line break and horizontal rule with empty string
 			line_text = line_text.replace(/(<br\/>_hr_)+/g, '');
+
+			//comment later
+			if(line_text.includes("{supplement}") && checklistName !== "Supplementary")  {
+				supCheckList.items += "- [ ]" + line_text;
+				continue;
+			}
 
 			// Change the text to the string held in line_text
 			checklistItemLI.setAttribute("text", line_text);
@@ -816,6 +826,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			checklists.appendChild(checklistItemLI);
 		}
 	}
+
 	return checklists;
 }
 
@@ -902,10 +913,10 @@ function create_role_heading(){
 }	
 
 // Prepare unordered lists
-function preparation_to_convert_MD_to_HTML(standardTagName, checklistTagName, checklistInnerHTML, footnotes){
+function preparation_to_convert_MD_to_HTML(standardTagName, checklistTagName, checklistInnerHTML, footnotes,supCheckList){
 
 	// superscript tags
-	checklistInnerHTML = checklistInnerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
+	checklistInnerHTML = checklistInnerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}").replaceAll("<supplement>", "{supplement}");
 
     var tempDivElement = document.createElement("div");
     tempDivElement.innerHTML = checklistInnerHTML;
@@ -922,8 +933,9 @@ function preparation_to_convert_MD_to_HTML(standardTagName, checklistTagName, ch
 	// Supplement Files - Change from docs to link, change from .md file to nothing
 	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/', '../Supplements?supplement=').replaceAll('.md', '');
 
+
 	// Convert Markdown Checklists to HTML checklists
-	checklists = convert_MD_standard_checklists_to_html_standard_checklists(standardTagName, checklistTagName, checklistText, footnotes)
+	checklists = convert_MD_standard_checklists_to_html_standard_checklists(standardTagName, checklistTagName, checklistText, footnotes,supCheckList)
 
 	return checklists;
 }
@@ -986,6 +998,8 @@ function create_requirements_checklist(){
 	form.id = "checklists";
 	form.name = "checklists";
 
+	var supCheckList = {items:""};
+
 	// create Header for Essential Requirements with an unordered list
 	var EssentialUL = create_requirements_heading_with_UL("Essential");
 
@@ -1001,13 +1015,13 @@ function create_requirements_checklist(){
 	// hide desirable and extraordinary list of requirements for One Phase Reviewer
 	if(role == "\"one-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
-		SupplementaryUL.style = "padding: 0px; display:none;";
+		SupplementaryUL.style = "padding: 0px; display:block;";
 		ExtraordinaryUL.style = "padding: 0px; display:none;";
 	}
 	// hide desirable and extraordinary list of requirements for Two Phase Reviewer
 	else if(role == "\"two-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
-		SupplementaryUL.style = "padding: 0px; display:none;";
+		SupplementaryUL.style = "padding: 0px; display:block;";
 		ExtraordinaryUL.style = "padding: 0px; display:none;";
 	}
 
@@ -1065,18 +1079,20 @@ function create_requirements_checklist(){
 					EssentialUL.appendChild(Yes_No);
 				//EssentialUL.appendChild(checklists);
 			}
+
 			else if (checklistTag.getAttribute('name') == "Desirable") {
 				//DesirableUL.appendChild(standard_header_rule);
 
 				// Change from Markdown to HTML elements
-				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
+				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes,supCheckList);
 				DesirableUL.appendChild(checklists);
 			}
+
 			else if (checklistTag.getAttribute('name') == "Extraordinary") {
 				//ExtraordinaryUL.appendChild(standard_header_rule);
 
 				// Change from Markdown to HTML elements
-				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
+				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes,supCheckList);
 				ExtraordinaryUL.appendChild(checklists);
 			}
 		}
@@ -1089,14 +1105,21 @@ function create_requirements_checklist(){
 	notify_testers();
 	
 	// Change from Markdown to HTML elements
-	checklists = preparation_to_convert_MD_to_HTML("", 'Essential', all_essential_IMRaD_items_innerHTML, footnotes);
+	checklists = preparation_to_convert_MD_to_HTML("", 'Essential', all_essential_IMRaD_items_innerHTML, footnotes,supCheckList);
 	EssentialUL.appendChild(checklists);
-	
+
+	checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), "Supplementary", supCheckList.items.replaceAll("{supplement}", ""), footnotes,supCheckList);
+	SupplementaryUL.appendChild(checklists);
+
+
 	// Add Essential Attributes to the form
 	form.appendChild(EssentialUL);
 
 	// Create download button
 	var download = create_download_button();
+
+	//append supplementary material list
+	form.appendChild(SupplementaryUL);
 
 	// (All 'Yes' -> accept manuscript)
 	var decision_msg = generate_message("decision_msg", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
@@ -1131,6 +1154,7 @@ function create_requirements_checklist(){
 	}
 
 	// Add Desirable and Extraordinary Unordered List to Form
+
 	form.appendChild(DesirableUL);
 	form.appendChild(ExtraordinaryUL);
 
