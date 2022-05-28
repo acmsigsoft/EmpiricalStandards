@@ -1015,13 +1015,13 @@ function create_requirements_checklist(){
 	// hide desirable and extraordinary list of requirements for One Phase Reviewer
 	if(role == "\"one-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
-		SupplementaryUL.style = "padding: 0px; display:block;";
+		SupplementaryUL.style = "padding: 0px; display:none;";
 		ExtraordinaryUL.style = "padding: 0px; display:none;";
 	}
 	// hide desirable and extraordinary list of requirements for Two Phase Reviewer
 	else if(role == "\"two-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
-		SupplementaryUL.style = "padding: 0px; display:block;";
+		SupplementaryUL.style = "padding: 0px; display:none;";
 		ExtraordinaryUL.style = "padding: 0px; display:none;";
 	}
 
