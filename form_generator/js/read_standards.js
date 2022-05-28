@@ -125,6 +125,7 @@ function generate_decision_message_block() {
 
 		document.getElementById("deviation_reasonable").style.display = "none";
 		document.getElementById("deviation_unreasonable").style.display = "none";
+		document.getElementById("Supplementary Materials").style.display = "block";
 		document.getElementById("Desirable").style.display = "none";
 		document.getElementById("Extraordinary").style.display = "none";
 		// checkboxInput.className = "checkbox_attributes";
@@ -182,6 +183,7 @@ function generate_decision_message_block() {
 		
 		document.getElementById("deviation_reasonable").style.display = "none";
 		document.getElementById("deviation_unreasonable").style.display = "none";
+		document.getElementById("Supplementary Materials").style.display = "block";
 		document.getElementById("Desirable").style.display = "none";
 		document.getElementById("Extraordinary").style.display = "none";
 		$('.checkbox_attributes').prop('checked', false);
@@ -1015,13 +1017,13 @@ function create_requirements_checklist(){
 	// hide desirable and extraordinary list of requirements for One Phase Reviewer
 	if(role == "\"one-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
-		SupplementaryUL.style = "padding: 0px; display:none;";
+		SupplementaryUL.style = "padding: 0px; display:block;";
 		ExtraordinaryUL.style = "padding: 0px; display:none;";
 	}
 	// hide desirable and extraordinary list of requirements for Two Phase Reviewer
 	else if(role == "\"two-phase-reviewer\""){
 		DesirableUL.style = "padding: 0px; display:none;";
-		SupplementaryUL.style = "padding: 0px; display:none;";
+		SupplementaryUL.style = "padding: 0px; display:block;";
 		ExtraordinaryUL.style = "padding: 0px; display:none;";
 	}
 
