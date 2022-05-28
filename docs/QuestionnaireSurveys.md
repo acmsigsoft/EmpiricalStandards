@@ -34,12 +34,12 @@ typically given to participants in controlled experiments (see the
 - [ ]	identifies the target population and defines the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes how the questionnaire instrument was created
 - [ ]	describes how participants were selected or recruited (e.g. sampling frame, advertising, invitations, incentives)
-- [ ]	step-by-step, systematic, replicable description of data collection and analysis
-- [ ]	describes how responses were managed/monitored, including contingency actions for non-responses and drop-outs
 - [ ]	EITHER: measures constructs using (or adapting) validated scales    
 	 OR: analyzes construct validity (including content, convergent, discriminant and predictive validity) ex post<sup>[3](#myfootnote3)</sup>
+- [ ]	describes how responses were managed/monitored, including contingency actions for non-responses and drop-outs
 - [ ]	explains handling of missing data (e.g. imputation, weighting adjustments, discarding)
-
+- [ ]	step-by-step, systematic, replicable description of data collection and analysis
+	
 <results>
 
 - [ ]	analyzes response rates
