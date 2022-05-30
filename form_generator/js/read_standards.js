@@ -749,7 +749,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			line_text = line_text.replace(/(<br\/>_hr_)+/g, '');
 
 			//comment later
-			if(line_text.includes("{supplement}") && checklistName !== "Supplementary")  {
+			if(line_text.includes("{supplement}") && checklistName === "Supplementary")  {
 				supCheckList.items += "- [ ]" + line_text;
 				continue;
 			}
@@ -1087,13 +1087,13 @@ function create_requirements_checklist(){
 				//EssentialUL.appendChild(checklists);
 			}
 
-			// else if (checklistTag.getAttribute('name') == "Supplementary") {
-			// 	//DesirableUL.appendChild(standard_header_rule);
-			//
-			// 	// Change from Markdown to HTML elements
-			// 	checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes,supCheckList);
-			// 	//DesirableUL.appendChild(checklists);
-			// }
+			else if (checklistTag.getAttribute('name') == "Supplementary") {
+				//DesirableUL.appendChild(standard_header_rule);
+
+				// Change from Markdown to HTML elements
+				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes,supCheckList);
+				SupplementaryUL.appendChild(checklists);
+			}
 
 			else if (checklistTag.getAttribute('name') == "Desirable") {
 				//DesirableUL.appendChild(standard_header_rule);
