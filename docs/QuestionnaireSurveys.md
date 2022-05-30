@@ -127,8 +127,7 @@ Mark Kasunic. 2005. Designing an effective survey. Tech report
 \#CMU/SEI-2005-GB-004, Carnegie-Mellon University, Pittsburgh, USA.
 
 Jefferson Seide Molléri, Kai Petersen, and Emilia Mendes. 2020. An
-empirically evaluated checklist for surveys in software engineering.*
-Information and Software Technology*. 119.
+empirically evaluated checklist for surveys in software engineering. *Information and Software Technology*. 119.
 	
 Gary C. Moore, and Izak Benbasat. Development of an instrument to measure the perceptions of adopting an information technology innovation. *Information systems research* 2.3 (1991): 192-222.	
 
