@@ -749,15 +749,15 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			line_text = line_text.replace(/(<br\/>_hr_)+/g, '');
 
 			//comment later
-			// if(line_text.includes("{supplement}") && checklistName !== "Supplementary")  {
-			// 	supCheckList.items += "- [ ]" + line_text;
-			// 	continue;
-			// }
-
-			if(line_text.includes("{supplement}"))  {
+			if(line_text.includes("{supplement}") && checklistName !== "Supplementary")  {
 				supCheckList.items += "- [ ]" + line_text;
 				continue;
 			}
+
+			// if(line_text.includes("{supplement}"))  {
+			// 	supCheckList.items += "- [ ]" + line_text;
+			// 	continue;
+			// }
 
 			// Change the text to the string held in line_text
 			checklistItemLI.setAttribute("text", line_text);
