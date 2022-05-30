@@ -69,6 +69,17 @@ captures a large quantitative dataset with limited context, consider the
 </checklist>
 
 
+
+### Supplementary Materials
+<checklist name="Supplementary">
+- [ ]	<supplement> coding scheme (required)
+- [ ]	<supplement> coding examples (required)
+- [ ]	<supplement> extended chain-of-evidence table(s) (required)
+- [ ]	<supplement> interview guide(s) (optional)
+- [ ]	<supplement> decision rules (optional)
+</checklist>
+
+
 ### Desirable Attributes
 <checklist name="Desirable">
     

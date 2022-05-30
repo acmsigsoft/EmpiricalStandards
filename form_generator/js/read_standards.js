@@ -749,7 +749,12 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			line_text = line_text.replace(/(<br\/>_hr_)+/g, '');
 
 			//comment later
-			if(line_text.includes("{supplement}") && checklistName !== "Supplementary")  {
+			// if(line_text.includes("{supplement}") && checklistName !== "Supplementary")  {
+			// 	supCheckList.items += "- [ ]" + line_text;
+			// 	continue;
+			// }
+
+			if(line_text.includes("{supplement}"))  {
 				supCheckList.items += "- [ ]" + line_text;
 				continue;
 			}
@@ -1090,6 +1095,14 @@ function create_requirements_checklist(){
 				DesirableUL.appendChild(checklists);
 			}
 
+			else if (checklistTag.getAttribute('name') == "Supplementary") {
+				//DesirableUL.appendChild(standard_header_rule);
+
+				// Change from Markdown to HTML elements
+				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes,supCheckList);
+				DesirableUL.appendChild(checklists);
+			}
+
 			else if (checklistTag.getAttribute('name') == "Extraordinary") {
 				//ExtraordinaryUL.appendChild(standard_header_rule);
 
@@ -1101,7 +1114,7 @@ function create_requirements_checklist(){
 	}
 	all_essential_IMRaD_items_innerHTML = "" + all_intro_items + "\n_hr_" + all_method_items + "\n_hr_" + all_results_items + "\n_hr_" + all_discussion_items + "\n_hr_" + all_other_items
 	all_essential_IMRaD_items_innerHTML = all_essential_IMRaD_items_innerHTML.replaceAll("\n_hr_", "").length > 0 ? all_essential_IMRaD_items_innerHTML : "";
-	
+
 	
 	// Notify testers in the case of unrecognized tags, no tags at all, or untagged attributes
 	notify_testers();
