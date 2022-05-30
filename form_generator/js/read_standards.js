@@ -1092,7 +1092,7 @@ function create_requirements_checklist(){
 
 				// Change from Markdown to HTML elements
 				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes,supCheckList);
-				DesirableUL.appendChild(checklists);
+				//DesirableUL.appendChild(checklists);
 			}
 
 			else if (checklistTag.getAttribute('name') == "Desirable") {
@@ -1100,7 +1100,7 @@ function create_requirements_checklist(){
 
 				// Change from Markdown to HTML elements
 				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes,supCheckList);
-				//SupplementaryUL.appendChild(checklists);
+				SupplementaryUL.appendChild(checklists);
 			}
 
 
