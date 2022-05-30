@@ -71,15 +71,13 @@ captures a large quantitative dataset with limited context, consider the
 ### Supplementary Materials
 <checklist name="Supplementary">
 
-- [ ]	<supplement> coding scheme (required)</supplement>
-- [ ]	<supplement> coding examples (required)</supplement>
-- [ ]	<supplement> extended chain-of-evidence table(s) (required)</supplement>
-- [ ]	<supplement> interview guide(s) (optional)</supplement>
-- [ ]	<supplement> decision rules (optional)</supplement>
+- [ ]	<supplement> coding scheme (required)
+- [ ]	<supplement> coding examples (required)
+- [ ]	<supplement> extended chain-of-evidence table(s) (required)
+- [ ]	<supplement> interview guide(s) (optional)
+- [ ]	<supplement> decision rules (optional)
 
 </checklist>
-
-
 
 
 
