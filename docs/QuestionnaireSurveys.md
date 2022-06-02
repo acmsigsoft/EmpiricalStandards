@@ -67,6 +67,7 @@ typically given to participants in controlled experiments (see the
 - [ ]	analyzes response bias (quantitatively)
 - [ ]   includes attention-check items in the questionnaire, and excludes participants who fail one or more of these checks
 - [ ]	applies techniques for improving response rates (e.g. incentives, reminders, targeted advertising)
+- [ ]   applies an advanced method of handling missing data (e.g. Full Information Maximum Likelihood, Multiple Imputation, Bayesian methods)
 - [ ]	discusses possible effects of incentives (e.g. on voluntariness, response rates, response bias) if used
 - [ ]	describes the stratification of the analysis (if stratified sampling is used)
 - [ ]	defines and estimates the size of the population strata (if applicable)
