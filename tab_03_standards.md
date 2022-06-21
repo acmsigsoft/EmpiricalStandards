@@ -74,11 +74,11 @@ function openStandardFromURL(evt) {
   <button id="MetaScience_b"            class="tablinks" onclick="openStandard(event, 'MetaScience')">Meta Science </button>
   <button id="MixedMethods_b"           class="tablinks" onclick="openStandard(event, 'MixedMethods')">Mixed Methods </button>
   <button id="OptimizationStudies_b"    class="tablinks" onclick="openStandard(event, 'OptimizationStudies')">Optimization Studies</button>
-  <button id="QualitativeSurveys_b"     class="tablinks" onclick="openStandard(event, 'QualitativeSurveys')">Qualitative Surveys</button>
+  <button id="QualitativeSurveys_b"     class="tablinks" onclick="openStandard(event, 'QualitativeSurveys')">Qualitative Survey</button>
   <button id="QuantitativeSimulation_b" class="tablinks" onclick="openStandard(event, 'QuantitativeSimulation')">Quantitative Simulation</button>
-  <button id="QuestionnaireSurveys_b"   class="tablinks" onclick="openStandard(event, 'QuestionnaireSurveys')">Questionnaire Surveys</button>
+  <button id="QuestionnaireSurveys_b"   class="tablinks" onclick="openStandard(event, 'QuestionnaireSurveys')">Questionnaire Survey</button>
   <button id="RepositoryMining_b"       class="tablinks" onclick="openStandard(event, 'RepositoryMining')">Repository Mining</button>
-  <button id="SystematicReviews_b"      class="tablinks" onclick="openStandard(event, 'SystematicReviews')">Systematic Reviews</button>
+  <button id="SystematicReviews_b"      class="tablinks" onclick="openStandard(event, 'SystematicReviews')">Systematic Review</button>
 </div>
 <br>
 <br>
