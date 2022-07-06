@@ -79,6 +79,8 @@ A study that appraises, analyses, and synthesizes primary or secondary literatur
 
 - [ ]	two or more researchers independently undertaking the preliminary search process before finalizing the search scope and search keywords
 - [ ]	contacted primary study authors to ensure interpretations are correct, and elicit additional details not found in the papers such as access to raw data
+- [ ]	applies integrative data analysis<sup>[5](#myfootnote6)</sup>	
+	
 </checklist>
 
 ## Examples of Acceptable Deviations 
@@ -143,4 +145,5 @@ Martin Shepperd, David Bowes, and Tracy Hall. (2014) Researcher bias: The use of
 <footnote><sup>[3](#myfootnote3)</sup> e.g. formal meta-analysis of experiments has higher requirements for completeness than mapping studies of broad topic areas.</footnote><br>
 <footnote><sup>[4](#myfootnote4)</sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
 <footnote><sup>[5](#myfootnote5)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup>[5](#myfootnote6)</sup>See https://idaunc.web.unc.edu/home/ida/</footnote><br>
 </standard>
