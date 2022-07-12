@@ -12,3 +12,8 @@ header_pages:
 collections:
   team:
     output: true
+
+repos:
+  - name: Sponsor the Empirical Standards on GitHub
+    description:
+    url: https://github.com/sponsors/drpaulralph
