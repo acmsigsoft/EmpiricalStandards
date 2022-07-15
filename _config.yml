@@ -13,6 +13,6 @@ collections:
   team:
     output: true
 
-social-network-links:
-  name: Sponsor the Empirical Standards on GitHub
-  url: "https://github.com/sponsors/drpaulralph"
+link:
+  label: Sponsor the Empirical Standards on GitHub
+  href: https://github.com/sponsors/drpaulralph
