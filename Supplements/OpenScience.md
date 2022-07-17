@@ -45,6 +45,8 @@ Researchers should not complain that a study involves artifacts which— for goo
 
 ## Suggested Readings
 
+Carlos Diego Nascimento Damasceno. 2022. "Guidelines for Quality Management of Research Artifacts in Model-Driven Engineering." _MOdeling LAnguages (blog)_. Retrieved July 17, 2022 from [https://modeling-languages.com/guidelines-for-quality-management-of-research-artifacts-in-model-driven-engineering/#](https://modeling-languages.com/guidelines-for-quality-management-of-research-artifacts-in-model-driven-engineering/#)
+
 Daniel Graziotin. 2020. Open science policies. Retrieved July 12, 2020 from [https://ineed.coffee/open-science-policies/](https://ineed.coffee/open-science-policies/)
 
 Daniel Graziotin. 2020. SIGSOFT open science policies. Retrieved July 12, 2020 from [https://github.com/acmsigsoft/open-science-policies/](https://github.com/acmsigsoft/open-science-policies/)
