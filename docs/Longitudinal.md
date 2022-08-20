@@ -54,7 +54,8 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 - [ ] discusses data (in)consistency across waves (e.g. test-retest reliability)
 - [ ] examines differences in distributions between waves (and uses an appropriate data analysis strategy)
 - [ ] describes the cost of gathering data and any incentives used
-- [ ] addresses survivorship bias<sup>[8](#myfootnote8)</sup>     
+- [ ] addresses survivorship bias<sup>[8](#myfootnote8)</sup>
+- [ ] report any contextual change for participants as the study progressed.
 
 </checklist>
     
