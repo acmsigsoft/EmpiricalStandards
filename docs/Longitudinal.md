@@ -24,6 +24,7 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
     
 - [ ] determines the appropriate number of waves based on the natural oscillation of the research phenomenon<sup>[1](#myfootnote1)</sup>
 - [ ] uses at least two data collection waves
+- [ ] specifies independent and dependent variables at each wave of data collection.
 - [ ] subjects (humans or artifacts) are identifiable between waves
 - [ ] justifies the data analysis strategy<sup>[3](#myfootnote3)</sup>
 - [ ] the data analysis strategy is appropriate for the interdependent nature of the data<sup>[2](#myfootnote2)</sup>
@@ -56,6 +57,7 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 - [ ] describes the cost of gathering data and any incentives used
 - [ ] addresses survivorship bias<sup>[8](#myfootnote8)</sup>
 - [ ] report any contextual change for participants as the study progressed.
+- [ ] report the years in which each wave of the data collection occurred.
 
 </checklist>
     
@@ -64,7 +66,8 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 
 - [ ] uses a multi-stage selection process to identify the study's subjects<sup>[9](#myfootnote9)</sup>
 </checklist>
-- [ ] follows subjects for an exceptionally long period (e.g. more than five years)    
+- [ ] follows subjects for an exceptionally long period (e.g. more than five years)
+- [ ] provides information on where any portions of the data have been previously published and the degree of overlap with the current report
 
 ## General Quality Criteria
 
