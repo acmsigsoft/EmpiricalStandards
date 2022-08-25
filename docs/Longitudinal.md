@@ -26,6 +26,7 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 - [ ] uses at least two data collection waves
 - [ ] subjects (humans or artifacts) are identifiable between waves
 - [ ] justifies the data analysis strategy<sup>[3](#myfootnote3)</sup>
+- [ ] reports any contextual changes for participants (units) as the study progressed
 - [ ] the data analysis strategy is appropriate for the interdependent nature of the data<sup>[2](#myfootnote2)</sup>
 - [ ] discusses the critical alpha levels or justifies Bayesian priors<sup>[4](#myfootnote4)</sup>
 - [ ] justifies sample size (e.g. using power analysis)<sup>[5](#myfootnote5)</sup>
@@ -51,9 +52,12 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 - [ ] either builds new theory or tests existing theory
 - [ ] investigates causality using the longitudinal nature of the data to establish precedence and statistically controlling for third-variable explanations
 - [ ] discusses potential confounding factors (for inferential analyses) that cannot be statistically controlled
+- [ ] reports the years in which each wave of the data collection occurred
 - [ ] discusses data (in)consistency across waves (e.g. test-retest reliability)
+- [ ] specifies independent variables and dependent variables at each wave of data collection.
 - [ ] examines differences in distributions between waves (and uses an appropriate data analysis strategy)
 - [ ] describes the cost of gathering data and any incentives used
+- [ ] provides information on where any portions of the data have been previously published and the degree of overlap with the current report
 - [ ] addresses survivorship bias<sup>[8](#myfootnote8)</sup>     
 
 </checklist>
