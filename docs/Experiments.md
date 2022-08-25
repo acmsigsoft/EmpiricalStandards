@@ -67,6 +67,7 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	provides supplementary material such as complete, algorithmic research protocol; task materials; raw, de-identified dataset; analysis scripts
 - [ ]	justifies hypotheses and Bayesian priors (if applicable) based on previous studies and theory
 - [ ]	discusses alternative experimental designs and why they were not used (e.g. validity trade-offs)
+- [ ]   justifies need for a new trial (if any)
 - [ ]	includes visualizations of data distributions
 - [ ]	cites statistics research to support any nuanced issues or unusual approaches
 - [ ]	explains deviations between design and execution, and their implications<sup>[2](#myfootnote2)</sup>
