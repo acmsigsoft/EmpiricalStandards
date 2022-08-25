@@ -65,8 +65,13 @@ Science Standard** or the **Engineering Research Standard**.
 <checklist name="Desirable">
 
 - [ ]	provides supplementary material such as complete, algorithmic research protocol; task materials; raw, de-identified dataset; analysis scripts
+- [ ]   reports settings and locations where the data was collected
+- [ ]   identifies and describes all outcome measures (whether primary or secondary)
 - [ ]	justifies hypotheses and Bayesian priors (if applicable) based on previous studies and theory
 - [ ]	discusses alternative experimental designs and why they were not used (e.g. validity trade-offs)
+- [ ]   justifies need for a new trial (if any)
+- [ ]   reports important changes to methods after trial commencement (such as eligibility criteria), with reasons
+- [ ]   discusses trial's generalisability and relevance
 - [ ]	includes visualizations of data distributions
 - [ ]	cites statistics research to support any nuanced issues or unusual approaches
 - [ ]	explains deviations between design and execution, and their implications<sup>[2](#myfootnote2)</sup>
@@ -74,6 +79,7 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	justifies sample size (e.g. using power analysis) 
 - [ ]	analyzes construct validity of dependent variable
 - [ ]	reports manipulation checks
+- [ ]   provides an accessible trial protocol
 - [ ]	pre-registration of hypotheses and design (where venue allows)
 - [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[3](#myfootnote3)</sup>
 </checklist>
