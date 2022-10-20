@@ -105,6 +105,8 @@ A study that appraises, analyses, and synthesizes primary or secondary literatur
 
 ## Suggested Readings 
 
+Paul Ralph and Sebastian Baltes. 2022. Paving the Way for Mature Secondary Research: The Seven Types of Literature Review. *Proceedings of The ACM Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2022) Ideas, Visions and Reflections Track*, Singapore: ACM, Nov. 14–18. 
+	
 Moher D, Liberati A, Tetzlaff J, Altman DG, The PRISMA Group (2009).
 *P*referred *R*eporting *I*tems for *S*ystematic Reviews and
 *M*eta-*A*nalyses: The PRISMA Statement. PLoS Med 6, 7: e1000097.
