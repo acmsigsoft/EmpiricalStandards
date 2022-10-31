@@ -48,6 +48,7 @@ following.
 
 <method>
     
+- [ ]	names the methodology or methodologies used
 - [ ]	methodology is appropriate (not necessarily optimal) for stated purpose, problem, etc.
 - [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
 - [ ]	describes in detail how the data were analyzed
