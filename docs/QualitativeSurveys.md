@@ -113,7 +113,9 @@ reliability typically do not apply.
 
 ## Suggested Readings 
 
-Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.
+Virginia Braun and Victoria Clarke. "Using thematic analysis in psychology." _Qualitative Research in Psychology_ 3, 2 (2006), 77-101.
+    
+Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_ 23, 1 (2018), 245-261.
     
 Michael Quinn Patton. 2002. *Qualitative Research and Evaluation Methods*. 3rd ed. Sage Publications.
 
