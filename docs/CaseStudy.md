@@ -69,6 +69,7 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]   uses participant observation (ethnography) or direct observation (non-ethnography) and clearly integrates these observations into results<sup>[2](#myfootnote2)</sup>    
 - [ ]   validates results using member checking, dialogical interviewing<sup>[3](#myfootnote3)</sup>, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]   describes external events and other factors that may have affected the case or site
+- [ ]   describes how prior understandings of the phenomena were managed and/or influenced the research
 - [ ]   uses quotations to *illustrate* findings<sup>[4](#myfootnote4)</sup>
 - [ ]   EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory    
      OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
