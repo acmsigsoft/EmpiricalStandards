@@ -1,6 +1,6 @@
 # Empirical Standards
 
-An _Empirical Standard_ is a brief public document that communicates expectations for emprical research. Here _empirical_ denotes research that uses data. The data can be qualitative or quantitative; real or synthetic. _Empirical_ distinguishes research that involves collecting and analyzing data from other kinds of scholarship like a mathematical proof or a philosophical treatise. 
+An _Empirical Standard_ is a brief public document that communicates expectations for empirical research. Here _empirical_ denotes research that uses data. The data can be qualitative or quantitative; real or synthetic. _Empirical_ distinguishes research that involves collecting and analyzing data from other kinds of scholarship like a mathematical proof or a philosophical treatise. 
 
 Moreover, our empirical standards are:
 
@@ -15,13 +15,13 @@ The empirical standards have three main uses:
 2. Designing better studies
 3. Educating graduate students
 
-Scholarly peer review is simultaneously “the lynchpin about which the whole business of science is pivoted" [1] and "prejudiced, capricious, inefficient, ineffective, and generally unscientific” [2]. Many of the problems with peer review boild down to reviewers inventing their own evaluation criteria. Devising appropriate evaluation criteria for any given manuscript is extraordinarily difficult, so most reviewers' criteria are not very good. Reviewers create criteria that are inconsistent with other reviewers', the venue's, the editor's, the methodological literature and---crucially---the author's. In effect, the real criteria by which our research is judged are not merely opaque; they don't even exist until after the manuscript is submitted. This is why peer review is so frustrating, unpredictable, and unscientific. 
+Scholarly peer review is simultaneously “the lynchpin about which the whole business of science is pivoted" [1] and "prejudiced, capricious, inefficient, ineffective, and generally unscientific” [2]. Many of the problems with peer review boiled down to reviewers inventing their own evaluation criteria. Devising appropriate evaluation criteria for any given manuscript is extraordinarily difficult, so most reviewers' criteria are not very good. Reviewers create criteria that are inconsistent with other reviewers', the venue's, the editor's, the methodological literature and---crucially---the author's. In effect, the real criteria by which our research is judged are not merely opaque; they don't even exist until after the manuscript is submitted. This is why peer review is so frustrating, unpredictable, and unscientific. 
 
 Empirical standards are the secret to fixing this situation. With the standards, all the reviewers use the same criteria and the authors know the criteria in advance. Used appropriately, the standards discourage or prevent reviewers from either accepting research with fatal flaws or rejecting research based on bogus criteria. 
 
 Obviously, if authors have these criteria in advance, they can use the criteria to design more rigorous studies. There's a lot to remember when designing a study, and robust methodological training is rare in our community. The standards provide concise, convenient checklists to help us remember all the core practices for a given method.  
 
-The standards can also be used for educational purposes. While they cannot replace a good methods textbook, the lists of references and exemplars can be used to construct reading lists, and the specific attributes can be used to sheppherd graduate students through their study designs and paper write-ups.  
+The standards can also be used for educational purposes. While they cannot replace a good methods textbook, the lists of references and exemplars can be used to construct reading lists, and the specific attributes can be used to shepherd graduate students through their study designs and paper write-ups.  
 
 ## Creation and Maintenance
 
@@ -41,6 +41,6 @@ In the main directory:
 
 ## References
 
-[1] John M Ziman. 1968.Public knowledge: An essay concerning the socialdimension of science. Vol. 519. CUP Archive.
+[1] John M Ziman. 1968. Public knowledge: An essay concerning the social dimension of science. Vol. 519. CUP Archive.
 [2] Paul Ralph. 2016. Practical suggestions for improving scholarly peer review quality and reducing cycle times. _Communications of the Association for Information Systems_ 38, 1 (2016), Article 13.
 [3] Paul Ralph et al. 2020 "Empirical Standards for Software Engineering Research." _arXiv_:2010.03525.
