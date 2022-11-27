@@ -25,3 +25,7 @@ This policy is an incomplete draft. It is not ready for use. You can suggests ch
  - Reviewer...
  
 ## Complaints Procedures
+
+It is the responsibility of every venue for scholarly publishing to: 
+ 1. have a clear, publically available procedure for receiving, investigating and resolving complaints of reviewer misconduct
+ 2. ...
