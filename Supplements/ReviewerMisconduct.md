@@ -2,7 +2,7 @@
 
 ## Note
 
-This policy is an incomplete draft. It is not ready for use. You can suggests changes directly via pull request. 
+This policy is an incomplete draft. It is not ready for use. You can suggest changes directly via pull request. 
 
 ## Definitions 
 
@@ -23,11 +23,12 @@ This policy is an incomplete draft. It is not ready for use. You can suggests ch
  - Failing to declare conflict-of-interest and reviewing the submission anyway
  - Prejudice dressed up as external validity concerns; e.g., dismissing a study because participants came from a developing country.
  - Distributing the submission to anyone note explicitly approved Failing to maintain confidentiality by, e.g., sharing the unpublished manuscript on social media
- - Submmitting a review without reading the submission
+ - Submitting a review without reading the submission
  - Stealing ideas from the submission and rejecting it so the reviewer can publish a similar paper first
  - Intentionally un-masking another anonymous reviewer to the authors
  - Ad hominem attacks on the authors
  - Accusing authors of misconduct (plagiarism, data fabrication, p-hacking, etc.) without compelling evidence
+ - Using a large language model (e.g. ChatGPT) or other tool to generate some or all of a review
 
 ### The Line
 
