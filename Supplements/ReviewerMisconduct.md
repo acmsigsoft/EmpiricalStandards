@@ -6,29 +6,53 @@ This policy is an incomplete draft. It is not ready for use. You can suggest cha
 
 ## Definitions 
 
- - **Scholarly Peer Review** refers to...
+ - **Scholarly Peer Review** refers to one or more other scholars providing feedback on a (usually) pre-published work, including presentation, methods, findings.
 
- - A **Peer Reviewer** is an individual who ...
+ - A **Peer Reviewer** is an individual without conflict of interest and is a knowledgeable scholar in the field of a work who provides constructive, objective feedback on the (usually) pre-published work.
+ 
+ - A **Review Manager** is an individual who assigns conference or journal submissions for review, oversees the reviewing process, and informs authors of decisions, typically a Program Chair, Associate Editor or Editor in Chief.
 
- - **Reviewer Misconduct** refers to...
+ - **Reviewer Misconduct** refers to manipulation of the peer review process, either as a peer reviewer or review manager, to produce adverse outcomes including inappropriate review content, rejection or acceptance of works when unjustified, or other inappropriate behaviours such as breach of confidentiality, impartiality and ethical standards and practices.
+
+- **Submitting** a work for peer review refers to the authors of a work following a defined submission process for a conference or journal, overseen by one or more review managers, to seek peer review of and eventual publication of the reviewed work in the venue, by one or more peer reviewers.
  
 ## General Principles
 
- - Conflict of Interest
- - Discriminating against a protected group
+ - Conflict of Interest - the need to adhere to the venue's documented Conflict of Interest policies, the publisher or publishing society's overarching CoI policies, or declining to peer review a work that an objective peer review would not be possible
+ - Discriminating against a protected group - the need to provide an objective peer review without discriminating based on author, institution and/or country characteristics, including but not limited to gender, age, ethnicity, language, culture, sexual orientation, polical affiliation, religious beliefs, physical or mental disability, cognitive difference, appearance, socio-economic status, educational background, ...
+- Not adhering to required guidelines and practices - the need to follow a venue's published, whether publically or internal to peer reviewers and review managers, guidelines and standards for peer review
+- Fake reviewing - completing a deiberately falsified review of a work, usually by accepting payment or other unacceptable benefits to the peer reviewer and/or as favour to the authors or review manager, to compromise the peer review process in favour (or against) a work
+- Inappropriate management of the peer review process - a review manager failing in their duty to implement the documented venue peer review process, Conflict of Interest requirements, discriminatory practices, or allowing a manifestly improper peer reviewer behaviour
 
-## Specific Examples of Misconduct
+
+## Specific Examples of Peer Reviewer Misconduct
  
  - Using the review to promote work by the reviewer or their close colleagues, e.g., by demanding that authors add citations to one or more papers written by the reviewer or their close colleagues
  - Failing to declare conflict-of-interest and reviewing the submission anyway
+ - Reviewing a submission when knowingly unable to be sufficiently objective in conducting the review
  - Prejudice dressed up as external validity concerns; e.g., dismissing a study because participants came from a developing country.
- - Distributing the submission to anyone note explicitly approved Failing to maintain confidentiality by, e.g., sharing the unpublished manuscript on social media
+ - Distributing the submission to anyone note explicitly approved 
+ - Failing to maintain confidentiality by, e.g., sharing the unpublished manuscript on social media
  - Submitting a review without reading the submission
+ - Submitting a manifestly inadequate review e.g. 1-2 lines; failing to address most of the review criteria
  - Stealing ideas from the submission and rejecting it so the reviewer can publish a similar paper first
  - Intentionally un-masking another anonymous reviewer to the authors
  - Ad hominem attacks on the authors
  - Accusing authors of misconduct (plagiarism, data fabrication, p-hacking, etc.) without compelling evidence
+ - Rejecting works to reduce acceptance rates in order to increase 'prestige' of the venue
+- Deliberately praising the work and arguing for acceptance despite clear serious flaws as a favour to the authors
+- Rejecting submissions that don't have positive outcomes without justification
+- Rejecting submissions that disagree with the reviewers own viewpoints without justification
  - Using a large language model (e.g. ChatGPT) or other tool to generate some or all of a review
+ - Submitting a review not at all related to the content of a submission e.g. copying verbatim from another review
+ - Completing fake reviews of a submission for payment or other material gain e.g. as a favour to the authors or review manager
+
+## Specific Examples of Reveiw Manager Misconfuct
+
+- Deliberately assigning submissions to reviewers known to be overly hostile or overly favourable to the authors / the submission topic 
+- Failing to treat genuine author concerns about a review with respect if review manager; failing to investigate a review complaint
+- Procuring fake reviews for a manuscript, whether favourable or unfavourable
+
 
 ### The Line
 
