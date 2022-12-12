@@ -12,7 +12,7 @@ This policy is an incomplete draft. It is not ready for use. You can suggest cha
  
  - A **Review Manager** is an individual who assigns conference or journal submissions for review, oversees the reviewing process, and informs authors of decisions, typically a Program Chair, Associate Editor or Editor in Chief.
 
- - **Reviewer Misconduct** refers to manipulation of the peer review process, either as a peer reviewer or review manager, to produce adverse outcomes including inappropriate review content, rejection or acceptance of works when unjustified, or other inappropriate behaviours such as breach of confidentiality, impartiality, ethical standards or practices.
+ - **Reviewer Misconduct** refers to participation in the peer review process, either as a peer reviewer or review manager, that produces, by action or inaction, adverse outcomes to relevant parties, including the authors, other reviewers, the publication venue (journal, conference, etc.), or scientific knowledge, as a whole. Examples of reviewer misconduct include inappropriate review content, rejection or acceptance of works when unjustified, or other inappropriate behaviours such as breach of confidentiality, impartiality, ethical standards or practices.  
 
 - **Submitting** a work for peer review refers to the authors of a work following a defined submission process for a scholarly venue (e.g. conference, journal, edited book) overseen by one or more review managers, to seek peer review of and eventual publication of the reviewed work in the venue, by one or more peer reviewers.
  
