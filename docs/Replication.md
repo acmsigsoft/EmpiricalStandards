@@ -20,7 +20,7 @@ This standard applies to empirical studies that meet the following criteria:
 <intro>
 
 - [ ] discusses the motivation for conducting the replication in appropriate detail (e.g. to validate the results, to broaden the results by changing the participant pool or the artifacts)
-- [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup>[1](#footnote1)</sup>, participants (internal, external, mixed)<sup>[2](#footnote2)</sup>, and overlap (complete or partial)<sup>[3](#footnote3)</sup>.
+- [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup>[1](#footnote1)</sup>, participants (internal, external, mixed)<sup>[2](#footnote2)</sup>, and overlap (partial, complete, extended)<sup>[3](#footnote3)</sup>.
 
 <method>
 
