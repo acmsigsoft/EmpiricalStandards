@@ -83,6 +83,8 @@ This standard applies to empirical studies that meet the following criteria:
 - Criticizing the research questions, their wording, or formulation. Since the research question have been set in the original study, the replication must follow them, even in conceptual replications.
 
 ## Suggested Readings
+- J. C. Carver, “[Towards reporting guidelines for experimental replications: A proposal](http://carver.cs.ua.edu/Papers/Conference/2010/2010_RESER.pdf),” in 1st International Workshop on Replication in Empirical Software Engineering Research, vol. 1, 2010, pp. 1–4.
+- J. C. Carver, N. Juristo, M. T. Baldassarre, and S. Vegas, “Replications of software engineering experiments,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 267–276, Dec. 05, 2013. https://doi.org/10.1007/s10664-013-9290-8.
 - S. Heckman, J. C. Carver, M. Sherriff, and A. Al-zubidy, “A Systematic Literature Review of Empiricism and Norms of Reporting in Computing Education Research Literature,” ACM Transactions on Computing Education, vol. 22, no. 1. Association for Computing Machinery (ACM), pp. 1–46, Mar. 31, 2022. https://doi.org/10.1145/3470652.
 - F. Q. B. da Silva et al., “Replication of empirical studies in software engineering research: a systematic mapping study,” Empirical Software Engineering. Springer Science and Business Media LLC, Sep. 01, 2012. https://doi.org/10.1007/s10664-012-9227-7.
 - B. Kitchenham, “The role of replications in empirical software engineering—a word of warning,” Empirical Software Engineering, vol. 13, no. 2. Springer Science and Business Media LLC, pp. 219–221, Jan. 29, 2008. https://doi.org/10.1007/s10664-008-9061-0.
