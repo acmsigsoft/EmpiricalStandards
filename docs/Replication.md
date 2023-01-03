@@ -3,7 +3,7 @@
 <standard name="Replication">
 
 
-*<desc>Study that deliberately repeats a previous study (i.e., original study) for the purpose of determining whether the results of the first study can be reproduced<sup>[1](#footnote3)</sup>.</desc>*
+*<desc>Study that deliberately repeats a previous study (i.e., original study) for the purpose of determining whether the results of the first study can be reproduced<sup>[1](#footnote1)</sup>.</desc>*
 
 
 ## Application 
@@ -20,7 +20,7 @@ This standard applies to empirical studies that meet the following criteria:
 <intro>
 
 - [ ] discusses the motivation for conducting the replication in appropriate detail (e.g. to validate the results, to broaden the results by changing the participant pool or the artifacts)
-- [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup>[2](#footnote1)</sup>, participants (internal, external, mixed)<sup>[3](#footnote2)</sup>, and overlap (partial, complete, extended)<sup>[4](#footnote3)</sup>.
+- [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup>[2](#footnote2)</sup>, overlap (partial, complete, extended)<sup>[3](#footnote3)</sup>, and participants (internal, external, mixed)<sup>[4](#footnote4)</sup>.
 
 <method>
 
@@ -50,7 +50,7 @@ This standard applies to empirical studies that meet the following criteria:
 ### Desirable
 <checklist name="Desirable">
 
-- [ ] reporting of information about (i) the original study, (ii) the replication, (iii) the comparison of results, and (iv) conclusions are clearly separated<sup>[1](#footnote4)</sup>
+- [ ] reporting of information about (i) the original study, (ii) the replication, (iii) the comparison of results, and (iv) conclusions are clearly separated<sup>[1](#footnote1)</sup>
 
 <method>
 
@@ -96,8 +96,7 @@ This standard applies to empirical studies that meet the following criteria:
 - M. N. Gómez and S. T. Acuña, “A replicated quasi-experimental study on the influence of personality and team climate in software development,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 343–377, Aug. 02, 2013. https://doi.org/10.1007/s10664-013-9265-9.
 
 ---
-<footnote><sup>[1](#footnote3)</sup>J. C. Carver, N. Juristo, M. T. Baldassarre, and S. Vegas, “Replications of software engineering experiments,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 267–276, Dec. 05, 2013. https://doi.org/10.1007/s10664-013-9290-8.</footnote><br/>
-<footnote><sup>[2](#footnote1)</sup>A. R. Dennis and J. S. Valacich, “A replication manifesto,” AIS Transactions on Replication Research, vol. 1, no. 1, p. 1, 2015</footnote><br/>
-<footnote><sup>[3](#footnote2)</sup>F. Q. B. da Silva et al., “Replication of empirical studies in software engineering research: a systematic mapping study,” Empirical Software Engineering. Springer Science and Business Media LLC, Sep. 01, 2012. https://doi.org/10.1007/s10664-012-9227-7.</footnote><br/>
-<footnote><sup>[4](#footnote4)</sup>J. C. Carver, “[Towards reporting guidelines for experimental replications: A proposal](http://carver.cs.ua.edu/Papers/Conference/2010/2010_RESER.pdf),” in 1st International Workshop on Replication in Empirical Software Engineering Research, vol. 1, 2010, pp. 1–4.
-</footnote><br>
+<footnote><sup>[1](#footnote1)</sup>J. C. Carver, N. Juristo, M. T. Baldassarre, and S. Vegas, “Replications of software engineering experiments,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 267–276, Dec. 05, 2013. https://doi.org/10.1007/s10664-013-9290-8.</footnote><br/>
+<footnote><sup>[2](#footnote2)</sup>A. R. Dennis and J. S. Valacich, “A replication manifesto,” AIS Transactions on Replication Research, vol. 1, no. 1, p. 1, 2015</footnote><br/>
+<footnote><sup>[3](#footnote3)</sup>J. C. Carver, “[Towards reporting guidelines for experimental replications: A proposal](http://carver.cs.ua.edu/Papers/Conference/2010/2010_RESER.pdf),” in 1st International Workshop on Replication in Empirical Software Engineering Research, vol. 1, 2010, pp. 1–4.</footnote><br>
+<footnote><sup>[4](#footnote4)</sup>F. Q. B. da Silva et al., “Replication of empirical studies in software engineering research: a systematic mapping study,” Empirical Software Engineering. Springer Science and Business Media LLC, Sep. 01, 2012. https://doi.org/10.1007/s10664-012-9227-7.</footnote><br/>
