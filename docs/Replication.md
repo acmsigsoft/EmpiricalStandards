@@ -3,7 +3,7 @@
 <standard name="Replication">
 
 
-*<desc>Study that deliberately repeats a previous study (i.e., original study) for the purpose of determining whether the results of the first study can be reproduced</desc>*
+*<desc>Study that deliberately repeats a previous study (i.e., original study) for the purpose of determining whether the results of the first study can be reproduced<sup>[1](#footnote3)</sup>.</desc>*
 
 
 ## Application 
@@ -20,7 +20,7 @@ This standard applies to empirical studies that meet the following criteria:
 <intro>
 
 - [ ] discusses the motivation for conducting the replication in appropriate detail (e.g. to validate the results, to broaden the results by changing the participant pool or the artifacts)
-- [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup>[1](#footnote1)</sup>, participants (internal, external, mixed)<sup>[2](#footnote2)</sup>, and overlap (partial, complete, extended)<sup>[3](#footnote3)</sup>.
+- [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup>[2](#footnote1)</sup>, participants (internal, external, mixed)<sup>[3](#footnote2)</sup>, and overlap (partial, complete, extended)<sup>[4](#footnote3)</sup>.
 
 <method>
 
@@ -50,7 +50,7 @@ This standard applies to empirical studies that meet the following criteria:
 ### Desirable
 <checklist name="Desirable">
 
-- [ ] reporting of information about (i) the original study, (ii) the replication, (iii) the comparison of results, and (iv) conclusions are clearly separated<sup>[4](#footnote4)</sup>
+- [ ] reporting of information about (i) the original study, (ii) the replication, (iii) the comparison of results, and (iv) conclusions are clearly separated<sup>[1](#footnote4)</sup>
 
 <method>
 
@@ -88,16 +88,16 @@ This standard applies to empirical studies that meet the following criteria:
 - B. Kitchenham, “The role of replications in empirical software engineering—a word of warning,” Empirical Software Engineering, vol. 13, no. 2. Springer Science and Business Media LLC, pp. 219–221, Jan. 29, 2008. https://doi.org/10.1007/s10664-008-9061-0.
 
 ## Exemplars
+- T. Kosar, S. Gaberc, J. Carver, and M. Mernik. “Program Comprehension of Domain-Specific and General-Purpose Languages: Replication of a Family of Experiments Using Integrated Development Environments”. Empirical Software Engineering 23, 2734–2763 (2018). https://doi.org/10.1007/s10664-017-9593-2.
+- F. Khan, I. David, D. Varro, and S. McIntosh, “Code Cloning in Smart Contracts on the Ethereum Platform: An Extended Replication Study,” IEEE Transactions on Software Engineering. Institute of Electrical and Electronics Engineers (IEEE), pp. 1–13, 2022. https://doi.org/10.1109/tse.2022.3207428.
 - D. Fucci and B. Turhan, “On the role of tests in test-driven development: a differentiated and partial replication,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 277–302, Jun. 21, 2013. https://doi.org/10.1007/s10664-013-9259-7.
 - C. Apa, O. Dieste, E. G. Espinosa G., and E. R. Fonseca C., “Effectiveness for detecting faults within and outside the scope of testing techniques: an independent replication,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 378–417, Aug. 08, 2013. https://doi.org/10.1007/s10664-013-9267-7.
 - J. Itkonen and M. V. Mäntylä, “Are test cases needed? Replicated comparison between exploratory and test-case-based software testing,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 303–342, Jul. 11, 2013. https://doi.org/10.1007/s10664-013-9266-8.
 - M. N. Gómez and S. T. Acuña, “A replicated quasi-experimental study on the influence of personality and team climate in software development,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 343–377, Aug. 02, 2013. https://doi.org/10.1007/s10664-013-9265-9.
-- F. Khan, I. David, D. Varro, and S. McIntosh, “Code Cloning in Smart Contracts on the Ethereum Platform: An Extended Replication Study,” IEEE Transactions on Software Engineering. Institute of Electrical and Electronics Engineers (IEEE), pp. 1–13, 2022. https://doi.org/10.1109/tse.2022.3207428.
-- T. Kosar, S. Gaberc, J. Carver, and M. Mernik. “Program Comprehension of Domain-Specific and General-Purpose Languages: Replication of a Family of Experiments Using Integrated Development Environments”. Empirical Software Engineering 23, 2734–2763 (2018). https://doi.org/10.1007/s10664-017-9593-2 
 
 ---
-<footnote><sup>[1](#footnote1)</sup>A. R. Dennis and J. S. Valacich, “A replication manifesto,” AIS Transactions on Replication Research, vol. 1, no. 1, p. 1, 2015</footnote><br/>
-<footnote><sup>[2](#footnote2)</sup>F. Q. B. da Silva et al., “Replication of empirical studies in software engineering research: a systematic mapping study,” Empirical Software Engineering. Springer Science and Business Media LLC, Sep. 01, 2012. https://doi.org/10.1007/s10664-012-9227-7.</footnote><br/>
-<footnote><sup>[3](#footnote3)</sup>J. C. Carver, N. Juristo, M. T. Baldassarre, and S. Vegas, “Replications of software engineering experiments,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 267–276, Dec. 05, 2013. https://doi.org/10.1007/s10664-013-9290-8.</footnote><br/>
+<footnote><sup>[1](#footnote3)</sup>J. C. Carver, N. Juristo, M. T. Baldassarre, and S. Vegas, “Replications of software engineering experiments,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 267–276, Dec. 05, 2013. https://doi.org/10.1007/s10664-013-9290-8.</footnote><br/>
+<footnote><sup>[2](#footnote1)</sup>A. R. Dennis and J. S. Valacich, “A replication manifesto,” AIS Transactions on Replication Research, vol. 1, no. 1, p. 1, 2015</footnote><br/>
+<footnote><sup>[3](#footnote2)</sup>F. Q. B. da Silva et al., “Replication of empirical studies in software engineering research: a systematic mapping study,” Empirical Software Engineering. Springer Science and Business Media LLC, Sep. 01, 2012. https://doi.org/10.1007/s10664-012-9227-7.</footnote><br/>
 <footnote><sup>[4](#footnote4)</sup>J. C. Carver, “[Towards reporting guidelines for experimental replications: A proposal](http://carver.cs.ua.edu/Papers/Conference/2010/2010_RESER.pdf),” in 1st International Workshop on Replication in Empirical Software Engineering Research, vol. 1, 2010, pp. 1–4.
 </footnote><br>
