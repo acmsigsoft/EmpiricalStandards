@@ -3,14 +3,14 @@
 <standard name="Replication">
 
 
-*<desc>Study that deliberately repeats a previous study (i.e., original study) for the purpose of determining whether the results of the first study can be reproduced<sup>[1](#footnote1)</sup>.</desc>*
+*<desc>A study that deliberately repeats a previous study (the "original study") to determine whether its results can be replicated<sup>[1](#footnote1)</sup>.</desc>*
 
 
 ## Application 
 
 This standard applies to empirical studies that meet the following criteria:
 
-- The replication attempt is deliberate and planned, not an artifact of accidental overlap with a previous study.
+- The replication attempt is deliberate and planned, not accidental overlap with a previous study.
 - The original study is clearly identified as a separate previous publication. If the replication is not the only replication of the original study, i.e., it is a part of a *family of replications*, all the other replications are identified and the current replication is clearly defined in the context of the family.
 
 ## Specific Attributes
@@ -32,8 +32,8 @@ This standard applies to empirical studies that meet the following criteria:
   - [ ] the context variables of the original study that might have affected the design of the study or interpretation of the results
   - [ ] the major findings of the original study
   - [ ] if the replication is not the only replication of the original study, i.e., it is a part of a *family of replications*, a brief summary of the previous studies and replications is provided, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic
-- [ ] describes the level of interaction with the original experimenters if the original researchers are not involved in the replication
-- [ ] describes and motivates the changes to the original experiment (design, participants, artifacts, procedures, data collected, and/or analysis techniques)
+- [ ] describes the level of interaction with the authors of the original study if the original researchers are not involved in the replication
+- [ ] describes and motivates the changes to the original study (design, participants, artifacts, procedures, data collected, and/or analysis techniques)
 
 <results>
 
@@ -44,6 +44,8 @@ This standard applies to empirical studies that meet the following criteria:
 <discussion>
 
 <conclusion>
+  
+<other>
 
 </checklist>
 
