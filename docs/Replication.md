@@ -12,6 +12,13 @@ This standard applies to empirical studies that meet the following criteria:
 
 - The replication attempt is deliberate and planned, not accidental overlap with a previous study.
 - The original study is clearly identified as a separate previous publication. If the replication is not the only replication of the original study, i.e., it is a part of a *family of replications*, all the other replications are identified and the current replication is clearly defined in the context of the family.
+  
+## Definitions
+  
+To _reproduce_ means to repeat the original study's data analysis on the original study's data.
+  
+To _replicate_ means to repeat a study by collecting new data and repeating the original study's analysis on the new data.
+
 
 ## Specific Attributes
 ### Essential
