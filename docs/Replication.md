@@ -62,17 +62,23 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 
 <method>
+- [ ] improves on the original study in some way (e.g. design, analysis, statistical power)
 - for *families of replications*:
   - [ ] provides a brief summary of the previous studies and replications, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic 
   - [ ] places the results into the context of the entire family of studies 
-  - [ ] draws conclusions based on analysis of the results of the entire family of studies
+  - [ ] draws conclusions based on analysis of the results of the entire family of studies 	
   
 <results>
 
+- [ ] differentiates between minor and major differences when discussing inconsistent results, elaborates on whether the differences are reasonable and/or expected
+	
+	
 <discussion>
 
-- [ ] draws conclusions across the two studies, providing insights that would not have been evident from either study individually
+- [ ] draws conclusions across the two (or more) studies; provides insights that would not have been evident from either study individually
 - [ ] highlights any conclusions of the original study that were strengthened
+- [ ] compares the limitations of the replication to the limitations of the original study
+- [ ] proposes hypotheses about new context variables that may have become evident through the analysis of multiple studies
 
 </checklist> 
 
@@ -82,18 +88,14 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 <results>
 
-- [ ] differentiates between minor and major differences when discussing inconsistent results, elaborates on whether the differences are reasonable and/or expected
-
 <discussion>
-
-- [ ] proposes hypotheses about new context variables that may have become evident through the analysis of multiple studies
 
 </checklist> 
 
 ## Invalid Criticisms
-- Lack of results that are inconsistent with the original study; the replication merely confirms the findings of the original study.
-- Lack of public data or replication package when the replication package of the original study is not publicly available either.
-- Criticizing the research questions, their wording, or formulation. Since the research question have been set in the original study, the replication must follow them, even in conceptual replications.
+- The replication merely confirms the findings of the original study; no inconsistencies are reported.
+- Failing to publish (e.g. in a replication package) materials owned by the original study authors who have not given permission to publish them. 
+- Criticizing the research questions including their wording or formulation (since the research questions are set in the original study, the replication must follow them, even in conceptual replications).
 
 ## Suggested Readings
 - J. C. Carver, “[Towards reporting guidelines for experimental replications: A proposal](http://carver.cs.ua.edu/Papers/Conference/2010/2010_RESER.pdf),” in 1st International Workshop on Replication in Empirical Software Engineering Research, vol. 1, 2010, pp. 1–4.
