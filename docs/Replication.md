@@ -38,14 +38,14 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
   - [ ] the artifacts of the original study
   - [ ] the context variables of the original study that might have affected the design of the study or interpretation of the results
   - [ ] the major findings of the original study
-- [ ] describes the level of interaction with the authors of the original study if the original researchers are not involved in the replication
-- [ ] describes and motivates the changes to the original study (design, participants, artifacts, procedures, data collected, and/or analysis techniques)
+- [ ]	EITHER: describes overlap or interactions with the original study author(s)
+	    OR: confirms that the original study author(s) were not involved in the replication 
+- [ ] describes and justifies any differences from the original study (design, participants, artifacts, procedures, data collection, or analysis)
 
 <results>
 
 - [ ] compares the results of the replication to the results of the original study
-- [ ] differentiates between results that are (i) consistent and (ii) inconsistent with the original study
-- [ ] if the replication is not the only replication of the original study, i.e., it is a part of a *family of replications*, the results are placed into the context of the entire family of studies and conclusions are drawn based on knowledge gained by analyzing the results of all studies
+- [ ] clearly differentiates between results that are consistent and inconsistent with the original study
 
 <discussion>
 
@@ -60,9 +60,12 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 - [ ] reporting of information about (i) the original study, (ii) the replication, (iii) the comparison of results, and (iv) conclusions are clearly separated<sup>[1](#footnote1)</sup>
 
-<method>
 
-- [ ] for *families of replications*, provides a brief summary of the previous studies and replications, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic
+<method>
+- for *families of replications*:
+  - [ ] provides a brief summary of the previous studies and replications, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic 
+  - [ ] places the results into the context of the entire family of studies 
+  - [ ] draws conclusions based on analysis of the results of the entire family of studies
   
 <results>
 
