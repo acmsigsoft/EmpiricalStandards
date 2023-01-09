@@ -31,14 +31,13 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 <method>
 
-- describes the original study in appropriate detail, including
+- describes the original study in appropriate detail, including:
   - [ ] the research questions of the original study
   - [ ] the design of the original study 
   - [ ] if applicable, the participants of the original study (their number and any relevant characteristics)
   - [ ] the artifacts of the original study
   - [ ] the context variables of the original study that might have affected the design of the study or interpretation of the results
   - [ ] the major findings of the original study
-  - [ ] if the replication is not the only replication of the original study, i.e., it is a part of a *family of replications*, a brief summary of the previous studies and replications is provided, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic
 - [ ] describes the level of interaction with the authors of the original study if the original researchers are not involved in the replication
 - [ ] describes and motivates the changes to the original study (design, participants, artifacts, procedures, data collected, and/or analysis techniques)
 
@@ -63,6 +62,8 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 <method>
 
+- [ ] for *families of replications*, provides a brief summary of the previous studies and replications, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic
+  
 <results>
 
 <discussion>
@@ -97,6 +98,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 - S. Heckman, J. C. Carver, M. Sherriff, and A. Al-zubidy, “A Systematic Literature Review of Empiricism and Norms of Reporting in Computing Education Research Literature,” ACM Transactions on Computing Education, vol. 22, no. 1. Association for Computing Machinery (ACM), pp. 1–46, Mar. 31, 2022. https://doi.org/10.1145/3470652.
 - F. Q. B. da Silva et al., “Replication of empirical studies in software engineering research: a systematic mapping study,” Empirical Software Engineering. Springer Science and Business Media LLC, Sep. 01, 2012. https://doi.org/10.1007/s10664-012-9227-7.
 - B. Kitchenham, “The role of replications in empirical software engineering—a word of warning,” Empirical Software Engineering, vol. 13, no. 2. Springer Science and Business Media LLC, pp. 219–221, Jan. 29, 2008. https://doi.org/10.1007/s10664-008-9061-0.
+- A. R. Dennis and J. S. Valacich, “A replication manifesto,” AIS Transactions on Replication Research, vol. 1, no. 1, p. 1, 2015
 
 ## Exemplars
 - T. Kosar, S. Gaberc, J. Carver, and M. Mernik. “Program Comprehension of Domain-Specific and General-Purpose Languages: Replication of a Family of Experiments Using Integrated Development Environments”. Empirical Software Engineering 23, 2734–2763 (2018). https://doi.org/10.1007/s10664-017-9593-2.
@@ -108,6 +110,6 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 ---
 <footnote><sup>[1](#footnote1)</sup>J. C. Carver, N. Juristo, M. T. Baldassarre, and S. Vegas, “Replications of software engineering experiments,” Empirical Software Engineering, vol. 19, no. 2. Springer Science and Business Media LLC, pp. 267–276, Dec. 05, 2013. https://doi.org/10.1007/s10664-013-9290-8.</footnote><br/>
-<footnote><sup>[2](#footnote2)</sup>A. R. Dennis and J. S. Valacich, “A replication manifesto,” AIS Transactions on Replication Research, vol. 1, no. 1, p. 1, 2015</footnote><br/>
+<footnote><sup>[2](#footnote2)</sup>Exact means ...; Methodological means ... ; Conceptual means... ) </footnote><br/>
 <footnote><sup>[3](#footnote3)</sup>J. C. Carver, “[Towards reporting guidelines for experimental replications: A proposal](http://carver.cs.ua.edu/Papers/Conference/2010/2010_RESER.pdf),” in 1st International Workshop on Replication in Empirical Software Engineering Research, vol. 1, 2010, pp. 1–4.</footnote><br>
 <footnote><sup>[4](#footnote4)</sup>F. Q. B. da Silva et al., “Replication of empirical studies in software engineering research: a systematic mapping study,” Empirical Software Engineering. Springer Science and Business Media LLC, Sep. 01, 2012. https://doi.org/10.1007/s10664-012-9227-7.</footnote><br/>
