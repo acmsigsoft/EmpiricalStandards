@@ -1,4 +1,3 @@
-
 # Replication
 <standard name="Replication">
 
@@ -38,8 +37,8 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
   - [ ] the artifacts of the original study
   - [ ] the context variables of the original study that might have affected the design of the study or interpretation of the results
   - [ ] the major findings of the original study
-- [ ]	EITHER: describes overlap or interactions with the original study author(s)
-	    OR: confirms that the original study author(s) were not involved in the replication 
+- [ ] EITHER: describes overlap or interactions with the original study author(s)<br/>
+        OR: confirms that the original study author(s) were not involved in the replication 
 - [ ] describes and justifies any differences from the original study (design, participants, artifacts, procedures, data collection, or analysis)
 
 <results>
@@ -62,6 +61,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 
 <method>
+	
 - [ ] improves on the original study in some way (e.g. design, analysis, statistical power)
 - for *families of replications*:
   - [ ] provides a brief summary of the previous studies and replications, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic 
