@@ -26,7 +26,9 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 <intro>
 
 - [ ] discusses the motivation for conducting the replication in appropriate detail (e.g. to validate the results, to broaden the results by changing the participant pool or the artifacts)
-- [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup>[2](#footnote2)</sup>, overlap (partial, complete, extended)<sup>[3](#footnote3)</sup>, and participants (internal, external, mixed)<sup>[4](#footnote4)</sup>.
+- [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup>[2](#footnote2)</sup>
+- [ ] defines the type of the replication by overlap (partial, complete, extended)<sup>[3](#footnote3)</sup>
+- [ ] defines the type of the replication by participants (internal, external, mixed)<sup>[4](#footnote4)</sup>
 
 <method>
 
