@@ -25,7 +25,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 <intro>
 
-- [ ] discusses the motivation for conducting the replication in appropriate detail (e.g. to validate the results, to broaden the results by changing the participant pool or the artifacts)
+- [ ] discusses the motivation for conducting the replication in appropriate detail (e.g., to validate the results, to broaden the results by changing the participant pool or the artifacts)
 - [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup>[2](#footnote2)</sup>
 - [ ] defines the type of the replication by overlap (partial, complete, extended)<sup>[3](#footnote3)</sup>
 - [ ] defines the type of the replication by participants (internal, external, mixed)<sup>[4](#footnote4)</sup>
@@ -64,7 +64,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 <method>
 	
-- [ ] improves on the original study in some way (e.g. design, analysis, statistical power)
+- [ ] improves on the original study in some way (e.g., design, analysis, statistical power)
 - for *families of replications*:
   - [ ] provides a brief summary of the previous studies and replications, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic 
   - [ ] places the results into the context of the entire family of studies 
@@ -96,7 +96,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 ## Invalid Criticisms
 - The replication merely confirms the findings of the original study; no inconsistencies are reported.
-- Failing to publish (e.g. in a replication package) materials owned by the original study authors who have not given permission to publish them. 
+- Failing to publish (e.g., in a replication package) materials owned by the original study authors who have not given permission to publish them. 
 - Criticizing the research questions including their wording or formulation (since the research questions are set in the original study, the replication must follow them, even in conceptual replications).
 
 ## Suggested Readings
