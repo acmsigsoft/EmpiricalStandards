@@ -41,6 +41,6 @@ In the main directory:
 
 ## References
 
-[1] John M Ziman. 1968. Public knowledge: An essay concerning the social dimension of science. Vol. 519. CUP Archive.
-[2] Paul Ralph. 2016. Practical suggestions for improving scholarly peer review quality and reducing cycle times. _Communications of the Association for Information Systems_ 38, 1 (2016), Article 13.
-[3] Paul Ralph et al. 2020 "Empirical Standards for Software Engineering Research." _arXiv_:2010.03525.
+[1] John M Ziman. 1968. Public knowledge: An essay concerning the social dimension of science. Vol. 519. CUP Archive. [doi:10.1063/1.3035233](https://doi.org/10.1063/1.3035233).<br>
+[2] Paul Ralph. 2016. Practical suggestions for improving scholarly peer review quality and reducing cycle times. _Communications of the Association for Information Systems_ 38, 1 (2016), Article 13, [doi:10.17705/1CAIS.03813](http://doi.org/10.17705/1CAIS.03813).<br>
+[3] Paul Ralph et al. 2020 "Empirical Standards for Software Engineering Research." [_arXiv_:2010.03525](https://arxiv.org/abs/2010.03525).<br>
