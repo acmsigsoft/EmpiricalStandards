@@ -36,7 +36,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
   - [ ] the research questions of the original study
   - [ ] the design of the original study 
   - [ ] if applicable, the participants of the original study (their number and any relevant characteristics)
-  - [ ] the artifacts of the original study
+  - [ ] the artifacts of the original study<sup>[5](#footnote5)</sup>
   - [ ] the context variables of the original study that might have affected the design of the study or interpretation of the results
   - [ ] the major findings of the original study
 - [ ] EITHER: describes overlap or interactions with the original study author(s)<br/>
@@ -121,3 +121,4 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 <footnote><sup>[2](#footnote2)</sup>Exact replication: same research questions, same method, same context. Methodological replication: same research questions, same method, different context. Conceptual replication: same research questions, different method, different context. (Dennis and Valacich, 2015)</footnote><br/>
 <footnote><sup>[3](#footnote3)</sup>Partial replication: addresses a subset of the original research questions. Complete replication: addresses each of the original reseach questions. Extended replication: addresses each of the original reseach questions and additional ones. (Carver, 2010)</footnote><br/>
 <footnote><sup>[4](#footnote4)</sup>Internal replication: the replicating team is the same as the original study's team. External replication: the replicating team is different from the original study's team. Mixed replication: overlaps exist between the replicating team and the original study's team. (da Silva et al., 2012)</footnote><br/>
+<footnote><sup>[5](#footnote5)</sup>Typical examples: input artifacts to experiments (such as questionnaires, user guides, etc.), output artifacts and data (interview transcripts, raw data, pre-processed data, etc.), analysis scripts, etc.</footnote><br/>
