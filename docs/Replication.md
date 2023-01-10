@@ -2,7 +2,7 @@
 <standard name="Replication">
 
 
-*<desc>A study that deliberately repeats a previous study (the "original study") to determine whether its results can be replicated.</desc>* (Carver et al., 2013)
+*<desc>A study that deliberately repeats a previous study (the "original study") to determine whether its results can be reproduced.</desc>* (Carver et al., 2013)
 
 
 ## Application 
