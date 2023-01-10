@@ -49,6 +49,12 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]   describes data sources (e.g. participants' demographics and work roles)
 - [ ]   defines unit(s) of analysis or observation
 
+
+
+
+
+
+
 <results>
 
 - [ ]   presents a clear chain of evidence from observations to findings
@@ -59,7 +65,19 @@ captures a large quantitative dataset with limited context, consider the
 <other>    
     
 </checklist>
-    
+
+
+
+### Supplementary Materials
+<checklist name="Supplementary">
+- [ ]	<supplement> coding scheme (required)</supplement>
+- [ ]	<supplement> coding examples (required)</supplement>
+- [ ]	<supplement> extended chain-of-evidence table(s) (required)</supplement>
+- [ ]	<supplement> interview guide(s) (optional)</supplement>
+- [ ]	<supplement> decision rules (optional)</supplement>
+
+</checklist>
+
 ### Desirable Attributes
 <checklist name="Desirable">
     
