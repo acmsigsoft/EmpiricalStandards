@@ -59,7 +59,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 </checklist>
      
-### Desirable Attributes
+## Desirable Attributes
 
 <checklist name="Desirable">
 
