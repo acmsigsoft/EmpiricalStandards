@@ -53,8 +53,6 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 -->
 
 <discussion>
-
-<conclusion>
   
 <other>
 
