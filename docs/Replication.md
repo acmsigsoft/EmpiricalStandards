@@ -23,6 +23,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 ## Specific Attributes
 	
 ### Essential
+	
 <checklist name="Essential">
 
 <intro>
@@ -58,20 +59,21 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 </checklist>
 
-### Desirable
+### Desirable Attributes
+	
 <checklist name="Desirable">
 
-- [ ] clearly seperates information about (i) the original study, (ii) the replication, (iii) the comparison of results, and (iv) conclusions <sup>[1](#footnote1)</sup>
-- [ ] improves on the original study in some way (e.g., design, analysis, statistical power)
+- [ ] 	clearly seperates information about (i) the original study, (ii) the replication, (iii) the comparison of results, and (iv) conclusions <sup>[1](#footnote1)</sup>
+- [ ] 	improves on the original study in some way (e.g., design, analysis, statistical power)
 - for *families of replications*:
-  - [ ] provides a brief summary of the previous studies and replications, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic 
-  - [ ] places the results into the context of the entire family of studies 
-  - [ ] draws conclusions based on analysis of the results of the entire family of studies 	
-- [ ] differentiates between minor and major differences when discussing inconsistent results, elaborates on whether the differences are reasonable and/or expected
-- [ ] draws conclusions across the two (or more) studies; provides insights that would not have been evident from either study individually
-- [ ] highlights any conclusions of the original study that were strengthened
-- [ ] compares the limitations of the replication to the limitations of the original study
-- [ ] proposes hypotheses about new context variables that may have become evident through the analysis of multiple studies
+  	- [ ] provides a brief summary of the previous studies and replications, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic 
+	- [ ] places the results into the context of the entire family of studies 
+  	- [ ] draws conclusions based on analysis of the results of the entire family of studies 	
+- [ ] 	differentiates between minor and major differences when discussing inconsistent results, elaborates on whether the differences are reasonable and/or expected
+- [ ]	 draws conclusions across the two (or more) studies; provides insights that would not have been evident from either study individually
+- [ ] 	highlights any conclusions of the original study that were strengthened
+- [ ] 	compares the limitations of the replication to the limitations of the original study
+- [ ] 	proposes hypotheses about new context variables that may have become evident through the analysis of multiple studies
 
 </checklist> 
 
