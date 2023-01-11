@@ -14,7 +14,11 @@
 
 **Domenico Bianculli**, University of Luxemburg, Luxemburg [Engineering]
 
+**Jeffrey C. Carver**, University of Alabama, USA [Replication]
+
 **Preetha Chatterjee**, Drexel University, USA [Repository Mining]
+
+**Istvan David**, University of Montreal, Canada [Replication]
 
 **Jessica Diaz**, Technical University of Madrid, Spain [IRR/IRA]
 
