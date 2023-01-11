@@ -81,6 +81,12 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 
 </checklist> 
+	
+## Antipatterns
+	
+- replicating an underpowered study with a second, equally-underpowered study
+- repeating rather than correcting mistakes (e.g. using inappropriate statistical tests) in the original study 
+
 
 ## Invalid Criticisms
 
