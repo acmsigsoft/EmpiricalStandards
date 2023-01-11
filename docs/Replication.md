@@ -39,8 +39,8 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
   - [ ] the artifacts of the original study<sup>[5](#footnote5)</sup>
   - [ ] the context variables of the original study that might have affected the design of the study or interpretation of the results
   - [ ] the major findings of the original study
-- [ ] EITHER: describes overlap or interactions with the original study author(s)<br/>
-        OR: confirms that the original study author(s) were not involved in the replication 
+- [ ] EITHER: describes overlap or interactions with the original study author(s)    
+	OR: confirms that the original study author(s) were not involved in the replication
 - [ ] describes and justifies any differences from the original study (design, participants, artifacts, procedures, data collection, or analysis)
 
 <results>
@@ -95,11 +95,13 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 </checklist> 
 
 ## Invalid Criticisms
+
 - The replication merely confirms the findings of the original study; no inconsistencies are reported.
 - Failing to publish (e.g., in a replication package) materials owned by the original study authors who have not given permission to publish them. 
 - Criticizing the research questions including their wording or formulation (since the research questions are set in the original study, the replication must follow them, even in conceptual replications).
 
 ## Suggested Readings
+
 - Jeffrey C. Carver. 2010. [Towards reporting guidelines for experimental replications: A proposal](http://carver.cs.ua.edu/Papers/Conference/2010/2010_RESER.pdf). 1st International Workshop on Replication in Empirical Software Engineering Research. 2010. pp. 1–4.
 - Jeffrey C. Carver, Natalia Juristo, Maria Teresa Baldassarre, and Sira Vegas. 2013. Replications of Software Engineering Experiments. Empirical Software Engineering 19, 2 (2013), 267–276. DOI:http://dx.doi.org/10.1007/s10664-013-9290-8 
 - Alan Dennis and Joseph Valacich. 2014. A replication manifesto. AIS Transactions on Replication Research 1 (2014), 1–4. DOI:http://dx.doi.org/10.17705/1atrr.00001 
@@ -109,6 +111,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 
 ## Exemplars
+
 - Tomaž Kosar, Sašo Gaberc, Jeffrey C. Carver, and Marjan Mernik. 2018. Program comprehension of domain-specific and general-purpose languages: Replication of a family of experiments using Integrated Development Environments. Empirical Software Engineering 23, 5 (2018), 2734–2763. DOI:http://dx.doi.org/10.1007/s10664-017-9593-2 
 - Faizan Khan, Istvan David, Daniel Varro, and Shane McIntosh. 2022. Code cloning in smart contracts on the Ethereum Platform: An extended replication study. IEEE Transactions on Software Engineering (2022), 1–13. DOI:http://dx.doi.org/10.1109/tse.2022.3207428 
 - Davide Fucci and Burak Turhan. 2013. On the role of tests in test-driven development: A differentiated and partial replication. Empirical Software Engineering 19, 2 (2013), 277–302. DOI:http://dx.doi.org/10.1007/s10664-013-9259-7
@@ -117,8 +120,8 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 - Marta N. Gómez and Silvia T. Acuña. 2013. A replicated quasi-experimental study on the influence of personality and team climate in software development. Empirical Software Engineering 19, 2 (2013), 343–377. DOI:http://dx.doi.org/10.1007/s10664-013-9265-9 
 
 ---
-<footnote><sup>[1](#footnote1)</sup>See Carver et al. (2013).</footnote><br/>
-<footnote><sup>[2](#footnote2)</sup>Exact replication: same research questions, same method, same context. Methodological replication: same research questions, same method, different context. Conceptual replication: same research questions, different method, different context. (Dennis and Valacich, 2015)</footnote><br/>
-<footnote><sup>[3](#footnote3)</sup>Partial replication: addresses a subset of the original research questions. Complete replication: addresses each of the original reseach questions. Extended replication: addresses each of the original reseach questions and additional ones. (Carver, 2010)</footnote><br/>
-<footnote><sup>[4](#footnote4)</sup>Internal replication: the replicating team is the same as the original study's team. External replication: the replicating team is different from the original study's team. Mixed replication: overlaps exist between the replicating team and the original study's team. (da Silva et al., 2012)</footnote><br/>
-<footnote><sup>[5](#footnote5)</sup>Typical examples: input artifacts to experiments (such as questionnaires, user guides, etc.), output artifacts and data (interview transcripts, raw data, pre-processed data, etc.), analysis scripts, etc.</footnote><br/>
+<footnote><sup>[1](#footnote1)</sup>See Carver et al. (2013).</footnote><br>
+<footnote><sup>[2](#footnote2)</sup>Exact replication: same research questions, same method, same context. Methodological replication: same research questions, same method, different context. Conceptual replication: same research questions, different method, different context. (Dennis and Valacich, 2015)</footnote><br>
+<footnote><sup>[3](#footnote3)</sup>Partial replication: addresses a subset of the original research questions. Complete replication: addresses each of the original reseach questions. Extended replication: addresses each of the original reseach questions and additional ones. (Carver, 2010)</footnote><br>
+<footnote><sup>[4](#footnote4)</sup>Internal replication: the replicating team is the same as the original study's team. External replication: the replicating team is different from the original study's team. Mixed replication: overlaps exist between the replicating team and the original study's team. (da Silva et al., 2012)</footnote><br>
+<footnote><sup>[5](#footnote5)</sup>Typical examples: input artifacts to experiments (such as questionnaires, user guides, etc.), output artifacts and data (interview transcripts, raw data, pre-processed data, etc.), analysis scripts, etc.</footnote><br>
