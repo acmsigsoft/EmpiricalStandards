@@ -22,7 +22,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 
 ## Specific Attributes
 	
-### Essential
+### Essential Attributes
 	
 <checklist name="Essential">
 
@@ -58,9 +58,9 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 <other>
 
 </checklist>
-
+     
 ### Desirable Attributes
-	
+
 <checklist name="Desirable">
 
 - [ ] 	clearly seperates information about (i) the original study, (ii) the replication, (iii) the comparison of results, and (iv) conclusions <sup>[1](#footnote1)</sup>
@@ -78,11 +78,11 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 </checklist> 
 
 
-### Extraordinary
+<!-- ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
 
-</checklist> 
+</checklist>  -->
 	
 ## Antipatterns
 	
