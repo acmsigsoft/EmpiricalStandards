@@ -46,15 +46,17 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 	OR: confirms that the original study author(s) were not involved in the replication 
 - [ ] describes and justifies any differences from the original study (design, participants, artifacts, procedures, data collection, or analysis)
 
-<!-- <results>
+<results>
 
 - [ ] compares the results of the replication to the results of the original study
 - [ ] clearly differentiates between results that are consistent and inconsistent with the original study
--->
 
+
+<!-- 
 <discussion>
   
 <other>
+-->
 
 </checklist>
      
