@@ -33,7 +33,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 - [ ] defines the type of the replication by overlap (partial, complete, extended)<sup>[3](#footnote3)</sup>
 - [ ] defines the type of the replication by participants (internal, external, mixed)<sup>[4](#footnote4)</sup>
 
-<method>
+<!-- <method>
 
 - describes the original study in appropriate detail, including:
   - [ ] the research questions of the original study
@@ -56,10 +56,10 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 <conclusion>
   
 <other>
-
+ -->
 </checklist>
      
-## Desirable Attributes
+### Desirable Attributes
 
 <checklist name="Desirable">
 
