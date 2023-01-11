@@ -33,7 +33,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
 - [ ] defines the type of the replication by overlap (partial, complete, extended)<sup>[3](#footnote3)</sup>
 - [ ] defines the type of the replication by participants (internal, external, mixed)<sup>[4](#footnote4)</sup>
 
-<!-- <method>
+<method>
 
 - describes the original study in appropriate detail, including:
   - [ ] the research questions of the original study
@@ -42,7 +42,7 @@ To _replicate_ means to repeat a study by collecting new data and repeating the 
   - [ ] the artifacts of the original study<sup>[5](#footnote5)</sup>
   - [ ] the context variables of the original study that might have affected the design of the study or interpretation of the results
   - [ ] the major findings of the original study
-- [ ] EITHER: describes overlap or interactions with the original study author(s)    
+<!-- - [ ] EITHER: describes overlap or interactions with the original study author(s)    
 	OR: confirms that the original study author(s) were not involved in the replication
 - [ ] describes and justifies any differences from the original study (design, participants, artifacts, procedures, data collection, or analysis)
 
