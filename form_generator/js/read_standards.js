@@ -136,16 +136,17 @@ function generate_decision_message_block() {
 			document.getElementById("checklist_download").disabled = false;
 
 			// if number of type 3 + type 4 is greater than 0
-			if (justification_type3_checked_count + justification_type4_checked_count > 0 ){
+			if (justification_type3_checked_count + justification_type4_checked_count + justification_type2_checked_count > 0 ){
 				msg = "REJECT";
 				document.getElementById("deviation_unreasonable").style.display = "block";
 
+			// The GATEKEEP is not needed for now, so type 2 is now considered as REJECT
 			// if number of type 2 is greater than 0
-			} else if (justification_type2_checked_count > 0) {
-				msg = "GATEKEEP";
-				document.getElementById("deviation_reasonable").style.display = "block";
-				document.getElementById("Desirable").style.display = "block";
-				document.getElementById("Extraordinary").style.display = "block";
+			//} else if (justification_type2_checked_count > 0) {
+			//	msg = "GATEKEEP";
+			//	document.getElementById("deviation_reasonable").style.display = "block";
+			//	document.getElementById("Desirable").style.display = "block";
+			//	document.getElementById("Extraordinary").style.display = "block";
 
 			// if number of type 1 is greater than 0
 			} else if (justification_type1_checked_count > 0) {
@@ -160,17 +161,14 @@ function generate_decision_message_block() {
 				document.getElementById("Extraordinary").style.display = "block";
 
 			}
-
-			document.getElementById("decision_msg").innerHTML = msg;
-
-
-			document.getElementById("decision_msg").style.display = "block";
+			
+			// Showing a decision message is not needed for now
+			//document.getElementById("decision_msg").innerHTML = msg;
+			//document.getElementById("decision_msg").style.display = "block";
 		}
 			
 		else{
 			document.getElementById("checklist_download").disabled = true;
-
-			
 			document.getElementById("decision_msg").style.display = "none";
 		}
 	}
@@ -584,7 +582,7 @@ function generate_message(id, color, text, padding, indent) {
 	var message = document.createElement("div");
 	message.id = id;
 	message.className = "message";
-	message.innerHTML = text;
+	//message.innerHTML = text; // Showing instructions about explaining deviations is not needed for now
 	message.style = "color:" + color + "; padding-left:"+padding+"em; text-indent:"+indent+"em; display:none";
 
 	return message;
