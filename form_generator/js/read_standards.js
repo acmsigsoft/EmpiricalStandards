@@ -1232,7 +1232,7 @@ function saveFile(){
 	}
 	
 	if(unreasonable.style.display == "block") {
-		generated_text += "\nReasons for Rejection\n";
+		generated_text += "\nUnreasonable Deviations\n";
 	}
 
 	if(reasonable.style.display == "block") {
