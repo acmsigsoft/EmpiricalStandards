@@ -2,9 +2,9 @@
 
 <a id="anonymization">**Anonymization**</a>: the process of removing or transforming identifying elements of data such that it cannot be used by a third-party or the data-custodian themselves to (re)identify an individual either directly or in combination with other extant data.
 
-<a id="artifact">**Artifact**</a>: an artificial object (e.g. computer program, document, method, model, practice, technique, template).
+<a id="artifact">**Artifact**</a>: an artificial object (e.g., computer program, document, method, model, practice, technique, template).
 
-<a id="chain-of-evidence">**Chain-of-evidence**</a>: (in qualitative research) a mapping of raw data (e.g. quotations) to theoretical concepts (e.g. themes, categories), typically with one or more intermediate steps (e.g. codes, labels, subcategories), sometimes presented as a table.
+<a id="chain-of-evidence">**Chain-of-evidence**</a>: (in qualitative research) a mapping of raw data (e.g., quotations) to theoretical concepts (e.g., themes, categories), typically with one or more intermediate steps (e.g., codes, labels, subcategories), sometimes presented as a table.
 
 <a id="credibility">**Credibility**</a>: the extent to which conclusions are supported by rich, multivocal evidence.
 
@@ -16,17 +16,17 @@
 
 <a id="external-validity">**External validity**</a>: Can the conclusions be generalized to the target population? The characteristics and size of the sample should represent the extended population.
 
-<a id="gatekeeper">**Gatekeeper**</a>: A person or organization who controls access to individuals (e.g. employees) or data being researched. Gatekeepers may influence individual’s participation decisions (e.g. employers may coerce employees to participate), affect research outcomes (e.g. by controlling whose voices are heard) or be affected by research outcomes (e.g. lose credibility with employees).
+<a id="gatekeeper">**Gatekeeper**</a>: A person or organization who controls access to individuals (e.g., employees) or data being researched. Gatekeepers may influence individual’s participation decisions (e.g., employers may coerce employees to participate), affect research outcomes (e.g., by controlling whose voices are heard) or be affected by research outcomes (e.g., lose credibility with employees).
 
 <a id="generalizability">**Generalizability**</a>: See **[External validity](#external-validity)**.
 
-<a id="informed-consent">**Informed consent**</a>: A freely-made decision by an individual to participate in research in the light of full information about the purposes, benefits, and risks to them of participating in the research, and the options available to them to withdraw themselves or their data during or after the study. The freedom to consent/withdraw may be affected by pre-existing relationships with the researchers (e.g. family/friendship) or gatekeepers.
+<a id="informed-consent">**Informed consent**</a>: A freely-made decision by an individual to participate in research in the light of full information about the purposes, benefits, and risks to them of participating in the research, and the options available to them to withdraw themselves or their data during or after the study. The freedom to consent/withdraw may be affected by pre-existing relationships with the researchers (e.g., family/friendship) or gatekeepers.
 
 <a id="internal-validity">**Internal validity**</a>: Are the relationships between the investigated factors examined? In survey research, it is difficult to control the conditions in which the factors are studied and to account for potential confounding factors. Low internal validity is expected.
 
 <a id="multivocal">**Multivocal**</a>: The property of being based on—and recognizing differences between—people with different opinions and backgrounds (including gender, culture, education, and class).
 
-<a id="pseudonymization">**Pseudonymization**</a>: The process of removing directly-identifying elements of data and creating a separate explicit (e.g. allocating a random number to a participant’s record in place of their name) or implicit (e.g. relying on timestamps to resolve logs to sign-on information) map between the identifiable aspects of the data and the remainder. _Pseudo_nymizing differs from _anon_ymizing in that individuals can be re-identified using the map.
+<a id="pseudonymization">**Pseudonymization**</a>: The process of removing directly-identifying elements of data and creating a separate explicit (e.g., allocating a random number to a participant’s record in place of their name) or implicit (e.g., relying on timestamps to resolve logs to sign-on information) map between the identifiable aspects of the data and the remainder. _Pseudo_nymizing differs from _anon_ymizing in that individuals can be re-identified using the map.
 
 <a id="objectivity">**Objectivity**</a>: Are the results free from the bias of the researchers? This can be achieved through standardization of the procedures for data collection, analysis, and interpretation.
 
@@ -42,7 +42,7 @@
 
 <a id="reproducibility">**Reproducibility**</a>: A study is reproducible when an independent researcher can precisely recreate the results using the original study's data and source code. Interpretivists and postmodernists reject the notion that social science is reproducible, and qualitative research is typically not reproducible. Much positivist research is not reproducible because it is impractical or unethical to publish the dataset.
 
-<a id="resonance">**Resonance**</a>: the extent to which a study’s conclusions make sense to (i.e. resonate with) participants
+<a id="resonance">**Resonance**</a>: the extent to which a study’s conclusions make sense to (i.e., resonate with) participants
 
 <a id="rigor">**Rigor**</a>: the extent to which theory, data collection, and data analysis are sufficient, appropriate and not oversimplified.
 
