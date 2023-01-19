@@ -30,7 +30,7 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 - [ ] describes and justifies the data sources (e.g. GitHub, StackOverflow)
     - (if the selected data source(s) are obscure) explains in detail why they are appopriate for the goals of the study (e.g. consider number of repositories data quality, terms and conditions that may limit access to information)
 - [ ] describes and justifies how the repositories are selected from the data sources (e.g. selection criteria, use of third-party tools, APIs, programming languages of choice)
-- [ ] describes how the inclusion and exclusion criteria was validated (e.g., by manually inspecting the results of the automated search)
+- [ ] describes how the inclusion and exclusion criteria were validated (e.g., by manually inspecting the results of the automated search)
 - [ ] describes the selected repositories     
 - [ ] describes the procedure for the acquisition (e.g., first selecting repositories and then downloading, or all completed together)
 - [ ] if the data obtained is too large to be processed in its entirety
