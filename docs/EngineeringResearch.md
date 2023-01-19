@@ -114,7 +114,7 @@ standard is not appropriate for:
     ethical reasons preventing artifact disclosure.
 -   The artifact is not experimentally compared with related approaches
     *that are not publicly available*. In other words, before saying
-    "you should have compared this against X, make sure X is actually
+    "you should have compared this against X," make sure X is actually
     available and functional.
 -   This is not the first known solution to the identified problem. The
     novelty of the paper can be in how it achieves scalability, better
