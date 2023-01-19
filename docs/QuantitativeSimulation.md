@@ -23,7 +23,7 @@ The standard applies to research studies that use simulation to understand, asse
 <method>
 
 - [ ] describes the simulation model (conceptual, implementation, or hybrid abstraction levels), including input parameters and response variables
-- [ ] describes the underlying simulation approach<sup>[1](#myfootnote1)</sup>)
+- [ ] describes the underlying simulation approach<sup>[1](#myfootnote1)</sup>
 - [ ] describes simulation packages or tools used to develop and run the simulation model, including version numbers, and computational environments
 - [ ] describes the data used for model calibration, the calibration procedures, and contextual information
 - [ ] describes how the simulation model was verified and validated at different abstraction levels<sup>[2](#myfootnote2)</sup>
