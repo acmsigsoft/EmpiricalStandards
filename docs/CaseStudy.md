@@ -45,6 +45,7 @@ captures a large quantitative dataset with limited context, consider the
 
 - [ ]   justifies the selection of the case(s) or site(s) that was(were) studied
 - [ ]   describes the site(s) in rich detail
+- [ ]   the site is a real (physical or virtual) place, not a toy example or imaginary world    
 - [ ]   reports the type of case study<sup>[1](#myfootnote1)</sup>
 - [ ]   describes data sources (e.g. participants' demographics and work roles)
 - [ ]   defines unit(s) of analysis or observation
