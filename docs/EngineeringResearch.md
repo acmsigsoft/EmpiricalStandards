@@ -32,7 +32,7 @@ standard is not appropriate for:
 
 - [ ]   Empirically evaluates the proposed artifact using:  
   [action research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/ActionResearch.md), in which the researchers intervene in a real organization using the artifact,  
-  a [case study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/CaseStudy.md) in which the researchers obsevere a real organization using the artifact,  
+  a [case study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/CaseStudy.md) in which the researchers observe a real organization using the artifact,  
   a [controlled experiment](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Experiments.md) in which human participants use the artifact,  
   a [quantitative simulation](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/QuantitativeSimulation.md) in which the artifact is assessed (usually against a competing artifact) in an artificial environment,  
   a [benchmarking study](https://github.com/acmsigsoft/EmpiricalStandards/edit/master/docs/Benchmarking.md), in which the artifact is assessed using one or more benchmarks, or  
@@ -96,6 +96,7 @@ standard is not appropriate for:
 -   evaluation consists *only* of quantitative performance data that is
     not compared to established benchmarks or alternative solutions (see
     related point in "Invalid Criticism")
+-   evaluation using a non-experimental (single group, non-repeated) design
 
 ## Invalid Criticisms
 
