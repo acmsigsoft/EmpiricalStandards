@@ -97,6 +97,7 @@ standard is not appropriate for:
     not compared to established benchmarks or alternative solutions (see
     related point in "Invalid Criticism")
 -   evaluation using a non-experimental (single group, non-repeated) design
+-   evaluation using toy examples (sometimes misrepresented as "case studies")
 
 ## Invalid Criticisms
 
