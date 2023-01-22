@@ -13,7 +13,7 @@ guidelines where available.
 Reviewers should only be invited for papers with the following
 attributes. By assigning reviewers, the editor/chair/administrator is
 confirming that the manuscript meets these criteria:
--   meets venue's requirements (e.g. length, author-blinding,
+-   meets venue's requirements (e.g. length, author-masking,
     appropriate keywords)
 -   within the venue's scope
 -   meets the minimum level of language quality acceptable to the
