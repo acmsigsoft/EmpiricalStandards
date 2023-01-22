@@ -30,7 +30,7 @@ standard is not appropriate for:
 
 <method>
 
-- [ ]   Empirically evaluates the proposed artifact using:  
+- [ ]   empirically evaluates the proposed artifact using:  
   [action research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/ActionResearch.md), in which the researchers intervene in a real organization using the artifact,  
   a [case study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/CaseStudy.md) in which the researchers observe a real organization using the artifact,  
   a [controlled experiment](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Experiments.md) in which human participants use the artifact,  
