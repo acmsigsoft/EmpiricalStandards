@@ -71,11 +71,11 @@ To _[replicate](/Supplements/Glossary.md#replicability)_ means to repeat a study
 	- [ ] places the results into the context of the entire family of studies 
   	- [ ] draws conclusions based on analysis of the results of the entire family of studies 	
 - [ ] 	differentiates between minor and major differences when discussing inconsistent results, elaborates on whether the differences are reasonable and/or expected
-- [ ]	 draws conclusions across the two (or more) studies; provides insights that would not have been evident from either study individually
+- [ ]	draws conclusions across the two (or more) studies; provides insights that would not have been evident from either study individually
 - [ ] 	highlights any conclusions of the original study that were strengthened
 - [ ] 	compares the limitations of the replication to the limitations of the original study
 - [ ] 	proposes hypotheses about new context variables that may have become evident through the analysis of multiple studies
-- [ ] 	protocol of the replication is checked/reviewed by the original authors 
+- [ ] 	protocol of the replication was checked/reviewed by the original authors 
 
 </checklist> 
 
