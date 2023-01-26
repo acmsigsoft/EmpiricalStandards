@@ -75,6 +75,7 @@ To _[replicate](/Supplements/Glossary.md#replicability)_ means to repeat a study
 - [ ] 	highlights any conclusions of the original study that were strengthened
 - [ ] 	compares the limitations of the replication to the limitations of the original study
 - [ ] 	proposes hypotheses about new context variables that may have become evident through the analysis of multiple studies
+- [ ] 	protocol of the replication is checked/reviewed by the original authors 
 
 </checklist> 
 
