@@ -74,7 +74,7 @@ consider the **Discourse Analysis Standard**.
 
 An interview study should address appropriate qualitative quality
 criteria such as: **credibility,** **resonance**, **usefulness**, and
-**transferability** (see **Glossary**). Quantitative quality criteria
+**transferability** (see [Glossary](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Glossary.md)). Quantitative quality criteria
 such as internal validity, construct validity, generalizability and
 reliability typically do not apply.
 
