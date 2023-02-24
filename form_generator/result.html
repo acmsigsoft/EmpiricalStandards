@@ -10,6 +10,15 @@ layout: default
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../form_generator/css/appearance.css">
   <link rel="stylesheet" href="../form_generator/css/tooltip.css">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', '{{ site.google_analytics }}');
+  </script>
 </head>
 <body onload="generateStandardChecklist()"></body>
 </html>

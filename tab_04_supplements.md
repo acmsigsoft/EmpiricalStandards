@@ -57,6 +57,14 @@ function openSupplementFromURL(evt) {
   document.getElementById(supplementName+'_b').className += " active";
 }
 </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ site.google_analytics }}');
+</script>
 </head>
 <body onload="openSupplementFromURL(event)">
 

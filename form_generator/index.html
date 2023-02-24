@@ -1,11 +1,19 @@
-
 <html>
     <head>
 		<title>Empirical Standards</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="../form_generator/css/appearance.css">
-        <link rel="stylesheet" href="../form_generator/css/tooltip.css">
+        <link rel="stylesheet" href="../form_generator/css/tooltip.css">		
+        
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', '{{ site.google_analytics }}');
+		</script>
     </head>
     <body>
 	<div id="container">
