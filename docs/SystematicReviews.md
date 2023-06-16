@@ -102,6 +102,12 @@ _A study that appraises, analyses, and synthesizes primary or secondary literatu
     studies' quality explicitly.
 -   Reviewing an area in which there are too few high-quality primary
     studies to draw reliable conclusions.
+	
+## Invalid Criticisms
+
+-   The search queries are not identical in all databases.
+-   The analysis strategy should be more qualitative/quantitative
+	
 
 ## Suggested Readings 
 
