@@ -124,6 +124,9 @@ standard is not appropriate for:
     realistic systems, stronger theoretical guarantees, or other aspects
     of improvement. Proposed artifacts should outperform existing
     artifacts on *some* dimension(s).
+-   The paper does not explicitly define research question(s), if the
+    paper instead defines an addressed problem. In that case, the implicit
+    research question is how the problem can be addressed.
 -   The contribution is not technically complicated. What matters is
     that it works. Unnecessary complexity is undesirable.
 
