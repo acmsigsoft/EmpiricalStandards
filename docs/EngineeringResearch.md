@@ -105,28 +105,22 @@ standard is not appropriate for:
     predominately empirical papers. The more innovative the artifact and
     more comprehensive the conceptual evaluation, the less we should
     expect from the empirical study.
--   Too few experimental subjects (e.g. the source code used to evaluate
+-   "Too few experimental subjects" (e.g. the source code used to evaluate
     a static analysis technique) if few subjects are available in the
     contribution's domain or the experimental evaluation is part of a
     more comprehensive validation strategy (e.g. formal arguments).
     Other criteria, such as the variety, realism, availability, and
-    scale of the subjects, should also be considered to assess the
-    quality of the evaluation.
+    scale of the subjects, should also be considered.
 -   No replication package, if there are clear, convincing practical or
     ethical reasons preventing artifact disclosure.
 -   The artifact is not experimentally compared with related approaches
     *that are not publicly available*. In other words, before saying
     "you should have compared this against X," make sure X is actually
     available and functional.
--   This is not the first known solution to the identified problem. The
-    novelty of the paper can be in how it achieves scalability, better
-    performance on specific classes of problems, applicability to
-    realistic systems, stronger theoretical guarantees, or other aspects
-    of improvement. Proposed artifacts should outperform existing
-    artifacts on *some* dimension(s).
--   The paper does not explicitly define research question(s), if the
-    paper instead defines an addressed problem. In that case, the implicit
-    research question is how the problem can be addressed.
+-   This is not the first known solution to the identified problem. Proposed artifacts should outperform existing
+    artifacts on *some* dimension(s); e.g. scalability, performance on specific classes of problems, applicability to
+    realistic systems, theoretical guarantees.  
+-   The paper does not explicitly define research question(s). Engineering papers often define a motivating "problem" or "objective" rather than a research questiion. 
 -   The contribution is not technically complicated. What matters is
     that it works. Unnecessary complexity is undesirable.
 
