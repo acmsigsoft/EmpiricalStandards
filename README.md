@@ -1,6 +1,6 @@
 # Empirical Standards
 
-The _ACM SIGSOFT Empirical Standards for Software Engineering_ are a type of evidence standard. _Evidence standards_, like the CONSORT and PRISMA statements in health and medicine, the American Psychological Associations Journal Article Reporting Standards, and the WhatWorksClearinghouse in Education, are documents that attempt to express specific expectations for one or more types of research. Serious scientific communities use evidence standards to help distinguish good research from bad, and sufficient evidence from insuffient.  
+The _ACM SIGSOFT Empirical Standards for Software Engineering_ are a type of evidence standard. _Evidence standards_, like the CONSORT and PRISMA statements in health and medicine, the American Psychological Association's Journal Article Reporting Standards, and the WhatWorksClearinghouse in Education, are documents that attempt to express specific expectations for one or more types of research. Serious scientific communities use evidence standards to help distinguish good research from bad, and sufficient evidence from insufficient.  
 
 Evidence standards can include expectations about the way research is conducted (method) and reported, as well as the type or quantity of evidence expected to justify a specific intervention. The Software Engineering (SE) Empirical Standards focus on the first two---they express the SE community's collective expectations for research methodology and reporting. Here _empirical_ denotes research that uses data rather than a mathematical proof or a philosophical treatise. The data can be qualitative or quantitative; real or synthetic. "Empirical" does **not** mean "positivist."
 
@@ -22,7 +22,7 @@ Empirical standards are the secret to fixing this situation. With the standards,
 
 Obviously, if authors have these criteria in advance, they can use the criteria to design more rigorous studies. There's a lot to remember when designing a study, and robust methodological training is rare in our community. The standards provide concise, convenient checklists to help us remember all the core practices for a given method.   
 
-### 3. Educating reseaerchers
+### 3. Educating researchers
 
 The standards can also be used for educational purposes. While they cannot replace a good methods textbook, the lists of references and exemplars can be used to construct reading lists, and the specific attributes can be used to shepherd graduate students through their study designs and paper write-ups. Our tools are designed to help authors and reviewers access more information about unfamiliar concepts. 
 
