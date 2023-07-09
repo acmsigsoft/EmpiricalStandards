@@ -4,9 +4,9 @@
 
 You can find the standards, our report and our presentation slides here: [https://github.com/acmsigsoft/EmpiricalStandards](https://github.com/acmsigsoft/EmpiricalStandards)
 
-### Will the standards lead to lower quality papers as researchers aim to do the bare mininimum to get publications?
+### Will the standards lead to lower-quality papers as researchers aim to do the bare minimum to get publications?
 
-We have three responses to this question: (1) If everyone did the bare minimum to comply with the standards, overall research quality would skyrocket. (2) Some researchers may do the minimum, but academia is a land of overachievers. For everyone aiming for a bare pass, there are problably two or three determined to get a best paper award. (3) Over time, we can raise the minimum bar by shifting making more attributes "essential."
+We have three responses to this question: (1) If everyone did the bare minimum to comply with the standards, overall research quality would skyrocket. (2) Some researchers may do the minimum, but academia is a land of overachievers. For everyone aiming for a bare pass, there are probably two or three determined to get a best paper award. (3) Over time, we can raise the minimum bar by shifting making more attributes "essential."
 
 ### How do the standards affect incentives to produce unobjectionable but low-impact research vs. controversial but potentially high-impact research? Do they privilege rigour over relevance, interestingness and importance?
 
@@ -38,7 +38,7 @@ The standards allow a rough ranking of papers based on their number of desirable
 
 ### How would this work with conferences and journals that have fewer slots than submissions? 
 
-The limited number of “slots” at journals is a side effect of the idiocy of printing articles on dead tree, and we should accept no such limits. Moreover, using acceptance rate as a measure of conference quality is invalid, indefensible and unscientific. Competition is anathema to science. 
+The limited number of “slots” at journals is a side effect of the idiocy of printing articles on dead trees, and we should accept no such limits. Moreover, using acceptance rate as a measure of conference quality is invalid, indefensible and unscientific. Competition is anathema to science. 
 
 If there are more accepted papers than speaking slots, perhaps we should let attendees vote for the most exciting papers (which get speaking slots) and the rest are presented as posters but still published as full papers in the proceedings. That’s just one idea. The point is that we should fundamentally rethink the way we run conferences, get rid of all the counterproductive competition and publish all legitimate research. 
 
@@ -54,9 +54,9 @@ The standards will be hosted in a version control system (GitHub) with an issue 
 
 Trying to get professionals to read individual primary studies is probably unrealistic and might even be harmful. To the extent professionals read research, they should read systematic reviews and similar papers that synthesize bodies of work into practical recommendations. Therefore, the SLR standard includes the essential criterion: “presents conclusions or recommendations for practitioners/non-specialists.” 
 
-### General conferences like ICSE don't only accept empirical studies. If we only have detailed standards for empirical studies, would it make it more difficult to publishing empirical research than non-empirical research. 
+### General conferences like ICSE don't only accept empirical studies. If we only have detailed standards for empirical studies, would it make it more difficult to publish empirical research than non-empirical research. 
 
-We don’t think it’s possible to make it any more difficult to publish non-empirical research at ICSE. Years ago, the dominant method of evaluating a new software tool was to simply assert that it worked ‘because I said so.’ Software Engineering overreacted, and now publishing a non-empirical study at ICSE is practically impossible. It seems highly unlikely that the empirical standards, as currently written, could make top software engineering venues swing entirely the other way and become biased against empirical research. In contrast, we need to create space to publish high-quality, non-empirical scholarship like conceptual explorations of methodological and philosophical issues. Perhaps ICSE should have a separate track for non-empirical, foundational and conceptual scholarship.  
+We don’t think it’s possible to make it any more difficult to publish non-empirical research at ICSE. Years ago, the dominant method of evaluating a new software tool was to simply assert that it worked ‘because I said so.’ Software Engineering overreacted, and now publishing a non-empirical study at ICSE is practically impossible. It seems highly unlikely that the empirical standards, as currently written, could make top software engineering venues swing entirely the other way and become biased against empirical research. In contrast, we need to create space to publish high-quality, non-empirical scholarship such as conceptual explorations of methodological and philosophical issues. Perhaps ICSE should have a separate track for non-empirical, foundational and conceptual scholarship.  
 
 ### Will the standards make it more difficult to publish a study using a methodology for which a standard exists than a study with a method that doesn’t have a standard? 
 
@@ -84,13 +84,13 @@ Every time a reviewer checks a criterion, they make a subjective judgment. It is
 
 ### Are the final decisions generated only by the weighted checklist? What about questions like whether the dataset is big enough or not?
 
-There is no weighting the checklist. All papers that meet the essential criteria are publishable. Venues may create more complex decision rules but there’s nothing like weighted average. There are several criteria related to sufficient statistical power (for quantitative work) or saturation (for qualitative work). 
+There is no weighting the checklist. All papers that meet the essential criteria are publishable. Venues may create more complex decision rules but there’s nothing like a weighted average. There are several criteria related to sufficient statistical power (for quantitative work) or saturation (for qualitative work). 
 
 ### It seems like there is also diversity in software submitted with papers. What lessons do you think can be transplanted from paper reviews to code reviews?
 
 That is a very good question and we would be happy to facilitate research on this topic. We are working on a standard for artifact evaluation, including assessing software submitted with a paper, or to an artifact track. 
 
-### Do you see the possibility of "standard hacking" in the future? Since in a way, it's a bit like "open book exam" for paper submissions.
+### Do you see the possibility of "standard hacking" in the future? Since in a way, it's a bit like an "open book exam" for paper submissions.
 
 We can only hope! The standards are full of research best practices; therefore, trying to hack a study/paper to maximize chance of acceptance by complying with the standards will dramatically improve research quality. The exam is supposed to be open book! The authors should know going in exactly what the reviewers are looking for. Keeping review criteria secret is insane.  
 
@@ -106,7 +106,7 @@ The effectiveness of checklists on professional activity is well established—t
 
 Not yet because they have only existed for a few months and all of our time is currently consumed with trying to finish the standards that are still in progress. If anyone is interested in organizing empirical testing of the standards, we’d be happy to facilitate—please get in touch. 
 
-### You mentioned that experience report is not an empirical study. This is general, or there can be studies in which the report actually use data analysis, and implicitly empirical methods.
+### You mentioned that an experience report is not an empirical study. Is this general, or can there be studies in which the report actually use data analysis, and implicitly empirical methods.
 
 I should have said that, at least for now, experience reports are outside the scope of the empirical standards, unless they systematically collect and analyze data, in which case they might count as case studies. The line between “experience report” and “case study” is a bit blurry.
 
@@ -124,7 +124,7 @@ and
  
 P. Ralph (2016) Practical suggestions for improving scholarly peer review quality and reducing cycle times. _Communications of the Association for Information Systems_, (38), Article 13.
 
-### Aren’t many problems with peer review driven by lack of monetary compensation from the publishers to the reviewers? Good technical reviews demand a lot of time, and reviewers should get paid for that.
+### Aren’t many problems with peer review driven by the lack of monetary compensation from the publishers to the reviewers? Good technical reviews demand a lot of time, and reviewers should get paid for that.
 
 We 100% support initiatives to financially compensate reviewers for their work. 
 
@@ -140,7 +140,7 @@ Furthermore, the current, broken system allows one negative reviewer to override
 
 ICSE’s move to consensus decision making through reviewer discussion sounds good, but it’s not. Disagreements between reviewers get nasty fast, so everyone walks on eggshells, and that means the loudest, most belligerent reviewer often gets their way. Negative reviewers talk down positive reviewers more often than the other way around, decreasing acceptance rates. Detailed, specific review criteria allows us to go back to voting, which is fairer and more efficient. 
 
-### Premise: this initiative sounds valuable. Doubt: a "standard" is inflexible by definition, hence risky. For example: random selection of participants is not always (!) a good thing; how to we avoid to judge works on the standard and not on the actual specific work?
+### Premise: this initiative sounds valuable. Doubt: a "standard" is inflexible by definition, hence risky. For example: random selection of participants is not always (!) a good thing; how do we avoid judging works on the standard and not on the actual specific work?
 
 Our current peer review system is risky. It risks rejecting sound research because of biased reviewers, disenfranchising good scholars so they quit, and accepting well-written but methodologically shoddy work. Our current system creates division and inequity, scholars getting passed over for well-deserved grants, tenure and promotion and papers getting bounced around to five different venues before being published. Standards-based review mitigates these risks. 
 
@@ -156,7 +156,7 @@ The other standards are method-specific. The Questionnaire Survey standard is fo
 
 ### How do other disciplines go about this? Are they less diverse than SE? Do they have empirical standards that work and yield the discussed advantages?
 
-All communities attempt to write criteria for judging scientific work (such as reviewer guidelines) and some scientific communities (e.g. SIGPLAN), have attempted to write things sort of like “empirical standards.” These previous have met with some successes despite suffering from several problems including: (1) lack of detail; (2) trying to force everyone into an overly limited and outdated view of science (like logical positivism); (3) failing to distinguishing between dissimilar methodologies. Our standards are far more detailed and comprehensive, without imposing a singular epistemological or ontological position. We accomplish this by having different approaches for different standards. Our community’s high level of methodological diversity both necessitates and obviates this multi-standard approach. 
+All communities attempt to write criteria for judging scientific work (such as reviewer guidelines) and some scientific communities (e.g. SIGPLAN), have attempted to write things sort of like “empirical standards.” These previous attempts have met with some successes despite suffering from several problems including: (1) lack of detail; (2) trying to force everyone into an overly limited and outdated view of science (like logical positivism); (3) failing to distinguishing between dissimilar methodologies. Our standards are far more detailed and comprehensive, without imposing a singular epistemological or ontological position. We accomplish this by having different approaches for different standards. Our community’s high level of methodological diversity both necessitates this multi-standard approach. 
 
 ### It would be useful to cover method X as well. Are you planning to?
 
@@ -164,4 +164,4 @@ If you’d like to see a standard created for a certain method (e.g. Focus Group
 
 ### This stuff needs to be used to form the next generation of software engineers. Any plans to integrate this into curricula?
 
-The standards clearly have a lot of pedagogical usefulness for teaching research methods. Paul is using them in his advanced quantitative methods course in Winter 2021. We are not sure if they are appropriate for undergrads, but if anyone wants to try, they are welcome to do so and we would love to hear about their experiences.
+The standards clearly have a lot of pedagogical value for teaching research methods. Paul is using them in his advanced quantitative methods course in Winter 2021. We are not sure if they are appropriate for undergrads, but if anyone wants to try, they are welcome to do so and we would love to hear about their experiences.
