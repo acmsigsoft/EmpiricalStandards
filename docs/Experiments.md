@@ -38,6 +38,7 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	describes the dependent variable(s) and justifies how they are measured (including units, instruments)
 - [ ]	describes the independent variable(s) and how they are manipulated or measured
 - [ ]	describes extraneous variables and how they are controlled, or not    
+- [ ]	justifies sample size (e.g. using power analysis) 
 - [ ]	describes how characteristics of the phenomenon under investigation relate to experimental constructs
 - [ ]	describes the research design and protocol including treatments, materials, tasks, design (e.g. 2x2 factorial), participant allocation, period and sequences (for crossover designs), and logistics
 - [ ]	EITHER: uses random assignment and explains logistics (e.g. how random numbers were generated)   
@@ -71,7 +72,6 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	cites statistics research to support any nuanced issues or unusual approaches
 - [ ]	explains deviations between design and execution, and their implications<sup>[2](#myfootnote2)</sup>
 - [ ]	named experiment design (e.g. simple 2-group, 2x2 factorial, randomized block)
-- [ ]	justifies sample size (e.g. using power analysis) 
 - [ ]	analyzes construct validity of dependent variable
 - [ ]	reports manipulation checks
 - [ ]	pre-registration of hypotheses and design (where venue allows)
