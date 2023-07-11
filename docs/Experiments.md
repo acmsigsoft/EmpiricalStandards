@@ -37,7 +37,7 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	uses two-sided hypotheses OR justifies use of one-sided hypotheses based on face validity or previous work
 - [ ]	describes the dependent variable(s) and justifies how they are measured (including units, instruments)
 - [ ]	describes the independent variable(s) and how they are manipulated or measured
-- [ ]	describes extraneous variables and how they are controlled, or not    
+- [ ]	describes extraneous variables and how they are controlled: physically, statistically, or not at all    
 - [ ]	justifies sample size (e.g. using power analysis) 
 - [ ]	describes how characteristics of the phenomenon under investigation relate to experimental constructs
 - [ ]	describes the research design and protocol including treatments, materials, tasks, design (e.g. 2x2 factorial), participant allocation, period and sequences (for crossover designs), and logistics
@@ -86,6 +86,10 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	longitudinal data collection with appropriate time-series analysis (see the [Longitudinal Studies Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Longitudinal.md))
 </checklist>
 
+## Examples of Acceptable Deviations
+ - Sample size is not justified by power analysis a priori because the study is conducted in a classroom in which the number of available participants is fixed. 
+
+
 ## General Quality Criteria 
 
 Conclusion validity, construct validity, internal validity, reliability,
@@ -103,7 +107,6 @@ objectivity, reproducibility
     chosen or data characteristics (e.g. using an independent samples
     t-test on paired data)
 -   validity threats are simply listed without linking them to results
--   hypotheses are missing
 
 ## Invalid criticisms
 
