@@ -1,5 +1,13 @@
 # Frequently Asked Questions
 
+### How do I cite the standards?
+
+Please cite the empirical standards report from arXiv, as follows. Please do not cite this repo by URL.
+
+Paul Ralph et al. (2021) Empirical Standards for Software Engineering Research. arXiv:2010.03525 [cs.SE].
+
+For complete author list, see: https://arxiv.org/abs/2010.03525
+
 ### Where can I find the standards?
 
 You can find the standards, our report and our presentation slides here: [https://github.com/acmsigsoft/EmpiricalStandards](https://github.com/acmsigsoft/EmpiricalStandards)
