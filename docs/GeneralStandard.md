@@ -63,7 +63,7 @@ following.
 <discussion>
     
 - [ ]	discusses implications of the results
-- [ ]	discusses the study's limitations and threats to validity
+- [ ]	discloses all major limitations
 - [ ]   states clear conclusions which are linked to research question (or purpose, etc.) and supported by explicit evidence (data/observations) or arguments
 
 <other> 
