@@ -101,8 +101,9 @@ function readSpecificEmpiricalStandard(standard_name){
 	return empirical_standard;
 }
 
-//Generate relative path for each standard document
+// Load the table file for the customization of the checklist
 function readSpecificEmpiricalStandard_new(standard_name){
+	//loadConfiguration();
 	var mdFile = new XMLHttpRequest();
 	var loc = window.location.pathname;
 	var dir = loc.substring(0, loc.lastIndexOf('/'));
@@ -412,6 +413,8 @@ function hide_deviation_block() {
 	block.style.display = "none";
 	var block = document.getElementById("deviation_not_justified:" + id);
 	block.style.display = "none";
+	var msg_block = document.getElementById("free_text_question:" + id);
+	msg_block.style.display = "none";
 
 	// Uncheck all deviation-block-radio
 	deviation_radio_name = this.name.replace("checklist-radio", "deviation_block-radio");
@@ -443,6 +446,7 @@ function hide_other_messages(id) {
 		document.getElementById("deviation_unreasonable:" + id).style.display = "none";
 		document.getElementById("justification_reasonable:" + id).style.display = "none";
 		document.getElementById("justification_unreasonable:" + id).style.display = "none";
+		document.getElementById("free_text_question:" + id).style.display = "none";
 	}
 	catch(err) {}
 }
@@ -458,6 +462,8 @@ function create_deviation_justification_block() {
 		block.style.display = "none";
 		var block = document.getElementById("deviation_justified:" + id);
 		block.style.display = "block";
+		var msg_block = document.getElementById("free_text_question:" + id);
+		msg_block.style.display = "none";
 		deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_not_justified-radio");
 
 		for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
@@ -472,6 +478,8 @@ function create_deviation_justification_block() {
 		empty_message.style.display = "none";
 		var message = document.getElementById("deviation_not_justified:" + id);
 		message.style.display = "block";
+		var msg_block = document.getElementById("free_text_question:" + id);
+		msg_block.style.display = "block";
 		deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_justified-radio");
 
 		for(let i = 0; i <document.getElementsByName(deviation_radio_name).length; i++){
@@ -526,7 +534,7 @@ function generate_question_block_without_yes_no_radio_answers(id, class_name, qu
 }
 
 
-function generate_question_block_with_yes_no_radio_answers(id, class_name, question, checklistItem_id, padding) {
+function generate_question_block_with_yes_no_radio_answers(id, class_name, question, checklistItem_id, padding, display) {
 	var question_block = document.createElement("div");
 
 	// checklistItem_id = 1,2,3,4
@@ -573,6 +581,12 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	// Value for comparisons
 	deviationRadioYes.value = "yes";
 	deviationRadioNo.value = "no";
+
+	// if the deviation reasonable is fixed in the table
+	if(!display){
+		deviationRadioNo.checked = true; // Ensure 'No' is pre-selected
+		deviationRadioYes.disabled = true; // Disable 'No' radio button
+	}
 
 	// Actual Text of the Radio button
 	deviation_block_radios.innerHTML = "&nbsp;&nbsp;&nbsp;";
@@ -725,17 +739,17 @@ function generate_free_text_question(id, class_name, question, checklistItem_id,
     var question_block = document.createElement("div");
     question_block.id = id + ":" + checklistItem_id;
     question_block.className = "question_block_free_Text";
-    question_block.style = "padding-left:" + padding + "em; display:block";
+    question_block.style = "padding-left:" + padding + "em; display:none";
 
     var questionText = document.createElement("div"); // Create a div for the question
-    questionText.innerHTML = "&rdsh; " + question;
+    questionText.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rdsh;&nbsp;  " + question;
 
     var answerInput = document.createElement("div"); // Create a div for the input answer
-    var answerInputField = document.createElement("input");
+    var answerInputField = document.createElement("textarea");
     answerInputField.id = id + "-answer:" + checklistItem_id;
     answerInputField.className = class_name + "Answer";
     answerInputField.type = "text";
-	answerInput.style = "padding-left:" + 1 + "em;";
+	answerInput.style = "padding-left:" + 2.5 + "em; resize: both; overflow: auto;";
 
     answerInput.appendChild(answerInputField);
 
@@ -772,51 +786,41 @@ function generate_one_phase_reviewer_deviation_block(checklistItem_id,data) {
 	// Create a question block with Yes-No radio answers
 	// 2nd Question
 	if(data!=null){
-		if(data.display1== 'True'){
-			console.log(data.display1);
-			var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40);
+		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40, data.display1 == "True");
 
-			
-			// Reviewer-specific deviation justification block
-			//var deviation_justified = generate_question_block_with_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
-			var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
 		
-			// Create a question block with type radio answers
-			// 3rd Question
-			// console.log(data.errortype);
-			var numbersArray = data.errortype.split(",").map(function(item) {
-				return parseInt(item, 10);
-			});
-			// console.log(numbersArray);
-
-			var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06, numbersArray);
+		// Reviewer-specific deviation justification block
+		//var deviation_justified = generate_question_block_with_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
+		var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
 	
-			// (No-No-Yes)
-			var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
+		// Create a question block with type radio answers
+		// 3rd Question
+		// console.log(data.errortype);
+		var numbersArray = data.errortype.split(",").map(function(item) {
+			return parseInt(item, 10);
+		});
+		// console.log(numbersArray);
+
+		var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06, numbersArray);
+
+		// (No-No-Yes)
+		var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
+	
+		// (No-No-No)
+		var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "", 0, 0);
 		
-			// (No-No-No)
-			var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "", 0, 0);
-			
+	
+		deviation_block.appendChild(deviation_justified);
+		deviation_block.appendChild(deviation_not_justified);
+
 		
-			deviation_block.appendChild(deviation_justified);
-			deviation_block.appendChild(deviation_not_justified);
+		deviation_block.appendChild(deviation_reasonable);
+		deviation_block.appendChild(deviation_unreasonable);
 
-			
-			deviation_block.appendChild(deviation_reasonable);
-			deviation_block.appendChild(deviation_unreasonable);
+		if(data.displayfree == "True"){
+			var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", data.freelabel, checklistItem_id, 0);
 
-			if(data.displayfree == "True"){
-				var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", data.freelabel, checklistItem_id, 0);
-
-				deviation_block.appendChild(freeTextQuestion);
-			}
-
-		}else{
-			var deviation_block = generate_question_block_without_yes_no_radio_answers("deviation_block", "deviationRadio", "", checklistItem_id, 2.40);
-			var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
-			var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
-			deviation_block.appendChild(deviation_justified);
-			deviation_block.appendChild(deviation_not_justified);
+			deviation_block.appendChild(freeTextQuestion);
 		}
 	}else{
 		console.log("Data not fetched");
@@ -989,6 +993,9 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				// in the case of YES, hide the deviation block
 				checklistRadioYes.onclick = hide_deviation_block;
 				// in the case of NO, show the deviation block
+				if(checklistRadioNo == true){
+					show_deviation_block();
+				}
 				checklistRadioNo.onclick = show_deviation_block;
 
 				// set the type of the input to "radio"
@@ -1120,9 +1127,17 @@ function create_role_heading(){
 	// DEPRECATED
 	// else if(role == "\"ease-reviewer\"") 
 	// 	  heading.innerHTML = "Reviewer Checklist";
-	
+
 	return heading;
 }	
+
+// Create a message showing the loaded configuration
+function create_load_config_msg(){
+	var config = document.createElement("p");
+	config.innerHTML = "Customized Configuration Loaded";
+	config.style = "display:none;";
+	return config;
+}
 
 // Prepare unordered lists
 function preparation_to_convert_MD_to_HTML(standardTagName, checklistTagName, checklistInnerHTML, footnotes){
@@ -1178,14 +1193,14 @@ function create_download_button(){
 	return download;
 }
 
-// 删除
-function create_download_button_test(){
+// Delete
+function create_download_configuration_button(){
 	var download = document.createElement("button");
-	download.innerHTML = "Download_test";
-	download.id = "checklist_download_test";
-	download.name = "checklist_download_test";
+	download.innerHTML = "Download_Configuration";
+	download.id = "checklist_download_config";
+	download.name = "checklist_download_config";
 	download.disabled = false;
-	download.onclick = saveFile_test;
+	download.onclick = saveConfig;
 	return download;
 }
 
@@ -1259,7 +1274,7 @@ function convertMarkdownToHTML(markdown) {
 }
 
 
-function create_requirements_checklist_table(){
+function create_requirements_checklist_table(file){
 	// Create Element "FORM"
 	var form = document.createElement("FORM");
 	form.id = "checklists";
@@ -1270,60 +1285,75 @@ function create_requirements_checklist_table(){
 	if (!standard_keys.includes("\"General Standard\""))
 		standard_keys.unshift("\"General Standard\"");
 	
-
-	var i = 0;
-	const Essentail_dataStructure = new HashMap();
-	const Desirable_dataStructure = new HashMap();
-	const Extraordinary_dataStructure = new HashMap();
-	for (let key of standard_keys){
-		i++;
-		// Obtain all the information for a Standard
-		empirical_standard1 = readSpecificEmpiricalStandard_new(key);
-		// Convert Markdown to HTML
-		var htmlTable = convertMarkdownToHTML(empirical_standard1);
-
-		// Get a reference to the container element where you want to display the table
-		var dom1 = document.createElement("div");
-		// Append the HTML table to the container
-		dom1.innerHTML = htmlTable;
-
-		var checklists1 = dom1.getElementsByTagName('checklist')[2];
-		for(let checks of checklists1.getElementsByTagName('row')){
-			var content0 = checks.getElementsByTagName('Type')[0].innerHTML;
-			var content1 = checks.getElementsByTagName('content')[0].innerHTML;
-			var content2 = checks.getElementsByTagName('display1')[0].innerHTML;
-			var content3 = checks.getElementsByTagName('errortype')[0].innerHTML;
-			var content4 = checks.getElementsByTagName('displayfree')[0].innerHTML;
-			var content5 = checks.getElementsByTagName('freelabel')[0].innerHTML;
-			var rowData = {
-				type: content0,
-				content: content1,
-				display1: content2,
-				errortype: content3,
-				displayfree: content4,
-				freelabel: content5
-			};
-
-
-			for(var content_key of content1.split(' ')){
-				if(!dataStructure.get(content_key)){
-					dataStructure.set(content_key, rowData);
-					break;
-				}
-			}
-			
-			//map.set(key, rowData);
+	if(file == null){
+		var i = 0;
+		const Essentail_dataStructure = new HashMap();
+		const Desirable_dataStructure = new HashMap();
+		const Extraordinary_dataStructure = new HashMap();
+		for (let key of standard_keys){
+			i++;
+			// Obtain all the information for a Standard
+			empirical_standard1 = readSpecificEmpiricalStandard_new(key);
+			// Convert Markdown to HTML
+			var htmlTable = convertMarkdownToHTML(empirical_standard1);
 	
-			//map.set(content1.replace(/['"<>\#\[\]{}\/\s-]/g,''), rowData);
+			// Get a reference to the container element where you want to display the table
+			var dom1 = document.createElement("div");
+			// Append the HTML table to the container
+			dom1.innerHTML = htmlTable;
+	
+			var checklists1 = dom1.getElementsByTagName('checklist')[2];
+			for(let checks of checklists1.getElementsByTagName('row')){
+				var content0 = checks.getElementsByTagName('Type')[0].innerHTML;
+				var content1 = checks.getElementsByTagName('content')[0].innerHTML;
+				var content2 = checks.getElementsByTagName('display1')[0].innerHTML;
+				var content3 = checks.getElementsByTagName('errortype')[0].innerHTML;
+				var content4 = checks.getElementsByTagName('displayfree')[0].innerHTML;
+				var content5 = checks.getElementsByTagName('freelabel')[0].innerHTML;
+				var rowData = {
+					type: content0,
+					content: content1,
+					display1: content2,
+					errortype: content3,
+					displayfree: content4,
+					freelabel: content5
+				};
+	
+	
+				for(var content_key of content1.split(' ')){
+					if(!dataStructure.get(content_key)){
+						dataStructure.set(content_key, rowData);
+						break;
+					}
+				}
+				
+				//map.set(key, rowData);
+		
+				//map.set(content1.replace(/['"<>\#\[\]{}\/\s-]/g,''), rowData);
+			}
+			//console.log(dataStructure);
 		}
-		//console.log(dataStructure);
+	}else{
+		console.log(file);
+
+		// Parse the JSON string to an object
+		const jsonObject = JSON.parse(file);
+
+
+
+		// Loop through the keys in the parsed JSON object
+		Object.keys(jsonObject).forEach(key => {
+			dataStructure.set(jsonObject[key][0], jsonObject[key][1]);
+		});
+
+		console.log(dataStructure);
 	}
 	console.log(dataStructure);
 	return;
 }
   
 
-function create_requirements_checklist(){
+function create_requirements_checklist(file){
 
 	// Create Element "FORM"
 	var form = document.createElement("FORM");
@@ -1354,7 +1384,7 @@ function create_requirements_checklist(){
 	if (!standard_keys.includes("\"General Standard\""))
 		standard_keys.unshift("\"General Standard\"");
 	
-	create_requirements_checklist_table();
+	create_requirements_checklist_table(file);
 	//console.log(dataStructure);
 	var i = 0;
 	for (let key of standard_keys){
@@ -1445,7 +1475,7 @@ function create_requirements_checklist(){
 	// Create download button
 	var download = create_download_button();
 
-	var download_test = create_download_button_test();
+	var download_test = create_download_configuration_button();
 
 	// (All 'Yes' -> accept manuscript)
 	var decision_msg = generate_message("decision_msg", "red", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), 2, 0);
@@ -1522,9 +1552,8 @@ function create_for_more_info_part(standard_keys){
 	return more_info_DIV;
 }
 
-
-function generateStandardChecklist(){
-	
+function generateStandardChecklist(file){
+	console.log(file);
 	// list of Standards
 	standard_keys = getParameterByName('standard');
 
@@ -1546,11 +1575,15 @@ function generateStandardChecklist(){
 	// Create header (Pre-submission Checklist, Reviewer Checklist)
 	var heading = create_role_heading();
 
+	// Create a message showing the loaded configuration
+	var config = create_load_config_msg();
+
 	// Create Checklist
-	var form = create_requirements_checklist();
+	var form = create_requirements_checklist(file);
 
 	// Append header and form to container
 	container.appendChild(heading);
+	container.appendChild(config);
 	container.appendChild(form);
 
 	// Creates line separating from checklist and "for more information, see:"
@@ -1654,20 +1687,6 @@ function saveFile(){
 								essential_list +=  'Y' + '\t   ' + li_text + '\r\n';
 							else{
 								var reasonable_deviation = li.getElementsByClassName('deviationRadioYes')[0];
-								if (reasonable_deviation.checked)
-									essential_list += 'R' + '\t   ' + li_text + '\r\n';
-								else{
-									var fixable_deviation = li.getElementsByClassName('justificationRadioType');
-									if (fixable_deviation[0].checked) {
-										type1_list += '1\t   ' + li_text + '\r\n';
-									} else if (fixable_deviation[1].checked) {
-										type2_list += '2\t   ' + li_text + '\r\n';
-									}  else if (fixable_deviation[2].checked) {
-										type3_list += '3\t   ' + li_text + '\r\n';
-									}  else if (fixable_deviation[3].checked) {
-										type4_list += '4\t   ' + li_text + '\r\n';
-									}
-								}
 
 								// store for the free_text_question
 								var questionDiv  = li.getElementsByClassName("question_block_free_Text");
@@ -1680,9 +1699,46 @@ function saveFile(){
 										console.log(input_text)
 									}
 									
-									free_text_list += li_text + '\r\n'
-									free_text_list += '    ' + question_text + ': ' + input_text + '\r\n';
+									// free_text_list += li_text + '\r\n'
+									// free_text_list += '    ' + question_text + ': ' + input_text + '\r\n';
 								}
+								if (reasonable_deviation.checked)
+									essential_list += 'R' + '\t   ' + li_text + '\r\n';
+								else{
+									var fixable_deviation = li.getElementsByClassName('justificationRadioType');
+									if (fixable_deviation[0].checked) {
+										type1_list += '1\t   ' + li_text + '\r\n';
+										type1_list += ' \t   ' + question_text + '\r\n';
+										type1_list += ' \t    \t   ' + input_text + '\r\n';
+									} else if (fixable_deviation[1].checked) {
+										type2_list += '2\t   ' + li_text + '\r\n';
+										type2_list += ' \t   ' + question_text + '\r\n';
+										type2_list += ' \t    \t   ' + input_text + '\r\n';
+									}  else if (fixable_deviation[2].checked) {
+										type3_list += '3\t   ' + li_text + '\r\n';
+										type3_list += ' \t   ' + question_text + '\r\n';
+										type3_list += ' \t    \t   ' + input_text + '\r\n';
+									}  else if (fixable_deviation[3].checked) {
+										type4_list += '4\t   ' + li_text + '\r\n';
+										type4_list += ' \t   ' + question_text + '\r\n';
+										type4_list += ' \t    \t   ' + input_text + '\r\n';
+									}
+								}
+
+								// store for the free_text_question
+								// var questionDiv  = li.getElementsByClassName("question_block_free_Text");
+								// if(questionDiv[0]){
+								// 	var question_text = questionDiv[0].querySelector('div:first-child').textContent.trim().replace(/^\W+/g, '');
+								// 	console.log(question_text)
+								// 	var inputCollection  = li.getElementsByClassName('freeTextAnswer');
+								// 	if(inputCollection[0]){
+								// 		var input_text = inputCollection[0].value;
+								// 		console.log(input_text)
+								// 	}
+									
+								// 	free_text_list += li_text + '\r\n'
+								// 	free_text_list += '    ' + question_text + ': ' + input_text + '\r\n';
+								// }
 
 							}
 						}
@@ -1704,7 +1760,7 @@ function saveFile(){
 	}
 	
 	generated_text += type4_list + type3_list + type2_list + type1_list;
-	generated_text += free_text_list;
+	// generated_text += free_text_list;
 	
 	generated_text += essential_list;
 	
@@ -1734,7 +1790,7 @@ function saveFile(){
 	for(var i = 0; i < elms.length; i++)
 		generated_text += elms[i].innerHTML + '\n';
 
-	pageURL = window.location.href;
+	pageURL = window.location.href;	
 	generated_text += "\nURL: " + pageURL;
 
 	var newLink = document.createElement('a');
@@ -1752,91 +1808,46 @@ function saveFile(){
 }
 
 
-function saveFile_test(){
-	console.log("saveFile_test-------------------------------------------------------------------------------")
-	var checklists = document.getElementById('checklists');
+function saveConfig(){
+	// Convert HashMap to JSON string
+	console.log(dataStructure._buckets)
+	// Loop through the _buckets array in yourHashMap
+	const extractedData = {};
 
-	var free_text_list = "\nFree Text Questions\r\n"
-	
-	for (let list of checklists.children) {
-		if(list.tagName.toLowerCase() == 'ul' & list.style.display != 'none'){
-			for (let ul of list.children) {
-				if(ul.tagName.toLowerCase() == 'ul'){
-					var i = 0;
-					for (let li of ul.children) {
-						if (li.tagName.toLowerCase() != 'li')
-						   continue;
-						i++;
-						var li_text = li.getAttribute("text");
-						var regex = /<a+\n*.+<\/a>/g;
-						if (li_text.match(regex) != null)
-							li_text = li_text.replace(regex, "");
+	// Loop through the _buckets array in dataStructure
+	dataStructure._buckets.NaN.forEach((value, index) => {
+		console.log(value);
+		console.log(index);
+		extractedData[index] = value;
+	});
+	console.log(extractedData)
+	const jsonContent = JSON.stringify(extractedData);
 
-						var regex2 = /\{sup\}.+\{\/sup\}/g;
-						var regex3 = /<br\/>/g;
-						var regex4 = /<\/b>/g;
-						var regex5 = /<b>/g;
-						var regex6 = /[\r\n]+/g;
-						var regex7 =/ \(.+?\)/g;
-						var regex8 = /<i>/g;
-						var regex9 = /<\/i>/g;
+	// Parse the JSON string to an object
+	const jsonObject = JSON.parse(jsonContent);
 
-						if (li_text.match(regex2) != null)
-							li_text = li_text.replace(regex2, "");
-						if (li_text.match(regex3) != null)
-							li_text = li_text.replace(regex3,"\n");
-						if (li_text.match(regex4) != null)
-							li_text = li_text.replace(regex4,"");
-						if (li_text.match(regex5) != null)
-							li_text = li_text.replace(regex5,"");
-						if (li_text.match(regex6) != null)
-							li_text = li_text.replace(regex6,"");
-						if (li_text.match(regex7) != null)
-							li_text = li_text.replace(regex7,"");
-						if (li_text.match(regex8) != null)
-							li_text = li_text.replace(regex8,"");
-						if (li_text.match(regex9) != null)
-							li_text = li_text.replace(regex9,"");
+	// Convert the object back to a formatted JSON string with indentation
+	const formattedJsonContent = JSON.stringify(jsonObject, null, 2);
 
-						if (list.id == 'Essential'){
-							if (li.children[1].checked){
-								console.log(li)
+	// Create a Blob from the formatted JSON content
+	const blob = new Blob([formattedJsonContent], { type: 'application/json' });
 
-								var questionDiv  = li.getElementsByClassName("question_block_free_Text");
-								if(questionDiv[0]){
-									var question_text = questionDiv[0].querySelector('div:first-child').textContent.trim().replace(/^\W+/g, '');
-									console.log(question_text)
-									var inputCollection  = li.getElementsByClassName('freeTextAnswer');
-									if(inputCollection[0]){
-										var input_text = inputCollection[0].value;
-										console.log(input_text)
-									}
-									
-									free_text_list += li_text + '\r\n'
-									free_text_list += '    ' + question_text + ': ' + input_text + '\r\n';
-								}
+	// Create a temporary URL for the Blob
+	const url = URL.createObjectURL(blob);
 
-							}
-							//console.log(free_test.getAnswer())
-						}
-						else if (list.id == 'Desirable') {
-							if (li.children[0].checked) {
-								include_desirable = true;
-								desirable_list += 'Y' + '\t   ' + li_text + '\r\n';
-							}
-						} else if (li.children[0].checked) {
-							include_extraordinary = true;
-							extraordinary_list += 'Y' + '\t   ' + li_text + '\r\n';
-						}
+	// Create a download link
+	const downloadLink = document.createElement('a');
+	downloadLink.href = url;
+	downloadLink.download = 'reviewConfig.json'; // Set the file name here
 
-					}
+	// Append the download link to the body (or any other part of the DOM)
+	document.body.appendChild(downloadLink);
 
-				}
-			}
-		}
-	}
+	// Programmatically trigger the click event on the download link
+	downloadLink.click();
 
-	console.log(free_text_list);
+	// Clean up by revoking the Blob URL
+	URL.revokeObjectURL(url);
 	return false;
 }
 
