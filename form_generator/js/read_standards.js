@@ -585,7 +585,7 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	// if the deviation reasonable is fixed in the table
 	if(!display){
 		deviationRadioNo.checked = true; // Ensure 'No' is pre-selected
-		deviationRadioYes.disabled = true; // Disable 'No' radio button
+		deviationRadioYes.disabled = true; // Disable 'Yes' radio button
 	}
 
 	// Actual Text of the Radio button
@@ -660,25 +660,18 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
 
 
     for (let i in type) {
-
-
         var deviationRadioType = document.createElement("input");
-
         var deviationLabelType = document.createElement("label");
-
 
         // Identify each radio button
         deviationRadioType.id = id + "-radio:Type"+type[i]+":" + checklistItem_id;
-    
-    
+
         // className - deal with all of them
         deviationRadioType.className = class_name + "Type";
-    
     
         // These are the radio buttons of that element regardless of Type1 or Type2
         // For Hiding Buttons
         deviationRadioType.name = id + "-radio:" + checklistItem_id;
-    
     
         // deviation justification is a function
         deviationRadioType.onclick = create_deviation_justification_block;
@@ -912,8 +905,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 
 	// IMRaD line break flag is set to equal false
 	var IMRaD_line_break = false;
-	const content_keys = [];
-	console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
 	for(let line of lines){
 
 		// removes whitespace
@@ -961,19 +953,8 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				// ???????????????????? previous line does what?
 
 			//locate the current checklist into the table
-			console.log(line_text.replace(/['"<>\#\[\]{}\/\s-]/g, ''));
-
-			for(var content_key of line_text.split(' ')){
-				if(!content_keys.includes(content_key)){
-					console.log(content_key);
-					data = dataStructure.get(content_key)
-					content_keys.push(content_key)
-					break;
-				}
-			}
-			//data = dataStructure.get(line_text.replace(/['"<>\#\[\]{}\/\s-]/g, ''));
-
-			
+			data = dataStructure.get(Encode_key(line_text))
+	
 
 			if (checklistName == "Essential"){
 				// create Input Elements
@@ -1193,7 +1174,7 @@ function create_download_button(){
 	return download;
 }
 
-// Delete
+
 function create_download_configuration_button(){
 	var download = document.createElement("button");
 	download.innerHTML = "Download_Configuration";
@@ -1273,6 +1254,17 @@ function convertMarkdownToHTML(markdown) {
     return resultHTML;
 }
 
+// A function to process the Encoding method of the contents to create a unique key for every single checklist
+function Encode_key(content){
+	console.log(content);
+	// process the conentes within <a> and </a>
+	content = content.replace(/<a[^>]*>|<\/a>/g, '');
+	// process the footnote issue
+	content = content.replace(/\{sup\}.*?\{\/sup\}/g, '');
+	// now remove all the non-alphabetic and non-numeric characters
+	content = content.replace(/[^a-zA-Z0-9]/g, '');
+	return content;
+}
 
 function create_requirements_checklist_table(file){
 	// Create Element "FORM"
@@ -1319,16 +1311,10 @@ function create_requirements_checklist_table(file){
 					freelabel: content5
 				};
 	
-	
-				for(var content_key of content1.split(' ')){
-					if(!dataStructure.get(content_key)){
-						dataStructure.set(content_key, rowData);
-						break;
-					}
-				}
-				
+				// update the encoding method to get the key for the contents
+				const key = Encode_key(content1);
+				dataStructure.set(key,rowData)
 				//map.set(key, rowData);
-		
 				//map.set(content1.replace(/['"<>\#\[\]{}\/\s-]/g,''), rowData);
 			}
 			//console.log(dataStructure);
@@ -1338,8 +1324,6 @@ function create_requirements_checklist_table(file){
 
 		// Parse the JSON string to an object
 		const jsonObject = JSON.parse(file);
-
-
 
 		// Loop through the keys in the parsed JSON object
 		Object.keys(jsonObject).forEach(key => {
