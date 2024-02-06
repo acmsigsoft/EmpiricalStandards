@@ -1,7 +1,10 @@
 theme: minima
 markdown: kramdown
-title: Empirical Standards
-description: Empirical standards for conducting and evaluating research in software engineering
+title: SIGSOFT Empirical Standards
+footer_content: |
+  <p style="font-size: large; font-weight: bold;">SIGSOFT Empirical Standards</p>
+  <p>Designed by <a href="https://paulralph.name/" target="_blank">Paul Ralph</a> at Dalhousie University in Halifax, Canada.</p>
+  <p>If you see any problems with or ways to improve this page, please suggest a fix via pull request <a href="https://github.com/acmsigsoft/EmpiricalStandards" target="_blank">here</a>, or report the issue <a href="https://github.com/acmsigsoft/EmpiricalStandards/issues" target="_blank">here</a>.</p>
 header_pages:
   - tab_01_about.md
   - tab_02_tools.md
