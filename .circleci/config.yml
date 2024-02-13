@@ -27,12 +27,15 @@ jobs:
                         exit 1
                     }
                     if ($4 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
-                        print $5
                         $4 = substr($4, index($4, $4), index($4, $4) + length($4) - 1)
                         if ($4 != "True" && $4 != "False") {
                             print "ERROR: " $file " - The value in the \"Display is the deviation reasonable?\" column must be either \"True\" or \"False\"."
                             exit 1
                         }
+                    }
+                    if ($6 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
+                        print "ERROR: " $file " - The value in the \"Display Free text question?\" column must be either \"True\" or \"False\"."
+                        exit 1
                     }
                     # Add additional checks for other columns as needed
 
