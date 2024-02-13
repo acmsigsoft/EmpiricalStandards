@@ -34,8 +34,11 @@ jobs:
                         }
                     }
                     if ($6 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
-                        print "ERROR: " $file " - The value in the \"Display Free text question?\" column must be either \"True\" or \"False\"."
-                        exit 1
+                        $6 = substr($6, index($6, $6), index($6, $6) + length($6) - 1)
+                        if ($6 != "True" && $6 != "False") {
+                            print "ERROR: " $file " - The value in the \"Display is the deviation reasonable?\" column must be either \"True\" or \"False\"."
+                            exit 1
+                        }
                     }
                     # Add additional checks for other columns as needed
 
