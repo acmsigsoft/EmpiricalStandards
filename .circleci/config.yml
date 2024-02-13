@@ -26,9 +26,12 @@ jobs:
                         print "ERROR: " $file " - The line does not contain exactly 8 fields."
                         exit 1
                     }
-                    if (gsub(/^[[:space:]]+|[[:space:]]+$/, "", "g", $5) !~ /^(True|False)$/) {
-                        print "ERROR: " $file " - The value in the \"Is the deviation reasonable?\" column must be either \"True\" or \"False\"."
-                        exit 1
+                    if ($5 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
+                        $5 = substr($5, index($5, $5), index($5, $5) + length($5) - 1)
+                        if ($5 != "True" && $5 != "False") {
+                            print "ERROR: " $file " - The value in the \"Display Free text question?\" column must be either \"True\" or \"False\"."
+                            exit 1
+                        }
                     }
                     if ($4 != "") {
                         print "ERROR: " $file " - The value in the 4th column must be empty."
