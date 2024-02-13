@@ -33,6 +33,10 @@ jobs:
                             exit 1
                         }
                     }
+                    if ($5 !~ /^[[:space:]]*(([1-4],[[:space:]]*){0,3}[1-4])[[:space:]]*$/) {
+                        print "ERROR: " $file " - The value in the \"Error Types\" column must be a comma-separated list of numbers from 1 to 4."
+                        exit 1
+                    }
                     if ($6 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
                         $6 = substr($6, index($6, $6), index($6, $6) + length($6) - 1)
                         if ($6 != "True" && $6 != "False") {
