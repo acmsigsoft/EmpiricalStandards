@@ -48,9 +48,3 @@ workflows:
   example:
     jobs:
       - test
-      - build:
-          requires:
-            - test
-      - deploy:
-          requires:
-            - test
