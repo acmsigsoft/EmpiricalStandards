@@ -26,7 +26,7 @@ jobs:
                         print "ERROR: " $file " - The line does not contain exactly 8 fields."
                         exit 1
                     }
-                    if ($3 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
+                    if ($5 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
                         print "ERROR: " $file " - The value in the \"Is the deviation reasonable?\" column must be either \"True\" or \"False\"."
                         exit 1
                     }
@@ -34,12 +34,8 @@ jobs:
                         print "ERROR: " $file " - The value in the 4th column must be empty."
                         exit 1
                     }
-                    if ($5 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
+                    if ($7 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
                         print "ERROR: " $file " - The value in the \"Display Free text question?\" column must be either \"True\" or \"False\"."
-                        exit 1
-                    }
-                    if ($7 != "") {
-                        print "ERROR: " $file " - The value in the 7th column must be empty."
                         exit 1
                     }
                     # Add additional checks for other columns as needed
