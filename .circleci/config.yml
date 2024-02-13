@@ -20,19 +20,35 @@ jobs:
             changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/standard_tables/')
             if [ -n "$changed_files" ]; then
               echo "Changes detected in ./docs/standard_tables folder."
-              echo "$changed_files" | while read -r file; do
+              echo "$changed_files" | while IFS= read -r file; do
                 awk -F '|' 'NR>2 {
-                    if ($5 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
-                        echo "ERROR: $file - The value in the \"Is the deviation reasonable?\" column must be either \"True\" or \"False\"."
-                        exit 1
-                    } else if ($6 !~ /^[[:space:]]*[1-4](,[[:space:]]*[1-4])*[[:space:]]*$/) {
-                        echo "ERROR: $file - The value in the \"Error Types\" column must be a comma-separated list of numbers from 1 to 4."
-                        exit 1
-                    } else if ($5 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
-                        echo "ERROR: $file - The value in the \"Display Free text question?\" column must be either \"True\" or \"False\"."
+                    if (NF != 9) {
+                        print "ERROR: " $file " - The line does not contain exactly 9 fields."
                         exit 1
                     }
+                    if ($3 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
+                        print "ERROR: " $file " - The value in the \"Is the deviation reasonable?\" column must be either \"True\" or \"False\"."
+                        exit 1
+                    }
+                    if ($4 != "") {
+                        print "ERROR: " $file " - The value in the 4th column must be empty."
+                        exit 1
+                    }
+                    if ($5 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
+                        print "ERROR: " $file " - The value in the \"Display Free text question?\" column must be either \"True\" or \"False\"."
+                        exit 1
+                    }
+                    if ($7 != "") {
+                        print "ERROR: " $file " - The value in the 7th column must be empty."
+                        exit 1
+                    }
+                    # Add additional checks for other columns as needed
+
                 }' "$file"
+                if [ $? -ne 0 ]; then
+                    echo "ERROR: $file does not contain a valid Markdown table with the required format."
+                    exit 1
+                fi
               done
             else
               echo "No changes detected in ./docs/standard_tables folder."
