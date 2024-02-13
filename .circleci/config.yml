@@ -20,7 +20,12 @@ jobs:
             changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/standard_tables/')
             if [ -n "$changed_files" ]; then
               echo "Changes detected in ./docs/standard_tables folder."
-              echo "Changed files: $changed_files"
+              echo "$changed_files" | while read -r file; do
+                if ! awk -F '|' 'NR>2 { if ($3 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) exit 1; if ($4 !~ /^[[:space:]]*[1-4](,[[:space:]]*[1-4])*[[:space:]]*$/) exit 1; if ($5 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) exit 1 }' "$file"; then
+                  echo "ERROR: $file does not contain a valid Markdown table with the required format."
+                  exit 1
+                fi
+              done
             else
               echo "No changes detected in ./docs/standard_tables folder."
             fi
