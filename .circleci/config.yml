@@ -26,7 +26,7 @@ jobs:
                         print "ERROR: " $file " - The line does not contain exactly 8 fields."
                         exit 1
                     }
-                    if ($5 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
+                    if (gensub(/^[[:space:]]+|[[:space:]]+$/, "", "g", $5) !~ /^(True|False)$/) {
                         print "ERROR: " $file " - The value in the \"Is the deviation reasonable?\" column must be either \"True\" or \"False\"."
                         exit 1
                     }
