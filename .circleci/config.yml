@@ -40,7 +40,7 @@ jobs:
                     if ($6 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
                         $6 = substr($6, index($6, $6), index($6, $6) + length($6) - 1)
                         if ($6 != "True" && $6 != "False") {
-                            print "ERROR: " $file " - The value in the \"Display is the deviation reasonable?\" column must be either \"True\" or \"False\"."
+                            print "ERROR: " $file " - The value in the \"Display is Free Text Question?\" column must be either \"True\" or \"False\"."
                             exit 1
                         }
                     }
