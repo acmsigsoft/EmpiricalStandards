@@ -14,16 +14,16 @@ jobs:
           command: |
             git fetch origin master:master
       # Check for changes in docs/standard_tables directory
-      # - run:
-      #     name: Check for changes in ./docs/standard_tables folder
-      #     command: |
-      #       changed_files=$(git diff --name-only origin/main...HEAD | grep '^docs/standard_tables/')
-      #       if [ -n "$changed_files" ]; then
-      #         echo "Changes detected in ./docs/standard_tables folder."
-      #         echo "Changed files: $changed_files"
-      #       else
-      #         echo "No changes detected in ./docs/standard_tables folder."
-      #       fi
+      - run:
+          name: Check for changes in ./docs/standard_tables folder
+          command: |
+            changed_files=$(git diff --name-only origin/master...HEAD | grep '^docs/standard_tables/')
+            if [ -n "$changed_files" ]; then
+              echo "Changes detected in ./docs/standard_tables folder."
+              echo "Changed files: $changed_files"
+            else
+              echo "No changes detected in ./docs/standard_tables folder."
+            fi
   # build:
   #   docker:
   #     - image: cimg/base:stable
