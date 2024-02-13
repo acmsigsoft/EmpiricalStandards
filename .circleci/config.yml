@@ -22,8 +22,8 @@ jobs:
               echo "Changes detected in ./docs/standard_tables folder."
               echo "$changed_files" | while IFS= read -r file; do
                 awk -F '|' 'NR>2 {
-                    if (NF != 9) {
-                        print "ERROR: " $file " - The line does not contain exactly 9 fields."
+                    if (NF != 8) {
+                        print "ERROR: " $file " - The line does not contain exactly 8 fields."
                         exit 1
                     }
                     if ($3 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
