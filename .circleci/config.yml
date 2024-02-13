@@ -33,7 +33,7 @@ jobs:
                             exit 1
                         }
                     }
-                    if ($5 !~ /^[[:space:]]*(([1-4],[[:space:]]*){0,3}[1-4])[[:space:]]*$/) {
+                    if ($5 !~ /^[[:space:]]*(([1-4])(,[[:space:]]*[1-4])*)[[:space:]]*$/) {
                         print "ERROR: " $file " - The value in the \"Error Types\" column must be a comma-separated list of numbers from 1 to 4."
                         exit 1
                     }
