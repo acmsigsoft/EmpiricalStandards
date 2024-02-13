@@ -9,10 +9,10 @@ jobs:
     steps:
       - checkout
       # Replace this with a real test runner invocation
-      # - run:
-      #     name: Fetch updates from origin main branch
-      #     command: |
-      #       git fetch origin master:master
+      - run:
+          name: Fetch updates from origin main branch
+          command: |
+            git fetch origin master:master
       # Check for changes in docs/standard_tables directory
       - run:
           name: Check for changes in ./docs/standard_tables folder
