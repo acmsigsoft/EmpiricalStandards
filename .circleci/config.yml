@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Check for changes in ./docs/standard_tables folder
           command: |
-            changed_files=$(git diff --name-only origin/master...HEAD | grep '^docs/standard_tables/')
+            changed_files=$(git diff --name-only origin/master HEAD)
   # build:
   #   docker:
   #     - image: cimg/base:stable
