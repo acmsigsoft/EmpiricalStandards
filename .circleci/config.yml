@@ -22,27 +22,14 @@ jobs:
               echo "Changes detected in ./docs/standard_tables folder."
               echo "$changed_files" | while IFS= read -r file; do
                 awk -F '|' 'NR>2 {
-                    print $1
-                    print $2
-                    print $3
-                    print $4
-                    print $5
-                    print $6
-                    print $7
-                    print $8
                     if (NF != 8) {
                         print "ERROR: " $file " - The line does not contain exactly 8 fields."
                         exit 1
                     }
-                    if ($4 != " ") {
-                        print "ERROR: " $file " - The value in the 4th column must be empty."
-                        print $4
-                        exit 1
-                    }
-                    if ($5 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
+                    if ($4 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
                         print $5
-                        $5 = substr($5, index($5, $5), index($5, $5) + length($5) - 1)
-                        if ($5 != "True" && $5 != "False") {
+                        $4 = substr($4, index($4, $4), index($4, $4) + length($4) - 1)
+                        if ($4 != "True" && $4 != "False") {
                             print "ERROR: " $file " - The value in the \"Display is the deviation reasonable?\" column must be either \"True\" or \"False\"."
                             exit 1
                         }
