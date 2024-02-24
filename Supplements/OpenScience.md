@@ -49,7 +49,7 @@ Carlos Diego Nascimento Damasceno. 2022. "Guidelines for Quality Management of R
 
 Daniel Graziotin. 2020. Open science policies. Retrieved Feb 24, 2024 from [https://ineed.coffee/open-science-policies/](https://ineed.coffee/open-science-policies/)
 
-Daniel Graziotin. 2020. SIGSOFT open science policies. Retrieved July 12, 2020 from [[https://github.com/acmsigsoft/open-science-policies/](https://github.com/acmsigsoft/open-science-policies/](https://github.com/acmsigsoft/open-science-policies/blob/master/sigsoft-open-science-policies.md))
+Daniel Graziotin. 2020. SIGSOFT open science policies. Retrieved July 12, 2020 from [https://github.com/acmsigsoft/open-science-policies/](https://github.com/acmsigsoft/open-science-policies/](https://github.com/acmsigsoft/open-science-policies/blob/master/sigsoft-open-science-policies.md))
 
 Daniel Graziotin. 2018. How to disclose data for double-blind review and make it archived open data upon acceptance
 Retrieved Feb 24, 2024 from [[https://ineed.coffee/5205/how-to-disclose-data-for-double-blind-review-and-make-it-archived-open-data-upon-acceptance/](https://ineed.coffee/5205/how-to-disclose-data-for-double-blind-review-and-make-it-archived-open-data-upon-acceptance/)](https://github.com/dgraziotin/disclose-data-dbr-first-then-opendata).
