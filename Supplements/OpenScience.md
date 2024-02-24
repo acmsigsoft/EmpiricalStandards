@@ -47,12 +47,12 @@ Researchers should not complain that a study involves artifacts which— for goo
 
 Carlos Diego Nascimento Damasceno. 2022. "Guidelines for Quality Management of Research Artifacts in Model-Driven Engineering." _MOdeling LAnguages (blog)_. Retrieved July 17, 2022 from [https://modeling-languages.com/guidelines-for-quality-management-of-research-artifacts-in-model-driven-engineering/#](https://modeling-languages.com/guidelines-for-quality-management-of-research-artifacts-in-model-driven-engineering/#)
 
-Daniel Graziotin. 2020. Open science policies. Retrieved July 12, 2020 from [https://ineed.coffee/open-science-policies/](https://ineed.coffee/open-science-policies/)
+Daniel Graziotin. 2020. Open science policies. Retrieved Feb 24, 2024 from [https://ineed.coffee/open-science-policies/](https://ineed.coffee/open-science-policies/)
 
-Daniel Graziotin. 2020. SIGSOFT open science policies. Retrieved July 12, 2020 from [https://github.com/acmsigsoft/open-science-policies/](https://github.com/acmsigsoft/open-science-policies/)
+Daniel Graziotin. 2020. SIGSOFT open science policies. Retrieved July 12, 2020 from [[https://github.com/acmsigsoft/open-science-policies/](https://github.com/acmsigsoft/open-science-policies/](https://github.com/acmsigsoft/open-science-policies/blob/master/sigsoft-open-science-policies.md))
 
 Daniel Graziotin. 2018. How to disclose data for double-blind review and make it archived open data upon acceptance
-Retrieved July 12, 2020 from [https://ineed.coffee/5205/how-to-disclose-data-for-double-blind-review-and-make-it-archived-open-data-upon-acceptance/](https://ineed.coffee/5205/how-to-disclose-data-for-double-blind-review-and-make-it-archived-open-data-upon-acceptance/).
+Retrieved Feb 24, 2024 from [[https://ineed.coffee/5205/how-to-disclose-data-for-double-blind-review-and-make-it-archived-open-data-upon-acceptance/](https://ineed.coffee/5205/how-to-disclose-data-for-double-blind-review-and-make-it-archived-open-data-upon-acceptance/)](https://github.com/dgraziotin/disclose-data-dbr-first-then-opendata).
 
 Daniel Méndez, Daniel Graziotin, Stefan Wagner, and Heidi Seibold. 2019. Open science in software engineering. _arXiv_. [https://arxiv.org/abs/1904.06499](https://arxiv.org/abs/1904.06499)
 
