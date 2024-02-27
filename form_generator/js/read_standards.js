@@ -102,7 +102,7 @@ function readSpecificEmpiricalStandard(standard_name){
 }
 
 // Load the table file for the customization of the checklist
-function readSpecificEmpiricalStandard_new(standard_name){
+function readSpecificEmpiricalStandard_table(standard_name){
 	//loadConfiguration();
 	var mdFile = new XMLHttpRequest();
 	var loc = window.location.pathname;
@@ -582,12 +582,6 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	deviationRadioYes.value = "yes";
 	deviationRadioNo.value = "no";
 
-	// if the deviation reasonable is fixed in the table
-	if(!display){
-		deviationRadioNo.checked = true; // Ensure 'No' is pre-selected
-		deviationRadioYes.disabled = true; // Disable 'Yes' radio button
-	}
-
 	// Actual Text of the Radio button
 	deviation_block_radios.innerHTML = "&nbsp;&nbsp;&nbsp;";
 	deviationLabelYes.innerHTML = "yes&nbsp;&nbsp;";
@@ -604,6 +598,15 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	deviation_block_radios.appendChild(deviationLabelNo);
 	question_block.appendChild(deviation_block_radios);
 	//console.log(question_block);
+
+	// if the deviation reasonable is fixed in the table
+	if(!display){
+		deviationRadioYes.disabled = true; // Disable 'Yes' radio button
+
+		// Cross out the label associated with the 'Yes' radio button
+		deviationLabelYes.innerHTML = "<s>yes</s>&nbsp;&nbsp;";
+	}
+	
 	return question_block;
 }
 
@@ -1285,7 +1288,7 @@ function create_requirements_checklist_table(file){
 		for (let key of standard_keys){
 			i++;
 			// Obtain all the information for a Standard
-			empirical_standard1 = readSpecificEmpiricalStandard_new(key);
+			empirical_standard1 = readSpecificEmpiricalStandard_table(key);
 			// Convert Markdown to HTML
 			var htmlTable = convertMarkdownToHTML(empirical_standard1);
 	
@@ -1500,7 +1503,8 @@ function create_requirements_checklist(file){
 	// Add Download Button for One Phase Reviewer and Two Phase Reviewer
 	if(role == "\"one-phase-reviewer\"") {
 		form.appendChild(download);
-		form.appendChild(download_test);
+		// Delete the download_Configuration button for phase 1
+		// form.appendChild(download_test);
 	}
 	if(role == "\"two-phase-reviewer\"") {
 		form.appendChild(download);

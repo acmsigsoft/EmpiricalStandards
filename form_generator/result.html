@@ -29,17 +29,19 @@ layout: default
 <body>
   <script>
     window.onload = function() {
-      const uploadedFileContent = localStorage.getItem('uploadedFile');
+      // const uploadedFileContent = localStorage.getItem('uploadedFile');
 
-      if (uploadedFileContent) {
-        // Here, 'uploadedFileContent' contains the file content as text
-        //console.log('Uploaded file content:', uploadedFileContent);
-        generateStandardChecklist(uploadedFileContent)
-        // Perform actions with the file content here
-      } else {
-        //console.log('No file content found in localStorage.');
-        generateStandardChecklist(null)
-      }
+      // if (uploadedFileContent) {
+      //   // Here, 'uploadedFileContent' contains the file content as text
+      //   //console.log('Uploaded file content:', uploadedFileContent);
+      //   generateStandardChecklist(uploadedFileContent)
+      //   // Perform actions with the file content here
+      // } else {
+      //   //console.log('No file content found in localStorage.');
+      //   generateStandardChecklist(null)
+      // }
+
+      generateStandardChecklist(null)
     };
   </script>
 </body>
