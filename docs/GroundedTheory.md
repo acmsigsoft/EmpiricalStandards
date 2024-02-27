@@ -137,9 +137,6 @@ in software engineering research: a critical review and guidelines. In
 *Proceedings of the 38th International Conference on Software
 Engineering (ICSE '16)*. Association for Computing Machinery, New York,
 NY, USA, 120–131. DOI: 10.1145/2884781.2884833
-    
-Rashina Hoda (in press). Socio-Technical Grounded Theory for Software Engineering, *IEEE Transactions on Software Engineering*.
-DOI: 10.1109/TSE.2021.3106280
 
 
 ## Exemplars
