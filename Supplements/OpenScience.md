@@ -45,6 +45,8 @@ Researchers should not complain that a study involves artifacts which— for goo
 
 ## Suggested Readings
 
+Noemi Betancort Cabrera, Elke C Bongartz, Nora Dörrenbächer, Jan Goebel, Harald Kaluza, & Pascal Siegers. 2020. White Paper on implementing the FAIR principles for data in the Social, Behavioural, and Economic Sciences (No. 274). RatSWD Working Paper. [https://www.econstor.eu/handle/10419/229719](https://www.econstor.eu/handle/10419/229719)
+
 Carlos Diego Nascimento Damasceno. 2022. Guidelines for Quality Management of Research Artifacts in Model-Driven Engineering. _MOdeling LAnguages (blog)_. Retrieved July 17, 2022 from [https://modeling-languages.com/guidelines-for-quality-management-of-research-artifacts-in-model-driven-engineering/#](https://modeling-languages.com/guidelines-for-quality-management-of-research-artifacts-in-model-driven-engineering/#)
 
 Daniel Graziotin. 2020. SIGSOFT open science policies. Retrieved July 12, 2020 from [https://github.com/acmsigsoft/open-science-policies/blob/master/sigsoft-open-science-policies.md](https://github.com/acmsigsoft/open-science-policies/blob/master/sigsoft-open-science-policies.md)
