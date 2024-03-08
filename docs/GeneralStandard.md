@@ -140,18 +140,20 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Applying empirical standards in a mechanical, inflexible, box-ticking or gotcha-like manner.
 -   Rejecting a study because it uses a methodology for which no specific standard is available.
 -   Skimming a manuscript instead of carefully reading each word and inspecting each figure and table.
--   Unprofessional or vitriolic tone, ad hominem attacks, disparaging or denigrating comments.
+-   Unprofessional or vitriolic tone; ad hominem attacks; disparaging or denigrating comments.
 -   Allowing the authors' identities or affiliations to affect the review.
 -   Focusing on superficial details of paper without engaging with its main claims or results.
 -   Requesting additional analysis not directly related to a study's purpose or research question, 
     leading to results poorly linked to the article’s narrative.
 -   Using sub-reviewers when the venue does not explicitly allow it.
 -   Using the review to promote the reviewer's own views, theories, methods, or publications.
+-   Providing vague, non-actionable criticism.
 
 ## Invalid Criticisms
 -   Setting arbitrary minimum sample sizes or other data requirements, based on neither power analysis nor theoretical saturation.
 -   Stating that a study: 
-    - lacks detail without enumerating missing details;  
+    - lacks detail without enumerating missing details;
+    - is missing important references without specifying the missing references;  
     - is of low quality without explaining specific problems; or  
     - is not new without providing citations to published studies that make **practically identical** contributions.  
 -   Rejecting a study because it replicates or reproduces existing work. <!--(see Replications Supplement)-->
