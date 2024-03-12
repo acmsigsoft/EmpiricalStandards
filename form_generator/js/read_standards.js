@@ -110,7 +110,7 @@ function readSpecificEmpiricalStandard_table(standard_name){
 	var dir = dir.substring(0, dir.lastIndexOf('/'));
 	var standard_file_name = standard_name.replaceAll("\"", "").replace(" ", "");
 	console.log(standard_file_name);
-	var standard_file_path = dir + "/docs/standard_tables/" + standard_file_name + "_table.md";
+	var standard_file_path = dir + "/docs/attribute_customizations/" + standard_file_name + "_table.md";
 	console.log(standard_file_path);
 	var empirical_standard = "";
 	mdFile.open("GET", standard_file_path, false);
@@ -395,6 +395,12 @@ function show_deviation_block() {
 	var block = document.getElementById("deviation_block:" + id);
 	block.style.display = "block";
 
+	let deviationRadioYes = document.getElementById("deviation_block-radio:Yes:" + id);
+	if(deviationRadioYes.disabled){
+		let deviationRadioNo = document.getElementById("deviation_block-radio:No:" + id);
+		deviationRadioNo.click();
+		create_deviation_justification_block.call(deviationRadioNo);
+	}
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
 	generate_decision_message_block();
 }
@@ -734,6 +740,7 @@ function generate_author_deviation_block(checklistItem_id) {
 function generate_free_text_question(id, class_name, question, checklistItem_id, padding) {
     var question_block = document.createElement("div");
     question_block.id = id + ":" + checklistItem_id;
+	console.log(question_block.id);
     question_block.className = "question_block_free_Text";
     question_block.style = "padding-left:" + padding + "em; display:none";
 
@@ -745,7 +752,9 @@ function generate_free_text_question(id, class_name, question, checklistItem_id,
     answerInputField.id = id + "-answer:" + checklistItem_id;
     answerInputField.className = class_name + "Answer";
     answerInputField.type = "text";
-	answerInput.style = "padding-left:" + 2.5 + "em; resize: both; overflow: auto;";
+	answerInputField.style.width = "500px";
+	answerInputField.style.height = "70px";
+	answerInput.style = "padding-left:" + 2.5 + "em; overflow: auto;";
 
     answerInput.appendChild(answerInputField);
 
@@ -977,9 +986,6 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				// in the case of YES, hide the deviation block
 				checklistRadioYes.onclick = hide_deviation_block;
 				// in the case of NO, show the deviation block
-				if(checklistRadioNo == true){
-					show_deviation_block();
-				}
 				checklistRadioNo.onclick = show_deviation_block;
 
 				// set the type of the input to "radio"
@@ -1682,9 +1688,9 @@ function saveFile(){
 									var question_text = questionDiv[0].querySelector('div:first-child').textContent.trim().replace(/^\W+/g, '');
 									console.log(question_text)
 									var inputCollection  = li.getElementsByClassName('freeTextAnswer');
+									console.log(inputCollection);
 									if(inputCollection[0]){
 										var input_text = inputCollection[0].value;
-										console.log(input_text)
 									}
 									
 									// free_text_list += li_text + '\r\n'
@@ -1696,20 +1702,28 @@ function saveFile(){
 									var fixable_deviation = li.getElementsByClassName('justificationRadioType');
 									if (fixable_deviation[0].checked) {
 										type1_list += '1\t   ' + li_text + '\r\n';
-										type1_list += ' \t   ' + question_text + '\r\n';
-										type1_list += ' \t    \t   ' + input_text + '\r\n';
+										if(input_text !== ""){
+											type1_list += ' \t   ' + question_text + '\r\n';
+											type1_list += ' \t    \t   ' + input_text + '\r\n';
+										}
 									} else if (fixable_deviation[1].checked) {
 										type2_list += '2\t   ' + li_text + '\r\n';
-										type2_list += ' \t   ' + question_text + '\r\n';
-										type2_list += ' \t    \t   ' + input_text + '\r\n';
+										if(input_text !== ""){
+											type2_list += ' \t   ' + question_text + '\r\n';
+											type2_list += ' \t    \t   ' + input_text + '\r\n';
+										}
 									}  else if (fixable_deviation[2].checked) {
 										type3_list += '3\t   ' + li_text + '\r\n';
-										type3_list += ' \t   ' + question_text + '\r\n';
-										type3_list += ' \t    \t   ' + input_text + '\r\n';
+										if(input_text !== ""){
+											type3_list += ' \t   ' + question_text + '\r\n';
+											type3_list += ' \t    \t   ' + input_text + '\r\n';
+										}
 									}  else if (fixable_deviation[3].checked) {
 										type4_list += '4\t   ' + li_text + '\r\n';
-										type4_list += ' \t   ' + question_text + '\r\n';
-										type4_list += ' \t    \t   ' + input_text + '\r\n';
+										if(input_text !== ""){
+											type4_list += ' \t   ' + question_text + '\r\n';
+											type4_list += ' \t    \t   ' + input_text + '\r\n';
+										}
 									}
 								}
 
