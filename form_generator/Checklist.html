@@ -100,9 +100,38 @@ layout: default
         <input type="checkbox" class="standard" name="standard" id="Questionnaire_Surveys"   value="Questionnaire Surveys"><div class="tooltip"><a href="../docs?standard=QuestionnaireSurveys" target="_blank"> Questionnaire survey</a><span class="tooltiptext" id="tooltip_QuestionnaireSurveys"></span></div></input><br/><br/>
         <input type="checkbox" class="standard" name="standard" id="Repository_Mining"       value="Repository Mining"><div class="tooltip"><a href="../docs?standard=RepositoryMining" target="_blank"> Repository Mining</a><span class="tooltiptext" id="tooltip_RepositoryMining"></span></div></input><br/><br/>
         <input type="checkbox" class="standard" name="standard" id="Systematic_Reviews"      value="Systematic Reviews"><div class="tooltip"><a href="../docs?standard=SystematicReviews" target="_blank"> Systematic literature review</a><span class="tooltiptext" id="tooltip_SystematicReviews"></span></div></input><br/><br/>
-        <input type="checkbox" class="none"     name="standard" id="General_Standard"        value="General Standard"> An empirical method not listed above</input><br/><br/>
-        <input type="submit"   class="button"   value="Submit" disabled>
+        <input type="checkbox" class="standard"     name="standard" id="General_Standard"        value="General Standard"> An empirical method not listed above</input><br/><br/>
+        <!-- <input type="file" id="configFileInput" name="configFile" accept=".json" >-->
+        <input type="submit" class="button" value="Submit" disabled>
     </form>
+    <script>
+        // document.getElementById('checklistForm').addEventListener('submit', function(event) {
+        //     const fileInput = document.getElementById('configFileInput');
+        //     const file = fileInput.files[0];
+
+        //     if (!file) {
+        //         localStorage.removeItem('uploadedFile'); // Clear localStorage if no file selected
+        //     } else {
+        //         event.preventDefault(); // Prevent form submission if a file is selected
+        //         const reader = new FileReader();
+        //         reader.onload = function(event) {
+        //             const fileContent = event.target.result;
+        //             localStorage.setItem('uploadedFile', fileContent); // Store file content in localStorage
+
+        //             const checkedStandards = Array.from(document.querySelectorAll('.standard:checked')).map(checkbox => checkbox.value);
+        //             const url = new URL('result.html', window.location.href); // Construct URL
+
+        //             for(i in checkedStandards){
+        //                 url.searchParams.set('standard', checkedStandards[i]); // Set other parameters as needed
+        //                 console.log(checkedStandards[i]);
+        //             }
+        //             url.searchParams.set('role', location.search.split("=")[1]);
+        //             window.location.href = url.href; // Redirect to constructed URL
+        //         };
+        //         reader.readAsText(file);
+        //     }
+        //     });
+      </script>
 </div>
 </body>
 

@@ -11,6 +11,12 @@ layout: default
   <link rel="stylesheet" href="../form_generator/css/appearance.css">
   <link rel="stylesheet" href="../form_generator/css/tooltip.css">
   
+  <style>
+    body {
+      margin-left: 50px; /* Adjust the value as needed */
+    }
+  </style>
+  
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
   <script>
@@ -20,5 +26,23 @@ layout: default
 	gtag('config', '{{ site.google_analytics }}');
   </script>
 </head>
-<body onload="generateStandardChecklist()"></body>
+<body>
+  <script>
+    window.onload = function() {
+      // const uploadedFileContent = localStorage.getItem('uploadedFile');
+
+      // if (uploadedFileContent) {
+      //   // Here, 'uploadedFileContent' contains the file content as text
+      //   //console.log('Uploaded file content:', uploadedFileContent);
+      //   generateStandardChecklist(uploadedFileContent)
+      //   // Perform actions with the file content here
+      // } else {
+      //   //console.log('No file content found in localStorage.');
+      //   generateStandardChecklist(null)
+      // }
+
+      generateStandardChecklist(null)
+    };
+  </script>
+</body>
 </html>

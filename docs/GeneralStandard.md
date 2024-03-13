@@ -41,10 +41,10 @@ following.
 <checklist name="Essential"> 
 
 <intro>    
-    
-- [ ]	states a purpose, problem, objective, or research question  
-- [ ]	explains why the purpose, problem, etc. is important (motivation)  
-- [ ]	defines jargon, acronyms and key concepts  
+
+- [ ]	states a purpose, problem, objective, or research question
+- [ ]	explains why the purpose, problem, etc. is important (motivation)
+- [ ]	defines jargon, acronyms and key concepts
 
 <method>
     
@@ -173,8 +173,10 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Mentioning related work only to dismiss it as irrelevant; listing rather than synthesizing related work.
 -   Acknowledging limitations but then writing implications and conclusions as though the limitations don't exist.
 
----    
+---
 <footnote><sup>[1](#myfootnote1)</sup> visual methods of checking assumptions are often as good as or better than statistical tests</footnote><br>
 <footnote><sup>[2](#myfootnote2)</sup>e.g. positivism, falisificationism, interpretivism, critical realism, postmodernism</footnote><br>
+<footnote><sup>[Q](#myfootnote3)</sup>This is a custom question for first checklist</footnote><br>
+
 </standard>
     
