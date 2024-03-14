@@ -27,6 +27,7 @@ This standard applies to papers that provide analysis of one or more methodologi
 - [ ] presents information that is useful for other researchers
 - [ ] makes recommendations for future research  
 - [ ] presents clear, valid arguments supporting recommendations
+- [ ] describes narrative and statistical methods used to compare studies
   
 <other>  
  
@@ -38,7 +39,11 @@ This standard applies to papers that provide analysis of one or more methodologi
 
 - [ ] synthesizes related work from reference disciplines
 - [ ] provides insight specifically for software engineering; goes beyond summarizing methodological guidance from existing works or reference disciplines;
+- [ ] describes all information sources and methods of extracting data
 - [ ] results integrated back into prior theory or research
+- [ ] describes the methods for synthesizing study results
+- [ ] addresses the adequacy of methods used
+- [ ] describes the strengths and limitations of the evidence, including evidence of inconsistency, imprecision, risk of bias in the included studies, and risk of reporting biases
 - [ ] develops helpful artifacts (e.g. checklists, templates, tests, tools, sets of criteria)
   </checklist>
   
