@@ -1,7 +1,7 @@
-# Qualitative Simulation 
+# Qualitative Simulation - DRAFT
 <standard name="Qualitative Simulation">
 
-*<desc>"A study that involves predominately qualitative analysis of direct observations of humans taking part in a lab-based simulation</desc>*
+*<desc>A study that involves predominately qualitative analysis of direct observations of humans taking part in a lab-based simulation</desc>*
 
 
 ## Application 
@@ -13,7 +13,7 @@ conditions.
 -   Researchers directly observe (and often record) participants taking part
 -   Observations are analyzed using qualitative coding
 
-Protocol Analysis (AKA protocol studies) are a common type of Qualitative Simulation
+Protocol Analysis (AKA protocol studies) are a common type of Qualitative Simulation.
 
 ## Specific Attributes 
 
@@ -76,6 +76,8 @@ such as credibility, multivocality, reflexivity, rigor and transferability (see 
 -   Lack of internal validity. Internal validity is a positivist criterion.
 
 ## Suggested Readings 
+
+Shaochun Xu and Václav Rajlich. 2005. Dialog-based protocol: an empirical research method for cognitive activities in software engineering. In _2005 International Symposium on Empirical Software Engineering_, Noosa Heads, QLD, Australia, IEEE, DOI: [0.1109/ISESE.2005.1541848](https://doi.org/10.1109/ISESE.2005.1541848).
 
 Mathew Miles, A Michael Huberman and Saldana Johnny. 2014. *Qualitative
 data analysis: A methods sourcebook*. Sage.
