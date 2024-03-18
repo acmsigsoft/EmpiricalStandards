@@ -1604,6 +1604,9 @@ function saveFile(){
 	var generated_text = '=================\n' +
 		'Review Checklist\n' +
 		'=================\n';
+	
+	let date_generated = new Date();
+	generated_text += '\nGenerated at: ' + date_generated.toDateString() + ', ' + date_generated.toLocaleTimeString() + '\n';
 		
 	var decision = document.getElementById("decision_msg");
 	var unreasonable = document.getElementById("deviation_unreasonable");
