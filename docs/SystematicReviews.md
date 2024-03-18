@@ -27,6 +27,7 @@
 
 - [ ]	presents step-by-step, systematic, replicable description of search process including search terms<sup>[1](#myfootnote1)</sup>  
 - [ ]	defines clear selection criteria
+- [ ]   describes any methods used to assess risk of bias
 - [ ]	specifies the data extracted from each primary study<sup>[2](#myfootnote2)</sup>  ; explains relationships to research questions
 - [ ]	describes in detail how data were extracted and synthesized (can be qualitative or quantitative)
 - [ ]	describes coding scheme(s) and their use
