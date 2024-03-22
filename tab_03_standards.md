@@ -7,23 +7,23 @@ permalink: /docs/
 <html>
 <head>
 <style>
+
 .tablinks {
   padding: 4px 10px;
   font-size: 16px;
 }
 
-h1 {
+.tab, .tab ul {
+  list-style-type: none;
+}
+
+.tab p {
   padding: 0;
   margin-bottom: 0;
-  font-size: 1.5em;
 }
 
 .tablinks:hover {
   background-color: #ddd;
-}
-
-.tab {
-  padding-bottom: 130px;
 }
 
 .tabcontent {
@@ -68,7 +68,7 @@ function openStandardFromURL(evt) {
 <!-- Standards list/table of contents -->
 <ul class="tab">
   <li>
-	<h1>General</h1>
+	General
 	<ul>
 		<li><a id="GeneralStandard_b"        class="tablinks" href="#Display" onclick="openStandard(event, 'GeneralStandard')">General Standard</a></li>
 		<li><a id="EngineeringResearch_b"    class="tablinks" href="#Display" onclick="openStandard(event, 'EngineeringResearch')">Engineering Research</a></li>
@@ -76,16 +76,16 @@ function openStandardFromURL(evt) {
 	</ul>
   </li>
   <li>
-	<h1>Qualitative</h1>
+	Qualitative
 	<ul>
-		<li><a id="ActionResearch_b"         class="tablinks" href="#Display" onclick="openStandard(event, 'ActiaonResearch')">Action Research</a></li>
+		<li><a id="ActionResearch_b"         class="tablinks" href="#Display" onclick="openStandard(event, 'ActionResearch')">Action Research</a></li>
 		<li><a id="CaseStudy_b"              class="tablinks" href="#Display" onclick="openStandard(event, 'CaseStudy')">Case Study</a></li>
 		<li><a id="GroundedTheory_b"         class="tablinks" href="#Display" onclick="openStandard(event, 'GroundedTheory')">Grounded Theory</a></li>
 		<li><a id="QualitativeSurvey_b"     class="tablinks" href="#Display" onclick="openStandard(event, 'QualitativeSurveys')">Qualitative Survey</a></li>
 	</ul>
   </li>
   <li>
-	<h1>Quantitative</h1>
+	Quantitative
 	<ul>
 		<li><a id="Benchmarking_b"           class="tablinks" href="#Display" onclick="openStandard(event, 'Benchmarking')">Benchmarking</a></li>
 		<li><a id="DataScience_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'DataScience')">Data Science</a></li>
@@ -96,24 +96,22 @@ function openStandardFromURL(evt) {
 		<li><a id="QuestionnaireSurvey_b"   class="tablinks" href="#Display" onclick="openStandard(event, 'QuestionnaireSurveys')">Questionnaire Survey</a></li>
 		<li><a id="RepositoryMining_b"       class="tablinks" href="#Display" onclick="openStandard(event, 'RepositoryMining')">Repository Mining</a></li>
 	</ul>
+  </li>
   <li>
-  <li>
-	<h1>Literature Review</h1>
+	Literature Review
 	<ul>
 		<li><a id="CaseSurvey_b"             class="tablinks" href="#Display" onclick="openStandard(event, 'CaseSurvey')">Case Survey</a></li>
-		<li><a id="SystematicReviews_b"      class="tablinks" href="#Display" onclick="openStandard(event, 'SystematicReviews')">Systematic Reviews</a></li>
+		<li><a id="SystematicReviews_b"      class="tablinks" href="#Display" onclick="openStandard(event, 'SystematicReviews')">Systematic Review</a></li>
 	</ul>
+  </li>
   <li>
-  <li>
-	<h1>Other</h1>
+	Other
 	<ul>
 		<li><a id="MetaScience_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'MetaScience')">Meta Science</a></li>
 		<li><a id="Replication_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'Replication')">Replication</a></li>
 	</ul>
-  <li>
+  </li>
 </ul>
-<br>
-<br>
 
 <div id="Display">
 <div id="GeneralStandard" class="tabcontent">
