@@ -43,7 +43,8 @@ consider the **Discourse Analysis Standard (not yet available)**.
     
 <discussion>
     
- - [ ]   researchers reflect on their own possible biases   
+ - [ ]   researchers reflect on their own possible biases
+ - [ ]   identifies key issues under consideration
     
 </checklist>
      
@@ -51,14 +52,20 @@ consider the **Discourse Analysis Standard (not yet available)**.
 <checklist name="Desirable">
 
 - [ ]	provides supplemental materials including interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence table(s)
+- [ ]   describes questions asked in data collection: content of central questions, form of questions (e.g. open vs. closed)
 - [ ]	includes highly diverse participants
+- [ ]   describes the relationships and interactions between researchers and participants relevant to the research process
 - [ ]	uses direct quotations extensively to support key points
+- [ ]   identifies data recording methods (audio/visual), field notes or transcription processes used
 - [ ]	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory    
      OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
 - [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers<sup>[2](#myfootnote2)</sup>)
 - [ ]	discusses transferability; findings plausibly transferable to different contexts
 - [ ]	compares results with (or integrates them into) prior theory or related research
+- [ ]   reflects on any alternative explanations of the findings
+- [ ]   provides relevant contextual information for findings
 - [ ]	reflects on how researchers’ biases may have affected their analysis
+- [ ]   describes any incentives or compensation, and provides assurance of relevant ethical processes of data collection and consent process as relevant
 </checklist>
      
 ### Extraordinary Attributes	
