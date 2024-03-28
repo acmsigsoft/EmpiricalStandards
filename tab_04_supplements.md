@@ -7,29 +7,24 @@ permalink: /Supplements/
 <html>
 <head>
 <style>
+
 .tablinks {
-  background-color: #inherit;
-  color: black;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
   padding: 4px 10px;
-  font-size: 17px;
-  height: 50px;
-  width: 25%;
+  font-size: 16px;
+}
+
+.tab, .tab ul {
+  list-style-type: none;
+}
+
+.tab h3 {
+  padding: 0;
+  margin-bottom: 0;
+  font-size: 16px;
 }
 
 .tablinks:hover {
   background-color: #ddd;
-}
-
-.tab {
-  padding-bottom: 80px;
-}
-
-.tab button.active {
-  background-color: #ccc;
 }
 
 .tabcontent {
@@ -57,6 +52,7 @@ function openSupplementFromURL(evt) {
   document.getElementById(supplementName+'_b').className += " active";
 }
 </script>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 <script>
@@ -66,20 +62,32 @@ function openSupplementFromURL(evt) {
   gtag('config', '{{ site.google_analytics }}');
 </script>
 </head>
+
 <body onload="openSupplementFromURL(event)">
 
-<div class="tab">
-  <button id="EthicsEngineering_b"           class="tablinks" onclick="openSupplement(event, 'EthicsEngineering')">Ethics (Engineering Research)</button>
-<div class="tab">
-  <button id="EthicsHumanParticipants_b"           class="tablinks" onclick="openSupplement(event, 'EthicsHumanParticipants')">Ethics (Human Participants)</button>
-  <button id="EthicsSecondaryData_b"               class="tablinks" onclick="openSupplement(event, 'EthicsSecondaryData')">Ethics (Secondary Data)</button>
-  <button id="InformationVisualization_b"          class="tablinks" onclick="openSupplement(event, 'InformationVisualization')">Information Visualization</button>
-  <button id="InterRaterReliabilityAndAgreement_b" class="tablinks" onclick="openSupplement(event, 'InterRaterReliabilityAndAgreement')">Inter-Rater Reliability and Agreement</button>
-  <button id="OpenScience_b"                       class="tablinks" onclick="openSupplement(event, 'OpenScience')">Open Science</button>
-  <button id="RegisteredReports_b"                 class="tablinks" onclick="openSupplement(event, 'RegisteredReports')">Registered Reports</button>
-  <button id="Sampling_b"                          class="tablinks" onclick="openSupplement(event, 'Sampling')">Sampling</button>
-</div>
+<!-- Supplements list/table of contents -->
+<ul class="tab">
+  <li>
+    <h3>Ethics</h3>
+    <ul>
+	  <li><a id="EthicsEngineering_b" class="tablinks" href="#Display" onclick="openSupplement(event, 'EthicsEngineering')">Ethics (Engineering Research)</a></li>
+	  <li><a id="EthicsHumanParticipants_b" class="tablinks" href="#Display" onclick="openSupplement(event, 'EthicsHumanParticipants')">Ethics (Human Participants)</a></li>
+	  <li> <a id="EthicsSecondaryData_b" class="tablinks" href="#Display" onclick="openSupplement(event, 'EthicsSecondaryData')">Ethics (Secondary Data)</a></li>
+	</ul>
+  </li>
+  <li>
+    <h3>Other</h3>
+	<ul>
+	  <li><a id="InformationVisualization_b" class="tablinks" href="#Display" onclick="openSupplement(event, 'InformationVisualization')">Information Visualization</a></li>
+	  <li><a id="InterRaterReliabilityAndAgreement_b" class="tablinks" href="#Display" onclick="openSupplement(event, 'InterRaterReliabilityAndAgreement')">Inter-Rater Reliability and Agreement</a></li>
+	  <li><a id="OpenScience_b"	class="tablinks" href="#Display" onclick="openSupplement(event, 'OpenScience')">Open Science</a></li>
+	  <li><a id="RegisteredReports_b" class="tablinks" href="#Display" onclick="openSupplement(event, 'RegisteredReports')">Registered Reports</a></li>
+	  <li> <a id="Sampling_b" class="tablinks" href="#Display" onclick="openSupplement(event, 'Sampling')">Sampling</a></li>
+	</ul>
+  </li>
+</ul>
 
+<div id="Display">
 <div id="EthicsEngineering" class="tabcontent">
   <p>
     {% capture std %}{% include_relative Supplements/EthicsEngineering.md %}{% endcapture %}
@@ -135,6 +143,7 @@ function openSupplementFromURL(evt) {
     {% capture std %}{% include_relative Supplements/Sampling.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
+</div>
 </div>
 
 <script>
