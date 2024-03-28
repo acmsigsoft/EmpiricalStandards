@@ -20,6 +20,7 @@ the mixing of methodologies, not the methodologies themselves. For the latter, r
 
 - [ ] **justifies** using multiple methodologies and/or methods
 - [ ] provides a **purpose statement** that conveys the overarching multi or mixed method design intent (why)
+- [ ] describes sources of data as open-ended information (e.g. qualitative interviews) and closed-ended information (e.g. quantitative instruments)
 
 <method>
 
@@ -31,6 +32,7 @@ the mixing of methodologies, not the methodologies themselves. For the latter, r
 
 - [ ] **integrates the findings** from all methods to address the research 
   question/objective
+- [ ] indicates how the qualitative and quantitative results were “mixed” or integrated (e.g. discussion; tables of joint displays; graphs; data transformation in which one form of data is transformed to the other, such as qualitative text, codes, themes are transformed into quantitative counts or variables)
 
 <discussion>
 
@@ -48,12 +50,14 @@ the mixing of methodologies, not the methodologies themselves. For the latter, r
 - [ ] illustrates the research design using a **visual model** (diagram)
 - [ ] indicates the use of multiple methods or mixed method design in the **title** 
 - [ ] (for mixed-methods) includes, in the **literature review**, a mixture of quantitative, qualitative, and mixed methods related work
+- [ ] identifies the sources of qualitative and quantitative data (e.g., participants, text), their characteristics, and the relationship between the data sets, if there is one (e.g., an embedded design).
 - [ ] **distinguishes the additional value** from using a multi-methodology or mixed method design in terms of corroboration, complementarity, and expansion (breadth and depth)
 - [ ] discusses **discrepancies and incongruent findings** from the use of multiple methods
 - [ ] describes the main **philosophical, epistemological, and/or theoretical foundations** that the authors use and relate those to the planned use of multi or mixed methods in the study
 - [ ] describes the **challenges** faced in the design and how those were or could be mitigated
 - [ ] describes how the methods and their findings relate to one or more **theories or theoretical frameworks**
 - [ ] describes **ethical issues** that may have been presented through the blend of multi- or mixed methods
+- [ ] indicates methodological integrity, quantitative validity and reliability, and mixed methods validity or legitimacy
  </checklist>
 
 ### Extraordinary
