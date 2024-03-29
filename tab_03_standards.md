@@ -17,9 +17,10 @@ permalink: /docs/
   list-style-type: none;
 }
 
-.tab p {
+.tab h3 {
   padding: 0;
   margin-bottom: 0;
+  font-size: 16px;
 }
 
 .tablinks:hover {
@@ -68,7 +69,7 @@ function openStandardFromURL(evt) {
 <!-- Standards list/table of contents -->
 <ul class="tab">
   <li>
-	General
+	<h3>General</h3>
 	<ul>
 		<li><a id="GeneralStandard_b"        class="tablinks" href="#Display" onclick="openStandard(event, 'GeneralStandard')">General Standard</a></li>
 		<li><a id="EngineeringResearch_b"    class="tablinks" href="#Display" onclick="openStandard(event, 'EngineeringResearch')">Engineering Research</a></li>
@@ -76,7 +77,7 @@ function openStandardFromURL(evt) {
 	</ul>
   </li>
   <li>
-	Qualitative
+	<h3>Qualitative</h3>
 	<ul>
 		<li><a id="ActionResearch_b"         class="tablinks" href="#Display" onclick="openStandard(event, 'ActionResearch')">Action Research</a></li>
 		<li><a id="CaseStudy_b"              class="tablinks" href="#Display" onclick="openStandard(event, 'CaseStudy')">Case Study</a></li>
@@ -85,7 +86,7 @@ function openStandardFromURL(evt) {
 	</ul>
   </li>
   <li>
-	Quantitative
+	<h3>Quantitative</h3>
 	<ul>
 		<li><a id="Benchmarking_b"           class="tablinks" href="#Display" onclick="openStandard(event, 'Benchmarking')">Benchmarking</a></li>
 		<li><a id="DataScience_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'DataScience')">Data Science</a></li>
@@ -98,14 +99,14 @@ function openStandardFromURL(evt) {
 	</ul>
   </li>
   <li>
-	Literature Review
+	<h3>Literature Review</h3>
 	<ul>
 		<li><a id="CaseSurvey_b"             class="tablinks" href="#Display" onclick="openStandard(event, 'CaseSurvey')">Case Survey</a></li>
 		<li><a id="SystematicReviews_b"      class="tablinks" href="#Display" onclick="openStandard(event, 'SystematicReviews')">Systematic Review</a></li>
 	</ul>
   </li>
   <li>
-	Other
+	<h3>Other</h3>
 	<ul>
 		<li><a id="MetaScience_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'MetaScience')">Meta Science</a></li>
 		<li><a id="Replication_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'Replication')">Replication</a></li>
