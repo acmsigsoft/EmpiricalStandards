@@ -76,74 +76,74 @@ jobs:
             
 
     test3:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      # Replace this with a real test runner invocation
-      - run:
-          name: Fetch updates from origin main branch
-          command: |
-            git fetch origin master:master
-      # Check for changes in docs/standard_tables directory
-      - run:
-          name: Check for changes in ./docs/standard_tables folder
-          command: |
-            changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/standard_tables/')
-            if [ -n "$changed_files" ]; then
-              echo "Changes detected in ./docs/standard_tables folder."
-              echo "$changed_files" | while IFS= read -r file; do
-                awk -F '|' 'NR>2 {
-                    if ($5 !~ /^[[:space:]]*(([1-4])(,[[:space:]]*[1-4])*)[[:space:]]*$/) {
-                        print "ERROR: " $file " - The value in the \"Error Types\" column must be a comma-separated list of numbers from 1 to 4."
-                        exit 1
-                    }
+      docker:
+        - image: cimg/base:stable
+      steps:
+        - checkout
+        # Replace this with a real test runner invocation
+        - run:
+            name: Fetch updates from origin main branch
+            command: |
+              git fetch origin master:master
+        # Check for changes in docs/standard_tables directory
+        - run:
+            name: Check for changes in ./docs/standard_tables folder
+            command: |
+              changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/standard_tables/')
+              if [ -n "$changed_files" ]; then
+                echo "Changes detected in ./docs/standard_tables folder."
+                echo "$changed_files" | while IFS= read -r file; do
+                  awk -F '|' 'NR>2 {
+                      if ($5 !~ /^[[:space:]]*(([1-4])(,[[:space:]]*[1-4])*)[[:space:]]*$/) {
+                          print "ERROR: " $file " - The value in the \"Error Types\" column must be a comma-separated list of numbers from 1 to 4."
+                          exit 1
+                      }
 
-                }' "$file"
-                if [ $? -ne 0 ]; then
-                    echo "ERROR: $file does not contain a valid Markdown table with the required format."
-                    exit 1
-                fi
-              done
-            else
-              echo "No changes detected in ./docs/standard_tables folder."
-            fi
+                  }' "$file"
+                  if [ $? -ne 0 ]; then
+                      echo "ERROR: $file does not contain a valid Markdown table with the required format."
+                      exit 1
+                  fi
+                done
+              else
+                echo "No changes detected in ./docs/standard_tables folder."
+              fi
 
     test4:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      # Replace this with a real test runner invocation
-      - run:
-          name: Fetch updates from origin main branch
-          command: |
-            git fetch origin master:master
-      # Check for changes in docs/standard_tables directory
-      - run:
-          name: Check for changes in ./docs/standard_tables folder
-          command: |
-            changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/standard_tables/')
-            if [ -n "$changed_files" ]; then
-              echo "Changes detected in ./docs/standard_tables folder."
-              echo "$changed_files" | while IFS= read -r file; do
-                awk -F '|' 'NR>2 {
-                    if ($6 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
-                        $6 = substr($6, index($6, $6), index($6, $6) + length($6) - 1)
-                        if ($6 != "True" && $6 != "False") {
-                            print "ERROR: " $file " - The value in the \"Display is Free Text Question?\" column must be either \"True\" or \"False\"."
-                            exit 1
-                        }
-                    }
-                }' "$file"
-                if [ $? -ne 0 ]; then
-                    echo "ERROR: $file does not contain a valid Markdown table with the required format."
-                    exit 1
-                fi
-              done
-            else
-              echo "No changes detected in ./docs/standard_tables folder."
-            fi
+      docker:
+        - image: cimg/base:stable
+      steps:
+        - checkout
+        # Replace this with a real test runner invocation
+        - run:
+            name: Fetch updates from origin main branch
+            command: |
+              git fetch origin master:master
+        # Check for changes in docs/standard_tables directory
+        - run:
+            name: Check for changes in ./docs/standard_tables folder
+            command: |
+              changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/standard_tables/')
+              if [ -n "$changed_files" ]; then
+                echo "Changes detected in ./docs/standard_tables folder."
+                echo "$changed_files" | while IFS= read -r file; do
+                  awk -F '|' 'NR>2 {
+                      if ($6 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
+                          $6 = substr($6, index($6, $6), index($6, $6) + length($6) - 1)
+                          if ($6 != "True" && $6 != "False") {
+                              print "ERROR: " $file " - The value in the \"Display is Free Text Question?\" column must be either \"True\" or \"False\"."
+                              exit 1
+                          }
+                      }
+                  }' "$file"
+                  if [ $? -ne 0 ]; then
+                      echo "ERROR: $file does not contain a valid Markdown table with the required format."
+                      exit 1
+                  fi
+                done
+              else
+                echo "No changes detected in ./docs/standard_tables folder."
+              fi
   # build:
   #   docker:
   #     - image: cimg/base:stable
