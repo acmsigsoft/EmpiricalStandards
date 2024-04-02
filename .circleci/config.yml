@@ -15,11 +15,11 @@ jobs:
             git fetch origin master:master
       # Check for changes in docs/standard_tables directory
       - run:
-          name: Check for changes in ./docs/standard_tables folder
+          name: Check for changes in ./docs/attribute_customizations folder
           command: |
-            changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/standard_tables/')
+            changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/attribute_customizations/')
             if [ -n "$changed_files" ]; then
-              echo "Changes detected in ./docs/standard_tables folder."
+              echo "Changes detected in ./docs/attribute_customizations folder."
               echo "$changed_files" | while IFS= read -r file; do
                 awk -F '|' 'NR>2 {
                     if (NF != 8) {
@@ -34,7 +34,7 @@ jobs:
                 fi
               done
             else
-              echo "No changes detected in ./docs/standard_tables folder."
+              echo "No changes detected in ./docs/attribute_customizations folder."
             fi
 
   test2:
@@ -49,11 +49,11 @@ jobs:
             git fetch origin master:master
       # Check for changes in docs/standard_tables directory
       - run:
-          name: Check for changes in ./docs/standard_tables folder
+          name: Check for changes in ./docs/attribute_customizations folder
           command: |
-            changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/standard_tables/')
+            changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/attribute_customizations/')
             if [ -n "$changed_files" ]; then
-              echo "Changes detected in ./docs/standard_tables folder."
+              echo "Changes detected in ./docs/attribute_customizations folder."
               echo "$changed_files" | while IFS= read -r file; do
                 awk -F '|' 'NR>2 {
                     if ($4 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
@@ -71,7 +71,7 @@ jobs:
                 fi
               done
             else
-              echo "No changes detected in ./docs/standard_tables folder."
+              echo "No changes detected in ./docs/attribute_customizations folder."
             fi
             
 
@@ -87,11 +87,11 @@ jobs:
               git fetch origin master:master
         # Check for changes in docs/standard_tables directory
         - run:
-            name: Check for changes in ./docs/standard_tables folder
+            name: Check for changes in ./docs/attribute_customizations folder
             command: |
-              changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/standard_tables/')
+              changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/attribute_customizations/')
               if [ -n "$changed_files" ]; then
-                echo "Changes detected in ./docs/standard_tables folder."
+                echo "Changes detected in ./docs/attribute_customizations folder."
                 echo "$changed_files" | while IFS= read -r file; do
                   awk -F '|' 'NR>2 {
                       if ($5 !~ /^[[:space:]]*(([1-4])(,[[:space:]]*[1-4])*)[[:space:]]*$/) {
@@ -106,7 +106,7 @@ jobs:
                   fi
                 done
               else
-                echo "No changes detected in ./docs/standard_tables folder."
+                echo "No changes detected in ./docs/attribute_customizations folder."
               fi
 
     test4:
@@ -121,11 +121,11 @@ jobs:
               git fetch origin master:master
         # Check for changes in docs/standard_tables directory
         - run:
-            name: Check for changes in ./docs/standard_tables folder
+            name: Check for changes in ./docs/attribute_customizations folder
             command: |
-              changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/standard_tables/')
+              changed_files=$(git diff --name-only origin/master HEAD | grep '^docs/attribute_customizations/')
               if [ -n "$changed_files" ]; then
-                echo "Changes detected in ./docs/standard_tables folder."
+                echo "Changes detected in ./docs/attribute_customizations folder."
                 echo "$changed_files" | while IFS= read -r file; do
                   awk -F '|' 'NR>2 {
                       if ($6 !~ /^[[:space:]]*(True|False)[[:space:]]*$/) {
@@ -142,7 +142,7 @@ jobs:
                   fi
                 done
               else
-                echo "No changes detected in ./docs/standard_tables folder."
+                echo "No changes detected in ./docs/attribute_customizations folder."
               fi
   # build:
   #   docker:
