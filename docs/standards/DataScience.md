@@ -63,7 +63,7 @@ Applies to studies that primarily analyze existing software phenomena using pred
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ] leverages temporal data via longitudinal analyses (see the [Longitudinal Studies Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Longitudinal.md))
+- [ ] leverages temporal data via longitudinal analyses (see the [Longitudinal Studies Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Longitudinal.md))
 - [ ] triangulates with qualitative data analysis of selected samples of the data 
 - [ ] triangulates with other data sources, such as surveys or interviews
 - [ ] shares findings with and solicits feedback from the creators of the (software) artifacts being studied

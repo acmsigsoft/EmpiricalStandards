@@ -46,7 +46,7 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 - [ ] describes and justifies measures or metrics used
 - [ ] EITHER: uses previously validated measures, OR: assesses construct validity
 
-- [ ] if predictive modeling is used, complies with the [Data Science Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/DataScience.md)
+- [ ] if predictive modeling is used, complies with the [Data Science Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/DataScience.md)
 
 <results>
     

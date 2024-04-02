@@ -31,11 +31,11 @@ standard is not appropriate for:
 <method>
 
 - [ ]   empirically evaluates the proposed artifact using:  
-  [action research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/ActionResearch.md), in which the researchers intervene in a real organization using the artifact,  
-  a [case study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/CaseStudy.md) in which the researchers observe a real organization using the artifact,  
-  a [controlled experiment](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Experiments.md) in which human participants use the artifact,  
-  a [quantitative simulation](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/QuantitativeSimulation.md) in which the artifact is assessed (usually against a competing artifact) in an artificial environment,  
-  a [benchmarking study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Benchmarking.md), in which the artifact is assessed using one or more benchmarks, or  
+  [action research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/ActionResearch.md), in which the researchers intervene in a real organization using the artifact,  
+  a [case study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/CaseStudy.md) in which the researchers observe a real organization using the artifact,  
+  a [controlled experiment](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Experiments.md) in which human participants use the artifact,  
+  a [quantitative simulation](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/QuantitativeSimulation.md) in which the artifact is assessed (usually against a competing artifact) in an artificial environment,  
+  a [benchmarking study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Benchmarking.md), in which the artifact is assessed using one or more benchmarks, or  
   another method for which a clear and convincing rationale is provided
 - [ ]   clearly indicates which of the above empirical methodology is used
 - [ ]   EITHER: discusses state-of-art alternatives (and their strengths, weaknesses and limitations)   

@@ -99,7 +99,7 @@ following.
 ### Extraordinary Attributes 	
 <checklist name="Extraordinary">
 
-- [ ]	applies two or more data collection or analysis strategies to the same research question (see the [Multimethodology Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/MixedMethods.md))
+- [ ]	applies two or more data collection or analysis strategies to the same research question (see the [Multimethodology Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/MixedMethods.md))
 - [ ]	approaches the same research question(s) from multiple epistemological perspectives
 - [ ]	innovates on research methodology while completing an empirical study
 
