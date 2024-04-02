@@ -1,4 +1,4 @@
-docs/s---
+---
 layout: default
 title: Standards
 permalink: /docs/standards
