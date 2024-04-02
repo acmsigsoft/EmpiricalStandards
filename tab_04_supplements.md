@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Supplements
-permalink: /Supplements/
+permalink: /docs/supplements
 ---   
 
 <html>
@@ -90,14 +90,14 @@ function openSupplementFromURL(evt) {
 <div id="Display">
 <div id="EthicsEngineering" class="tabcontent">
   <p>
-    {% capture std %}{% include_relative Supplements/EthicsEngineering.md %}{% endcapture %}
+    {% capture std %}{% include_relative docs/supplements/EthicsEngineering.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="EthicsHumanParticipants" class="tabcontent">
   <p>
-    {% capture std %}{% include_relative Supplements/EthicsHumanParticipants.md %}{% endcapture %}
+    {% capture std %}{% include_relative docs/supplements/EthicsHumanParticipants.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
@@ -105,42 +105,42 @@ function openSupplementFromURL(evt) {
   
 <div id="EthicsSecondaryData" class="tabcontent">
   <p>
-    {% capture std %}{% include_relative Supplements/EthicsSecondaryData.md %}{% endcapture %}
+    {% capture std %}{% include_relative docs/supplements/EthicsSecondaryData.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="InformationVisualization" class="tabcontent">
   <p>
-    {% capture std %}{% include_relative Supplements/InformationVisualization.md %}{% endcapture %}
+    {% capture std %}{% include_relative docs/supplements/InformationVisualization.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="InterRaterReliabilityAndAgreement" class="tabcontent">
   <p>
-    {% capture std %}{% include_relative Supplements/InterRaterReliabilityAndAgreement.md %}{% endcapture %}
+    {% capture std %}{% include_relative docs/supplements/InterRaterReliabilityAndAgreement.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="OpenScience" class="tabcontent">
   <p>
-    {% capture std %}{% include_relative Supplements/OpenScience.md %}{% endcapture %}
+    {% capture std %}{% include_relative docs/supplements/OpenScience.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="RegisteredReports" class="tabcontent">
   <p>
-    {% capture std %}{% include_relative Supplements/RegisteredReports.md %}{% endcapture %}
+    {% capture std %}{% include_relative docs/supplements/RegisteredReports.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>
 
 <div id="Sampling" class="tabcontent">
   <p>
-    {% capture std %}{% include_relative Supplements/Sampling.md %}{% endcapture %}
+    {% capture std %}{% include_relative docs/supplements/Sampling.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>

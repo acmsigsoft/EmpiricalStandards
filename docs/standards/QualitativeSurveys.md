@@ -31,7 +31,7 @@ consider the **Discourse Analysis Standard (not yet available)**.
 
 <method>    
     
-- [ ]	explains how interviewees were selected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ]	explains how interviewees were selected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md))
 - [ ]	describes interviewees (e.g. demographics, work roles)
 - [ ]   describes interviewer(s) (e.g. experience, perspective)     
     
@@ -74,14 +74,14 @@ consider the **Discourse Analysis Standard (not yet available)**.
 - [ ]	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
 - [ ]	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis
 - [ ]	employs probabilistic sampling strategy; statistical analysis of response bias
-- [ ]	uses multiple coders and analyzes inter-coder reliability (see [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]	uses multiple coders and analyzes inter-coder reliability (see [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md))
 </checklist>
 
 ## General Quality Criteria
 
 An interview study should address appropriate qualitative quality
 criteria such as: **credibility,** **resonance**, **usefulness**, and
-**transferability** (see [Glossary](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Glossary.md)). Quantitative quality criteria
+**transferability** (see [Glossary](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Glossary.md)). Quantitative quality criteria
 such as internal validity, construct validity, generalizability and
 reliability typically do not apply.
 

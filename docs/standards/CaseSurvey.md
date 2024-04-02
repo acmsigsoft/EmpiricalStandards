@@ -28,7 +28,7 @@ This standard does not apply to studies collecting primary data from a large num
 
 - [ ]   presents step-by-step, systematic, replicable description of the search process for published case studies (not necessarily in peer-reviewed venues)
 - [ ]   defines clear inclusion and exclusion criteria for cases<sup>[1](#myfootnote1)</sup>
-- [ ]   describes the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ]   describes the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md))
 - [ ]   mitigates sampling bias and publication bias, using some (not all) of:   
 (i) manual and keyword automated searches;   
 (ii) backward and forward snowballing searches;   
@@ -60,7 +60,7 @@ OR: provides the coding scheme in supplementary materials
 
 - [ ]   provides supplementary materials such as  protocol, search terms, search results, selection process results, coding scheme, examples of coding, decision rules, complete dataset, analysis scripts, descriptions of edge cases<sup>[3](#myfootnote3)</sup>
 - [ ]   explains and justifies the design of the coding scheme 
-- [ ]   uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup>
+- [ ]   uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup>
 - [ ]   describes contacting authors of primary studies for more information, to check coding accuracy, or resolve coding disagreements
 - [ ]   assesses quality of primary studies using an a priori scheme (e.g. the **Case Survey Standard**); explains how quality was assessed; models study quality as a moderating variable  
 - [ ]   consolidates results using tables, diagrams, or charts; includes PRISMA flow diagram (cf. Moher et al. 2009)

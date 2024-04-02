@@ -31,7 +31,7 @@ typically given to participants in controlled experiments (see the
 
 <method>
 
-- [ ]	identifies the target population and defines the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ]	identifies the target population and defines the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md))
 - [ ]	describes how the questionnaire instrument was created
 - [ ]	describes how participants were selected or recruited (e.g. sampling frame, advertising, invitations, incentives)
 - [ ]	EITHER: measures constructs using (or adapting) validated scales    
