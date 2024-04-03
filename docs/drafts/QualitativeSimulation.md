@@ -11,7 +11,7 @@ conditions.
 
 -   Human participants take part in a simulated task, typically in a contrived or lab-based environment, alone or in groups
 -   Researchers directly observe (and often record) participants taking part 
--   Observations are analyzed using qualitative codingwhilecompleting
+-   Observations are analyzed using qualitative coding
 
 Protocol Analysis (AKA protocol studies) are a common type of Qualitative Simulation.
 
@@ -26,8 +26,9 @@ Protocol Analysis (AKA protocol studies) are a common type of Qualitative Simula
 <method>
 
 - [ ]   describes the environment in which the simulation took place
-- [ ]   describes if the partcipants complete/take part in the task alone or in group(s)
-- [ ]   describes the events, activities, tasks, or objects comprising the simulations    
+- [ ]   indicates whether partcipants complete the task alone or in groups
+- [ ]   describes the events, activities, tasks, or objects comprising the simulations
+- [ ]   describes any interference or prompting by the researcher during the simulation, or confirms there was none    
 - [ ]   describes the qualitative coding procedures
 
 <results>
@@ -44,9 +45,8 @@ Protocol Analysis (AKA protocol studies) are a common type of Qualitative Simula
 ### Desirable Attributes
 <checklist name="Desirable">
     
-- [ ]	  provides supplemental materials such as task materials, coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
+- [ ]	provides supplemental materials such as task materials, coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]   includes debriefing sessions with participants
-- [ ]   describes if there was any sort of interference or prompting by the researcher at any stage of task simulation
 - [ ]   cross-checks observations against statements made my participants during debriefing sessions
 - [ ]   describes how prior understandings of the phenomena were managed and/or influenced the research
 - [ ]   EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory    
@@ -74,14 +74,14 @@ such as credibility, multivocality, reflexivity, rigor and transferability (see 
 
 -  Overstating the degree to which the simulation justifies inferences about participants' cognitive states or cognitive processes. The whole point of a qualitative simulation is often to get insight into cognitive states and processes, but these insights should be presented with caution.
 -  Attempting a qualitative simulation from a positivist epistemological stance. There is no coherent positivist basis for qualitative research in an artificial context. Qualitative simulations make more sense from a realist or interpretivist epistemological stance.
--  Attempting to evaluate the quality criteria using quantitative/positivist validity criteria.
+-  Describing the study's limitations using quantitative/positivist validity criteria.
                                                                                                                  
 ## Invalid Criticisms 
 
 -   Does not present quantitative data. That's why it's called a "qualitative" simulation.
 -   The task or environment are artificial. The whole point of a qualitative simulation is to study an artificial task in a controlled environment. 
--   Lack of internal validity. Internal validity is a positivist criterion.
--   is not reported as a positivist experiment/randomised controlled trial. 
+-   Lack of internal validity or objectivity. Those are positivist criteria.
+-   Is not reported as a positivist experiment/randomised controlled trial. 
 
 ## Suggested Readings 
 
