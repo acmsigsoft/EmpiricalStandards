@@ -59,7 +59,7 @@
 - [ ]	demonstrates that the search process is sufficiently rigorous for the systematic review goals<sup>[3](#myfootnote3)</sup>  
 - [ ]	assesses quality of primary studies using an a priori coding scheme (e.g. relevant empirical standards); explains how quality was assessed; excludes low quality studies (ok) or models study quality as a moderating variable (better) 
 - [ ]	assesses coverage (e.g. funnel plots, tweedle trim-and-fill method, percentage of known papers found)
-- [ ]	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup> 
+- [ ]	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup> 
 - [ ]	(interpretivist reviews) reflects on how researcher’s biases may have affected their analysis
 - [ ]	consolidates results using tables, diagrams, or charts 
 - [ ]   includes a PRISMA flow diagram (cf. Moher et al. 2009)

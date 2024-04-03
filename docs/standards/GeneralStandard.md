@@ -50,7 +50,7 @@ following.
     
 - [ ]	names the methodology or methodologies used
 - [ ]	methodology is appropriate (not necessarily optimal) for stated purpose, problem, etc.
-- [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md))
 - [ ]	describes in detail how the data were analyzed
 
 
@@ -70,8 +70,8 @@ following.
     
 - [ ]	contributes in some way to the collective body of knowledge <!-- (see Replications Supplement) -->
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
-- [ ]	acknowledges and mitigates potential risks, harms, burdens or unintended consequences of the research (see the ethics supplements for [Engineering Research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsEngineering.md), [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsHumanParticipants.md), or [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md))
-- [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InformationVisualization.md))
+- [ ]	acknowledges and mitigates potential risks, harms, burdens or unintended consequences of the research (see the ethics supplements for [Engineering Research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/EthicsEngineering.md), [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/EthicsHumanParticipants.md), or [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/EthicsSecondaryData.md))
+- [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InformationVisualization.md))
 - [ ]	complies with all applicable empirical standards
 
 </checklist>
@@ -91,8 +91,8 @@ following.
 - [ ]	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
 - [ ]	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
 - [ ]	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
-- [ ]   publishes the study in two phases: a plan and the results of executing the plan (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/Supplements)) 
-- [ ]	uses multiple raters, where philosophically appropriate, for making subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]   publishes the study in two phases: a plan and the results of executing the plan (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/docs/supplements)) 
+- [ ]	uses multiple raters, where philosophically appropriate, for making subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md))
 
 </checklist>
      

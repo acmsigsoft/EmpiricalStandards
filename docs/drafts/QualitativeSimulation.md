@@ -55,8 +55,8 @@ Protocol Analysis (AKA protocol studies) are a common type of Qualitative Simula
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ]   uses a team-based approach; e.g., multiple raters with analysis of inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
-- [ ]   published a protocol beforehand and made it publicly accessible (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/Supplements)) 
+- [ ]   uses a team-based approach; e.g., multiple raters with analysis of inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]   published a protocol beforehand and made it publicly accessible (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/docs/supplements)) 
 </checklist>
     
 ## General Quality Criteria 
