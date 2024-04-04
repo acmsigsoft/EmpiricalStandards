@@ -64,11 +64,7 @@ Protocol Analysis (AKA protocol studies) are a common type of Qualitative Simula
     
 ## General Quality Criteria 
 
-As qualitative simulations are more consistent with critical realism, the quality evaluation criteria should also include
-ontological appropriateness, contigent validity, trustworthiness and analytic generalization.
-
-Qualitative simulations should be evaluated using qualitative validity criteria
-such as credibility, multivocality, reflexivity, rigor and transferability (see **Glossary**).  
+As qualitative simulations are more consistent with critical realism, realist quality criteria including ontological appropriateness, contingent validity, trustworthiness, and analytic generalization should be used (see Healy and Perry 2000).  
 
 ## Antipatterns 
 
@@ -89,6 +85,8 @@ Shaochun Xu and Václav Rajlich. 2005. Dialog-based protocol: an empirical resea
 
 Mathew Miles, A Michael Huberman and Saldana Johnny. 2014. *Qualitative
 data analysis: A methods sourcebook*. Sage.
+
+Healy, Marilyn, and Chad Perry. 2000. Comprehensive criteria to judge validity and reliability of qualitative research within the realism paradigm. _Qualitative Market Research_ 3,3, 118-126. DOI: [10.1108/13522750010333861](https://doi.org/10.1108/13522750010333861)
 
 Sarah J. Tracy. 2010. Qualitative Quality: Eight "Big-Tent" Criteria for
 Excellent Qualitative Research. *Qualitative Inquiry*. 16, 10,
