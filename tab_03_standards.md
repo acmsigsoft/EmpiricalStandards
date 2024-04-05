@@ -8,6 +8,76 @@ permalink: /docs/standards
 <head>
 <style>
 
+main .wrapper {
+  min-width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0;
+}
+
+.standards-list {
+  flex: 0 0 260px;
+  align-self: flex-start;
+  top: 30px;
+  position: sticky;
+}
+
+#Display {
+  flex: 20%;
+}
+
+.standards-list .nav-trigger, .standards-list .menu-icon {
+  display: none
+}
+
+@media screen and (max-width: 600px) {
+  .standards-list {
+    left: 15px;
+    background-color: #fdfdfd;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    text-align: left;
+	position: fixed;
+	top: 80px;
+  }
+  
+  #Display {
+	flex: 100%;
+  }
+  
+  .standards-list label[for="toc-trigger"] {
+    display: block;
+    float: left;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+  
+  .standards-list .menu-icon {
+    display: block;
+    float: left;
+    width: 36px;
+    padding-top: 6px;
+    text-align: center;
+  }
+  
+  .standards-list .menu-icon>svg {
+    fill: #424242;
+  }
+  
+  .standards-list input ~ .tab {
+    clear: both;
+    display: none;
+	overflow: scroll;
+	max-height: 75vh;
+  }
+  
+  .standards-list input:checked ~ .tab {
+    display: block;
+    padding-bottom: 5px;
+  }
+}
+
 .tablinks {
   padding: 4px 10px;
   font-size: 16px;
@@ -32,6 +102,10 @@ permalink: /docs/standards
   display: none;
   padding: 10px 20px;
   height: 100%;
+}
+
+.active {
+	font-weight: bold;
 }
 
 </style>
@@ -67,27 +141,38 @@ function openStandardFromURL(evt) {
 <body onload="openStandardFromURL(event)">
 
 <!-- Standards list/table of contents -->
-<ul class="tab">
-  <li>
-	<h3>General</h3>
-	<ul>
+<nav class="standards-list">
+
+  <input type="checkbox" id="toc-trigger" class="nav-trigger">
+  <label for="toc-trigger">
+    <span class="menu-icon">
+      <svg viewBox="0 0 18 15" width="18px" height="15px">
+        <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
+      </svg>
+    </span>
+  </label>
+
+  <ul class="tab">
+    <li>
+	  <h3>General</h3>
+	  <ul>
 		<li><a id="GeneralStandard_b"        class="tablinks" href="#Display" onclick="openStandard(event, 'GeneralStandard')">General Standard</a></li>
 		<li><a id="EngineeringResearch_b"    class="tablinks" href="#Display" onclick="openStandard(event, 'EngineeringResearch')">Engineering Research</a></li>
 		<li><a id="MixedMethods_b"           class="tablinks" href="#Display" onclick="openStandard(event, 'MixedMethods')">Mixed Methods</a></li>
-	</ul>
-  </li>
-  <li>
-	<h3>Qualitative</h3>
-	<ul>
+	  </ul>
+    </li>
+    <li>
+	  <h3>Qualitative</h3>
+	  <ul>
 		<li><a id="ActionResearch_b"         class="tablinks" href="#Display" onclick="openStandard(event, 'ActionResearch')">Action Research</a></li>
 		<li><a id="CaseStudy_b"              class="tablinks" href="#Display" onclick="openStandard(event, 'CaseStudy')">Case Study</a></li>
 		<li><a id="GroundedTheory_b"         class="tablinks" href="#Display" onclick="openStandard(event, 'GroundedTheory')">Grounded Theory</a></li>
 		<li><a id="QualitativeSurvey_b"     class="tablinks" href="#Display" onclick="openStandard(event, 'QualitativeSurveys')">Qualitative Survey</a></li>
-	</ul>
-  </li>
-  <li>
-	<h3>Quantitative</h3>
-	<ul>
+	  </ul>
+    </li>
+    <li>
+	  <h3>Quantitative</h3>
+	  <ul>
 		<li><a id="Benchmarking_b"           class="tablinks" href="#Display" onclick="openStandard(event, 'Benchmarking')">Benchmarking</a></li>
 		<li><a id="DataScience_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'DataScience')">Data Science</a></li>
 		<li><a id="Experiment_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'Experiments')">Experiment</a></li>
@@ -96,23 +181,24 @@ function openStandardFromURL(evt) {
 		<li><a id="QuantitativeSimulation_b" class="tablinks" href="#Display" onclick="openStandard(event, 'QuantitativeSimulation')">Quantitative Simulation</a></li>
 		<li><a id="QuestionnaireSurvey_b"   class="tablinks" href="#Display" onclick="openStandard(event, 'QuestionnaireSurveys')">Questionnaire Survey</a></li>
 		<li><a id="RepositoryMining_b"       class="tablinks" href="#Display" onclick="openStandard(event, 'RepositoryMining')">Repository Mining</a></li>
-	</ul>
-  </li>
-  <li>
-	<h3>Literature Review</h3>
-	<ul>
+	  </ul>
+    </li>
+    <li>
+	  <h3>Literature Review</h3>
+	  <ul>
 		<li><a id="CaseSurvey_b"             class="tablinks" href="#Display" onclick="openStandard(event, 'CaseSurvey')">Case Survey</a></li>
 		<li><a id="SystematicReviews_b"      class="tablinks" href="#Display" onclick="openStandard(event, 'SystematicReviews')">Systematic Review</a></li>
-	</ul>
-  </li>
-  <li>
-	<h3>Other</h3>
-	<ul>
+	  </ul>
+    </li>
+    <li>
+	  <h3>Other</h3>
+	  <ul>
 		<li><a id="MetaScience_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'MetaScience')">Meta Science</a></li>
 		<li><a id="Replication_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'Replication')">Replication</a></li>
-	</ul>
-  </li>
-</ul>
+	  </ul>
+    </li>
+  </ul>
+</nav>
 
 <div id="Display">
 <div id="GeneralStandard" class="tabcontent">
