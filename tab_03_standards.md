@@ -11,7 +11,6 @@ permalink: /docs/standards
 main .wrapper {
   min-width: 100%;
   display: flex;
-  flex-flow: row wrap;
   padding: 0;
 }
 
@@ -43,6 +42,7 @@ main .wrapper {
   
   #Display {
 	flex: 100%;
+	word-break: break-word;
   }
   
   .standards-list label[for="toc-trigger"] {
