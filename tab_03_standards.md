@@ -29,7 +29,7 @@ main .wrapper {
   display: none
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 780px) {
   .standards-list {
     left: 15px;
     background-color: #fdfdfd;
