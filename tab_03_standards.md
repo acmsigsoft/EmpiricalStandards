@@ -156,45 +156,45 @@ function openStandardFromURL(evt) {
     <li>
 	  <h3>General</h3>
 	  <ul>
-		<li><a id="GeneralStandard_b"        class="tablinks" href="#Display" onclick="openStandard(event, 'GeneralStandard')">General Standard</a></li>
-		<li><a id="EngineeringResearch_b"    class="tablinks" href="#Display" onclick="openStandard(event, 'EngineeringResearch')">Engineering Research</a></li>
-		<li><a id="MixedMethods_b"           class="tablinks" href="#Display" onclick="openStandard(event, 'MixedMethods')">Mixed Methods</a></li>
+		<li><a id="GeneralStandard_b"        class="tablinks" href="#" onclick="openStandard(event, 'GeneralStandard')">General Standard</a></li>
+		<li><a id="EngineeringResearch_b"    class="tablinks" href="#" onclick="openStandard(event, 'EngineeringResearch')">Engineering Research</a></li>
+		<li><a id="MixedMethods_b"           class="tablinks" href="#" onclick="openStandard(event, 'MixedMethods')">Mixed Methods</a></li>
 	  </ul>
     </li>
     <li>
 	  <h3>Qualitative</h3>
 	  <ul>
-		<li><a id="ActionResearch_b"         class="tablinks" href="#Display" onclick="openStandard(event, 'ActionResearch')">Action Research</a></li>
-		<li><a id="CaseStudy_b"              class="tablinks" href="#Display" onclick="openStandard(event, 'CaseStudy')">Case Study</a></li>
-		<li><a id="GroundedTheory_b"         class="tablinks" href="#Display" onclick="openStandard(event, 'GroundedTheory')">Grounded Theory</a></li>
-		<li><a id="QualitativeSurvey_b"     class="tablinks" href="#Display" onclick="openStandard(event, 'QualitativeSurveys')">Qualitative Survey</a></li>
+		<li><a id="ActionResearch_b"         class="tablinks" href="#" onclick="openStandard(event, 'ActionResearch')">Action Research</a></li>
+		<li><a id="CaseStudy_b"              class="tablinks" href="#" onclick="openStandard(event, 'CaseStudy')">Case Study</a></li>
+		<li><a id="GroundedTheory_b"         class="tablinks" href="#" onclick="openStandard(event, 'GroundedTheory')">Grounded Theory</a></li>
+		<li><a id="QualitativeSurvey_b"     class="tablinks" href="#" onclick="openStandard(event, 'QualitativeSurveys')">Qualitative Survey</a></li>
 	  </ul>
     </li>
     <li>
 	  <h3>Quantitative</h3>
 	  <ul>
-		<li><a id="Benchmarking_b"           class="tablinks" href="#Display" onclick="openStandard(event, 'Benchmarking')">Benchmarking</a></li>
-		<li><a id="DataScience_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'DataScience')">Data Science</a></li>
-		<li><a id="Experiment_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'Experiments')">Experiment</a></li>
-		<li><a id="Longitudinal_b"           class="tablinks" href="#Display" onclick="openStandard(event, 'Longitudinal')">Longitudinal</a></li>
-		<li><a id="OptimizationStudy_b"    	class="tablinks" href="#Display" onclick="openStandard(event, 'OptimizationStudies')">Optimization Study</a></li>
-		<li><a id="QuantitativeSimulation_b" class="tablinks" href="#Display" onclick="openStandard(event, 'QuantitativeSimulation')">Quantitative Simulation</a></li>
-		<li><a id="QuestionnaireSurvey_b"   class="tablinks" href="#Display" onclick="openStandard(event, 'QuestionnaireSurveys')">Questionnaire Survey</a></li>
-		<li><a id="RepositoryMining_b"       class="tablinks" href="#Display" onclick="openStandard(event, 'RepositoryMining')">Repository Mining</a></li>
+		<li><a id="Benchmarking_b"           class="tablinks" href="#" onclick="openStandard(event, 'Benchmarking')">Benchmarking</a></li>
+		<li><a id="DataScience_b"            class="tablinks" href="#" onclick="openStandard(event, 'DataScience')">Data Science</a></li>
+		<li><a id="Experiment_b"            class="tablinks" href="#" onclick="openStandard(event, 'Experiments')">Experiment</a></li>
+		<li><a id="Longitudinal_b"           class="tablinks" href="#" onclick="openStandard(event, 'Longitudinal')">Longitudinal</a></li>
+		<li><a id="OptimizationStudy_b"    	class="tablinks" href="#" onclick="openStandard(event, 'OptimizationStudies')">Optimization Study</a></li>
+		<li><a id="QuantitativeSimulation_b" class="tablinks" href="#" onclick="openStandard(event, 'QuantitativeSimulation')">Quantitative Simulation</a></li>
+		<li><a id="QuestionnaireSurvey_b"   class="tablinks" href="#" onclick="openStandard(event, 'QuestionnaireSurveys')">Questionnaire Survey</a></li>
+		<li><a id="RepositoryMining_b"       class="tablinks" href="#" onclick="openStandard(event, 'RepositoryMining')">Repository Mining</a></li>
 	  </ul>
     </li>
     <li>
 	  <h3>Literature Review</h3>
 	  <ul>
-		<li><a id="CaseSurvey_b"             class="tablinks" href="#Display" onclick="openStandard(event, 'CaseSurvey')">Case Survey</a></li>
-		<li><a id="SystematicReviews_b"      class="tablinks" href="#Display" onclick="openStandard(event, 'SystematicReviews')">Systematic Review</a></li>
+		<li><a id="CaseSurvey_b"             class="tablinks" href="#" onclick="openStandard(event, 'CaseSurvey')">Case Survey</a></li>
+		<li><a id="SystematicReviews_b"      class="tablinks" href="#" onclick="openStandard(event, 'SystematicReviews')">Systematic Review</a></li>
 	  </ul>
     </li>
     <li>
 	  <h3>Other</h3>
 	  <ul>
-		<li><a id="MetaScience_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'MetaScience')">Meta Science</a></li>
-		<li><a id="Replication_b"            class="tablinks" href="#Display" onclick="openStandard(event, 'Replication')">Replication</a></li>
+		<li><a id="MetaScience_b"            class="tablinks" href="#" onclick="openStandard(event, 'MetaScience')">Meta Science</a></li>
+		<li><a id="Replication_b"            class="tablinks" href="#" onclick="openStandard(event, 'Replication')">Replication</a></li>
 	  </ul>
     </li>
   </ul>
