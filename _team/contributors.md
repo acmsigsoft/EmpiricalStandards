@@ -106,6 +106,8 @@
 
 **Melina Vidoni**, The Australian National University, Australia [Repository Mining]
 
+**Rahul Mohanani**, The University of Jyväskylä, Finland [Qualitative Simulations]
+
 ### Technical Contributors
 
 **Arham Arshad**, Dalhousie University, Canada
