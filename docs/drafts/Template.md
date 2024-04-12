@@ -78,7 +78,7 @@
 
 ## Suggested Readings 
 
-Smith, John. 2025. Paper name. *Proceedings of Conference*, Halifax, CA: ACM, Jan. 1-4. (From SE and elsewhere. Stick with the most important and helpful works, including your own if appropriate
+Smith, John. 2025. Paper name. *Proceedings of Conference*, Halifax, CA: ACM, Jan. 1-4. (From SE and elsewhere. Stick with the most important and helpful works, including your own if appropriate. Use ACM style.
 	
 ## Exemplars
 
