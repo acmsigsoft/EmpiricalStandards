@@ -18,7 +18,7 @@
 
 **Preetha Chatterjee**, Drexel University, USA [Repository Mining]
 
-**Istvan David**, University of Montreal, Canada [Replication]
+**Istvan David**, McMaster University, Canada [Replication]
 
 **Jessica Diaz**, Technical University of Madrid, Spain [IRR/IRA]
 
