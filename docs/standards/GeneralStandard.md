@@ -91,7 +91,7 @@ following.
 - [ ]	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
 - [ ]	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
 - [ ]	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
-- [ ]   publishes the study in two phases: a plan and the results of executing the plan (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/docs/supplements)) 
+- [ ]   publishes the study in two phases: a plan and the results of executing the plan (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/RegisteredReports.md)) 
 - [ ]	uses multiple raters, where philosophically appropriate, for making subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md))
 
 </checklist>
