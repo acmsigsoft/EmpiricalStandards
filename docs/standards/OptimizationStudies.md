@@ -79,7 +79,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 
 ## General Quality Criteria
 
-The most valuable quality criteria for optimization studies in SE include reliability, replicability, reproducibility, rigor, and usefulness (see **Glossary**). 
+The most valuable quality criteria for optimization studies in SE include reliability, replicability, reproducibility, rigor, and usefulness (see [Glossary](../glossary)). 
 
 ## Examples of Acceptable Deviations
 

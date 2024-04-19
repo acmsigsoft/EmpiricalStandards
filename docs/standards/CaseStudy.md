@@ -89,7 +89,7 @@ captures a large quantitative dataset with limited context, consider the
 
 Case studies should be evaluated using qualitative validity criteria
 such as credibility, multivocality, reflexivity, rigor and
-transferability (see **Glossary**). Quantitative quality criteria such
+transferability (see [Glossary](../glossary)). Quantitative quality criteria such
 as replicability, generalizability and objectivity typically do not
 apply.
 

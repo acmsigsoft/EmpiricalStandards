@@ -167,7 +167,6 @@ function openSupplementFromURL(evt) {
     <li>
       <h3>Other</h3>
 	  <ul>
-	    <li><a id="Glossary_b" class="tablinks" href="#" onclick="openSupplement(event, 'Glossary')">Glossary</a></li>
 	    <li><a id="InformationVisualization_b" class="tablinks" href="#" onclick="openSupplement(event, 'InformationVisualization')">Information Visualization</a></li>
 	    <li><a id="InterRaterReliabilityAndAgreement_b" class="tablinks" href="#" onclick="openSupplement(event, 'InterRaterReliabilityAndAgreement')">Inter-Rater Reliability and Agreement</a></li>
 	    <li><a id="OpenScience_b"	class="tablinks" href="#" onclick="openSupplement(event, 'OpenScience')">Open Science</a></li>
@@ -197,13 +196,6 @@ function openSupplementFromURL(evt) {
 <div id="EthicsSecondaryData" class="tabcontent">
   <p>
     {% capture std %}{% include_relative docs/supplements/EthicsSecondaryData.md %}{% endcapture %}
-    {{ std | replace: '- [ ]', '-' | markdownify }}
-  </p>
-</div>
-
-<div id="Glossary" class="tabcontent">
-  <p>
-    {% capture std %}{% include_relative docs/supplements/Glossary.md %}{% endcapture %}
     {{ std | replace: '- [ ]', '-' | markdownify }}
   </p>
 </div>

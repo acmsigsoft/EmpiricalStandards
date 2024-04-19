@@ -78,7 +78,7 @@ collection and analysis or do not use theoretical sampling, consider the
 ## Quality Criteria 
 
 Glaser, Strauss, Corbin and Charmaz advance inconsistent quality
-criteria. Using definitions in our **Glossary**, reviewers should
+criteria. Using definitions in our [Glossary](../glossary), reviewers should
 consider common qualitative criteria such as **credibility**,
 **resonance**, **usefulness** and the degree to which results *extend*
 our cumulative knowledge. Quantitative quality criteria such as internal
