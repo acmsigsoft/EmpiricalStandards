@@ -15,9 +15,9 @@ This standard applies to empirical studies that meet the following criteria:
 
 ## Definitions
   
-To _[reproduce](/docs/supplements/Glossary.md#reproducibility)_ means to repeat the original study's data analysis on the original study's data.
+To _[reproduce](../glossary#reproducibility)_ means to repeat the original study's data analysis on the original study's data.
   
-To _[replicate](/docs/supplements/Glossary.md#replicability)_ means to repeat a study by collecting new data and repeating the original study's analysis on the new data.
+To _[replicate](../glossary#replicability)_ means to repeat a study by collecting new data and repeating the original study's analysis on the new data.
 
 
 ## Specific Attributes

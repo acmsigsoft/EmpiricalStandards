@@ -81,7 +81,7 @@ standards.
 ## General Quality Criteria 
 
 Example criteria include reflexivity, credibility, resonance, usefulness
-and transferability (see **Glossary**). Positivist quality criteria such
+and transferability (see [Glossary](../glossary)). Positivist quality criteria such
 as internal validity, construct validity, generalizability and
 reliability typically do not apply.
 

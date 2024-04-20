@@ -86,7 +86,7 @@ typically given to participants in controlled experiments (see the
 
 Survey studies should address quantitative quality criteria such
 as **internal validity**, **construct validity**, **external validity**,
-**reliability** and **objectivity** (see **Glossary**).
+**reliability** and **objectivity** (see [Glossary](../glossary)).
 
 ## Variations 
 
