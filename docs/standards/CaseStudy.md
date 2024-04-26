@@ -4,7 +4,7 @@
 
 *<desc>"An empirical inquiry that investigates a contemporary phenomenon (the
 "case") in depth and within its real-world context, especially when the
-boundaries between phenomenon and context \[are unclear\]" (Yin 2017)</desc>*
+boundaries between phenomenon and context are unclear" (Yin 2017)</desc>*
 
 
 ## Application 
@@ -28,10 +28,10 @@ a product over many releases). For our purposes, *case study subsumes
 ethnography*.
 
 If data collection and analysis are interleaved, consider the **Grounded
-Theory Standard**. If the study mentions action research, or intervenes
-in the context, consider the **Action Research Standard.** If the study
+Theory** Standard. If the study mentions action research, or intervenes
+in the context, consider the **Action Research** Standard. If the study
 captures a large quantitative dataset with limited context, consider the
-**Exploratory Data Science Standard.**
+**Data Science** Standard.
 
 ## Specific Attributes 
 
@@ -88,7 +88,7 @@ captures a large quantitative dataset with limited context, consider the
 ## General Quality Criteria 
 
 Case studies should be evaluated using qualitative validity criteria
-such as credibility, multivocality, reflexivity, rigor and
+such as credibility, multivocality, reflexivity, rigor, and
 transferability (see [Glossary](../glossary)). Quantitative quality criteria such
 as replicability, generalizability and objectivity typically do not
 apply.
@@ -119,15 +119,14 @@ different purposes, including:
 ## Antipatterns 
 
 -   Relying on a single approach to data collection (e.g. interviews)
-    without corroboration or triangulation
+    without corroboration or data triangulation
 -   Oversimplifying and over-rationalizing complex phenomena; presenting
-    messy complicated things as simple and clean
+    messy, complicated things as simple and clean
 
 ## Invalid Criticisms 
 
--   Does not present quantitative data; only collects a single data
-    type.
--   Sample of 1; findings not generalizable. The point of a case study
+-   Does not present quantitative data.
+-   Sample of one; findings not generalizable. The point of a case study
     is to study one thing deeply, not to generalize to a population.
     Case studies should lead to theoretical generalization; that is,
     concepts that are transferable in principle.
@@ -139,7 +138,9 @@ different purposes, including:
     number; what matters is that there is enough data that the findings
     are credible, and the description is deep and rich.
 
-## Suggested Readings 
+## Suggested Readings
+
+(Note: we recommend beginning with Yin's book.)
 
 Line Dube and Guy Pare. Rigor in information systems positivist case
 re-search: current practices, trends, and recommendations. 2003. *MIS
@@ -148,10 +149,6 @@ Quarterly.* 27, 4, 597–636. DOI: 10.2307/30036550
 Shiva Ebneyamini, and Mohammad Reza Sadeghi Moghadam. 2018. Toward
 Developing a Framework for Conducting Case Study Research.
 *International Journal of Qualitative Methods.* 17, 1 (Dec. 2018)
-
-Kilem Gwet. 2002. Inter-Rater Reliability: Dependency on Trait
-Prevalence and Marginal Homogeneity. Statistical Methods for Inter-Rater
-Reliability Assessment Series, 2 (May 2002), 9 pages.
 
 Barbara Kitchenham, Lesley Pickard, and Shari Lawrence Pfleeger. 1995.
 Case studies for method and tool evaluation. *IEEE software.* 12, 4
