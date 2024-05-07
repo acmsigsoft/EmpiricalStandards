@@ -606,7 +606,7 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	//console.log(question_block);
 
 	// if the deviation reasonable is fixed in the table
-	if(!display){
+	if(display){
 		deviationRadioYes.disabled = true; // Disable 'Yes' radio button
 
 		// Cross out the label associated with the 'Yes' radio button
@@ -791,7 +791,7 @@ function generate_one_phase_reviewer_deviation_block(checklistItem_id,data) {
 	// Create a question block with Yes-No radio answers
 	// 2nd Question
 	if(data!=null){
-		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40, data.display1 == "True");
+		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40, data.display1 == "False");
 
 		
 		// Reviewer-specific deviation justification block
