@@ -24,7 +24,7 @@ This standard applies to positivist, confirmatory (i.e. hypothesis-testing) stud
     - does not discuss implications
     - does not contribute to collective body of knowledge
     - does not support conclusions with evidence or arguments
-- [ ] meets all essential criteria, in applicable empirical standards, that can be met before data collection<sup>[1](#myfootnote1)</sup>
+- [ ] meets all essential criteria, in applicable empirical standards, that can be met before data collection<sup><a class="footnote footnote-ref">1</a></sup>
 - [ ] justifies importance of the purpose, problem, objective, or research question(s)
 - [ ] describes the research method in detail sufficient for an independent researcher to exactly replicate the proposed data collection and analysis procedures
 - [ ] the stated hypotheses can be tested with the data the researchers propose to collect
@@ -32,9 +32,9 @@ This standard applies to positivist, confirmatory (i.e. hypothesis-testing) stud
 ### Desirable Attributes
 - [ ] presents preliminary data (e.g. from a pilot study) to justify the chosen approach (e.g. probability distributions).
 - [ ] includes a conditional structure (e.g. pre-specifying different tests for normal and non-normal distributions)
-- [ ] explains how the study will change based on the results of data analysis (i.e. conditional analysis)<sup>[2](#myfootnote2)</sup>
+- [ ] explains how the study will change based on the results of data analysis (i.e. conditional analysis)<sup><a class="footnote footnote-ref">2</a></sup>
 
-## Specific Attributes (RR2)<sup>[3](#myfootnote3)</sup>
+## Specific Attributes (RR2)<sup><a class="footnote footnote-ref">3</a></sup>
 ### Essential Attributes
 - [ ] meets all essential criteria in _The General Standard_ (no exceptions)
 - [ ] introduction, rationale and stated hypotheses are the same as the approved RR1 submission except for improvements based on feedback from RR1 reviews
@@ -80,6 +80,6 @@ Ben Goldacre, Nicholas J DeVito, Carl Heneghan, Francis Irving, Seb Bacon, Jessi
 Wiseman R, Watt C, Kornbrot D. 2019. Registered reports: an early example and analysis. PeerJ 7:e6232 [10.7717/peerj.6232](https://doi.org/10.7717/peerj.6232)
 
 ---
-<sup>[1](#myfootnote1)</sup> e.g. presents power analysis; describes how card sorting will be executed, lists anticipated statistical tests  
-<sup>[2](#myfootnote2)</sup> e.g. as a decision tree; while not strictly required, omitting conditional analysis is extraordinarily risky for the authors  
-<sup>[3](#myfootnote3)</sup> Adapted from https://osf.io/pukzy/ by CC-BY
+<sup><a class="footnote footnote-text">1</a></sup> e.g. presents power analysis; describes how card sorting will be executed, lists anticipated statistical tests  
+<sup><a class="footnote footnote-text">2</a></sup> e.g. as a decision tree; while not strictly required, omitting conditional analysis is extraordinarily risky for the authors  
+<sup><a class="footnote footnote-text">3</a></sup> Adapted from https://osf.io/pukzy/ by CC-BY
