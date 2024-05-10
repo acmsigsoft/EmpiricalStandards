@@ -89,11 +89,11 @@ R. MOHANANI, B. TURHAN, P. RALPH, (in press) Requirements framing affects design
 ZAPF, A., CASTELL, S., MORAWIETZ, L., &amp; KARCH, A. 2016. Measuring inter-rater reliability for nominal data–which coefficients and confidence intervals are appropriate? _BMC medical research methodology_, 16, article 93  
 
 ---
-<sup><a class="footnote footnote-text">1</a></sup> Assessing consistency among raters, where appropriate, promotes &quot;_systematicity, communicability and transparency of the coding process; reflexivity and dialogue within research teams; and helping to satisfy diverse audiences of the trustworthiness of the research_&quot; (O&#39;Connor &amp; Joffe 2020).  
-<sup><a class="footnote footnote-text">2</a></sup> See Gisev, Bell, &amp; Chen (2013)  
-<sup><a class="footnote footnote-text">3</a></sup> For example: (a) applying selection criteria in an SLR; (b) an experiment in which a dependent variable like code quality is scored by human; (c) deductive qualitative analysis with an a priori coding scheme in positivist case study.  
-<sup><a class="footnote footnote-text">4</a></sup> e.g. the ratings are uncontroversial; multiple raters would be impractical; multiple raters are inconsistent with the philosophical perspective of the work  
-<sup><a class="footnote footnote-text">5</a></sup> Such as Pearson&#39;s r, Kendall&#39;s tau, Spearman&#39;s rho, Cohen&#39;s Kappa, Fleiss Kappa, Krippendorff&#39;s Alpha or (rarely) percent agreement  
-<sup><a class="footnote footnote-text">6</a></sup> E.g. is the absolute value for each item being rated (IRA) or the trend in ratings (IRR) important?  
-<sup><a class="footnote footnote-text">7</a></sup> E.g. high value of the observed agreement, but low value of the statistic or vice versa  
+<sup><a class="footnote footnote-text">1</a></sup> Assessing consistency among raters, where appropriate, promotes &quot;_systematicity, communicability and transparency of the coding process; reflexivity and dialogue within research teams; and helping to satisfy diverse audiences of the trustworthiness of the research_&quot; (O&#39;Connor &amp; Joffe 2020).<br>
+<sup><a class="footnote footnote-text">2</a></sup> See Gisev, Bell, &amp; Chen (2013)<br>
+<sup><a class="footnote footnote-text">3</a></sup> For example: (a) applying selection criteria in an SLR; (b) an experiment in which a dependent variable like code quality is scored by human; (c) deductive qualitative analysis with an a priori coding scheme in positivist case study.<br>
+<sup><a class="footnote footnote-text">4</a></sup> e.g. the ratings are uncontroversial; multiple raters would be impractical; multiple raters are inconsistent with the philosophical perspective of the work<br>
+<sup><a class="footnote footnote-text">5</a></sup> Such as Pearson&#39;s r, Kendall&#39;s tau, Spearman&#39;s rho, Cohen&#39;s Kappa, Fleiss Kappa, Krippendorff&#39;s Alpha or (rarely) percent agreement<br>
+<sup><a class="footnote footnote-text">6</a></sup> E.g. is the absolute value for each item being rated (IRA) or the trend in ratings (IRR) important?<br>
+<sup><a class="footnote footnote-text">7</a></sup> E.g. high value of the observed agreement, but low value of the statistic or vice versa<br>
 <sup><a class="footnote footnote-text">8</a></sup> See FEINSTEIN, A. R., &amp; CICCHETTI, D. V.1990. High Agreement But Low Kappa: I. the Problems of Two Paradoxes\*. _J Clin Epidemiol_, 43(6), 543–549.
