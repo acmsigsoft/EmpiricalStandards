@@ -1,7 +1,7 @@
 # Data Science
 <standard name="Data Science">
 
-<desc>Studies that analyze software engineering phenomena or artifacts using data-centric analysis methods such as machine learning or other computational intelligence appraches as well as search-based approaches</desc><sup>[1](#myfootnote1)</sup>
+<desc>Studies that analyze software engineering phenomena or artifacts using data-centric analysis methods such as machine learning or other computational intelligence approaches as well as search-based approaches<sup><a class="footnote footnote-ref">1</a></sup></desc>
 
 ## Application
 
@@ -26,14 +26,14 @@ Applies to studies that primarily analyze existing software phenomena using pred
 <method>
 
 - [ ] explains how and why the data was selected
-- [ ] presents the experimental setup (e.g. using a dataflow diagram)<sup>[2](#myfootnote2)</sup>
-- [ ] describes the feature engineering approaches<sup>[3](#myfootnote3)</sup> and transformations that were applied
+- [ ] presents the experimental setup (e.g. using a dataflow diagram)<sup><a class="footnote footnote-ref">2</a></sup>
+- [ ] describes the feature engineering approaches<sup><a class="footnote footnote-ref">3</a></sup> and transformations that were applied
 - [ ] explains how the data was pre-processed, filtered, and categorized
 - [ ] EITHER: discusses state-of-art baselines (and their strengths, weaknesses and limitations)
 	OR: explains why no state-of-art baselines exist
 	OR: provides compelling argument that direct comparisons are impractical
 - [ ] defines the modeling approach(es) used (e.g. clustering then decision tree learning), typically using pseudocode
-- [ ] discusses the hardware and software infrastructure used<sup>[4](#myfootnote4)</sup>
+- [ ] discusses the hardware and software infrastructure used<sup><a class="footnote footnote-ref">4</a></sup>
 - [ ] justifies all statistics and (automated or manual) heuristics used 
 - [ ] describes and justifies the evaluation metrics used	
 
@@ -43,7 +43,7 @@ Applies to studies that primarily analyze existing software phenomena using pred
 
 <discussion>
 
-- [ ] discusses technical assumptions and threats to validity that are specific to data science<sup>[5](#myfootnote5)</sup>
+- [ ] discusses technical assumptions and threats to validity that are specific to data science<sup><a class="footnote footnote-ref">5</a></sup>
 	
 <other>
 
@@ -52,12 +52,12 @@ Applies to studies that primarily analyze existing software phenomena using pred
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ] provides a replication package including source code and data set(s), or if data cannot be shared, synthetic data to illustrate the use of the algorithms<sup>[6](#myfootnote6)</sup>
-- [ ] data is processed by multiple learners, of different types<sup>[7](#myfootnote7)</sup>
+- [ ] provides a replication package including source code and data set(s), or if data cannot be shared, synthetic data to illustrate the use of the algorithms<sup><a class="footnote footnote-ref">6</a></sup>
+- [ ] data is processed by multiple learners, of different types<sup><a class="footnote footnote-ref">7</a></sup>
 - [ ] data is processed multiple times with different, randomly selected, training/test examples; the results of which are compared via significance tests and effect size tests (e.g. cross-validation)
 - [ ] carefully selects the hyperparameters that control the data miners (e.g. via analysis of settings in related work or some automatic hyperparameter optimizer such as grid search)
 - [ ] manually inspects some non-trivial portion of the data (i.e. data sanity checks)
-- [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup>[8](#myfootnote8)</sup>
+- [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote-ref">8</a></sup>
 </checklist>
 
 ### Extraordinary Attributes
@@ -75,7 +75,7 @@ Applies to studies that primarily analyze existing software phenomena using pred
 - Data not shared because it is impractical (e.g. too large) or unethical (e.g. too sensitive). Enough information should be offered to assure the reader that the data is real.
 - Not using temporal analysis techniques such as time series when the data is not easily converted to time series (e.g. some aspects of source code evolution may not be easily modelled as time series).
 - Not all studies need statistics and hypotheses. Some studies can be purely or principally descriptive.
-- Different explanations have different requirements (e.g. hold out sets, cross-validation)<sup>[9](#myfootnote9)</sup>.
+- Different explanations have different requirements (e.g. hold out sets, cross-validation)<sup><a class="footnote footnote-ref">9</a></sup>.
 
 ## Antipatterns
 
@@ -125,13 +125,13 @@ Applies to studies that primarily analyze existing software phenomena using pred
 8. Tufano, M., Palomba, F., Bavota, G., Oliveto, R., Penta, M. D., Lucia, A. D. & Poshyvanyk, D. (2017). When and Why Your Code Starts to Smell Bad (and Whether the Smells Go Away).. IEEE Trans. Software Eng., 43, 1063-1088.
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup>Dhar, V. (2013). Data Science and Prediciton, Communications of the ACM, December 2013, Vol. 56 No. 12, Pages 64-73. https://cacm.acm.org/magazines/2013/12/169933-data-science-and-prediction/fulltext</footnote><br>
-<footnote><sup>[2](#myfootnote2)</sup>Akidau, Tyler, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety et al. "The dataflow model: a practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." (2015). Proceedings of the VLDB Endowment 8.12</footnote><br>
-<footnote><sup>[3](#myfootnote3)</sup>Acf. Nargesian, Fatemeh, Horst Samulowitz, Udayan Khurana, Elias B. Khalil, and Deepak S. Turaga. "Learning Feature Engineering for Classification." In Ijcai, pp. 2529-2535. 2017.</footnote><br>
-<footnote><sup>[4](#myfootnote4)</sup>including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks</footnote><br>
-<footnote><sup>[5](#myfootnote5)</sup> For example, failing to address variations in the size or complexity of training, testing and validation data sets. For more, see: Wohlin, C., Runeson, P., Höst, M., Ohlsson, M. C.,,Regnell, B. (2012). Experimentation in Software Engineering. Springer. ISBN: 978-3-642-29043-5</footnote><br>	
-<footnote><sup>[6](#myfootnote6)</sup>Sarkar, T. (2019). Synthetic data generation - a must-have skill for new data scientists. (July 2019).https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae</footnote><br> 
-<footnote><sup>[7](#myfootnote7)</sup>e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); for guidance, see Baljinder Ghotra, Shane McIntosh, and Ahmed E. Hassan. 2015. Revisiting the impact of classification techniques on the performance of defect prediction models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, 789–800.</footnote><br>
-<footnote><sup>[8](#myfootnote8)</sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
-<footnote><sup>[9](#myfootnote9)</sup>c.f. Raymond P. L. Buse and Thomas Zimmermann. 2012. Information needs for software development analytics. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, 987–996.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup>Dhar, V. (2013). Data Science and Prediciton, Communications of the ACM, December 2013, Vol. 56 No. 12, Pages 64-73. https://cacm.acm.org/magazines/2013/12/169933-data-science-and-prediction/fulltext</footnote><br>
+<footnote><sup><a class="footnote footnote-text">2</a></sup>Akidau, Tyler, Robert Bradshaw, Craig Chambers, Slava Chernyak, Rafael J. Fernández-Moctezuma, Reuven Lax, Sam McVeety et al. "The dataflow model: a practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing." (2015). Proceedings of the VLDB Endowment 8.12</footnote><br>
+<footnote><sup><a class="footnote footnote-text">3</a></sup>Acf. Nargesian, Fatemeh, Horst Samulowitz, Udayan Khurana, Elias B. Khalil, and Deepak S. Turaga. "Learning Feature Engineering for Classification." In Ijcai, pp. 2529-2535. 2017.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">4</a></sup>including GPU/CPU models; amount of memory; operating system; names and versions of relevant software libraries and frameworks</footnote><br>
+<footnote><sup><a class="footnote footnote-text">5</a></sup> For example, failing to address variations in the size or complexity of training, testing and validation data sets. For more, see: Wohlin, C., Runeson, P., Höst, M., Ohlsson, M. C.,,Regnell, B. (2012). Experimentation in Software Engineering. Springer. ISBN: 978-3-642-29043-5</footnote><br>	
+<footnote><sup><a class="footnote footnote-text">6</a></sup>Sarkar, T. (2019). Synthetic data generation - a must-have skill for new data scientists. (July 2019).https://towardsdatascience.com/synthetic-data-generation-a-must-have-skill-for-new-data-scientists-915896c0c1ae</footnote><br> 
+<footnote><sup><a class="footnote footnote-text">7</a></sup>e.g. regression, bayes classifier, decision tree, random forests, SVM (maybe with different kernels); for guidance, see Baljinder Ghotra, Shane McIntosh, and Ahmed E. Hassan. 2015. Revisiting the impact of classification techniques on the performance of defect prediction models. In Proceedings of the 37th International Conference on Software Engineering - Volume 1 (ICSE '15). IEEE Press, 789–800.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">8</a></sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">9</a></sup>c.f. Raymond P. L. Buse and Thomas Zimmermann. 2012. Information needs for software development analytics. In Proceedings of the 34th International Conference on Software Engineering (ICSE '12). IEEE Press, 987–996.</footnote><br>
 </standard>

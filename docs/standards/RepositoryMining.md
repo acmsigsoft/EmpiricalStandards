@@ -71,7 +71,7 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
 - [ ] performs testing (e.g., unit testing) to avoid bugs in the proposed tool
 - [ ] builds, tests or extends theory
 - [ ] tests formal hypotheses
-- [ ] discusses ethical issues in mining of software repositories<sup>[1](#footnote1)</sup> (e.g., data privacy)    
+- [ ] discusses ethical issues in mining of software repositories<sup><a class="footnote footnote-ref">1</a></sup> (e.g., data privacy)    
     
 </checklist>
 
@@ -93,8 +93,8 @@ Internal validity, external validity, construct validity, reliability.
 ## Antipatterns
 - limiting a study to quantitative description; failing to test, build or extend theory
 - unvalidated, uni-dimensional operationalizations of multidimensional constructs (e.g. using github stars as a proxy for popularity) 
-- using open-source repositories without any filtering criteria; i.e., convenience sampling<sup>[2](#footnote2)</sup>.
-- in a study where *all* the commits of a project need to be analyzed, only the GitHub repository is considered; a GitHub repository does not necessarily contain all commits of a project<sup>[3](#footnote3)</sup>.
+- using open-source repositories without any filtering criteria; i.e., convenience sampling<sup><a class="footnote footnote-ref">2</a></sup>.
+- in a study where *all* the commits of a project need to be analyzed, only the GitHub repository is considered; a GitHub repository does not necessarily contain all commits of a project<sup><a class="footnote footnote-ref">3</a></sup>.
 - conclusions must be derived in the context of the selected repositories; deriving generic conclusions applicable to the selected repositories but necessarily to a larger generic set is an antipattern
 - insufficient details about the applied processing steps of the selected repositories
 
@@ -127,9 +127,9 @@ Internal validity, external validity, construct validity, reliability.
 - M. Ortu, B. Adams, G. Destefanis, P. Tourani, M. Marchesi and R. Tonelli, "Are Bullies More Productive? Empirical Study of Affectiveness vs. Issue Fixing Time," 2015 IEEE/ACM 12th Working Conference on Mining Software Repositories, 2015, pp. 303-313.
 
 ---
-<footnote><sup>[1](#footnote1)</sup>Gold, N.E., Krinke, J. Ethics in the mining of software repositories. Empir Software Eng 27, 17 (2022). https://doi.org/10.1007/s10664-021-10057-7</footnote><br>
-<footnote><sup>[2](#footnote2)</sup>Sebastian Baltes, Paul Ralph. 2021. Sampling in Software Engineering Research: A Critical Review and Guidelines. arXiv eprint 2002.07764.</footnote><br>
-<footnote><sup>[3](#footnote3)</sup>Eirini Kalliamvakou, Georgios Gousios, Kelly Blincoe, Leif Singer, Daniel M. German, and Daniela Damian. 2014. The promises and perils of mining GitHub. In Proceedings of the 11th Working Conference on Mining Software Repositories (MSR 2014).</footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup>Gold, N.E., Krinke, J. Ethics in the mining of software repositories. Empir Software Eng 27, 17 (2022). https://doi.org/10.1007/s10664-021-10057-7</footnote><br>
+<footnote><sup><a class="footnote footnote-text">2</a></sup>Sebastian Baltes, Paul Ralph. 2021. Sampling in Software Engineering Research: A Critical Review and Guidelines. arXiv eprint 2002.07764.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">3</a></sup>Eirini Kalliamvakou, Georgios Gousios, Kelly Blincoe, Leif Singer, Daniel M. German, and Daniela Damian. 2014. The promises and perils of mining GitHub. In Proceedings of the 11th Working Conference on Mining Software Repositories (MSR 2014).</footnote><br>
 
 
 </standard>

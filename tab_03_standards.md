@@ -350,5 +350,26 @@ function openStandard(evt, standardName) {
   document.getElementById(standardName).style.display = "block";
   evt.currentTarget.className += " active";
   window.history.replaceState('', '', '?standard='+standardName);
+  
+  <!-- Dynamic footnote links -->
+  let footnotes = document.getElementsByClassName("footnote");
+  let textCount = 1;
+  let refCount = 1;
+  for (i = 0; i < footnotes.length; i++) {
+	footnotes[i].removeAttribute("id");
+	footnotes[i].removeAttribute("href");
+	
+	if (footnotes[i].closest(".tabcontent").style.display === "block") {
+	  if (footnotes[i].classList.contains("footnote-text")) {
+	    footnotes[i].setAttribute("id", "footnote-text" + textCount);
+		footnotes[i].setAttribute("href", "#footnote-ref" + textCount);
+		textCount++;
+	  } else {
+	    footnotes[i].setAttribute("id", "footnote-ref" + refCount);
+		footnotes[i].setAttribute("href", "#footnote-text" + refCount);
+		refCount++;
+	  }
+	}
+  }
 }
 </script>

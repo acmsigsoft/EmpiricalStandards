@@ -15,9 +15,9 @@ This standard applies to empirical studies that meet the following criteria:
 
 ## Definitions
   
-To _[reproduce](/docs/supplements/Glossary.md#reproducibility)_ means to repeat the original study's data analysis on the original study's data.
+To _[reproduce](../glossary#reproducibility)_ means to repeat the original study's data analysis on the original study's data.
   
-To _[replicate](/docs/supplements/Glossary.md#replicability)_ means to repeat a study by collecting new data and repeating the original study's analysis on the new data.
+To _[replicate](../glossary#replicability)_ means to repeat a study by collecting new data and repeating the original study's analysis on the new data.
 
 
 ## Specific Attributes
@@ -29,9 +29,9 @@ To _[replicate](/docs/supplements/Glossary.md#replicability)_ means to repeat a 
 <intro>
 
 - [ ] discusses the motivation for conducting the replication in appropriate detail (e.g., to validate the results, to broaden the results by changing the participant pool or the artifacts)
-- [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup>[2](#footnote2)</sup>
-- [ ] defines the type of the replication by overlap (partial, complete, extended)<sup>[3](#footnote3)</sup>
-- [ ] defines the type of the replication by participants (internal, external, mixed)<sup>[4](#footnote4)</sup>
+- [ ] defines the type of the replication by methodological similarity (exact, methodological, conceptual)<sup><a class="footnote footnote-ref">1</a></sup>
+- [ ] defines the type of the replication by overlap (partial, complete, extended)<sup><a class="footnote footnote-ref">2</a></sup>
+- [ ] defines the type of the replication by participants (internal, external, mixed)<sup><a class="footnote footnote-ref">3</a></sup>
 
 <method>
 
@@ -39,7 +39,7 @@ To _[replicate](/docs/supplements/Glossary.md#replicability)_ means to repeat a 
   - [ ] the research questions of the original study
   - [ ] the design of the original study 
   - [ ] if applicable, the participants of the original study (their number and any relevant characteristics)
-  - [ ] the artifacts of the original study<sup>[5](#footnote5)</sup>
+  - [ ] the artifacts of the original study<sup><a class="footnote footnote-ref">4</a></sup>
   - [ ] the context variables of the original study that might have affected the design of the study or interpretation of the results
   - [ ] the major findings of the original study
 - [ ] 	EITHER: describes overlap or interactions with the original study author(s),
@@ -64,7 +64,7 @@ To _[replicate](/docs/supplements/Glossary.md#replicability)_ means to repeat a 
 
 <checklist name="Desirable">
 
-- [ ] 	clearly seperates information about (i) the original study, (ii) the replication, (iii) the comparison of results, and (iv) conclusions <sup>[1](#footnote1)</sup>
+- [ ] 	clearly seperates information about (i) the original study, (ii) the replication, (iii) the comparison of results, and (iv) conclusions <sup><a class="footnote footnote-ref">5</a></sup>
 - [ ] 	improves on the original study in some way (e.g., design, analysis, statistical power)
 - for *families of replications*:
   	- [ ] provides a brief summary of the previous studies and replications, including information about how the studies were related, conclusions drawn and current state of knowledge about the topic 
@@ -118,8 +118,8 @@ To _[replicate](/docs/supplements/Glossary.md#replicability)_ means to repeat a 
 - Marta N. Gómez and Silvia T. Acuña. 2013. A replicated quasi-experimental study on the influence of personality and team climate in software development. Empirical Software Engineering 19, 2 (2013), 343–377. DOI:http://dx.doi.org/10.1007/s10664-013-9265-9 
 
 ---
-<footnote><sup>[1](#footnote1)</sup>See Carver et al. (2013).</footnote><br>
-<footnote><sup>[2](#footnote2)</sup>Exact replication: same research questions, same method, same context. Methodological replication: same research questions, same method, different context. Conceptual replication: same research questions, different method, different context. (Dennis and Valacich, 2015)</footnote><br>
-<footnote><sup>[3](#footnote3)</sup>Partial replication: addresses a subset of the original research questions. Complete replication: addresses each of the original reseach questions. Extended replication: addresses each of the original reseach questions and additional ones. (Carver, 2010)</footnote><br>
-<footnote><sup>[4](#footnote4)</sup>Internal replication: the replicating team is the same as the original study's team. External replication: the replicating team is different from the original study's team. Mixed replication: overlaps exist between the replicating team and the original study's team. (da Silva et al., 2012)</footnote><br>
-<footnote><sup>[5](#footnote5)</sup>Typical examples: input artifacts to experiments (such as questionnaires, user guides, etc.), output artifacts and data (interview transcripts, raw data, pre-processed data, etc.), analysis scripts, etc.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup>Exact replication: same research questions, same method, same context. Methodological replication: same research questions, same method, different context. Conceptual replication: same research questions, different method, different context. (Dennis and Valacich, 2015)</footnote><br>
+<footnote><sup><a class="footnote footnote-text">2</a></sup>Partial replication: addresses a subset of the original research questions. Complete replication: addresses each of the original reseach questions. Extended replication: addresses each of the original reseach questions and additional ones. (Carver, 2010)</footnote><br>
+<footnote><sup><a class="footnote footnote-text">3</a></sup>Internal replication: the replicating team is the same as the original study's team. External replication: the replicating team is different from the original study's team. Mixed replication: overlaps exist between the replicating team and the original study's team. (da Silva et al., 2012)</footnote><br>
+<footnote><sup><a class="footnote footnote-text">4</a></sup>Typical examples: input artifacts to experiments (such as questionnaires, user guides, etc.), output artifacts and data (interview transcripts, raw data, pre-processed data, etc.), analysis scripts, etc.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">5</a></sup>See Carver et al. (2013).</footnote><br>

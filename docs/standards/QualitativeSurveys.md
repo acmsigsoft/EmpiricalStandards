@@ -39,7 +39,7 @@ consider the **Discourse Analysis Standard (not yet available)**.
     
 - [ ]	presents clear chain of evidence from interviewee quotations to findings (e.g. proposed concepts)
 - [ ]	clearly answers the research question(s)
-- [ ]	provides evidence of saturation; explains how saturation was achieved<sup>[1](#myfootnote1)</sup>
+- [ ]	provides evidence of saturation; explains how saturation was achieved<sup><a class="footnote footnote-ref">1</a></sup>
     
 <discussion>
     
@@ -59,7 +59,7 @@ consider the **Discourse Analysis Standard (not yet available)**.
 - [ ]   identifies data recording methods (audio/visual), field notes or transcription processes used
 - [ ]	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory    
      OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
-- [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers<sup>[2](#myfootnote2)</sup>)
+- [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers<sup><a class="footnote footnote-ref">2</a></sup>)
 - [ ]	discusses transferability; findings plausibly transferable to different contexts
 - [ ]	compares results with (or integrates them into) prior theory or related research
 - [ ]   reflects on any alternative explanations of the findings
@@ -81,7 +81,7 @@ consider the **Discourse Analysis Standard (not yet available)**.
 
 An interview study should address appropriate qualitative quality
 criteria such as: **credibility,** **resonance**, **usefulness**, and
-**transferability** (see [Glossary](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Glossary.md)). Quantitative quality criteria
+**transferability** (see [Glossary](../glossary). Quantitative quality criteria
 such as internal validity, construct validity, generalizability and
 reliability typically do not apply.
 
@@ -139,6 +139,6 @@ Paul Ralph and Paul Kelly. 2014. The dimensions of software engineering success.
 Paul Ralph and Ewan Tempero. 2016. Characteristics of decision-making during coding. In *Proceedings of the 20th International Conference on Evaluation and Assessment in Software Engineering (EASE '16).* Association for Computing Machinery, New York, NY, USA, Article 34, 1–10. DOI:10.1145/2915970.2915990
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup>cf. Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.</footnote><br> 
-<footnote><sup>[2](#myfootnote2)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup>cf. Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.</footnote><br> 
+<footnote><sup><a class="footnote footnote-text">2</a></sup>L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
 </standard>

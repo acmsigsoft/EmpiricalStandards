@@ -37,7 +37,7 @@
 <discussion>
 
 - [ ]  things you expect to see in the discussion section. 
-- [ ] if you want to quote a paper, include a citation like (Smith 2024) and add to suggested readings, OR use a footnote.<sup>[3](#myfootnote1)</sup> 
+- [ ] if you want to quote a paper, include a citation like (Smith 2024) and add to suggested readings, OR use a footnote.<sup><a class="footnote footnote-ref">1</a></sup> 
 
 <other>
   
@@ -85,5 +85,5 @@ Smith, John. 2025. Paper name. *Proceedings of Conference*, Halifax, CA: ACM, Ja
 Smith, John. 2025. Paper name. *Proceedings of Conference*, Halifax, CA: ACM, Jan. 1-4. (Exemplars don't necessarily do everything well so it helps to include a very short note about what aspects of the paper are exemplary. 
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> Example of a footnote. All the text in this draft is just placeholders.  </footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup> Example of a footnote. All the text in this draft is just placeholders.</footnote><br>
 </standard>
