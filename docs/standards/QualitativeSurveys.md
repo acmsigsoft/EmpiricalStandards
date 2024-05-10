@@ -81,7 +81,7 @@ consider the **Discourse Analysis Standard (not yet available)**.
 
 An interview study should address appropriate qualitative quality
 criteria such as: **credibility,** **resonance**, **usefulness**, and
-**transferability** (see [Glossary](../glossary). Quantitative quality criteria
+**transferability** (see [Glossary](../glossary)). Quantitative quality criteria
 such as internal validity, construct validity, generalizability and
 reliability typically do not apply.
 
@@ -122,11 +122,13 @@ reliability typically do not apply.
 
 Virginia Braun and Victoria Clarke. "Using thematic analysis in psychology." _Qualitative Research in Psychology_ 3, 2 (2006), 77-101.
     
-Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_ 23, 1 (2018), 245-261.
+Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data saturation: the mysterious step in Grounded Theory Methodology." _The Qualitative Report_ 23, 1 (2018), 245-261.
     
-Michael Quinn Patton. 2002. *Qualitative Research and Evaluation Methods*. 3rd ed. Sage Publications.
+Michael Quinn Patton. 2002. *Qualitative Research and Evaluation Methods*. 3rd ed. Sage.
 
-Herbert J. Rubin and Irene S. Rubin. 2011. *Qualitative interviewing: The art of hearing data*. Sage.
+Herbert J. Rubin and Irene S. Rubin. 2011. *Qualitative Interviewing: The Art of Hearing Data*. Sage.
+
+Russel Walsh. “The methods of reflexivity.” *The Humanistic Psychologist* 31, 4 (2003), 51–66. doi:10.1080/08873267.2003.9986934.
 
 Johnny Saldaña. 2015. *The coding manual for qualitative researchers*. Sage.
 
