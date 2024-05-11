@@ -25,9 +25,9 @@
 
 <method>
 
-- [ ]	presents step-by-step, systematic, replicable description of search process including search terms<sup>[1](#myfootnote1)</sup>  
+- [ ]	presents step-by-step, systematic, replicable description of search process including search terms<sup><a class="footnote footnote-ref">1</a></sup>  
 - [ ]	defines clear selection criteria
-- [ ]	specifies the data extracted from each primary study<sup>[2](#myfootnote2)</sup>  ; explains relationships to research questions
+- [ ]	specifies the data extracted from each primary study<sup><a class="footnote footnote-ref">2</a></sup> ; explains relationships to research questions
 - [ ]	describes in detail how data were extracted and synthesized (can be qualitative or quantitative)
 - [ ]	describes coding scheme(s) and their use
 
@@ -56,10 +56,10 @@
 (vi) searching pre-print servers (e.g. arXiv);   
 (iiv) soliciting unpublished manuscripts through appropriate listservs or social media;  
 (iiiv) contacting known authors in the area. 
-- [ ]	demonstrates that the search process is sufficiently rigorous for the systematic review goals<sup>[3](#myfootnote3)</sup>  
+- [ ]	demonstrates that the search process is sufficiently rigorous for the systematic review goals<sup><a class="footnote footnote-ref">3</a></sup>  
 - [ ]	assesses quality of primary studies using an a priori coding scheme (e.g. relevant empirical standards); explains how quality was assessed; excludes low quality studies (ok) or models study quality as a moderating variable (better) 
 - [ ]	assesses coverage (e.g. funnel plots, tweedle trim-and-fill method, percentage of known papers found)
-- [ ]	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup> 
+- [ ]	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup><a class="footnote footnote-ref">4</a></sup> 
 - [ ]	(interpretivist reviews) reflects on how researcher’s biases may have affected their analysis
 - [ ]	consolidates results using tables, diagrams, or charts 
 - [ ]   includes a PRISMA flow diagram (cf. Moher et al. 2009)
@@ -67,7 +67,7 @@
 - [ ]	uses meta-analysis methods appropriate for primary studies; does not use vote counting 
 - [ ]	integrates results into prior theory or research; identifies gaps, biases, or future directions
 - [ ]	presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
-- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[5](#myfootnote5)</sup>	
+- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote-ref">5</a></sup>	
 </checklist>
      
 ### Extraordinary Attributes
@@ -75,7 +75,7 @@
 
 - [ ]	two or more researchers independently undertaking the preliminary search process before finalizing the search scope and search keywords
 - [ ]	contacted primary study authors to ensure interpretations are correct, and elicit additional details not found in the papers such as access to raw data
-- [ ]	applies integrative data analysis<sup>[5](#myfootnote6)</sup>	
+- [ ]	applies integrative data analysis<sup><a class="footnote footnote-ref">6</a></sup>	
 	
 </checklist>
 
@@ -144,10 +144,10 @@ Yahya Rafique, and Vojislav B. Mišić. 2012. The effects of test-driven develop
 Martin Shepperd, David Bowes, and Tracy Hall. (2014) Researcher bias: The use of machine learning in software defect prediction. _IEEE Transactions on Software Engineering_ 40,6: 603-616.
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> Searches can be manual or automated or a combination of both.</footnote><br>
-<footnote><sup>[2](#myfootnote2)</sup> Primary studies are the studies that are being reviewed. In a tertiary study, the “primary studies” are themselves reviews.</footnote><br>
-<footnote><sup>[3](#myfootnote3)</sup> e.g. formal meta-analysis of experiments has higher requirements for completeness than mapping studies of broad topic areas.</footnote><br>
-<footnote><sup>[4](#myfootnote4)</sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
-<footnote><sup>[5](#myfootnote5)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
-<footnote><sup>[5](#myfootnote6)</sup>See https://idaunc.web.unc.edu/home/ida/</footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup>Searches can be manual or automated or a combination of both.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">2</a></sup>Primary studies are the studies that are being reviewed. In a tertiary study, the “primary studies” are themselves reviews.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">3</a></sup>e.g. formal meta-analysis of experiments has higher requirements for completeness than mapping studies of broad topic areas.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">4</a></sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">5</a></sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">6</a></sup>See https://idaunc.web.unc.edu/home/ida/</footnote><br>
 </standard>

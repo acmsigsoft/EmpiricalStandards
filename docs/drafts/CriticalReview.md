@@ -22,9 +22,9 @@
 
 <method>
 
-- [ ]	presents step-by-step, systematic, replicable description of search process<sup>[1](#myfootnote1)</sup>  
+- [ ]	presents step-by-step, systematic, replicable description of search process<sup><a class="footnote footnote-ref">1</a></sup>  
 - [ ]	defines clear selection criteria
-- [ ]	specifies the data extracted from each primary study<sup>[2](#myfootnote2)</sup>  ; explains relationships to research questions
+- [ ]	specifies the data extracted from each primary study<sup><a class="footnote footnote-ref">2</a></sup>  ; explains relationships to research questions
 - [ ]	describes in detail how data were extracted and synthesized (can be qualitative or quantitative)
 - [ ]	describes coding scheme(s) and their use
 
@@ -46,13 +46,13 @@
 	
 - [ ]	provides supplementary materials such as protocol, search terms, search results, selection process results; complete dataset, analysis scripts; coding scheme, examples of coding, decision rules, descriptions of edge cases
 - [ ]	assesses quality of primary studies using an a priori coding scheme (e.g. relevant empirical standards); explains how quality was assessed 
-- [ ]	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup> 
+- [ ]	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup><a class="footnote footnote-ref">4</a></sup> 
 - [ ]	(interpretivist reviews) reflects on how researcher’s biases may have affected their analysis
 - [ ]	consolidates results using tables, diagrams, or charts 
 - [ ] includes a PRISMA flow diagram (cf. Moher et al. 2009)
 - [ ] identifies gaps, biases, or future directions
 - [ ]	presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
-- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup>[5](#myfootnote5)</sup>	
+- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote-ref">5</a></sup>	
 </checklist>
      
 ### Extraordinary Attributes
@@ -88,8 +88,8 @@ Klaas-Jan Stol, Paul Ralph, and Brian Fitzgerald. 2016. Grounded theory in softw
 
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> Searches can be manual or automated or a combination of both.</footnote><br>
-<footnote><sup>[2](#myfootnote2)</sup> Primary studies are the studies that are being reviewed. In a tertiary study, the “primary studies” are themselves reviews.</footnote><br>
-<footnote><sup>[4](#myfootnote4)</sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
-<footnote><sup>[5](#myfootnote5)</sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup> Searches can be manual or automated or a combination of both.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">2</a></sup> Primary studies are the studies that are being reviewed. In a tertiary study, the “primary studies” are themselves reviews.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">4</a></sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">5</a></sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>
