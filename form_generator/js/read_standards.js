@@ -857,32 +857,75 @@ function generate_one_phase_reviewer_deviation_block(checklistItem_id,data) {
 }
 
 // generate the deviation block for Two Phase Reviewer Role
-function generate_two_phase_reviewer_deviation_block(checklistItem_id) {
+function generate_two_phase_reviewer_deviation_block(checklistItem_id,data) {
 
+
+	//console.log(checklistItem_id);
 	// Create a question block with Yes-No radio answers
 	// 2nd Question
-	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "Is the deviation reasonable?", checklistItem_id, 2.40);
+	if(data!=null){
+		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40, data.display1 == "False");
 
-	// Reviewer-specific deviation justification block
-	//var deviation_justified = generate_question_block_with_yes_no_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
-	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
+		
+		// Reviewer-specific deviation justification block
+		//var deviation_justified = generate_question_block_with_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
+		var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
+	
+		// Create a question block with type radio answers
+		// 3rd Question
+		// console.log(data.errortype);
+		var numbersArray = data.errortype.split(",").map(function(item) {
+			return parseInt(item, 10);
+		});
+		// console.log(numbersArray);
 
-	// Create a question block with type radio answers
-	// 3rd Question
-	var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06, type = [1,2,3,4]);
+		var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06, numbersArray);
 
-	// (No-No-Yes)
-	var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
+		// (No-No-Yes)
+		var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
+	
+		// (No-No-No)
+		var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "", 0, 0);
+		
+	
+		deviation_block.appendChild(deviation_justified);
+		deviation_block.appendChild(deviation_not_justified);
 
-	// (No-No-No)
-	var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "", 0, 0);
+		
+		deviation_block.appendChild(deviation_reasonable);
+		deviation_block.appendChild(deviation_unreasonable);
 
-	deviation_block.appendChild(deviation_justified);
-	deviation_block.appendChild(deviation_not_justified);
+		if(data.displayfree == "True"){
+			var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", data.freelabel, checklistItem_id, 0);
 
-	deviation_block.appendChild(deviation_reasonable);
-	deviation_block.appendChild(deviation_unreasonable);
+			deviation_block.appendChild(freeTextQuestion);
+		}
+	}else{
+		console.log("Data not fetched");
+		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40);
 
+		// Reviewer-specific deviation justification block
+		//var deviation_justified = generate_question_block_with_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
+		var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
+	
+		// Create a question block with type radio answers
+		// 3rd Question
+		var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06, type = [1,2,3,4]);
+	
+		// (No-No-Yes)
+		var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
+	
+		// (No-No-No)
+		var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "", 0, 0);
+	
+		deviation_block.appendChild(deviation_justified);
+		deviation_block.appendChild(deviation_not_justified);
+	
+		deviation_block.appendChild(deviation_reasonable);
+		deviation_block.appendChild(deviation_unreasonable);		
+	}
+
+	console.log(deviation_block);
 	return deviation_block;
 }
 
@@ -1011,8 +1054,14 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 						deviation_block = generate_one_phase_reviewer_deviation_block(checklistItem_id,null);
 					}
 				}
-				else if(role == "\"two-phase-reviewer\"")
-					deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id);
+				else if(role == "\"two-phase-reviewer\""){
+					if(data){
+						deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id,data);
+					}else{
+						deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id,null);
+					}
+				}
+					// deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id);
 
 				checklistItemText.appendChild(deviation_block);
 
