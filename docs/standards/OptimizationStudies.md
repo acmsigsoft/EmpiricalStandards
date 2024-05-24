@@ -31,7 +31,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] uses realistic and limited simplifications and constraints for the optimization problem; simplifications and constraints do not reduce the search to one where all solutions could be enumerated through brute force
 - [ ] justifies the choice of algorithm<sup><a class="footnote footnote-ref">5</a></sup> underlying the approach<sup><a class="footnote footnote-ref">6</a></sup>
 - [ ] compares approaches to a justified and appropriate baseline<sup><a class="footnote footnote-ref">7</a></sup>
-- [ ] explictly defines the solution formulation, including a description of what a solution represents<sup><a class="footnote footnote-ref">8</a></sup>, how it is represented<sup><a class="footnote footnote-ref">9</a>)</sup>, and how it is manipulated
+- [ ] explictly defines the solution formulation, including a description of what a solution represents<sup><a class="footnote footnote-ref">8</a></sup>, how it is represented<sup><a class="footnote footnote-ref">9</a></sup>, and how it is manipulated
 - [ ] explicitly defines all fitness functions, including the type of goals that are optimized and the equations for calculating fitness values
 - [ ] explicitly defines evaluated approaches, including the techniques, specific heuristics, and the parameters and their values<sup><a class="footnote footnote-ref">10</a></sup>
 - [ ] EITHER: clearly describes (and follows) a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach  
