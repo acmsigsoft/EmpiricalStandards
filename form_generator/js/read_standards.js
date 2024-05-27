@@ -133,7 +133,7 @@ function readSpecificEmpiricalStandard_table(standard_name){
 //This function creates tooltips for text
 //Anything between / and / is known as regular expressions
 function createTooltip(checklistItemText, line_text, footnotes){
-	footnote_sups = line_text.match(/(.*?)\{sup\}.+?\[\d+\]\(#[\w\d_]+\)\{\/sup\}(.*?)/g);
+	footnote_sups = line_text.match(/(.*?)\{sup\}(.+?)\{\/sup\}(.*?)/g);
 	if(footnote_sups){
 		footnote_rest = line_text.match(/(?!.*\})(.*?)$/g);
 		footnote_rest = footnote_rest.filter(function (el) {
@@ -999,13 +999,16 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			// Change the text to the string held in line_text
 			checklistItemLI.setAttribute("text", line_text);
 
-			if(line_text.replaceAll("<br/><br>", "") == "")
+			if(line_text.replaceAll("<br/><br>", "") == "") {
 				continue;
-			if(line_text.includes("footnote"))
+			}
+			
+			if(line_text.includes("footnote")) {
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
-			else
+			} else {
 				checklistItemText.innerHTML = "&nbsp;" + line_text;
 				// ???????????????????? previous line does what?
+			}
 
 			//locate the current checklist into the table
 			data = dataStructure.get(Encode_key(line_text))
@@ -1261,7 +1264,7 @@ function collect_footnotes(dom, standardTag){
 
 	for(let footnoteTag of footnoteTags){
 		supTag = footnoteTag.getElementsByTagName("sup")[0];
-		footnote_id = standardTag.getAttribute('name')+"--"+supTag.innerText.trim() // To make footnotes belong to their standards
+		footnote_id = standardTag.getAttribute('name')+"--footnote--"+supTag.innerText.trim() // To make footnotes belong to their standards
 		supTag.remove();
 		footnotes[footnote_id] = footnoteTag.innerText.trim();
 	}
@@ -1459,7 +1462,7 @@ function create_requirements_checklist(file){
 		for (let checklistTag of checklistTags){
 
 			// dealing with footnotes
-			checklistHTML = checklistTag.innerHTML.replaceAll("<sup>", "<sup>"+standardName+"--") // To make footnotes belong to their standards 
+			checklistHTML = checklistTag.innerHTML.replaceAll("<sup>", "<sup>"+standardName+"--footnote--") // To make footnotes belong to their standards 
 			//console.log(checklistHTML)
 			// Add all information for "all_intro_items", etc.
 			separate_essential_attributes_based_on_IMRaD_tags(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML)
