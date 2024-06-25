@@ -850,6 +850,9 @@ function generate_one_phase_reviewer_deviation_block(checklistItem_id,data) {
 	
 		deviation_block.appendChild(deviation_reasonable);
 		deviation_block.appendChild(deviation_unreasonable);		
+		var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", 'How can this problem be addressed', checklistItem_id, 0);
+
+		deviation_block.appendChild(freeTextQuestion);
 	}
 
 	console.log(deviation_block);
@@ -897,32 +900,59 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id,data) {
 
 		if(data.displayfree == "True"){
 			var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", data.freelabel, checklistItem_id, 0);
-
+			console.log(data.freelabel);
 			deviation_block.appendChild(freeTextQuestion);
 		}
 	}else{
 		console.log("Data not fetched");
-		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40);
+		
+		// old method
+		// var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40);
 
-		// Reviewer-specific deviation justification block
-		//var deviation_justified = generate_question_block_with_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
+		// // Reviewer-specific deviation justification block
+		// //var deviation_justified = generate_question_block_with_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
+		// var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
+	
+		// // Create a question block with type radio answers
+		// // 3rd Question
+		// var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06, type = [1,2,3,4]);
+	
+		// // (No-No-Yes)
+		// var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
+	
+		// // (No-No-No)
+		// var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "", 0, 0);
+	
+		// deviation_block.appendChild(deviation_justified);
+		// deviation_block.appendChild(deviation_not_justified);
+	
+		// deviation_block.appendChild(deviation_reasonable);
+		// deviation_block.appendChild(deviation_unreasonable);		
+
+		// new standard
+		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40, False);
+
 		var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
-	
-		// Create a question block with type radio answers
-		// 3rd Question
-		var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06, type = [1,2,3,4]);
-	
+		var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06, [1,2,3,4]);
+
 		// (No-No-Yes)
 		var deviation_reasonable = generate_message("deviation_reasonable:" + checklistItem_id, "red", "", 0, 0);
 	
 		// (No-No-No)
 		var deviation_unreasonable = generate_message("deviation_unreasonable:" + checklistItem_id, "red", "", 0, 0);
+		
 	
 		deviation_block.appendChild(deviation_justified);
 		deviation_block.appendChild(deviation_not_justified);
-	
+
+		
 		deviation_block.appendChild(deviation_reasonable);
-		deviation_block.appendChild(deviation_unreasonable);		
+		deviation_block.appendChild(deviation_unreasonable);
+
+		var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", "How can this problem be addressed", checklistItem_id, 0);
+
+		deviation_block.appendChild(freeTextQuestion);
+
 	}
 
 	console.log(deviation_block);
