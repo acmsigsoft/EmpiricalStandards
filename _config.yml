@@ -9,6 +9,7 @@ header_pages:
   - tab_04_supplements.md
   - tab_05_faq.md
   - tab_06_people.md
+  - tab_07_validator.md
 collections:
   team:
     output: true
