@@ -43,7 +43,7 @@ This standard applies to empirical research in which the researcher selects smal
 - making claims about a population, based on sample, without providing an argument for representativeness
 - claiming that a sample is representative of a population because it was randomly selected from a sampling frame, without considering bias in the sampling frame
 - conducting underpowered research; i.e.:
-    - quantitative research with a sample size insufficient to detect effects of the expected size<sup>[1](#myfootnote1)</sup>
+    - quantitative research with a sample size insufficient to detect effects of the expected size<sup><a class="footnote footnote-ref">1</a></sup>
     - qualitative research with too little data for plausible saturation
 - justifying the selection of items merely by stating that they come from a &quot;real-world&quot; context, without providing additional reasoning why the selected items are suitable for the study context
 
@@ -61,13 +61,15 @@ Sebastian Baltes and Paul Ralph. 2020. Sampling in Software Engineering Research
 
 William G. Cochran. 2007. Sampling techniques. _Wiley_.
 
-Steve Easterbrook, Janice Singer, Margaret-Anne Storey, and Daniela Damian. 2008. Selecting Empirical Methods for Software Engineering Research. In _Guide to Advanced Empirical Software Engineering_. 285-311.
+Alexander Coppock, Thomas J. Leeper, and Kevin J. Mullinix. 2018. Generalizability of heterogeneous treatment effect estimates across samples. _Proceedings of the National Academy of Sciences_ 115, 49. 12441-12446. DOI: 10.1073/pnas.1808083115
 
-Barbara Kitchenham and Shari Lawrence Pfleeger. 2002. Principles of survey research: part 5: populations and samples. SIGSOFT Softw. Eng. Notes 27, 5 (September 2002), 17–20. DOI:10.1145/571681.571686
+Steve Easterbrook, Janice Singer, Margaret-Anne Storey, and Daniela Damian. 2008. Selecting Empirical Methods for Software Engineering Research. In Shull, F., Singer, J., Sjøberg, D.I.K. (eds) _Guide to Advanced Empirical Software Engineering_, Springer, London. 285-311.
 
-Gary T. Henry. 1990. _Practical sampling._ Sage 21.
+Barbara Kitchenham and Shari Lawrence Pfleeger. 2002. Principles of survey research: part 5: populations and samples. SIGSOFT Softw. Eng. Notes 27, 5 (September 2002), 17–20. DOI: 10.1145/571681.571686
 
-Meiyappan Nagappan, Thomas Zimmermann, and Christian Bird. 2013. Diversity in software engineering research. In _Proceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2013)_. Association for Computing Machinery, New York, NY, USA, 466–476. DOI:10.1145/2491411.2491415
+Gary T. Henry. 1990. _Practical Sampling._ Sage, Newbury Park.
+
+Meiyappan Nagappan, Thomas Zimmermann, and Christian Bird. 2013. Diversity in software engineering research. In _Proceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2013)_. Association for Computing Machinery, New York, NY, USA, 466–476. DOI: 10.1145/2491411.2491415
 
 ---
-<sup>[1](#myfootnote1)</sup>Expected effect sizes should be plausible. For instance, expecting any single factor (e.g. programming language) to explain 50% of the variance in software project success is not plausible.
+<sup><a class="footnote footnote-text">1</a></sup>Expected effect sizes should be plausible. For instance, expecting any single factor (e.g. programming language) to explain 50% of the variance in software project success is not plausible.

@@ -1,7 +1,6 @@
 # Grounded Theory
+
 <standard name="Grounded Theory">
-
-
 
 *<desc>A study of a specific area of interest or phenomenon that involves
 iterative and interleaved rounds of qualitative data collection and
@@ -38,7 +37,7 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
 - [ ]	describes data sources (e.g. participants' demographics, work roles)
 - [ ]	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
-- [ ]	provides evidence of saturation; explains how saturation was achieved<sup>[1](#myfootnote1)</sup> 
+- [ ]	provides evidence of saturation; explains how saturation was achieved<sup><a class="footnote footnote-ref">1</a></sup> 
 - [ ]	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
     
 <results>
@@ -78,7 +77,7 @@ collection and analysis or do not use theoretical sampling, consider the
 ## Quality Criteria 
 
 Glaser, Strauss, Corbin and Charmaz advance inconsistent quality
-criteria. Using definitions in our **Glossary**, reviewers should
+criteria. Using definitions in our [Glossary](../glossary), reviewers should
 consider common qualitative criteria such as **credibility**,
 **resonance**, **usefulness** and the degree to which results *extend*
 our cumulative knowledge. Quantitative quality criteria such as internal
@@ -137,9 +136,6 @@ in software engineering research: a critical review and guidelines. In
 *Proceedings of the 38th International Conference on Software
 Engineering (ICSE '16)*. Association for Computing Machinery, New York,
 NY, USA, 120–131. DOI: 10.1145/2884781.2884833
-    
-Rashina Hoda (in press). Socio-Technical Grounded Theory for Software Engineering, *IEEE Transactions on Software Engineering*.
-DOI: 10.1109/TSE.2021.3106280
 
 
 ## Exemplars
@@ -173,5 +169,5 @@ up-front? A grounded theory of agile architecture. In *2015 IEEE/ACM
 2015), 347–357.
     
 ---
-<footnote><sup>[1](#myfootnote1)</sup> cf. Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.</footnote><br>    
+<footnote><sup><a class="footnote footnote-text">1</a></sup>cf. Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.</footnote><br>    
 </standard>

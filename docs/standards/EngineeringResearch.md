@@ -24,18 +24,18 @@ standard is not appropriate for:
 
 <intro>
 
-- [ ]   describes the proposed artifact in adequate detail<sup>[1](#myfootnote1)</sup>
-- [ ]   justifies the need for, usefulness of, or relevance of the proposed artifact<sup>[2](#myfootnote2)</sup>
-- [ ]   conceptually evaluates the proposed artifact; discusses its strengths, weaknesses and limitations<sup>[3](#myfootnote3)</sup>
+- [ ]   describes the proposed artifact in adequate detail<sup><a class="footnote footnote-ref">1</a></sup>
+- [ ]   justifies the need for, usefulness of, or relevance of the proposed artifact<sup><a class="footnote footnote-ref">2</a></sup>
+- [ ]   conceptually evaluates the proposed artifact; discusses its strengths, weaknesses and limitations<sup><a class="footnote footnote-ref">3</a></sup>
 
 <method>
 
 - [ ]   empirically evaluates the proposed artifact using:  
-  [action research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/ActionResearch.md), in which the researchers intervene in a real organization using the artifact,  
-  a [case study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/CaseStudy.md) in which the researchers observe a real organization using the artifact,  
-  a [controlled experiment](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Experiments.md) in which human participants use the artifact,  
-  a [quantitative simulation](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/QuantitativeSimulation.md) in which the artifact is assessed (usually against a competing artifact) in an artificial environment,  
-  a [benchmarking study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/Benchmarking.md), in which the artifact is assessed using one or more benchmarks, or  
+  [action research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/ActionResearch.md), in which the researchers intervene in a real organization using the artifact,  
+  a [case study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/CaseStudy.md) in which the researchers observe a real organization using the artifact,  
+  a [controlled experiment](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Experiments.md) in which human participants use the artifact,  
+  a [quantitative simulation](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/QuantitativeSimulation.md) in which the artifact is assessed (usually against a competing artifact) in an artificial environment,  
+  a [benchmarking study](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Benchmarking.md), in which the artifact is assessed using one or more benchmarks, or  
   another method for which a clear and convincing rationale is provided
 - [ ]   clearly indicates which of the above empirical methodology is used
 - [ ]   EITHER: discusses state-of-art alternatives (and their strengths, weaknesses and limitations)   
@@ -124,7 +124,7 @@ standard is not appropriate for:
 -   The contribution is not technically complicated. What matters is
     that it works. Unnecessary complexity is undesirable.
 
-### Suggested Readings <sup>[4](#myfootnote4)</sup>
+### Suggested Readings <sup><a class="footnote footnote-ref">4</a></sup>
 
 Richard Baskerville, Jan Pries-Heje, and John Venable. 2009. Soft design
 science methodology. In *Proceedings of the 4th International Conference
@@ -171,8 +171,8 @@ Regression Testing. In *Proceedings of the 39th International Conference
 on Software Engineering.*
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> e.g., does the paper describe the overall workflow of the solution, showing how different techniques work together? Are algorithmic contributions presented in an unambiguous way? Are the key parts of a formal model presented explicitly? Are the novel components of the solution clearly singled out?</footnote><br>
-<footnote><sup>[2](#myfootnote2)</sup> i.e., is the problem the proposed approach tries to solve specific to a certain domain? If so, why? Why are state-of-the-art approaches not good enough to deal with the problem? How can the technical contribution be beneficial?</footnote><br>
-<footnote><sup>[3](#myfootnote3)</sup> e.g., time complexity of an algorithm; theoretical.</footnote><br>
-<footnote><sup>[4](#myfootnote4)</sup> Note: Learning by building innovative artifacts is called engineering research. Some of the following readings incorrectly refer to engineering research as “design science” because the information systems community misappropriated that term circa 2004. Design science has referred to the study of designers and their processes since at least the 1940s, and still does outside of the information systems community.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup>e.g., does the paper describe the overall workflow of the solution, showing how different techniques work together? Are algorithmic contributions presented in an unambiguous way? Are the key parts of a formal model presented explicitly? Are the novel components of the solution clearly singled out?</footnote><br>
+<footnote><sup><a class="footnote footnote-text">2</a></sup>i.e., is the problem the proposed approach tries to solve specific to a certain domain? If so, why? Why are state-of-the-art approaches not good enough to deal with the problem? How can the technical contribution be beneficial?</footnote><br>
+<footnote><sup><a class="footnote footnote-text">3</a></sup>e.g., time complexity of an algorithm; theoretical.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">4</a></sup>Note: Learning by building innovative artifacts is called engineering research. Some of the following readings incorrectly refer to engineering research as “design science” because the information systems community misappropriated that term circa 2004. Design science has referred to the study of designers and their processes since at least the 1940s, and still does outside of the information systems community.</footnote><br>
 </standard>

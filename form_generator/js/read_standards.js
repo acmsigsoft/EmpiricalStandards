@@ -84,7 +84,7 @@ function readSpecificEmpiricalStandard(standard_name){
 	var dir = loc.substring(0, loc.lastIndexOf('/'));
 	var dir = dir.substring(0, dir.lastIndexOf('/'));
 	var standard_file_name = standard_name.replaceAll("\"", "").replace(" ", "");
-	var standard_file_path = dir + "/docs/" + standard_file_name + ".md";
+	var standard_file_path = dir + "/docs/standards/" + standard_file_name + ".md";
 	var empirical_standard = "";
 	mdFile.open("GET", standard_file_path, false);
 	mdFile.onreadystatechange = function(){
@@ -133,7 +133,7 @@ function readSpecificEmpiricalStandard_table(standard_name){
 //This function creates tooltips for text
 //Anything between / and / is known as regular expressions
 function createTooltip(checklistItemText, line_text, footnotes){
-	footnote_sups = line_text.match(/(.*?)\{sup\}.+?\[\d+\]\(#[\w\d_]+\)\{\/sup\}(.*?)/g);
+	footnote_sups = line_text.match(/(.*?)\{sup\}(.+?)\{\/sup\}(.*?)/g);
 	if(footnote_sups){
 		footnote_rest = line_text.match(/(?!.*\})(.*?)$/g);
 		footnote_rest = footnote_rest.filter(function (el) {
@@ -1029,13 +1029,16 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			// Change the text to the string held in line_text
 			checklistItemLI.setAttribute("text", line_text);
 
-			if(line_text.replaceAll("<br/><br>", "") == "")
+			if(line_text.replaceAll("<br/><br>", "") == "") {
 				continue;
-			if(line_text.includes("footnote"))
+			}
+			
+			if(line_text.includes("footnote")) {
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
-			else
+			} else {
 				checklistItemText.innerHTML = "&nbsp;" + line_text;
 				// ???????????????????? previous line does what?
+			}
 
 			//locate the current checklist into the table
 			data = dataStructure.get(Encode_key(line_text))
@@ -1224,10 +1227,10 @@ function preparation_to_convert_MD_to_HTML(standardTagName, checklistTagName, ch
 	checklistText = convert_MD_tags_to_HTML_tags(checklistText);
 	//console.log(checklistText);
 	// Standard Files - Change from docs to link, change from .md file to nothing
-	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/', '../docs?standard=').replaceAll('.md', '');
+	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/', '../docs/standards?standard=').replaceAll('.md', '');
 
 	// Supplement Files - Change from docs to link, change from .md file to nothing
-	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/', '../Supplements?supplement=').replaceAll('.md', '');
+	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/', '../docs/supplements?supplement=').replaceAll('.md', '');
 
 	// Convert Markdown Checklists to HTML checklists
 	checklists = convert_MD_standard_checklists_to_html_standard_checklists(standardTagName, checklistTagName, checklistText, footnotes)
@@ -1291,7 +1294,7 @@ function collect_footnotes(dom, standardTag){
 
 	for(let footnoteTag of footnoteTags){
 		supTag = footnoteTag.getElementsByTagName("sup")[0];
-		footnote_id = standardTag.getAttribute('name')+"--"+supTag.innerText.trim() // To make footnotes belong to their standards
+		footnote_id = standardTag.getAttribute('name')+"--footnote--"+supTag.innerText.trim() // To make footnotes belong to their standards
 		supTag.remove();
 		footnotes[footnote_id] = footnoteTag.innerText.trim();
 	}
@@ -1489,7 +1492,7 @@ function create_requirements_checklist(file){
 		for (let checklistTag of checklistTags){
 
 			// dealing with footnotes
-			checklistHTML = checklistTag.innerHTML.replaceAll("<sup>", "<sup>"+standardName+"--") // To make footnotes belong to their standards 
+			checklistHTML = checklistTag.innerHTML.replaceAll("<sup>", "<sup>"+standardName+"--footnote--") // To make footnotes belong to their standards 
 			//console.log(checklistHTML)
 			// Add all information for "all_intro_items", etc.
 			separate_essential_attributes_based_on_IMRaD_tags(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML)
@@ -1604,7 +1607,7 @@ function create_for_more_info_part(standard_keys){
 	var more_info_H2 = document.createElement("H2");
 	more_info_H2.innerHTML = "For more information, see:";
 	
-	var standards_path = "../docs?standard="
+	var standards_path = "../docs/standards?standard="
 	var more_info_UL = document.createElement("UL");
 
 	// Adding Standards as a list with a link to the correct page
@@ -1683,6 +1686,9 @@ function saveFile(){
 	var generated_text = '=================\n' +
 		'Review Checklist\n' +
 		'=================\n';
+	
+	let date_generated = new Date();
+	generated_text += '\nGenerated at: ' + date_generated.toDateString() + ', ' + date_generated.toLocaleTimeString() + '\n';
 		
 	var decision = document.getElementById("decision_msg");
 	var unreasonable = document.getElementById("deviation_unreasonable");

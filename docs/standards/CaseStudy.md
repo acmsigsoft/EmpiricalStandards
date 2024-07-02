@@ -4,7 +4,7 @@
 
 *<desc>"An empirical inquiry that investigates a contemporary phenomenon (the
 "case") in depth and within its real-world context, especially when the
-boundaries between phenomenon and context \[are unclear\]" (Yin 2017)</desc>*
+boundaries between phenomenon and context are unclear" (Yin 2017)</desc>*
 
 
 ## Application 
@@ -28,10 +28,10 @@ a product over many releases). For our purposes, *case study subsumes
 ethnography*.
 
 If data collection and analysis are interleaved, consider the **Grounded
-Theory Standard**. If the study mentions action research, or intervenes
-in the context, consider the **Action Research Standard.** If the study
+Theory** Standard. If the study mentions action research, or intervenes
+in the context, consider the **Action Research** Standard. If the study
 captures a large quantitative dataset with limited context, consider the
-**Exploratory Data Science Standard.**
+**Data Science** Standard.
 
 ## Specific Attributes 
 
@@ -46,7 +46,7 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]   justifies the selection of the case(s) or site(s) that was(were) studied
 - [ ]   describes the site(s) in rich detail
 - [ ]   the site is a real (physical or virtual) place, not a toy example or imaginary world    
-- [ ]   reports the type of case study<sup>[1](#myfootnote1)</sup>
+- [ ]   reports the type of case study<sup><a class="footnote footnote-ref">1</a></sup>
 - [ ]   describes data sources (e.g. participants' demographics and work roles)
 - [ ]   defines unit(s) of analysis or observation
 
@@ -67,11 +67,11 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]   triangulates across data sources, informants or researchers
 - [ ]   cross-checks interviewee statements (e.g. against direct observation or archival records)
-- [ ]   uses participant observation (ethnography) or direct observation (non-ethnography) and clearly integrates these observations into results<sup>[2](#myfootnote2)</sup>    
-- [ ]   validates results using member checking, dialogical interviewing<sup>[3](#myfootnote3)</sup>, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
+- [ ]   uses participant observation (ethnography) or direct observation (non-ethnography) and clearly integrates these observations into results<sup><a class="footnote footnote-ref">2</a></sup>    
+- [ ]   validates results using member checking, dialogical interviewing<sup><a class="footnote footnote-ref">3</a></sup>, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]   describes external events and other factors that may have affected the case or site
 - [ ]   describes how prior understandings of the phenomena were managed and/or influenced the research
-- [ ]   uses quotations to *illustrate* findings<sup>[4](#myfootnote4)</sup>
+- [ ]   uses quotations to *illustrate* findings<sup><a class="footnote footnote-ref">4</a></sup>
 - [ ]   EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory    
      OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
 - [ ]   researchers reflect on their own possible biases
@@ -81,15 +81,15 @@ captures a large quantitative dataset with limited context, consider the
 <checklist name="Extraordinary">
 
 - [ ]   multiple, deep, fully-developed cases with cross-case triangulation
-- [ ]   uses a team-based approach; e.g., multiple raters with analysis of inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
-- [ ]   published a case study protocol beforehand and made it publicly accessible (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/Supplements)) 
+- [ ]   uses a team-based approach; e.g., multiple raters with analysis of inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]   published a case study protocol beforehand and made it publicly accessible (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/RegisteredReports.md)) 
 </checklist>
     
 ## General Quality Criteria 
 
 Case studies should be evaluated using qualitative validity criteria
-such as credibility, multivocality, reflexivity, rigor and
-transferability (see **Glossary**). Quantitative quality criteria such
+such as credibility, multivocality, reflexivity, rigor, and
+transferability (see [Glossary](../glossary)). Quantitative quality criteria such
 as replicability, generalizability and objectivity typically do not
 apply.
 
@@ -119,15 +119,14 @@ different purposes, including:
 ## Antipatterns 
 
 -   Relying on a single approach to data collection (e.g. interviews)
-    without corroboration or triangulation
+    without corroboration or data triangulation
 -   Oversimplifying and over-rationalizing complex phenomena; presenting
-    messy complicated things as simple and clean
+    messy, complicated things as simple and clean
 
 ## Invalid Criticisms 
 
--   Does not present quantitative data; only collects a single data
-    type.
--   Sample of 1; findings not generalizable. The point of a case study
+-   Does not present quantitative data.
+-   Sample of one; findings not generalizable. The point of a case study
     is to study one thing deeply, not to generalize to a population.
     Case studies should lead to theoretical generalization; that is,
     concepts that are transferable in principle.
@@ -139,7 +138,9 @@ different purposes, including:
     number; what matters is that there is enough data that the findings
     are credible, and the description is deep and rich.
 
-## Suggested Readings 
+## Suggested Readings
+
+(Note: we recommend beginning with Yin's book.)
 
 Line Dube and Guy Pare. Rigor in information systems positivist case
 re-search: current practices, trends, and recommendations. 2003. *MIS
@@ -148,10 +149,6 @@ Quarterly.* 27, 4, 597–636. DOI: 10.2307/30036550
 Shiva Ebneyamini, and Mohammad Reza Sadeghi Moghadam. 2018. Toward
 Developing a Framework for Conducting Case Study Research.
 *International Journal of Qualitative Methods.* 17, 1 (Dec. 2018)
-
-Kilem Gwet. 2002. Inter-Rater Reliability: Dependency on Trait
-Prevalence and Marginal Homogeneity. Statistical Methods for Inter-Rater
-Reliability Assessment Series, 2 (May 2002), 9 pages.
 
 Barbara Kitchenham, Lesley Pickard, and Shari Lawrence Pfleeger. 1995.
 Case studies for method and tool evaluation. *IEEE software.* 12, 4
@@ -215,8 +212,8 @@ case study of crowdsourcing software development. In *Proceedings of the
 36^th^ International Conference on Software Engineering*, 187–198, 2014.
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup>e.g. descriptive, emancipatory, evaluative, explanatory, exploratory, historical, revelatory</footnote><br> 
-<footnote><sup>[2](#myfootnote2)</sup> Direct observation means watching research subjects without getting involved; participant observation means joining in with whatever participants are doing</footnote><br>
-<footnote><sup>[3](#myfootnote3)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
-<footnote><sup>[4](#myfootnote4)</sup> Quotations should not be *the only* representation of a finding; each finding should be described independently of supporting quotations</footnote><br>    
+<footnote><sup><a class="footnote footnote-text">1</a></sup>e.g. descriptive, emancipatory, evaluative, explanatory, exploratory, historical, revelatory</footnote><br> 
+<footnote><sup><a class="footnote footnote-text">2</a></sup>Direct observation means watching research subjects without getting involved; participant observation means joining in with whatever participants are doing</footnote><br>
+<footnote><sup><a class="footnote footnote-text">3</a></sup>L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">4</a></sup>Quotations should not be *the only* representation of a finding; each finding should be described independently of supporting quotations</footnote><br>    
 </standard>

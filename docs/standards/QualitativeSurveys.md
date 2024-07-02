@@ -31,7 +31,7 @@ consider the **Discourse Analysis Standard (not yet available)**.
 
 <method>    
     
-- [ ]	explains how interviewees were selected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ]	explains how interviewees were selected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md))
 - [ ]	describes interviewees (e.g. demographics, work roles)
 - [ ]   describes interviewer(s) (e.g. experience, perspective)     
     
@@ -39,11 +39,12 @@ consider the **Discourse Analysis Standard (not yet available)**.
     
 - [ ]	presents clear chain of evidence from interviewee quotations to findings (e.g. proposed concepts)
 - [ ]	clearly answers the research question(s)
-- [ ]	provides evidence of saturation; explains how saturation was achieved<sup>[1](#myfootnote1)</sup>
+- [ ]	provides evidence of saturation; explains how saturation was achieved<sup><a class="footnote footnote-ref">1</a></sup>
     
 <discussion>
     
- - [ ]   researchers reflect on their own possible biases   
+ - [ ]   researchers reflect on their own possible biases
+ - [ ]   identifies key issues under consideration
     
 </checklist>
      
@@ -51,14 +52,20 @@ consider the **Discourse Analysis Standard (not yet available)**.
 <checklist name="Desirable">
 
 - [ ]	provides supplemental materials including interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence table(s)
+- [ ]   describes questions asked in data collection: content of central questions, form of questions (e.g. open vs. closed)
 - [ ]	includes highly diverse participants
+- [ ]   describes the relationships and interactions between researchers and participants relevant to the research process
 - [ ]	uses direct quotations extensively to support key points
+- [ ]   identifies data recording methods (audio/visual), field notes or transcription processes used
 - [ ]	EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory    
      OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
-- [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers<sup>[2](#myfootnote2)</sup>)
+- [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers<sup><a class="footnote footnote-ref">2</a></sup>)
 - [ ]	discusses transferability; findings plausibly transferable to different contexts
 - [ ]	compares results with (or integrates them into) prior theory or related research
+- [ ]   reflects on any alternative explanations of the findings
+- [ ]   provides relevant contextual information for findings
 - [ ]	reflects on how researchers’ biases may have affected their analysis
+- [ ]   describes any incentives or compensation, and provides assurance of relevant ethical processes of data collection and consent process as relevant
 </checklist>
      
 ### Extraordinary Attributes	
@@ -67,14 +74,14 @@ consider the **Discourse Analysis Standard (not yet available)**.
 - [ ]	employs multiple methods of data analysis (e.g. open coding vs. process coding; manual coding vs. automated sentiment analysis) with method-triangulation
 - [ ]	employs longitudinal design (i.e. each interviewee participates multiple times) and analysis
 - [ ]	employs probabilistic sampling strategy; statistical analysis of response bias
-- [ ]	uses multiple coders and analyzes inter-coder reliability (see [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]	uses multiple coders and analyzes inter-coder reliability (see [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md))
 </checklist>
 
 ## General Quality Criteria
 
 An interview study should address appropriate qualitative quality
 criteria such as: **credibility,** **resonance**, **usefulness**, and
-**transferability** (see [Glossary](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Glossary.md)). Quantitative quality criteria
+**transferability** (see [Glossary](../glossary)). Quantitative quality criteria
 such as internal validity, construct validity, generalizability and
 reliability typically do not apply.
 
@@ -115,11 +122,13 @@ reliability typically do not apply.
 
 Virginia Braun and Victoria Clarke. "Using thematic analysis in psychology." _Qualitative Research in Psychology_ 3, 2 (2006), 77-101.
     
-Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_ 23, 1 (2018), 245-261.
+Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data saturation: the mysterious step in Grounded Theory Methodology." _The Qualitative Report_ 23, 1 (2018), 245-261.
     
-Michael Quinn Patton. 2002. *Qualitative Research and Evaluation Methods*. 3rd ed. Sage Publications.
+Michael Quinn Patton. 2002. *Qualitative Research and Evaluation Methods*. 3rd ed. Sage.
 
-Herbert J. Rubin and Irene S. Rubin. 2011. *Qualitative interviewing: The art of hearing data*. Sage.
+Herbert J. Rubin and Irene S. Rubin. 2011. *Qualitative Interviewing: The Art of Hearing Data*. Sage.
+
+Russel Walsh. “The methods of reflexivity.” *The Humanistic Psychologist* 31, 4 (2003), 51–66. doi:10.1080/08873267.2003.9986934.
 
 Johnny Saldaña. 2015. *The coding manual for qualitative researchers*. Sage.
 
@@ -132,6 +141,6 @@ Paul Ralph and Paul Kelly. 2014. The dimensions of software engineering success.
 Paul Ralph and Ewan Tempero. 2016. Characteristics of decision-making during coding. In *Proceedings of the 20th International Conference on Evaluation and Assessment in Software Engineering (EASE '16).* Association for Computing Machinery, New York, NY, USA, Article 34, 1–10. DOI:10.1145/2915970.2915990
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup>cf. Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.</footnote><br> 
-<footnote><sup>[2](#myfootnote2)</sup> L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup>cf. Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.</footnote><br> 
+<footnote><sup><a class="footnote footnote-text">2</a></sup>L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
 </standard>

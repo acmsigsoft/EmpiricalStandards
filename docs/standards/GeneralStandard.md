@@ -50,7 +50,7 @@ following.
     
 - [ ]	names the methodology or methodologies used
 - [ ]	methodology is appropriate (not necessarily optimal) for stated purpose, problem, etc.
-- [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ]	describes in detail what, where, when and how data were collected (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md))
 - [ ]	describes in detail how the data were analyzed
 
 
@@ -58,7 +58,7 @@ following.
     
 - [ ]	presents results
 - [ ]	results directly address research questions
-- [ ]	enumerates and validates assumptions of statistical tests used (if any)<sup>[1](#myfootnote1)</sup>
+- [ ]	enumerates and validates assumptions of statistical tests used (if any)<sup><a class="footnote footnote-ref">1</a></sup>
 
 <discussion>
     
@@ -70,8 +70,8 @@ following.
     
 - [ ]	contributes in some way to the collective body of knowledge <!-- (see Replications Supplement) -->
 - [ ]	language is not misleading; any grammatical problems do not substantially hinder understanding
-- [ ]	acknowledges and mitigates potential risks, harms, burdens or unintended consequences of the research (see the ethics supplements for [Engineering Research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsEngineering.md), [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsHumanParticipants.md), or [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/EthicsSecondaryData.md))
-- [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InformationVisualization.md))
+- [ ]	acknowledges and mitigates potential risks, harms, burdens or unintended consequences of the research (see the ethics supplements for [Engineering Research](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/EthicsEngineering.md), [Human Participants](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/EthicsHumanParticipants.md), or [Secondary Data](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/EthicsSecondaryData.md))
+- [ ]	visualizations/graphs are not misleading (see the [Information Visualization Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InformationVisualization.md))
 - [ ]	complies with all applicable empirical standards
 
 </checklist>
@@ -80,7 +80,7 @@ following.
 
 <checklist name="Desirable">
 
-- [ ]	states epistemological stance<sup>[2](#myfootnote2)</sup>
+- [ ]	states epistemological stance<sup><a class="footnote footnote-ref">2</a></sup>
 - [ ]	summarizes and synthesizes a reasonable selection of related work (not every single relevant study)
 - [ ]	clearly describes relationship between contribution(s) and related work
 - [ ]	demonstrates appropriate statistical power (for quantitative work) or saturation (for qualitative work)
@@ -91,15 +91,15 @@ following.
 - [ ]	visualizations (e.g. graphs, diagrams, tables) advance the paper’s arguments or contribution
 - [ ]	clarifies the roles and responsibilities of the researchers (i.e. who did what?)
 - [ ]	provides an auto-reflection or assessment of the authors’ own work (e.g. lessons learned)
-- [ ]   publishes the study in two phases: a plan and the results of executing the plan (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/tree/master/Supplements)) 
-- [ ]	uses multiple raters, where philosophically appropriate, for making subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md))
+- [ ]   publishes the study in two phases: a plan and the results of executing the plan (see the [Registered Reports Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/RegisteredReports.md)) 
+- [ ]	uses multiple raters, where philosophically appropriate, for making subjective judgments (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md))
 
 </checklist>
      
 ### Extraordinary Attributes 	
 <checklist name="Extraordinary">
 
-- [ ]	applies two or more data collection or analysis strategies to the same research question (see the [Multimethodology Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/MixedMethods.md))
+- [ ]	applies two or more data collection or analysis strategies to the same research question (see the [Multimethodology Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/MixedMethods.md))
 - [ ]	approaches the same research question(s) from multiple epistemological perspectives
 - [ ]	innovates on research methodology while completing an empirical study
 
@@ -140,18 +140,20 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Applying empirical standards in a mechanical, inflexible, box-ticking or gotcha-like manner.
 -   Rejecting a study because it uses a methodology for which no specific standard is available.
 -   Skimming a manuscript instead of carefully reading each word and inspecting each figure and table.
--   Unprofessional or vitriolic tone, ad hominem attacks, disparaging or denigrating comments.
+-   Unprofessional or vitriolic tone; ad hominem attacks; disparaging or denigrating comments.
 -   Allowing the authors' identities or affiliations to affect the review.
 -   Focusing on superficial details of paper without engaging with its main claims or results.
 -   Requesting additional analysis not directly related to a study's purpose or research question, 
     leading to results poorly linked to the article’s narrative.
 -   Using sub-reviewers when the venue does not explicitly allow it.
 -   Using the review to promote the reviewer's own views, theories, methods, or publications.
+-   Providing vague, non-actionable criticism.
 
 ## Invalid Criticisms
 -   Setting arbitrary minimum sample sizes or other data requirements, based on neither power analysis nor theoretical saturation.
 -   Stating that a study: 
-    - lacks detail without enumerating missing details;  
+    - lacks detail without enumerating missing details;
+    - is missing important references without specifying the missing references;  
     - is of low quality without explaining specific problems; or  
     - is not new without providing citations to published studies that make **practically identical** contributions.  
 -   Rejecting a study because it replicates or reproduces existing work. <!--(see Replications Supplement)-->
@@ -172,9 +174,9 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Acknowledging limitations but then writing implications and conclusions as though the limitations don't exist.
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup> visual methods of checking assumptions are often as good as or better than statistical tests</footnote><br>
-<footnote><sup>[2](#myfootnote2)</sup>e.g. positivism, falisificationism, interpretivism, critical realism, postmodernism</footnote><br>
-<footnote><sup>[Q](#myfootnote3)</sup>This is a custom question for first checklist</footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup>visual methods of checking assumptions are often as good as or better than statistical tests</footnote><br>
+<footnote><sup><a class="footnote footnote-text">2</a></sup>e.g. positivism, falisificationism, interpretivism, critical realism, postmodernism</footnote><br>
+<footnote><sup><a class="footnote footnote-text">Q</a></sup>This is a custom question for first checklist</footnote><br>
 
 </standard>
     

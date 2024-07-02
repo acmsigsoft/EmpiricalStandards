@@ -27,8 +27,8 @@ This standard does not apply to studies collecting primary data from a large num
 <method>
 
 - [ ]   presents step-by-step, systematic, replicable description of the search process for published case studies (not necessarily in peer-reviewed venues)
-- [ ]   defines clear inclusion and exclusion criteria for cases<sup>[1](#myfootnote1)</sup>
-- [ ]   describes the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/Sampling.md))
+- [ ]   defines clear inclusion and exclusion criteria for cases<sup><a class="footnote footnote-ref">1</a></sup>
+- [ ]   describes the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md))
 - [ ]   mitigates sampling bias and publication bias, using some (not all) of:   
 (i) manual and keyword automated searches;   
 (ii) backward and forward snowballing searches;   
@@ -38,7 +38,7 @@ This standard does not apply to studies collecting primary data from a large num
 (vi) searching pre-print servers (e.g. arXiv);   
 (vii) soliciting unpublished manuscripts through appropriate listservs or social media;   
 (viii) contacting known authors in the area.   
-- [ ]   defines a coding scheme to convert qualitative case descriptions into quantitative variables<sup>[2](#myfootnote2)</sup>
+- [ ]   defines a coding scheme to convert qualitative case descriptions into quantitative variables<sup><a class="footnote footnote-ref">2</a></sup>
 - [ ]   EITHER: describes the coding scheme in detail;   
 OR: provides the coding scheme in supplementary materials
 - [ ]   clearly explains how missingness in the dataset was managed
@@ -58,15 +58,15 @@ OR: provides the coding scheme in supplementary materials
 ### Desirable Attributes
 <checklist name="Desirable">
 
-- [ ]   provides supplementary materials such as  protocol, search terms, search results, selection process results, coding scheme, examples of coding, decision rules, complete dataset, analysis scripts, descriptions of edge cases<sup>[3](#myfootnote3)</sup>
+- [ ]   provides supplementary materials such as  protocol, search terms, search results, selection process results, coding scheme, examples of coding, decision rules, complete dataset, analysis scripts, descriptions of edge cases<sup><a class="footnote footnote-ref">3</a></sup>
 - [ ]   explains and justifies the design of the coding scheme 
-- [ ]   uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/Supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup>[4](#myfootnote4)</sup>
+- [ ]   uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup><a class="footnote footnote-ref">4</a></sup>
 - [ ]   describes contacting authors of primary studies for more information, to check coding accuracy, or resolve coding disagreements
 - [ ]   assesses quality of primary studies using an a priori scheme (e.g. the **Case Survey Standard**); explains how quality was assessed; models study quality as a moderating variable  
 - [ ]   consolidates results using tables, diagrams, or charts; includes PRISMA flow diagram (cf. Moher et al. 2009)
 - [ ]   integrates results into prior theory or research; identifies gaps, biases, or future directions
 - [ ]   presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
-- [ ]   clearly distinguishes evidence-based results from interpretations and speculation<sup>[5](#myfootnote5)</sup>
+- [ ]   clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote-ref">5</a></sup>
 </checklist>
 
 ### Extraordinary Attributes
@@ -134,11 +134,11 @@ Mark de Reuver, Harry Bouwman, and Ian MacInnes. 2007. What drives business mode
 Mark de Reuver, Harry Bouwman, and Ian MacInnes. 2009. Business model dynamics: A case survey. *Journal of Theoretical and Applied Electronic Commerce Research*. 4, 1 (2009), 1–11. DOI:10.4067/S0718-18762009000100002.
 
 ---
-<footnote><sup>[1](#myfootnote1)</sup>e.g., reports at least two of the variables in the coding scheme</footnote><br>
-<footnote><sup>[2](#myfootnote2)</sup>the coding scheme should balance simplicity and information richness</footnote><br>
-<footnote><sup>[3](#myfootnote3)</sup>do provide data from multiple raters and scripts for calculating inter-rater agreement if possible but do not provide primary study author’s responses to any questionnaire unless authors gave explicit permission.</footnote><br> 
-<footnote><sup>[4](#myfootnote4)</sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
-<footnote><sup>[5](#myfootnote5)</sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">1</a></sup>e.g., reports at least two of the variables in the coding scheme</footnote><br>
+<footnote><sup><a class="footnote footnote-text">2</a></sup>the coding scheme should balance simplicity and information richness</footnote><br>
+<footnote><sup><a class="footnote footnote-text">3</a></sup>do provide data from multiple raters and scripts for calculating inter-rater agreement if possible but do not provide primary study author’s responses to any questionnaire unless authors gave explicit permission.</footnote><br> 
+<footnote><sup><a class="footnote footnote-text">4</a></sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">5</a></sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>
 
 

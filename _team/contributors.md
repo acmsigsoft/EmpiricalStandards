@@ -1,8 +1,8 @@
 ## Contributors
 
-### Director
+### Editor-in-Chief
 
-**Paul Ralph**, *PhD (British Columbia), B.Sc. / B.Comm (Memorial),* is an award-winning scientist, author, consultant and Professor of Software Engineering at Dalhousie University in Halifax, Canada. Paul co-chaired the ACM SIGSOFT Paper and Peer Review Quality Initiative and has written extensively on research methodology for software engineering.
+**Paul Ralph**, *PhD (British Columbia), B.Sc. / B.Comm (Memorial),* is an award-winning scientist, author, consultant and Professor of Software Engineering at Dalhousie University in Halifax, Canada. Paul chaired the ACM SIGSOFT Paper and Peer Review Quality Initiative and has written extensively on research methodology for software engineering.
 
 ### Content Contributors
 
@@ -18,7 +18,7 @@
 
 **Preetha Chatterjee**, Drexel University, USA [Repository Mining]
 
-**Istvan David**, University of Montreal, Canada [Replication]
+**Istvan David**, McMaster University, Canada [Replication]
 
 **Jessica Diaz**, Technical University of Madrid, Spain [IRR/IRA]
 
@@ -65,6 +65,8 @@
 **Daniel Mendez**, Blekinge Institute of Technology, Sweden, and fortiss GmbH, Germany [Questionnaire]
 
 **Tim Menzies**, NC State University, USA [Exploratory Data Science; Optimization Studies]
+
+**Rahul Mohanani**, The University of Jyväskylä, Finland [Qualitative Simulations]
 
 **Jefferson Molleri**, Simula Metropolitan Centre for Digital Engineering, Norway [Questionnaire]
 
