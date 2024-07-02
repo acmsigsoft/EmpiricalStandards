@@ -44,12 +44,5 @@ If previous field is inputted as "True", this will be the corresponding free-tex
 **_NOTE:_**  Changing the text of an attribute(checklist) in a standard will break the corresponding customization, making sure to also change the corresponding row in the table file in order to keep the functionality
 
 
-## Validator Check on Whether the change would break the structure
-### Approach 1: Circle CI Setup
-- Directly setting up a Circle CI pipeline with your forked repository, login into Circle CI and create an project assosiate with your forked SIGSOFT repository
-- The script should run automatically whenever you made commits with your local repository and checks for error in the table.md files under attribute_customizations folder
-
-### Approach 2: Github Pull Request Validator
-- If you have trouble setting up Circle CI, you could directly create the pull request and validate directly with Pull Request Validator
-- Go to https://www2.sigsoft.org/EmpiricalStandards/, navigate directly to **Validator** section on the top right side of the header
-- Enter the corresponding number for the Pull Request (e.g. 130), it will give you the output on whether the pull request is safe or not.
+## Validator Check on whether the change would break the structure
+- Go to [https://www2.sigsoft.org/EmpiricalStandards/](https://www2.sigsoft.org/EmpiricalStandards/validator/) and enter the corresponding number for the Pull Request (e.g. 130). Please don't submit your pull request until the validator says it's safe.
