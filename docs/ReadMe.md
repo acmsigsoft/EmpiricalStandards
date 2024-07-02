@@ -45,4 +45,4 @@ If previous field is inputted as "True", this will be the corresponding free-tex
 
 
 ## Validator Check on whether the change would break the structure
-- Go to [https://www2.sigsoft.org/EmpiricalStandards/](https://www2.sigsoft.org/EmpiricalStandards/validator/) and enter the corresponding number for the Pull Request (e.g. 130). Please don't submit your pull request until the validator says it's safe.
+- Go to [https://www2.sigsoft.org/EmpiricalStandards/validator/](https://www2.sigsoft.org/EmpiricalStandards/validator/) and enter the corresponding number for the Pull Request (e.g. 130). Please don't submit your pull request until the validator says it's safe.
