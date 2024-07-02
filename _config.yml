@@ -10,6 +10,8 @@ header_pages:
   - tab_05_faq.md
   - tab_06_glossary.md
   - tab_07_people.md
+  - tab_08_validator.md
+
 collections:
   team:
     output: true

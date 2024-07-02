@@ -30,6 +30,9 @@ The standards can also be used for educational purposes. While they cannot repla
 
 You can learn more about how the standards were created and are maintained by reading the empirical standards report [3].
 
+## Attribute Customization and Validation
+Please refer to the following [ReadMe File](/docs/ReadMe.md) for detailed instructions
+
 <!--
 ## Repository Structure
 The standards themselves can be found in the _docs_ directory. There is a **General Standard**, which applies to all empirical research, and a set of specific standards, which apply to specific research methods such as **Case Studies**, **Controlled Experiments** and **Systematic Literature Reviews**.
