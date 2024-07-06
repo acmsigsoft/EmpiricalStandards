@@ -268,6 +268,7 @@ function generate_decision_message_block() {
 
 	else if (role == "\"two-phase-reviewer\""){
 		
+		console.log(123);
 		document.getElementById("deviation_reasonable").style.display = "none";
 		document.getElementById("deviation_unreasonable").style.display = "none";
 		document.getElementById("Desirable").style.display = "none";
@@ -930,7 +931,7 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id,data) {
 		// deviation_block.appendChild(deviation_unreasonable);		
 
 		// new standard
-		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40, False);
+		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40);
 
 		var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
 		var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06, [1,2,3,4]);
