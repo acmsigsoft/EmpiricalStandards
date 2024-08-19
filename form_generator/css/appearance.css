@@ -7,6 +7,35 @@ form{
 form:active {
   color: blue;
 }
+
+#location_type {
+	border: none;
+	border-radius: 4px;
+	padding: 5px;
+	margin-left: 5px;
+	width: 94%;
+	font-weight: bold;
+}
+
+.item_location_textbox, .justification_location_textbox {
+	border: 2px solid #bbbbbb;
+	border-radius: 4px;
+	padding: 3px;
+	margin-left: 5px;
+	margin-right: 50px;
+	width: 90%;
+}
+
+.item_location_textbox:invalid, .justification_location_textbox:invalid {
+	border: 2px solid red;
+}
+
+.unjustified_warning {
+	color: red;
+	font-size: 90%;
+	padding-left: 65px;
+}
+
 @media screen and (min-width: 401px) and (max-width: 785px)
 {
 	#container
