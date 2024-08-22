@@ -62,6 +62,8 @@ class HashMap {
 
 const dataStructure = new HashMap();
 
+let role = getParameterByName('role');
+
 //This function reads in the file name and passes it onto the next method
 function getParameterByName(param_name, url = window.location.href){
 	var params = location.search&&location.search.substr(1).replace(/\+/gi," ").split("&");
@@ -187,15 +189,23 @@ function generate_decision_message_block() {
 
 	// Get the role (author, one-phase, two-phase)
 	role = getParameterByName('role');
+	
+	var checklist_yes_not_checked_count;
+	var checklist_no_checked_count;
 
-	// Number of yes's that are not checked
-	checklist_yes_not_checked_count = $('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length;
-
-	// First level no - Number of nos checked
-	checklist_no_checked_count = $('input[class="checklistRadioNo"][type="radio"][value="no"]:checked').length;
+	// Number of yes's that are not checked and nos checked
+	if (role != "\"author\"") {
+		checklist_yes_not_checked_count = $('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length;
+		checklist_no_checked_count = $('input[class="checklistRadioNo"][type="radio"][value="no"]:checked').length;
+	}
 
 	// Second level yes
 	deviation_yes_checked_count = $('input[class="deviationRadioYes"][type="radio"][value="yes"]:checked').length;
+	
+	// Second level no
+	deviation_no_checked_count = $('input[class="deviationRadioNo"][type="radio"][value="no"]:checked').length;
+	
+	console.log("Test: " + checklist_yes_not_checked_count + " yeses not counted; " + checklist_no_checked_count + " nos counted; " + deviation_yes_checked_count + " deviation yeses counted; " + deviation_no_checked_count + " deviation nos counted");
 
 	// Need to change to types
 	// justification_yes_checked_count = $('input[class="justificationRadioYes"][type="radio"][value="yes"]:checked').length;
@@ -247,26 +257,20 @@ function generate_decision_message_block() {
 				document.getElementById("deviation_reasonable").style.display = "block";
 				document.getElementById("Desirable").style.display = "block";
 				document.getElementById("Extraordinary").style.display = "block";
-
 			} else {
 				msg = "ACCEPT";
 				document.getElementById("Desirable").style.display = "block";
 				document.getElementById("Extraordinary").style.display = "block";
-
 			}
 			
 			// Showing a decision message is not needed for now
 			//document.getElementById("decision_msg").innerHTML = msg;
 			//document.getElementById("decision_msg").style.display = "block";
-		}
-			
-		else{
+		} else {
 			document.getElementById("checklist_download").disabled = true;
 			document.getElementById("decision_msg").style.display = "none";
 		}
-	}
-
-	else if (role == "\"two-phase-reviewer\""){
+	} else if (role == "\"two-phase-reviewer\""){
 		
 		console.log(123);
 		document.getElementById("deviation_reasonable").style.display = "none";
@@ -296,10 +300,9 @@ function generate_decision_message_block() {
 				document.getElementById("deviation_reasonable").style.display = "block";
 				document.getElementById("Desirable").style.display = "block";
 				document.getElementById("Extraordinary").style.display = "block";
-			}
-			
+				
 			// if number of type 1 is greater than 0
-			else if (justification_type1_checked_count > 0) {
+			} else if (justification_type1_checked_count > 0) {
 				msg = "MINOR REVISION";
 				document.getElementById("deviation_reasonable").style.display = "block";
 				document.getElementById("Desirable").style.display = "block";
@@ -310,14 +313,11 @@ function generate_decision_message_block() {
 				msg = "ACCEPT";
 				document.getElementById("Desirable").style.display = "block";
 				document.getElementById("Extraordinary").style.display = "block";
-
 			}
-
+			
 			document.getElementById("decision_msg").innerHTML = msg;
 			document.getElementById("decision_msg").style.display = "block";
-		}
-			
-		else{
+		} else {
 			document.getElementById("checklist_download").disabled = true;
 			document.getElementById("decision_msg").style.display = "none";
 		}
@@ -390,27 +390,70 @@ function generate_decision_message_block() {
 	// }
 }
 
+
+function show_hide_location_textbox() {
+	id = this.id;
+	console.log(id);
+
+	var missing_checkbox = document.getElementById(id);
+	
+	console.log(missing_checkbox);
+	
+	if (missing_checkbox.checked) {
+		console.log("Missing checked");
+		show_deviation_block_and_hide_location_textbox();
+	} else {
+		console.log("Missing unchecked");
+		hide_deviation_block_and_show_location_textbox();
+	}
+}
+
 //this function manages the display of the deviation block, which is dependent upon user input
-function show_deviation_block() {
-	id = this.id.replace("checklist-radio:No:", "")
-	var block = document.getElementById("deviation_block:" + id);
-	block.style.display = "block";
+function show_deviation_block_and_hide_location_textbox() {
+	
+	// Replace ID from Yes to an empty string
+	if (role == "\"author\"") {
+		id = this.id.replace("missing_checkbox:", "");
+		
+		var item_location_textbox = document.getElementById("item_location_textbox:" + id);
+		item_location_textbox.style.visibility = "hidden";
+		item_location_textbox.value = "";
+		
+	} else {
+		id = this.id.replace("checklist-radio:No:", "")
+	}
+	
+	var deviation_block = document.getElementById("deviation_block:" + id);
+	if (deviation_block) {
+		deviation_block.style.display = (role == "\"author\"") ? "flex" : "block";
+		deviation_block.style.flexFlow = "wrap";
+	}
 
 	let deviationRadioYes = document.getElementById("deviation_block-radio:Yes:" + id);
-	if(deviationRadioYes.disabled){
+	if(deviationRadioYes && deviationRadioYes.disabled){
 		let deviationRadioNo = document.getElementById("deviation_block-radio:No:" + id);
 		deviationRadioNo.click();
-		create_deviation_justification_block.call(deviationRadioNo);
+		create_deviation_justification_block_and_show_hide_justification_location_textbox.call(deviationRadioNo);
 	}
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
 	generate_decision_message_block();
 }
 
 //this function manages the display of the deviation block, which is dependent upon user input
-function hide_deviation_block() {
+function hide_deviation_block_and_show_location_textbox() {
 
 	// Replace ID from Yes to an empty string
-	id = this.id.replace("checklist-radio:Yes:", "")
+	if (role == "\"author\"") {
+		id = this.id.replace("missing_checkbox:", "");
+		id = this.id.replace("item_location_textbox:", "");
+		console.log(id);
+		
+		var item_location_textbox = document.getElementById("item_location_textbox:" + id);
+		item_location_textbox.style.visibility = "visible";
+		
+	} else {
+		id = this.id.replace("checklist-radio:Yes:", "");
+	}
 	hide_other_messages(id);
 
 	// Hide all Deviation Blocks
@@ -420,27 +463,38 @@ function hide_deviation_block() {
 	block.style.display = "none";
 	var block = document.getElementById("deviation_not_justified:" + id);
 	block.style.display = "none";
-	var msg_block = document.getElementById("free_text_question:" + id);
-	msg_block.style.display = "none";
+	
+	if (role != "\"author\"") {
+		var msg_block = document.getElementById("free_text_question:" + id);
+		msg_block.style.display = "none";
+		var no_radio = document.getElementById("checklist-radio:No:" + id);
+		no_radio.checked = false;
+	} else {
+		var missing_checkbox = document.getElementById("missing_checkbox:" + id);
+		missing_checkbox.checked = false;
+		
+		var justification_box = document.getElementById("justification_location_textbox:" + id);
+		justification_box.value = "";
+	}
 
 	// Uncheck all deviation-block-radio
-	deviation_radio_name = this.name.replace("checklist-radio", "deviation_block-radio");
-	for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
-		document.getElementsByName(deviation_radio_name)[i].checked = false;
+	//deviation_radio_name = this.name.replace("checklist-radio", "deviation_block-radio");
+	for(let i = 0; i < document.getElementsByName("deviation_block-radio:" + id).length; i++){
+		document.getElementsByName("deviation_block-radio:" + id)[i].checked = false;
 	}
 
 	// Uncheck all deviation-justified-radio
-	deviation_radio_name = this.name.replace("checklist-radio", "deviation_justified-radio");
-	for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
-		document.getElementsByName(deviation_radio_name)[i].checked = false;
+	//deviation_radio_name = this.name.replace("checklist-radio", "deviation_justified-radio");
+	for(let i = 0; i < document.getElementsByName("deviation_block-radio:" + id).length; i++){
+		document.getElementsByName("deviation_block-radio:" + id)[i].checked = false;
 	}
 
 	// Uncheck all deviation-not-justified-radio
-	deviation_radio_name = this.name.replace("checklist-radio", "deviation_not_justified-radio");
-	for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
-		document.getElementsByName(deviation_radio_name)[i].checked = false;
+	//deviation_radio_name = this.name.replace("checklist-radio", "deviation_not_justified-radio");
+	for(let i = 0; i < document.getElementsByName("deviation_block-radio:" + id).length; i++){
+		document.getElementsByName("deviation_block-radio:" + id)[i].checked = false;
 	}
-
+	
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
 	generate_decision_message_block();
 }
@@ -458,8 +512,23 @@ function hide_other_messages(id) {
 	catch(err) {}
 }
 
+//this function creates a location textbox for all items in the standards
+function generate_location_textbox(name, id, margin) {
+	var location_textbox;
+	location_textbox = document.createElement('input');
+	location_textbox.type = 'text';
+	location_textbox.className = name;
+	location_textbox.id = name + ":" + id;
+	location_textbox.maxLength = "100";
+	location_textbox.pattern = "^(?!.*[A-Za-z]).*$";
+	location_textbox.title = "Numbers and symbols only."
+	//location_textbox.style.display = 'none';
+	location_textbox.defaultValue = '';
+	return location_textbox;
+}
+
 //this function creates a deviation block for all Essential items in the standards
-function create_deviation_justification_block() {
+function create_deviation_justification_block_and_show_hide_justification_location_textbox() {
 	// (No-Yes) deviation is justified
 	console.log(this);
 	if(this.id.includes("deviation_block-radio:Yes:")){
@@ -469,15 +538,20 @@ function create_deviation_justification_block() {
 		block.style.display = "none";
 		var block = document.getElementById("deviation_justified:" + id);
 		block.style.display = "block";
-		var msg_block = document.getElementById("free_text_question:" + id);
-		msg_block.style.display = "none";
+		
+		if (role != "\"author\"") {
+			var msg_block = document.getElementById("free_text_question:" + id);
+			msg_block.style.display = "none";
+		}
+		
 		deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_not_justified-radio");
 
 		for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
 			document.getElementsByName(deviation_radio_name)[i].checked = false;
 		}
+
 	}
-	// (No-No) deviation is unjustified
+	// (No-No) deviation is unjustified (reviewer)
 	else if(this.id.includes("deviation_block-radio:No:")){
 		id = this.id.replace("deviation_block-radio:No:", "")
 		hide_other_messages(id);
@@ -487,13 +561,34 @@ function create_deviation_justification_block() {
 		message.style.display = "block";
 		var msg_block = document.getElementById("free_text_question:" + id);
 		msg_block.style.display = "block";
+		
 		deviation_radio_name = this.name.replace("deviation_block-radio", "deviation_justified-radio");
 
-		for(let i = 0; i <document.getElementsByName(deviation_radio_name).length; i++){
+		for(let i = 0; i < document.getElementsByName(deviation_radio_name).length; i++){
 			document.getElementsByName(deviation_radio_name)[i].checked = false;
 		}
-	}
-	else{
+	
+	// (No-No) deviation is unjustified (author)
+	} else if (this.id.includes("unjustified_checkbox:")) {
+		id = this.id.replace("unjustified_checkbox:", "")
+		hide_other_messages(id);
+		var empty_message = document.getElementById("deviation_justified:" + id);
+		empty_message.style.display = "none";
+		var message = document.getElementById("deviation_not_justified:" + id);
+		
+		var justification_box = document.getElementById("justification_location_textbox:" + id);
+		var unjustified_checkbox = document.getElementById("unjustified_checkbox:" + id);
+		
+		if (unjustified_checkbox.checked) {
+			message.style.display = "inline";
+			justification_box.style.visibility = "hidden";
+			justification_box.value = "";
+		} else {
+			message.style.display = "none";
+			justification_box.style.visibility = "visible";
+		}
+		
+	} else {
 		// (No-Yes-Yes) => deviation is justified and justification is reasonable
 		if(this.id.includes("deviation_justified-radio:Yes:")){
 			id = this.id.replace("deviation_justified-radio:Yes:", "")
@@ -547,64 +642,73 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	// checklistItem_id = 1,2,3,4
 	
 	question_block.id = id + ":" + checklistItem_id;
-	// className - deal with all of them
 	question_block.className = "question_block";
-	question_block.style = "padding-left:"+padding+"em; display:none";
+	question_block.style = "padding-left:"+padding+"em; display:none; flex: 0 0 100%;";
 	//console.log(question_block);
+	
+	var deviation_block = document.createElement("div");
+	deviation_block.innerHTML = "&nbsp;&nbsp;&nbsp;";
 
-	// &rdsh: is for the arrows.
-	// &nbsh: HTML can't do spaces. This is for spaces. 
-	question_block.innerHTML = "&rdsh;&nbsp; " + question;
-
-	var deviation_block_radios = document.createElement("div");
-
-	// Yes and No Radio
-	var deviationRadioYes = document.createElement("input");
-	var deviationRadioNo = document.createElement("input");
-	var deviationLabelYes = document.createElement("label");
-	var deviationLabelNo = document.createElement("label");
-
-	// Identify each radio button
-	deviationRadioYes.id = id + "-radio:Yes:" + checklistItem_id;
-	deviationRadioNo.id = id + "-radio:No:" + checklistItem_id;
-
-	// className - deal with all of them
-	deviationRadioYes.className = class_name + "Yes";
-	deviationRadioNo.className = class_name + "No";
-
-	// These are the radio buttons of that element regardless of Yes or No
-	// For Hiding Buttons
-	deviationRadioYes.name = id + "-radio:" + checklistItem_id;
-	deviationRadioNo.name = id + "-radio:" + checklistItem_id;
-
-	// deviation justification is a function
-	deviationRadioYes.onclick = create_deviation_justification_block;
-	deviationRadioNo.onclick = create_deviation_justification_block;
-
-	// Set type of input to "radio"
-	deviationRadioYes.type = "radio";
-	deviationRadioNo.type = "radio";
-
-	// Value for comparisons
-	deviationRadioYes.value = "yes";
-	deviationRadioNo.value = "no";
-
-	// Actual Text of the Radio button
-	deviation_block_radios.innerHTML = "&nbsp;&nbsp;&nbsp;";
-	deviationLabelYes.innerHTML = "yes&nbsp;&nbsp;";
-	deviationLabelNo.innerHTML = "no";
-
-	// For Labels
-	// Click on the label, click that radio button
-	deviationLabelYes.htmlFor = deviationRadioYes.id;
-	deviationLabelNo.htmlFor = deviationRadioNo.id;
-
-	deviation_block_radios.appendChild(deviationRadioYes);
-	deviation_block_radios.appendChild(deviationLabelYes);
-	deviation_block_radios.appendChild(deviationRadioNo);
-	deviation_block_radios.appendChild(deviationLabelNo);
-	question_block.appendChild(deviation_block_radios);
-	//console.log(question_block);
+	if (role == "\"author\"") {	
+		var questiontext_container = document.createElement("span");
+		questiontext_container.innerHTML = "&rdsh;&nbsp; " + question;
+		questiontext_container.style = "flex: 0 1 50vw; text-indent: 2.4em;";
+	
+		// For authors, create location indicator + N/A checkbox
+		var justification_location_textbox = generate_location_textbox("justification_location_textbox", checklistItem_id, "10px");
+		var location_container = document.createElement("span");
+		location_container.style = "flex: 0 1 20%; margin-right: 10px;";
+		location_container.appendChild(justification_location_textbox);
+		
+		unjustified_checkbox = document.createElement("input");
+		unjustified_checkbox.type = "checkbox";
+		unjustified_checkbox.id = "unjustified_checkbox:" + checklistItem_id;
+		unjustified_checkbox.className = "unjustified_checkbox";
+		unjustified_checkbox.name = checklistItem_id;
+		unjustified_checkbox.onclick = create_deviation_justification_block_and_show_hide_justification_location_textbox;
+		
+		var unjustified_container = document.createElement("span");
+		unjustified_container.appendChild(unjustified_checkbox);
+		
+		question_block.appendChild(questiontext_container);
+		question_block.appendChild(location_container);
+		question_block.appendChild(unjustified_container);
+		
+		var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&nbsp;Your manuscript should justify any deviations from essential attributes.", 0.65, -1);
+		
+		question_block.appendChild(deviation_not_justified);
+	} else {
+		question_block.innerHTML = "&rdsh;&nbsp; " + question;
+		
+		// For reviewers, create yes-no radio buttons
+		var deviationRadioYes = document.createElement("input");
+		var deviationLabelYes = document.createElement("label");
+		deviationRadioYes.id = id + "-radio:Yes:" + checklistItem_id;
+		deviationRadioYes.className = class_name + "Yes";
+		deviationRadioYes.name = id + "-radio:" + checklistItem_id;
+		deviationRadioYes.onclick = create_deviation_justification_block_and_show_hide_justification_location_textbox;
+		deviationRadioYes.type = "radio";
+		deviationRadioYes.value = "yes";
+		deviationLabelYes.innerHTML = "yes&nbsp;&nbsp;";
+		deviationLabelYes.htmlFor = deviationRadioYes.id;
+		
+		var deviationRadioNo = document.createElement("input");
+		var deviationLabelNo = document.createElement("label");
+		deviationRadioNo.id = id + "-radio:No:" + checklistItem_id;
+		deviationRadioNo.className = class_name + "No";
+		deviationRadioNo.name = id + "-radio:" + checklistItem_id;
+		deviationRadioNo.onclick = create_deviation_justification_block_and_show_hide_justification_location_textbox;
+		deviationRadioNo.type = "radio";
+		deviationRadioNo.value = "no";
+		deviationLabelNo.innerHTML = "no";
+		deviationLabelNo.htmlFor = deviationRadioNo.id;
+		
+		deviation_block.appendChild(deviationRadioYes);
+		deviation_block.appendChild(deviationLabelYes);
+		deviation_block.appendChild(deviationRadioNo);
+		deviation_block.appendChild(deviationLabelNo);
+		question_block.appendChild(deviation_block);
+	}
 
 	// if the deviation reasonable is fixed in the table
 	if(display){
@@ -684,7 +788,7 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
         deviationRadioType.name = id + "-radio:" + checklistItem_id;
     
         // deviation justification is a function
-        deviationRadioType.onclick = create_deviation_justification_block;
+        deviationRadioType.onclick = create_deviation_justification_block_and_show_hide_justification_location_textbox;
     
         deviationRadioType.type = "radio";
     
@@ -702,38 +806,42 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
     
         deviation_block_radios.appendChild(deviationRadioType);
         deviation_block_radios.appendChild(deviationLabelType);
-
-        
     }
 
-
     question_block.appendChild(deviation_block_radios);
-
 
 	return question_block;
 }
 
 //generate a message with a specific style
 function generate_message(id, color, text, padding, indent) {
-	var message = document.createElement("div");
+	
+	var message;
+	
+	if (role == "\"author\"") {
+		message = document.createElement("span");
+		message.innerHTML = text;
+		message.className = "unjustified_warning";
+	} else {
+		message = document.createElement("div");
+		message.className = "message";
+		message.style = "color:" + color + "; padding-left:"+padding+"em; text-indent:"+indent+"em;";
+	}
+	
 	message.id = id;
-	message.className = "message";
-	//message.innerHTML = text; // Showing instructions about explaining deviations is not needed for now
-	message.style = "color:" + color + "; padding-left:"+padding+"em; text-indent:"+indent+"em; display:none";
+	message.style.display = "none";
+	
 	return message;
 }
 
 // generate the deviation block for Author Role
 function generate_author_deviation_block(checklistItem_id) {
-	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "does the manuscript justify the deviation?", checklistItem_id, 2.4);
+	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "where does the manuscript justify the deviation?", checklistItem_id);
 
 	// Author-specific deviation justification message
 	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 0.65, -1);
 
-	var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "red", "&rdsh;&nbsp; the manuscript should either conform to the standard or clearly explain why it deviates from the standard", 0.65, -1);
-
 	deviation_block.appendChild(deviation_justified);
-	deviation_block.appendChild(deviation_not_justified);
 
 	return deviation_block;
 }
@@ -962,6 +1070,8 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id,data) {
 
 // convert from Markdown to HTML checklists
 function convert_MD_standard_checklists_to_html_standard_checklists(standardName, checklistName, checklistText, footnotes){
+	
+	console.log(role);
 
 	// ???????
 	tester = getParameterByName('y')[0] == 'noval' ? true : false;
@@ -976,11 +1086,15 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 
 	// Positioning Essential, Desirable, Extraordinary lines on page
 	// Essential needs more room for radio buttons
-	if (checklistName == "Essential")
-		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:1.2em; text-indent:-2.4em;";
-	else
+	
+	if (role == "\"author\"") {
+		checklists.style = "list-style-type:none; list-style-position:inside; text-indent: 2em hanging; margin-left: 0;";
+	} else if (checklistName == "Essential") {
+		checklists.style = "list-style-type:none; list-style-position:inside; padding-left: 1.2em; text-indent:-2.4em;";
+	} else {
 		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:0em; text-indent:-1.3em;";
-
+	}
+	
 	//checklists.appendChild(standard_H3); //no subheadings
 
 	// splitting lines on bullet points from markdown file
@@ -1013,7 +1127,14 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			checklistItem_id = standardName + "-" + checklistName + ":" + i;
 			console.log(checklistItem_id);
 			var checklistItemLI = document.createElement("LI");
+			
 			var checklistItemText = document.createElement("span");
+			
+			if (role == "\"author\"") {
+				checklistItemLI.style = "display: flex; align-items: flex-start; flex-flow: wrap;";
+				checklistItemText.style = "flex: 0 1 50vw";
+			}
+			
 			if(IMRaD_line_break)
 				checklists.appendChild(document.createElement("br"));
 
@@ -1043,50 +1164,102 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 
 			//locate the current checklist into the table
 			data = dataStructure.get(Encode_key(line_text))
+			
+			/*
+			if(role == "\"author\""){
+				var item_location_textbox = generate_location_textbox("item_location_textbox", checklistItem_id, "5px");
+				checklistItemText.appendChild(item_location_textbox);
+			}*/
 	
 
 			if (checklistName == "Essential"){
 				// create Input Elements
-				var checklistRadioYes = document.createElement("input");
-				var checklistRadioNo = document.createElement("input");
-
-				// Set the IDs
-				checklistRadioYes.id = "checklist-radio:Yes:" + checklistItem_id;
-				checklistRadioNo.id = "checklist-radio:No:" + checklistItem_id;
-
-				// Set the names of the class
-				checklistRadioYes.className = "checklistRadioYes";
-				checklistRadioNo.className = "checklistRadioNo";
-				checklistRadioYes.name = "checklist-radio:" + checklistItem_id;
-				checklistRadioNo.name = "checklist-radio:" + checklistItem_id;
-
-				// in the case of YES, hide the deviation block
-				checklistRadioYes.onclick = hide_deviation_block;
-				// in the case of NO, show the deviation block
-				checklistRadioNo.onclick = show_deviation_block;
-
-				// set the type of the input to "radio"
-				checklistRadioYes.type = "radio";
-				checklistRadioNo.type = "radio";
-
-				// set the value to yes or no
-				checklistRadioYes.value = "yes";
-				checklistRadioNo.value = "no";
-				checklistRadioYes.checked = tester;
+				
+				var userInputYes;
+				var userInputNo;
+				var location_container;
+				var missing_container;
+				
+				if (role == "\"author\"") {
+					
+					location_container = document.createElement("span");
+					location_container.style = "flex: 0 1 20%; margin-right: 10px;";
+					
+					userInputYes = generate_location_textbox("item_location_textbox", checklistItem_id, "5px");
+					userInputYes.onfocus = hide_deviation_block_and_show_location_textbox;
+					
+					missing_container = document.createElement("span");
+					
+					userInputNo = document.createElement("input");
+					userInputNo.type = "checkbox";
+					userInputNo.id = "missing_checkbox:" + checklistItem_id;
+					userInputNo.className = "missing_checkbox";
+					userInputNo.name = checklistItem_id;
+					userInputNo.onclick = show_hide_location_textbox;
+					
+					console.log("AUTHOR: Yes input:" + userInputYes.className + "; No input: " + userInputNo.className);
+					
+				} else {
+					userInputYes = document.createElement("input");
+					userInputYes.id = "checklist-radio:Yes:" + checklistItem_id;
+					userInputYes.className = "checklistRadioYes";
+					userInputYes.name = "checklist-radio:" + checklistItem_id;
+					
+					// in the case of YES, hide the deviation block
+					userInputYes.onclick = hide_deviation_block_and_show_location_textbox;
+					
+					userInputYes.type = "radio";
+					userInputYes.value = "yes";
+					userInputYes.checked = tester;
+					
+					userInputNo = document.createElement("input");
+					userInputNo.id = "checklist-radio:No:" + checklistItem_id;
+					userInputNo.className = "checklistRadioNo";
+					userInputNo.name = "checklist-radio:" + checklistItem_id;
+					userInputNo.onclick = show_deviation_block_and_hide_location_textbox;
+					userInputNo.type = "radio";
+					userInputNo.value = "no";
+					
+					console.log("REVIEWER: Yes input:" + userInputYes.className + "; No input: " + userInputNo.className);
+				}
+				
+				console.log("Yes input:" + userInputYes.className + "; No input: " + userInputNo.className);
 
 				// Generate a deviation block
 				var deviation_block;
-				if(role == "\"author\"")
+				if(role == "\"author\"") {
 					deviation_block = generate_author_deviation_block(checklistItem_id);
+					
+					checklistItemLI.appendChild(checklistItemText);
+					
+					location_container.appendChild(userInputYes);
+					missing_container.appendChild(userInputNo);
+					
+					checklistItemLI.appendChild(location_container);
+					checklistItemLI.appendChild(missing_container);
+					
+					checklistItemLI.appendChild(deviation_block);
+					
+					console.log("AUTHOR:" + checklistItemLI);
+					
 				// else if(role == "\"ease-reviewer\"")
 				// 	deviation_block = generate_ease_reviewer_deviation_block(checklistItem_id);
-				else if(role == "\"one-phase-reviewer\""){
+				} else if(role == "\"one-phase-reviewer\""){
 					// deviation_block = generate_reviewer_deviation_block(checklistItem_id);
 					if(data){
 						deviation_block = generate_one_phase_reviewer_deviation_block(checklistItem_id,data);
 					}else{
 						deviation_block = generate_one_phase_reviewer_deviation_block(checklistItem_id,null);
 					}
+					
+					checklistItemLI.appendChild(userInputYes);
+					checklistItemLI.appendChild(userInputNo);
+					
+					checklistItemText.appendChild(deviation_block);
+					checklistItemLI.appendChild(checklistItemText);
+					
+					console.log("ONE PHASE:" + checklistItemLI);
+					
 				}
 				else if(role == "\"two-phase-reviewer\""){
 					if(data){
@@ -1094,26 +1267,60 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					}else{
 						deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id,null);
 					}
+					
+					checklistItemLI.appendChild(userInputYes);
+					checklistItemLI.appendChild(userInputNo);
+					
+					checklistItemText.appendChild(deviation_block);
+					checklistItemLI.appendChild(checklistItemText);
+					
+					console.log("TWO PHASE:" + checklistItemLI);
 				}
 					// deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id);
+					
+				console.log(checklistItemLI);
 
-				checklistItemText.appendChild(deviation_block);
-
-				checklistItemLI.appendChild(checklistRadioYes);
-				checklistItemLI.appendChild(checklistRadioNo);
-				checklistItemLI.appendChild(checklistItemText);
 			}
 			// ?????????????????????????????
 			else{
-				var checkboxInput = document.createElement("input");
-				checkboxInput.type = "checkbox";
-				checkboxInput.id = checklistItem_id;
-				checkboxInput.className = "checkbox_attributes";
-				checkboxInput.name = checklistItem_id;
-				checkboxInput.style = "color:#FFF";
-				checkboxInput.value = line_text;
-				checklistItemLI.appendChild(checkboxInput);
-				checklistItemLI.appendChild(checklistItemText);
+				if (role == "\"author\"") {
+					var userInputYes;
+					location_container = document.createElement("span");
+					location_container.style = "flex: 0 1 20%; margin-right: 10px;";
+
+					userInputYes = generate_location_textbox("item_location_textbox", checklistItem_id, "5px");
+					
+					var userInputNo;
+					missing_container = document.createElement("span");
+					
+					userInputNo = document.createElement("input");
+					userInputNo.type = "checkbox";
+					userInputNo.id = "missing_checkbox:" + checklistItem_id;
+					userInputNo.className = "missing_checkbox";
+					userInputNo.name = checklistItem_id;
+					userInputNo.onclick = show_hide_location_textbox;
+					userInputNo.style = "color:#FFF;";
+					userInputNo.value = line_text;
+				
+					checklistItemLI.appendChild(checklistItemText);
+					
+					location_container.appendChild(userInputYes);
+					checklistItemLI.appendChild(location_container);
+					
+					missing_container.appendChild(userInputNo);
+					checklistItemLI.appendChild(missing_container);
+				} else {
+					var checkboxInput = document.createElement("input");
+					checkboxInput.type = "checkbox";
+					checkboxInput.id = checklistItem_id;
+					checkboxInput.className = "checkbox_attributes";
+					checkboxInput.name = checklistItem_id;
+					//checkboxInput.onclick = show_hide_location_textbox;
+					checkboxInput.style = "color:#FFF";
+					checkboxInput.value = line_text;
+					checklistItemLI.appendChild(checkboxInput);
+					checklistItemLI.appendChild(checklistItemText);
+				}
 			}
 
 			checklists.appendChild(checklistItemLI);
@@ -1190,18 +1397,32 @@ function separate_essential_attributes_based_on_IMRaD_tags(standardName, checkli
 
 // Create Role Heading (Pre-Submission Checklist, Reviewer Checklist)
 function create_role_heading(){
+	var heading_div = document.createElement("div");
 	var heading = document.createElement("H1");
-	if(role == "\"author\"")
+	
+	if(role == "\"author\"") {
 		heading.innerHTML = "Pre-Submission Checklist";
-	else if(role == "\"one-phase-reviewer\"")
+		heading_div.appendChild(heading);
+		
+		var instructions = document.createElement("h3");
+		instructions.innerHTML = "Use this form to ensure your manuscript meets the appropriate standards. You can download the results to share with reviewers so they can see where you have addressed each item.";
+		
+		heading_div.appendChild(instructions);
+		
+	} else if(role == "\"one-phase-reviewer\"") {
 		heading.innerHTML = "Reviewer Checklist";
-	else if(role == "\"two-phase-reviewer\"")
+		heading_div.appendChild(heading);
+		
+	} else if(role == "\"two-phase-reviewer\"") {
 		heading.innerHTML = "Reviewer Checklist";
+		heading_div.appendChild(heading);
+	}
+	
 	// DEPRECATED
 	// else if(role == "\"ease-reviewer\"") 
 	// 	  heading.innerHTML = "Reviewer Checklist";
 
-	return heading;
+	return heading_div;
 }	
 
 // Create a message showing the loaded configuration
@@ -1261,7 +1482,11 @@ function create_download_button(){
 	download.innerHTML = "Download";
 	download.id = "checklist_download";
 	download.name = "checklist_download";
-	download.disabled = true;
+	
+	if (role != "\"author\"") {
+		download.disabled = true;
+	}
+	
 	download.onclick = saveFile;
 	return download;
 }
@@ -1444,16 +1669,10 @@ function create_requirements_checklist(file){
 
 	// create Header for Extraordinary Requirements with an unordered list
 	var ExtraordinaryUL = create_requirements_heading_with_UL("Extraordinary");
-
-	// hide desirable and extraordinary list of requirements for One Phase Reviewer
-	if(role == "\"one-phase-reviewer\""){
+	
+	if( role != "\"author\"" ) {
 		DesirableUL.style = "padding: 0px; display:none;";
 		ExtraordinaryUL.style = "padding: 0px; display:none;";
-	}
-	// hide desirable and extraordinary list of requirements for Two Phase Reviewer
-	else if(role == "\"two-phase-reviewer\""){
-		DesirableUL.style = "padding: 0px; display:none;";
-		ExtraordinaryUL.style = "padding: 0px; display:none;";		
 	}
 
 	// unshift() method adds new items to the beginning of an array, and returns the new length
@@ -1501,7 +1720,46 @@ function create_requirements_checklist(file){
 			// Reformat the checklists from MD to HTML
 			var Yes_No = document.createElement("div");
 			Yes_No.style = "align:center; font-size: 80%; font-weight: bold;";
-			Yes_No.innerHTML = "&nbsp;yes no";
+			
+			if (role == "\"author\"") {
+				Yes_No.style.display = "flex";
+				
+				var attribute_label = document.createElement("span");
+				attribute_label.innerHTML = "Attribute";
+				attribute_label.style = "flex: 0 1 50vw;";
+				
+				var location_label = document.createElement("span");
+				var location_types_combobox = document.createElement("select");
+				location_types_combobox.id = 'location_type';
+
+				var location_types = [
+					{ value: 'line_no', text: 'Line Number(s)' },
+					{ value: 'page_no', text: 'Page #, Line #' },
+					{ value: 'page_with_paragraph_no', text: 'Page #, Paragraph #' },
+					{ value: 'section_no', text: 'Section #, Line #' },
+					{ value: 'section_with_paragraph_no', text: 'Section #, Paragraph #' },
+				];
+
+				location_types.forEach(function(option) {
+					var location = document.createElement('option');
+					location.value = option.value;
+					location.text = option.text;
+					location_types_combobox.appendChild(location);
+				});	
+
+				location_types_combobox.selectedIndex = 0;
+				location_label.style = "flex: 0 1 20%; margin-right: 10px;";
+				location_label.appendChild(location_types_combobox);
+				
+				var missing_label = document.createElement("span");
+				missing_label.innerHTML = "N/A";
+				
+				Yes_No.appendChild(attribute_label);
+				Yes_No.appendChild(location_label);
+				Yes_No.appendChild(missing_label);
+			} else {
+				Yes_No.innerHTML = "&nbsp;yes no";
+			}
 
 			// DEPRECATED
 			//var standard_header_rule = document.createElement("div");
@@ -1559,7 +1817,7 @@ function create_requirements_checklist(file){
 
 
 	/// ???????????????????????????????????
-	if(role == "\"one-phase-reviewer\""){
+	if(role == "\"author\""){
 		// (At least one 'No-No-No' -> reject manuscript)
 		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
 		form.appendChild(deviation_unreasonable);
@@ -1570,8 +1828,18 @@ function create_requirements_checklist(file){
 		if(deviation_unreasonable.style.display == "block"){
 			download.disabled = false;
 		}
-	}
-	else if(role == "\"two-phase-reviewer\""){
+	} else if(role == "\"one-phase-reviewer\""){
+		// (At least one 'No-No-No' -> reject manuscript)
+		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
+		form.appendChild(deviation_unreasonable);
+		// (At least one 'No-No-Yes' -> explain fix)
+		var deviation_reasonable = generate_message("deviation_reasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", 2, 0);
+		form.appendChild(deviation_reasonable);
+
+		if(deviation_unreasonable.style.display == "block"){
+			download.disabled = false;
+		}
+	} else if(role == "\"two-phase-reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
 		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
 		form.appendChild(deviation_unreasonable);
@@ -1588,16 +1856,7 @@ function create_requirements_checklist(file){
 	// Add Desirable and Extraordinary Unordered List to Form
 	form.appendChild(DesirableUL);
 	form.appendChild(ExtraordinaryUL);
-
-	// Add Download Button for One Phase Reviewer and Two Phase Reviewer
-	if(role == "\"one-phase-reviewer\"") {
-		form.appendChild(download);
-		// Delete the download_Configuration button for phase 1
-		// form.appendChild(download_test);
-	}
-	if(role == "\"two-phase-reviewer\"") {
-		form.appendChild(download);
-	}
+	form.appendChild(download);
 	
 	return form;
 }
@@ -1683,6 +1942,7 @@ function generateStandardChecklist(file){
 
 //Download the checklist with a specific format
 function saveFile(){
+	//var role = getParameterByName('role');
 	var checklists = document.getElementById('checklists');
 	var generated_text = '=================\n' +
 		'Review Checklist\n' +
@@ -1710,6 +1970,15 @@ function saveFile(){
 	}
 	
 	var essential_list = "\nEssential\r\n";
+	
+	if (role == "\"author\""){
+		var location_type = document.getElementById('location_type');
+		location_type = location_type.options[location_type.selectedIndex].text;
+		generated_text += "\nNote: The numbers beside checklist items, if any, represent " + location_type.toLowerCase() + "\n";
+		
+		essential_list += "  Location" + "\t" + "Attribute\r\n\r\n";
+	}
+	
 	var desirable_list = "\nDesirable\r\n";
 	var extraordinary_list = "\nExtraordinary\r\n";
 	var free_text_list = "\nFree Text Questions\r\n"
@@ -1731,7 +2000,7 @@ function saveFile(){
 						if (li.tagName.toLowerCase() != 'li')
 						   continue;
 						i++;
-						var li_text = li.getAttribute("text");
+						var li_text = li.getAttribute("text").trim();
 						var regex = /<a+\n*.+<\/a>/g;
 						if (li_text.match(regex) != null)
 							li_text = li_text.replace(regex, "");
@@ -1761,55 +2030,103 @@ function saveFile(){
 							li_text = li_text.replace(regex8,"");
 						if (li_text.match(regex9) != null)
 							li_text = li_text.replace(regex9,"");
+						
+						var location_value = "";
+						var location_textbox = li.getElementsByClassName('item_location_textbox');
 
 						if (list.id == 'Essential'){
-							if (li.children[0].checked)
+							if (role != "\"author\"" && li.children[0].checked) {
 								essential_list +=  'Y' + '\t   ' + li_text + '\r\n';
-							else{
-								var reasonable_deviation = li.getElementsByClassName('deviationRadioYes')[0];
-
+							} else if (role == "\"author\"" && location_textbox[0].value != "") {
+								if (location_textbox.length == 1) {
+									location_value = location_textbox[0].value;
+								}
+																
+								essential_list += "  " + (location_value != "" ? location_value : "");
+								
+								// Determine whether to push item text to new line based on location text length
+								if (location_value.length < 6) {
+									essential_list += '\t\t' + li_text + '\r\n';
+								} else if (location_value.length < 14) {
+									essential_list += '\t' + li_text + '\r\n';
+								} else {
+									essential_list += '\r\n\t\t' + li_text + '\r\n';
+								}
+								
+							} else {
+								var reasonable_deviation = li.getElementsByClassName('deviationRadioYes')[0];						
+								location_textbox = li.getElementsByClassName('justification_location_textbox');
+								
 								// store for the free_text_question
 								var questionDiv  = li.getElementsByClassName("question_block_free_Text");
-								if(questionDiv[0]){
+								
+								if (questionDiv[0]) {
 									var question_text = questionDiv[0].querySelector('div:first-child').textContent.trim().replace(/^\W+/g, '');
 									console.log(question_text)
 									var inputCollection  = li.getElementsByClassName('freeTextAnswer');
 									console.log(inputCollection);
-									if(inputCollection[0]){
+									
+									if (inputCollection[0]) {
 										var input_text = inputCollection[0].value;
 									}
-									
+
 									// free_text_list += li_text + '\r\n'
 									// free_text_list += '    ' + question_text + ': ' + input_text + '\r\n';
 								}
-								if (reasonable_deviation.checked)
-									essential_list += 'R' + '\t   ' + li_text + '\r\n';
-								else{
+
+								if (location_textbox[0] && location_textbox[0].value != "" || reasonable_deviation && reasonable_deviation.checked) {
+									if (location_textbox.length == 1) {
+										location_value = location_textbox[0].value;
+									}
+									
+									if (role == "\"author\"") {
+										essential_list += "  " + (location_value != "" ? location_value : "");
+										
+										// Determine whether to push item text to new line based on location text length
+										if (location_value.length < 6) {
+											essential_list += '\t\t' + li_text + ' (justified deviation)\r\n';
+										} else if (location_value.length < 14) {
+											essential_list += '\t' + li_text + ' (justified deviation)\r\n';
+										} else {
+											essential_list += '\r\n\t\t' + li_text + ' (justified deviation)\r\n';
+										}
+										
+									} else {
+										essential_list += 'R' + '\t   ' + li_text + '\r\n';
+									}
+									
+								} else {
 									var fixable_deviation = li.getElementsByClassName('justificationRadioType');
-									if (fixable_deviation[0].checked) {
-										type1_list += '1\t   ' + li_text + '\r\n';
-										if(input_text !== ""){
-											type1_list += ' \t   ' + question_text + '\r\n';
-											type1_list += ' \t    \t   ' + input_text + '\r\n';
+									
+									if (fixable_deviation.length != 0){
+										if (fixable_deviation[0].checked) {
+											type1_list += '1\t   ' + li_text + '\r\n';
+											if(input_text !== ""){
+												type1_list += ' \t   ' + question_text + '\r\n';
+												type1_list += ' \t    \t   ' + input_text + '\r\n';
+											}
+										} else if (fixable_deviation[1].checked) {
+											type2_list += '2\t   ' + li_text + '\r\n';
+											if(input_text !== ""){
+												type2_list += ' \t   ' + question_text + '\r\n';
+												type2_list += ' \t    \t   ' + input_text + '\r\n';
+											}
+										}  else if (fixable_deviation[2].checked) {
+											type3_list += '3\t   ' + li_text + '\r\n';
+											if(input_text !== ""){
+												type3_list += ' \t   ' + question_text + '\r\n';
+												type3_list += ' \t    \t   ' + input_text + '\r\n';
+											}
+										}  else if (fixable_deviation[3].checked) {
+											type4_list += '4\t   ' + li_text + '\r\n';
+											if(input_text !== ""){
+												type4_list += ' \t   ' + question_text + '\r\n';
+												type4_list += ' \t    \t   ' + input_text + '\r\n';
+											}
 										}
-									} else if (fixable_deviation[1].checked) {
-										type2_list += '2\t   ' + li_text + '\r\n';
-										if(input_text !== ""){
-											type2_list += ' \t   ' + question_text + '\r\n';
-											type2_list += ' \t    \t   ' + input_text + '\r\n';
-										}
-									}  else if (fixable_deviation[2].checked) {
-										type3_list += '3\t   ' + li_text + '\r\n';
-										if(input_text !== ""){
-											type3_list += ' \t   ' + question_text + '\r\n';
-											type3_list += ' \t    \t   ' + input_text + '\r\n';
-										}
-									}  else if (fixable_deviation[3].checked) {
-										type4_list += '4\t   ' + li_text + '\r\n';
-										if(input_text !== ""){
-											type4_list += ' \t   ' + question_text + '\r\n';
-											type4_list += ' \t    \t   ' + input_text + '\r\n';
-										}
+									} else {
+										essential_list += (role == "\"author\"" ? '  *' : ' ') + '\t\t' + li_text;
+										essential_list += (role == "\"author\"" ? ' (unjustified deviation)\r\n' : '\r\n');
 									}
 								}
 
@@ -1831,13 +2148,43 @@ function saveFile(){
 							}
 						}
 						else if (list.id == 'Desirable') {
-							if (li.children[0].checked) {
+							if (li.children[0].checked || role == "\"author\"" && location_textbox[0].value != "") {
 								include_desirable = true;
-								desirable_list += 'Y' + '\t   ' + li_text + '\r\n';
+
+								if (location_textbox.length == 1) {
+									location_value = location_textbox[0].value;
+									desirable_list += "  " + (location_value != "" ? location_value : "");
+									
+									// Determine whether to push item text to new line based on location text length
+									if (location_value.length < 6) {
+										desirable_list += '\t\t' + li_text + '\r\n';
+									} else if (location_value.length < 14) {
+										desirable_list += '\t' + li_text + '\r\n';
+									} else {
+										desirable_list += '\r\n\t\t' + li_text + '\r\n';
+									}
+								} else {
+									desirable_list +=  'Y' + '\t   ' + li_text + '\r\n';
+								}
 							}
-						} else if (li.children[0].checked) {
+						} else if (li.children[0].checked || role == "\"author\"" && location_textbox[0].value != "") {
 							include_extraordinary = true;
-							extraordinary_list += 'Y' + '\t   ' + li_text + '\r\n';
+
+							if (location_textbox.length == 1) {
+								location_value = location_textbox[0].value;
+								extraordinary_list += "  " + (location_value != "" ? location_value : "");
+								
+								// Determine whether to push item text to new line based on location text length
+								if (location_value.length < 6) {
+									extraordinary_list += '\t\t' + li_text + '\r\n';
+								} else if (location_value.length < 14) {
+									extraordinary_list += '\t' + li_text + '\r\n';
+								} else {
+									extraordinary_list += '\r\n\t\t' + li_text + '\r\n';
+								}
+							} else {
+								extraordinary_list +=  'Y' + '\t   ' + li_text + '\r\n';
+							}
 						}
 
 					}
@@ -1858,9 +2205,11 @@ function saveFile(){
 	if (include_extraordinary) {
 		generated_text += extraordinary_list;
 	}
-
-	generated_text += "\n" +
-		"=======\n" +
+	
+	generated_text += "\n";
+	
+	if (role != "\"author\"") {
+		generated_text += "=======\n" +
 		"Legend\n" +
 		"=======\n" +
 		"Y = yes, the paper has this attribute\n" +
@@ -1869,6 +2218,7 @@ function saveFile(){
 		"2 = a deviation that can be fixed by doing some new data analysis, redoing some existing data analysis, or collecting a small amount of additional data\n" +
 		"3 = a deviation that can be fixed by completely redoing data analysis, or collecting additional data\n" +
 		"4 = a deviation that cannot be fixed, or at least not without doing a brand new study\n\n\n";
+	}
 
 	generated_text+= "=================\n" +
 		"Standards Used\n" +
