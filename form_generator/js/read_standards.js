@@ -1947,9 +1947,6 @@ function saveFile(){
 	var generated_text = '=================\n' +
 		'Review Checklist\n' +
 		'=================\n';
-	
-	let date_generated = new Date();
-	generated_text += '\nGenerated at: ' + date_generated.toDateString() + ', ' + date_generated.toLocaleTimeString() + '\n';
 		
 	var decision = document.getElementById("decision_msg");
 	var unreasonable = document.getElementById("deviation_unreasonable");
@@ -2207,6 +2204,14 @@ function saveFile(){
 	}
 	
 	generated_text += "\n";
+	
+	let date_generated = new Date();
+	let date_string = date_generated.toLocaleDateString("en-CA", {timeZone: "-12:00"});
+	let time_string = date_generated.toLocaleTimeString("en-US", {timeZone: "-12:00"});
+	
+	let date_formatted = new Date(date_string);
+	generated_text += '\nGenerated: ' + date_generated.toDateString() + ', ';
+	generated_text += time_string.substr(0,4) + ' ' + time_string.substr(8,3) + ' AoE\n\n';
 	
 	if (role != "\"author\"") {
 		generated_text += "=======\n" +
