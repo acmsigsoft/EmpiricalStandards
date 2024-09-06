@@ -36,6 +36,12 @@ form:active {
 	padding-left: 65px;
 }
 
+.error_warning {
+	color: red;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
 @media screen and (min-width: 401px) and (max-width: 785px)
 {
 	#container
