@@ -236,8 +236,6 @@ function generate_decision_message_block() {
 		console.log("deviation_yes_checked_count: ", deviation_yes_checked_count);
 		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_type1_checked_count+justification_type2_checked_count+justification_type3_checked_count+justification_type4_checked_count)){
 
-			document.getElementById("checklist_download").disabled = false;
-
 			// if number of type 3 + type 4 is greater than 0
 			if (justification_type3_checked_count + justification_type4_checked_count + justification_type2_checked_count > 0 ){
 				msg = "REJECT";
@@ -267,7 +265,6 @@ function generate_decision_message_block() {
 			//document.getElementById("decision_msg").innerHTML = msg;
 			//document.getElementById("decision_msg").style.display = "block";
 		} else {
-			document.getElementById("checklist_download").disabled = true;
 			document.getElementById("decision_msg").style.display = "none";
 		}
 	} else if (role == "\"two-phase-reviewer\""){
@@ -280,8 +277,6 @@ function generate_decision_message_block() {
 		$('.checkbox_attributes').prop('checked', false);
 
 		if (checklist_yes_not_checked_count == checklist_no_checked_count & checklist_no_checked_count == (deviation_yes_checked_count+justification_type1_checked_count+justification_type2_checked_count+justification_type3_checked_count+justification_type4_checked_count)){
-
-			document.getElementById("checklist_download").disabled = false;
 
 			// if number of type 4 is greater than 0
 			if (justification_type4_checked_count > 0 ){
@@ -318,7 +313,6 @@ function generate_decision_message_block() {
 			document.getElementById("decision_msg").innerHTML = msg;
 			document.getElementById("decision_msg").style.display = "block";
 		} else {
-			document.getElementById("checklist_download").disabled = true;
 			document.getElementById("decision_msg").style.display = "none";
 		}
 
@@ -1483,14 +1477,13 @@ function create_download_button(){
 	download.id = "checklist_download";
 	download.name = "checklist_download";
 	
-	if (role != "\"author\"") {
-		download.disabled = true;
+	if (role == "\"author\"") {
+		download.onclick = saveFile;
+	} else {
+		download.addEventListener("click", check_form_validity, false);
 	}
-	
-	download.onclick = saveFile;
 	return download;
 }
-
 
 function create_download_configuration_button(){
 	var download = document.createElement("button");
@@ -1808,6 +1801,12 @@ function create_requirements_checklist(file){
 
 	// Create download button
 	var download = create_download_button();
+	
+	var error_warning = document.createElement("div");
+	error_warning.className = "error_warning";
+	error_warning.id = "error_warning";
+	error_warning.innerHTML = "Some required items are missing.";
+	error_warning.style.display = "none";
 
 	var download_test = create_download_configuration_button();
 
@@ -1825,9 +1824,6 @@ function create_requirements_checklist(file){
 		var deviation_reasonable = generate_message("deviation_reasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", 2, 0);
 		form.appendChild(deviation_reasonable);
 
-		if(deviation_unreasonable.style.display == "block"){
-			download.disabled = false;
-		}
 	} else if(role == "\"one-phase-reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
 		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
@@ -1836,9 +1832,6 @@ function create_requirements_checklist(file){
 		var deviation_reasonable = generate_message("deviation_reasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", 2, 0);
 		form.appendChild(deviation_reasonable);
 
-		if(deviation_unreasonable.style.display == "block"){
-			download.disabled = false;
-		}
 	} else if(role == "\"two-phase-reviewer\""){
 		// (At least one 'No-No-No' -> reject manuscript)
 		var deviation_unreasonable = generate_message("deviation_unreasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
@@ -1848,15 +1841,13 @@ function create_requirements_checklist(file){
 		var deviation_reasonable = generate_message("deviation_reasonable", "red", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", 2, 0);
 		form.appendChild(deviation_reasonable);
 
-		if(deviation_unreasonable.style.display == "block"){
-			download.disabled = false;
-		}
 	}
 
 	// Add Desirable and Extraordinary Unordered List to Form
 	form.appendChild(DesirableUL);
 	form.appendChild(ExtraordinaryUL);
 	form.appendChild(download);
+	form.appendChild(error_warning);
 	
 	return form;
 }
@@ -1939,8 +1930,81 @@ function generateStandardChecklist(file){
 	generate_decision_message_block();
 }
 
+// Check if the completed checklist is valid (no missing items)
+function check_form_validity(event) {
+	event.preventDefault();
+	let validity = true;
+	let list = document.getElementById("Essential");
+	
+	for (let ul of list.children) {
+		if (ul.tagName == 'UL') {
+			for (let li of ul.children) {
+				if (li.tagName != 'LI'){
+					continue;
+				}
+				 
+				// If yes-no is missing, the item is invalid
+				if (li.children[0].checked || li.children[1].checked) {
+					li.children[2].style.color = "black";
+				} else {
+					li.children[2].style.color = "red";
+					validity = false;
+				}
+				
+				let question_blocks = li.getElementsByClassName('question_block');
+				
+				if (question_blocks[0].style.display != "none") {
+					let reasonable_yes = question_blocks[0].getElementsByClassName('deviationRadioYes')[0];
+					let reasonable_no = question_blocks[0].getElementsByClassName('deviationRadioNo')[0];
+					
+					// If deviation reasonability missing, the item is invalid
+					if (reasonable_yes.checked || reasonable_no.checked) {
+						question_blocks[0].style.color = "black";
+					} else {
+						question_blocks[0].style.color = "red";
+						validity = false;
+					}
+					
+					if (question_blocks[1].style.display != "none") {
+						let types = question_blocks[1].getElementsByClassName('justificationRadioType');
+					
+						// If deviation type missing, the item is invalid
+						if (types[0].checked || types[1] && types[1].checked || types[2] && types[2].checked || types[3] && types[3].checked) {
+							question_blocks[1].style.color = "black";
+						} else {
+							question_blocks[1].style.color = "red";
+							validity = false;
+						}
+					}
+					
+					let free_text = li.getElementsByClassName('question_block_free_Text')[0];
+					
+					if (free_text.style.display != "none") {
+						let free_text_content = free_text.getElementsByClassName('freeTextAnswer')[0];
+					
+						// If free text missing, the item is invalid
+						if (free_text_content.value == "") {
+							free_text.style.color = "red";
+							validity = false;
+						} else {
+							free_text.style.color = "black";
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	if (!validity) {
+		document.getElementById("error_warning").style.display = "block";
+	} else {
+		document.getElementById("error_warning").style.display = "none";
+		saveFile();
+	}
+}
 
-//Download the checklist with a specific format
+
+// Download the checklist with a specific format
 function saveFile(){
 	//var role = getParameterByName('role');
 	var checklists = document.getElementById('checklists');
