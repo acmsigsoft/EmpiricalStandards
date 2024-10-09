@@ -51,13 +51,6 @@ To _[replicate](../glossary#replicability)_ means to repeat a study by collectin
 - [ ] compares the results of the replication to the results of the original study
 - [ ] clearly differentiates between results that are consistent and inconsistent with the original study
 
-
-<!-- 
-<discussion>
-  
-<other>
--->
-
 </checklist>
      
 ### Desirable Attributes
