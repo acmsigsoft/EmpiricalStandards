@@ -413,7 +413,7 @@ function hide_other_messages(id) {
 }
 
 //this function creates a location textbox for all items in the standards
-function generate_location_textbox(name, id, margin) {
+function generate_location_textbox(name, id) {
 	var location_textbox;
 	location_textbox = document.createElement('input');
 	location_textbox.type = 'text';
@@ -525,9 +525,9 @@ function generate_question_block_without_yes_no_radio_answers(id, class_name, qu
 	var question_block = document.createElement("div");
 	
 	question_block.id = id + ":" + checklistItem_id;
-	// className - deal with all of them
 	question_block.className = "question_block";
 	question_block.style = "padding-left:"+padding+"em; display:none";
+	
 	return question_block;
 }
 
@@ -536,8 +536,7 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	var question_block = document.createElement("div");
 	
 	question_block.id = id + ":" + checklistItem_id;
-	question_block.className = "question_block";
-	question_block.style = "padding-left:"+padding+"em; display:none; flex: 0 0 100%;";
+	question_block.className = "question_block yes_no_block";
 	
 	var deviation_block = document.createElement("div");
 	deviation_block.innerHTML = "&nbsp;&nbsp;&nbsp;";
@@ -545,12 +544,12 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	if (role == "\"author\"") {	
 		var questiontext_container = document.createElement("span");
 		questiontext_container.innerHTML = "&rdsh;&nbsp; " + question;
-		questiontext_container.style = "flex: 0 1 50vw; text-indent: 2.4em;";
+		questiontext_container.className = "question_text_container";
 	
 		// For authors, create location indicator + N/A checkbox
-		var justification_location_textbox = generate_location_textbox("justification_location_textbox", checklistItem_id, "10px");
+		var justification_location_textbox = generate_location_textbox("justification_location_textbox", checklistItem_id);
 		var location_container = document.createElement("span");
-		location_container.style = "flex: 0 1 20%; margin-right: 10px;";
+		location_container.className = "location_container";
 		location_container.appendChild(justification_location_textbox);
 		
 		unjustified_checkbox = document.createElement("input");
@@ -619,18 +618,10 @@ function generate_question_block_with_type_radio_answers(id, class_name, questio
 	var question_block = document.createElement("div");
 
 	question_block.id = id + ":" + checklistItem_id;
-	// className - deal with all of them
-	question_block.className = "question_block";
-	question_block.style = "text-indent: -1.1em; display:none"; // Adjust indentation instead of padding
-
-	// &rdsh: is for the arrows.
-	// &nbsh: HTML can't do spaces. This is for spaces. 
+	question_block.className = "question_block type_block";
 	question_block.innerHTML = "&rdsh;&nbsp; " + question;
 
 	var deviation_block_radios = document.createElement("div");
-
-	// &nbsh: HTML can't do spaces. This is for spaces. 
-	// 3 spaces
     deviation_block_radios.innerHTML = "&nbsp;&nbsp;&nbsp;";
 
 	// dictionary of tooltips text for each type of unreasonable deviation
@@ -699,11 +690,10 @@ function generate_message(id, color, text, padding, indent) {
 	} else {
 		message = document.createElement("div");
 		message.className = "message";
-		message.style = "color:" + color + "; padding-left:"+padding+"em; text-indent:"+indent+"em;";
+		message.style = "padding-left:"+padding+"em; text-indent:"+indent+"em;";
 	}
 	
 	message.id = id;
-	message.style.display = "none";
 	
 	return message;
 }
@@ -720,27 +710,23 @@ function generate_author_deviation_block(checklistItem_id) {
 	return deviation_block;
 }
 
-function generate_free_text_question(id, class_name, question, checklistItem_id, padding) {
+function generate_free_text_question(id, class_name, question, checklistItem_id) {
     var question_block = document.createElement("div");
     question_block.id = id + ":" + checklistItem_id;
-	console.log(question_block.id);
     question_block.className = "question_block_free_Text";
-    question_block.style = "padding-left:" + padding + "em; display:none";
 
     var questionText = document.createElement("div"); // Create a div for the question
     questionText.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rdsh;&nbsp;  " + question;
 
     var answerInput = document.createElement("div"); // Create a div for the input answer
-    var answerInputField = document.createElement("textarea");
+    answerInput.className = "freeTextContainer";
+	
+	var answerInputField = document.createElement("textarea");
     answerInputField.id = id + "-answer:" + checklistItem_id;
     answerInputField.className = class_name + "Answer";
     answerInputField.type = "text";
-	answerInputField.style.width = "500px";
-	answerInputField.style.height = "70px";
-	answerInput.style = "padding-left:" + 2.5 + "em; overflow: auto;";
-
+	
     answerInput.appendChild(answerInputField);
-
     question_block.appendChild(questionText);
     question_block.appendChild(answerInput);
 
@@ -761,9 +747,7 @@ function generate_one_phase_reviewer_deviation_block(checklistItem_id,data) {
 	if(data!=null){
 		var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItem_id, 2.40, data.display1 == "False");
 
-		
 		// Reviewer-specific deviation justification block
-		//var deviation_justified = generate_question_block_with_radio_answers("deviation_justified", "deviationRadio", "", checklistItem_id, 2.06);
 		var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "red", "", 2.80, -1.07);
 	
 		// Create a question block with type radio answers
@@ -771,7 +755,6 @@ function generate_one_phase_reviewer_deviation_block(checklistItem_id,data) {
 		var numbersArray = data.errortype.split(",").map(function(item) {
 			return parseInt(item, 10);
 		});
-		// console.log(numbersArray);
 
 		var deviation_not_justified = generate_question_block_with_type_radio_answers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItem_id, 2.06, numbersArray);
 
@@ -787,7 +770,7 @@ function generate_one_phase_reviewer_deviation_block(checklistItem_id,data) {
 		deviation_block.appendChild(deviation_unreasonable);
 
 		if(data.displayfree == "True"){
-			var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", data.freelabel, checklistItem_id, 0);
+			var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", data.freelabel, checklistItem_id);
 
 			deviation_block.appendChild(freeTextQuestion);
 		}
@@ -813,7 +796,7 @@ function generate_one_phase_reviewer_deviation_block(checklistItem_id,data) {
 	
 		deviation_block.appendChild(deviation_reasonable);
 		deviation_block.appendChild(deviation_unreasonable);		
-		var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", 'How can this problem be addressed', checklistItem_id, 0);
+		var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", 'How can this problem be addressed', checklistItem_id);
 
 		deviation_block.appendChild(freeTextQuestion);
 	}
@@ -853,7 +836,7 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id,data) {
 		deviation_block.appendChild(deviation_unreasonable);
 
 		if(data.displayfree == "True"){
-			var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", data.freelabel, checklistItem_id, 0);
+			var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", data.freelabel, checklistItem_id);
 			console.log(data.freelabel);
 			deviation_block.appendChild(freeTextQuestion);
 		}
@@ -877,7 +860,7 @@ function generate_two_phase_reviewer_deviation_block(checklistItem_id,data) {
 		deviation_block.appendChild(deviation_reasonable);
 		deviation_block.appendChild(deviation_unreasonable);
 
-		var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", "How can this problem be addressed", checklistItem_id, 0);
+		var freeTextQuestion = generate_free_text_question("free_text_question", "freeText", "How can this problem be addressed", checklistItem_id);
 
 		deviation_block.appendChild(freeTextQuestion);
 	}
@@ -895,13 +878,12 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 
 	// Positioning Essential, Desirable, Extraordinary lines on page
 	// Essential needs more room for radio buttons
-	
 	if (role == "\"author\"") {
-		checklists.style = "list-style-type:none; list-style-position:inside; text-indent: 2em hanging; margin-left: 0;";
+		checklists.className = "author_items item_list";
 	} else if (checklistName == "Essential") {
-		checklists.style = "list-style-type:none; list-style-position:inside; padding-left: 1.2em; text-indent:-2.4em;";
+		checklists.className = "reviewer_essential_items item_list";
 	} else {
-		checklists.style = "list-style-type:none; list-style-position:inside; padding-left:0em; text-indent:-1.3em;";
+		checklists.className = "reviewer_nonessential_items item_list";
 	}
 
 	// splitting lines on bullet points from markdown file
@@ -914,10 +896,9 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 
 	for(let line of lines){
 
-		// removes whitespace
-		// replace all line breaks (<br> </br>)
-		// replace all tab character(\t)
+		// removes whitespace, replace all line breaks (<br> </br>) and tab character(\t)
 		line_text = line.trim().replaceAll(" ", "").replaceAll("<br>", "").replaceAll("<br/>", "").replaceAll("\t", "");
+		
 		if (line_text != ""){
 			i++;
 
@@ -935,8 +916,8 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			var checklistItemText = document.createElement("span");
 			
 			if (role == "\"author\"") {
-				checklistItemLI.style = "display: flex; align-items: flex-start; flex-flow: wrap;";
-				checklistItemText.style = "flex: 0 1 50vw";
+				checklistItemLI.className = "author_list_item";
+				checklistItemText.className = "item_text";
 			}
 			
 			if(IMRaD_line_break) {
@@ -980,9 +961,9 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				if (role == "\"author\"") {
 					
 					location_container = document.createElement("span");
-					location_container.style = "flex: 0 1 20%; margin-right: 10px;";
+					location_container.className = "location_container";
 					
-					userInputYes = generate_location_textbox("item_location_textbox", checklistItem_id, "5px");
+					userInputYes = generate_location_textbox("item_location_textbox", checklistItem_id);
 					userInputYes.onfocus = hide_deviation_block_and_show_location_textbox;
 					
 					missing_container = document.createElement("span");
@@ -1064,9 +1045,9 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				if (role == "\"author\"") {
 					var userInputYes;
 					location_container = document.createElement("span");
-					location_container.style = "flex: 0 1 20%; margin-right: 10px;";
+					location_container.className = "location_container";
 
-					userInputYes = generate_location_textbox("item_location_textbox", checklistItem_id, "5px");
+					userInputYes = generate_location_textbox("item_location_textbox", checklistItem_id);
 					
 					var userInputNo;
 					missing_container = document.createElement("span");
@@ -1077,7 +1058,6 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					userInputNo.className = "missing_checkbox";
 					userInputNo.name = checklistItem_id;
 					userInputNo.onclick = show_hide_location_textbox;
-					userInputNo.style = "color:#FFF;";
 					userInputNo.value = line_text;
 				
 					checklistItemLI.appendChild(checklistItemText);
@@ -1093,7 +1073,6 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					checkboxInput.id = checklistItem_id;
 					checkboxInput.className = "checkbox_attributes";
 					checkboxInput.name = checklistItem_id;
-					checkboxInput.style = "color:#FFF";
 					checkboxInput.value = line_text;
 					checklistItemLI.appendChild(checkboxInput);
 					checklistItemLI.appendChild(checklistItemText);
@@ -1202,7 +1181,7 @@ function create_role_heading(){
 function create_load_config_msg(){
 	var config = document.createElement("p");
 	config.innerHTML = "Customized Configuration Loaded";
-	config.style = "display:none;";
+	config.className = "config_message";
 	return config;
 }
 
@@ -1282,11 +1261,12 @@ function create_download_configuration_button(){
 function create_requirements_heading_with_UL(title){
 	var H3_ = document.createElement("H3");
 	var UL_ = document.createElement("UL");
-	H3_.style = "padding: 0px; margin: 0px; text-indent: -0.3em;";
+
+	H3_.className = "checklist_heading";
 	H3_.innerHTML = title;
 	UL_.id = title;
-	UL_.style = "padding: 0px;";
 	UL_.appendChild(H3_);
+	
 	return UL_;
 }
 
@@ -1366,8 +1346,9 @@ function create_requirements_checklist_table(file){
 	form.name = "checklists";
 
 	// unshift() method adds new items to the beginning of an array, and returns the new length
-	if (!standard_keys.includes("\"General Standard\""))
+	if (!standard_keys.includes("\"General Standard\"")) {
 		standard_keys.unshift("\"General Standard\"");
+	}
 	
 	if(file == null){
 		var i = 0;
@@ -1440,13 +1421,14 @@ function create_requirements_checklist(file){
 	var ExtraordinaryUL = create_requirements_heading_with_UL("Extraordinary");
 	
 	if( role != "\"author\"" ) {
-		DesirableUL.style = "padding: 0px; display:none;";
-		ExtraordinaryUL.style = "padding: 0px; display:none;";
+		DesirableUL.className = "reviewer_nonessential_checklist";
+		ExtraordinaryUL.className = "reviewer_nonessential_checklist";
 	}
 
 	// unshift() method adds new items to the beginning of an array, and returns the new length
-	if (!standard_keys.includes("\"General Standard\""))
+	if (!standard_keys.includes("\"General Standard\"")) {
 		standard_keys.unshift("\"General Standard\"");
+	}
 	
 	create_requirements_checklist_table(file);
 	//console.log(dataStructure);
@@ -1478,14 +1460,14 @@ function create_requirements_checklist(file){
 
 			// Reformat the checklists from MD to HTML
 			var Yes_No = document.createElement("div");
-			Yes_No.style = "align:center; font-size: 80%; font-weight: bold;";
+			Yes_No.className = "checklist_labels"
 			
 			if (role == "\"author\"") {
-				Yes_No.style.display = "flex";
+				Yes_No.classList.add("author_labels");
 				
 				var attribute_label = document.createElement("span");
 				attribute_label.innerHTML = "Attribute";
-				attribute_label.style = "flex: 0 1 50vw;";
+				attribute_label.className = "attribute_label";
 				
 				var location_label = document.createElement("span");
 				var location_types_combobox = document.createElement("select");
@@ -1507,7 +1489,7 @@ function create_requirements_checklist(file){
 				});	
 
 				location_types_combobox.selectedIndex = 0;
-				location_label.style = "flex: 0 1 20%; margin-right: 10px;";
+				location_label.className = "location_container";
 				location_label.appendChild(location_types_combobox);
 				
 				var missing_label = document.createElement("span");
@@ -1555,10 +1537,8 @@ function create_requirements_checklist(file){
 	var download = create_download_button();
 	
 	var error_warning = document.createElement("div");
-	error_warning.className = "error_warning";
 	error_warning.id = "error_warning";
 	error_warning.innerHTML = "Some required items are missing.";
-	error_warning.style.display = "none";
 
 	var download_test = create_download_configuration_button();
 
@@ -1619,8 +1599,7 @@ function create_for_more_info_part(standard_keys){
 		LINK.innerHTML = key;
 		LINK.href = standards_path + key.replaceAll(" ", "");
 		LINK.target = "_blank";
-		LINK.style = "font-size:23px;";
-		LINK.id = "standardNames";
+		LINK.className = "standard_links";
 		LI.appendChild(LINK);
 		more_info_UL.appendChild(LI);
 	}
@@ -2022,7 +2001,7 @@ function saveFile(){
 		"Standards Used\n" +
 		"=================\n";
 
-	var elms = document.querySelectorAll("[id='standardNames']");
+	var elms = document.querySelectorAll("[class='standard_links']");
 	for(var i = 0; i < elms.length; i++)
 		generated_text += elms[i].innerHTML + '\n';
 
