@@ -2001,7 +2001,7 @@ function saveFile(){
 		"Standards Used\n" +
 		"=================\n";
 
-	var elms = document.querySelectorAll("[class='standard_links']");
+	var elms = document.querySelectorAll(".standard_links");
 	for(var i = 0; i < elms.length; i++)
 		generated_text += elms[i].innerHTML + '\n';
 
