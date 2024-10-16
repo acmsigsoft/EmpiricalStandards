@@ -42,6 +42,21 @@ form:active {
 	margin-bottom: 10px;
 }
 
+#clear_checklist {
+	border: none;
+	color: red;
+	background: none;
+	cursor: pointer;
+	margin-left: 20px;
+	margin-right: 20px;
+	float: right;
+}
+
+#clear_checklist:hover {
+	color: darkred;
+	text-decoration: underline;
+}
+
 @media screen and (min-width: 401px) and (max-width: 785px)
 {
 	#container
