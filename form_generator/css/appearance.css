@@ -15,10 +15,6 @@ form:active {
 	padding: 0px;
 }
 
-.reviewer_nonessential_checklist {
-	display: none;
-}
-
 .item_list {
 	list-style-type: none;
 	list-style-position: inside;
@@ -91,6 +87,15 @@ form:active {
 	flex: 0 0 100%;
 }
 
+.author_deviation_block {
+	display: flex;
+	flex-flow: wrap;
+}
+
+.reviewer_deviation_block {
+	display: block;
+}
+
 .type_block {
 	text-indent: -1.1em;
 	display: none;
@@ -117,22 +122,45 @@ form:active {
 }
 
 .unjustified_warning {
-	color: red;
 	font-size: 90%;
 	padding-left: 65px;
+}
+
+.hide_display {
 	display: none;
 }
 
-.message {
-	color: red;
-	display: none;
+.show_display {
+	display: block;
 }
 
-#error_warning {
-	color: red;
+.message_style_1 {
+	padding-left: 0.65em;
+	text-indent: -1em;
+}
+
+.message_style_2 {
+	padding-left: 2.80em;
+	text-indent: -1.07em;
+}
+
+.message_style_3 {
+	padding-left: 0em;
+	text-indent: 0em;
+}
+
+.message_style_4 {
+	padding-left: 2em;
+	text-indent: 0em;
+}
+
+.error_warning {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	display: none;
+}
+
+.attention {
+	color: red;
 }
 
 .standard_links {
@@ -176,8 +204,4 @@ form:active {
 	text-decoration: underline;
 	font-family: inherit;
 	font-size: inherit;
-}
-
-.config_message {
-	display: none;
 }
