@@ -43,6 +43,7 @@ typically given to participants in controlled experiments (see the
 <results>
 
 - [ ]	analyzes response rates
+- [ ]	assesses sufficiency of number of participants (statistical power)
 
 <discussion>
 
