@@ -15,19 +15,13 @@ layout: default
             role = location.search.split("=")[1];
             var checklist_name = document.createElement("h1");
             var checklist_instructions = document.createElement("p");
-            if (role == "author"){
+            if (role == "author") {
                 checklist_name.innerHTML = "Pre-Submission Checklist Generator";
                 checklist_instructions.innerHTML = "To generate a pre-submission checklist, select all the methods that apply to your paper and click \"submit\". You can mouse-over each method for a brief description or click on the method name to read the full standard. If your manuscript proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research</em> and the empirical method(s) used to assess the artifact. If your manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology</em> and both methods. If your manuscript uses a method not listed here, choose the last option. If your manuscript does not report an empirical study (e.g. it's an opinion paper) do not use this generator.";
-            }
-            // else if(role == "ease-reviewer"){
-            //     checklist_name.innerHTML = "Review Checklist Generator";
-            //     checklist_instructions.innerHTML = "To generate a review checklist, select all the methods used in the manuscript and click \"submit\". You can mouse-over each method for a brief description or click on the method name to read the full standard. If the manuscripts proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research</em> and the empirical method used to assess the artifact. If the manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology</em> and both methods. If the mansucript does not report an empirical study (e.g. it's an opinion paper) or uses a method not listed here, do not use this generator.";
-            // }
-            else if(role == "one-phase-reviewer"){
+            } else if (role == "one-phase-reviewer") {
                 checklist_name.innerHTML = "Review Checklist Generator";
                 checklist_instructions.innerHTML = "To generate a review checklist, select all the methods used in the manuscript and click \"submit\". You can mouse-over each method for a brief description or click on the method name to read the full standard. If the manuscripts proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research</em> and the empirical method used to assess the artifact. If the manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology</em> and both methods. If the mansucript does not report an empirical study (e.g. it's an opinion paper) or uses a method not listed here, do not use this generator.";
-            }
-            else if(role == "two-phase-reviewer"){
+            } else if (role == "two-phase-reviewer") {
                 checklist_name.innerHTML = "Review Checklist Generator";
                 checklist_instructions.innerHTML = "To generate a review checklist, select all the methods used in the manuscript and click \"submit\". You can mouse-over each method for a brief description or click on the method name to read the full standard. If the manuscripts proposes and assesses a new artifact (e.g. a tool) select <em>Engineering Research</em> and the empirical method used to assess the artifact. If the manuscript reports a multimethodology or mixed-methods study, select <em>Multimethodology</em> and both methods. If the mansucript does not report an empirical study (e.g. it's an opinion paper) or uses a method not listed here, do not use this generator.";
             }
@@ -49,16 +43,6 @@ layout: default
         });
 
         $(document).ready(function(){
-            /*$('.none').on('click' , function() {
-                $('.standard').each(function(){
-                    $(this).prop('checked', false);
-                })
-            });
-
-            $('.standard').on('click', function(){
-                $('.none').prop('checked', false);
-            });*/
-
             // Enable the Submit button only when any of the checkboxes is checked; otherwise, disable.
             $(".standard,.none").click(function() {
                 if ($("#checklistForm input[type=checkbox]:checked").length > 0)
@@ -105,34 +89,7 @@ layout: default
         <!-- <input type="file" id="configFileInput" name="configFile" accept=".json" >-->
         <input type="submit" class="button" value="Submit" disabled>
     </form>
-    <script>
-        // document.getElementById('checklistForm').addEventListener('submit', function(event) {
-        //     const fileInput = document.getElementById('configFileInput');
-        //     const file = fileInput.files[0];
 
-        //     if (!file) {
-        //         localStorage.removeItem('uploadedFile'); // Clear localStorage if no file selected
-        //     } else {
-        //         event.preventDefault(); // Prevent form submission if a file is selected
-        //         const reader = new FileReader();
-        //         reader.onload = function(event) {
-        //             const fileContent = event.target.result;
-        //             localStorage.setItem('uploadedFile', fileContent); // Store file content in localStorage
-
-        //             const checkedStandards = Array.from(document.querySelectorAll('.standard:checked')).map(checkbox => checkbox.value);
-        //             const url = new URL('result.html', window.location.href); // Construct URL
-
-        //             for(i in checkedStandards){
-        //                 url.searchParams.set('standard', checkedStandards[i]); // Set other parameters as needed
-        //                 console.log(checkedStandards[i]);
-        //             }
-        //             url.searchParams.set('role', location.search.split("=")[1]);
-        //             window.location.href = url.href; // Redirect to constructed URL
-        //         };
-        //         reader.readAsText(file);
-        //     }
-        //     });
-      </script>
 </div>
 </body>
 
