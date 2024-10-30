@@ -1,9 +1,3 @@
-
-import { generate_decision_message_block } from './UIInteractionHandlers.js';
-import { readSpecificEmpiricalStandard } from './ReadEmpiricalStandards.js';
-import { create_requirements_checklist } from './RequirementsChecklist.js';
-import { populate_checklist } from './PopulateChecklist.js';
-
 // Variables for the Checklist
 let role = getParameterByName('role');
 

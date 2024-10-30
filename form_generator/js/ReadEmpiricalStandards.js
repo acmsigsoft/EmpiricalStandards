@@ -1,5 +1,5 @@
 // Generate relative path for each standard document
-export function readSpecificEmpiricalStandard(standard_name) {
+function readSpecificEmpiricalStandard(standard_name) {
 	var mdFile = new XMLHttpRequest();
 	var loc = window.location.pathname;
 	var dir = loc.substring(0, loc.lastIndexOf('/'));
@@ -24,7 +24,7 @@ export function readSpecificEmpiricalStandard(standard_name) {
 }
 
 // Load the table file for the customization of the checklist
-export function readSpecificEmpiricalStandard_table(standard_name) {
+function readSpecificEmpiricalStandard_table(standard_name) {
 	//loadConfiguration();
 	var mdFile = new XMLHttpRequest();
 	var loc = window.location.pathname;

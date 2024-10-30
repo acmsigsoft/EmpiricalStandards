@@ -1,17 +1,8 @@
-import { convertMarkdownToHTML } from './Utilities.js';
-import { generate_one_phase_reviewer_deviation_block, generate_two_phase_reviewer_deviation_block } from './DeviationHandler.js';
-import { check_form_validity } from './FormValidity.js';
-import { createTooltip } from './UIInteractionHandlers.js';
-import { convert_MD_tags_to_HTML_tags, generate_message, generate_location_textbox } from './Utilities.js';
-import { HashMap } from './HashMap.js';
-import { readSpecificEmpiricalStandard_table } from './ReadEmpiricalStandards.js';
-import { show_hide_location_textbox, show_deviation_block_and_hide_location_textbox, hide_deviation_block_and_show_location_textbox } from './UIInteractionHandlers.js';
-
 var dataStructure = new HashMap();
 var footnotes = {};
 var imrad_order = [];
 
-export function create_requirements_checklist(file) {
+function create_requirements_checklist(file) {
 
 	// Create Element "FORM"
 	var form = document.createElement("FORM");
@@ -202,7 +193,7 @@ export function create_requirements_checklist(file) {
 	return form;
 }
 
-export function create_requirements_checklist_table(file) {
+function create_requirements_checklist_table(file) {
 	// Create Element "FORM"
 	var form = document.createElement("FORM");
 	form.id = "checklists";
@@ -267,7 +258,7 @@ export function create_requirements_checklist_table(file) {
 }
 
 // create Header with Unordered List (Essential, Desirable, Extraordinary)
-export function create_requirements_heading_with_UL(title) {
+function create_requirements_heading_with_UL(title) {
 	var H3_ = document.createElement("H3");
 	var UL_ = document.createElement("UL");
 

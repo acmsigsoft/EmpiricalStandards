@@ -1,5 +1,5 @@
 // Function to convert Markdown tables to HTML tables
-export function convertMarkdownToHTML(markdown) {
+function convertMarkdownToHTML(markdown) {
 	var lines = markdown.trim().split('\n');
 	var resultHTML = '<div>';
 
@@ -43,7 +43,7 @@ export function convertMarkdownToHTML(markdown) {
 }
 
 // collect footnotes
-export function collect_footnotes(dom, standardTag) {
+function collect_footnotes(dom, standardTag) {
 	var footnoteTags = dom.getElementsByTagName("footnote");
 
 	for (let footnoteTag of footnoteTags) {
@@ -55,7 +55,7 @@ export function collect_footnotes(dom, standardTag) {
 }
 
 //The text from the MD file is converted to HTML using this method
-export function convert_MD_tags_to_HTML_tags(text) {
+function convert_MD_tags_to_HTML_tags(text) {
 	// Bold text - Convert from MD to HTML tags
 	if (text.match(/\*\*(.*?)\*\*/g) != null) {
 		text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
@@ -75,7 +75,7 @@ export function convert_MD_tags_to_HTML_tags(text) {
 }
 
 //generate a message with a specific style
-export function generate_message(id, text, style_class) {
+function generate_message(id, text, style_class) {
 	var message;
 
 	if (role == "\"author\"") {
@@ -93,7 +93,7 @@ export function generate_message(id, text, style_class) {
 }
 
 //this function creates a location textbox for all items in the standards
-export function generate_location_textbox(name, id) {
+function generate_location_textbox(name, id) {
 	var location_textbox;
 	location_textbox = document.createElement('input');
 	location_textbox.type = 'text';

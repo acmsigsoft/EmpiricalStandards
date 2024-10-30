@@ -1,7 +1,5 @@
-import { convert_MD_tags_to_HTML_tags } from './Utilities.js';
-
 // This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-export function generate_decision_message_block() {
+function generate_decision_message_block() {
 
 	var checklist_yes_not_checked_count;
 	var checklist_no_checked_count;
@@ -114,7 +112,7 @@ export function generate_decision_message_block() {
 }
 
 // Determine whether to show or hide the primary location textbox
-export function show_hide_location_textbox() {
+function show_hide_location_textbox() {
 	id = this.id;
 	console.log(id);
 
@@ -131,7 +129,7 @@ export function show_hide_location_textbox() {
 }
 
 //this function manages the display of the deviation block, which is dependent upon user input
-export function show_deviation_block_and_hide_location_textbox() {
+function show_deviation_block_and_hide_location_textbox() {
 
 	// Replace ID from Yes to an empty string
 	if (role == "\"author\"") {
@@ -161,7 +159,7 @@ export function show_deviation_block_and_hide_location_textbox() {
 	generate_decision_message_block();
 }
 
-//this export function  manages the display of the deviation block, which is dependent upon user input
+//this function  manages the display of the deviation block, which is dependent upon user input
 function hide_deviation_block_and_show_location_textbox() {
 
 	// Replace ID from Yes to an empty string
@@ -220,7 +218,7 @@ function hide_deviation_block_and_show_location_textbox() {
 
 
 //this function creates a deviation block for all Essential items in the standards
-export function create_deviation_justification_block_and_show_hide_justification_location_textbox() {
+function create_deviation_justification_block_and_show_hide_justification_location_textbox() {
 	// (No-Yes) deviation is justified
 	console.log(this);
 	if (this.id.includes("deviation_block-radio:Yes:")) {
@@ -315,7 +313,7 @@ export function create_deviation_justification_block_and_show_hide_justification
 }
 
 //this function is responsible for hiding all messages displayed as a result of selecting 'No'
-export function hide_other_messages(id) {
+function hide_other_messages(id) {
 	try {
 		document.getElementById("deviation_reasonable:" + id).style.display = "none";
 		document.getElementById("deviation_unreasonable:" + id).style.display = "none";
@@ -328,7 +326,7 @@ export function hide_other_messages(id) {
 
 //This function creates tooltips for text
 //Anything between / and / is known as regular expressions
-export function createTooltip(checklistItemText, line_text, footnotes) {
+function createTooltip(checklistItemText, line_text, footnotes) {
 	footnote_sups = line_text.match(/(.*?)\{sup\}(.+?)\{\/sup\}(.*?)/g);
 	if (footnote_sups) {
 		footnote_rest = line_text.match(/(?!.*\})(.*?)$/g);

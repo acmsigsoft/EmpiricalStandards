@@ -1,4 +1,4 @@
-export function populate_checklist() {
+function populate_checklist() {
 	console.log("Populating " + role + " checklist");
 
 	// Clear all stored items for this checklist

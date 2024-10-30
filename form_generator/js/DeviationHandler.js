@@ -1,8 +1,5 @@
-import { generate_message, generate_location_textbox } from "./Utilities";
-import { create_deviation_justification_block_and_show_hide_justification_location_textbox } from "./UIInteractionHandlers";
-
 // generate the deviation block for One Phase Reviewer Role
-export function generate_one_phase_reviewer_deviation_block(checklistItem_id, data) {
+function generate_one_phase_reviewer_deviation_block(checklistItem_id, data) {
 
 	// Create a question block with Yes-No radio answers
 	// 2nd Question
@@ -68,7 +65,7 @@ export function generate_one_phase_reviewer_deviation_block(checklistItem_id, da
 }
 
 // generate the deviation block for Two Phase Reviewer Role
-export function generate_two_phase_reviewer_deviation_block(checklistItem_id, data) {
+function generate_two_phase_reviewer_deviation_block(checklistItem_id, data) {
 
 	// Create a question block with Yes-No radio answers
 	// 2nd Question
