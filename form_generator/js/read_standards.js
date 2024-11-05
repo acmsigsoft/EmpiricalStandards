@@ -541,12 +541,13 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	var question_block = document.createElement("div");
 	
 	question_block.id = id + ":" + checklistItem_id;
-	question_block.className = "question_block yes_no_block";
+	question_block.className = "question_block";
 	
 	var deviation_block = document.createElement("div");
 	deviation_block.innerHTML = "&nbsp;&nbsp;&nbsp;";
 
-	if (role == "\"author\"") {	
+	if (role == "\"author\"") {
+		question_block.classList.add("author_yes_no_block");
 		var questiontext_container = document.createElement("span");
 		questiontext_container.innerHTML = "&rdsh;&nbsp; " + question;
 		questiontext_container.className = "question_text_container";
@@ -571,10 +572,11 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 		question_block.appendChild(location_container);
 		question_block.appendChild(unjustified_container);
 		
-		var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "&nbsp;Your manuscript should justify any deviations from essential attributes.", "message_style_1 unjustified_warning");
+		var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "&nbsp;Your manuscript should justify any deviations from essential attributes.", "unjustified_warning");
 		
 		question_block.appendChild(deviation_not_justified);
 	} else {
+		question_block.classList.add("reviewer_yes_no_block");
 		question_block.innerHTML = "&rdsh;&nbsp; " + question;
 		
 		// For reviewers, create yes-no radio buttons
@@ -922,8 +924,8 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			var checklistItemText = document.createElement("span");
 			
 			if (role == "\"author\"") {
-				checklistItemLI.className = "author_list_item";
-				checklistItemText.className = "item_text";
+				checklistItemLI.classList.add("author_list_item");
+				checklistItemText.classList.add("item_text");
 			}
 			
 			if(IMRaD_line_break) {
@@ -992,7 +994,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				checklistItem_id = standardName + "-" + checklistName + ":" + i;
 			}
 			
-			checklistItemLI.className = checklistItem_class;
+			checklistItemLI.classList.add(checklistItem_class);
 
 			// Change the text to the string held in line_text
 			checklistItemLI.setAttribute("text", line_text);

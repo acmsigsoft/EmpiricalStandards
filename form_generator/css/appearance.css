@@ -81,10 +81,14 @@ form:active {
 	border: 2px solid red;
 }
 
-.yes_no_block {
+.author_yes_no_block {
+	flex: 0 0 100%;
+	display: none;
+}
+
+.reviewer_yes_no_block {
 	padding-left: 2.4em;
 	display: none;
-	flex: 0 0 100%;
 }
 
 .type_block {
