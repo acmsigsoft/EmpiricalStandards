@@ -493,7 +493,7 @@ function separate_essential_attributes_based_on_IMRaD_tags(standardName, checkli
 
 // convert from Markdown to HTML checklists
 function convert_MD_standard_checklists_to_html_standard_checklists(standardName, checklistName, checklistText, footnotes) {
-
+	
 	tester = getParameterByName('y')[0] == 'noval' ? true : false;
 
 	// Create Unordered List
@@ -514,7 +514,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 	console.log("Lines: " + lines);
 
 	var i = 0;
-
+	
 	var imrad_count_index = 0;
 	var attribute_numbers = Array(standardName.length).fill(0);
 	console.log(attribute_numbers);
@@ -522,12 +522,12 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 	// IMRaD line break flag is set to equal false
 	var IMRaD_line_break = false;
 
-	for (let line of lines) {
+	for(let line of lines){
 
 		// removes whitespace, replace all line breaks (<br> </br>) and tab character(\t)
 		line_text = line.trim().replaceAll(" ", "").replaceAll("<br>", "").replaceAll("<br/>", "").replaceAll("\t", "");
-
-		if (line_text != "") {
+		
+		if (line_text != ""){
 			i++;
 
 			line_text = line.trim().replace("---", "&mdash;");
@@ -537,41 +537,41 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				line_text = line_text.replace(/<br(\/)?>$/, "");
 				line_text = line_text.trim();
 			}
-
+			
 			var checklistItemLI = document.createElement("LI");
 			var checklistItemText = document.createElement("span");
-
+			
 			if (role == "\"author\"") {
-				checklistItemLI.className = "author_list_item";
-				checklistItemText.className = "item_text";
+				checklistItemLI.classList.add("author_list_item");
+				checklistItemText.classList.add("item_text");
 			}
-
-			if (IMRaD_line_break) {
+			
+			if(IMRaD_line_break) {
 				checklists.appendChild(document.createElement("br"));
 			}
 
 			// !!!!!!!!!!!!!!!! we dont need this part in the checklist
-			if (line_text.includes("complies with all applicable empirical standards")) {
+			if(line_text.includes("complies with all applicable empirical standards")) {
 				continue;
 			}
-
+			
 			// if line_text includes a specific regex set to true ( line break with horizontal rule)
 			IMRaD_line_break = line_text.includes('<br\/>_hr_') ? true : false;
 
 			// Replace line break and horizontal rule with empty string
 			line_text = line_text.replace(/(<br\/>_hr_)+/g, '');
-
+			
 			let checklistItem_class = "";
 			var checklistItem_id = "";
-
+			
 			// Determine which standard to use for the current essential item
-			if (checklistName == "Essential") {
+			if (checklistName == "Essential") {									
 				let imrad_counts = imrad_order[imrad_count_index];
 				let tag_count = imrad_counts[0];
-
+				
 				let found = false;
 				let num = attribute_numbers[imrad_count_index];
-
+				
 				// Find the current count
 				while (found == false) {
 					if (tag_count == 0) {
@@ -581,15 +581,15 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 						// If this isn't the last array of counts, move to the next one
 						if (imrad_count_index + 1 < standardName.length) {
 							imrad_count_index++;
-
+							
 							imrad_counts = imrad_order[imrad_count_index];
 							tag_count = imrad_counts[0];
 							num = attribute_numbers[imrad_count_index];
-
-							// If this is the last array of counts, reset to the first
+							
+						// If this is the last array of counts, reset to the first
 						} else {
 							imrad_count_index = 0;
-
+							
 							imrad_counts = imrad_order[imrad_count_index];
 							tag_count = imrad_counts[0];
 							num = attribute_numbers[imrad_count_index];
@@ -611,19 +611,19 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				checklistItem_class = standardName.replaceAll(/\s/g, "") + "-" + checklistName + ":" + i;
 				checklistItem_id = standardName + "-" + checklistName + ":" + i;
 			}
-
-			checklistItemLI.className = checklistItem_class;
+			
+			checklistItemLI.classList.add(checklistItem_class);
 
 			// Change the text to the string held in line_text
 			checklistItemLI.setAttribute("text", line_text);
-
+			
 			console.log("Line text: " + line_text);
 
-			if (line_text.replaceAll("<br/><br>", "") == "") {
+			if(line_text.replaceAll("<br/><br>", "") == "") {
 				continue;
 			}
-
-			if (line_text.includes("footnote")) {
+			
+			if(line_text.includes("footnote")) {
 				checklistItemText = createTooltip(checklistItemText, line_text, footnotes);
 			} else {
 				checklistItemText.innerHTML = "&nbsp;" + line_text;
@@ -632,44 +632,44 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			//locate the current checklist into the table
 			data = dataStructure.get(Encode_key(line_text));
 
-			if (checklistName == "Essential") {
+			if (checklistName == "Essential"){
 				// create Input Elements
-
+				
 				var userInputYes;
 				var userInputNo;
 				var location_container;
 				var missing_container;
-
+				
 				if (role == "\"author\"") {
-
+					
 					location_container = document.createElement("span");
 					location_container.className = "location_container";
-
+					
 					userInputYes = generate_location_textbox("item_location_textbox", checklistItem_id);
 					userInputYes.onfocus = hide_deviation_block_and_show_location_textbox;
-
+					
 					missing_container = document.createElement("span");
-
+					
 					userInputNo = document.createElement("input");
 					userInputNo.type = "checkbox";
 					userInputNo.id = "missing_checkbox:" + checklistItem_id;
 					userInputNo.className = "missing_checkbox";
 					userInputNo.name = checklistItem_id;
 					userInputNo.onclick = show_hide_location_textbox;
-
+					
 				} else {
 					userInputYes = document.createElement("input");
 					userInputYes.id = "checklist-radio:Yes:" + checklistItem_id;
 					userInputYes.className = "checklistRadioYes";
 					userInputYes.name = "checklist-radio:" + checklistItem_id;
-
+					
 					// in the case of YES, hide the deviation block
 					userInputYes.onclick = hide_deviation_block_and_show_location_textbox;
-
+					
 					userInputYes.type = "radio";
 					userInputYes.value = "yes";
 					userInputYes.checked = tester;
-
+					
 					userInputNo = document.createElement("input");
 					userInputNo.id = "checklist-radio:No:" + checklistItem_id;
 					userInputNo.className = "checklistRadioNo";
@@ -681,44 +681,44 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 
 				// Generate a deviation block
 				var deviation_block;
-				if (role == "\"author\"") {
+				if(role == "\"author\"") {
 					deviation_block = generate_author_deviation_block(checklistItem_id);
-
+					
 					checklistItemLI.appendChild(checklistItemText);
-
+					
 					location_container.appendChild(userInputYes);
 					missing_container.appendChild(userInputNo);
-
+					
 					checklistItemLI.appendChild(location_container);
 					checklistItemLI.appendChild(missing_container);
-
+					
 					checklistItemLI.appendChild(deviation_block);
-
-				} else if (role == "\"one-phase-reviewer\"") {
+					
+				} else if(role == "\"one-phase-reviewer\""){
 					// deviation_block = generate_reviewer_deviation_block(checklistItem_id);
-					if (data) {
-						deviation_block = generate_one_phase_reviewer_deviation_block(checklistItem_id, data);
-					} else {
-						deviation_block = generate_one_phase_reviewer_deviation_block(checklistItem_id, null);
+					if(data){
+						deviation_block = generate_one_phase_reviewer_deviation_block(checklistItem_id,data);
+					}else{
+						deviation_block = generate_one_phase_reviewer_deviation_block(checklistItem_id,null);
 					}
-
+					
 					checklistItemLI.appendChild(userInputYes);
 					checklistItemLI.appendChild(userInputNo);
-
+					
 					checklistItemText.appendChild(deviation_block);
 					checklistItemLI.appendChild(checklistItemText);
-
+					
 				}
-				else if (role == "\"two-phase-reviewer\"") {
-					if (data) {
-						deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id, data);
-					} else {
-						deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id, null);
+				else if(role == "\"two-phase-reviewer\""){
+					if(data){
+						deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id,data);
+					}else{
+						deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id,null);
 					}
-
+					
 					checklistItemLI.appendChild(userInputYes);
 					checklistItemLI.appendChild(userInputNo);
-
+					
 					checklistItemText.appendChild(deviation_block);
 					checklistItemLI.appendChild(checklistItemText);
 				}
@@ -730,10 +730,10 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					location_container.className = "location_container";
 
 					userInputYes = generate_location_textbox("item_location_textbox", checklistItem_id);
-
+					
 					var userInputNo;
 					missing_container = document.createElement("span");
-
+					
 					userInputNo = document.createElement("input");
 					userInputNo.type = "checkbox";
 					userInputNo.id = "missing_checkbox:" + checklistItem_id;
@@ -741,12 +741,12 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					userInputNo.name = checklistItem_id;
 					userInputNo.onclick = show_hide_location_textbox;
 					userInputNo.value = line_text;
-
+				
 					checklistItemLI.appendChild(checklistItemText);
-
+					
 					location_container.appendChild(userInputYes);
 					checklistItemLI.appendChild(location_container);
-
+					
 					missing_container.appendChild(userInputNo);
 					checklistItemLI.appendChild(missing_container);
 				} else {
