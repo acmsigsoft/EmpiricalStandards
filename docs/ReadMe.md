@@ -1,6 +1,6 @@
 ## How to use the attribute customization tables for each standards
 
-This "attribute_customizations" incluodes customization for each checklist within each standards under their corresponding file ending with "_table", allowing us to customize features we want specific to each checklist
+This "attribute_customizations" includes customization for each checklist within each standards under their corresponding file ending with "_table", allowing us to customize features we want specific to each checklist
 
 
 ### Functionality Includes
