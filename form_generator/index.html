@@ -4,13 +4,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="../form_generator/css/appearance.css">
-        <link rel="stylesheet" href="../form_generator/css/tooltip.css">
-
-		<style>
-			input[type=submit]:focus {
-				outline: auto;
-			}
-		</style>	
+        <link rel="stylesheet" href="../form_generator/css/tooltip.css">	
         
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
@@ -21,33 +15,25 @@
 			gtag('config', '{{ site.google_analytics }}');
 		</script>
     </head>
+	
     <body>
-	<div id="container">
-	  <h1>Empirical Standards Checklist Generator</h1>
-	  <h3>Authors:</h3> 	
-	  <form id="authorForm" action="../form_generator/Checklist.html" method="get">
-	    <input type="hidden" name="role" value="author">
-		  <ul>
-		  		<li><input type="submit" class="btn-link" value="Generate a generic pre-submission checklist"></li>
-		  </ul>
-      </form>
-	  
-	  <h3>Reviewers:</h3>
-		<form id="revieweForm" action="../form_generator/Checklist.html" method="get">
-			<input type="hidden" name="role" value="one-phase-reviewer">
-			<ul>
-				<li><input type="submit" class="btn-link" value="Generate a checklist for one-phase review (most conferences)"></li><br>
-			</ul>
-		</form>
-		<form id="twoPhaseReviewForm" action="../form_generator/Checklist.html" method="get">
-			<input type="hidden" name="role" value="two-phase-reviewer">
-			<ul>
-				<li><input type="submit" class="btn-link" value="Generate a checklist for two-phase review (most journals)"></li>
-			</ul>
+		<h1>Empirical Standards Checklist Generator</h1>
+		
+		<div class="role-form-container">
+			<form id="authorForm" class="role-type" action="../form_generator/Checklist.html" method="get">
+				<input type="hidden" name="role" value="author">
+				<input type="submit" class="btn-link" value="Generate a generic pre-submission checklist (authors)">
+			</form>
 			
-		</form>
-    </div>
-	<br><br><br><br>
-	&copy; Designed by Paul Ralph at Dalhousie University in Halifax Canada.
+			<form id="onePhaseReviewForm" class="role-type" action="../form_generator/Checklist.html" method="get">
+				<input type="hidden" name="role" value="one-phase-reviewer">
+				<input type="submit" class="btn-link" value="Generate a checklist for one-phase review (most conferences)">
+			</form>
+			
+			<form id="twoPhaseReviewForm" class="role-type" action="../form_generator/Checklist.html" method="get">
+				<input type="hidden" name="role" value="two-phase-reviewer">
+				<input type="submit" class="btn-link" value="Generate a checklist for two-phase review (most journals)">
+			</form>
+		</div>
     </body>
 </html>

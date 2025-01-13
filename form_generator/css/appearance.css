@@ -1,5 +1,6 @@
 form {
 	font-size: 120%;
+	color: #444444;
 }
 form:active {
 	color: blue;
@@ -8,11 +9,12 @@ form:active {
 .checklist_heading {
 	padding: 0px;
 	margin: 0px;
-	text-indent: -0.3em;
 }
 
 #Essential, #Desirable, #Extraordinary {
-	padding: 0px;
+	padding: 20px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
 }
 
 .item_list {
@@ -21,27 +23,32 @@ form:active {
 }
 
 .author_items {
-	text-indent: 2em hanging;
-	margin-left: 0;
+	text-indent: 1em hanging;
+	padding-left: 0;
 }
 
-.reviewer_essential_items {
-	padding-left: 1.2em;
-	text-indent: -2.4em;
-}
-
-.reviewer_nonessential_items {
+.reviewer_essential_items, .reviewer_nonessential_items {
 	padding-left: 0em;
-	text-indent: -1.3em;
+}
+
+.reviewer_essential_items li {
+	text-indent: 4em hanging;
+}
+
+.reviewer_nonessential_items li {
+	text-indent: 2em hanging;
 }
 
 .checklist_labels {
-	font-size: 80%;
+	font-size: 70%;
 	font-weight: bold;
+	font-family: "Tahoma";
+	margin-top: 10px;
 }
 
 .author_labels {
 	display: flex;
+	font-family: "Tahoma";
 }
 
 .attribute_label, .item_text {
@@ -81,24 +88,34 @@ form:active {
 	border: 2px solid red;
 }
 
+.checklistRadioNo {
+	margin-left: 12px;
+}
+
 .author_yes_no_block {
 	flex: 0 0 100%;
 	display: none;
 }
 
 .reviewer_yes_no_block {
-	padding-left: 2.4em;
+	padding-left: 3.5em;
 	display: none;
 }
 
-.type_block {
-	text-indent: -1.1em;
-	display: none;
+.reviewer_reasonable_block {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 5px;
 }
 
-.question_text_container {
-	flex: 0 1 50vw;
-	text-indent: 2.4em;
+.type_block, .question_block_free_Text {
+	display: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 5px;
+	margin-top: 5px;
+	margin-left: 1em;
 }
 
 .freeTextAnswer {
@@ -107,18 +124,17 @@ form:active {
 }
 
 .freeTextContainer {
-	padding-left: 2.5em;
 	overflow: auto;
+	padding-left: 1.2em;
 }
 
-.question_block_free_Text {
-	padding: 0px;
-	display: none;
+.question_text_container {
+	flex: 0 1 50vw;
+	text-indent: 2.4em;
 }
 
 .unjustified_warning {
-	font-size: 90%;
-	padding-left: 65px;
+	padding-left: 45px;
 }
 
 .hide_display {
@@ -152,6 +168,7 @@ form:active {
 .error_warning {
 	margin-top: 10px;
 	margin-bottom: 10px;
+	font-family: "Tahoma";
 }
 
 .attention {
@@ -159,7 +176,13 @@ form:active {
 }
 
 .standard_links {
-	font-size: 23px;
+	font-size: 16px;
+	background-color: #e9e9ed;
+	padding: 5px;
+	border-radius: 5px;
+	color: black;
+	margin: 10px;
+	line-height: 3em;
 }
 
 #clear_checklist {
@@ -167,8 +190,8 @@ form:active {
 	color: red;
 	background: none;
 	cursor: pointer;
-	margin-left: 20px;
 	margin-right: 20px;
+	margin-top: 15px;
 	float: right;
 }
 
@@ -204,14 +227,42 @@ form:active {
 	padding-right: 5px;
 }
 
+.role-type {
+	padding: 20px;
+	box-shadow: 1px 1px 5px 1px #ccc;
+	border-radius: 5px;
+	text-align: center;
+	transition: 0.3s;
+	width: 50%;
+	margin: auto;
+	margin-top: 40px;
+}
+
+.role-type:hover {
+	box-shadow: 0 10px 10px #ccc;
+}
+
 .btn-link {
 	border: none;
-	outline: none;
 	background: none;
 	cursor: pointer;
-	color: #0000EE;
+	color: #2b4d6f;
 	padding: 0;
-	text-decoration: underline;
 	font-family: inherit;
 	font-size: inherit;
+	white-space: normal;
+}
+
+.btn-link:focus {
+	outline: auto;
+}
+
+.more-info-list {
+	padding: 0;
+}
+
+.more-info-list li {
+	list-style-type: none;
+	display: inline-block;
+	white-space: nowrap;	
 }
