@@ -1,7 +1,7 @@
 # Data Science
 <standard name="Data Science">
 
-<desc>Studies that analyze software engineering phenomena or artifacts using data-centric analysis methods such as machine learning or other computational intelligence approaches as well as search-based approaches<sup><a class="footnote footnote-ref">1</a></sup></desc>
+*<desc>Studies that analyze software engineering phenomena or artifacts using data-centric analysis methods such as machine learning or other computational intelligence approaches as well as search-based approaches<sup><a class="footnote footnote-ref">1</a></sup></desc>*
 
 ## Application
 

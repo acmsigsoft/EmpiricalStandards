@@ -32,7 +32,7 @@
 
 <a id="recoverability">**Recoverability**</a>: A study is recoverable when readers can understand how the work was done and why it was done that way. All research should be recoverable.
 
-<a id="reflexivity">**Reflexivity**: the extent to which authors reflect on their potential biases and interactions with the team, organization or community, especially possible negative impacts on some participants or stakeholders.
+<a id="reflexivity">**Reflexivity**</a>: the extent to which authors reflect on their potential biases and interactions with the team, organization or community, especially possible negative impacts on some participants or stakeholders.
 
 <a id="re-identification">**Re-identification**</a>: the process of connecting ostensibly anonymous or pseudonymous data back to an individual, typically by combining field values from a single dataset, or by combining elements from multiple datasets.
 
