@@ -6,112 +6,14 @@ permalink: /docs/supplements
 
 <html>
 <head>
-<style>
 
-main .wrapper {
-  min-width: 100%;
-  display: flex;
-  padding: 0;
-}
+	<style>
+		main .wrapper {
+			width: 100%;
+			display: flex;
+		}
+	</style>
 
-.supplements-list {
-  flex: 0 0 260px;
-  align-self: flex-start;
-  top: 30px;
-  position: sticky;
-  padding-left: 30px;
-  text-indent: -30px;
-}
-
-#Display {
-  flex: 20%;
-}
-
-.supplements-list .nav-trigger, .supplements-list .menu-icon {
-  display: none
-}
-
-@media screen and (max-width: 780px) {
-  .supplements-list {
-    left: 15px;
-    background-color: #fdfdfd;
-    border: 1px solid #e8e8e8;
-    border-radius: 5px;
-    text-align: left;
-	position: fixed;
-	top: 80px;
-	padding-left: 0;
-    text-indent: 0;
-  }
-  
-  #Display {
-	flex: 100%;
-	word-break: break-word;
-  }
-  
-  .supplements-list label[for="toc-trigger"] {
-    display: block;
-    float: left;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-  }
-  
-  .supplements-list .menu-icon {
-    display: block;
-    float: left;
-    width: 36px;
-    padding-top: 6px;
-    text-align: center;
-  }
-  
-  .supplements-list .menu-icon>svg {
-    fill: #424242;
-  }
-  
-  .supplements-list input ~ .tab {
-    clear: both;
-    display: none;
-	overflow: scroll;
-	max-height: 75vh;
-  }
-  
-  .supplements-list input:checked ~ .tab {
-    display: block;
-    padding-bottom: 5px;
-  }
-}
-
-.tablinks {
-  padding: 4px 10px;
-  font-size: 16px;
-}
-
-.tab, .tab ul {
-  list-style-type: none;
-}
-
-.tab h3 {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 16px;
-}
-
-.tablinks:hover {
-  background-color: #ddd;
-}
-
-.tabcontent {
-  color: black;
-  display: none;
-  padding: 10px 20px;
-  height: 100%;
-}
-
-.active {
-	font-weight: bold;
-}
-</style>
 <script src="../form_generator/js/read_standards.js"></script>
 <script>
 function openSupplementFromURL(evt) {

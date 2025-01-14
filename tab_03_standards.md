@@ -6,109 +6,14 @@ permalink: /docs/standards
 
 <html>
 <head>
-<style>
 
-main .wrapper {
-  min-width: 100%;
-  display: flex;
-  padding: 0;
-}
+	<style>
+		main .wrapper {
+			width: 100%;
+			display: flex;
+		}
+	</style>
 
-.standards-list {
-  flex: 0 0 260px;
-  align-self: flex-start;
-  top: 30px;
-  position: sticky;
-}
-
-#Display {
-  flex: 20%;
-}
-
-.standards-list .nav-trigger, .standards-list .menu-icon {
-  display: none
-}
-
-@media screen and (max-width: 780px) {
-  .standards-list {
-    left: 15px;
-    background-color: #fdfdfd;
-    border: 1px solid #e8e8e8;
-    border-radius: 5px;
-    text-align: left;
-	position: fixed;
-	top: 80px;
-  }
-  
-  #Display {
-	flex: 100%;
-	word-break: break-word;
-  }
-  
-  .standards-list label[for="toc-trigger"] {
-    display: block;
-    float: left;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-  }
-  
-  .standards-list .menu-icon {
-    display: block;
-    float: left;
-    width: 36px;
-    padding-top: 6px;
-    text-align: center;
-  }
-  
-  .standards-list .menu-icon>svg {
-    fill: #424242;
-  }
-  
-  .standards-list input ~ .tab {
-    clear: both;
-    display: none;
-	overflow: scroll;
-	max-height: 75vh;
-  }
-  
-  .standards-list input:checked ~ .tab {
-    display: block;
-    padding-bottom: 5px;
-  }
-}
-
-.tablinks {
-  padding: 4px 10px;
-  font-size: 16px;
-}
-
-.tab, .tab ul {
-  list-style-type: none;
-}
-
-.tab h3 {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 16px;
-}
-
-.tablinks:hover {
-  background-color: #ddd;
-}
-
-.tabcontent {
-  color: black;
-  display: none;
-  padding: 10px 20px;
-  height: 100%;
-}
-
-.active {
-	font-weight: bold;
-}
-
-</style>
 <script src="../form_generator/js/read_standards.js"></script>
 <script>
 function openStandardFromURL(evt) {
