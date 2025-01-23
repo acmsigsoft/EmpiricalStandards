@@ -55,6 +55,10 @@ form:active {
 	flex: 0 1 50vw;
 }
 
+.item_text a {
+	color: #2a7ae2;
+}
+
 .author_list_item {
 	display: flex;
 	align-items: flex-start;
