@@ -133,10 +133,7 @@ empirically evaluated checklist for surveys in software engineering. *Informatio
 	
 Gary C. Moore, and Izak Benbasat. Development of an instrument to measure the perceptions of adopting an information technology innovation. *Information systems research* 2.3 (1991): 192-222.	
 
-Paul Ralph and Ewan Tempero. 2018. Construct Validity in Software
-Engineering Research and Software Metrics. In *Proceedings of the 22nd
-International Conference on Evaluation and Assessment in Software
-Engineering (EASE'18)*, 13–23. DOI:10.1145/3210459.3210461
+Paul Ralph, Miikka Kuutila, Hera Arif, and Bimpe Ayoola (2024). Teaching Software Metrology: The Science of Measurement for Software Engineering. In: Mendez, D., Avgeriou, P., Kalinowski, M., Ali, N.B. (eds) _Handbook on Teaching Empirical Software Engineering_. Springer, Cham. https://doi.org/10.1007/978-3-031-71769-7_5
 
 Stefan Wagner, Daniel Mendez, Michael Felderer, Daniel Graziotin, Marcos
 Kalinowski. 2020. Challenges in Survey Research. In: _Contemporary Empirical
