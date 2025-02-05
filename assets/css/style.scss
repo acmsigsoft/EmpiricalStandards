@@ -11,14 +11,14 @@ body {
 }
 
 h1, h2, h3 {
-	font-family: "Georgia";
+	font-family: "Georgia", "Times New Roman", serif;
 	color: #2b4d6f;
 	font-weight: normal;
 }
 
 p, li, .tab a, a {
 	font-size: 14px;
-	font-family: "Tahoma";
+	font-family: "Tahoma", "Arial", sans-serif;
 	text-decoration: none;
 }
 
@@ -30,7 +30,7 @@ button, .button {
 
 summary {
 	font-size: 1.5em;
-	font-family: "Georgia";
+	font-family: "Georgia", "Times New Roman", serif;
 	color: #2b4d6f;
 }
 
@@ -80,14 +80,14 @@ fieldset {
 }
 
 legend {
-	font-family: "Georgia";
+	font-family: "Georgia", "Times New Roman", serif;
 	color: #2b4d6f;
 	padding-left: 5px;
 	padding-right: 5px;
 }
 
 table, th, td {
-  font-family: "Tahoma";
+  font-family: "Tahoma", "Arial", sans-serif;
   font-size: 14px;
   border: 1px solid #ccc;
   border-collapse: collapse;
@@ -114,7 +114,7 @@ th, tr:nth-child(even){
 }
 
 .site-title {
-	font-family: "Segoe UI";
+	font-family: "Segoe UI", sans-serif;
 	color: white;
 	margin-left: 30px;
 	font-size: 26px;
@@ -162,7 +162,7 @@ th, tr:nth-child(even){
 }
 
 .citation-modal p {
-	font-family: "Georgia";
+	font-family: "Georgia", "Times New Roman", serif;
 	color: #2b4d6f;
 	font-size: 1em;
 	font-weight: bold;
@@ -221,13 +221,13 @@ th, tr:nth-child(even){
 
 #sigsoft-heading {
 	font-size: 0.5em;
-	font-family: "Segoe UI";
+	font-family: "Segoe UI", sans-serif;
 }
 
 #name-heading {
 	display: block;
 	font-weight: bold;
-	font-family: "Georgia";
+	font-family: "Georgia", "Times New Roman", serif;
 	margin-top: -10px;
 	line-height: 60px;
 }
@@ -293,7 +293,7 @@ main .page-link {
 	font-weight: bold;
 	font-size: 1.4em;
 	margin-bottom: 30px;
-	font-family: "Georgia";
+	font-family: "Georgia", "Times New Roman", serif;
 	color: #2b4d6f;
 }
 
@@ -382,7 +382,7 @@ main .page-link {
 
 .instruction-text p:first-child {
 	font-size: 2em;
-	font-family: "Georgia";
+	font-family: "Georgia", "Times New Roman", serif;
 	color: #2b4d6f;
 }
 
@@ -419,7 +419,7 @@ main .page-link {
 #history-section h2 {
 	font-weight: bold;
 	font-size: 2em;
-	font-family: "Georgia";
+	font-family: "Georgia", "Times New Roman", serif;
 	color: #2b4d6f;
 	border-bottom: 3px solid #2b4f6f;
 	width: 300px;
@@ -559,7 +559,7 @@ main .page-link {
 
 #ready-text {
 	text-align: center;
-	font-family: "Georgia";
+	font-family: "Georgia", "Times New Roman", serif;
 	color: #2b4d6f;
 	font-size: 2em;
 	margin-top: 100px;

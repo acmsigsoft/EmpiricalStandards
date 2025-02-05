@@ -42,13 +42,13 @@ form:active {
 .checklist_labels {
 	font-size: 70%;
 	font-weight: bold;
-	font-family: "Tahoma";
+	font-family: "Tahoma", "Arial", sans-serif;
 	margin-top: 10px;
 }
 
 .author_labels {
 	display: flex;
-	font-family: "Tahoma";
+	font-family: "Tahoma", "Arial", sans-serif;
 }
 
 .attribute_label, .item_text {
@@ -172,7 +172,7 @@ form:active {
 .error_warning {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	font-family: "Tahoma";
+	font-family: "Tahoma", "Arial", sans-serif;
 }
 
 .attention {
