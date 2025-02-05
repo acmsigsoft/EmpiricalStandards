@@ -28,6 +28,11 @@ button, .button {
 	padding: 5px;
 }
 
+button, .button, select {
+	background-color: #dedee4;
+	color: black;
+}
+
 summary {
 	font-size: 1.5em;
 	font-family: "Georgia", "Times New Roman", serif;
@@ -194,6 +199,7 @@ th, tr:nth-child(even){
 
 .close-modal {
 	float: right;
+	font-weight: bold;
 }
 
 .review-link {
