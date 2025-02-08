@@ -14,7 +14,18 @@ permalink: /docs/standards
 		}
 	</style>
 
-<script src="../form_generator/js/read_standards.js"></script>
+</style>
+  <script src="../form_generator/js/Utilities.js"></script>
+  <script src="../form_generator/js/UIInteractionHandlers.js"></script>
+  <script src="../form_generator/js/ReadEmpiricalStandards.js"></script>
+  <script src="../form_generator/js/PopulateChecklist.js"></script>
+  <script src="../form_generator/js/FormValidity.js"></script>
+  <script src="../form_generator/js/HashMap.js"></script>
+  <script src="../form_generator/js/UIInteractionHandlers.js"></script>
+  <script src="../form_generator/js/DeviationHandler.js"></script>
+  <script src="../form_generator/js/RequirementsChecklist.js"></script>
+  <script src="../form_generator/js/read_standards.js"></script>
+
 <script>
 function openStandardFromURL(evt) {
   standardName = getParameterByName('standard')[0].replaceAll('"', '');
