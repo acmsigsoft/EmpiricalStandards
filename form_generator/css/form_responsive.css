@@ -1,0 +1,15 @@
+main .wrapper {
+	min-width: 80%;
+}
+	
+@media screen and (max-width: 850px) {
+	main .wrapper {
+		min-width: 90%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	main .wrapper {
+		min-width: 100%;
+	}
+}

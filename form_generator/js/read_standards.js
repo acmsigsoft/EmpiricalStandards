@@ -25,7 +25,6 @@ function getParameterByName(param_name, url = window.location.href) {
 	return param_values;
 }
 
-
 // TODO: Not used anywhere, can be removed, verify with Erin before removal.
 function generate_question_block_without_yes_no_radio_answers(id, class_name, question, checklistItem_id, padding) {
 	var question_block = document.createElement("div");
@@ -37,7 +36,6 @@ function generate_question_block_without_yes_no_radio_answers(id, class_name, qu
 	return question_block;
 }
 
-
 function generate_question_block_with_yes_no_radio_answers(id, class_name, question, checklistItem_id, padding, display) {
 	var question_block = document.createElement("div");
 	
@@ -45,7 +43,6 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 	question_block.className = "question_block";
 	
 	var deviation_block = document.createElement("div");
-	deviation_block.innerHTML = "&nbsp;&nbsp;&nbsp;";
 
 	if (role == "\"author\"") {
 		question_block.classList.add("author_yes_no_block");
@@ -78,7 +75,10 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 		question_block.appendChild(deviation_not_justified);
 	} else {
 		question_block.classList.add("reviewer_yes_no_block");
-		question_block.innerHTML = "&rdsh;&nbsp; " + question;
+		deviation_block.className = "reviewer_reasonable_block";
+		
+		let question_text = document.createElement("span");
+		question_text.innerHTML = "&rdsh;&nbsp; " + question;
 		
 		// For reviewers, create yes-no radio buttons
 		var deviationRadioYes = document.createElement("input");
@@ -103,6 +103,7 @@ function generate_question_block_with_yes_no_radio_answers(id, class_name, quest
 		deviationLabelNo.innerHTML = "no";
 		deviationLabelNo.htmlFor = deviationRadioNo.id;
 		
+		deviation_block.appendChild(question_text);
 		deviation_block.appendChild(deviationRadioYes);
 		deviation_block.appendChild(deviationLabelYes);
 		deviation_block.appendChild(deviationRadioNo);
@@ -206,7 +207,8 @@ function create_load_config_msg() {
 // Save checklist state on visibility change
 document.addEventListener("visibilitychange", () => {
 	console.log("Storing checklist items.");
-	let items = document.querySelectorAll("#checklists ul ul li");
+
+	let items = document.querySelectorAll(".item_list li");
 
 	for (let item of items) {
 		let storage = {};
@@ -287,6 +289,7 @@ function create_for_more_info_part(standard_keys) {
 
 	var standards_path = "../docs/standards?standard="
 	var more_info_UL = document.createElement("UL");
+	more_info_UL.className = "more-info-list";
 
 	// Adding Standards as a list with a link to the correct page
 	for (let key of standard_keys) {

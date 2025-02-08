@@ -1,10 +1,7 @@
 # Experiments (with Human Participants) 
 <standard name="Experiments (with Human Participants)">
 
-
-
-*<desc>A study in which an intervention is deliberately introduced to observe
-its effects on some aspects of reality under controlled conditions</desc>*
+*<desc>A study in which an intervention is deliberately introduced to observe its effects on some aspects of reality under controlled conditions</desc>*
 
 
 ## Application 
