@@ -14,7 +14,6 @@ permalink: /docs/standards
 		}
 	</style>
 
-</style>
   <script src="../form_generator/js/Utilities.js"></script>
   <script src="../form_generator/js/UIInteractionHandlers.js"></script>
   <script src="../form_generator/js/ReadEmpiricalStandards.js"></script>

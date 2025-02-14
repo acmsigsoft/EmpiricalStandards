@@ -24,7 +24,7 @@ function readSpecificEmpiricalStandard(standard_name) {
 }
 
 // Load the table file for the customization of the checklist
-function readSpecificEmpiricalStandard_table(standard_name) {
+function readSpecificEmpiricalStandardTable(standard_name) {
 	//loadConfiguration();
 	var mdFile = new XMLHttpRequest();
 	var loc = window.location.pathname;

@@ -2,24 +2,24 @@ var dataStructure = new HashMap();
 var footnotes = {};
 var imrad_order = [];
 
-function create_requirements_checklist(file) {
+function createRequirementsChecklist(file) {
 
 	// Create Element "FORM"
 	var form = document.createElement("FORM");
 	form.id = "checklists";
 	form.name = "checklists";
 
-	let clear_button = create_clear_checklist_button();
+	let clear_button = createClearChecklistButton();
 	form.appendChild(clear_button);
 
 	// create Header for Essential Requirements with an unordered list
-	var EssentialUL = create_requirements_heading_with_UL("Essential");
+	var EssentialUL = createRequirementsHeadingWithUL("Essential");
 
 	// create Header for Desirable Requirements with an unordered list
-	var DesirableUL = create_requirements_heading_with_UL("Desirable");
+	var DesirableUL = createRequirementsHeadingWithUL("Desirable");
 
 	// create Header for Extraordinary Requirements with an unordered list
-	var ExtraordinaryUL = create_requirements_heading_with_UL("Extraordinary");
+	var ExtraordinaryUL = createRequirementsHeadingWithUL("Extraordinary");
 
 	if (role != "\"author\"") {
 		DesirableUL.className = "hide_display";
@@ -31,7 +31,7 @@ function create_requirements_checklist(file) {
 		standard_keys.unshift("\"General Standard\"");
 	}
 
-	create_requirements_checklist_table(file);
+	createRequirementsChecklistTable(file);
 
 	let standards_list = [];
 
@@ -47,7 +47,7 @@ function create_requirements_checklist(file) {
 		var standardTag = dom.getElementsByTagName("standard")[0];
 
 		// collect all the footnotes
-		collect_footnotes(dom, standardTag);
+		collectFootnotes(dom, standardTag);
 
 		let standardName = "\"" + standardTag.getAttribute('name') + "\"";
 		standardName = standardName.replaceAll("\"", "");
@@ -63,7 +63,7 @@ function create_requirements_checklist(file) {
 
 			// Add all information for "all_intro_items", etc.
 			if (checklistType == "Essential") {
-				separate_essential_attributes_based_on_IMRaD_tags(standardTag.getAttribute('name'), checklistHTML);
+				separateEssentialAttributesByIMRaD(standardTag.getAttribute('name'), checklistHTML);
 			}
 
 			// Reformat the checklists from MD to HTML
@@ -118,13 +118,13 @@ function create_requirements_checklist(file) {
 			else if (checklistType == "Desirable") {
 
 				// Change from Markdown to HTML elements
-				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
+				checklists = prepareToConvertMDToHTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
 				DesirableUL.appendChild(checklists);
 			}
 			else if (checklistType == "Extraordinary") {
 
 				// Change from Markdown to HTML elements
-				checklists = preparation_to_convert_MD_to_HTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
+				checklists = prepareToConvertMDToHTML(standardTag.getAttribute('name'), checklistTag.getAttribute('name'), checklistHTML, footnotes);
 				ExtraordinaryUL.appendChild(checklists);
 			}
 		}
@@ -135,51 +135,51 @@ function create_requirements_checklist(file) {
 	all_essential_IMRaD_items_innerHTML = all_essential_IMRaD_items_innerHTML.replaceAll("\n_hr_", "").length > 0 ? all_essential_IMRaD_items_innerHTML : "";
 
 	// Notify testers in the case of unrecognized tags, no tags at all, or untagged attributes
-	notify_testers();
+	notifyTesters();
 
 	// Change from Markdown to HTML elements
-	checklists = preparation_to_convert_MD_to_HTML(standards_list, 'Essential', all_essential_IMRaD_items_innerHTML, footnotes);
+	checklists = prepareToConvertMDToHTML(standards_list, 'Essential', all_essential_IMRaD_items_innerHTML, footnotes);
 	EssentialUL.appendChild(checklists);
 
 	// Add Essential Attributes to the form
 	form.appendChild(EssentialUL);
 
 	// Create download button
-	var download = create_download_button();
+	var download = createDownloadButton();
 
 	var error_warning = document.createElement("div");
 	error_warning.className = "error_warning attention hide_display";
 	error_warning.innerHTML = "Some required items are missing.";
 
-	var download_test = create_download_configuration_button();
+	var download_test = createDownloadConfigurationButton();
 
 	// (All 'Yes' -> accept manuscript)
-	var decision_msg = generate_message("decision_msg", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), "message_style_4");
+	var decision_msg = generateMessage("decision_msg", (role != "\"author\"" ? "The manuscript meets all essential criteria: ACCEPT." : ""), "message_style_4");
 	form.appendChild(decision_msg);
 
 	if (role == "\"author\"") {
 		// (At least one 'No-No-No' -> reject manuscript)
-		var deviation_unreasonable = generate_message("deviation_unreasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", "message_style_4");
+		var deviation_unreasonable = generateMessage("deviation_unreasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", "message_style_4");
 		form.appendChild(deviation_unreasonable);
 		// (At least one 'No-No-Yes' -> explain fix)
-		var deviation_reasonable = generate_message("deviation_reasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", "message_style_4");
+		var deviation_reasonable = generateMessage("deviation_reasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", "message_style_4");
 		form.appendChild(deviation_reasonable);
 
 	} else if (role == "\"one-phase-reviewer\"") {
 		// (At least one 'No-No-No' -> reject manuscript)
-		var deviation_unreasonable = generate_message("deviation_unreasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", "message_style_4");
+		var deviation_unreasonable = generateMessage("deviation_unreasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", "message_style_4");
 		form.appendChild(deviation_unreasonable);
 		// (At least one 'No-No-Yes' -> explain fix)
-		var deviation_reasonable = generate_message("deviation_reasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", "message_style_4");
+		var deviation_reasonable = generateMessage("deviation_reasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", "message_style_4");
 		form.appendChild(deviation_reasonable);
 
 	} else if (role == "\"two-phase-reviewer\"") {
 		// (At least one 'No-No-No' -> reject manuscript)
-		var deviation_unreasonable = generate_message("deviation_unreasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
+		var deviation_unreasonable = generateMessage("deviation_unreasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable.", 2, 0);
 		form.appendChild(deviation_unreasonable);
 
 		// (At least one 'No-No-Yes' -> explain fix)
-		var deviation_reasonable = generate_message("deviation_reasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", "message_style_4");
+		var deviation_reasonable = generateMessage("deviation_reasonable", "In the free-text part of your review, please explain the deviation(s) and why they are not reasonable. Please give specific suggestions for how each deviation can be addressed.", "message_style_4");
 		form.appendChild(deviation_reasonable);
 
 	}
@@ -193,7 +193,7 @@ function create_requirements_checklist(file) {
 	return form;
 }
 
-function create_requirements_checklist_table(file) {
+function createRequirementsChecklistTable(file) {
 	// Create Element "FORM"
 	var form = document.createElement("FORM");
 	form.id = "checklists";
@@ -212,7 +212,7 @@ function create_requirements_checklist_table(file) {
 		for (let key of standard_keys) {
 			i++;
 			// Obtain all the information for a Standard
-			empirical_standard1 = readSpecificEmpiricalStandard_table(key);
+			empirical_standard1 = readSpecificEmpiricalStandardTable(key);
 			// Convert Markdown to HTML
 			var htmlTable = convertMarkdownToHTML(empirical_standard1);
 
@@ -239,7 +239,7 @@ function create_requirements_checklist_table(file) {
 				};
 
 				// update the encoding method to get the key for the contents
-				const key = Encode_key(content1);
+				const key = encodeKey(content1);
 				dataStructure.set(key, rowData)
 			}
 		}
@@ -258,7 +258,7 @@ function create_requirements_checklist_table(file) {
 }
 
 // create Header with Unordered List (Essential, Desirable, Extraordinary)
-function create_requirements_heading_with_UL(title) {
+function createRequirementsHeadingWithUL(title) {
 	var H3_ = document.createElement("H3");
 	var UL_ = document.createElement("UL");
 
@@ -270,7 +270,7 @@ function create_requirements_heading_with_UL(title) {
 	return UL_;
 }
 
-function create_download_configuration_button() {
+function createDownloadConfigurationButton() {
 	var download = document.createElement("button");
 	download.innerHTML = "Download_Configuration";
 	download.id = "checklist_download_config";
@@ -324,7 +324,7 @@ function saveConfig() {
 }
 
 // Notify testers in the case of unrecognized tags, no tags at all, or untagged attributes
-function notify_testers() {
+function notifyTesters() {
 	tester = getParameterByName('y')[0] == 'noval' ? true : false;
 	if (tester) {
 		alert_msg = "";
@@ -344,7 +344,7 @@ function notify_testers() {
 }
 
 // Create download button to download text file
-function create_download_button() {
+function createDownloadButton() {
 	var download = document.createElement("button");
 	download.innerHTML = "Download";
 	download.id = "checklist_download";
@@ -353,13 +353,13 @@ function create_download_button() {
 	if (role == "\"author\"") {
 		download.onclick = saveFile;
 	} else {
-		download.addEventListener("click", check_form_validity, false);
+		download.addEventListener("click", checkFormValidity, false);
 	}
 	return download;
 }
 
 // Prepare unordered lists
-function preparation_to_convert_MD_to_HTML(standardTagName, checklistTagName, checklistInnerHTML, footnotes) {
+function prepareToConvertMDToHTML(standardTagName, checklistTagName, checklistInnerHTML, footnotes) {
 
 	// superscript tags
 	checklistInnerHTML = checklistInnerHTML.replaceAll("<sup>", "{sup}").replaceAll("</sup>", "{/sup}");
@@ -371,7 +371,7 @@ function preparation_to_convert_MD_to_HTML(standardTagName, checklistTagName, ch
 	checklistText = checklistInnerText.replaceAll(">", "").replaceAll(/\n\s*\n/g, '\n').replaceAll("\n", "<br/>");
 
 	// Transform Markdown tags to HTMLtags
-	checklistText = convert_MD_tags_to_HTML_tags(checklistText);
+	checklistText = convertMDTagsToHTMLTags(checklistText);
 
 	// Standard Files - Change from docs to link, change from .md file to nothing
 	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/', '../docs/standards?standard=').replaceAll('.md', '');
@@ -380,25 +380,25 @@ function preparation_to_convert_MD_to_HTML(standardTagName, checklistTagName, ch
 	checklistText = checklistText.replaceAll('https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/', '../docs/supplements?supplement=').replaceAll('.md', '');
 
 	// Convert Markdown Checklists to HTML checklists
-	checklists = convert_MD_standard_checklists_to_html_standard_checklists(standardTagName, checklistTagName, checklistText, footnotes)
+	checklists = convertMDStandardChecklistsToHTMLStandardChecklists(standardTagName, checklistTagName, checklistText, footnotes)
 
 	return checklists;
 }
 
 // Create a button for clearing the current checklist
-function create_clear_checklist_button() {
+function createClearChecklistButton() {
 	let clear_button = document.createElement("input");
 	clear_button.type = "reset";
 	clear_button.value = "Clear checklist";
 	clear_button.id = "clear_checklist";
 
-	clear_button.addEventListener("click", clear_checklist, false);
+	clear_button.addEventListener("click", clearChecklist, false);
 
 	return clear_button;
 }
 
 // Clear the current checklist
-function clear_checklist(event) {
+function clearChecklist(event) {
 	let clear_check = confirm("This will erase all progress on the current checklist. Are you sure?");
 
 	if (!clear_check) {
@@ -441,7 +441,7 @@ function clear_checklist(event) {
 }
 
 
-function separate_essential_attributes_based_on_IMRaD_tags(standardName, checklistHTML) {
+function separateEssentialAttributesByIMRaD(standardName, checklistHTML) {
 	const IMRaD_tags = ["<intro>", "<method>", "<results>", "<discussion>", "<other>"]; // Known IMRaD tags
 	let imrad_counts = [];
 
@@ -501,7 +501,7 @@ function separate_essential_attributes_based_on_IMRaD_tags(standardName, checkli
 }
 
 // convert from Markdown to HTML checklists
-function convert_MD_standard_checklists_to_html_standard_checklists(standardName, checklistName, checklistText, footnotes) {
+function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, checklistName, checklistText, footnotes) {
 	
 	tester = getParameterByName('y')[0] == 'noval' ? true : false;
 
@@ -639,7 +639,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 			}
 
 			//locate the current checklist into the table
-			data = dataStructure.get(Encode_key(line_text));
+			data = dataStructure.get(encodeKey(line_text));
 
 			if (checklistName == "Essential"){
 				// create Input Elements
@@ -654,8 +654,8 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					location_container = document.createElement("span");
 					location_container.className = "location_container";
 					
-					userInputYes = generate_location_textbox("item_location_textbox", checklistItem_id);
-					userInputYes.onfocus = hide_deviation_block_and_show_location_textbox;
+					userInputYes = generateLocationTextbox("item_location_textbox", checklistItem_id);
+					userInputYes.onfocus = hideDeviationBlockShowLocationTextbox;
 					
 					missing_container = document.createElement("span");
 					
@@ -664,7 +664,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					userInputNo.id = "missing_checkbox:" + checklistItem_id;
 					userInputNo.className = "missing_checkbox";
 					userInputNo.name = checklistItem_id;
-					userInputNo.onclick = show_hide_location_textbox;
+					userInputNo.onclick = showHideLocationTextbox;
 					
 				} else {
 					userInputYes = document.createElement("input");
@@ -673,7 +673,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					userInputYes.name = "checklist-radio:" + checklistItem_id;
 					
 					// in the case of YES, hide the deviation block
-					userInputYes.onclick = hide_deviation_block_and_show_location_textbox;
+					userInputYes.onclick = hideDeviationBlockShowLocationTextbox;
 					
 					userInputYes.type = "radio";
 					userInputYes.value = "yes";
@@ -683,7 +683,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					userInputNo.id = "checklist-radio:No:" + checklistItem_id;
 					userInputNo.className = "checklistRadioNo";
 					userInputNo.name = "checklist-radio:" + checklistItem_id;
-					userInputNo.onclick = show_deviation_block_and_hide_location_textbox;
+					userInputNo.onclick = showDeviationBlockHideLocationTextbox;
 					userInputNo.type = "radio";
 					userInputNo.value = "no";
 				}
@@ -691,7 +691,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				// Generate a deviation block
 				var deviation_block;
 				if(role == "\"author\"") {
-					deviation_block = generate_author_deviation_block(checklistItem_id);
+					deviation_block = generateAuthorDeviationBlock(checklistItem_id);
 					
 					checklistItemLI.appendChild(checklistItemText);
 					
@@ -706,9 +706,9 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				} else if(role == "\"one-phase-reviewer\""){
 					// deviation_block = generate_reviewer_deviation_block(checklistItem_id);
 					if(data){
-						deviation_block = generate_one_phase_reviewer_deviation_block(checklistItem_id,data);
+						deviation_block = generateOnePhaseReviewerDeviationBlock(checklistItem_id,data);
 					}else{
-						deviation_block = generate_one_phase_reviewer_deviation_block(checklistItem_id,null);
+						deviation_block = generateOnePhaseReviewerDeviationBlock(checklistItem_id,null);
 					}
 					
 					checklistItemLI.appendChild(userInputYes);
@@ -720,9 +720,9 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 				}
 				else if(role == "\"two-phase-reviewer\""){
 					if(data){
-						deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id,data);
+						deviation_block = generateTwoPhaseReviewerDeviationBlock(checklistItem_id,data);
 					}else{
-						deviation_block = generate_two_phase_reviewer_deviation_block(checklistItem_id,null);
+						deviation_block = generateTwoPhaseReviewerDeviationBlock(checklistItem_id,null);
 					}
 					
 					checklistItemLI.appendChild(userInputYes);
@@ -738,7 +738,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					location_container = document.createElement("span");
 					location_container.className = "location_container";
 
-					userInputYes = generate_location_textbox("item_location_textbox", checklistItem_id);
+					userInputYes = generateLocationTextbox("item_location_textbox", checklistItem_id);
 					
 					var userInputNo;
 					missing_container = document.createElement("span");
@@ -748,7 +748,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 					userInputNo.id = "missing_checkbox:" + checklistItem_id;
 					userInputNo.className = "missing_checkbox";
 					userInputNo.name = checklistItem_id;
-					userInputNo.onclick = show_hide_location_textbox;
+					userInputNo.onclick = showHideLocationTextbox;
 					userInputNo.value = line_text;
 				
 					checklistItemLI.appendChild(checklistItemText);
@@ -777,7 +777,7 @@ function convert_MD_standard_checklists_to_html_standard_checklists(standardName
 }
 
 // A function to process the Encoding method of the contents to create a unique key for every single checklist
-function Encode_key(content) {
+function encodeKey(content) {
 	console.log(content);
 	// process the conentes within <a> and </a>
 	content = content.replace(/<a[^>]*>|<\/a>/g, '');

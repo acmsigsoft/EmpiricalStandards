@@ -1,11 +1,11 @@
-function populate_checklist() {
+function populateChecklist() {
 	console.log("Populating " + role + " checklist");
 
 	// Clear all stored items for this checklist
 	let keys = Object.keys(localStorage);
 
 	// Move nonessential keys to last
-	let nonessential = keys.filter(check_nonessential_keys);
+	let nonessential = keys.filter(checkNonessentialKeys);
 	for (let key of nonessential) {
 		let index = keys.indexOf(key);
 		keys.push(keys.splice(index, 1)[0]);
@@ -83,6 +83,6 @@ function populate_checklist() {
 }
 
 // Check if the key is nonessential
-function check_nonessential_keys(key) {
+function checkNonessentialKeys(key) {
 	return key.includes("Desirable") || key.includes("Extraordinary");
 }

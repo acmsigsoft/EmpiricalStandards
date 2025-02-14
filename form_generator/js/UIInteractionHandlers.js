@@ -1,5 +1,5 @@
 // This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-function generate_decision_message_block() {
+function generateDecisionMessageBlock() {
 
 	var checklist_yes_not_checked_count;
 	var checklist_no_checked_count;
@@ -112,7 +112,7 @@ function generate_decision_message_block() {
 }
 
 // Determine whether to show or hide the primary location textbox
-function show_hide_location_textbox() {
+function showHideLocationTextbox() {
 	id = this.id;
 	console.log(id);
 
@@ -121,15 +121,15 @@ function show_hide_location_textbox() {
 
 	if (missing_checkbox.checked) {
 		console.log("Missing checked");
-		show_deviation_block_and_hide_location_textbox();
+		showDeviationBlockHideLocationTextbox();
 	} else {
 		console.log("Missing unchecked");
-		hide_deviation_block_and_show_location_textbox();
+		hideDeviationBlockShowLocationTextbox();
 	}
 }
 
 //this function manages the display of the deviation block, which is dependent upon user input
-function show_deviation_block_and_hide_location_textbox() {
+function showDeviationBlockHideLocationTextbox() {
 
 	// Replace ID from Yes to an empty string
 	if (role == "\"author\"") {
@@ -153,14 +153,14 @@ function show_deviation_block_and_hide_location_textbox() {
 	if (deviationRadioYes && deviationRadioYes.disabled) {
 		let deviationRadioNo = document.getElementById("deviation_block-radio:No:" + id);
 		deviationRadioNo.click();
-		create_deviation_justification_block_and_show_hide_justification_location_textbox.call(deviationRadioNo);
+		createDeviationJustificationBlockShowHideJustificationLocationTextbox.call(deviationRadioNo);
 	}
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-	generate_decision_message_block();
+	generateDecisionMessageBlock();
 }
 
 //this function  manages the display of the deviation block, which is dependent upon user input
-function hide_deviation_block_and_show_location_textbox() {
+function hideDeviationBlockShowLocationTextbox() {
 
 	// Replace ID from Yes to an empty string
 	if (role == "\"author\"") {
@@ -174,7 +174,7 @@ function hide_deviation_block_and_show_location_textbox() {
 	} else {
 		id = this.id.replace("checklist-radio:Yes:", "");
 	}
-	hide_other_messages(id);
+	hideOtherMessages(id);
 
 	// Hide all Deviation Blocks
 	var block = document.getElementById("deviation_block:" + id);
@@ -213,17 +213,17 @@ function hide_deviation_block_and_show_location_textbox() {
 	}
 
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-	generate_decision_message_block();
+	generateDecisionMessageBlock();
 }
 
 
 //this function creates a deviation block for all Essential items in the standards
-function create_deviation_justification_block_and_show_hide_justification_location_textbox() {
+function createDeviationJustificationBlockShowHideJustificationLocationTextbox() {
 	// (No-Yes) deviation is justified
 	console.log(this);
 	if (this.id.includes("deviation_block-radio:Yes:")) {
 		id = this.id.replace("deviation_block-radio:Yes:", "")
-		hide_other_messages(id);
+		hideOtherMessages(id);
 		var block = document.getElementById("deviation_not_justified:" + id);
 		block.style.display = "none";
 		var block = document.getElementById("deviation_justified:" + id);
@@ -244,7 +244,7 @@ function create_deviation_justification_block_and_show_hide_justification_locati
 	// (No-No) deviation is unjustified (reviewer)
 	else if (this.id.includes("deviation_block-radio:No:")) {
 		id = this.id.replace("deviation_block-radio:No:", "")
-		hide_other_messages(id);
+		hideOtherMessages(id);
 		var empty_message = document.getElementById("deviation_justified:" + id);
 		empty_message.style.display = "none";
 		var message = document.getElementById("deviation_not_justified:" + id);
@@ -261,7 +261,7 @@ function create_deviation_justification_block_and_show_hide_justification_locati
 		// (No-No) deviation is unjustified (author)
 	} else if (this.id.includes("unjustified_checkbox:")) {
 		id = this.id.replace("unjustified_checkbox:", "")
-		hide_other_messages(id);
+		hideOtherMessages(id);
 		var empty_message = document.getElementById("deviation_justified:" + id);
 		empty_message.style.display = "none";
 		var message = document.getElementById("deviation_not_justified:" + id);
@@ -282,38 +282,38 @@ function create_deviation_justification_block_and_show_hide_justification_locati
 		// (No-Yes-Yes) => deviation is justified and justification is reasonable
 		if (this.id.includes("deviation_justified-radio:Yes:")) {
 			id = this.id.replace("deviation_justified-radio:Yes:", "")
-			hide_other_messages(id);
+			hideOtherMessages(id);
 			var message = document.getElementById("justification_reasonable:" + id);
 			message.style.display = "block";
 		}
 		// (No-Yes-No) => deviation is justified but justification is unreasonable
 		else if (this.id.includes("deviation_justified-radio:No:")) {
 			id = this.id.replace("deviation_justified-radio:No:", "")
-			hide_other_messages(id);
+			hideOtherMessages(id);
 			var message = document.getElementById("justification_unreasonable:" + id);
 			message.style.display = "block";
 		}
 		// (No-No-Yes) => deviation is unjustified but reasonable
 		else if (this.id.includes("deviation_not_justified-radio:Yes:")) {
 			id = this.id.replace("deviation_not_justified-radio:Yes:", "")
-			hide_other_messages(id);
+			hideOtherMessages(id);
 			var message = document.getElementById("deviation_reasonable:" + id);
 			message.style.display = "block";
 		}
 		// (No-No-No) => deviation is unjustified and unreasonable
 		else if (this.id.includes("deviation_not_justified-radio:No:")) {
 			id = this.id.replace("deviation_not_justified-radio:No:", "")
-			hide_other_messages(id);
+			hideOtherMessages(id);
 			document.getElementById("deviation_unreasonable:" + id).style.display = "block";
 		}
 	}
 
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-	generate_decision_message_block();
+	generateDecisionMessageBlock();
 }
 
 //this function is responsible for hiding all messages displayed as a result of selecting 'No'
-function hide_other_messages(id) {
+function hideOtherMessages(id) {
 	try {
 		document.getElementById("deviation_reasonable:" + id).style.display = "none";
 		document.getElementById("deviation_unreasonable:" + id).style.display = "none";
@@ -345,7 +345,7 @@ function createTooltip(checklistItemText, line_text, footnotes) {
 
 			var tooltipText = document.createElement("span");
 			tooltipText.className = "tooltiptext";
-			tooltipText.innerHTML = convert_MD_tags_to_HTML_tags(footnotes[ftnt[2]]);
+			tooltipText.innerHTML = convertMDTagsToHTMLTags(footnotes[ftnt[2]]);
 			tooltip.appendChild(tooltipText);
 			allTooltipsText.appendChild(tooltip);
 		}

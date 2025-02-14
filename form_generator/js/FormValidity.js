@@ -1,5 +1,5 @@
 // Check if the completed checklist is valid (no missing items)
-function check_form_validity(event) {
+function checkFormValidity(event) {
 	event.preventDefault();
 	let validity = true;
 	let list = document.getElementById("Essential");

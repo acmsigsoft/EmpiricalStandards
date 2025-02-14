@@ -43,7 +43,7 @@ function convertMarkdownToHTML(markdown) {
 }
 
 // collect footnotes
-function collect_footnotes(dom, standardTag) {
+function collectFootnotes(dom, standardTag) {
 	var footnoteTags = dom.getElementsByTagName("footnote");
 
 	for (let footnoteTag of footnoteTags) {
@@ -55,7 +55,7 @@ function collect_footnotes(dom, standardTag) {
 }
 
 //The text from the MD file is converted to HTML using this method
-function convert_MD_tags_to_HTML_tags(text) {
+function convertMDTagsToHTMLTags(text) {
 	// Bold text - Convert from MD to HTML tags
 	if (text.match(/\*\*(.*?)\*\*/g) != null) {
 		text = text.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
@@ -75,7 +75,7 @@ function convert_MD_tags_to_HTML_tags(text) {
 }
 
 //generate a message with a specific style
-function generate_message(id, text, style_class) {
+function generateMessage(id, text, style_class) {
 	var message;
 
 	if (role == "\"author\"") {
@@ -93,7 +93,7 @@ function generate_message(id, text, style_class) {
 }
 
 //this function creates a location textbox for all items in the standards
-function generate_location_textbox(name, id) {
+function generateLocationTextbox(name, id) {
 	var location_textbox;
 	location_textbox = document.createElement('input');
 	location_textbox.type = 'text';

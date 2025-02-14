@@ -25,135 +25,6 @@ function getParameterByName(param_name, url = window.location.href) {
 	return param_values;
 }
 
-// TODO: Not used anywhere, can be removed, verify with Erin before removal.
-function generate_question_block_without_yes_no_radio_answers(id, class_name, question, checklistItem_id, padding) {
-	var question_block = document.createElement("div");
-
-	question_block.id = id + ":" + checklistItem_id;
-	question_block.className = "question_block";
-	question_block.style = "padding-left:" + padding + "em; display:none";
-
-	return question_block;
-}
-
-function generate_question_block_with_yes_no_radio_answers(id, class_name, question, checklistItem_id, padding, display) {
-	var question_block = document.createElement("div");
-	
-	question_block.id = id + ":" + checklistItem_id;
-	question_block.className = "question_block";
-	
-	var deviation_block = document.createElement("div");
-
-	if (role == "\"author\"") {
-		question_block.classList.add("author_yes_no_block");
-		var questiontext_container = document.createElement("span");
-		questiontext_container.innerHTML = "&rdsh;&nbsp; " + question;
-		questiontext_container.className = "question_text_container";
-	
-		// For authors, create location indicator + N/A checkbox
-		var justification_location_textbox = generate_location_textbox("justification_location_textbox", checklistItem_id);
-		var location_container = document.createElement("span");
-		location_container.className = "location_container";
-		location_container.appendChild(justification_location_textbox);
-		
-		unjustified_checkbox = document.createElement("input");
-		unjustified_checkbox.type = "checkbox";
-		unjustified_checkbox.id = "unjustified_checkbox:" + checklistItem_id;
-		unjustified_checkbox.className = "unjustified_checkbox";
-		unjustified_checkbox.name = checklistItem_id;
-		unjustified_checkbox.onclick = create_deviation_justification_block_and_show_hide_justification_location_textbox;
-		
-		var unjustified_container = document.createElement("span");
-		unjustified_container.appendChild(unjustified_checkbox);
-		
-		question_block.appendChild(questiontext_container);
-		question_block.appendChild(location_container);
-		question_block.appendChild(unjustified_container);
-		
-		var deviation_not_justified = generate_message("deviation_not_justified:" + checklistItem_id, "&nbsp;Your manuscript should justify any deviations from essential attributes.", "unjustified_warning");
-		
-		question_block.appendChild(deviation_not_justified);
-	} else {
-		question_block.classList.add("reviewer_yes_no_block");
-		deviation_block.className = "reviewer_reasonable_block";
-		
-		let question_text = document.createElement("span");
-		question_text.innerHTML = "&rdsh;&nbsp; " + question;
-		
-		// For reviewers, create yes-no radio buttons
-		var deviationRadioYes = document.createElement("input");
-		var deviationLabelYes = document.createElement("label");
-		deviationRadioYes.id = id + "-radio:Yes:" + checklistItem_id;
-		deviationRadioYes.className = class_name + "Yes";
-		deviationRadioYes.name = id + "-radio:" + checklistItem_id;
-		deviationRadioYes.onclick = create_deviation_justification_block_and_show_hide_justification_location_textbox;
-		deviationRadioYes.type = "radio";
-		deviationRadioYes.value = "yes";
-		deviationLabelYes.innerHTML = "yes&nbsp;&nbsp;";
-		deviationLabelYes.htmlFor = deviationRadioYes.id;
-		
-		var deviationRadioNo = document.createElement("input");
-		var deviationLabelNo = document.createElement("label");
-		deviationRadioNo.id = id + "-radio:No:" + checklistItem_id;
-		deviationRadioNo.className = class_name + "No";
-		deviationRadioNo.name = id + "-radio:" + checklistItem_id;
-		deviationRadioNo.onclick = create_deviation_justification_block_and_show_hide_justification_location_textbox;
-		deviationRadioNo.type = "radio";
-		deviationRadioNo.value = "no";
-		deviationLabelNo.innerHTML = "no";
-		deviationLabelNo.htmlFor = deviationRadioNo.id;
-		
-		deviation_block.appendChild(question_text);
-		deviation_block.appendChild(deviationRadioYes);
-		deviation_block.appendChild(deviationLabelYes);
-		deviation_block.appendChild(deviationRadioNo);
-		deviation_block.appendChild(deviationLabelNo);
-		question_block.appendChild(deviation_block);
-	}
-
-	// if the deviation reasonable is fixed in the table
-	if(display){
-		deviationRadioYes.disabled = true; // Disable 'Yes' radio button
-
-		// Cross out the label associated with the 'Yes' radio button
-		deviationLabelYes.innerHTML = "<s>yes</s>&nbsp;&nbsp;";
-	}
-	
-	return question_block;
-}
-
-
-
-//generate a message with a specific style
-function generate_message(id, text, style_class) {
-	var message;
-	
-	if (role == "\"author\"") {
-		message = document.createElement("span");
-		message.innerHTML = text;
-		message.className = "attention hide_display " + style_class;
-	} else {
-		message = document.createElement("div");
-		message.className = "attention hide_display " + style_class;
-	}
-	
-	message.id = id;
-	
-	return message;
-}
-
-// generate the deviation block for Author Role
-function generate_author_deviation_block(checklistItem_id) {
-	var deviation_block = generate_question_block_with_yes_no_radio_answers("deviation_block", "deviationRadio", "where does the manuscript justify the deviation?", checklistItem_id);
-
-	// Author-specific deviation justification message
-	var deviation_justified = generate_message("deviation_justified:" + checklistItem_id, "", "message_style_1");
-
-	deviation_block.appendChild(deviation_justified);
-
-	return deviation_block;
-}
-
 //sorting all the standards, engineering research and mixed methods always displayed before any other standards regardless of any input
 // sorting all the standards, engineering research and mixed methods always displayed before any other standards regardless of any input
 function sortStandards(keys) {
@@ -171,7 +42,7 @@ function sortStandards(keys) {
 }
 
 // Create Role Heading (Pre-Submission Checklist, Reviewer Checklist)
-function create_role_heading() {
+function createRoleHeading() {
 	var heading_div = document.createElement("div");
 	var heading = document.createElement("H1");
 
@@ -197,7 +68,7 @@ function create_role_heading() {
 }
 
 // Create a message showing the loaded configuration
-function create_load_config_msg() {
+function createLoadConfigMessage() {
 	var config = document.createElement("p");
 	config.innerHTML = "Customized Configuration Loaded";
 	config.className = "hide_display";
@@ -282,7 +153,7 @@ document.addEventListener("visibilitychange", () => {
 });
 
 // Add the bottom of checklist "For more information, see: "
-function create_for_more_info_part(standard_keys) {
+function createForMoreInfoPart(standard_keys) {
 	var more_info_DIV = document.createElement("DIV");
 	var more_info_H2 = document.createElement("H2");
 	more_info_H2.innerHTML = "For more information, see:";
@@ -328,13 +199,13 @@ function generateStandardChecklist(file) {
 	container.id = "container";
 
 	// Create header (Pre-submission Checklist, Reviewer Checklist)
-	var heading = create_role_heading();
+	var heading = createRoleHeading();
 
 	// Create a message showing the loaded configuration
-	var config = create_load_config_msg();
+	var config = createLoadConfigMessage();
 
 	// Create Checklist
-	var form = create_requirements_checklist(file);
+	var form = createRequirementsChecklist(file);
 
 	// Append header and form to container
 	container.appendChild(heading);
@@ -346,7 +217,7 @@ function generateStandardChecklist(file) {
 	container.appendChild(HR);
 
 	// Create "For more information, see:"
-	var more_info_DIV = create_for_more_info_part(standard_keys);
+	var more_info_DIV = createForMoreInfoPart(standard_keys);
 	container.appendChild(more_info_DIV);
 
 	if (wrapper == null) {
@@ -356,12 +227,12 @@ function generateStandardChecklist(file) {
 	}
 
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
-	generate_decision_message_block();
+	generateDecisionMessageBlock();
 
 	// Check if the current checklist is being stored
 	if (localStorage.getItem(role) !== null) {
 		console.log(role + " checklist found in storage");
-		populate_checklist();
+		populateChecklist();
 	} else {
 		console.log("Begin storing " + role + " checklist");
 		localStorage.setItem(role, "");
