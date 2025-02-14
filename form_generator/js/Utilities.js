@@ -48,9 +48,9 @@ function collectFootnotes(dom, standardTag) {
 
 	for (let footnoteTag of footnoteTags) {
 		supTag = footnoteTag.getElementsByTagName("sup")[0];
-		footnote_id = standardTag.getAttribute('name') + "--footnote--" + supTag.innerText.trim() // To make footnotes belong to their standards
+		footnoteID = standardTag.getAttribute('name') + "--footnote--" + supTag.innerText.trim() // To make footnotes belong to their standards
 		supTag.remove();
-		footnotes[footnote_id] = footnoteTag.innerText.trim();
+		footnotes[footnoteID] = footnoteTag.innerText.trim();
 	}
 }
 
@@ -75,16 +75,16 @@ function convertMDTagsToHTMLTags(text) {
 }
 
 //generate a message with a specific style
-function generateMessage(id, text, style_class) {
+function generateMessage(id, text, styleClass) {
 	var message;
 
 	if (role == "\"author\"") {
 		message = document.createElement("span");
 		message.innerHTML = text;
-		message.className = "attention hide_display " + style_class;
+		message.className = "attention hide_display " + styleClass;
 	} else {
 		message = document.createElement("div");
-		message.className = "attention hide_display " + style_class;
+		message.className = "attention hide_display " + styleClass;
 	}
 
 	message.id = id;
@@ -94,14 +94,14 @@ function generateMessage(id, text, style_class) {
 
 //this function creates a location textbox for all items in the standards
 function generateLocationTextbox(name, id) {
-	var location_textbox;
-	location_textbox = document.createElement('input');
-	location_textbox.type = 'text';
-	location_textbox.className = name;
-	location_textbox.id = name + ":" + id;
-	location_textbox.maxLength = "100";
-	location_textbox.pattern = "^(?!.*[A-Za-z]).*$";
-	location_textbox.title = "Numbers and symbols only."
-	location_textbox.defaultValue = '';
-	return location_textbox;
+	var locationTextbox;
+	locationTextbox = document.createElement('input');
+	locationTextbox.type = 'text';
+	locationTextbox.className = name;
+	locationTextbox.id = name + ":" + id;
+	locationTextbox.maxLength = "100";
+	locationTextbox.pattern = "^(?!.*[A-Za-z]).*$";
+	locationTextbox.title = "Numbers and symbols only."
+	locationTextbox.defaultValue = '';
+	return locationTextbox;
 }

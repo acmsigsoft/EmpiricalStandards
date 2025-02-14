@@ -1,70 +1,69 @@
 // Variables for the Checklist
 let role = getParameterByName('role');
 
-all_intro_items = "";
-all_method_items = "";
-all_results_items = "";
-all_discussion_items = "";
-all_other_items = "";
-unrecognized_tags = "";
-standards_with_no_tags = "";
-standards_with_untagged_attributes = "";
+allIntroItems = "";
+allMethodItems = "";
+allResultsItems = "";
+allDiscussionItems = "";
+allOtherItems = "";
+unrecognizedTags = "";
+standardsWithNoTags = "";
+standardsWithUntaggedAttributes = "";
 
 //This function reads in the file name and passes it onto the next method
-function getParameterByName(param_name, url = window.location.href) {
+function getParameterByName(paramName, url = window.location.href) {
 	var params = location.search && location.search.substr(1).replace(/\+/gi, " ").split("&");
-	var param_values = [];
+	var paramValues = [];
 	var i = 0;
-	for (var param_index in params) {
-		var param = params[param_index].split("=");
-		if (param[0] === param_name) {
-			param_values[i] = param.length > 1 ? "\"" + unescape(param[1]) + "\"" : "noval";
+	for (var paramIndex in params) {
+		var param = params[paramIndex].split("=");
+		if (param[0] === paramName) {
+			paramValues[i] = param.length > 1 ? "\"" + unescape(param[1]) + "\"" : "noval";
 			i++;
 		}
 	}
-	return param_values;
+	return paramValues;
 }
 
-//sorting all the standards, engineering research and mixed methods always displayed before any other standards regardless of any input
 // sorting all the standards, engineering research and mixed methods always displayed before any other standards regardless of any input
 function sortStandards(keys) {
-	var sorted_keys = [];
+	var sortedKeys = [];
 	if (keys.includes("\"Engineering Research\"")) {
-		sorted_keys.push("\"Engineering Research\"")
+		sortedKeys.push("\"Engineering Research\"")
 		keys.splice(keys.indexOf("\"Engineering Research\""), 1);
 	}
 	if (keys.includes("\"Mixed Methods\"")) {
-		sorted_keys.push("\"Mixed Methods\"")
+		sortedKeys.push("\"Mixed Methods\"")
 		keys.splice(keys.indexOf("\"Mixed Methods\""), 1);
 	}
-	sorted_keys = sorted_keys.concat(keys.sort());
-	return sorted_keys;
+	sortedKeys = sortedKeys.concat(keys.sort());
+	return sortedKeys;
 }
 
 // Create Role Heading (Pre-Submission Checklist, Reviewer Checklist)
 function createRoleHeading() {
-	var heading_div = document.createElement("div");
+	var headingContainer = document.createElement("div");
 	var heading = document.createElement("H1");
 
 	if (role == "\"author\"") {
 		heading.innerHTML = "Pre-Submission Checklist";
-		heading_div.appendChild(heading);
+		headingContainer.appendChild(heading);
 
 		var instructions = document.createElement("h3");
 		instructions.innerHTML = "Use this form to ensure your manuscript meets the appropriate standards. You can download the results to share with reviewers so they can see where you have addressed each item.";
 
-		heading_div.appendChild(instructions);
+		headingContainer.appendChild(instructions);
 
 	} else if (role == "\"one-phase-reviewer\"") {
 		heading.innerHTML = "Reviewer Checklist";
-		heading_div.appendChild(heading);
+		headingContainer.appendChild(heading);
 
 	} else if (role == "\"two-phase-reviewer\"") {
 		heading.innerHTML = "Reviewer Checklist";
-		heading_div.appendChild(heading);
+		headingContainer.appendChild(heading);
 	}
 
-	return heading_div;
+	return headingContainer;
 }
 
 // Create a message showing the loaded configuration
@@ -92,17 +91,17 @@ document.addEventListener("visibilitychange", () => {
 			} else if (item.children[1].checked) {
 				storage.checked = false;
 
-				let question_blocks = item.getElementsByClassName('question_block');
-				let reasonable_yes = question_blocks[0].getElementsByClassName('deviationRadioYes')[0];
-				let reasonable_no = question_blocks[0].getElementsByClassName('deviationRadioNo')[0];
+				let questionBlocks = item.getElementsByClassName('question_block');
+				let reasonableYes = questionBlocks[0].getElementsByClassName('deviationRadioYes')[0];
+				let reasonableNo = questionBlocks[0].getElementsByClassName('deviationRadioNo')[0];
 
-				if (reasonable_yes.checked) {
+				if (reasonableYes.checked) {
 					storage.reasonable = true;
 
-				} else if (reasonable_no.checked) {
+				} else if (reasonableNo.checked) {
 					storage.reasonable = false;
 
-					let types = question_blocks[1].getElementsByClassName('justificationRadioType');
+					let types = questionBlocks[1].getElementsByClassName('justificationRadioType');
 					if (types[0].checked) {
 						storage.deviationType = 1;
 					} else if (types[1] && types[1].checked) {
@@ -113,11 +112,11 @@ document.addEventListener("visibilitychange", () => {
 						storage.deviationType = 4;
 					}
 
-					let free_text = item.getElementsByClassName('question_block_free_Text')[0];
-					let free_text_content = free_text.getElementsByClassName('freeTextAnswer')[0];
+					let freeTextBox = item.getElementsByClassName('question_block_free_Text')[0];
+					let freeTextContent = freeTextBox.getElementsByClassName('freeTextAnswer')[0];
 
-					if (free_text_content.value != "") {
-						storage.freeText = free_text_content.value;
+					if (freeTextContent.value != "") {
+						storage.freeText = freeTextContent.value;
 					}
 				}
 				localStorage.setItem(key, JSON.stringify(storage));
@@ -127,23 +126,23 @@ document.addEventListener("visibilitychange", () => {
 				}
 			}
 		} else {
-			let location_box = item.getElementsByClassName('item_location_textbox')[0];
-			let missing_button = item.getElementsByClassName('missing_checkbox')[0];
+			let locationBox = item.getElementsByClassName('item_location_textbox')[0];
+			let missingButton = item.getElementsByClassName('missing_checkbox')[0];
 
-			if (location_box.value != "") {
-				storage.location = location_box.value;
+			if (locationBox.value != "") {
+				storage.location = locationBox.value;
 				localStorage.setItem(key, JSON.stringify(storage));
 
-			} else if (missing_button.checked) {
+			} else if (missingButton.checked) {
 				storage.location = false;
 
-				let justification_box = item.getElementsByClassName('justification_location_textbox')[0];
-				let justification_button = item.getElementsByClassName('unjustified_checkbox')[0];
+				let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
+				let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
 
-				if (justification_box.value != "") {
-					storage.justified = justification_box.value;
+				if (justificationBox.value != "") {
+					storage.justified = justificationBox.value;
 
-				} else if (justification_button.checked) {
+				} else if (justificationButton.checked) {
 					storage.justified = false;
 				}
 				localStorage.setItem(key, JSON.stringify(storage));
@@ -153,30 +152,30 @@ document.addEventListener("visibilitychange", () => {
 });
 
 // Add the bottom of checklist "For more information, see: "
-function createForMoreInfoPart(standard_keys) {
-	var more_info_DIV = document.createElement("DIV");
-	var more_info_H2 = document.createElement("H2");
-	more_info_H2.innerHTML = "For more information, see:";
+function createForMoreInfoPart(standardKeys) {
+	var moreInfoContainer = document.createElement("DIV");
+	var moreInfoH2 = document.createElement("H2");
+	moreInfoH2.innerHTML = "For more information, see:";
 
-	var standards_path = "../docs/standards?standard="
-	var more_info_UL = document.createElement("UL");
-	more_info_UL.className = "more-info-list";
+	var standardsPath = "../docs/standards?standard="
+	var moreInfoUL = document.createElement("UL");
+	moreInfoUL.className = "more-info-list";
 
 	// Adding Standards as a list with a link to the correct page
-	for (let key of standard_keys) {
+	for (let key of standardKeys) {
 		key = key.replaceAll("\"", "");
-		var LI = document.createElement("LI");
-		var LINK = document.createElement("A");
-		LINK.innerHTML = key;
-		LINK.href = standards_path + key.replaceAll(" ", "");
-		LINK.target = "_blank";
-		LINK.className = "standard_links";
-		LI.appendChild(LINK);
-		more_info_UL.appendChild(LI);
+		var standardList = document.createElement("LI");
+		var standardLink = document.createElement("A");
+		standardLink.innerHTML = key;
+		standardLink.href = standardsPath + key.replaceAll(" ", "");
+		standardLink.target = "_blank";
+		standardLink.className = "standard_links";
+		standardList.appendChild(standardLink);
+		moreInfoUL.appendChild(standardList);
 	}
-	more_info_DIV.appendChild(more_info_H2);
-	more_info_DIV.appendChild(more_info_UL);
-	return more_info_DIV;
+	moreInfoContainer.appendChild(moreInfoH2);
+	moreInfoContainer.appendChild(moreInfoUL);
+	return moreInfoContainer;
 }
 
 // Functions below are directly accessed by the UI Files
@@ -184,10 +183,10 @@ function generateStandardChecklist(file) {
 	console.log(file);
 
 	// list of Standards
-	standard_keys = getParameterByName('standard');
+	standardKeys = getParameterByName('standard');
 
 	// return sorted list of Standards
-	standard_keys = sortStandards(standard_keys);
+	standardKeys = sortStandards(standardKeys);
 
 	var wrappers = document.getElementsByClassName('wrapper');
 	var wrapper = null;
@@ -217,8 +216,8 @@ function generateStandardChecklist(file) {
 	container.appendChild(HR);
 
 	// Create "For more information, see:"
-	var more_info_DIV = createForMoreInfoPart(standard_keys);
-	container.appendChild(more_info_DIV);
+	var moreInfoContainer = createForMoreInfoPart(standardKeys);
+	container.appendChild(moreInfoContainer);
 
 	if (wrapper == null) {
 		document.body.appendChild(container);
@@ -239,11 +238,11 @@ function generateStandardChecklist(file) {
 	}
 }
 
-function viewStandardDescription(standard_name) {
+function viewStandardDescription(standardName) {
 	// Obtain all the information for a Standard
-	empirical_standard = readSpecificEmpiricalStandard(standard_name);
+	empiricalStandard = readSpecificEmpiricalStandard(standardName);
 	var dom = document.createElement("div");
-	dom.innerHTML = empirical_standard;
+	dom.innerHTML = empiricalStandard;
 	var standardTag = dom.getElementsByTagName("standard")[0];
 	var descTags = standardTag.getElementsByTagName("desc");
 	for (let descTag of descTags) {
