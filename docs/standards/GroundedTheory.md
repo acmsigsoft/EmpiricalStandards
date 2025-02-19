@@ -37,7 +37,7 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
 - [ ]	describes data sources (e.g. participants' demographics, work roles)
 - [ ]	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
-- [ ]	provides evidence of saturation; explains how saturation was achieved<sup><a class="footnote footnote-ref">1</a></sup> 
+- [ ]	provides evidence of saturation; explains how saturation was achieved<sup><a class="footnote footnote_ref">1</a></sup> 
 - [ ]	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
     
 <results>
@@ -169,5 +169,5 @@ up-front? A grounded theory of agile architecture. In *2015 IEEE/ACM
 2015), 347–357.
     
 ---
-<footnote><sup><a class="footnote footnote-text">1</a></sup>cf. Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.</footnote><br>    
+<footnote><sup><a class="footnote footnote_text">1</a></sup>cf. Khaldoun M. Aldiabat and Carole-Lynne Le Navenec. "Data Saturation: The Mysterious Step in Grounded Theory Methodology." _The Qualitative Report_, vol. 23, no. 1, 2018, pp. 245-261.</footnote><br>    
 </standard>

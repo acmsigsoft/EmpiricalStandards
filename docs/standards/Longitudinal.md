@@ -22,23 +22,23 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 
 <method>
     
-- [ ] determines the appropriate number of waves based on the natural oscillation of the research phenomenon<sup><a class="footnote footnote-ref">1</a></sup>
+- [ ] determines the appropriate number of waves based on the natural oscillation of the research phenomenon<sup><a class="footnote footnote_ref">1</a></sup>
 - [ ] uses at least two data collection waves
 - [ ] subjects (humans or artifacts) are identifiable between waves
-- [ ] justifies the data analysis strategy<sup><a class="footnote footnote-ref">2</a></sup>
-- [ ] the data analysis strategy is appropriate for the interdependent nature of the data<sup><a class="footnote footnote-ref">3</a></sup>
-- [ ] discusses the critical alpha levels or justifies Bayesian priors<sup><a class="footnote footnote-ref">4</a></sup>
-- [ ] justifies sample size (e.g. using power analysis)<sup><a class="footnote footnote-ref">5</a></sup>
+- [ ] justifies the data analysis strategy<sup><a class="footnote footnote_ref">2</a></sup>
+- [ ] the data analysis strategy is appropriate for the interdependent nature of the data<sup><a class="footnote footnote_ref">3</a></sup>
+- [ ] discusses the critical alpha levels or justifies Bayesian priors<sup><a class="footnote footnote_ref">4</a></sup>
+- [ ] justifies sample size (e.g. using power analysis)<sup><a class="footnote footnote_ref">5</a></sup>
 - [ ] describes data loss throughout the different waves
 - [ ] explains how missing data are handled
 
 <results>
 
-- [ ] describes the subjects (e.g., demographic information in the case of humans)<sup><a class="footnote footnote-ref">6</a></sup>
+- [ ] describes the subjects (e.g., demographic information in the case of humans)<sup><a class="footnote footnote_ref">6</a></sup>
 
 <discussion>
 
-- [ ] discusses the operationalization of the research model (i.e. construct validity)<sup><a class="footnote footnote-ref">7</a></sup>
+- [ ] discusses the operationalization of the research model (i.e. construct validity)<sup><a class="footnote footnote_ref">7</a></sup>
 
 <other>
     
@@ -54,14 +54,14 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 - [ ] discusses data (in)consistency across waves (e.g. test-retest reliability)
 - [ ] examines differences in distributions between waves (and uses an appropriate data analysis strategy)
 - [ ] describes the cost of gathering data and any incentives used
-- [ ] addresses survivorship bias<sup><a class="footnote footnote-ref">8</a></sup>     
+- [ ] addresses survivorship bias<sup><a class="footnote footnote_ref">8</a></sup>     
 
 </checklist>
     
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
 
-- [ ] uses a multi-stage selection process to identify the study's subjects<sup><a class="footnote footnote-ref">9</a></sup>
+- [ ] uses a multi-stage selection process to identify the study's subjects<sup><a class="footnote footnote_ref">9</a></sup>
 </checklist>
 - [ ] follows subjects for an exceptionally long period (e.g. more than five years)    
 
@@ -80,7 +80,7 @@ Longitudinal studies exploit the temporal nature of data to maximize internal va
 ## Variations
 
 - _Experience sampling_ provides a highly specific understanding of a phenomenon through multiple repeated measurements per day over a short period (typically one to three weeks). It emphasizes in-the-moment assessment rather than reflective assessment (van Berkel et al. 2017). This standard applies to experience sampling studies.
-- _Cohort studies_ are a type of analytical observational study where researchers investigate the relationship between an independent and dependent variable by observing subjects over time and comparing groups with different levels of exposure. Cohort studies follow more strict rules than presented here.<sup><a class="footnote footnote-ref">10</a></sup>
+- _Cohort studies_ are a type of analytical observational study where researchers investigate the relationship between an independent and dependent variable by observing subjects over time and comparing groups with different levels of exposure. Cohort studies follow more strict rules than presented here.<sup><a class="footnote footnote_ref">10</a></sup>
 
 ## Invalid Criticisms
 
@@ -112,14 +112,14 @@ Longitudinal studies exploit the temporal nature of data to maximize internal va
 - Benner, Mary J., and Michael Tushman. &quot;Process management and technological innovation: A longitudinal study of the photography and paint industries.&quot; Administrative Science Quarterly 47.4 (2002): 676–707.
 
 ---
-<footnote><sup><a class="footnote footnote-text">1</a></sup>On the concept of natural oscillation cf. Kehr &amp; Kowatsch, 2015.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">2</a></sup>Although there might not be one best method for a specific problem, it should still be discussed on a subjective level (e.g., why it fits best to the research question) and at an objective level (e.g., data normality).</footnote><br>
-<footnote><sup><a class="footnote footnote-text">3</a></sup>Several different statistical approaches are used to analyze longitudinal data (Kehr &amp; Kowatsch provide a partial overview).</footnote><br>
-<footnote><sup><a class="footnote footnote-text">4</a></sup>The choice of thresholds (e.g., _p_-values \&lt; 0.05) should be discussed, to avoid Type I errors. Typically, longitudinal analyses deal with many variables and multiple comparisons, increasing the likelihood to obtain results within traditionally acceptable thresholds. For this reason, authors are advised to adjust the critical alpha level (e.g., using as a threshold _p_-values \&lt; 0.001) or use Bayesian statistics (Simmons et al., 2011).</footnote><br>
-<footnote><sup><a class="footnote footnote-text">5</a></sup>Determining the sample size is of utter importance to avoid Type II errors. Thus, authors might define their sample size using a priori power calculations. At the same time, reviewers can control adequate size through a post hoc analysis (Faul, 2019).</footnote><br>
-<footnote><sup><a class="footnote footnote-text">6</a></sup>The research design should explicitly state how the sample has been selected and filtered out through a selection process. For example, how are we sure to have included only software engineers when dealing with human subjects? Or, which type of quality controls have been performed on software repositories to ensure the consistency and homogeneity of artifacts?</footnote><br>
-<footnote><sup><a class="footnote footnote-text">7</a></sup>It should be clear, which are the factors being investigated and how they have been selected. Similarly, measurements should show adequate reliability based on literature benchmarks (e.g., Cronbach&#39;s alpha, test-retest reliability between waves).</footnote><br>
-<footnote><sup><a class="footnote footnote-text">8</a></sup>For example, if you analyze the past 100 years of stock market performance based on the markets that exist today, you get much higher average returns than if you analyze all the markets that existed 100 years ago. </footnote><br>
-<footnote><sup><a class="footnote footnote-text">9</a></sup>An example of such a selection process can be found in Russo, Daniel, and Klaas-Jan Stol. &quot;Gender differences in personality traits of software engineers.&quot; _IEEE Transactions on Software Engineering_ (2020).</footnote><br>
-<footnote><sup><a class="footnote footnote-text">10</a></sup>See: David A. Grimes and Kenneth F. Schulz. Cohort studies: marching towards outcomes. _The Lancet_ 359, no. 9303 (2002): 341-345. </footnote><br>
+<footnote><sup><a class="footnote footnote_text">1</a></sup>On the concept of natural oscillation cf. Kehr &amp; Kowatsch, 2015.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">2</a></sup>Although there might not be one best method for a specific problem, it should still be discussed on a subjective level (e.g., why it fits best to the research question) and at an objective level (e.g., data normality).</footnote><br>
+<footnote><sup><a class="footnote footnote_text">3</a></sup>Several different statistical approaches are used to analyze longitudinal data (Kehr &amp; Kowatsch provide a partial overview).</footnote><br>
+<footnote><sup><a class="footnote footnote_text">4</a></sup>The choice of thresholds (e.g., _p_-values \&lt; 0.05) should be discussed, to avoid Type I errors. Typically, longitudinal analyses deal with many variables and multiple comparisons, increasing the likelihood to obtain results within traditionally acceptable thresholds. For this reason, authors are advised to adjust the critical alpha level (e.g., using as a threshold _p_-values \&lt; 0.001) or use Bayesian statistics (Simmons et al., 2011).</footnote><br>
+<footnote><sup><a class="footnote footnote_text">5</a></sup>Determining the sample size is of utter importance to avoid Type II errors. Thus, authors might define their sample size using a priori power calculations. At the same time, reviewers can control adequate size through a post hoc analysis (Faul, 2019).</footnote><br>
+<footnote><sup><a class="footnote footnote_text">6</a></sup>The research design should explicitly state how the sample has been selected and filtered out through a selection process. For example, how are we sure to have included only software engineers when dealing with human subjects? Or, which type of quality controls have been performed on software repositories to ensure the consistency and homogeneity of artifacts?</footnote><br>
+<footnote><sup><a class="footnote footnote_text">7</a></sup>It should be clear, which are the factors being investigated and how they have been selected. Similarly, measurements should show adequate reliability based on literature benchmarks (e.g., Cronbach&#39;s alpha, test-retest reliability between waves).</footnote><br>
+<footnote><sup><a class="footnote footnote_text">8</a></sup>For example, if you analyze the past 100 years of stock market performance based on the markets that exist today, you get much higher average returns than if you analyze all the markets that existed 100 years ago. </footnote><br>
+<footnote><sup><a class="footnote footnote_text">9</a></sup>An example of such a selection process can be found in Russo, Daniel, and Klaas-Jan Stol. &quot;Gender differences in personality traits of software engineers.&quot; _IEEE Transactions on Software Engineering_ (2020).</footnote><br>
+<footnote><sup><a class="footnote footnote_text">10</a></sup>See: David A. Grimes and Kenneth F. Schulz. Cohort studies: marching towards outcomes. _The Lancet_ 359, no. 9303 (2002): 341-345. </footnote><br>
 </standard>

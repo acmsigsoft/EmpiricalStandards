@@ -21,7 +21,7 @@ function showInstructions(){
 	roleInput.name = "role";
 	roleInput.value = role;
 	
-	var checklistForm = document.getElementById("checklistForm");
+	var checklistForm = document.getElementById("checklist_form");
 	checklistForm.appendChild(roleInput);
 }
 
@@ -33,7 +33,7 @@ $(window).bind("pageshow", function() {
 $(document).ready(function(){
 	// Enable the Submit button only when any of the checkboxes is checked; otherwise, disable.
 	$(".standard,.none").click(function() {
-		if ($("#checklistForm input[type=checkbox]:checked").length > 0) {
+		if ($("#checklist_form input[type=checkbox]:checked").length > 0) {
 			$(".button").attr("disabled", false);
 		} else {
 			$(".button").attr("disabled", true);

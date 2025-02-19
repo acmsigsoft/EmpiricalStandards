@@ -53,7 +53,7 @@ This standard applies to papers that provide analysis of one or more methodologi
 
 ## Antipatterns
 
-- overreaching; informal logical fallacies (e.g. straw man argument, appeal to popularity, shifting the burden of proof)<sup><a class="footnote footnote-ref">1</a></sup> 
+- overreaching; informal logical fallacies (e.g. straw man argument, appeal to popularity, shifting the burden of proof)<sup><a class="footnote footnote_ref">1</a></sup> 
 - discussing an issue without clear conclusions; failing to provide clear guidelines
 - attacking individual studies or researchers; hypothetical examples should be used to avoid engendering animosity
 
@@ -91,6 +91,6 @@ Helen Sharp, Yvonne Dittrich, and Cleidson RB De Souza. 2016. &quot;The role of 
 Yvonne Dittrich, Kari Rönkkö, Jeanette Eriksson, Christina Hansson, &amp; Olle Lindeberg (2008). Cooperative method development. _Empirical Software Engineering,_ 13, 3, 231–260.
 
 ---
-<footnote><sup><a class="footnote footnote-text">1</a></sup>citing seminal works is not the “appeal to authority” fallacy</footnote>
+<footnote><sup><a class="footnote footnote_text">1</a></sup>citing seminal works is not the “appeal to authority” fallacy</footnote>
 
 </standard>

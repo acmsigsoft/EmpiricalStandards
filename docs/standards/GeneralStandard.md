@@ -58,7 +58,7 @@ following.
     
 - [ ]	presents results
 - [ ]	results directly address research questions
-- [ ]	enumerates and validates assumptions of statistical tests used (if any)<sup><a class="footnote footnote-ref">1</a></sup>
+- [ ]	enumerates and validates assumptions of statistical tests used (if any)<sup><a class="footnote footnote_ref">1</a></sup>
 
 <discussion>
     
@@ -80,7 +80,7 @@ following.
 
 <checklist name="Desirable">
 
-- [ ]	states epistemological stance<sup><a class="footnote footnote-ref">2</a></sup>
+- [ ]	states epistemological stance<sup><a class="footnote footnote_ref">2</a></sup>
 - [ ]	summarizes and synthesizes a reasonable selection of related work (not every single relevant study)
 - [ ]	clearly describes relationship between contribution(s) and related work
 - [ ]	demonstrates appropriate statistical power (for quantitative work) or saturation (for qualitative work)
@@ -174,9 +174,9 @@ their trustworthiness and importance. Reviewers should endeavor to:
 -   Acknowledging limitations but then writing implications and conclusions as though the limitations don't exist.
 
 ---
-<footnote><sup><a class="footnote footnote-text">1</a></sup>visual methods of checking assumptions are often as good as or better than statistical tests</footnote><br>
-<footnote><sup><a class="footnote footnote-text">2</a></sup>e.g. positivism, falisificationism, interpretivism, critical realism, postmodernism</footnote><br>
-<footnote><sup><a class="footnote footnote-text">Q</a></sup>This is a custom question for first checklist</footnote><br>
+<footnote><sup><a class="footnote footnote_text">1</a></sup>visual methods of checking assumptions are often as good as or better than statistical tests</footnote><br>
+<footnote><sup><a class="footnote footnote_text">2</a></sup>e.g. positivism, falisificationism, interpretivism, critical realism, postmodernism</footnote><br>
+<footnote><sup><a class="footnote footnote_text">Q</a></sup>This is a custom question for first checklist</footnote><br>
 
 </standard>
     

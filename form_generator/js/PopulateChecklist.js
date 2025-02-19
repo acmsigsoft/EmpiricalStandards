@@ -36,7 +36,7 @@ function populateChecklist() {
 						} else if (!state.reasonable) {
 							reasonableNo.click();
 
-							let types = questionBlocks[1].getElementsByClassName('justificationRadioType');
+							let types = questionBlocks[1].getElementsByClassName('justification_radio_type');
 
 							if (state.deviationType == 1) {
 								types[0].click();
@@ -48,8 +48,8 @@ function populateChecklist() {
 								types[3].click();
 							}
 
-							let freeTextBox = item.getElementsByClassName('question_block_free_Text')[0];
-							let freeTextContent = freeTextBox.getElementsByClassName('freeTextAnswer')[0];
+							let freeTextBox = item.getElementsByClassName('question_block_free_text')[0];
+							let freeTextContent = freeTextBox.getElementsByClassName('free_text_answer')[0];
 
 							if (Object.hasOwn(state, "freeText") && state.freeText != "") {
 								freeTextContent.value = state.freeText;

@@ -46,7 +46,7 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]   justifies the selection of the case(s) or site(s) that was(were) studied
 - [ ]   describes the site(s) in rich detail
 - [ ]   the site is a real (physical or virtual) place, not a toy example or imaginary world    
-- [ ]   reports the type of case study<sup><a class="footnote footnote-ref">1</a></sup>
+- [ ]   reports the type of case study<sup><a class="footnote footnote_ref">1</a></sup>
 - [ ]   describes data sources (e.g. participants' demographics and work roles)
 - [ ]   defines unit(s) of analysis or observation
 
@@ -67,11 +67,11 @@ captures a large quantitative dataset with limited context, consider the
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]   triangulates across data sources, informants or researchers
 - [ ]   cross-checks interviewee statements (e.g. against direct observation or archival records)
-- [ ]   uses participant observation (ethnography) or direct observation (non-ethnography) and clearly integrates these observations into results<sup><a class="footnote footnote-ref">2</a></sup>    
-- [ ]   validates results using member checking, dialogical interviewing<sup><a class="footnote footnote-ref">3</a></sup>, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
+- [ ]   uses participant observation (ethnography) or direct observation (non-ethnography) and clearly integrates these observations into results<sup><a class="footnote footnote_ref">2</a></sup>    
+- [ ]   validates results using member checking, dialogical interviewing<sup><a class="footnote footnote_ref">3</a></sup>, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]   describes external events and other factors that may have affected the case or site
 - [ ]   describes how prior understandings of the phenomena were managed and/or influenced the research
-- [ ]   uses quotations to *illustrate* findings<sup><a class="footnote footnote-ref">4</a></sup>
+- [ ]   uses quotations to *illustrate* findings<sup><a class="footnote footnote_ref">4</a></sup>
 - [ ]   EITHER: evaluates an a priori theory (or model, framework, taxonomy, etc.) using deductive coding with an a priori coding scheme based on the prior theory    
      OR: synthesizes results into a new, mature, fully-developed and clearly articulated theory (or model, etc.) using some form of inductive coding (coding scheme generated from data)
 - [ ]   researchers reflect on their own possible biases
@@ -212,8 +212,8 @@ case study of crowdsourcing software development. In *Proceedings of the
 36^th^ International Conference on Software Engineering*, 187–198, 2014.
 
 ---
-<footnote><sup><a class="footnote footnote-text">1</a></sup>e.g. descriptive, emancipatory, evaluative, explanatory, exploratory, historical, revelatory</footnote><br> 
-<footnote><sup><a class="footnote footnote-text">2</a></sup>Direct observation means watching research subjects without getting involved; participant observation means joining in with whatever participants are doing</footnote><br>
-<footnote><sup><a class="footnote footnote-text">3</a></sup>L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">4</a></sup>Quotations should not be *the only* representation of a finding; each finding should be described independently of supporting quotations</footnote><br>    
+<footnote><sup><a class="footnote footnote_text">1</a></sup>e.g. descriptive, emancipatory, evaluative, explanatory, exploratory, historical, revelatory</footnote><br> 
+<footnote><sup><a class="footnote footnote_text">2</a></sup>Direct observation means watching research subjects without getting involved; participant observation means joining in with whatever participants are doing</footnote><br>
+<footnote><sup><a class="footnote footnote_text">3</a></sup>L. Harvey. 2015. Beyond member-checking: A dialogic approach to the research interview, International Journal of Research & Method in Education, 38, 1, 23–38.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">4</a></sup>Quotations should not be *the only* representation of a finding; each finding should be described independently of supporting quotations</footnote><br>    
 </standard>

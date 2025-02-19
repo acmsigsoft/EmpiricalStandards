@@ -113,7 +113,7 @@ form:active {
 	margin-top: 5px;
 }
 
-.type_block, .question_block_free_Text {
+.type_block, .question_block_free_text {
 	display: none;
 	border: 1px solid #ccc;
 	border-radius: 5px;
@@ -122,12 +122,12 @@ form:active {
 	margin-left: 1em;
 }
 
-.freeTextAnswer {
+.free_text_answer {
 	width: 500px;
 	height: 70px;
 }
 
-.freeTextContainer {
+.free_text_container {
 	overflow: auto;
 	padding-left: 1.2em;
 }

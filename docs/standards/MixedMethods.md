@@ -34,7 +34,7 @@ the mixing of methodologies, not the methodologies themselves. For the latter, r
 
 <discussion>
 
-- [ ] acknowledges the **limitations** associated with integrating findings<sup><a class="footnote footnote-ref">1</a></sup>
+- [ ] acknowledges the **limitations** associated with integrating findings<sup><a class="footnote footnote_ref">1</a></sup>
 
 <other>
 
@@ -222,5 +222,5 @@ mixed methods." Research in the Schools 13, no. 1 (2006): 12-28.
 |A. AlSubaihin, F. Sarro, S. Black, L. Capra and M. Harman, "App Store Effects on Software Engineering Practices," in IEEE Transactions on Software Engineering (Early Access). DOI:https://doi.org/10.1109/TSE.2019.2891715. [[pdf]](https://discovery.ucl.ac.uk/id/eprint/10065145/1/TSEAlSubaihin.pdf)|Interviews + Questionnairs, Deductive, mixed method drawing from survey and case study empirical research methodologies, exploratory + descriptive |
 
 ---
-<footnote><sup><a class="footnote footnote-text">1</a></sup>e.g., samples that are drawn from different populations may introduce limitations when the findings are integrated, or biases may be introduced by the sequential or parallel nature of a mixed design</footnote><br>
+<footnote><sup><a class="footnote footnote_text">1</a></sup>e.g., samples that are drawn from different populations may introduce limitations when the findings are integrated, or biases may be introduced by the sequential or parallel nature of a mixed design</footnote><br>
 </standard>

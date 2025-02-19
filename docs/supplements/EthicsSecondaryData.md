@@ -11,16 +11,16 @@ This standard applies to studies in which data previously gathered from humans a
 - [ ] describes all plausible, non-trivial potential risks or harms to data custodians and data subjects
 - [ ] describes any steps taken to mitigate risks or harms
 - [ ] justifies the taking of risks and/or the causing of harm in terms of the claimed benefits of the research.
-- [ ] states the grounds on which the data used was legitimately available to the researchers<sup><a class="footnote footnote-ref">1</a></sup> 
-- [ ] explains how the research falls within the permissions given by the original data subjects<sup><a class="footnote footnote-ref">2</a></sup> 
+- [ ] states the grounds on which the data used was legitimately available to the researchers<sup><a class="footnote footnote_ref">1</a></sup> 
+- [ ] explains how the research falls within the permissions given by the original data subjects<sup><a class="footnote footnote_ref">2</a></sup> 
 - [ ] explains the provenance of the original data in terms of the data custodian&#39;s documentation of the conditions of data capture, and whether this capture met the standards required for Studies with Human Participants (particularly in respect of consent for capture and future use).
 - [ ] explains how participants&#39; privacy and reputation was respected in the conduct and reporting of the research. In particular, where multiple datasets are combined, explains how any additional privacy risks raised by this were mitigated.
-- [ ] explains how the privacy and consent of data subjects was respected during the research with reference to the conditions under which data was made available to the researcher<sup><a class="footnote footnote-ref">3</a></sup> , and how any further publication of the data (in existing, combined, or transformed form) will respect the expectations and consent given by data subjects.
+- [ ] explains how the privacy and consent of data subjects was respected during the research with reference to the conditions under which data was made available to the researcher<sup><a class="footnote footnote_ref">3</a></sup> , and how any further publication of the data (in existing, combined, or transformed form) will respect the expectations and consent given by data subjects.
 
 ### Desirable Attributes
 - [ ] explains how the researchers considered the impact of the research on those whose data was used
 - [ ] cites, with application number, approval of a national, institutional, or other appropriate scholarly ethical review board
-- [ ] cites the reference ethics framework(s) within which the work was conducted<sup><a class="footnote footnote-ref">4</a></sup> 
+- [ ] cites the reference ethics framework(s) within which the work was conducted<sup><a class="footnote footnote_ref">4</a></sup> 
 
 ### Extraordinary Attributes
 - [ ] supplementary materials include a complete application to a scholarly ethical review board and documentation of its approval
@@ -31,8 +31,8 @@ Research should balance the anticipated benefits of a study with the potential r
 
 ## Antipatterns
 
-- Justifying data use as acceptable solely because it is technically available (e.g. machine accessible or downloadable) as opposed to legitimately available (i.e. under the custodian&#39;s terms of access and use, and with verified provenance permitting the current use under the terms of the original data surrender).<sup><a class="footnote footnote-ref">5</a></sup> 
-- Reidentification (or creating the conditions for reidentification) of the data subjects whose data is analyzed.<sup><a class="footnote footnote-ref">6</a></sup> 
+- Justifying data use as acceptable solely because it is technically available (e.g. machine accessible or downloadable) as opposed to legitimately available (i.e. under the custodian&#39;s terms of access and use, and with verified provenance permitting the current use under the terms of the original data surrender).<sup><a class="footnote footnote_ref">5</a></sup> 
+- Reidentification (or creating the conditions for reidentification) of the data subjects whose data is analyzed.<sup><a class="footnote footnote_ref">6</a></sup> 
 - Failing to consider potential, harmful, unintended consequences of the research.
 - Accepting (e.g. from a corporation) a dataset that has been collected without adhering to the principles set forth in the **Ethics (Studies with Human Participants)**  **Standard** ; e.g. without participants&#39; consent or appropriate safeguards.
 
@@ -65,9 +65,9 @@ Nicolas Gold and Jens Krinke. 2020. Ethical Mining: A Case Study on MSR Mining C
 Lisa Sugiura, Rosemary Wiles, and Catherine Pope. 2016_._ Ethical challenges in online research: Public/private perceptions. _Research Ethics_ 13, 3–4 (July 2016), 184-199. DOI: 10.1177/1747016116650720
 
 ---
-<sup><a class="footnote footnote-text">1</a></sup> Examples: the terms of use of a website explicitly permit scraping for the kind of information gathered and for the purposes of research; the research falls within the scope of usage terms for the retrieval API; a curated dataset is licensed for the purpose of research.<br>
-<sup><a class="footnote footnote-text">2</a></sup> e.g.: (1) a public dataset’s website explicates that data was gathered from subjects with their consent for future research use compatible with that reported; (2) a software repository’s policies state that its users agree to their data being used for research and under conditions compatible with the research reported.<br>
-<sup><a class="footnote footnote-text">3</a></sup> Including, where appropriate, explains compliance with relevant data protection legislation (e.g. EU General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA) in terms of matters such as the basis for data processing, privacy notices offered, and data subject rights.<br>
-<sup><a class="footnote footnote-text">4</a></sup> E.g. ACM Code of Conduct, Internet Research: Ethical Guidelines, Menlo Report, RESPECT (see Suggested Readings)<br>
-<sup><a class="footnote footnote-text">5</a></sup> Note that there may be a difference between publicly viewable data on a privately-operated website (thus subject to site terms and conditions of access and use) and data that is in the public domain (i.e. publicly owned) or manifestly published.<br>
-<sup><a class="footnote footnote-text">6</a></sup> Conditions for reidentification may include quoting ostensibly anonymous data content that can be resolved to its original source (and thus the identity of the originator) through a search engine.
+<sup><a class="footnote footnote_text">1</a></sup> Examples: the terms of use of a website explicitly permit scraping for the kind of information gathered and for the purposes of research; the research falls within the scope of usage terms for the retrieval API; a curated dataset is licensed for the purpose of research.<br>
+<sup><a class="footnote footnote_text">2</a></sup> e.g.: (1) a public dataset’s website explicates that data was gathered from subjects with their consent for future research use compatible with that reported; (2) a software repository’s policies state that its users agree to their data being used for research and under conditions compatible with the research reported.<br>
+<sup><a class="footnote footnote_text">3</a></sup> Including, where appropriate, explains compliance with relevant data protection legislation (e.g. EU General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA) in terms of matters such as the basis for data processing, privacy notices offered, and data subject rights.<br>
+<sup><a class="footnote footnote_text">4</a></sup> E.g. ACM Code of Conduct, Internet Research: Ethical Guidelines, Menlo Report, RESPECT (see Suggested Readings)<br>
+<sup><a class="footnote footnote_text">5</a></sup> Note that there may be a difference between publicly viewable data on a privately-operated website (thus subject to site terms and conditions of access and use) and data that is in the public domain (i.e. publicly owned) or manifestly published.<br>
+<sup><a class="footnote footnote_text">6</a></sup> Conditions for reidentification may include quoting ostensibly anonymous data content that can be resolved to its original source (and thus the identity of the originator) through a search engine.

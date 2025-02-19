@@ -1,17 +1,17 @@
-let cite_button = document.getElementById("cite-button");
-let citation_modal = document.getElementById("citation-modal");
-let close_modal = document.getElementById("close-modal");
-let copy_button = document.getElementById("copy-citation");
+let citeButton = document.getElementById("cite_button");
+let citationModal = document.getElementById("citation_modal");
+let closeModal = document.getElementById("close_modal");
+let copyButton = document.getElementById("copy_citation");
 		
-cite_button.addEventListener("click", () => {
-	citation_modal.showModal();
+citeButton.addEventListener("click", () => {
+	citationModal.showModal();
 });
 		
-close_modal.addEventListener("click", () => {
-	citation_modal.close();
+closeModal.addEventListener("click", () => {
+	citationModal.close();
 });
 		
-citation_formats = document.getElementById("citation-formats");
+citationFormats = document.getElementById("citation_formats");
 
 const acm = "Paul Ralph et al. 2020. Empirical Standards for Software Engineering Research. arXiv:2010.03525. Retrieved from https://arxiv.org/abs/2010.03525";
 
@@ -24,24 +24,24 @@ const ieee = "P. Ralph et al., \"Empirical Standards for Software Engineering Re
 const ris = "TY  - ELEC\nAU  - Ralph, Paul\nAU  - Ali, Nauman bin\nAU  - Baltes, Sebastian\nAU  - Bianculli, Domenico\nAU  - Diaz, Jessica\nAU  - Dittrich, Yvonne\nAU  - Ernst, Neil\nAU  - Felderer, Michael\nAU  - Feldt, Robert\nAU  - Filieri, Antonio\nAU  - França, Breno Bernard Nicolau de \nAU  - Furia, Carlo Alberto\nAU  - Gay, Greg\nAU  - Gold, Nicolas\nAU  - Graziotin, Daniel\nAU  - He, Pinjia\nAU  - Hoda, Rashina\nAU  - Juristo, Natalia\nAU  - Kitchenham, Barbara\nAU  - Lenarduzzi, Valentina\nAU  - Martínez, Jorge\nAU  - Melegati, Jorge\nAU  - Mendez, Daniel\nAU  - Menzies, Tim\nAU  - Molleri, Jefferson\nAU  - Pfahl, Dietmar\nAU  - Robbes, Romain\nAU  - Russo, Daniel\nAU  - Saarimäki, Nyyti\nAU  - Sarro, Federica\nAU  - Taibi, Davide\nAU  - Siegmund, Janet\nAU  - Spinellis, Diomidis\nAU  - Staron, Miroslaw\nAU  - Stol, Klaas\nAU  - Storey, Margaret-Anne\nAU  - Taibi, Davide\nAU  - Tamburri, Damian\nAU  - Torchiano, Marco\nAU  - Treude, Christoph\nAU  - Turhan, Burak\nAU  - Wang, Xiaofeng\nAU  - Vegas, Sira\nPY  - 2020\nTI  - Empirical Standards for Software Engineering Research\nID  - arXiv:2010.03525 [cs.SE]\nDO  - 10.48550/arXiv.2010.03525\nER  -";
 
 // Update citation text according to selected format
-citation_formats.addEventListener("change", () => {
-	let option =  citation_formats.value;
+citationFormats.addEventListener("change", () => {
+	let option =  citationFormats.value;
 	if (option == "acm") {
-		document.getElementById("citation-text").value = acm;
+		document.getElementById("citation_text").value = acm;
 	} else if (option == "apa") {
-		document.getElementById("citation-text").value = apa;
+		document.getElementById("citation_text").value = apa;
 	} else if (option == "bibtex") {
-		document.getElementById("citation-text").value = bibtex;
+		document.getElementById("citation_text").value = bibtex;
 	} else if (option == "ieee") {
-		document.getElementById("citation-text").value = ieee;
+		document.getElementById("citation_text").value = ieee;
 	} else if (option == "ris") {
-		document.getElementById("citation-text").value = ris;
+		document.getElementById("citation_text").value = ris;
 	}
 });
 		
 // Copy citation text according to clipboard
-copy_button.addEventListener("click", () => {
-	let copy = document.getElementById("citation-text").value;
+copyButton.addEventListener("click", () => {
+	let copy = document.getElementById("citation_text").value;
 
 	navigator.clipboard.writeText(copy).then(function() {
 		console.log('Citation copied to clipboard.');

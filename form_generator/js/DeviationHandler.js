@@ -16,7 +16,7 @@ function generateOnePhaseReviewerDeviationBlock(checklistItemID,data) {
 			return parseInt(item, 10);
 		});
 
-		var deviationNotJustified = generateQuestionBlockWithTypeRadioAnswers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItemID, 2.06, numbersArray);
+		var deviationNotJustified = generateQuestionBlockWithTypeRadioAnswers("deviation_not_justified", "justification_radio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItemID, 2.06, numbersArray);
 
 		// (No-No-Yes)
 		var deviationReasonable = generateMessage("deviation_reasonable:" + checklistItemID, "", "message_style_3");
@@ -30,7 +30,7 @@ function generateOnePhaseReviewerDeviationBlock(checklistItemID,data) {
 		deviationBlock.appendChild(deviationUnreasonable);
 
 		if(data.displayfree == "True"){
-			var freeTextQuestion = generateFreeTextQuestion("free_text_question", "freeText", data.freelabel, checklistItemID);
+			var freeTextQuestion = generateFreeTextQuestion("free_text_question", data.freelabel, checklistItemID);
 
 			deviationBlock.appendChild(freeTextQuestion);
 		}
@@ -43,7 +43,7 @@ function generateOnePhaseReviewerDeviationBlock(checklistItemID,data) {
 	
 		// Create a question block with type radio answers
 		// 3rd Question
-		var deviationNotJustified = generateQuestionBlockWithTypeRadioAnswers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItemID, 2.06, type = [1,2,3,4]);
+		var deviationNotJustified = generateQuestionBlockWithTypeRadioAnswers("deviation_not_justified", "justification_radio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItemID, 2.06, type = [1,2,3,4]);
 	
 		// (No-No-Yes)
 		var deviationReasonable = generateMessage("deviation_reasonable:" + checklistItemID, "", "message_style_3");
@@ -56,7 +56,7 @@ function generateOnePhaseReviewerDeviationBlock(checklistItemID,data) {
 		deviationBlock.appendChild(deviationReasonable);
 		deviationBlock.appendChild(deviationUnreasonable);
 		
-		var freeTextQuestion = generateFreeTextQuestion("free_text_question", "freeText", 'How can this problem be addressed', checklistItemID);
+		var freeTextQuestion = generateFreeTextQuestion("free_text_question", 'How can this problem be addressed', checklistItemID);
 
 		deviationBlock.appendChild(freeTextQuestion);
 	}
@@ -82,7 +82,7 @@ function generateTwoPhaseReviewerDeviationBlock(checklistItemID,data) {
 			return parseInt(item, 10);
 		});
 
-		var deviationNotJustified = generateQuestionBlockWithTypeRadioAnswers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItemID, 2.06, numbersArray);
+		var deviationNotJustified = generateQuestionBlockWithTypeRadioAnswers("deviation_not_justified", "justification_radio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItemID, 2.06, numbersArray);
 
 		// (No-No-Yes)
 		var deviationReasonable = generateMessage("deviation_reasonable:" + checklistItemID, "", "message_style_3");
@@ -96,7 +96,7 @@ function generateTwoPhaseReviewerDeviationBlock(checklistItemID,data) {
 		deviationBlock.appendChild(deviationUnreasonable);
 
 		if(data.displayfree == "True"){
-			var freeTextQuestion = generateFreeTextQuestion("free_text_question", "freeText", data.freelabel, checklistItemID);
+			var freeTextQuestion = generateFreeTextQuestion("free_text_question", data.freelabel, checklistItemID);
 			console.log(data.freelabel);
 			deviationBlock.appendChild(freeTextQuestion);
 		}
@@ -107,7 +107,7 @@ function generateTwoPhaseReviewerDeviationBlock(checklistItemID,data) {
 		var deviationBlock = generateQuestionBlockWithYesNoRadioAnswers("deviation_block", "deviationRadio", "is the deviation reasonable?", checklistItemID, 2.40);
 
 		var deviationJustified = generateMessage("deviation_justified:" + checklistItemID, "", "message_style_2");
-		var deviationNotJustified = generateQuestionBlockWithTypeRadioAnswers("deviation_not_justified", "justificationRadio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItemID, 2.06, [1,2,3,4]);
+		var deviationNotJustified = generateQuestionBlockWithTypeRadioAnswers("deviation_not_justified", "justification_radio", "Please indicate the type of unreasonable deviations. (Pick the largest number that applies.)", checklistItemID, 2.06, [1,2,3,4]);
 
 		// (No-No-Yes)
 		var deviationReasonable = generateMessage("deviation_reasonable:" + checklistItemID, "", "message_style_3");
@@ -120,7 +120,7 @@ function generateTwoPhaseReviewerDeviationBlock(checklistItemID,data) {
 		deviationBlock.appendChild(deviationReasonable);
 		deviationBlock.appendChild(deviationUnreasonable);
 
-		var freeTextQuestion = generateFreeTextQuestion("free_text_question", "freeText", "How can this problem be addressed", checklistItemID);
+		var freeTextQuestion = generateFreeTextQuestion("free_text_question", "How can this problem be addressed", checklistItemID);
 
 		deviationBlock.appendChild(freeTextQuestion);
 	}
@@ -129,20 +129,20 @@ function generateTwoPhaseReviewerDeviationBlock(checklistItemID,data) {
 }
 
 
-function generateFreeTextQuestion(id, class_name, question, checklistItemID) {
+function generateFreeTextQuestion(id, question, checklistItemID) {
     var questionBlock = document.createElement("div");
     questionBlock.id = id + ":" + checklistItemID;
-    questionBlock.className = "question_block_free_Text";
+    questionBlock.className = "question_block_free_text";
 
     var questionText = document.createElement("div"); // Create a div for the question
     questionText.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&rdsh;&nbsp;  " + question;
 
     var answerInput = document.createElement("div"); // Create a div for the input answer
-    answerInput.className = "freeTextContainer";
+    answerInput.className = "free_text_container";
 	
 	var answerInputField = document.createElement("textarea");
     answerInputField.id = id + "-answer:" + checklistItemID;
-    answerInputField.className = class_name + "Answer";
+    answerInputField.className = "free_text_answer";
     answerInputField.type = "text";
 	
     answerInput.appendChild(answerInputField);
@@ -172,7 +172,7 @@ function generateAuthorDeviationBlock(checklistItemID) {
 }
 
 // generate the question block with the type radio buttons (type 1, type 2, type 3, type 4)
-function generateQuestionBlockWithTypeRadioAnswers(id, class_name, question, checklistItemID, padding, type) {
+function generateQuestionBlockWithTypeRadioAnswers(id, classValue, question, checklistItemID, padding, type) {
 	var questionBlock = document.createElement("div");
 
 	questionBlock.id = id + ":" + checklistItemID;
@@ -205,7 +205,7 @@ function generateQuestionBlockWithTypeRadioAnswers(id, class_name, question, che
         deviationRadioType.id = id + "-radio:Type"+type[i]+":" + checklistItemID;
 
         // className - deal with all of them
-        deviationRadioType.className = class_name + "Type";
+        deviationRadioType.className = classValue + "_type";
     
         // These are the radio buttons of that element regardless of Type1 or Type2
         // For Hiding Buttons
@@ -221,7 +221,7 @@ function generateQuestionBlockWithTypeRadioAnswers(id, class_name, question, che
     
         // Actual Text of the Radio button
 		// Adding tooltip to type Radio button
-		deviationLabelType.innerHTML = "<div class=\"tooltip\">type "+type[i]+ "<span class=\"tooltiptext\"> "+dict[type[i]]+"</span></div>" + "&nbsp;&nbsp;";
+		deviationLabelType.innerHTML = "<div class=\"tooltip\">type "+type[i]+ "<span class=\"tooltip_text\"> "+dict[type[i]]+"</span></div>" + "&nbsp;&nbsp;";
     
         // For Labels
         // Click on the label, click that radio button
@@ -236,7 +236,7 @@ function generateQuestionBlockWithTypeRadioAnswers(id, class_name, question, che
 	return questionBlock;
 }
 
-function generateQuestionBlockWithYesNoRadioAnswers(id, class_name, question, checklistItemID, padding, display) {
+function generateQuestionBlockWithYesNoRadioAnswers(id, classValue, question, checklistItemID, padding, display) {
 	var questionBlock = document.createElement("div");
 
 	questionBlock.id = id + ":" + checklistItemID;
@@ -284,7 +284,7 @@ function generateQuestionBlockWithYesNoRadioAnswers(id, class_name, question, ch
 		var deviationRadioYes = document.createElement("input");
 		var deviationLabelYes = document.createElement("label");
 		deviationRadioYes.id = id + "-radio:Yes:" + checklistItemID;
-		deviationRadioYes.className = class_name + "Yes";
+		deviationRadioYes.className = classValue + "Yes";
 		deviationRadioYes.name = id + "-radio:" + checklistItemID;
 		deviationRadioYes.onclick = createDeviationJustificationBlockShowHideJustificationLocationTextbox;
 		deviationRadioYes.type = "radio";
@@ -295,7 +295,7 @@ function generateQuestionBlockWithYesNoRadioAnswers(id, class_name, question, ch
 		var deviationRadioNo = document.createElement("input");
 		var deviationLabelNo = document.createElement("label");
 		deviationRadioNo.id = id + "-radio:No:" + checklistItemID;
-		deviationRadioNo.className = class_name + "No";
+		deviationRadioNo.className = classValue + "No";
 		deviationRadioNo.name = id + "-radio:" + checklistItemID;
 		deviationRadioNo.onclick = createDeviationJustificationBlockShowHideJustificationLocationTextbox;
 		deviationRadioNo.type = "radio";

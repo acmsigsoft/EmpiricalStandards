@@ -425,7 +425,7 @@ function clearChecklist(event) {
 			}
 		} else {
 			// If reviewer, hide free text boxes
-			textBoxes = document.getElementsByClassName("question_block_free_Text");
+			textBoxes = document.getElementsByClassName("question_block_free_text");
 			
 			for (let textBox of textBoxes) {
 				textBox.style.display = "none";
@@ -645,18 +645,18 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 				
 				var userInputYes;
 				var userInputNo;
-				var location_container;
-				var missing_container;
+				var locationContainer;
+				var missingContainer;
 				
 				if (role == "\"author\"") {
 					
-					location_container = document.createElement("span");
-					location_container.className = "location_container";
+					locationContainer = document.createElement("span");
+					locationContainer.className = "location_container";
 					
 					userInputYes = generateLocationTextbox("item_location_textbox", checklistItemID);
 					userInputYes.onfocus = hideDeviationBlockShowLocationTextbox;
 					
-					missing_container = document.createElement("span");
+					missingContainer = document.createElement("span");
 					
 					userInputNo = document.createElement("input");
 					userInputNo.type = "checkbox";
@@ -694,11 +694,11 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 					
 					checklistItemLI.appendChild(checklistItemText);
 					
-					location_container.appendChild(userInputYes);
-					missing_container.appendChild(userInputNo);
+					locationContainer.appendChild(userInputYes);
+					missingContainer.appendChild(userInputNo);
 					
-					checklistItemLI.appendChild(location_container);
-					checklistItemLI.appendChild(missing_container);
+					checklistItemLI.appendChild(locationContainer);
+					checklistItemLI.appendChild(missingContainer);
 					
 					checklistItemLI.appendChild(deviation_block);
 					
@@ -734,13 +734,13 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 			} else {
 				if (role == "\"author\"") {
 					var userInputYes;
-					location_container = document.createElement("span");
-					location_container.className = "location_container";
+					locationContainer = document.createElement("span");
+					locationContainer.className = "location_container";
 
 					userInputYes = generateLocationTextbox("item_location_textbox", checklistItemID);
 					
 					var userInputNo;
-					missing_container = document.createElement("span");
+					missingContainer = document.createElement("span");
 					
 					userInputNo = document.createElement("input");
 					userInputNo.type = "checkbox";
@@ -752,11 +752,11 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 				
 					checklistItemLI.appendChild(checklistItemText);
 					
-					location_container.appendChild(userInputYes);
-					checklistItemLI.appendChild(location_container);
+					locationContainer.appendChild(userInputYes);
+					checklistItemLI.appendChild(locationContainer);
 					
-					missing_container.appendChild(userInputNo);
-					checklistItemLI.appendChild(missing_container);
+					missingContainer.appendChild(userInputNo);
+					checklistItemLI.appendChild(missingContainer);
 				} else {
 					var checkboxInput = document.createElement("input");
 					checkboxInput.type = "checkbox";

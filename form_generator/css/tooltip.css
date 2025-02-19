@@ -5,7 +5,7 @@
   margin-left: 5px;
 }
 
-.tooltip .tooltiptext {
+.tooltip .tooltip_text {
   font-size: 80%; 
   position: absolute;
   visibility: hidden;
@@ -28,7 +28,7 @@
   transition: opacity .5s;
 }
 
-.tooltip .tooltiptext::after {
+.tooltip .tooltip_text::after {
   content: " ";
   position: absolute;
   top: 100%;
@@ -39,7 +39,7 @@
   border-color: black transparent transparent transparent;
 }
 
-.tooltip:hover .tooltiptext {
+.tooltip:hover .tooltip_text {
   visibility: visible;
   opacity: 1;
 }

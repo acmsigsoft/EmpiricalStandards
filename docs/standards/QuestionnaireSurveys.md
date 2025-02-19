@@ -16,7 +16,7 @@ This guideline applies to studies in which:
 -   researchers systematically analyze participants' answers
 
 This standard does not apply to questionnaires comprising predominately
-open-ended questions<sup><a class="footnote footnote-ref">1</a></sup>, literature surveys (see the **Systematic
+open-ended questions<sup><a class="footnote footnote_ref">1</a></sup>, literature surveys (see the **Systematic
 Review Standard**), longitudinal or repeated measures studies (see the
 **Longitudinal Studies Standard**), or the demographic questionnaires
 typically given to participants in controlled experiments (see the
@@ -35,7 +35,7 @@ typically given to participants in controlled experiments (see the
 - [ ]	describes how the questionnaire instrument was created
 - [ ]	describes how participants were selected or recruited (e.g. sampling frame, advertising, invitations, incentives)
 - [ ]	EITHER: measures constructs using (or adapting) validated scales    
-	 OR: analyzes construct validity (including content, convergent, discriminant and predictive validity) ex post<sup><a class="footnote footnote-ref">2</a></sup>
+	 OR: analyzes construct validity (including content, convergent, discriminant and predictive validity) ex post<sup><a class="footnote footnote_ref">2</a></sup>
 - [ ]	describes how responses were managed/monitored, including contingency actions for non-responses and drop-outs
 - [ ]	explains handling of missing data (e.g. imputation, weighting adjustments, discarding)
 - [ ]	step-by-step, systematic, replicable description of data collection and analysis
@@ -52,7 +52,7 @@ typically given to participants in controlled experiments (see the
 <other>	
 	
 - [ ]	provides the questionnaire instrument (as an appendix or supplementary materials) 	
-- [ ]	the questionnaire design matches the research aims and the target population<sup><a class="footnote footnote-ref">3</a></sup>
+- [ ]	the questionnaire design matches the research aims and the target population<sup><a class="footnote footnote_ref">3</a></sup>
 	
 </checklist>
      
@@ -72,7 +72,7 @@ typically given to participants in controlled experiments (see the
 - [ ]	discusses possible effects of incentives (e.g. on voluntariness, response rates, response bias) if used
 - [ ]	describes the stratification of the analysis (if stratified sampling is used)
 - [ ]	defines and estimates the size of the population strata (if applicable)
-- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote-ref">4</a></sup>
+- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote_ref">4</a></sup>
  </checklist>
      
 ### Extraordinary Attributes 	
@@ -173,8 +173,8 @@ Trans. Softw. Eng. Methodol.* 28, 2, Article 9 (April 2019), 48 pages.
 DOI:10.1145/3306607
 
 ---
-<footnote><sup><a class="footnote footnote-text">1</a></sup>There is currently no standard for predominately open-ended questionnaire surveys. One exemplar readers could draw from is: Daniel Graziotin, Fabian Fagerholm, Xiaofeng Wang, and Pekka Abrahamsson. 2018. "What happens when software developers are (un)happy." Journal of Systems and Software 140, 32-47.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">2</a></sup>For advice on analyzing construct validity, see recommended readings Graziotin et al. (2021) and Ralph and Tempero (2018).</footnote><br>
-<footnote><sup><a class="footnote footnote-text">3</a></sup>Questions are mapped to research objectives and their wording and format is appropriate for their audience.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">4</a></sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">1</a></sup>There is currently no standard for predominately open-ended questionnaire surveys. One exemplar readers could draw from is: Daniel Graziotin, Fabian Fagerholm, Xiaofeng Wang, and Pekka Abrahamsson. 2018. "What happens when software developers are (un)happy." Journal of Systems and Software 140, 32-47.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">2</a></sup>For advice on analyzing construct validity, see recommended readings Graziotin et al. (2021) and Ralph and Tempero (2018).</footnote><br>
+<footnote><sup><a class="footnote footnote_text">3</a></sup>Questions are mapped to research objectives and their wording and format is appropriate for their audience.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">4</a></sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>

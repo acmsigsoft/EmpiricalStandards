@@ -34,65 +34,65 @@ layout: default
 	<body onload="showInstructions();">
 		<div id="container">
 			<div id="instructions"></div>
-			<form id="checklistForm" action="../form_generator/result.html" method="get">
+			<form id="checklist_form" action="../form_generator/result.html" method="get">
 				<h2>Select all that apply:</h2>
 				
 				<fieldset>
 					<legend>General</legend>
 					
-					<input type="checkbox" class="standard" name="standard" id="Engineering_Research" value="Engineering Research"><div class="tooltip"><a href="../docs/standards?standard=EngineeringResearch" target="_blank"> Engineering research</a> <span class="tooltiptext" id="tooltip_Action_EngineeringResearch"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="EngineeringResearch" value="Engineering Research"><div class="tooltip"><a href="../docs/standards?standard=EngineeringResearch" target="_blank"> Engineering research</a> <span class="tooltip_text" id="tooltip_EngineeringResearch"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Mixed Methods" value="Mixed Methods"><div class="tooltip"><a href="../docs/standards?standard=MixedMethods" target="_blank"> Multimethodology or mixed methods</a> <span class="tooltiptext" id="tooltip_MixedMethods"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="MixedMethods" value="Mixed Methods"><div class="tooltip"><a href="../docs/standards?standard=MixedMethods" target="_blank"> Multimethodology or mixed methods</a> <span class="tooltip_text" id="tooltip_MixedMethods"></span></div><br/>
 				</fieldset>
 				
 				<fieldset>
 					<legend>Qualitative</legend>
 					
-					<input type="checkbox" class="standard" name="standard" id="Action_Research" value="Action Research"><div class="tooltip"><a href="../docs/standards?standard=ActionResearch" target="_blank"> Action research</a><span class="tooltiptext" id="tooltip_Action_Research"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="ActionResearch" value="Action Research"><div class="tooltip"><a href="../docs/standards?standard=ActionResearch" target="_blank"> Action research</a><span class="tooltip_text" id="tooltip_ActionResearch"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Case_Study" value="Case Study"><div class="tooltip"><a href="../docs/standards?standard=CaseStudy" target="_blank"> Case study</a><span class="tooltiptext" id="tooltip_Action_CaseStudy"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="CaseStudy" value="Case Study"><div class="tooltip"><a href="../docs/standards?standard=CaseStudy" target="_blank"> Case study</a><span class="tooltip_text" id="tooltip_CaseStudy"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Grounded_Theory" value="Grounded Theory"><div class="tooltip"><a href="../docs/standards?standard=GroundedTheory" target="_blank"> Grounded theory</a><span class="tooltiptext" id="tooltip_GroundedTheory"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="GroundedTheory" value="Grounded Theory"><div class="tooltip"><a href="../docs/standards?standard=GroundedTheory" target="_blank"> Grounded theory</a><span class="tooltip_text" id="tooltip_GroundedTheory"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Qualitative_Surveys" value="Qualitative Surveys"><div class="tooltip"><a href="../docs/standards?standard=QualitativeSurveys" target="_blank"> Qualitative survey (i.e. interviews)</a><span class="tooltiptext" id="tooltip_QualitativeSurveys"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="QualitativeSurveys" value="Qualitative Surveys"><div class="tooltip"><a href="../docs/standards?standard=QualitativeSurveys" target="_blank"> Qualitative survey (i.e. interviews)</a><span class="tooltip_text" id="tooltip_QualitativeSurveys"></span></div><br/>
 				</fieldset>
 				
 				<fieldset>
 					<legend>Quantitative</legend>
 					
-					<input type="checkbox" class="standard" name="standard" id="Benchmarking (of Software Systems)" value="Benchmarking"><div class="tooltip"><a href="../docs/standards?standard=Benchmarking" target="_blank"> Benchmarking</a><span class="tooltiptext" id="tooltip_Action_Benchmarking"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="Benchmarking" value="Benchmarking"><div class="tooltip"><a href="../docs/standards?standard=Benchmarking" target="_blank"> Benchmarking</a><span class="tooltip_text" id="tooltip_Benchmarking"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Data Science" value="Data Science"><div class="tooltip"><a href="../docs/standards?standard=DataScience" target="_blank"> Data science</a> <span class="tooltiptext" id="tooltip_Action_DataScience"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="DataScience" value="Data Science"><div class="tooltip"><a href="../docs/standards?standard=DataScience" target="_blank"> Data science</a> <span class="tooltip_text" id="tooltip_DataScience"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Experiments" value="Experiments"><div class="tooltip"><a href="../docs/standards?standard=Experiments" target="_blank"> Experiment (with human participants)</a><span class="tooltiptext" id="tooltip_Experiments"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="Experiments" value="Experiments"><div class="tooltip"><a href="../docs/standards?standard=Experiments" target="_blank"> Experiment (with human participants)</a><span class="tooltip_text" id="tooltip_Experiments"></span></div><br/>
 				
-					<input type="checkbox" class="standard" name="standard" id="Optimization_Studies" value="Optimization Studies"><div class="tooltip"><a href="../docs/standards?standard=OptimizationStudies" target="_blank"> Optimization study (including search-based software engineering)</a><span class="tooltiptext" id="tooltip_OptimizationStudies"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="OptimizationStudies" value="Optimization Studies"><div class="tooltip"><a href="../docs/standards?standard=OptimizationStudies" target="_blank"> Optimization study (including search-based software engineering)</a><span class="tooltip_text" id="tooltip_OptimizationStudies"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Longitudinal" value="Longitudinal"><div class="tooltip"><a href="../docs/standards?standard=Longitudinal" target="_blank"> Quantitative longitudinal study</a><span class="tooltiptext" id="tooltip_Longitudinal"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="Longitudinal" value="Longitudinal"><div class="tooltip"><a href="../docs/standards?standard=Longitudinal" target="_blank"> Quantitative longitudinal study</a><span class="tooltip_text" id="tooltip_Longitudinal"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Quantitative_Simulation" value="Quantitative Simulation"><div class="tooltip"><a href="../docs/standards?standard=QuantitativeSimulation" target="_blank"> Quantitative simulation</a><span class="tooltiptext" id="tooltip_QuantitativeSimulation"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="QuantitativeSimulation" value="Quantitative Simulation"><div class="tooltip"><a href="../docs/standards?standard=QuantitativeSimulation" target="_blank"> Quantitative simulation</a><span class="tooltip_text" id="tooltip_QuantitativeSimulation"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Questionnaire_Surveys" value="Questionnaire Surveys"><div class="tooltip"><a href="../docs/standards?standard=QuestionnaireSurveys" target="_blank"> Questionnaire survey</a><span class="tooltiptext" id="tooltip_QuestionnaireSurveys"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="QuestionnaireSurveys" value="Questionnaire Surveys"><div class="tooltip"><a href="../docs/standards?standard=QuestionnaireSurveys" target="_blank"> Questionnaire survey</a><span class="tooltip_text" id="tooltip_QuestionnaireSurveys"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Repository_Mining" value="Repository Mining"><div class="tooltip"><a href="../docs/standards?standard=RepositoryMining" target="_blank"> Repository Mining</a><span class="tooltiptext" id="tooltip_RepositoryMining"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="RepositoryMining" value="Repository Mining"><div class="tooltip"><a href="../docs/standards?standard=RepositoryMining" target="_blank"> Repository Mining</a><span class="tooltip_text" id="tooltip_RepositoryMining"></span></div><br/>
 				</fieldset>
 				
 				<fieldset>
 					<legend>Literature review</legend>
 					
-					<input type="checkbox" class="standard" name="standard" id="Case_Survey" value="Case Survey"><div class="tooltip"><a href="../docs/standards?standard=CaseSurvey" target="_blank"> Case survey</a><span class="tooltiptext" id="tooltip_Action_CaseSurvey"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="CaseSurvey" value="Case Survey"><div class="tooltip"><a href="../docs/standards?standard=CaseSurvey" target="_blank"> Case survey</a><span class="tooltip_text" id="tooltip_CaseSurvey"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Systematic_Reviews" value="Systematic Reviews"><div class="tooltip"><a href="../docs/standards?standard=SystematicReviews" target="_blank"> Systematic literature review</a><span class="tooltiptext" id="tooltip_SystematicReviews"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="SystematicReviews" value="Systematic Reviews"><div class="tooltip"><a href="../docs/standards?standard=SystematicReviews" target="_blank"> Systematic literature review</a><span class="tooltip_text" id="tooltip_SystematicReviews"></span></div><br/>
 				</fieldset>
 				
 				<fieldset>
 					<legend>Other</legend>
 					
-					<input type="checkbox" class="standard" name="standard" id="Meta_Science" value="Meta Science"><div class="tooltip"><a href="../docs/standards?standard=MetaScience" target="_blank"> Meta-science</a><span class="tooltiptext" id="tooltip_MetaScience"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="MetaScience" value="Meta Science"><div class="tooltip"><a href="../docs/standards?standard=MetaScience" target="_blank"> Meta-science</a><span class="tooltip_text" id="tooltip_MetaScience"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="Replication" value="Replication"><div class="tooltip"><a href="../docs/standards?standard=Replication" target="_blank"> Replication</a><span class="tooltiptext" id="tooltip_Replication"></span></div><br/>
+					<input type="checkbox" class="standard" name="standard" id="Replication" value="Replication"><div class="tooltip"><a href="../docs/standards?standard=Replication" target="_blank"> Replication</a><span class="tooltip_text" id="tooltip_Replication"></span></div><br/>
 					
-					<input type="checkbox" class="standard" name="standard" id="General_Standard" value="General Standard"><a href="../docs/standards?standard=GeneralStandard" target="_blank">&nbsp;&nbsp;An empirical method not listed above<br/>
+					<input type="checkbox" class="standard" name="standard" id="GeneralStandard" value="General Standard"><a href="../docs/standards?standard=GeneralStandard" target="_blank">&nbsp;&nbsp;An empirical method not listed above<br/>
 				</fieldset>
 
 				<input type="submit" class="button" value="Submit" disabled>
@@ -100,12 +100,12 @@ layout: default
 		</div>
 	</body>
 	<script>
-		document.getElementById("tooltip_Action_Research").innerHTML = viewStandardDescription("ActionResearch");
-		document.getElementById("tooltip_Action_Benchmarking").innerHTML = viewStandardDescription("Benchmarking");
-		document.getElementById("tooltip_Action_CaseStudy").innerHTML = viewStandardDescription("CaseStudy");
-		document.getElementById("tooltip_Action_CaseSurvey").innerHTML = viewStandardDescription("CaseSurvey");
-		document.getElementById("tooltip_Action_DataScience").innerHTML = viewStandardDescription("DataScience");
-		document.getElementById("tooltip_Action_EngineeringResearch").innerHTML = viewStandardDescription("EngineeringResearch");
+		document.getElementById("tooltip_ActionResearch").innerHTML = viewStandardDescription("ActionResearch");
+		document.getElementById("tooltip_Benchmarking").innerHTML = viewStandardDescription("Benchmarking");
+		document.getElementById("tooltip_CaseStudy").innerHTML = viewStandardDescription("CaseStudy");
+		document.getElementById("tooltip_CaseSurvey").innerHTML = viewStandardDescription("CaseSurvey");
+		document.getElementById("tooltip_DataScience").innerHTML = viewStandardDescription("DataScience");
+		document.getElementById("tooltip_EngineeringResearch").innerHTML = viewStandardDescription("EngineeringResearch");
 		document.getElementById("tooltip_Experiments").innerHTML = viewStandardDescription("Experiments");
 		document.getElementById("tooltip_GroundedTheory").innerHTML = viewStandardDescription("GroundedTheory");
 		document.getElementById("tooltip_MetaScience").innerHTML = viewStandardDescription("MetaScience");

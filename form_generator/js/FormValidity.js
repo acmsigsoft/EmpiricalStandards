@@ -34,7 +34,7 @@ function checkFormValidity(event) {
 					}
 					
 					if (questionBlocks[1].style.display != "none") {
-						let types = questionBlocks[1].getElementsByClassName('justificationRadioType');
+						let types = questionBlocks[1].getElementsByClassName('justification_radio_type');
 					
 						// If deviation type missing, the item is invalid
 						if (types[0].checked || types[1] && types[1].checked || types[2] && types[2].checked || types[3] && types[3].checked) {
@@ -45,10 +45,10 @@ function checkFormValidity(event) {
 						}
 					}
 					
-					let freeTextBox = li.getElementsByClassName('question_block_free_Text')[0];
+					let freeTextBox = li.getElementsByClassName('question_block_free_text')[0];
 					
 					if (freeTextBox.style.display != "none") {
-						let freeTextContent = freeTextBox.getElementsByClassName('freeTextAnswer')[0];
+						let freeTextContent = freeTextBox.getElementsByClassName('free_text_answer')[0];
 					
 						// If free text missing, the item is invalid
 						if (freeTextContent.value == "") {
@@ -160,7 +160,7 @@ function saveFile() {
 							itemText = itemText.replace(regex9,"");
 						
 						var locationValue = "";
-						var locationTextbox = li.getElementsByClassName('item_locationTextbox');
+						var locationTextbox = li.getElementsByClassName('item_location_textbox');
 
 						if (list.id == 'Essential'){
 							if (role != "\"author\"" && li.children[0].checked) {
@@ -183,15 +183,15 @@ function saveFile() {
 								
 							} else {
 								var reasonableDeviation = li.getElementsByClassName('deviationRadioYes')[0];						
-								locationTextbox = li.getElementsByClassName('justification_locationTextbox');
+								locationTextbox = li.getElementsByClassName('justification_location_textbox');
 								
 								// store for the free_text_question
-								var questionDiv  = li.getElementsByClassName("question_block_free_Text");
+								var questionDiv  = li.getElementsByClassName("question_block_free_text");
 								
 								if (questionDiv[0]) {
 									var questionText = questionDiv[0].querySelector('div:first-child').textContent.trim().replace(/^\W+/g, '');
 									console.log(questionText)
-									var inputCollection  = li.getElementsByClassName('freeTextAnswer');
+									var inputCollection  = li.getElementsByClassName('free_text_answer');
 									console.log(inputCollection);
 									
 									if (inputCollection[0]) {
@@ -221,7 +221,7 @@ function saveFile() {
 									}
 									
 								} else {
-									var fixableDeviation = li.getElementsByClassName('justificationRadioType');
+									var fixableDeviation = li.getElementsByClassName('justification_radio_type');
 									
 									if (fixableDeviation.length != 0){
 										if (fixableDeviation[0].checked) {

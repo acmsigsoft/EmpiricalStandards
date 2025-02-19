@@ -101,7 +101,7 @@ document.addEventListener("visibilitychange", () => {
 				} else if (reasonableNo.checked) {
 					storage.reasonable = false;
 
-					let types = questionBlocks[1].getElementsByClassName('justificationRadioType');
+					let types = questionBlocks[1].getElementsByClassName('justification_radio_type');
 					if (types[0].checked) {
 						storage.deviationType = 1;
 					} else if (types[1] && types[1].checked) {
@@ -112,8 +112,8 @@ document.addEventListener("visibilitychange", () => {
 						storage.deviationType = 4;
 					}
 
-					let freeTextBox = item.getElementsByClassName('question_block_free_Text')[0];
-					let freeTextContent = freeTextBox.getElementsByClassName('freeTextAnswer')[0];
+					let freeTextBox = item.getElementsByClassName('question_block_free_text')[0];
+					let freeTextContent = freeTextBox.getElementsByClassName('free_text_answer')[0];
 
 					if (freeTextContent.value != "") {
 						storage.freeText = freeTextContent.value;
