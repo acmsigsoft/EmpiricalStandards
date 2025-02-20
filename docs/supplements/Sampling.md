@@ -43,7 +43,7 @@ This standard applies to empirical research in which the researcher selects smal
 - making claims about a population, based on sample, without providing an argument for representativeness
 - claiming that a sample is representative of a population because it was randomly selected from a sampling frame, without considering bias in the sampling frame
 - conducting underpowered research; i.e.:
-    - quantitative research with a sample size insufficient to detect effects of the expected size<sup><a class="footnote footnote-ref">1</a></sup>
+    - quantitative research with a sample size insufficient to detect effects of the expected size<sup><a class="footnote footnote_ref">1</a></sup>
     - qualitative research with too little data for plausible saturation
 - justifying the selection of items merely by stating that they come from a &quot;real-world&quot; context, without providing additional reasoning why the selected items are suitable for the study context
 
@@ -72,4 +72,4 @@ Gary T. Henry. 1990. _Practical Sampling._ Sage, Newbury Park.
 Meiyappan Nagappan, Thomas Zimmermann, and Christian Bird. 2013. Diversity in software engineering research. In _Proceedings of the 2013 9th Joint Meeting on Foundations of Software Engineering (ESEC/FSE 2013)_. Association for Computing Machinery, New York, NY, USA, 466–476. DOI: 10.1145/2491411.2491415
 
 ---
-<sup><a class="footnote footnote-text">1</a></sup>Expected effect sizes should be plausible. For instance, expecting any single factor (e.g. programming language) to explain 50% of the variance in software project success is not plausible.
+<sup><a class="footnote footnote_text">1</a></sup>Expected effect sizes should be plausible. For instance, expecting any single factor (e.g. programming language) to explain 50% of the variance in software project success is not plausible.

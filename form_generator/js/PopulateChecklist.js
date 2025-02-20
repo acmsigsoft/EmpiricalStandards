@@ -1,11 +1,11 @@
-function populate_checklist() {
+function populateChecklist() {
 	console.log("Populating " + role + " checklist");
 
 	// Clear all stored items for this checklist
 	let keys = Object.keys(localStorage);
 
 	// Move nonessential keys to last
-	let nonessential = keys.filter(check_nonessential_keys);
+	let nonessential = keys.filter(checkNonessentialKeys);
 	for (let key of nonessential) {
 		let index = keys.indexOf(key);
 		keys.push(keys.splice(index, 1)[0]);
@@ -26,17 +26,17 @@ function populate_checklist() {
 					} else if (!state.checked) {
 						item.children[1].click();
 
-						let question_blocks = item.getElementsByClassName('question_block');
-						let reasonable_yes = question_blocks[0].getElementsByClassName('deviationRadioYes')[0];
-						let reasonable_no = question_blocks[0].getElementsByClassName('deviationRadioNo')[0];
+						let questionBlocks = item.getElementsByClassName('question_block');
+						let reasonableYes = questionBlocks[0].getElementsByClassName('deviationRadioYes')[0];
+						let reasonableNo = questionBlocks[0].getElementsByClassName('deviationRadioNo')[0];
 
 						if (state.reasonable) {
-							reasonable_yes.click();
+							reasonableYes.click();
 
 						} else if (!state.reasonable) {
-							reasonable_no.click();
+							reasonableNo.click();
 
-							let types = question_blocks[1].getElementsByClassName('justificationRadioType');
+							let types = questionBlocks[1].getElementsByClassName('justification_radio_type');
 
 							if (state.deviationType == 1) {
 								types[0].click();
@@ -48,32 +48,32 @@ function populate_checklist() {
 								types[3].click();
 							}
 
-							let free_text_box = item.getElementsByClassName('question_block_free_Text')[0];
-							let free_text_content = free_text_box.getElementsByClassName('freeTextAnswer')[0];
+							let freeTextBox = item.getElementsByClassName('question_block_free_text')[0];
+							let freeTextContent = freeTextBox.getElementsByClassName('free_text_answer')[0];
 
 							if (Object.hasOwn(state, "freeText") && state.freeText != "") {
-								free_text_content.value = state.freeText;
+								freeTextContent.value = state.freeText;
 							}
 						}
 					}
 				} else {
-					let location_box = item.getElementsByClassName('item_location_textbox')[0];
-					let missing_button = item.getElementsByClassName('missing_checkbox')[0];
+					let locationBox = item.getElementsByClassName('item_location_textbox')[0];
+					let missingButton = item.getElementsByClassName('missing_checkbox')[0];
 
 					if (state.location != "") {
-						location_box.value = state.location;
+						locationBox.value = state.location;
 
 					} else if (!state.location) {
-						missing_button.click();
+						missingButton.click();
 
-						let justification_box = item.getElementsByClassName('justification_location_textbox')[0];
-						let justification_button = item.getElementsByClassName('unjustified_checkbox')[0];
+						let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
+						let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
 
 						if (Object.hasOwn(state, "justified") && state.justified != "") {
-							justification_box.value = state.justified;
+							justificationBox.value = state.justified;
 
 						} else if (!state.justified) {
-							justification_button.click();
+							justificationButton.click();
 						}
 					}
 				}
@@ -83,6 +83,6 @@ function populate_checklist() {
 }
 
 // Check if the key is nonessential
-function check_nonessential_keys(key) {
+function checkNonessentialKeys(key) {
 	return key.includes("Desirable") || key.includes("Extraordinary");
 }

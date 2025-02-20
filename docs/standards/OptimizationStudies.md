@@ -3,7 +3,7 @@
 
 
 
-*<desc>Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques to solve such problems</desc>*<sup><a class="footnote footnote-ref">1</a></sup>.  
+*<desc>Research studies that focus on the formulation of software engineering problems as search problems, and apply optimization techniques to solve such problems</desc>*<sup><a class="footnote footnote_ref">1</a></sup>.  
 
 
 
@@ -11,7 +11,7 @@
 
 This standard applies to empirical studies that meet the following criteria:
 
-- Formulates a software engineering task<sup><a class="footnote footnote-ref">2</a></sup> as an optimization problem, with one or more specified fitness functions<sup><a class="footnote footnote-ref">3</a></sup> used to judge success in this task.
+- Formulates a software engineering task<sup><a class="footnote footnote_ref">2</a></sup> as an optimization problem, with one or more specified fitness functions<sup><a class="footnote footnote_ref">3</a></sup> used to judge success in this task.
 - Applies one or more approaches that generate solutions to the problem in an attempt to maximize or minimize the specified fitness functions.
 
 ## Specific Attributes
@@ -21,7 +21,7 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 
 <intro>
 
-- [ ] explains why the problem cannot be optimized manually or by brute force within a reasonable timeframe<sup><a class="footnote footnote-ref">4</a></sup> 
+- [ ] explains why the problem cannot be optimized manually or by brute force within a reasonable timeframe<sup><a class="footnote footnote_ref">4</a></sup> 
 - [ ] EITHER: describes prior state of the art in this area  
       OR: carefully motivates and defines the problem tackled and the solution proposed 
 
@@ -29,18 +29,18 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 
 - [ ] describes the search space (e.g., constraints, independent variables choices)
 - [ ] uses realistic and limited simplifications and constraints for the optimization problem; simplifications and constraints do not reduce the search to one where all solutions could be enumerated through brute force
-- [ ] justifies the choice of algorithm<sup><a class="footnote footnote-ref">5</a></sup> underlying the approach<sup><a class="footnote footnote-ref">6</a></sup>
-- [ ] compares approaches to a justified and appropriate baseline<sup><a class="footnote footnote-ref">7</a></sup>
-- [ ] explictly defines the solution formulation, including a description of what a solution represents<sup><a class="footnote footnote-ref">8</a></sup>, how it is represented<sup><a class="footnote footnote-ref">9</a></sup>, and how it is manipulated
+- [ ] justifies the choice of algorithm<sup><a class="footnote footnote_ref">5</a></sup> underlying the approach<sup><a class="footnote footnote_ref">6</a></sup>
+- [ ] compares approaches to a justified and appropriate baseline<sup><a class="footnote footnote_ref">7</a></sup>
+- [ ] explictly defines the solution formulation, including a description of what a solution represents<sup><a class="footnote footnote_ref">8</a></sup>, how it is represented<sup><a class="footnote footnote_ref">9</a></sup>, and how it is manipulated
 - [ ] explicitly defines all fitness functions, including the type of goals that are optimized and the equations for calculating fitness values
-- [ ] explicitly defines evaluated approaches, including the techniques, specific heuristics, and the parameters and their values<sup><a class="footnote footnote-ref">10</a></sup>
+- [ ] explicitly defines evaluated approaches, including the techniques, specific heuristics, and the parameters and their values<sup><a class="footnote footnote_ref">10</a></sup>
 - [ ] EITHER: clearly describes (and follows) a sound process to collect and prepare the datasets used to run and to evaluate the optimization approach  
       OR: if the subjects are taken from previous work, fully reference the original source and explain whether any transformation or cleaning was applied to the datasets
 - [ ] EITHER: makes data publicly available 
-      OR: explains why this is not possible<sup><a class="footnote footnote-ref">11</a></sup>      
-- [ ] identifies and explains all possible sources of stochasticity<sup><a class="footnote footnote-ref">12</a></sup>
+      OR: explains why this is not possible<sup><a class="footnote footnote_ref">11</a></sup>      
+- [ ] identifies and explains all possible sources of stochasticity<sup><a class="footnote footnote_ref">12</a></sup>
 - [ ] EITHER: executes stochastic approaches or elements multiple times  
-      OR: explains why this is not possible<sup><a class="footnote footnote-ref">13</a></sup>
+      OR: explains why this is not possible<sup><a class="footnote footnote_ref">13</a></sup>
 
 <results>
 
@@ -53,8 +53,8 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 ### Desirable
 <checklist name="Desirable">
 
-- [ ] provides a replication package that conforms to SIGSOFT standards for artifacts<sup><a class="footnote footnote-ref">14</a></sup>. 
-- [ ] motivates the novelty and soundness of the proposed approach<sup><a class="footnote footnote-ref">15</a></sup>
+- [ ] provides a replication package that conforms to SIGSOFT standards for artifacts<sup><a class="footnote footnote_ref">14</a></sup>. 
+- [ ] motivates the novelty and soundness of the proposed approach<sup><a class="footnote footnote_ref">15</a></sup>
 - [ ] explains whether the study explores a new problem type (or a new area within an existing problem space), or how it reproduces, replicates, or improves upon prior work 
 - [ ] explains in detail how subjects or datasets were collected/chosen to mitigate selection bias and improve the generalization of findings 
 - [ ] describes the main features of the subjects used to run and evaluate the optimization approach(es) and discuss what characterizes the different instances in terms of "hardness" 
@@ -66,14 +66,14 @@ We stress that the use of optimization in SE is still a rapidly evolving field. 
 - [ ] performs multiple trials either as a cross-validation (multiple independent executions) or temporally (multiple applications as part of a timed sequence), depending on the problem at hand 
 - [ ] provides random data splits (e.g., those used in data-driven approaches) or ensures splits are reproducibile. 
 - [ ] compares distributions (rather than means) of results using appropriate statistics
-- [ ] compares solutions using an appropriate meta-evaluation criteria<sup><a class="footnote footnote-ref">16</a></sup>; justifies the chosen criteria
-- [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote-ref">17</a></sup>
+- [ ] compares solutions using an appropriate meta-evaluation criteria<sup><a class="footnote footnote_ref">16</a></sup>; justifies the chosen criteria
+- [ ] clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote_ref">17</a></sup>
 </checklist>
 
 ### Extraordinary
 <checklist name="Extraordinary">
 
-- [ ] analyzes different parameter choices to the algorithm, indicating how the final parameters were selected<sup><a class="footnote footnote-ref">18</a></sup> 
+- [ ] analyzes different parameter choices to the algorithm, indicating how the final parameters were selected<sup><a class="footnote footnote_ref">18</a></sup> 
 - [ ] analyzes the fitness landscape for one or more of the chosen fitness functions  
 </checklist>
 
@@ -131,23 +131,23 @@ can be found at https://tinyurl.com/y2ufofgu.
 
 ---
 
-<footnote><sup><a class="footnote footnote-text">1</a></sup>Note that there are many such optimization techniques (metaheuristic; numerical optimizers; constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic.</footnote><br> 
-<footnote><sup><a class="footnote footnote-text">2</a></sup>E.g., test input creation, design refactoring, effort prediction.</footnote><br> 
-<footnote><sup><a class="footnote footnote-text">3</a></sup>A "fitness function", or "objective function", is a numerical scoring function used to indicate the quality of a solution to a defined problem. Optimization approaches attempt to maximize or minimize such functions, depending on whether lower or higher scores indicate success.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">4</a></sup>E.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">5</a></sup>E.g., the numerical optimizer, the specific metaheuristic, the constraint solving method, etc.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">6</a></sup>For example, do not use an algorithm such as Simulated Annealing, or even a specific approach such as NSGA-II, to solve an optimization problem unless it is actually appropriate for that problem. While one rarely knows the *best* approach for a new problem, one should at least consider the algorithms applied to address similar problems and make an informed judgement.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">7</a></sup>If the approach addresses a problem never tackled before, then it should be compared - at least - to random search. Otherwise, compare the proposed approach to the existing state of the art.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">8</a></sup>E.g., a test suite or test case in test generation.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">9</a></sup>E.g., a tree or vector structure.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">10</a></sup>Example techniques - Simulated Annealing, Genetic Algorithm. Example heuristic - single-point crossover. Example parameters - crossover and mutation rates.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">11</a></sup>E.g., proprietary data, ethics issues, or a Non-Disclosure Agreement.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">12</a></sup>For example, stochasticity may arise from the use of randomized algorithms, from the use of a fitness function that measures a random variable from the environment (e.g., a fitness function based on execution time may return different results across different executions), from the use of data sampling or cross-validation approaches.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">13</a></sup>E.g., the approach is too slow, human-in-the-loop.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">14</a></sup>Including, for example, source code (of approach, solution representation, and fitness calculations), datasets used as experiment input, and collected experiment data (e.g., output logs, generated solutions).</footnote><br>
-<footnote><sup><a class="footnote footnote-text">15</a></sup>For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)</footnote><br>
-<footnote><sup><a class="footnote footnote-text">16</a></sup>E.g., applying hyperparameter optimization.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">17</a></sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">18</a></sup>: E.g., applying hyperparameter optimization.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">1</a></sup>Note that there are many such optimization techniques (metaheuristic; numerical optimizers; constraint solving theorem provers SAT,SMT,CSP; and other), some of which are stochastic.</footnote><br> 
+<footnote><sup><a class="footnote footnote_text">2</a></sup>E.g., test input creation, design refactoring, effort prediction.</footnote><br> 
+<footnote><sup><a class="footnote footnote_text">3</a></sup>A "fitness function", or "objective function", is a numerical scoring function used to indicate the quality of a solution to a defined problem. Optimization approaches attempt to maximize or minimize such functions, depending on whether lower or higher scores indicate success.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">4</a></sup>E.g., if the cross-product of the space of options is very large or if the time required to perform a task manually is very slow.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">5</a></sup>E.g., the numerical optimizer, the specific metaheuristic, the constraint solving method, etc.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">6</a></sup>For example, do not use an algorithm such as Simulated Annealing, or even a specific approach such as NSGA-II, to solve an optimization problem unless it is actually appropriate for that problem. While one rarely knows the *best* approach for a new problem, one should at least consider the algorithms applied to address similar problems and make an informed judgement.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">7</a></sup>If the approach addresses a problem never tackled before, then it should be compared - at least - to random search. Otherwise, compare the proposed approach to the existing state of the art.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">8</a></sup>E.g., a test suite or test case in test generation.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">9</a></sup>E.g., a tree or vector structure.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">10</a></sup>Example techniques - Simulated Annealing, Genetic Algorithm. Example heuristic - single-point crossover. Example parameters - crossover and mutation rates.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">11</a></sup>E.g., proprietary data, ethics issues, or a Non-Disclosure Agreement.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">12</a></sup>For example, stochasticity may arise from the use of randomized algorithms, from the use of a fitness function that measures a random variable from the environment (e.g., a fitness function based on execution time may return different results across different executions), from the use of data sampling or cross-validation approaches.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">13</a></sup>E.g., the approach is too slow, human-in-the-loop.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">14</a></sup>Including, for example, source code (of approach, solution representation, and fitness calculations), datasets used as experiment input, and collected experiment data (e.g., output logs, generated solutions).</footnote><br>
+<footnote><sup><a class="footnote footnote_text">15</a></sup>For example, if applying a multi-objective optimization approach, then use a criterion that can analyze the Pareto frontier of solutions (e.g., generational distance and inverse generational distance)</footnote><br>
+<footnote><sup><a class="footnote footnote_text">16</a></sup>E.g., applying hyperparameter optimization.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">17</a></sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">18</a></sup>: E.g., applying hyperparameter optimization.</footnote><br>
 
 </standard>

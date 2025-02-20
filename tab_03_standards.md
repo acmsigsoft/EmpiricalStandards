@@ -14,7 +14,6 @@ permalink: /docs/standards
 		}
 	</style>
 
-</style>
   <script src="../form_generator/js/Utilities.js"></script>
   <script src="../form_generator/js/UIInteractionHandlers.js"></script>
   <script src="../form_generator/js/ReadEmpiricalStandards.js"></script>
@@ -24,7 +23,7 @@ permalink: /docs/standards
   <script src="../form_generator/js/UIInteractionHandlers.js"></script>
   <script src="../form_generator/js/DeviationHandler.js"></script>
   <script src="../form_generator/js/RequirementsChecklist.js"></script>
-  <script src="../form_generator/js/read_standards.js"></script>
+  <script src="../form_generator/js/ReadStandards.js"></script>
 
 <script>
 function openStandardFromURL(evt) {
@@ -57,11 +56,11 @@ function openStandardFromURL(evt) {
 <body onload="openStandardFromURL(event)">
 
 <!-- Standards list/table of contents -->
-<nav class="standards-list">
+<nav class="standards_list">
 
-  <input type="checkbox" id="toc-trigger" class="nav-trigger">
-  <label for="toc-trigger">
-    <span class="menu-icon">
+  <input type="checkbox" id="toc_trigger" class="nav_trigger">
+  <label for="toc_trigger">
+    <span class="menu_icon">
       <svg viewBox="0 0 18 15" width="18px" height="15px">
         <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"></path>
       </svg>
@@ -276,13 +275,13 @@ function openStandard(evt, standardName) {
 	footnotes[i].removeAttribute("href");
 	
 	if (footnotes[i].closest(".tabcontent").style.display === "block") {
-	  if (footnotes[i].classList.contains("footnote-text")) {
-	    footnotes[i].setAttribute("id", "footnote-text" + textCount);
-		footnotes[i].setAttribute("href", "#footnote-ref" + textCount);
+	  if (footnotes[i].classList.contains("footnote_text")) {
+	    footnotes[i].setAttribute("id", "footnote_text" + textCount);
+		footnotes[i].setAttribute("href", "#footnote_ref" + textCount);
 		textCount++;
 	  } else {
-	    footnotes[i].setAttribute("id", "footnote-ref" + refCount);
-		footnotes[i].setAttribute("href", "#footnote-text" + refCount);
+	    footnotes[i].setAttribute("id", "footnote_ref" + refCount);
+		footnotes[i].setAttribute("href", "#footnote_text" + refCount);
 		refCount++;
 	  }
 	}

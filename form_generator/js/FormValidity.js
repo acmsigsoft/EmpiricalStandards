@@ -1,5 +1,5 @@
 // Check if the completed checklist is valid (no missing items)
-function check_form_validity(event) {
+function checkFormValidity(event) {
 	event.preventDefault();
 	let validity = true;
 	let list = document.getElementById("Essential");
@@ -19,43 +19,43 @@ function check_form_validity(event) {
 					validity = false;
 				}
 				
-				let question_blocks = li.getElementsByClassName('question_block');
+				let questionBlocks = li.getElementsByClassName('question_block');
 				
-				if (question_blocks[0].style.display != "none") {
-					let reasonable_yes = question_blocks[0].getElementsByClassName('deviationRadioYes')[0];
-					let reasonable_no = question_blocks[0].getElementsByClassName('deviationRadioNo')[0];
+				if (questionBlocks[0].style.display != "none") {
+					let reasonableYes = questionBlocks[0].getElementsByClassName('deviationRadioYes')[0];
+					let reasonableNo = questionBlocks[0].getElementsByClassName('deviationRadioNo')[0];
 					
 					// If deviation reasonability missing, the item is invalid
-					if (reasonable_yes.checked || reasonable_no.checked) {
-						question_blocks[0].classList.remove("attention");
+					if (reasonableYes.checked || reasonableNo.checked) {
+						questionBlocks[0].classList.remove("attention");
 					} else {
-						question_blocks[0].classList.add("attention");
+						questionBlocks[0].classList.add("attention");
 						validity = false;
 					}
 					
-					if (question_blocks[1].style.display != "none") {
-						let types = question_blocks[1].getElementsByClassName('justificationRadioType');
+					if (questionBlocks[1].style.display != "none") {
+						let types = questionBlocks[1].getElementsByClassName('justification_radio_type');
 					
 						// If deviation type missing, the item is invalid
 						if (types[0].checked || types[1] && types[1].checked || types[2] && types[2].checked || types[3] && types[3].checked) {
-							question_blocks[1].classList.remove("attention");
+							questionBlocks[1].classList.remove("attention");
 						} else {
-							question_blocks[1].classList.add("attention");
+							questionBlocks[1].classList.add("attention");
 							validity = false;
 						}
 					}
 					
-					let free_text = li.getElementsByClassName('question_block_free_Text')[0];
+					let freeTextBox = li.getElementsByClassName('question_block_free_text')[0];
 					
-					if (free_text.style.display != "none") {
-						let free_text_content = free_text.getElementsByClassName('freeTextAnswer')[0];
+					if (freeTextBox.style.display != "none") {
+						let freeTextContent = freeTextBox.getElementsByClassName('free_text_answer')[0];
 					
 						// If free text missing, the item is invalid
-						if (free_text_content.value == "") {
-							free_text.classList.add("attention");
+						if (freeTextContent.value == "") {
+							freeTextBox.classList.add("attention");
 							validity = false;
 						} else {
-							free_text.classList.remove("attention");
+							freeTextBox.classList.remove("attention");
 						}
 					}
 				}
@@ -75,7 +75,7 @@ function check_form_validity(event) {
 // Download the checklist with a specific format
 function saveFile() {
 	var checklists = document.getElementById('checklists');
-	var generated_text = '=================\n' +
+	var generatedText = '=================\n' +
 		'Review Checklist\n' +
 		'=================\n';
 		
@@ -84,40 +84,39 @@ function saveFile() {
 	var reasonable = document.getElementById("deviation_reasonable");
 
 	if (decision.style.display == "block") {
-		generated_text += "\nRecommended Decision: " + decision.innerText + "\n";
+		generatedText += "\nRecommended Decision: " + decision.innerText + "\n";
 	}
 	
 	if (unreasonable.style.display == "block") {
-		generated_text += "\nUnreasonable Deviations\n";
+		generatedText += "\nUnreasonable Deviations\n";
 	}
 
 	if (reasonable.style.display == "block") {
-		generated_text += "\nUnreasonable Deviations Requiring Revision\n";
+		generatedText += "\nUnreasonable Deviations Requiring Revision\n";
 	} else {
-		generated_text += "";
+		generatedText += "";
 	}
 	
-	var essential_list = "\nEssential\r\n";
+	var essentialList = "\nEssential\r\n";
 	
 	if (role == "\"author\""){
-		var location_type = document.getElementById('location_type');
-		location_type = location_type.options[location_type.selectedIndex].text;
-		generated_text += "\nNote: The numbers beside checklist items, if any, represent " + location_type.toLowerCase() + "\n";
+		var locationType = document.getElementById('location_type');
+		locationType = locationType.options[locationType.selectedIndex].text;
+		generatedText += "\nNote: The numbers beside checklist items, if any, represent " + locationType.toLowerCase() + "\n";
 		
-		essential_list += "  Location" + "\t" + "Attribute\r\n\r\n";
+		essentialList += "  Location" + "\t" + "Attribute\r\n\r\n";
 	}
 	
-	var desirable_list = "\nDesirable\r\n";
-	var extraordinary_list = "\nExtraordinary\r\n";
-	var free_text_list = "\nFree Text Questions\r\n"
+	var desirableList = "\nDesirable\r\n";
+	var extraordinaryList = "\nExtraordinary\r\n";
 	
-	var include_desirable = false;
-	var include_extraordinary = false;
+	var includeDesirable = false;
+	var includeExtraordinary = false;
 	
-	var type1_list = "";
-	var type2_list = "";
-	var type3_list = "";
-	var type4_list = "";
+	var type1List = "";
+	var type2List = "";
+	var type3List = "";
+	var type4List = "";
 	
 	for (let list of checklists.children) {
 		if(list.tagName == 'UL' & list.style.display != 'none') {
@@ -129,10 +128,10 @@ function saveFile() {
 						   continue;
 						}
 						i++;
-						var li_text = li.getAttribute("text").trim();
+						var itemText = li.getAttribute("text").trim();
 						var regex = /<a+\n*.+<\/a>/g;
-						if (li_text.match(regex) != null)
-							li_text = li_text.replace(regex, "");
+						if (itemText.match(regex) != null)
+							itemText = itemText.replace(regex, "");
 
 						var regex2 = /\{sup\}.+\{\/sup\}/g;
 						var regex3 = /<br\/>/g;
@@ -143,157 +142,157 @@ function saveFile() {
 						var regex8 = /<i>/g;
 						var regex9 = /<\/i>/g;
 
-						if (li_text.match(regex2) != null)
-							li_text = li_text.replace(regex2, "");
-						if (li_text.match(regex3) != null)
-							li_text = li_text.replace(regex3,"\n");
-						if (li_text.match(regex4) != null)
-							li_text = li_text.replace(regex4,"");
-						if (li_text.match(regex5) != null)
-							li_text = li_text.replace(regex5,"");
-						if (li_text.match(regex6) != null)
-							li_text = li_text.replace(regex6,"");
-						if (li_text.match(regex7) != null)
-							li_text = li_text.replace(regex7,"");
-						if (li_text.match(regex8) != null)
-							li_text = li_text.replace(regex8,"");
-						if (li_text.match(regex9) != null)
-							li_text = li_text.replace(regex9,"");
+						if (itemText.match(regex2) != null)
+							itemText = itemText.replace(regex2, "");
+						if (itemText.match(regex3) != null)
+							itemText = itemText.replace(regex3,"\n");
+						if (itemText.match(regex4) != null)
+							itemText = itemText.replace(regex4,"");
+						if (itemText.match(regex5) != null)
+							itemText = itemText.replace(regex5,"");
+						if (itemText.match(regex6) != null)
+							itemText = itemText.replace(regex6,"");
+						if (itemText.match(regex7) != null)
+							itemText = itemText.replace(regex7,"");
+						if (itemText.match(regex8) != null)
+							itemText = itemText.replace(regex8,"");
+						if (itemText.match(regex9) != null)
+							itemText = itemText.replace(regex9,"");
 						
-						var location_value = "";
-						var location_textbox = li.getElementsByClassName('item_location_textbox');
+						var locationValue = "";
+						var locationTextbox = li.getElementsByClassName('item_location_textbox');
 
 						if (list.id == 'Essential'){
 							if (role != "\"author\"" && li.children[0].checked) {
-								essential_list +=  'Y' + '\t   ' + li_text + '\r\n';
-							} else if (role == "\"author\"" && location_textbox[0].value != "") {
-								if (location_textbox.length == 1) {
-									location_value = location_textbox[0].value;
+								essentialList +=  'Y' + '\t   ' + itemText + '\r\n';
+							} else if (role == "\"author\"" && locationTextbox[0].value != "") {
+								if (locationTextbox.length == 1) {
+									locationValue = locationTextbox[0].value;
 								}
 																
-								essential_list += "  " + (location_value != "" ? location_value : "");
+								essentialList += "  " + (locationValue != "" ? locationValue : "");
 								
 								// Determine whether to push item text to new line based on location text length
-								if (location_value.length < 6) {
-									essential_list += '\t\t' + li_text + '\r\n';
-								} else if (location_value.length < 14) {
-									essential_list += '\t' + li_text + '\r\n';
+								if (locationValue.length < 6) {
+									essentialList += '\t\t' + itemText + '\r\n';
+								} else if (locationValue.length < 14) {
+									essentialList += '\t' + itemText + '\r\n';
 								} else {
-									essential_list += '\r\n\t\t' + li_text + '\r\n';
+									essentialList += '\r\n\t\t' + itemText + '\r\n';
 								}
 								
 							} else {
-								var reasonable_deviation = li.getElementsByClassName('deviationRadioYes')[0];						
-								location_textbox = li.getElementsByClassName('justification_location_textbox');
+								var reasonableDeviation = li.getElementsByClassName('deviationRadioYes')[0];						
+								locationTextbox = li.getElementsByClassName('justification_location_textbox');
 								
 								// store for the free_text_question
-								var questionDiv  = li.getElementsByClassName("question_block_free_Text");
+								var questionDiv  = li.getElementsByClassName("question_block_free_text");
 								
 								if (questionDiv[0]) {
-									var question_text = questionDiv[0].querySelector('div:first-child').textContent.trim().replace(/^\W+/g, '');
-									console.log(question_text)
-									var inputCollection  = li.getElementsByClassName('freeTextAnswer');
+									var questionText = questionDiv[0].querySelector('div:first-child').textContent.trim().replace(/^\W+/g, '');
+									console.log(questionText)
+									var inputCollection  = li.getElementsByClassName('free_text_answer');
 									console.log(inputCollection);
 									
 									if (inputCollection[0]) {
-										var input_text = inputCollection[0].value;
+										var inputText = inputCollection[0].value;
 									}
 								}
 
-								if (location_textbox[0] && location_textbox[0].value != "" || reasonable_deviation && reasonable_deviation.checked) {
-									if (location_textbox.length == 1) {
-										location_value = location_textbox[0].value;
+								if (locationTextbox[0] && locationTextbox[0].value != "" || reasonableDeviation && reasonableDeviation.checked) {
+									if (locationTextbox.length == 1) {
+										locationValue = locationTextbox[0].value;
 									}
 									
 									if (role == "\"author\"") {
-										essential_list += "  " + (location_value != "" ? location_value : "");
+										essentialList += "  " + (locationValue != "" ? locationValue : "");
 										
 										// Determine whether to push item text to new line based on location text length
-										if (location_value.length < 6) {
-											essential_list += '\t\t' + li_text + ' (justified deviation)\r\n';
-										} else if (location_value.length < 14) {
-											essential_list += '\t' + li_text + ' (justified deviation)\r\n';
+										if (locationValue.length < 6) {
+											essentialList += '\t\t' + itemText + ' (justified deviation)\r\n';
+										} else if (locationValue.length < 14) {
+											essentialList += '\t' + itemText + ' (justified deviation)\r\n';
 										} else {
-											essential_list += '\r\n\t\t' + li_text + ' (justified deviation)\r\n';
+											essentialList += '\r\n\t\t' + itemText + ' (justified deviation)\r\n';
 										}
 										
 									} else {
-										essential_list += 'R' + '\t   ' + li_text + '\r\n';
+										essentialList += 'R' + '\t   ' + itemText + '\r\n';
 									}
 									
 								} else {
-									var fixable_deviation = li.getElementsByClassName('justificationRadioType');
+									var fixableDeviation = li.getElementsByClassName('justification_radio_type');
 									
-									if (fixable_deviation.length != 0){
-										if (fixable_deviation[0].checked) {
-											type1_list += '1\t   ' + li_text + '\r\n';
-											if(input_text !== ""){
-												type1_list += ' \t   ' + question_text + '\r\n';
-												type1_list += ' \t    \t   ' + input_text + '\r\n';
+									if (fixableDeviation.length != 0){
+										if (fixableDeviation[0].checked) {
+											type1List += '1\t   ' + itemText + '\r\n';
+											if(inputText !== ""){
+												type1List += ' \t   ' + questionText + '\r\n';
+												type1List += ' \t    \t   ' + inputText + '\r\n';
 											}
-										} else if (fixable_deviation[1].checked) {
-											type2_list += '2\t   ' + li_text + '\r\n';
-											if(input_text !== ""){
-												type2_list += ' \t   ' + question_text + '\r\n';
-												type2_list += ' \t    \t   ' + input_text + '\r\n';
+										} else if (fixableDeviation[1].checked) {
+											type2List += '2\t   ' + itemText + '\r\n';
+											if(inputText !== ""){
+												type2List += ' \t   ' + questionText + '\r\n';
+												type2List += ' \t    \t   ' + inputText + '\r\n';
 											}
-										}  else if (fixable_deviation[2].checked) {
-											type3_list += '3\t   ' + li_text + '\r\n';
-											if(input_text !== ""){
-												type3_list += ' \t   ' + question_text + '\r\n';
-												type3_list += ' \t    \t   ' + input_text + '\r\n';
+										}  else if (fixableDeviation[2].checked) {
+											type3List += '3\t   ' + itemText + '\r\n';
+											if(inputText !== ""){
+												type3List += ' \t   ' + questionText + '\r\n';
+												type3List += ' \t    \t   ' + inputText + '\r\n';
 											}
-										}  else if (fixable_deviation[3].checked) {
-											type4_list += '4\t   ' + li_text + '\r\n';
-											if(input_text !== ""){
-												type4_list += ' \t   ' + question_text + '\r\n';
-												type4_list += ' \t    \t   ' + input_text + '\r\n';
+										}  else if (fixableDeviation[3].checked) {
+											type4List += '4\t   ' + itemText + '\r\n';
+											if(inputText !== ""){
+												type4List += ' \t   ' + questionText + '\r\n';
+												type4List += ' \t    \t   ' + inputText + '\r\n';
 											}
 										}
 									} else {
-										essential_list += (role == "\"author\"" ? '  *' : ' ') + '\t\t' + li_text;
-										essential_list += (role == "\"author\"" ? ' (unjustified deviation)\r\n' : '\r\n');
+										essentialList += (role == "\"author\"" ? '  *' : ' ') + '\t\t' + itemText;
+										essentialList += (role == "\"author\"" ? ' (unjustified deviation)\r\n' : '\r\n');
 									}
 								}
 							}
 						}
 						else if (list.id == 'Desirable') {
-							if (li.children[0].checked || role == "\"author\"" && location_textbox[0].value != "") {
-								include_desirable = true;
+							if (li.children[0].checked || role == "\"author\"" && locationTextbox[0].value != "") {
+								includeDesirable = true;
 
-								if (location_textbox.length == 1) {
-									location_value = location_textbox[0].value;
-									desirable_list += "  " + (location_value != "" ? location_value : "");
+								if (locationTextbox.length == 1) {
+									locationValue = locationTextbox[0].value;
+									desirableList += "  " + (locationValue != "" ? locationValue : "");
 									
 									// Determine whether to push item text to new line based on location text length
-									if (location_value.length < 6) {
-										desirable_list += '\t\t' + li_text + '\r\n';
-									} else if (location_value.length < 14) {
-										desirable_list += '\t' + li_text + '\r\n';
+									if (locationValue.length < 6) {
+										desirableList += '\t\t' + itemText + '\r\n';
+									} else if (locationValue.length < 14) {
+										desirableList += '\t' + itemText + '\r\n';
 									} else {
-										desirable_list += '\r\n\t\t' + li_text + '\r\n';
+										desirableList += '\r\n\t\t' + itemText + '\r\n';
 									}
 								} else {
-									desirable_list +=  'Y' + '\t   ' + li_text + '\r\n';
+									desirableList +=  'Y' + '\t   ' + itemText + '\r\n';
 								}
 							}
-						} else if (li.children[0].checked || role == "\"author\"" && location_textbox[0].value != "") {
-							include_extraordinary = true;
+						} else if (li.children[0].checked || role == "\"author\"" && locationTextbox[0].value != "") {
+							includeExtraordinary = true;
 
-							if (location_textbox.length == 1) {
-								location_value = location_textbox[0].value;
-								extraordinary_list += "  " + (location_value != "" ? location_value : "");
+							if (locationTextbox.length == 1) {
+								locationValue = locationTextbox[0].value;
+								extraordinaryList += "  " + (locationValue != "" ? locationValue : "");
 								
 								// Determine whether to push item text to new line based on location text length
-								if (location_value.length < 6) {
-									extraordinary_list += '\t\t' + li_text + '\r\n';
-								} else if (location_value.length < 14) {
-									extraordinary_list += '\t' + li_text + '\r\n';
+								if (locationValue.length < 6) {
+									extraordinaryList += '\t\t' + itemText + '\r\n';
+								} else if (locationValue.length < 14) {
+									extraordinaryList += '\t' + itemText + '\r\n';
 								} else {
-									extraordinary_list += '\r\n\t\t' + li_text + '\r\n';
+									extraordinaryList += '\r\n\t\t' + itemText + '\r\n';
 								}
 							} else {
-								extraordinary_list +=  'Y' + '\t   ' + li_text + '\r\n';
+								extraordinaryList +=  'Y' + '\t   ' + itemText + '\r\n';
 							}
 						}
 
@@ -304,29 +303,29 @@ function saveFile() {
 		}
 	}
 	
-	generated_text += type4_list + type3_list + type2_list + type1_list;
+	generatedText += type4List + type3List + type2List + type1List;
 	
-	generated_text += essential_list;
+	generatedText += essentialList;
 	
-	if (include_desirable) {
-		generated_text += desirable_list;
+	if (includeDesirable) {
+		generatedText += desirableList;
 	}
-	if (include_extraordinary) {
-		generated_text += extraordinary_list;
+	if (includeExtraordinary) {
+		generatedText += extraordinaryList;
 	}
 	
-	generated_text += "\n";
+	generatedText += "\n";
 	
-	let date_generated = new Date();
-	let date_string = date_generated.toLocaleDateString("en-CA", {timeZone: "-12:00"});
-	let time_string = date_generated.toLocaleTimeString("en-US", {timeZone: "-12:00"});
+	let dateGenerated = new Date();
+	let dateString = dateGenerated.toLocaleDateString("en-CA", {timeZone: "-12:00"});
+	let timeString = dateGenerated.toLocaleTimeString("en-US", {timeZone: "-12:00"});
 	
-	let date_formatted = new Date(date_string);
-	generated_text += '\nGenerated: ' + date_generated.toDateString() + ', ';
-	generated_text += time_string.slice(0, -6) + time_string.substr(8,3) + ' AoE\n\n';
+	let dateFormatted = new Date(dateString);
+	generatedText += '\nGenerated: ' + dateGenerated.toDateString() + ', ';
+	generatedText += timeString.slice(0, -6) + timeString.substr(8,3) + ' AoE\n\n';
 	
 	if (role != "\"author\"") {
-		generated_text += "=======\n" +
+		generatedText += "=======\n" +
 		"Legend\n" +
 		"=======\n" +
 		"Y = yes, the paper has this attribute\n" +
@@ -337,20 +336,20 @@ function saveFile() {
 		"4 = a deviation that cannot be fixed, or at least not without doing a brand new study\n\n\n";
 	}
 
-	generated_text+= "=================\n" +
+	generatedText+= "=================\n" +
 		"Standards Used\n" +
 		"=================\n";
 
 	var elms = document.querySelectorAll(".standard_links");
 	for (var i = 0; i < elms.length; i++) {
-		generated_text += elms[i].innerHTML + '\n';
+		generatedText += elms[i].innerHTML + '\n';
 	}
 
 	pageURL = window.location.href;	
-	generated_text += "\nURL: " + pageURL;
+	generatedText += "\nURL: " + pageURL;
 
 	var newLink = document.createElement('a');
-	newLink.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(generated_text);
+	newLink.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(generatedText);
 	newLink.download = 'reviewChecklist.txt';
 
     if (document.createEvent) {

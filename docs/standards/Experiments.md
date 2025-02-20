@@ -41,7 +41,7 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	EITHER: uses random assignment and explains logistics (e.g. how random numbers were generated)   
     OR: provides compelling justification for not using random assignment and explains how unequal groups threat to validity is mitigated (e.g. using pre-test/post-test and matched subjects design)
 - [ ]	describes experimental objects (e.g. real or toy system) and their characteristics (e.g. size, type)
-- [ ]	justifies selection of experimental objects; acknowledges object-treatment confounds, if any<sup><a class="footnote footnote-ref">1</a></sup>
+- [ ]	justifies selection of experimental objects; acknowledges object-treatment confounds, if any<sup><a class="footnote footnote_ref">1</a></sup>
 - [ ]	design and protocol appropriate (not optimal) for stated research questions and hypotheses 
 
 <results>
@@ -67,12 +67,12 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	discusses alternative experimental designs and why they were not used (e.g. validity trade-offs)
 - [ ]	includes visualizations of data distributions
 - [ ]	cites statistics research to support any nuanced issues or unusual approaches
-- [ ]	explains deviations between design and execution, and their implications<sup><a class="footnote footnote-ref">2</a></sup>
+- [ ]	explains deviations between design and execution, and their implications<sup><a class="footnote footnote_ref">2</a></sup>
 - [ ]	named experiment design (e.g. simple 2-group, 2x2 factorial, randomized block)
 - [ ]	analyzes construct validity of dependent variable
 - [ ]	reports manipulation checks
 - [ ]	pre-registration of hypotheses and design (where venue allows)
-- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote-ref">3</a></sup>
+- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote_ref">3</a></sup>
 </checklist>
      
 ### Extraordinary Attributes
@@ -96,7 +96,7 @@ objectivity, reproducibility
 
 -   using bad proxies for dependent variables (e.g. task completion time
     as a proxy for task complexity)
--   quasi-experiments without a good reason<sup><a class="footnote footnote-ref">4</a></sup>
+-   quasi-experiments without a good reason<sup><a class="footnote footnote_ref">4</a></sup>
 -   treatments or response variables are poorly described
 -   inappropriate design for the conditions under which the experiment
     took place
@@ -179,8 +179,8 @@ Andreas Zeller, Thomas Zimmermann, and Christian Bird. 2011. Failure is a four-l
 
 
 ---
-<footnote><sup><a class="footnote footnote-text">1</a></sup>For example, in an experiment where the control group applies Test-Driven Development (TDD) with Object 1 while the treatment group applies Test-Last-Development (TDD) with Object 2, the experimental object is confounded with the treatment.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">2</a></sup>e.g. dropouts affecting balance between treatment and control group.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">3</a></sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">4</a></sup>Quasi-experiments are appropriate for pilot studies or when assignment is beyond the researcher’s control (e.g. assigning students to two different sections of a course). Simply claiming that a study is “exploratory” is not sufficient justification.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">1</a></sup>For example, in an experiment where the control group applies Test-Driven Development (TDD) with Object 1 while the treatment group applies Test-Last-Development (TDD) with Object 2, the experimental object is confounded with the treatment.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">2</a></sup>e.g. dropouts affecting balance between treatment and control group.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">3</a></sup>Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup><a class="footnote footnote_text">4</a></sup>Quasi-experiments are appropriate for pilot studies or when assignment is beyond the researcher’s control (e.g. assigning students to two different sections of a course). Simply claiming that a study is “exploratory” is not sufficient justification.</footnote><br>
 </standard>

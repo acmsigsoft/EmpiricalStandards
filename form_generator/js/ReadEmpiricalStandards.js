@@ -1,52 +1,52 @@
 // Generate relative path for each standard document
-function readSpecificEmpiricalStandard(standard_name) {
+function readSpecificEmpiricalStandard(standardName) {
 	var mdFile = new XMLHttpRequest();
 	var loc = window.location.pathname;
 	var dir = loc.substring(0, loc.lastIndexOf('/'));
 	var dir = dir.substring(0, dir.lastIndexOf('/'));
-	var standard_file_name = standard_name.replaceAll("\"", "").replace(" ", "");
-	var standard_file_path = dir + "/docs/standards/" + standard_file_name + ".md";
-	var empirical_standard = "";
-	mdFile.open("GET", standard_file_path, false);
+	var standardFileName = standardName.replaceAll("\"", "").replace(" ", "");
+	var standardFilePath = dir + "/docs/standards/" + standardFileName + ".md";
+	var empiricalStandard = "";
+	mdFile.open("GET", standardFilePath, false);
 	mdFile.onreadystatechange = function () {
 		if (mdFile.readyState === 4) {
 			if (mdFile.status === 200 || mdFile.status == 0) {
-				empirical_standard = mdFile.responseText;
+				empiricalStandard = mdFile.responseText;
 			} else {
-				alert("Can't read " + standard_file_path);
+				alert("Can't read " + standardFilePath);
 			}
 		} else {
-			alert("Can't read " + standard_file_path);
+			alert("Can't read " + standardFilePath);
 		}
 	}
 	mdFile.send(null);
-	return empirical_standard;
+	return empiricalStandard;
 }
 
 // Load the table file for the customization of the checklist
-function readSpecificEmpiricalStandard_table(standard_name) {
+function readSpecificEmpiricalStandardTable(standardName) {
 	//loadConfiguration();
 	var mdFile = new XMLHttpRequest();
 	var loc = window.location.pathname;
 	var dir = loc.substring(0, loc.lastIndexOf('/'));
 	var dir = dir.substring(0, dir.lastIndexOf('/'));
-	var standard_file_name = standard_name.replaceAll("\"", "").replace(" ", "");
-	console.log(standard_file_name);
-	var standard_file_path = dir + "/docs/attribute_customizations/" + standard_file_name + "_table.md";
-	console.log(standard_file_path);
-	var empirical_standard = "";
-	mdFile.open("GET", standard_file_path, false);
+	var standardFileName = standardName.replaceAll("\"", "").replace(" ", "");
+	console.log(standardFileName);
+	var standardFilePath = dir + "/docs/attribute_customizations/" + standardFileName + "_table.md";
+	console.log(standardFilePath);
+	var empiricalStandard = "";
+	mdFile.open("GET", standardFilePath, false);
 	mdFile.onreadystatechange = function () {
 		if (mdFile.readyState === 4) {
 			if (mdFile.status === 200 || mdFile.status == 0) {
-				empirical_standard = mdFile.responseText;
+				empiricalStandard = mdFile.responseText;
 			} else {
-				alert("Can't read " + standard_file_path);
+				alert("Can't read " + standardFilePath);
 			}
 		} else {
-			alert("Can't read " + standard_file_path);
+			alert("Can't read " + standardFilePath);
 		}
 	}
 	mdFile.send(null);
-	return empirical_standard;
+	return empiricalStandard;
 }
