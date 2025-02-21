@@ -797,7 +797,7 @@ function addAttentionCheck(checklist) {
 	
 	// Get approximate middle position of checklist
 	let count = checklist.childElementCount;
-	let middle = Math.floor(count / 2);
+	let position = Math.floor(count / 2);
 	
 	let attentionCheck = document.createElement("LI");
 	attentionCheck.className = "attention_item";
@@ -824,6 +824,22 @@ function addAttentionCheck(checklist) {
 	attentionCheck.appendChild(attentionNoInput);
 	attentionCheck.appendChild(attentionText);
 	
+	position = randomizeAttentionPosition(position);
+	
 	// Insert the attention check after the middle list item
-	checklist.children[middle].insertAdjacentElement("afterend", attentionCheck);
+	checklist.children[position].insertAdjacentElement("afterend", attentionCheck);
+}
+
+// Randomize the location of the attention check item by ~3 spaces up or down
+function randomizeAttentionPosition(position) {
+	let offset = Math.floor(Math.random() * 4);
+	let direction = Math.floor(Math.random() * 2);
+	
+	if (direction == 0) {
+		position -= offset;
+	} else {
+		position += offset;
+	}
+	
+	return position;
 }
