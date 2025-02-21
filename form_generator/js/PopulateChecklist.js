@@ -1,7 +1,7 @@
 function populateChecklist() {
 	console.log("Populating " + role + " checklist");
 
-	// Clear all stored items for this checklist
+	// Get all locally stored keys
 	let keys = Object.keys(localStorage);
 
 	// Move nonessential keys to last
@@ -25,6 +25,10 @@ function populateChecklist() {
 
 					} else if (!state.checked) {
 						item.children[1].click();
+						
+						if (item.className == "attention_item") {
+							continue;
+						}
 
 						let questionBlocks = item.getElementsByClassName('question_block');
 						let reasonableYes = questionBlocks[0].getElementsByClassName('deviationRadioYes')[0];

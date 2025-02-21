@@ -92,7 +92,7 @@ form:active {
 	border: 2px solid red;
 }
 
-.checklistRadioNo {
+.checklist_radio_no, .attention_pass {
 	margin-left: 12px;
 }
 
