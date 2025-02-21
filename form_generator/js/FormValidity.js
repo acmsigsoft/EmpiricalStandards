@@ -326,15 +326,14 @@ function saveFile() {
 	
 	let dateFormatted = new Date(dateString);
 	generatedText += '\nGenerated: ' + dateGenerated.toDateString() + ', ';
-	generatedText += timeString.slice(0, -6) + timeString.substr(8,3) + ' AoE\n\n';
-	
-	let attentionCheck = document.getElementsByClassName("attention_pass")[0];
-	if (!attentionCheck.checked) {
-		
-		generatedText += "Note: the creator of this review failed the attention check. The editor should consider the possibility that the review is invalid.\n\n\n";
-	}
+	generatedText += timeString.slice(0, -6) + timeString.substr(8,3) + ' AoE\n\n\n';
 	
 	if (role != "\"author\"") {
+		let attentionCheck = document.getElementsByClassName("attention_pass")[0];
+		if (!attentionCheck.checked) {
+			generatedText += "Note: the creator of this review failed the attention check. The editor should consider the possibility that the review is invalid.\n\n\n";
+		}
+		
 		generatedText += "=======\n" +
 		"Legend\n" +
 		"=======\n" +
