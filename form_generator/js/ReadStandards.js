@@ -90,6 +90,11 @@ document.addEventListener("visibilitychange", () => {
 				localStorage.setItem(key, JSON.stringify(storage));
 			} else if (item.children[1].checked) {
 				storage.checked = false;
+				
+				if (item.className == "attention_item") {
+					localStorage.setItem(key, JSON.stringify(storage));
+					continue;
+				}
 
 				let questionBlocks = item.getElementsByClassName('question_block');
 				let reasonableYes = questionBlocks[0].getElementsByClassName('deviationRadioYes')[0];

@@ -19,6 +19,10 @@ function checkFormValidity(event) {
 					validity = false;
 				}
 				
+				if (li.className == "attention_item") {
+					continue;
+				}
+				
 				let questionBlocks = li.getElementsByClassName('question_block');
 				
 				if (questionBlocks[0].style.display != "none") {
@@ -124,7 +128,7 @@ function saveFile() {
 				if(ul.tagName == 'UL'){
 					var i = 0;
 					for (let li of ul.children) {
-						if (li.tagName != 'LI') {
+						if (li.tagName != 'LI' || li.className == "attention_item") {
 						   continue;
 						}
 						i++;
@@ -322,9 +326,14 @@ function saveFile() {
 	
 	let dateFormatted = new Date(dateString);
 	generatedText += '\nGenerated: ' + dateGenerated.toDateString() + ', ';
-	generatedText += timeString.slice(0, -6) + timeString.substr(8,3) + ' AoE\n\n';
+	generatedText += timeString.slice(0, -6) + timeString.substr(8,3) + ' AoE\n\n\n';
 	
 	if (role != "\"author\"") {
+		let attentionCheck = document.getElementsByClassName("attention_pass")[0];
+		if (!attentionCheck.checked) {
+			generatedText += "Note: the creator of this review failed the attention check. The editor should consider the possibility that the review is invalid.\n\n\n";
+		}
+		
 		generatedText += "=======\n" +
 		"Legend\n" +
 		"=======\n" +

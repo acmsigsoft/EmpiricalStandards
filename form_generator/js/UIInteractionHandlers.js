@@ -6,8 +6,8 @@ function generateDecisionMessageBlock() {
 
 	// Number of yes's that are not checked and nos checked
 	if (role != "\"author\"") {
-		checklistYesNotCheckedCount = $('input[class="checklistRadioYes"][type="radio"][value="yes"]').not(':checked').length;
-		checklistNoCheckedCount = $('input[class="checklistRadioNo"][type="radio"][value="no"]:checked').length;
+		checklistYesNotCheckedCount = $('input[class="checklist_radio_yes"][type="radio"][value="yes"]').not(':checked').length;
+		checklistNoCheckedCount = $('input[class="checklist_radio_no"][type="radio"][value="no"]:checked').length;
 	}
 
 	// Second level yes
@@ -354,4 +354,13 @@ function createTooltip(checklistItemText, lineText, footnotes) {
 		return allTooltipsText;
 	}
 	return checklistItemText;
+}
+
+// Uncheck the other radio button when performing the attention check
+function toggleAttentionCheck() {
+	if (this.id === "attention_yes") {
+		document.getElementById("attention_no").checked = false;
+	} else {
+		document.getElementById("attention_yes").checked = false;
+	}
 }
