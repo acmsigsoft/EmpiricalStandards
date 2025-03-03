@@ -73,6 +73,7 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	reports manipulation checks
 - [ ]	pre-registration of hypotheses and design (where venue allows)
 - [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote_ref">3</a></sup>
+- [ ]	the experiment uses financial instead of non-financial incentives
 </checklist>
      
 ### Extraordinary Attributes
