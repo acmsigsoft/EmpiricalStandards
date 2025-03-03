@@ -1,7 +1,7 @@
 ---
 ---
 
-*:not(.item_location_textbox) {
+*:not(.item_location_textbox, .justification_location_textbox) {
   box-sizing: border-box;
 }
 
@@ -523,6 +523,7 @@ main .page_link {
 	padding: 30px;
 	font-size: 16px;
 	text-align: left;
+	hyphens: auto;
 }
 
 .timeline_content a {

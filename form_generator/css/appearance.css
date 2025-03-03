@@ -20,6 +20,7 @@ form:active {
 .item_list {
 	list-style-type: none;
 	list-style-position: inside;
+	margin-bottom: 0em;
 }
 
 .author_items {
