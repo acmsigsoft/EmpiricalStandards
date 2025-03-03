@@ -81,6 +81,7 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	reports multiple experiments or replications in different cultures or regions
 - [ ]	uses multiple methods of data collection; data triangulation
 - [ ]	longitudinal data collection with appropriate time-series analysis (see the [Longitudinal Studies Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/Longitudinal.md))
+- [ ]	if applicable and possible, the experiment uses payoff functions for financial incentivization (which must be internally and externally valid)
 </checklist>
 
 ## Examples of Acceptable Deviations
