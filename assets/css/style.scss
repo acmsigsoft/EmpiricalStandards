@@ -360,7 +360,7 @@ main .page_link {
 .instruction_box  {
 	min-height: 500px;
 	display: flex;
-	flex-wrap: wrap
+	flex-wrap: wrap;
 }
 
 .instruction_box img {
@@ -401,6 +401,7 @@ main .page_link {
 .benefit_list li {
 	font-size: 1.0em;
 	margin-bottom: 30px;
+	text-indent: 3em hanging;
 }
 
 .benefit_list li:before {
@@ -687,6 +688,11 @@ main .ready_link {
 }
 
 @media screen and (max-width: 1200px) {
+	.instruction_box  {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
 	.instruction_text {
 		flex: 0 0 100%;
 		margin: 0;
@@ -695,12 +701,16 @@ main .ready_link {
 	}
 
 	.instruction_box img {
-		height: 29vw;
+		height: 25vw;
 		margin-top: 30px
 	}
 	
 	.benefit_list {
 		text-align: left;
+	}
+	
+	.benefit_container {
+		display: inline-block;
 	}
 }
 

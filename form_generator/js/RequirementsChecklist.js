@@ -561,8 +561,9 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 			
 			if (role == "\"author\"") {
 				checklistItemLI.classList.add("author_list_item");
-				checklistItemText.classList.add("item_text");
 			}
+			
+			checklistItemText.classList.add("item_text");
 			
 			if(IMRaDLineBreak) {
 				checklists.appendChild(document.createElement("br"));

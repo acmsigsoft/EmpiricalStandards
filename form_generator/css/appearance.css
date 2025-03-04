@@ -6,6 +6,10 @@ form:active {
 	color: blue;
 }
 
+.checklist_page_heading {
+	text-align: center;
+}
+
 .checklist_heading {
 	padding: 0px;
 	margin: 0px;
