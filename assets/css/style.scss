@@ -37,6 +37,7 @@ summary {
 	font-size: 1.5em;
 	font-family: "Georgia", "Times New Roman", serif;
 	color: #2b4d6f;
+	text-indent: 1em hanging;
 }
 
 details {
@@ -47,6 +48,7 @@ details p {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	text-indent: 0px;
+	margin-left: 25px;
 }
 
 main .wrapper {
@@ -642,6 +644,10 @@ main .ready_link {
 	display: none;
 	padding: 10px 20px;
 	height: 100%;
+}
+
+.tabcontent a {
+	color: #2a7ae2;
 }
 
 .active {
