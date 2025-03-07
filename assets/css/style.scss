@@ -1,7 +1,7 @@
 ---
 ---
 
-*:not(.item_location_textbox) {
+*:not(.item_location_textbox, .justification_location_textbox) {
   box-sizing: border-box;
 }
 
@@ -37,6 +37,7 @@ summary {
 	font-size: 1.5em;
 	font-family: "Georgia", "Times New Roman", serif;
 	color: #2b4d6f;
+	text-indent: 1em hanging;
 }
 
 details {
@@ -47,6 +48,7 @@ details p {
 	margin-top: 20px;
 	margin-bottom: 20px;
 	text-indent: 0px;
+	margin-left: 25px;
 }
 
 main .wrapper {
@@ -360,7 +362,7 @@ main .page_link {
 .instruction_box  {
 	min-height: 500px;
 	display: flex;
-	flex-wrap: wrap
+	flex-wrap: wrap;
 }
 
 .instruction_box img {
@@ -401,6 +403,7 @@ main .page_link {
 .benefit_list li {
 	font-size: 1.0em;
 	margin-bottom: 30px;
+	text-indent: 3em hanging;
 }
 
 .benefit_list li:before {
@@ -523,6 +526,7 @@ main .page_link {
 	padding: 30px;
 	font-size: 16px;
 	text-align: left;
+	hyphens: auto;
 }
 
 .timeline_content a {
@@ -642,6 +646,10 @@ main .ready_link {
 	height: 100%;
 }
 
+.tabcontent a {
+	color: #2a7ae2;
+}
+
 .active {
 	font-weight: bold;
 }
@@ -686,6 +694,11 @@ main .ready_link {
 }
 
 @media screen and (max-width: 1200px) {
+	.instruction_box  {
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+
 	.instruction_text {
 		flex: 0 0 100%;
 		margin: 0;
@@ -694,12 +707,16 @@ main .ready_link {
 	}
 
 	.instruction_box img {
-		height: 29vw;
+		height: 25vw;
 		margin-top: 30px
 	}
 	
 	.benefit_list {
 		text-align: left;
+	}
+	
+	.benefit_container {
+		display: inline-block;
 	}
 }
 

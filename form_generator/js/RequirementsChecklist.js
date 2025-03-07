@@ -13,13 +13,13 @@ function createRequirementsChecklist(file) {
 	form.appendChild(clearButton);
 
 	// create Header for Essential Requirements with an unordered list
-	var EssentialUL = createRequirementsHeadingWithUL("Essential");
+	var EssentialUL = createRequirementsHeadingWithContainer("Essential");
 
 	// create Header for Desirable Requirements with an unordered list
-	var DesirableUL = createRequirementsHeadingWithUL("Desirable");
+	var DesirableUL = createRequirementsHeadingWithContainer("Desirable");
 
 	// create Header for Extraordinary Requirements with an unordered list
-	var ExtraordinaryUL = createRequirementsHeadingWithUL("Extraordinary");
+	var ExtraordinaryUL = createRequirementsHeadingWithContainer("Extraordinary");
 
 	if (role != "\"author\"") {
 		DesirableUL.className = "hide_display";
@@ -256,17 +256,27 @@ function createRequirementsChecklistTable(file) {
 	return;
 }
 
-// create Header with Unordered List (Essential, Desirable, Extraordinary)
-function createRequirementsHeadingWithUL(title) {
-	var heading = document.createElement("H3");
-	var unorderedList = document.createElement("UL");
+// create container with checklist heading (Essential, Desirable, Extraordinary)
+function createRequirementsHeadingWithContainer(title) {
+	
+	var heading;
+	var container;
+	
+	if (title == "Essential") {
+		heading = document.createElement("H3");
+		container = document.createElement("UL");
+	} else {
+		heading = document.createElement("summary");
+		container = document.createElement("details");
+		container.setAttribute("open", "");
+	}
 
 	heading.className = "checklist_heading";
 	heading.innerHTML = title;
-	unorderedList.id = title;
-	unorderedList.appendChild(heading);
+	container.id = title;
+	container.appendChild(heading);
 
-	return unorderedList;
+	return container;
 }
 
 function createDownloadConfigurationButton() {
@@ -551,8 +561,9 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 			
 			if (role == "\"author\"") {
 				checklistItemLI.classList.add("author_list_item");
-				checklistItemText.classList.add("item_text");
 			}
+			
+			checklistItemText.classList.add("item_text");
 			
 			if(IMRaDLineBreak) {
 				checklists.appendChild(document.createElement("br"));
