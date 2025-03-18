@@ -118,6 +118,7 @@ objectivity, reproducibility
 -   the reviewer would have investigated the topic in any other way than
     an experiment
 -   not enough participants (unless supported by power analysis)
+-   not employing an incentivization scheme
 
 ## Exemplars
 
