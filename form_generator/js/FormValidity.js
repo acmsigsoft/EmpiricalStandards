@@ -123,7 +123,7 @@ function saveFile() {
 	var type4List = "";
 	
 	for (let list of checklists.children) {
-		if(list.tagName == 'UL' & list.style.display != 'none') {
+		if(list.tagName == 'UL' & list.style.display != 'none' || list.tagName == 'DETAILS' && list.style.display != 'none') {
 			for (let ul of list.children) {
 				if(ul.tagName == 'UL'){
 					var i = 0;
