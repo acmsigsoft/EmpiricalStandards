@@ -101,6 +101,11 @@ form:active {
 	margin-left: 12px;
 }
 
+.present_container {
+	flex: 0 1 20%;
+	text-align: center;
+}
+
 .author_yes_no_block {
 	flex: 0 0 100%;
 	display: none;
@@ -147,11 +152,7 @@ form:active {
 }
 
 .hide_display {
-	display: none;
-}
-
-.show_display {
-	display: block;
+	display: none !important;
 }
 
 .message_style_1 {
