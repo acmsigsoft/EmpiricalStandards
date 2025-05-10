@@ -104,6 +104,7 @@ objectivity, reproducibility
     chosen or data characteristics (e.g. using an independent samples
     t-test on paired data)
 -   validity threats are simply listed without linking them to results
+-   not reporting the (non-)use of an incentivization scheme
 
 ## Invalid criticisms
 
