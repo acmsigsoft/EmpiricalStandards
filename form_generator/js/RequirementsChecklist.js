@@ -686,7 +686,7 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 					
 					// Create alternative yes-no interface
 					presentContainer = document.createElement("span");
-					presentContainer.className = "present_container hide_display";
+					presentContainer.className = "present_container hide_display_imp";
 					
 					presentCheckBox = document.createElement("input");
 					presentCheckBox.type = "checkbox";
@@ -788,7 +788,7 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 					
 					// Create alternative yes-no interface
 					presentContainer = document.createElement("span");
-					presentContainer.className = "present_container hide_display";
+					presentContainer.className = "present_container hide_display_imp";
 					
 					presentCheckBox = document.createElement("input");
 					presentCheckBox.type = "checkbox";

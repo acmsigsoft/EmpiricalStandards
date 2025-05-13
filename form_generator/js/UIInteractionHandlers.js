@@ -377,33 +377,33 @@ function toggleChecklistDisplay(event) {
 	if (toggleOption == "yes_no") {
 		// Switch to yes-no interface
 		let missingLabel = document.getElementById("missing_label");
-		missingLabel.classList.add("hide_display");
+		missingLabel.classList.add("hide_display_imp");
 		
 		for (let i = 0; i < locationContainers.length; i++) {
-			locationContainers[i].classList.add("hide_display");
-			missingContainers[i].classList.add("hide_display");
-			presentContainers[i].classList.remove("hide_display");
+			locationContainers[i].classList.add("hide_display_imp");
+			missingContainers[i].classList.add("hide_display_imp");
+			presentContainers[i].classList.remove("hide_display_imp");
 			
 			if (i < deviationBoxes.length) {
-				deviationBoxes[i].classList.add("hide_display");
+				deviationBoxes[i].classList.add("hide_display_imp");
 			}
 		}
-		presentContainers[0].classList.remove("hide_display");
+		presentContainers[0].classList.remove("hide_display_imp");
 		
 	} else {
 		// Switch to location interface
 		let missingLabel = document.getElementById("missing_label");
-		missingLabel.classList.remove("hide_display");
+		missingLabel.classList.remove("hide_display_imp");
 		
 		for (let i = 0; i < locationContainers.length; i++) {
-			locationContainers[i].classList.remove("hide_display");
-			missingContainers[i].classList.remove("hide_display");
-			presentContainers[i].classList.add("hide_display");
+			locationContainers[i].classList.remove("hide_display_imp");
+			missingContainers[i].classList.remove("hide_display_imp");
+			presentContainers[i].classList.add("hide_display_imp");
 			
 			if (i < deviationBoxes.length) {
-				deviationBoxes[i].classList.remove("hide_display");
+				deviationBoxes[i].classList.remove("hide_display_imp");
 			}
 		}
-		presentContainers[0].classList.add("hide_display");
+		presentContainers[0].classList.add("hide_display_imp");
 	}
 }

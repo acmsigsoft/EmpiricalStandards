@@ -103,12 +103,14 @@ function saveFile() {
 	
 	var essentialList = "\nEssential\r\n";
 	
-	var locationType = document.getElementById('location_type');
-	locationType = locationType.options[locationType.selectedIndex].text;
-	
-	if (role == "\"author\"" && locationType != "Present?"){		
-		generatedText += "\nNote: The numbers beside checklist items, if any, represent " + locationType.toLowerCase() + "\n";
-		essentialList += "  Location" + "\t" + "Attribute\r\n\r\n";
+	if (role == "\"author\""){	
+		let locationType = document.getElementById('location_type');
+		locationType = locationType.options[locationType.selectedIndex].text;	
+		
+		if (locationType != "Present?") {
+			generatedText += "\nNote: The numbers beside checklist items, if any, represent " + locationType.toLowerCase() + "\n";
+			essentialList += "  Location" + "\t" + "Attribute\r\n\r\n";
+		}
 	}
 	
 	var desirableList = "\nDesirable\r\n";

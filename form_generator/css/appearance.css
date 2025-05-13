@@ -152,6 +152,10 @@ form:active {
 }
 
 .hide_display {
+	display: none;
+}
+
+.hide_display_imp {
 	display: none !important;
 }
 

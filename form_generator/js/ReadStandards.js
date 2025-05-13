@@ -133,6 +133,17 @@ document.addEventListener("visibilitychange", () => {
 		} else {
 			let locationBox = item.getElementsByClassName('item_location_textbox')[0];
 			let missingButton = item.getElementsByClassName('missing_checkbox')[0];
+			let presentCheckBox = item.getElementsByClassName('present_checkbox')[0];
+			let state = JSON.parse(localStorage.getItem(key));
+			
+			if (presentCheckBox.checked) {
+				storage.present = true;
+				localStorage.setItem(key, JSON.stringify(storage));
+				
+			} else if (state !== null && state.present) {
+				storage.present = false;
+				localStorage.setItem(key, JSON.stringify(storage));
+			}
 
 			if (locationBox.value != "") {
 				storage.location = locationBox.value;
@@ -140,15 +151,17 @@ document.addEventListener("visibilitychange", () => {
 
 			} else if (missingButton.checked) {
 				storage.location = false;
+				
+				if (item.className.includes("Essential")) {
+					let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
+					let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
 
-				let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
-				let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
+					if (justificationBox.value != "") {
+						storage.justified = justificationBox.value;
 
-				if (justificationBox.value != "") {
-					storage.justified = justificationBox.value;
-
-				} else if (justificationButton.checked) {
-					storage.justified = false;
+					} else if (justificationButton.checked) {
+						storage.justified = false;
+					}
 				}
 				localStorage.setItem(key, JSON.stringify(storage));
 			}

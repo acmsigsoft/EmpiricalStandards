@@ -63,21 +63,28 @@ function populateChecklist() {
 				} else {
 					let locationBox = item.getElementsByClassName('item_location_textbox')[0];
 					let missingButton = item.getElementsByClassName('missing_checkbox')[0];
+					let presentCheckBox = item.getElementsByClassName('present_checkbox')[0];
+					
+					if (state.present) {
+						presentCheckBox.click();
+					}
 
 					if (state.location != "") {
 						locationBox.value = state.location;
 
 					} else if (!state.location) {
 						missingButton.click();
+						
+						if (item.className.includes("Essential")) {
+							let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
+							let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
 
-						let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
-						let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
+							if (Object.hasOwn(state, "justified") && state.justified != "") {
+								justificationBox.value = state.justified;
 
-						if (Object.hasOwn(state, "justified") && state.justified != "") {
-							justificationBox.value = state.justified;
-
-						} else if (!state.justified) {
-							justificationButton.click();
+							} else if (!state.justified) {
+								justificationButton.click();
+							}
 						}
 					}
 				}
