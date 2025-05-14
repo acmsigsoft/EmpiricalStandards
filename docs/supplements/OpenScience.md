@@ -24,6 +24,7 @@ provided that there are no ethical, legal, technical, economical, or practical b
 - [ ] archives supplementary materials on preserved digital repositories such as [zenodo.org](https://zenodo.org/), [figshare.com](http://figshare.com/), [softwareheritage.org](https://www.softwareheritage.org/), [osf.io](https://osf.io/), or institutional repositories
 - [ ] releases supplementary material under a clearly-identified open license such as [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) or [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
+
 ## General Criteria
 
 Rather than evaluating reproducibility or replicability in principle, reviewers should focus on the extent to which artifacts that can be released, are released.
@@ -59,3 +60,25 @@ Daniel Méndez, Daniel Graziotin, Stefan Wagner, and Heidi Seibold. 2019. Open s
 GitHub. 2016. Making Your Code Citable. Retrieved July 12, 2020 from [https://guides.github.com/activities/citable-code/](https://guides.github.com/activities/citable-code/). (How to automatically archive a GitHub repository to Zenodo)
 
 Figshare. How to connect Figshare with your GitHub account. Retrieved July 12, 2020 from [https://knowledge.figshare.com/articles/item/how-to-connect-figshare-with-your-github-account](https://knowledge.figshare.com/articles/item/how-to-connect-figshare-with-your-github-account) (How to automatically archive a GitHub repository to Figshare)
+
+## Examplar Artifacts
+Below are example artifacts for different types of software engineering research to aid in preparing reusable and functional research artifacts.
+
+#### Method: Experiments (System Evaluations, etc) and Quasi-Experiments
+
+Chen, M., Tan, T., Pan, M., & Li, Y. (2025, March). PacDroid: A Pointer-Analysis-Centric Framework for Security Vulnerabilities in Android Apps. In 2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE) (pp. 744-744). IEEE Computer Society. (Artifact). Zenodo. [https://doi.org/10.5281/zenodo.14863334](https://doi.org/10.5281/zenodo.14863334)
+
+T. R. Schorlemmer, K. G. Kalu, L. Chigges, et al., “Signing in four public software package registries: Quantity, quality, and influencing factors,” in 2024 IEEE Symposium on Security and Privacy (SP), Los Alamitos, CA, USA: IEEE Computer Society, May 2024. (Artifact) Github [https://github.com/PurdueDualityLab/signature-adoption](https://github.com/PurdueDualityLab/signature-adoption)
+ 
+#### Method: Empirical Measurements (Non-human studies)
+Miao Miao, Austin Mordahl, Dakota Soles, Alice Beideck, Shiyi Wei, "An Extensive Empirical Study of Nondeterministic Behavior in Static Analysis Tools", in 2025 IEEE/ACM 47th International Conference on Software Engineering (ICSE). (Paper)(Artifact) Github [https://github.com/UTD-FAST-Lab/NDSAStudy](https://github.com/UTD-FAST-Lab/NDSAStudy)
+
+Xinchen Wang, Ruida Hu, Cuiyun Gao, Xin-Cheng Wen, Yujia Chen, and Qing Liao. 2024. ReposVul: A Repository-Level High-Quality Vulnerability Dataset. In Proceedings of the 2024 IEEE/ACM 46th International Conference on Software Engineering: Companion Proceedings (ICSE-Companion '24). Association for Computing Machinery, New York, NY, USA, 472–483. (Paper) https://doi.org/10.1145/3639478.3647634. (Artifact) Github [https://github.com/Eshe0922/ReposVul](https://github.com/Eshe0922/ReposVul)
+
+ 
+#### Method: Human Studies (Interviews, Surveys, etc)
+
+Bianca Trinkenreich, Ricardo Britto, Marco A. Gerosa, and Igor Steinmacher. 2022. An empirical investigation on the challenges faced by women in the software industry: a case study. In Proceedings of the 2022 ACM/IEEE 44th International Conference on Software Engineering: Software Engineering in Society (ICSE-SEIS '22). Association for Computing Machinery, New York, NY, USA, 24–35. (Paper) https://doi.org/10.1145/3510458.3513018 (Artifact)Figshare. [https://figshare.com/s/d1c3bd386083fa55104a](https://figshare.com/s/d1c3bd386083fa55104a)
+
+Kalu, K. G., Singla, T., Okafor, C., Torres-Arias, S., & Davis, J. C. (2025, August). An industry interview study of software signing for supply chain security. In 34th USENIX Security Symposium (USENIX Security 25). USENIX Association. Seattle, WA, USA. (Paper)  (Artifact) Zenodo. [https://doi.org/10.5281/zenodo.14660194](https://doi.org/10.5281/zenodo.14660194)
+
