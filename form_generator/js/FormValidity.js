@@ -103,9 +103,11 @@ function saveFile() {
 	
 	var essentialList = "\nEssential\r\n";
 	
+	let locationType = "";
+	
 	if (role == "\"author\""){	
-		let locationType = document.getElementById('location_type');
-		locationType = locationType.options[locationType.selectedIndex].text;	
+		let locationOption = document.getElementById('location_type');
+		locationType = locationOption.options[locationOption.selectedIndex].text;	
 		
 		if (locationType != "Present?") {
 			generatedText += "\nNote: The numbers beside checklist items, if any, represent " + locationType.toLowerCase() + "\n";
