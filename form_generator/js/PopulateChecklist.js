@@ -10,6 +10,15 @@ function populateChecklist() {
 		let index = keys.indexOf(key);
 		keys.push(keys.splice(index, 1)[0]);
 	}
+	
+	if (role == "\"author\""){	
+		let locationOption = document.getElementById('location_type');
+		let locationType = localStorage.getItem("location-type");
+		locationOption.value = locationType;	
+		
+		let event = new Event('change');
+		locationOption.dispatchEvent(event);
+	}
 
 	for (let key of keys) {
 

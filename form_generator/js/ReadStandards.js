@@ -79,6 +79,12 @@ document.addEventListener("visibilitychange", () => {
 	console.log("Storing checklist items.");
 
 	let items = document.querySelectorAll(".item_list li");
+	
+	if (role == "\"author\""){	
+		let locationOption = document.getElementById('location_type');
+		let locationType = locationOption.value;	
+		localStorage.setItem("location-type", locationType);
+	}
 
 	for (let item of items) {
 		let storage = {};

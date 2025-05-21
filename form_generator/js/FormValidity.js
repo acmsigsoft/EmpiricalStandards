@@ -107,10 +107,11 @@ function saveFile() {
 	
 	if (role == "\"author\""){	
 		let locationOption = document.getElementById('location_type');
-		locationType = locationOption.options[locationOption.selectedIndex].text;	
+		let indicatorText = locationOption.options[locationOption.selectedIndex].text;
+		locationType = locationOption.value;	
 		
-		if (locationType != "Present?") {
-			generatedText += "\nNote: The numbers beside checklist items, if any, represent " + locationType.toLowerCase() + "\n";
+		if (locationType != "yes_no") {
+			generatedText += "\nNote: The numbers beside checklist items, if any, represent " + indicatorText.toLowerCase() + "\n";
 			essentialList += "  Location" + "\t" + "Attribute\r\n\r\n";
 		}
 	}
@@ -172,10 +173,10 @@ function saveFile() {
 						let presentCheckbox = li.getElementsByClassName('present_checkbox');
 
 						if (list.id == 'Essential'){
-							if (role != "\"author\"" && li.children[0].checked || role == "\"author\"" && locationType == "Present?" && presentCheckbox[0].checked) {
+							if (role != "\"author\"" && li.children[0].checked || role == "\"author\"" && locationType == "yes_no" && presentCheckbox[0].checked) {
 								essentialList +=  'Y' + '\t   ' + itemText + '\r\n';
 								
-							} else if (role == "\"author\"" && locationType != "Present?" && locationTextbox[0].value != "") {
+							} else if (role == "\"author\"" && locationType != "yes_no" && locationTextbox[0].value != "") {
 								if (locationTextbox.length == 1) {
 									locationValue = locationTextbox[0].value;
 								}
@@ -191,7 +192,7 @@ function saveFile() {
 									essentialList += '\r\n\t\t' + itemText + '\r\n';
 								}
 								
-							} else if (role == "\"author\"" && locationType == "Present?") {
+							} else if (role == "\"author\"" && locationType == "yes_no") {
 								essentialList += (role == "\"author\"" ? '*' : ' ') + '\t   ' + itemText;
 								essentialList += (role == "\"author\"" ? ' (unjustified deviation)\r\n' : '\r\n');
 								
@@ -270,10 +271,10 @@ function saveFile() {
 								}
 							}
 						} else if (list.id == 'Desirable') {
-							if (li.children[0].checked || role == "\"author\"" && locationType != "Present?" && locationTextbox[0].value != "" || role == "\"author\"" && locationType == "Present?" && presentCheckbox[0].checked) {
+							if (li.children[0].checked || role == "\"author\"" && locationType != "yes_no" && locationTextbox[0].value != "" || role == "\"author\"" && locationType == "yes_no" && presentCheckbox[0].checked) {
 								includeDesirable = true;
 
-								if (locationTextbox.length == 1 && locationType != "Present?") {
+								if (locationTextbox.length == 1 && locationType != "yes_no") {
 									locationValue = locationTextbox[0].value;
 									desirableList += "  " + (locationValue != "" ? locationValue : "");
 									
@@ -289,10 +290,10 @@ function saveFile() {
 									desirableList +=  'Y' + '\t   ' + itemText + '\r\n';
 								}
 							}
-						} else if (li.children[0].checked || role == "\"author\"" && locationType != "Present?" && locationTextbox[0].value != "" || role == "\"author\"" && locationType == "Present?" && presentCheckbox[0].checked) {
+						} else if (li.children[0].checked || role == "\"author\"" && locationType != "yes_no" && locationTextbox[0].value != "" || role == "\"author\"" && locationType == "yes_no" && presentCheckbox[0].checked) {
 							includeExtraordinary = true;
 
-							if (locationTextbox.length == 1 && locationType != "Present?") {
+							if (locationTextbox.length == 1 && locationType != "yes_no") {
 								locationValue = locationTextbox[0].value;
 								extraordinaryList += "  " + (locationValue != "" ? locationValue : "");
 								
