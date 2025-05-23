@@ -16,8 +16,8 @@ function populateChecklist() {
 		let locationType = localStorage.getItem("location-type");
 		locationOption.value = locationType;	
 		
-		let event = new Event('change');
-		locationOption.dispatchEvent(event);
+		let changeEvent = new Event('change');
+		locationOption.dispatchEvent(changeEvent);
 	}
 
 	for (let key of keys) {

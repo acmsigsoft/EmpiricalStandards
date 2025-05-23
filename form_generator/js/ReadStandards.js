@@ -144,16 +144,13 @@ document.addEventListener("visibilitychange", () => {
 			
 			if (presentCheckBox.checked) {
 				storage.present = true;
-				localStorage.setItem(key, JSON.stringify(storage));
 				
 			} else if (state !== null && state.present) {
 				storage.present = false;
-				localStorage.setItem(key, JSON.stringify(storage));
 			}
 
 			if (locationBox.value != "") {
 				storage.location = locationBox.value;
-				localStorage.setItem(key, JSON.stringify(storage));
 
 			} else if (missingButton.checked) {
 				storage.location = false;
@@ -169,8 +166,11 @@ document.addEventListener("visibilitychange", () => {
 						storage.justified = false;
 					}
 				}
-				localStorage.setItem(key, JSON.stringify(storage));
+			} else {
+				delete storage.location;
+				delete storage.justified;
 			}
+			localStorage.setItem(key, JSON.stringify(storage));
 		}
 	}
 });

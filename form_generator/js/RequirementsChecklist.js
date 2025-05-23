@@ -418,7 +418,6 @@ function clearChecklist(event) {
 		event.preventDefault();
 	} else {
 		console.log("Clearing " + role + " checklist");
-		localStorage.setItem(role, "");
 
 		// Clear all stored items for this checklist
 		let keys = Object.keys(localStorage);
@@ -437,6 +436,11 @@ function clearChecklist(event) {
 			for (let locationBox of primaryLocations) {
 				locationBox.style.visibility = "visible";
 			}
+			
+			let locationOption = document.getElementById('location_type');
+			locationOption.value = "line_no";	
+			let changeEvent = new Event('change');
+			locationOption.dispatchEvent(changeEvent);
 		} else {
 			// If reviewer, hide free text boxes
 			textBoxes = document.getElementsByClassName("question_block_free_text");
