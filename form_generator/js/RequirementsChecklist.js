@@ -87,6 +87,7 @@ function createRequirementsChecklist(file) {
 					{ value: 'page_with_paragraph_no', text: 'Page #, Paragraph #' },
 					{ value: 'section_no', text: 'Section #, Line #' },
 					{ value: 'section_with_paragraph_no', text: 'Section #, Paragraph #' },
+					{ value: 'yes_no', text: 'Present?'}
 				];
 
 				locationTypes.forEach(function (option) {
@@ -95,12 +96,15 @@ function createRequirementsChecklist(file) {
 					location.text = option.text;
 					locationTypesDropdown.appendChild(location);
 				});
+				
+				locationTypesDropdown.addEventListener("change", toggleChecklistDisplay, false);
 
 				locationTypesDropdown.selectedIndex = 0;
 				locationLabel.className = "location_container";
 				locationLabel.appendChild(locationTypesDropdown);
 
 				var missingLabel = document.createElement("span");
+				missingLabel.id = "missing_label";
 				missingLabel.innerHTML = "N/A";
 
 				checklistLabels.appendChild(attributeLabel);
@@ -414,7 +418,6 @@ function clearChecklist(event) {
 		event.preventDefault();
 	} else {
 		console.log("Clearing " + role + " checklist");
-		localStorage.setItem(role, "");
 
 		// Clear all stored items for this checklist
 		let keys = Object.keys(localStorage);
@@ -433,6 +436,11 @@ function clearChecklist(event) {
 			for (let locationBox of primaryLocations) {
 				locationBox.style.visibility = "visible";
 			}
+			
+			let locationOption = document.getElementById('location_type');
+			locationOption.value = "line_no";	
+			let changeEvent = new Event('change');
+			locationOption.dispatchEvent(changeEvent);
 		} else {
 			// If reviewer, hide free text boxes
 			textBoxes = document.getElementsByClassName("question_block_free_text");
@@ -584,7 +592,7 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 			var checklistItemID = "";
 			
 			// Determine which standard to use for the current essential item
-			if (checklistName == "Essential") {									
+			if (checklistName == "Essential") {								
 				let imradCounts = imradOrder[imradCountIndex];
 				let tag_count = imradCounts[0];
 				
@@ -656,11 +664,14 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 				
 				var userInputYes;
 				var userInputNo;
+				let presentCheckBox;
 				var locationContainer;
 				var missingContainer;
+				let presentContainer;
 				
 				if (role == "\"author\"") {
 					
+					// Create default location interface
 					locationContainer = document.createElement("span");
 					locationContainer.className = "location_container";
 					
@@ -668,6 +679,7 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 					userInputYes.onfocus = hideDeviationBlockShowLocationTextbox;
 					
 					missingContainer = document.createElement("span");
+					missingContainer.className = "missing_container";
 					
 					userInputNo = document.createElement("input");
 					userInputNo.type = "checkbox";
@@ -675,6 +687,16 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 					userInputNo.className = "missing_checkbox";
 					userInputNo.name = checklistItemID;
 					userInputNo.onclick = showHideLocationTextbox;
+					
+					// Create alternative yes-no interface
+					presentContainer = document.createElement("span");
+					presentContainer.className = "present_container hide_display_imp";
+					
+					presentCheckBox = document.createElement("input");
+					presentCheckBox.type = "checkbox";
+					presentCheckBox.id = "present_checkbox:" + checklistItemID;
+					presentCheckBox.className = "present_checkbox";
+					presentCheckBox.value = lineText;
 					
 				} else {
 					userInputYes = document.createElement("input");
@@ -707,9 +729,11 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 					
 					locationContainer.appendChild(userInputYes);
 					missingContainer.appendChild(userInputNo);
+					presentContainer.appendChild(presentCheckBox);
 					
 					checklistItemLI.appendChild(locationContainer);
 					checklistItemLI.appendChild(missingContainer);
+					checklistItemLI.appendChild(presentContainer);
 					
 					checklistItemLI.appendChild(deviation_block);
 					
@@ -744,6 +768,10 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 
 			} else {
 				if (role == "\"author\"") {
+					
+					let presentCheckBox;
+					let presentContainer;
+					
 					var userInputYes;
 					locationContainer = document.createElement("span");
 					locationContainer.className = "location_container";
@@ -752,6 +780,7 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 					
 					var userInputNo;
 					missingContainer = document.createElement("span");
+					missingContainer.className = "missing_container";
 					
 					userInputNo = document.createElement("input");
 					userInputNo.type = "checkbox";
@@ -760,6 +789,16 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 					userInputNo.name = checklistItemID;
 					userInputNo.onclick = showHideLocationTextbox;
 					userInputNo.value = lineText;
+					
+					// Create alternative yes-no interface
+					presentContainer = document.createElement("span");
+					presentContainer.className = "present_container hide_display_imp";
+					
+					presentCheckBox = document.createElement("input");
+					presentCheckBox.type = "checkbox";
+					presentCheckBox.id = "present_checkbox:" + checklistItemID;
+					presentCheckBox.className = "present_checkbox";
+					presentCheckBox.value = lineText;
 				
 					checklistItemLI.appendChild(checklistItemText);
 					
@@ -768,6 +807,9 @@ function convertMDStandardChecklistsToHTMLStandardChecklists(standardName, check
 					
 					missingContainer.appendChild(userInputNo);
 					checklistItemLI.appendChild(missingContainer);
+					
+					presentContainer.appendChild(presentCheckBox);
+					checklistItemLI.appendChild(presentContainer);
 				} else {
 					var checkboxInput = document.createElement("input");
 					checkboxInput.type = "checkbox";

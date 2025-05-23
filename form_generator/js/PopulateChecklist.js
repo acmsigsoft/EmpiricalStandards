@@ -10,6 +10,15 @@ function populateChecklist() {
 		let index = keys.indexOf(key);
 		keys.push(keys.splice(index, 1)[0]);
 	}
+	
+	if (role == "\"author\""){	
+		let locationOption = document.getElementById('location_type');
+		let locationType = localStorage.getItem("location-type");
+		locationOption.value = locationType;	
+		
+		let changeEvent = new Event('change');
+		locationOption.dispatchEvent(changeEvent);
+	}
 
 	for (let key of keys) {
 
@@ -63,21 +72,28 @@ function populateChecklist() {
 				} else {
 					let locationBox = item.getElementsByClassName('item_location_textbox')[0];
 					let missingButton = item.getElementsByClassName('missing_checkbox')[0];
+					let presentCheckBox = item.getElementsByClassName('present_checkbox')[0];
+					
+					if (state.present) {
+						presentCheckBox.click();
+					}
 
-					if (state.location != "") {
+					if (state.location) {
 						locationBox.value = state.location;
 
-					} else if (!state.location) {
+					} else if (state.location === false) {
 						missingButton.click();
+						
+						if (item.className.includes("Essential")) {
+							let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
+							let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
 
-						let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
-						let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
+							if (state.justified) {
+								justificationBox.value = state.justified;
 
-						if (Object.hasOwn(state, "justified") && state.justified != "") {
-							justificationBox.value = state.justified;
-
-						} else if (!state.justified) {
-							justificationButton.click();
+							} else if (state.justified === false) {
+								justificationButton.click();
+							}
 						}
 					}
 				}

@@ -79,6 +79,12 @@ document.addEventListener("visibilitychange", () => {
 	console.log("Storing checklist items.");
 
 	let items = document.querySelectorAll(".item_list li");
+	
+	if (role == "\"author\""){	
+		let locationOption = document.getElementById('location_type');
+		let locationType = locationOption.value;	
+		localStorage.setItem("location-type", locationType);
+	}
 
 	for (let item of items) {
 		let storage = {};
@@ -133,25 +139,38 @@ document.addEventListener("visibilitychange", () => {
 		} else {
 			let locationBox = item.getElementsByClassName('item_location_textbox')[0];
 			let missingButton = item.getElementsByClassName('missing_checkbox')[0];
+			let presentCheckBox = item.getElementsByClassName('present_checkbox')[0];
+			let state = JSON.parse(localStorage.getItem(key));
+			
+			if (presentCheckBox.checked) {
+				storage.present = true;
+				
+			} else if (state !== null && state.present) {
+				storage.present = false;
+			}
 
 			if (locationBox.value != "") {
 				storage.location = locationBox.value;
-				localStorage.setItem(key, JSON.stringify(storage));
 
 			} else if (missingButton.checked) {
 				storage.location = false;
+				
+				if (item.className.includes("Essential")) {
+					let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
+					let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
 
-				let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
-				let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
+					if (justificationBox.value != "") {
+						storage.justified = justificationBox.value;
 
-				if (justificationBox.value != "") {
-					storage.justified = justificationBox.value;
-
-				} else if (justificationButton.checked) {
-					storage.justified = false;
+					} else if (justificationButton.checked) {
+						storage.justified = false;
+					}
 				}
-				localStorage.setItem(key, JSON.stringify(storage));
+			} else {
+				delete storage.location;
+				delete storage.justified;
 			}
+			localStorage.setItem(key, JSON.stringify(storage));
 		}
 	}
 });

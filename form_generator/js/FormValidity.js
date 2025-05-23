@@ -103,12 +103,17 @@ function saveFile() {
 	
 	var essentialList = "\nEssential\r\n";
 	
-	if (role == "\"author\""){
-		var locationType = document.getElementById('location_type');
-		locationType = locationType.options[locationType.selectedIndex].text;
-		generatedText += "\nNote: The numbers beside checklist items, if any, represent " + locationType.toLowerCase() + "\n";
+	let locationType = "";
+	
+	if (role == "\"author\""){	
+		let locationOption = document.getElementById('location_type');
+		let indicatorText = locationOption.options[locationOption.selectedIndex].text;
+		locationType = locationOption.value;	
 		
-		essentialList += "  Location" + "\t" + "Attribute\r\n\r\n";
+		if (locationType != "yes_no") {
+			generatedText += "\nNote: The numbers beside checklist items, if any, represent " + indicatorText.toLowerCase() + "\n";
+			essentialList += "  Location" + "\t" + "Attribute\r\n\r\n";
+		}
 	}
 	
 	var desirableList = "\nDesirable\r\n";
@@ -123,7 +128,7 @@ function saveFile() {
 	var type4List = "";
 	
 	for (let list of checklists.children) {
-		if(list.tagName == 'UL' & list.style.display != 'none' || list.tagName == 'DETAILS' && list.style.display != 'none') {
+		if (list.tagName == 'UL' && list.style.display != 'none' || list.tagName == 'DETAILS' && list.style.display != 'none') {
 			for (let ul of list.children) {
 				if(ul.tagName == 'UL'){
 					var i = 0;
@@ -165,11 +170,13 @@ function saveFile() {
 						
 						var locationValue = "";
 						var locationTextbox = li.getElementsByClassName('item_location_textbox');
+						let presentCheckbox = li.getElementsByClassName('present_checkbox');
 
 						if (list.id == 'Essential'){
-							if (role != "\"author\"" && li.children[0].checked) {
+							if (role != "\"author\"" && li.children[0].checked || role == "\"author\"" && locationType == "yes_no" && presentCheckbox[0].checked) {
 								essentialList +=  'Y' + '\t   ' + itemText + '\r\n';
-							} else if (role == "\"author\"" && locationTextbox[0].value != "") {
+								
+							} else if (role == "\"author\"" && locationType != "yes_no" && locationTextbox[0].value != "") {
 								if (locationTextbox.length == 1) {
 									locationValue = locationTextbox[0].value;
 								}
@@ -184,6 +191,10 @@ function saveFile() {
 								} else {
 									essentialList += '\r\n\t\t' + itemText + '\r\n';
 								}
+								
+							} else if (role == "\"author\"" && locationType == "yes_no") {
+								essentialList += (role == "\"author\"" ? '*' : ' ') + '\t   ' + itemText;
+								essentialList += (role == "\"author\"" ? ' (unjustified deviation)\r\n' : '\r\n');
 								
 							} else {
 								var reasonableDeviation = li.getElementsByClassName('deviationRadioYes')[0];						
@@ -259,12 +270,11 @@ function saveFile() {
 									}
 								}
 							}
-						}
-						else if (list.id == 'Desirable') {
-							if (li.children[0].checked || role == "\"author\"" && locationTextbox[0].value != "") {
+						} else if (list.id == 'Desirable') {
+							if (li.children[0].checked || role == "\"author\"" && locationType != "yes_no" && locationTextbox[0].value != "" || role == "\"author\"" && locationType == "yes_no" && presentCheckbox[0].checked) {
 								includeDesirable = true;
 
-								if (locationTextbox.length == 1) {
+								if (locationTextbox.length == 1 && locationType != "yes_no") {
 									locationValue = locationTextbox[0].value;
 									desirableList += "  " + (locationValue != "" ? locationValue : "");
 									
@@ -280,10 +290,10 @@ function saveFile() {
 									desirableList +=  'Y' + '\t   ' + itemText + '\r\n';
 								}
 							}
-						} else if (li.children[0].checked || role == "\"author\"" && locationTextbox[0].value != "") {
+						} else if (li.children[0].checked || role == "\"author\"" && locationType != "yes_no" && locationTextbox[0].value != "" || role == "\"author\"" && locationType == "yes_no" && presentCheckbox[0].checked) {
 							includeExtraordinary = true;
 
-							if (locationTextbox.length == 1) {
+							if (locationTextbox.length == 1 && locationType != "yes_no") {
 								locationValue = locationTextbox[0].value;
 								extraordinaryList += "  " + (locationValue != "" ? locationValue : "");
 								
