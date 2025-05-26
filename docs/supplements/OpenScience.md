@@ -59,3 +59,15 @@ Daniel Méndez, Daniel Graziotin, Stefan Wagner, and Heidi Seibold. 2019. Open s
 GitHub. 2016. Making Your Code Citable. Retrieved July 12, 2020 from [https://guides.github.com/activities/citable-code/](https://guides.github.com/activities/citable-code/). (How to automatically archive a GitHub repository to Zenodo)
 
 Figshare. How to connect Figshare with your GitHub account. Retrieved July 12, 2020 from [https://knowledge.figshare.com/articles/item/how-to-connect-figshare-with-your-github-account](https://knowledge.figshare.com/articles/item/how-to-connect-figshare-with-your-github-account) (How to automatically archive a GitHub repository to Figshare)
+
+### Best Practices
+
+1. Systems Research Artifacts. 2024. Artifact Packaging Guide. Retrieved May 13, 2025 from [https://sysartifacts.github.io/packaging-guide.html](https://sysartifacts.github.io/packaging-guide.html)
+
+2. Artifact Evaluation Committees (AEC). HOWTO for AEC Submitters. Retrieved May 13, 2025 from [https://docs.google.com/document/d/1pqzPtLVIvwLwJsZwCb2r7yzWMaifudHe1Xvn42T4CcA/edit?tab=t.0](https://docs.google.com/document/d/1pqzPtLVIvwLwJsZwCb2r7yzWMaifudHe1Xvn42T4CcA/edit?tab=t.0)
+
+3. Tianyin Xu. 2021. How Are Award‑winning Systems Research Artifacts Prepared – Part 1. Retrieved May 13, 2025 from [https://www.sigops.org/2021/how-are-award-winning-systems-research-artifacts-prepared-part-1/](https://www.sigops.org/2021/how-are-award-winning-systems-research-artifacts-prepared-part-1/)
+
+4. Tianyin Xu. 2021. How Are Award‑winning Systems Research Artifacts Prepared – Part 2. Retrieved May 13, 2025 from [https://www.sigops.org/2021/how-are-award-winning-systems-research-artifacts-prepared-part-2/](https://www.sigops.org/2021/how-are-award-winning-systems-research-artifacts-prepared-part-2/)
+
+5. Rohan Padhye. 2019. Artifact Evaluation: Tips for Authors. Retrieved May 13, 2025 from [https://blog.padhye.org/Artifact-Evaluation-Tips-for-Authors/](https://blog.padhye.org/Artifact-Evaluation-Tips-for-Authors/)
