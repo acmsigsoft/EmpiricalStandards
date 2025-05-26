@@ -44,7 +44,7 @@ If the study focuses on predictive modeling (e.g. machine learning) consider the
     - describes in detail the annotation procedure (e.g. what types of questions were asked to the annotators),
     - assesses inter-rater reliability (see the Inter-Rater Reliability Supplement)
 - [ ] describes and justifies measures or metrics used
-- [ ] EITHER: uses previously validated measures, OR: assesses construct validity
+- [ ] uses previously validated measures, quantitatively assesses construct validity, or both
 
 - [ ] if predictive modeling is used, complies with the [Data Science Standard](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/standards/DataScience.md)
 
