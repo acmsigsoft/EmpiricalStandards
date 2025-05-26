@@ -43,7 +43,7 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	describes experimental objects (e.g. real or toy system) and their characteristics (e.g. size, type)
 - [ ]	justifies selection of experimental objects; acknowledges object-treatment confounds, if any<sup><a class="footnote footnote_ref">1</a></sup>
 - [ ]	design and protocol appropriate (not optimal) for stated research questions and hypotheses
-- [ ]	reports whether, and if what form of, financial or non-financial incentives have been used<sup><a class="footnote footnote-ref">2</a></sup>
+- [ ]	describes financial or non-financial incentives for participation, if any<sup><a class="footnote footnote-ref">2</a></sup>
 
 <results>
 
