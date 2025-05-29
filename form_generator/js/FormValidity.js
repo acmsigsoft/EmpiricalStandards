@@ -110,10 +110,7 @@ function saveFile() {
 		let indicatorText = locationOption.options[locationOption.selectedIndex].text;
 		locationType = locationOption.value;	
 		
-		if (locationType != "yes_no") {
-			generatedText += "\nNote: The numbers beside checklist items, if any, represent " + indicatorText.toLowerCase() + "\n";
-			essentialList += "  Location" + "\t" + "Attribute\r\n\r\n";
-		}
+		generatedText += "\n" + indicatorText.replace(/graph|tion/g, "").replace(/Number\(s\)/g, "No.") + "\t" + "Attribute\r\n";
 	}
 	
 	var desirableList = "\nDesirable\r\n";
@@ -174,14 +171,14 @@ function saveFile() {
 
 						if (list.id == 'Essential'){
 							if (role != "\"author\"" && li.children[0].checked || role == "\"author\"" && locationType == "yes_no" && presentCheckbox[0].checked) {
-								essentialList +=  'Y' + '\t   ' + itemText + '\r\n';
+								essentialList += 'Y' + (role == "\"author\"" ? '\t\t' : '\t') + itemText + '\r\n';
 								
 							} else if (role == "\"author\"" && locationType != "yes_no" && locationTextbox[0].value != "") {
 								if (locationTextbox.length == 1) {
 									locationValue = locationTextbox[0].value;
 								}
 																
-								essentialList += "  " + (locationValue != "" ? locationValue : "");
+								essentialList += (locationValue != "" ? locationValue : "");
 								
 								// Determine whether to push item text to new line based on location text length
 								if (locationValue.length < 6) {
@@ -193,7 +190,7 @@ function saveFile() {
 								}
 								
 							} else if (role == "\"author\"" && locationType == "yes_no") {
-								essentialList += (role == "\"author\"" ? '*' : ' ') + '\t   ' + itemText;
+								essentialList += (role == "\"author\"" ? 'N' : ' ') + '\t\t' + itemText;
 								essentialList += (role == "\"author\"" ? ' (unjustified deviation)\r\n' : '\r\n');
 								
 							} else {
@@ -220,7 +217,7 @@ function saveFile() {
 									}
 									
 									if (role == "\"author\"") {
-										essentialList += "  " + (locationValue != "" ? locationValue : "");
+										essentialList += (locationValue != "" ? locationValue : "");
 										
 										// Determine whether to push item text to new line based on location text length
 										if (locationValue.length < 6) {
@@ -232,7 +229,7 @@ function saveFile() {
 										}
 										
 									} else {
-										essentialList += 'R' + '\t   ' + itemText + '\r\n';
+										essentialList += 'R' + '\t' + itemText + '\r\n';
 									}
 									
 								} else {
@@ -240,32 +237,32 @@ function saveFile() {
 									
 									if (fixableDeviation.length != 0){
 										if (fixableDeviation[0].checked) {
-											type1List += '1\t   ' + itemText + '\r\n';
+											type1List += '1\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type1List += ' \t   ' + questionText + '\r\n';
-												type1List += ' \t    \t   ' + inputText + '\r\n';
+												type1List += ' \t' + questionText + '\r\n';
+												type1List += ' \t\t' + inputText + '\r\n';
 											}
 										} else if (fixableDeviation[1].checked) {
-											type2List += '2\t   ' + itemText + '\r\n';
+											type2List += '2\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type2List += ' \t   ' + questionText + '\r\n';
-												type2List += ' \t    \t   ' + inputText + '\r\n';
+												type2List += ' \t' + questionText + '\r\n';
+												type2List += ' \t\t' + inputText + '\r\n';
 											}
 										}  else if (fixableDeviation[2].checked) {
-											type3List += '3\t   ' + itemText + '\r\n';
+											type3List += '3\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type3List += ' \t   ' + questionText + '\r\n';
-												type3List += ' \t    \t   ' + inputText + '\r\n';
+												type3List += ' \t' + questionText + '\r\n';
+												type3List += ' \t\t' + inputText + '\r\n';
 											}
 										}  else if (fixableDeviation[3].checked) {
-											type4List += '4\t   ' + itemText + '\r\n';
+											type4List += '4\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type4List += ' \t   ' + questionText + '\r\n';
-												type4List += ' \t    \t   ' + inputText + '\r\n';
+												type4List += ' \t' + questionText + '\r\n';
+												type4List += ' \t\t' + inputText + '\r\n';
 											}
 										}
 									} else {
-										essentialList += (role == "\"author\"" ? '  *' : ' ') + '\t\t' + itemText;
+										essentialList += (role == "\"author\"" ? '*' : ' ') + '\t\t' + itemText;
 										essentialList += (role == "\"author\"" ? ' (unjustified deviation)\r\n' : '\r\n');
 									}
 								}
@@ -276,7 +273,7 @@ function saveFile() {
 
 								if (locationTextbox.length == 1 && locationType != "yes_no") {
 									locationValue = locationTextbox[0].value;
-									desirableList += "  " + (locationValue != "" ? locationValue : "");
+									desirableList += (locationValue != "" ? locationValue : "");
 									
 									// Determine whether to push item text to new line based on location text length
 									if (locationValue.length < 6) {
@@ -287,7 +284,7 @@ function saveFile() {
 										desirableList += '\r\n\t\t' + itemText + '\r\n';
 									}
 								} else {
-									desirableList +=  'Y' + '\t   ' + itemText + '\r\n';
+									desirableList += 'Y' + (role == "\"author\"" ? '\t\t' : '\t') + itemText + '\r\n';
 								}
 							}
 						} else if (li.children[0].checked || role == "\"author\"" && locationType != "yes_no" && locationTextbox[0].value != "" || role == "\"author\"" && locationType == "yes_no" && presentCheckbox[0].checked) {
@@ -295,7 +292,7 @@ function saveFile() {
 
 							if (locationTextbox.length == 1 && locationType != "yes_no") {
 								locationValue = locationTextbox[0].value;
-								extraordinaryList += "  " + (locationValue != "" ? locationValue : "");
+								extraordinaryList += (locationValue != "" ? locationValue : "");
 								
 								// Determine whether to push item text to new line based on location text length
 								if (locationValue.length < 6) {
@@ -306,7 +303,7 @@ function saveFile() {
 									extraordinaryList += '\r\n\t\t' + itemText + '\r\n';
 								}
 							} else {
-								extraordinaryList +=  'Y' + '\t   ' + itemText + '\r\n';
+								extraordinaryList += 'Y' + (role == "\"author\"" ? '\t\t' : '\t') + itemText + '\r\n';
 							}
 						}
 
