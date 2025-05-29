@@ -135,35 +135,65 @@ function saveFile() {
 						}
 						i++;
 						var itemText = li.getAttribute("text").trim();
-						var regex = /<a+\n*.+<\/a>/g;
-						if (itemText.match(regex) != null)
-							itemText = itemText.replace(regex, "");
+						
+						// Matches "(see <a>Standard</a>)" text
+						let seeAlsoPattern = /\(see.+?<a.+<\/a>\)/gi;
+						
+						if (itemText.match(seeAlsoPattern) != null) {
+							itemText = itemText.replace(seeAlsoPattern, "");
+						}
 
-						var regex2 = /\{sup\}.+\{\/sup\}/g;
-						var regex3 = /<br\/>/g;
-						var regex4 = /<\/b>/g;
-						var regex5 = /<b>/g;
-						var regex6 = /[\r\n]+/g;
-						var regex7 =/ \(.+?\)/g;
-						var regex8 = /<i>/g;
-						var regex9 = /<\/i>/g;
+						let footnotePattern = /\{sup\}.+\{\/sup\}/g;
+						let breakPattern = /<br\/>/g;
+						let closeBoldPattern = /<\/b>/g;
+						let openBoldPattern = /<b>/g;
+						let newLinePattern = /[\r\n]+/g;
+						let openItalicPattern = /<i>/g;
+						let closeItalicPattern = /<\/i>/g;
+						let openAnchorPattern = /<a.*?>/g;
+						let closeAnchorPattern = /<\/a>/g;
+						let subBulletPattern = /\s\s\s\s-\s/g;
 
-						if (itemText.match(regex2) != null)
-							itemText = itemText.replace(regex2, "");
-						if (itemText.match(regex3) != null)
-							itemText = itemText.replace(regex3,"\n");
-						if (itemText.match(regex4) != null)
-							itemText = itemText.replace(regex4,"");
-						if (itemText.match(regex5) != null)
-							itemText = itemText.replace(regex5,"");
-						if (itemText.match(regex6) != null)
-							itemText = itemText.replace(regex6,"");
-						if (itemText.match(regex7) != null)
-							itemText = itemText.replace(regex7,"");
-						if (itemText.match(regex8) != null)
-							itemText = itemText.replace(regex8,"");
-						if (itemText.match(regex9) != null)
-							itemText = itemText.replace(regex9,"");
+						if (itemText.match(footnotePattern) != null) {
+							itemText = itemText.replace(footnotePattern, "");
+						}
+						
+						if (itemText.match(breakPattern) != null) {
+							itemText = itemText.replace(breakPattern, "\n");
+						}
+						
+						if (itemText.match(closeBoldPattern) != null) {
+							itemText = itemText.replace(closeBoldPattern, "");
+						}
+						
+						if (itemText.match(openBoldPattern) != null) {
+							itemText = itemText.replace(openBoldPattern, "");
+						}
+						
+						if (itemText.match(newLinePattern) != null) {
+							itemText = itemText.replace(newLinePattern, "");
+						}
+						
+						if (itemText.match(openItalicPattern) != null) {
+							itemText = itemText.replace(openItalicPattern, "");
+						}
+						
+						if (itemText.match(closeItalicPattern) != null) {
+							itemText = itemText.replace(closeItalicPattern, "");
+						}
+						
+						if (itemText.match(openAnchorPattern) != null) {
+							itemText = itemText.replace(openAnchorPattern, "");
+						}
+						
+						if (itemText.match(closeAnchorPattern) != null) {
+							itemText = itemText.replace(closeAnchorPattern, "");
+						}
+						
+						if (itemText.match(subBulletPattern) != null) {
+							let replacement = (role == "\"author\"" ? '\n\t\t\t- ' : '\n\t\t- ');
+							itemText = itemText.replace(subBulletPattern, replacement);
+						}
 						
 						var locationValue = "";
 						var locationTextbox = li.getElementsByClassName('item_location_textbox');
