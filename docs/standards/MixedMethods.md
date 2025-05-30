@@ -29,8 +29,7 @@ the mixing of methodologies, not the methodologies themselves. For the latter, r
 
 <results>
 
-- [ ] **integrates the findings** from all methods to address the research 
-  question/objective
+- [ ] **integrates the findings** from all methods to address the research question/objective
 
 <discussion>
 

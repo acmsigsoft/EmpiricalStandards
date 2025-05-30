@@ -9,7 +9,7 @@ function createRequirementsChecklist(file) {
 	form.id = "checklists";
 	form.name = "checklists";
 
-	let clearButton = createClearChecklistButton();
+	let clearButton = createClearChecklistButton();	
 	form.appendChild(clearButton);
 
 	// create Header for Essential Requirements with an unordered list
@@ -404,10 +404,14 @@ function createClearChecklistButton() {
 	clearButton.type = "reset";
 	clearButton.value = "Clear checklist";
 	clearButton.id = "clear_checklist";
-
+	
 	clearButton.addEventListener("click", clearChecklist, false);
+	
+	let clearContainer = document.createElement("div");
+	clearContainer.id = "clear_container";
+	clearContainer.appendChild(clearButton);
 
-	return clearButton;
+	return clearContainer;
 }
 
 // Clear the current checklist
