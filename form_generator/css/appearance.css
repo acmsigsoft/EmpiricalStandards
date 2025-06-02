@@ -199,14 +199,15 @@ form:active {
 	line-height: 3em;
 }
 
+#clear_container {
+	text-align: end;
+}
+
 #clear_checklist {
 	border: none;
 	color: red;
 	background: none;
 	cursor: pointer;
-	margin-right: 20px;
-	margin-top: 15px;
-	float: right;
 }
 
 #clear_checklist:hover {

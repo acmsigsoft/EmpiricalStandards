@@ -110,10 +110,7 @@ function saveFile() {
 		let indicatorText = locationOption.options[locationOption.selectedIndex].text;
 		locationType = locationOption.value;	
 		
-		if (locationType != "yes_no") {
-			generatedText += "\nNote: The numbers beside checklist items, if any, represent " + indicatorText.toLowerCase() + "\n";
-			essentialList += "  Location" + "\t" + "Attribute\r\n\r\n";
-		}
+		generatedText += "\n" + indicatorText.replace(/graph|tion/g, "").replace(/Number\(s\)/g, "No.") + "\t" + "Attribute\r\n";
 	}
 	
 	var desirableList = "\nDesirable\r\n";
@@ -138,35 +135,65 @@ function saveFile() {
 						}
 						i++;
 						var itemText = li.getAttribute("text").trim();
-						var regex = /<a+\n*.+<\/a>/g;
-						if (itemText.match(regex) != null)
-							itemText = itemText.replace(regex, "");
+						
+						// Matches "(see <a>Standard</a>)" text
+						let seeAlsoPattern = /\(see.+?<a.+<\/a>\)/gi;
+						
+						if (itemText.match(seeAlsoPattern) != null) {
+							itemText = itemText.replace(seeAlsoPattern, "");
+						}
 
-						var regex2 = /\{sup\}.+\{\/sup\}/g;
-						var regex3 = /<br\/>/g;
-						var regex4 = /<\/b>/g;
-						var regex5 = /<b>/g;
-						var regex6 = /[\r\n]+/g;
-						var regex7 =/ \(.+?\)/g;
-						var regex8 = /<i>/g;
-						var regex9 = /<\/i>/g;
+						let footnotePattern = /\{sup\}.+\{\/sup\}/g;
+						let breakPattern = /<br\/>/g;
+						let closeBoldPattern = /<\/b>/g;
+						let openBoldPattern = /<b>/g;
+						let newLinePattern = /[\r\n]+/g;
+						let openItalicPattern = /<i>/g;
+						let closeItalicPattern = /<\/i>/g;
+						let openAnchorPattern = /<a.*?>/g;
+						let closeAnchorPattern = /<\/a>/g;
+						let subBulletPattern = /\s\s\s\s-\s/g;
 
-						if (itemText.match(regex2) != null)
-							itemText = itemText.replace(regex2, "");
-						if (itemText.match(regex3) != null)
-							itemText = itemText.replace(regex3,"\n");
-						if (itemText.match(regex4) != null)
-							itemText = itemText.replace(regex4,"");
-						if (itemText.match(regex5) != null)
-							itemText = itemText.replace(regex5,"");
-						if (itemText.match(regex6) != null)
-							itemText = itemText.replace(regex6,"");
-						if (itemText.match(regex7) != null)
-							itemText = itemText.replace(regex7,"");
-						if (itemText.match(regex8) != null)
-							itemText = itemText.replace(regex8,"");
-						if (itemText.match(regex9) != null)
-							itemText = itemText.replace(regex9,"");
+						if (itemText.match(footnotePattern) != null) {
+							itemText = itemText.replace(footnotePattern, "");
+						}
+						
+						if (itemText.match(breakPattern) != null) {
+							itemText = itemText.replace(breakPattern, "\n");
+						}
+						
+						if (itemText.match(closeBoldPattern) != null) {
+							itemText = itemText.replace(closeBoldPattern, "");
+						}
+						
+						if (itemText.match(openBoldPattern) != null) {
+							itemText = itemText.replace(openBoldPattern, "");
+						}
+						
+						if (itemText.match(newLinePattern) != null) {
+							itemText = itemText.replace(newLinePattern, "");
+						}
+						
+						if (itemText.match(openItalicPattern) != null) {
+							itemText = itemText.replace(openItalicPattern, "");
+						}
+						
+						if (itemText.match(closeItalicPattern) != null) {
+							itemText = itemText.replace(closeItalicPattern, "");
+						}
+						
+						if (itemText.match(openAnchorPattern) != null) {
+							itemText = itemText.replace(openAnchorPattern, "");
+						}
+						
+						if (itemText.match(closeAnchorPattern) != null) {
+							itemText = itemText.replace(closeAnchorPattern, "");
+						}
+						
+						if (itemText.match(subBulletPattern) != null) {
+							let replacement = (role == "\"author\"" ? '\n\t\t\t- ' : '\n\t\t- ');
+							itemText = itemText.replace(subBulletPattern, replacement);
+						}
 						
 						var locationValue = "";
 						var locationTextbox = li.getElementsByClassName('item_location_textbox');
@@ -174,14 +201,14 @@ function saveFile() {
 
 						if (list.id == 'Essential'){
 							if (role != "\"author\"" && li.children[0].checked || role == "\"author\"" && locationType == "yes_no" && presentCheckbox[0].checked) {
-								essentialList +=  'Y' + '\t   ' + itemText + '\r\n';
+								essentialList += 'Y' + (role == "\"author\"" ? '\t\t' : '\t') + itemText + '\r\n';
 								
 							} else if (role == "\"author\"" && locationType != "yes_no" && locationTextbox[0].value != "") {
 								if (locationTextbox.length == 1) {
 									locationValue = locationTextbox[0].value;
 								}
 																
-								essentialList += "  " + (locationValue != "" ? locationValue : "");
+								essentialList += (locationValue != "" ? locationValue : "");
 								
 								// Determine whether to push item text to new line based on location text length
 								if (locationValue.length < 6) {
@@ -193,7 +220,7 @@ function saveFile() {
 								}
 								
 							} else if (role == "\"author\"" && locationType == "yes_no") {
-								essentialList += (role == "\"author\"" ? '*' : ' ') + '\t   ' + itemText;
+								essentialList += (role == "\"author\"" ? 'N' : ' ') + '\t\t' + itemText;
 								essentialList += (role == "\"author\"" ? ' (unjustified deviation)\r\n' : '\r\n');
 								
 							} else {
@@ -220,7 +247,7 @@ function saveFile() {
 									}
 									
 									if (role == "\"author\"") {
-										essentialList += "  " + (locationValue != "" ? locationValue : "");
+										essentialList += (locationValue != "" ? locationValue : "");
 										
 										// Determine whether to push item text to new line based on location text length
 										if (locationValue.length < 6) {
@@ -232,7 +259,7 @@ function saveFile() {
 										}
 										
 									} else {
-										essentialList += 'R' + '\t   ' + itemText + '\r\n';
+										essentialList += 'R' + '\t' + itemText + '\r\n';
 									}
 									
 								} else {
@@ -240,32 +267,32 @@ function saveFile() {
 									
 									if (fixableDeviation.length != 0){
 										if (fixableDeviation[0].checked) {
-											type1List += '1\t   ' + itemText + '\r\n';
+											type1List += '1\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type1List += ' \t   ' + questionText + '\r\n';
-												type1List += ' \t    \t   ' + inputText + '\r\n';
+												type1List += ' \t' + questionText + '\r\n';
+												type1List += ' \t\t' + inputText + '\r\n';
 											}
 										} else if (fixableDeviation[1].checked) {
-											type2List += '2\t   ' + itemText + '\r\n';
+											type2List += '2\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type2List += ' \t   ' + questionText + '\r\n';
-												type2List += ' \t    \t   ' + inputText + '\r\n';
+												type2List += ' \t' + questionText + '\r\n';
+												type2List += ' \t\t' + inputText + '\r\n';
 											}
 										}  else if (fixableDeviation[2].checked) {
-											type3List += '3\t   ' + itemText + '\r\n';
+											type3List += '3\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type3List += ' \t   ' + questionText + '\r\n';
-												type3List += ' \t    \t   ' + inputText + '\r\n';
+												type3List += ' \t' + questionText + '\r\n';
+												type3List += ' \t\t' + inputText + '\r\n';
 											}
 										}  else if (fixableDeviation[3].checked) {
-											type4List += '4\t   ' + itemText + '\r\n';
+											type4List += '4\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type4List += ' \t   ' + questionText + '\r\n';
-												type4List += ' \t    \t   ' + inputText + '\r\n';
+												type4List += ' \t' + questionText + '\r\n';
+												type4List += ' \t\t' + inputText + '\r\n';
 											}
 										}
 									} else {
-										essentialList += (role == "\"author\"" ? '  *' : ' ') + '\t\t' + itemText;
+										essentialList += (role == "\"author\"" ? '*' : ' ') + '\t\t' + itemText;
 										essentialList += (role == "\"author\"" ? ' (unjustified deviation)\r\n' : '\r\n');
 									}
 								}
@@ -276,7 +303,7 @@ function saveFile() {
 
 								if (locationTextbox.length == 1 && locationType != "yes_no") {
 									locationValue = locationTextbox[0].value;
-									desirableList += "  " + (locationValue != "" ? locationValue : "");
+									desirableList += (locationValue != "" ? locationValue : "");
 									
 									// Determine whether to push item text to new line based on location text length
 									if (locationValue.length < 6) {
@@ -287,7 +314,7 @@ function saveFile() {
 										desirableList += '\r\n\t\t' + itemText + '\r\n';
 									}
 								} else {
-									desirableList +=  'Y' + '\t   ' + itemText + '\r\n';
+									desirableList += 'Y' + (role == "\"author\"" ? '\t\t' : '\t') + itemText + '\r\n';
 								}
 							}
 						} else if (li.children[0].checked || role == "\"author\"" && locationType != "yes_no" && locationTextbox[0].value != "" || role == "\"author\"" && locationType == "yes_no" && presentCheckbox[0].checked) {
@@ -295,7 +322,7 @@ function saveFile() {
 
 							if (locationTextbox.length == 1 && locationType != "yes_no") {
 								locationValue = locationTextbox[0].value;
-								extraordinaryList += "  " + (locationValue != "" ? locationValue : "");
+								extraordinaryList += (locationValue != "" ? locationValue : "");
 								
 								// Determine whether to push item text to new line based on location text length
 								if (locationValue.length < 6) {
@@ -306,7 +333,7 @@ function saveFile() {
 									extraordinaryList += '\r\n\t\t' + itemText + '\r\n';
 								}
 							} else {
-								extraordinaryList +=  'Y' + '\t   ' + itemText + '\r\n';
+								extraordinaryList += 'Y' + (role == "\"author\"" ? '\t\t' : '\t') + itemText + '\r\n';
 							}
 						}
 
