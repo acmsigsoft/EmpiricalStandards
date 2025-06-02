@@ -39,11 +39,11 @@ Science Standard** or the **Engineering Research Standard**.
 - [ ]	describes how characteristics of the phenomenon under investigation relate to experimental constructs
 - [ ]	describes the research design and protocol including treatments, materials, tasks, design (e.g. 2x2 factorial), participant allocation, period and sequences (for crossover designs), and logistics
 - [ ]	EITHER: uses random assignment and explains logistics (e.g. how random numbers were generated)   
-    OR: provides compelling justification for not using random assignment and explains how unequal groups threat to validity is mitigated (e.g. using pre-test/post-test and matched subjects design)
+        OR: provides compelling justification for not using random assignment and explains how unequal groups threat to validity is mitigated (e.g. using pre-test/post-test and matched subjects design)
 - [ ]	describes experimental objects (e.g. real or toy system) and their characteristics (e.g. size, type)
 - [ ]	justifies selection of experimental objects; acknowledges object-treatment confounds, if any<sup><a class="footnote footnote_ref">1</a></sup>
 - [ ]	design and protocol appropriate (not optimal) for stated research questions and hypotheses
-- [ ]	describes financial or non-financial incentives for participation, if any<sup><a class="footnote footnote-ref">2</a></sup>
+- [ ]	confirms no incentives for participation were offered or describes financial or non-financial incentives<sup><a class="footnote footnote-ref">2</a></sup>
 
 <results>
 
