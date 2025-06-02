@@ -103,5 +103,18 @@ function generateLocationTextbox(name, id) {
 	locationTextbox.pattern = "^(?!.*[A-Za-z]).*$";
 	locationTextbox.title = "Numbers and symbols only."
 	locationTextbox.defaultValue = '';
+	
+	// If the user enters/removes a location, automatically check/uncheck the associated "Present" checkbox
+	if (name == "item_location_textbox") {
+		locationTextbox.addEventListener("change", (event) => {
+			let present = document.getElementById("present_checkbox" + ":" + id);
+			if (event.target.value != "") {
+				present.checked = true;
+			} else {
+				present.checked = false;
+			}
+		});
+	}
+	
 	return locationTextbox;
 }
