@@ -29,6 +29,12 @@ main .wrapper {
 
 @media screen and (max-width: 850px) {
 	main .wrapper {
+		width: 78%;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	main .wrapper {
 		width: 85%;
 	}
 }
