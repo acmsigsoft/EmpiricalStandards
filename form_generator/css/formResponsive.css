@@ -1,10 +1,53 @@
 main .wrapper {
-	min-width: 80%;
+	min-width: 71%;
+	width: 71%;
 }
-	
+
+@media screen and (max-width: 1180px) {
+	main .wrapper {
+		width: 72%;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	main .wrapper {
+		width: 73%;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	main .wrapper {
+		width: 74%;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	main .wrapper {
+		width: 75%;
+	}
+}
+
 @media screen and (max-width: 850px) {
 	main .wrapper {
-		min-width: 90%;
+		width: 78%;
+	}
+}
+
+@media screen and (max-width: 780px) {
+	main .wrapper {
+		width: 85%;
+	}
+}
+
+@media screen and (max-width: 630px) {
+	main .wrapper {
+		width: 87%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	main .wrapper {
+		width: 90%;
 	}
 }
 
