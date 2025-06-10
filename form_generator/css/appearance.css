@@ -80,8 +80,7 @@ form:active {
 }
 
 .location_container {
-	flex: 0 1 20%;
-	margin-right: 10px;
+	flex: 0 1 22%;
 }
 
 .item_location_textbox, .justification_location_textbox {
@@ -97,12 +96,21 @@ form:active {
 	border: 2px solid red;
 }
 
+.missing_container {
+	margin-left: auto;
+	margin-right: 3px;
+}
+
+#missing_label {
+	margin-left: auto;
+}
+
 .checklist_radio_no, .attention_pass {
 	margin-left: 12px;
 }
 
 .present_container {
-	flex: 0 1 20%;
+	flex: 0 1 22%;
 	text-align: center;
 }
 

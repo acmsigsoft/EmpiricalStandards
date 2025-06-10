@@ -1,27 +1,26 @@
 main .wrapper {
-	min-width: 71%;
 	width: 71%;
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 1300px) {
 	main .wrapper {
 		width: 72%;
 	}
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1150px) {
 	main .wrapper {
 		width: 73%;
 	}
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1000px) {
 	main .wrapper {
 		width: 74%;
 	}
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 910px) {
 	main .wrapper {
 		width: 75%;
 	}
@@ -33,7 +32,7 @@ main .wrapper {
 	}
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 785px) {
 	main .wrapper {
 		width: 85%;
 	}
@@ -49,9 +48,18 @@ main .wrapper {
 	main .wrapper {
 		width: 90%;
 	}
+	#location_type {
+		width: 100%
+	}
 }
 
 @media screen and (max-width: 550px) {
+	main .wrapper {
+		min-width: 95%;
+	}
+}
+
+@media screen and (max-width: 500px) {
 	main .wrapper {
 		min-width: 100%;
 	}
