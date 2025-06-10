@@ -14,19 +14,13 @@ main .wrapper {
 	}
 }
 
-@media screen and (max-width: 1000px) {
-	main .wrapper {
-		width: 74%;
-	}
-}
-
-@media screen and (max-width: 910px) {
+@media screen and (max-width: 1050px) {
 	main .wrapper {
 		width: 75%;
 	}
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 875px) {
 	main .wrapper {
 		width: 78%;
 	}
