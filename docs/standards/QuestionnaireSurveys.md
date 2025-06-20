@@ -138,6 +138,8 @@ Paul Ralph, Miikka Kuutila, Hera Arif, and Bimpe Ayoola (2024). Teaching Softwar
 Stefan Wagner, Daniel Mendez, Michael Felderer, Daniel Graziotin, Marcos
 Kalinowski. 2020. Challenges in Survey Research. In: _Contemporary Empirical
 Methods in Software Engineering_, Springer.
+
+Lateef Amusa & Twinomurinzi Hossana (2024). An empirical comparison of some missing data treatments in PLS-SEM. Plos one, 19(1), e0297037.
 		
 Marco Torchiano, Daniel Méndez, Guilherme Horta Travassos, and Rafael
 Maiani de Mello. 2017. Lessons learnt in conducting survey research. In
