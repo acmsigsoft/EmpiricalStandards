@@ -35,7 +35,8 @@
 
 <discussion>
 
-- [ ] provides recommendations for researchers for overcoming the substantive critiques of existing work 
+- [ ] 	provides recommendations for researchers for overcoming the substantive critiques of existing work    
+- [ ]   researchers reflect on their own possible biases 
 
 <other>		
 
