@@ -133,7 +133,9 @@ Validity. *Systematic Practice and Action Research.* (Oct. 1997), 9–21.
 
 Yvonne Dittrich. 2002. Doing Empirical Research on Software Development:
 Finding a Path between Understanding, Intervention, and Method
-Development. In *Social thinking---Software practice*. 243–262
+Development. In: Dittrich, Y., Floyd, C., & Klischewski, R. (Eds.). Social Thinking--Software Practice. Mit Press, ch. 12, https://doi.org/10.7551/mitpress/6308.003.0016
+
+*Social thinking---Software practice*. 243–262
 
 Yvonne Dittrich, Kari Rönkkö, Jeanette Eriksson, Christina Hansson and
 Olle Lindeberg. 2008. Cooperative method development. *Empirical
@@ -149,7 +151,7 @@ Lars Mathiassen. 2002. Collaborative practice research. *Information,
 Technology & People.* 15,4 (2002), 321–345
 
 Lars Mathiassen, Mike Chiasson, and Matt Germonprez. 2012. Style
-Composition in Action Research Publication. *MIS quarterly. JSTOR* 36, 2
+Composition in Action Research Publication. *MIS Quarterly*. 36, 2
 (2012), 347-363
 
 Miroslaw Staron. Action research in software engineering: Metrics'
@@ -157,7 +159,7 @@ research perspective. *International Conference on Current Trends in
 Theory and Practice of Informatics.* (2019), 39-49
 
 Maung K. Sein, Ola Henfridsson, Sandeep Purao, Matti Rossi and Rikard
-Lindgren. 2011. Action design research. *MIS quarterly*. (2011), 37-56.
+Lindgren. 2011. Action design research. *MIS Quarterly*. (2011), 37-56.
 DOI: 10.2307/23043488
 
 ## Exemplars
@@ -168,12 +170,12 @@ Software Engineering*. 13, 3 (Dec. 2007), 231-260. DOI:
 10.1007/s10664-007-9057-1
 
 Helle Damborg Frederiksen, Lars Mathiassen. 2005. Information-centric
-assessment of software metrics practices. IEEE Transactions on
-Engineering Eanagement. 52, 3 (2005), 350-362. DOI:
+assessment of software metrics practices. _IEEE Transactions on
+Engineering Eanagement_. 52, 3 (2005), 350-362. DOI:
 10.1109/TEM.2005.850737
 
 Jakob Iversen and Lars Mathiassen. 2003. Cultivation and engineering of
-a software metrics program. Information Systems Journal. 13, 1 (2006),
+a software metrics program. _Information Systems Journal._ 13, 1 (2006),
 3--19
 
 Jakob Iversen. 1998. Problem diagnosis software process improvement.
