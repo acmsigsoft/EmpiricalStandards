@@ -62,8 +62,8 @@ For cross-sectional analysis, consider the **Exploratory Data Science Standard**
 <checklist name="Extraordinary">
 
 - [ ] uses a multi-stage selection process to identify the study's subjects<sup><a class="footnote footnote_ref">9</a></sup>
-</checklist>
-- [ ] follows subjects for an exceptionally long period (e.g. more than five years)    
+- [ ] follows subjects for an exceptionally long period (e.g. more than five years)
+</checklist>    
 
 ## General Quality Criteria
 
