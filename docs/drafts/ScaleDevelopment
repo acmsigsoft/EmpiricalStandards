@@ -1,11 +1,12 @@
-# Questionnaire Surveys 
-<standard name="Questionnaire Surveys">
+# Questionnaire Scale Development
+<standard name="Scale Development">
 
 
 
-*<desc>A study in which a sample of respondents answer a series of (mostly structured) questions,
-typically through a computerized or paper form</desc>*
+*<desc>A study that proposes and evaluates a questionnaire scale to measure a latent construct</desc>*
 
+
+The following text is from the Questionnaire Standard and can be modified
 
 ## Application
 
@@ -30,7 +31,10 @@ typically given to participants in controlled experiments (see the
 <intro>
 
 <method>
-
+- [ ]   The work explicitly defines the construct being measured. Construct is justified with prior work. The dimensionality of the construct is defined and justified.
+- [ ]   Item generation process is described and documented, whether expert creation, interviews etc.
+- [ ]   Factor structure of the construct is explored with exploratory factor analysis. Factor extraction method, rotation type and item retention criteria are reported.
+- [ ]   Factors structure is confirmed with confirmatory factor analysis. Fit indices are reported (e.g., CFI, TLI, RMSEA, SRMR) with thresholds.
 - [ ]	identifies the target population and defines the sampling strategy (see the [Sampling Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/Sampling.md))
 - [ ]	describes how the questionnaire instrument was created
 - [ ]	describes how participants were selected or recruited (e.g. sampling frame, advertising, invitations, incentives)
@@ -43,6 +47,9 @@ typically given to participants in controlled experiments (see the
 <results>
 
 - [ ]	analyzes response rates
+- [ ]   Provides proof of content validity, e.g. favourability ratings with experts, inter-rater agreement or content-validity index depending on the type of scale created.
+- [ ]   Provides proof of discriminant validity - lack of correlation with unrelated constructs.
+- [ ]   Provides evidence for convergent validity - evidence that the measured construct correlates with related constructs.
 - [ ]	assesses sufficiency of number of participants (statistical power)
 
 <discussion>
@@ -59,6 +66,9 @@ typically given to participants in controlled experiments (see the
 ### Desirable Attributes 	
 <checklist name="Desirable">
 
+- [ ]	The construct being measured is defined and justified in relation to prior theories.
+- [ ]	Evaluates factor structure with separate sample approach.
+- [ ]	Provides proof of Criterion related reliability, that is predictive validity of the proposed constructs on related constructs.
 - [ ]	provides supplementary materials including instrument(s), code books, analysis scripts and dataset(s)
 - [ ]	characterizes the target population including demographic information (e.g. culture, knowledge)
 - [ ]	accounts for the principles of research ethics (e.g. informed consent, re-identification risk)
@@ -78,6 +88,7 @@ typically given to participants in controlled experiments (see the
 ### Extraordinary Attributes 	
 <checklist name="Extraordinary">
 
+- [ ]	Provides proof of Test–Retest Reliability
 - [ ]	provides feasibility check of the anticipated data analysis techniques
 - [ ]	reports on the scale validation in terms of dimensionality, reliability, and validity of measures
 - [ ]   longitudinal design in which each respondent participates two or more times	
@@ -86,7 +97,7 @@ typically given to participants in controlled experiments (see the
 ## General Quality Criteria 
 
 Survey studies should address quantitative quality criteria such
-as **internal validity**, **construct validity**, **external validity**,
+as **internal validity**, **construct validity**, **external validity**,
 **reliability** and **objectivity** (see [Glossary](../glossary)).
 
 ## Variations 

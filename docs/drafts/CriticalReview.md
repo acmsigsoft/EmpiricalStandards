@@ -31,11 +31,12 @@
 <results>
 
 - [ ]	clear chain of evidence from the extracted data to the answers to the research question(s)
-- [ ]	includes substantive (usually but not always methodological) critique of existing work
+- [ ]	presents substantive (usually but not always methodological) critique of existing work
 
 <discussion>
 
-- [ ] provides recommendations for researchers for overcoming the substantive critiques of existing work 
+- [ ] 	provides recommendations for researchers for overcoming the substantive critiques of existing work    
+- [ ]   researchers reflect on their own possible biases 
 
 <other>		
 
@@ -45,18 +46,16 @@
 <checklist name="Desirable">
 	
 - [ ]	provides supplementary materials such as protocol, search terms, search results, selection process results; complete dataset, analysis scripts; coding scheme, examples of coding, decision rules, descriptions of edge cases
-- [ ]	assesses quality of primary studies using an a priori coding scheme (e.g. relevant empirical standards); explains how quality was assessed 
-- [ ]	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup><a class="footnote footnote-ref">4</a></sup> 
+- [ ]	(positivist reviews), uses 2+ independent analysts; analyzes inter-rater reliability (see the [IRR/IRA Supplement](https://github.com/acmsigsoft/EmpiricalStandards/blob/master/docs/supplements/InterRaterReliabilityAndAgreement.md)); explains how discrepancies among coders were resolved<sup><a class="footnote footnote-ref">3</a></sup> 
 - [ ]	(interpretivist reviews) reflects on how researcher’s biases may have affected their analysis
 - [ ]	consolidates results using tables, diagrams, or charts 
-- [ ] includes a PRISMA flow diagram (cf. Moher et al. 2009)
-- [ ] identifies gaps, biases, or future directions
-- [ ]	presents results as practical, evidence-based guidelines for practitioners, researchers, or educators
-- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote-ref">5</a></sup>	
+- [ ] 	includes a PRISMA flow diagram (cf. Moher et al. 2009)
+- [ ]	clearly distinguishes evidence-based results from interpretations and speculation<sup><a class="footnote footnote-ref">4</a></sup>	
 </checklist>
      
 ### Extraordinary Attributes
 <checklist name="Extraordinary">
+- [ ]	includes quantitative meta-analysis or qualitative meta-synthesis in addition to critical review	
 	
 </checklist>
 
@@ -66,14 +65,16 @@
 
 ## Antipatterns 
 
--   Using the review to disparage individual researchers or research groups instead of focusing on ubiquitous problems. 
+-   Using the review to disparage individual researchers or research groups instead of highlighting ubiquitous problems 
     
 ## Invalid Criticisms
 
--   The search queries are not identical in all databases.
+-   The search queries are not identical in all databases
 -   The analysis strategy should be more qualitative/quantitative
 -   The sample does not include every relevant paper (this would be impossible for many critical reviews)
 -   No synthesis of findings is presented (synthesis is not the purpose of a critical review)
+-   No meta-analysis is presented (meta-analysis is not the purpose of a critical review
+-   Failed to exclude low quality studies
 	
 
 ## Suggested Readings 
@@ -90,6 +91,6 @@ Klaas-Jan Stol, Paul Ralph, and Brian Fitzgerald. 2016. Grounded theory in softw
 ---
 <footnote><sup><a class="footnote footnote-text">1</a></sup> Searches can be manual or automated or a combination of both.</footnote><br>
 <footnote><sup><a class="footnote footnote-text">2</a></sup> Primary studies are the studies that are being reviewed. In a tertiary study, the “primary studies” are themselves reviews.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">4</a></sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
-<footnote><sup><a class="footnote footnote-text">5</a></sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">3</a></sup>By discussion and agreement, voting, adding tie-breaker, consulting with study authors, etc.</footnote><br>
+<footnote><sup><a class="footnote footnote-text">4</a></sup> Simply separating results and discussion into different sections is typically sufficient. No speculation in the results section.</footnote><br>
 </standard>
