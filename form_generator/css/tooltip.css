@@ -44,3 +44,23 @@
   opacity: 1;
 }
 
+.justification_tooltip {
+  	border-bottom: none;
+}
+
+.justification_tooltip:before {
+    content: '?';
+    display: inline-block;
+    font-weight: bold;
+    text-align: center;
+    min-width: 18px;
+    min-height: 18px;
+    border-radius: 50%;
+	background-color: #dedee4;
+}
+
+.justification_tooltip .tooltip_text {
+	margin-bottom: 10px;
+	left: 0;
+	margin-left: -135px;
+}

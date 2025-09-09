@@ -255,6 +255,11 @@ function generateQuestionBlockWithYesNoRadioAnswers(id, classValue, question, ch
 		var locationContainer = document.createElement("span");
 		locationContainer.className = "author_justification_container";
 		locationContainer.appendChild(justificationLocationTextbox);
+		
+		let justificationTooltip = document.createElement("span");
+		justificationTooltip.className = "tooltip justification_tooltip";
+		justificationTooltip.innerHTML = "<span class='tooltip_text'>If an essential attribute is missing, its absence should be justified in the manuscript.</span>";
+		locationContainer.appendChild(justificationTooltip);
 
 		questionBlock.appendChild(questiontextContainer);
 		questionBlock.appendChild(locationContainer);
