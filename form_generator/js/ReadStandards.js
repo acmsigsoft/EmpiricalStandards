@@ -157,13 +157,9 @@ document.addEventListener("visibilitychange", () => {
 				
 				if (item.className.includes("Essential")) {
 					let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
-					let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
 
 					if (justificationBox.value != "") {
 						storage.justified = justificationBox.value;
-
-					} else if (justificationButton.checked) {
-						storage.justified = false;
 					}
 				}
 			} else {

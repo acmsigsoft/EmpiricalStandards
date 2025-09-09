@@ -161,7 +161,7 @@ function generateFreeTextQuestion(id, question, checklistItemID) {
 
 // generate the deviation block for Author Role
 function generateAuthorDeviationBlock(checklistItemID) {
-	var deviationBlock = generateQuestionBlockWithYesNoRadioAnswers("deviation_block", "deviationRadio", "where does the manuscript justify the deviation?", checklistItemID);
+	var deviationBlock = generateQuestionBlockWithYesNoRadioAnswers("deviation_block", "deviationRadio", "explain:", checklistItemID);
 
 	// Author-specific deviation justification message
 	var deviationJustified = generateMessage("deviation_justified:" + checklistItemID, "", "message_style_1");
@@ -253,26 +253,12 @@ function generateQuestionBlockWithYesNoRadioAnswers(id, classValue, question, ch
 		// For authors, create location indicator + N/A checkbox
 		var justificationLocationTextbox = generateLocationTextbox("justification_location_textbox", checklistItemID);
 		var locationContainer = document.createElement("span");
-		locationContainer.className = "location_container";
+		locationContainer.className = "author_justification_container";
 		locationContainer.appendChild(justificationLocationTextbox);
-
-		unjustifiedCheckbox = document.createElement("input");
-		unjustifiedCheckbox.type = "checkbox";
-		unjustifiedCheckbox.id = "unjustified_checkbox:" + checklistItemID;
-		unjustifiedCheckbox.className = "unjustified_checkbox";
-		unjustifiedCheckbox.name = checklistItemID;
-		unjustifiedCheckbox.onclick = createDeviationJustificationBlockShowHideJustificationLocationTextbox;
-
-		var unjustifiedContainer = document.createElement("span");
-		unjustifiedContainer.appendChild(unjustifiedCheckbox);
 
 		questionBlock.appendChild(questiontextContainer);
 		questionBlock.appendChild(locationContainer);
-		questionBlock.appendChild(unjustifiedContainer);
 
-		var deviationNotJustified = generateMessage("deviation_not_justified:" + checklistItemID, "&nbsp;Your manuscript should justify any deviations from essential attributes.", "unjustified_warning");
-
-		questionBlock.appendChild(deviationNotJustified);
 	} else {
 		questionBlock.classList.add("reviewer_yes_no_block");
 		deviationBlock.className = "reviewer_reasonable_block";

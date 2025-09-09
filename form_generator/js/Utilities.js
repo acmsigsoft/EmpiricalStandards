@@ -100,9 +100,12 @@ function generateLocationTextbox(name, id) {
 	locationTextbox.className = name;
 	locationTextbox.id = name + ":" + id;
 	locationTextbox.maxLength = "100";
-	locationTextbox.pattern = "^(?!.*[A-Za-z]).*$";
-	locationTextbox.title = "Numbers and symbols only."
 	locationTextbox.defaultValue = '';
+	
+	if (name == "item_location_textbox") {
+		locationTextbox.pattern = "^(?!.*[A-Za-z]).*$";
+		locationTextbox.title = "Numbers and symbols only."
+	}
 	
 	// If the user enters/removes a location, automatically check/uncheck the associated "Present" checkbox
 	if (name == "item_location_textbox") {

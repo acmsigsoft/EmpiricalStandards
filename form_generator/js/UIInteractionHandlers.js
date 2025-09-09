@@ -255,26 +255,6 @@ function createDeviationJustificationBlockShowHideJustificationLocationTextbox()
 			document.getElementsByName(deviationRadioName)[i].checked = false;
 		}
 
-		// (No-No) deviation is unjustified (author)
-	} else if (this.id.includes("unjustified_checkbox:")) {
-		id = this.id.replace("unjustified_checkbox:", "")
-		hideOtherMessages(id);
-		var emptyMessage = document.getElementById("deviation_justified:" + id);
-		emptyMessage.style.display = "none";
-		var message = document.getElementById("deviation_not_justified:" + id);
-
-		var justificationBox = document.getElementById("justification_location_textbox:" + id);
-		var unjustifiedCheckbox = document.getElementById("unjustified_checkbox:" + id);
-
-		if (unjustifiedCheckbox.checked) {
-			message.style.display = "inline";
-			justificationBox.style.visibility = "hidden";
-			justificationBox.value = "";
-		} else {
-			message.style.display = "none";
-			justificationBox.style.visibility = "visible";
-		}
-
 	} else {
 		// (No-Yes-Yes) => deviation is justified and justification is reasonable
 		if (this.id.includes("deviation_justified-radio:Yes:")) {

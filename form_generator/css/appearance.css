@@ -82,7 +82,11 @@ form:active {
 	flex: 0 1 22%;
 }
 
-.item_location_textbox, .justification_location_textbox {
+.author_justification_container {
+	flex: 1 1;
+}
+
+.item_location_textbox {
 	border: 2px solid #bbbbbb;
 	border-radius: 4px;
 	padding: 3px;
@@ -91,11 +95,19 @@ form:active {
 	width: 90%;
 }
 
+.justification_location_textbox {
+	border: 2px solid #bbbbbb;
+	border-radius: 4px;
+	padding: 3px;
+	margin-left: 5px;
+	width: 98%;
+}
+
 .item_location_textbox:invalid, .justification_location_textbox:invalid {
 	border: 2px solid red;
 }
 
-.missing_container, span:has(.unjustified_checkbox) {
+.missing_container {
 	margin-left: auto;
 	margin-right: 3px;
 }
@@ -150,7 +162,6 @@ form:active {
 }
 
 .question_text_container {
-	flex: 0 1 50vw;
 	text-indent: 2.4em;
 }
 

@@ -86,13 +86,9 @@ function populateChecklist() {
 						
 						if (item.className.includes("Essential")) {
 							let justificationBox = item.getElementsByClassName('justification_location_textbox')[0];
-							let justificationButton = item.getElementsByClassName('unjustified_checkbox')[0];
 
 							if (state.justified) {
 								justificationBox.value = state.justified;
-
-							} else if (state.justified === false) {
-								justificationButton.click();
 							}
 						}
 					}
