@@ -1,4 +1,4 @@
-# Inter-Rater Reliability and Agreement <sup><a class="footnote footnote_ref">1</a></sup>
+# Inter-Rater Reliability and Agreement<sup><a class="footnote footnote_ref">1</a></sup>
 &quot;The extent to which different raters assign the same precise value for each item being rated&quot; (Inter-Rater Agreement; IRA) and &quot;the extent to which raters can consistently distinguish between different items on a measurement scale&quot; (Inter-Rater Reliability; IRR)<sup><a class="footnote footnote_ref">2</a></sup>
 
 ## Application
@@ -9,9 +9,9 @@ Applies to studies in which one or more human raters (also called judges or code
 
 There is no universal rule to determine when two or more raters are necessary. The following factors should be considered:
 
-- **Controversiality:** the more potentially controversial the judgment, the more multiple raters are needed; e.g. recording the publication year of the primary studies in an SLR is less controversial than evaluating the elegance of a technical solution.
-- **Practicality:**  the less practical it is to have multiple rates, the more reasonable a single-rater design becomes; e.g. multiple raters applying an _a priori_, deductive coding scheme to some artifacts is more practical than multiple raters inductively coding 2000 pages of interview transcripts.
-- **Philosophy:** having multiple raters is more important from a realist ontological perspective (characteristic of positivism and falsificationism) than from an idealist ontological perspective (characteristic of interpretivism and constructivism).
+- **Controversiality:** the more potentially controversial the judgment, the more we need multiple raters; e.g. recording the publication year of the primary studies in an SLR is less controversial than evaluating the elegance of a technical solution.
+- **Practicality:**  the less practical it is to have multiple raters, the more reasonable a single-rater design becomes; e.g. multiple raters applying an _a priori_, deductive coding scheme to some artifacts is more practical than multiple raters inductively coding 2000 pages of interview transcripts.
+- **Philosophy:** the idea that multiple raters should agree is consistent with realist, positivist, and falsificationist philosophical positions; from an interpretivist or constructivist perspective, different analysts are expected to have different views, so IRR and IRA are irrelevant.
 
 ## Specific Attributes
 
