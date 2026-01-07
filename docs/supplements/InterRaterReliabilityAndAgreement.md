@@ -4,7 +4,7 @@
 
 Applies to studies in which one or more human raters (also called judges or coders) rate (or measure, label, judge, rank or categorize) one or more properties of one or more research objects.<sup><a class="footnote footnote_ref">3</a></sup>
 
-## Are multiple raters needed?
+## Are multiple independent raters needed?
 
 There is no universal rule to determine when two or more raters are necessary. The following factors should be considered:
 
