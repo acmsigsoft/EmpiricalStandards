@@ -33,7 +33,7 @@ collection and analysis or do not use theoretical sampling, consider the
 
 <method>
 
-- [ ]	identifies the version of Grounded Theory used/adapted (Glaser, Strauss-Corbin, Charmaz, etc.)
+- [ ]	identifies the variant(s) of Grounded Theory used/adapted (Glaser, Strauss/Corbin, Charmaz, etc.)
 - [ ]	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
 - [ ]	describes data sources (e.g. participants' demographics, work roles)
 - [ ]	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
