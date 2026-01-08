@@ -37,7 +37,7 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	explains what initial data was used and what other data was analyzed later and why ("theoretical sampling")
 - [ ]	characterizes the data (e.g. participants' demographics, work roles)
 - [ ]	declares either that theoretical saturation was achieved (and how this was determined) or that the theory is possibly or likely incomplete
-- [ ]	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
+- [ ]	explains how key patterns (e.g. categories) were found via GT steps (e.g. selective coding)
     
 <results>
 
