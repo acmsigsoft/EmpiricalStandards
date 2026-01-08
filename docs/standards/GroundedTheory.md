@@ -34,9 +34,8 @@ collection and analysis or do not use theoretical sampling, consider the
 <method>
 
 - [ ]	identifies the variant(s) of Grounded Theory used/adapted (Glaser, Strauss/Corbin, Charmaz, etc.)
-- [ ]	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
+- [ ]	explains what initial data was used and what other data was analyzed later and why ("theoretical sampling")
 - [ ]	describes data sources (e.g. participants' demographics, work roles)
-- [ ]	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
 - [ ]	provides evidence of saturation; explains how saturation was achieved<sup><a class="footnote footnote_ref">1</a></sup> 
 - [ ]	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
     
