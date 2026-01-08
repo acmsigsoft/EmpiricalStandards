@@ -56,7 +56,7 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	results involve relationships between the abstract concepts
 - [ ]	a graphic provides an overview of the main concepts and relationships
 - [ ]	explains how and why study deviates from claimed GT variant and/or how variants were combined
-- [ ]	includes diverse participants and/or data sources (e.g. software repositories, forums)
+- [ ]	includes data representing a diverse (rather than homogeneous) spectrum of cases
 - [ ]	explains how memo writing was used to drive the work
 - [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]	discusses transferability; characterizes the setting such that readers can assess transferability
