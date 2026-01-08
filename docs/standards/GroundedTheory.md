@@ -41,6 +41,7 @@ collection and analysis or do not use theoretical sampling, consider the
     
 <results>
 
+- [ ]	states results in terms of abstract concepts that assign meaning to data ("theoretical coding": do not merely _describe_ the data)
 - [ ]	provides clear chain of evidence from raw data (e.g. interviewee quotations) to derived codes, concepts, and categories
 
 <discussion>
