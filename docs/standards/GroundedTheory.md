@@ -59,7 +59,7 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	includes data representing a diverse (rather than homogeneous) spectrum of cases
 - [ ]	explains how memo writing was used to drive the work
 - [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
-- [ ]	discusses transferability; characterizes the setting such that readers can assess transferability
+- [ ]	characterizes the setting such that readers can assess transferability; discusses transferability
 - [ ]	compares results with (or integrates them into) prior theory or related research
 - [ ]	explains theoretical sampling vis-à-vis the interplay between the sampling process, the emerging findings, and theoretical gaps perceived therein
 - [ ]	reflects on how researcher’s biases may have affected their analysis
