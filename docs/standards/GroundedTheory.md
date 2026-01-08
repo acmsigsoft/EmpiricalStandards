@@ -65,6 +65,7 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	explains theoretical sampling vis-à-vis the interplay between the sampling process, the emerging findings, and theoretical gaps perceived therein
 - [ ]	reflects on how researcher’s biases may have affected their analysis
 - [ ]	explains the role of literature, especially where an extensive review preceded the GT study
+- [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 </checklist>
      
 ### Extraordinary Attributes 
