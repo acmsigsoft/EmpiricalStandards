@@ -53,9 +53,9 @@ collection and analysis or do not use theoretical sampling, consider the
 ### Desirable Attributes 
 <checklist name="Desirable">
     
+- [ ]	results involve relationships between the abstract concepts
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]	explains how and why study adapts or deviates from claimed GT version
-- [ ]	presents a mature, fully-developed theory or taxonomy
 - [ ]	includes diverse participants and/or data sources (e.g. software repositories, forums)
 - [ ]	explains how memo writing was used to drive the work
 - [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
