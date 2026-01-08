@@ -54,6 +54,7 @@ collection and analysis or do not use theoretical sampling, consider the
 <checklist name="Desirable">
     
 - [ ]	results involve relationships between the abstract concepts
+- [ ]	a graphic provides an overview of the main concepts and relationships
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]	explains how and why study adapts or deviates from claimed GT version
 - [ ]	includes diverse participants and/or data sources (e.g. software repositories, forums)
