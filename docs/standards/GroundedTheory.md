@@ -55,8 +55,7 @@ collection and analysis or do not use theoretical sampling, consider the
     
 - [ ]	results involve relationships between the abstract concepts
 - [ ]	a graphic provides an overview of the main concepts and relationships
-- [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
-- [ ]	explains how and why study adapts or deviates from claimed GT version
+- [ ]	explains how and why study deviates from claimed GT variant and/or how variants were combined
 - [ ]	includes diverse participants and/or data sources (e.g. software repositories, forums)
 - [ ]	explains how memo writing was used to drive the work
 - [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
