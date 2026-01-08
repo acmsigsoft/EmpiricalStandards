@@ -42,7 +42,7 @@ collection and analysis or do not use theoretical sampling, consider the
 <results>
 
 - [ ]	states results in terms of abstract concepts that assign meaning to data ("theoretical coding": do not merely _describe_ the data)
-- [ ]	provides clear chain of evidence from raw data (e.g. interviewee quotations) to derived codes, concepts, and categories
+- [ ]	grounds most or all important concepts in raw data explicitly (e.g. by providing quotations)
 
 <discussion>
 
@@ -57,7 +57,6 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	explains how and why study adapts or deviates from claimed GT version
 - [ ]	presents a mature, fully-developed theory or taxonomy
 - [ ]	includes diverse participants and/or data sources (e.g. software repositories, forums)
-- [ ]	uses direct quotations extensively to support key points
 - [ ]	explains how memo writing was used to drive the work
 - [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]	discusses transferability; characterizes the setting such that readers can assess transferability
