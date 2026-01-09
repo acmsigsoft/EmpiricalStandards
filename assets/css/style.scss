@@ -593,14 +593,18 @@ main .ready_link {
 	margin-right: 5px;
 }
 
-.standards_list, .supplements_list {
+.standards_list {
 	flex: 0 0 260px;
+}
+
+.standards_list, .supplements_list {
 	align-self: flex-start;
 	top: 30px;
 	position: sticky;
 }
 
 .supplements_list {
+	flex: 0 0 370px;
 	padding-left: 30px;
 	text-indent: -30px;
 }
