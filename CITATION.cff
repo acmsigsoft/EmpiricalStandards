@@ -1,0 +1,188 @@
+cff-version: 1.2.0
+message: Please use the following when citing the Empirical Standards.
+title: Empirical Standards for Software Engineering Research
+authors:
+- family-names: Ralph
+  given-names: Paul
+- family-names: Ali
+  given-names: Nauman bin
+- family-names: Baltes
+  given-names: Sebastian
+- family-names: Bianculli
+  given-names: Domenico
+- family-names: Diaz
+  given-names: Jessica
+- family-names: Dittrich
+  given-names: Yvonne
+- family-names: Ernst
+  given-names: Neil
+- family-names: Felderer
+  given-names: Michael
+- family-names: Feldt
+  given-names: Robert
+- family-names: Filieri
+  given-names: Antonio
+- family-names: de França
+  given-names: Breno Bernard Nicolau
+- family-names: Furia
+  given-names: Carlo Alberto
+- family-names: Gay
+  given-names: Greg
+- family-names: Gold
+  given-names: Nicolas
+- family-names: Graziotin
+  given-names: Daniel
+- family-names: He
+  given-names: Pinjia
+- family-names: Hoda
+  given-names: Rashina
+- family-names: Juristo
+  given-names: Natalia
+- family-names: Kitchenham
+  given-names: Barbara
+- family-names: Lenarduzzi
+  given-names: Valentina
+- family-names: Martínez
+  given-names: Jorge
+- family-names: Melegati
+  given-names: Jorge
+- family-names: Mendez
+  given-names: Daniel
+- family-names: Menzies
+  given-names: Tim
+- family-names: Molleri
+  given-names: Jefferson
+- family-names: Pfahl
+  given-names: Dietmar
+- family-names: Robbes
+  given-names: Romain
+- family-names: Russo
+  given-names: Daniel
+- family-names: Saarimäki
+  given-names: Nyyti
+- family-names: Sarro
+  given-names: Federica
+- family-names: Taibi
+  given-names: Davide
+- family-names: Siegmund
+  given-names: Janet
+- family-names: Spinellis
+  given-names: Diomidis
+- family-names: Staron
+  given-names: Miroslaw
+- family-names: Stol
+  given-names: Klaas
+- family-names: Storey
+  given-names: Margaret-Anne
+- family-names: Tamburri
+  given-names: Damian
+- family-names: Torchiano
+  given-names: Marco
+- family-names: Treude
+  given-names: Christoph
+- family-names: Turhan
+  given-names: Burak
+- family-names: Wang
+  given-names: Xiaofeng
+- family-names: Vegas
+  given-names: Sira
+preferred-citation:
+  authors:
+    - family-names: Ralph
+      given-names: Paul
+    - family-names: Ali
+      given-names: Nauman bin
+    - family-names: Baltes
+      given-names: Sebastian
+    - family-names: Bianculli
+      given-names: Domenico
+    - family-names: Diaz
+      given-names: Jessica
+    - family-names: Dittrich
+      given-names: Yvonne
+    - family-names: Ernst
+      given-names: Neil
+    - family-names: Felderer
+      given-names: Michael
+    - family-names: Feldt
+      given-names: Robert
+    - family-names: Filieri
+      given-names: Antonio
+    - family-names: de França
+      given-names: Breno Bernard Nicolau
+    - family-names: Furia
+      given-names: Carlo Alberto
+    - family-names: Gay
+      given-names: Greg
+    - family-names: Gold
+      given-names: Nicolas
+    - family-names: Graziotin
+      given-names: Daniel
+    - family-names: He
+      given-names: Pinjia
+    - family-names: Hoda
+      given-names: Rashina
+    - family-names: Juristo
+      given-names: Natalia
+    - family-names: Kitchenham
+      given-names: Barbara
+    - family-names: Lenarduzzi
+      given-names: Valentina
+    - family-names: Martínez
+      given-names: Jorge
+    - family-names: Melegati
+      given-names: Jorge
+    - family-names: Mendez
+      given-names: Daniel
+    - family-names: Menzies
+      given-names: Tim
+    - family-names: Molleri
+      given-names: Jefferson
+    - family-names: Pfahl
+      given-names: Dietmar
+    - family-names: Robbes
+      given-names: Romain
+    - family-names: Russo
+      given-names: Daniel
+    - family-names: Saarimäki
+      given-names: Nyyti
+    - family-names: Sarro
+      given-names: Federica
+    - family-names: Taibi
+      given-names: Davide
+    - family-names: Siegmund
+      given-names: Janet
+    - family-names: Spinellis
+      given-names: Diomidis
+    - family-names: Staron
+      given-names: Miroslaw
+    - family-names: Stol
+      given-names: Klaas
+    - family-names: Storey
+      given-names: Margaret-Anne
+    - family-names: Tamburri
+      given-names: Damian
+    - family-names: Torchiano
+      given-names: Marco
+    - family-names: Treude
+      given-names: Christoph
+    - family-names: Turhan
+      given-names: Burak
+    - family-names: Wang
+      given-names: Xiaofeng
+    - family-names: Vegas
+      given-names: Sira
+  doi: 10.48550/ARXIV.2010.03525
+  identifiers:
+    - type: doi
+      value: 10.48550/ARXIV.2010.03525
+    - type: url
+      value: https://arxiv.org/abs/2010.03525
+    - type: other
+      value: arXiv:2010.03525v2
+  title: Empirical Standards for Software Engineering Research
+  url: https://arxiv.org/abs/2010.03525
+  date-published: "2020-10-07"
+  year: 2020
+  type: report
+  license: "CC0-1.0"
