@@ -181,11 +181,6 @@ form:active {
 	text-indent: 0em;
 }
 
-.message_style_4 {
-	padding-left: 2em;
-	text-indent: 0em;
-}
-
 .error_warning {
 	margin-top: 10px;
 	margin-bottom: 10px;
@@ -194,6 +189,10 @@ form:active {
 
 .attention {
 	color: red;
+}
+
+#decision_msg {
+	padding-bottom: 20px;
 }
 
 .standard_links {

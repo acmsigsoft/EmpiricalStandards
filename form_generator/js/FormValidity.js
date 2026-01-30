@@ -92,11 +92,11 @@ function saveFile() {
 	}
 	
 	if (unreasonable.style.display == "block") {
-		generatedText += "\nUnreasonable Deviations\n";
+		generatedText += "\nUNREASONABLE DEVIATIONS (recommended changes are indented below each item)\r\n\r\nType\tAttribute";
 	}
 
 	if (reasonable.style.display == "block") {
-		generatedText += "\nUnreasonable Deviations Requiring Revision\n";
+		generatedText += "\nUNREASONABLE DEVIATIONS REQUIRING REVISION (recommended changes are indented below each item)\n\nType\tAttribute";
 	} else {
 		generatedText += "";
 	}
@@ -231,10 +231,7 @@ function saveFile() {
 								var questionDiv  = li.getElementsByClassName("question_block_free_text");
 								
 								if (questionDiv[0]) {
-									var questionText = questionDiv[0].querySelector('div:first-child').textContent.trim().replace(/^\W+/g, '');
-									console.log(questionText)
 									var inputCollection  = li.getElementsByClassName('free_text_answer');
-									console.log(inputCollection);
 									
 									if (inputCollection[0]) {
 										var inputText = inputCollection[0].value;
@@ -267,28 +264,24 @@ function saveFile() {
 									
 									if (fixableDeviation.length != 0){
 										if (fixableDeviation[0].checked) {
-											type1List += '1\t' + itemText + '\r\n';
+											type1List += '\r\n1\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type1List += ' \t' + questionText + '\r\n';
-												type1List += ' \t\t' + inputText + '\r\n';
+												type1List += '\t\t> ' + inputText + '\r\n';
 											}
 										} else if (fixableDeviation[1].checked) {
-											type2List += '2\t' + itemText + '\r\n';
+											type2List += '\r\n2\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type2List += ' \t' + questionText + '\r\n';
-												type2List += ' \t\t' + inputText + '\r\n';
+												type2List += '\t\t> ' + inputText + '\r\n';
 											}
 										}  else if (fixableDeviation[2].checked) {
-											type3List += '3\t' + itemText + '\r\n';
+											type3List += '\r\n3\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type3List += ' \t' + questionText + '\r\n';
-												type3List += ' \t\t' + inputText + '\r\n';
+												type3List += '\t\t> ' + inputText + '\r\n';
 											}
 										}  else if (fixableDeviation[3].checked) {
-											type4List += '4\t' + itemText + '\r\n';
+											type4List += '\r\n4\t' + itemText + '\r\n';
 											if(inputText !== ""){
-												type4List += ' \t' + questionText + '\r\n';
-												type4List += ' \t\t' + inputText + '\r\n';
+												type4List += '\t\t> ' + inputText + '\r\n';
 											}
 										}
 									} else {
