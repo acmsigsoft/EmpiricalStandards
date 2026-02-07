@@ -58,7 +58,7 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	a graphic provides an overview of the main concepts and relationships
 - [ ]	results involve relationships between the concepts ("pushing to theory", not stopping with unconnected themes)
 - [ ]	explains how and why study deviates from claimed GT variant and/or how variants were combined
-- [ ]	includes data representing a diverse (rather than homogeneous) spectrum of cases
+- [ ]	includes data representing a diverse (rather than homogeneous) spectrum of people or things
 - [ ]	explains how memo writing was used to drive the work
 - [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
 - [ ]	characterizes the setting such that readers can assess transferability; discusses transferability
@@ -99,9 +99,9 @@ reliability typically do not apply.
     categories instead of interpreting.
 -   Presenting a tutorial on grounded theory instead of explaining how
     the current study was conducted.
--   Small, heterogenous samples creating the illusion of convergence and
+-   Small, homogeneous samples creating the illusion of convergence and
     theoretical saturation. For example, it is highly unlikely that a
-    full theory can be derived only from interviews with 20 people.
+    full theory can be derived only from interviews with 20 similar people.
 -   Focusing only on interviews without corroborating statements with
     other evidence (e.g. documents, observation).
 
