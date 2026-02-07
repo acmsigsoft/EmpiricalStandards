@@ -41,7 +41,7 @@ collection and analysis or do not use theoretical sampling, consider the
     
 <results>
 
-- [ ]	states results in terms of abstract concepts that assign meaning to data ("theoretical coding": do not merely _describe_ the data)
+- [ ]	states results in terms of concepts that assign meaning to data ("theoretical coding": do not merely _describe_ the data)
 - [ ]	grounds most or all important concepts in raw data explicitly (e.g. by providing quotations)
 
 <discussion>
