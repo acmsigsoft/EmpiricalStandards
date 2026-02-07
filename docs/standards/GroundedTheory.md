@@ -46,6 +46,8 @@ collection and analysis or do not use theoretical sampling, consider the
 
 <discussion>
 
+- [ ]	discusses the transferability of the theory
+
 <other>
      
 </checklist>    
