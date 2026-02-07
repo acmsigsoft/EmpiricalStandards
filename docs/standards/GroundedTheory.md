@@ -55,7 +55,7 @@ collection and analysis or do not use theoretical sampling, consider the
 ### Desirable Attributes 
 <checklist name="Desirable">
     
-- [ ]	a graphic provides an overview of the main concepts and relationships
+- [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]	results involve relationships between the concepts ("pushing to theory", not stopping with unconnected themes)
 - [ ]	explains how and why study deviates from claimed GT variant and/or how variants were combined
 - [ ]	includes data representing a diverse (rather than homogeneous) spectrum of people or things
@@ -65,7 +65,6 @@ collection and analysis or do not use theoretical sampling, consider the
 - [ ]	compares results with (or integrates them into) prior theory or related research
 - [ ]	reflects on how researcher’s biases may have affected their analysis
 - [ ]	explains the role of literature, especially where an extensive review preceded the GT study
-- [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 </checklist>
      
 ### Extraordinary Attributes 
