@@ -33,18 +33,20 @@ collection and analysis or do not use theoretical sampling, consider the
 
 <method>
 
-- [ ]	identifies the version of Grounded Theory used/adapted (Glaser, Strauss-Corbin, Charmaz, etc.)
-- [ ]	explains how data source(s) were selected and accessed (e.g. participant sampling strategy)
-- [ ]	describes data sources (e.g. participants' demographics, work roles)
-- [ ]	explains how the research iterated between data collection and analysis using constant comparison and theoretical sampling
-- [ ]	provides evidence of saturation; explains how saturation was achieved<sup><a class="footnote footnote_ref">1</a></sup> 
-- [ ]	explains how key patterns (e.g. categories) emerged from GT steps (e.g. selective coding)
+- [ ]	identifies the variant(s) of Grounded Theory used/adapted (Glaser, Strauss/Corbin, Charmaz, etc.)
+- [ ]	characterizes the data (participants' demographics, types of documents, nature of field notes, ...)
+- [ ]	explains how the research iterated between data collection (using theoretical sampling) and analysis (using constant comparison)
+- [ ]	states that and how theoretical saturation was determined
+- [ ]	explains how key patterns (e.g. categories) were found via GT steps (e.g. selective coding)
     
 <results>
 
-- [ ]	provides clear chain of evidence from raw data (e.g. interviewee quotations) to derived codes, concepts, and categories
+- [ ]	states results in terms of concepts that assign meaning to data ("theoretical coding": do not merely _describe_ the data)
+- [ ]	grounds most or all important concepts in raw data explicitly (e.g. by providing quotations)
 
 <discussion>
+
+- [ ]	discusses the transferability of the theory
 
 <other>
      
@@ -54,15 +56,15 @@ collection and analysis or do not use theoretical sampling, consider the
 <checklist name="Desirable">
     
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
-- [ ]	explains how and why study adapts or deviates from claimed GT version
-- [ ]	presents a mature, fully-developed theory or taxonomy
-- [ ]	includes diverse participants and/or data sources (e.g. software repositories, forums)
-- [ ]	uses direct quotations extensively to support key points
+- [ ]	results involve relationships between the concepts ("pushing to theory", not stopping with unconnected themes)
+- [ ]	a diagram provides an overview of the main concepts and relationships
+- [ ]	shows the mapping from categories to lower-level codes and concepts to observations (e.g. as a table)
+- [ ]	explains how and why study deviates from claimed GT variant and/or how variants were combined
+- [ ]	includes data representing a diverse (rather than homogeneous) spectrum of people or things
 - [ ]	explains how memo writing was used to drive the work
 - [ ]   validates results using member checking, dialogical interviewing, feedback from non-participant practitioners or research audits of coding by advisors or other researchers
-- [ ]	discusses transferability; characterizes the setting such that readers can assess transferability
+- [ ]	characterizes the setting such that readers can assess transferability; discusses transferability
 - [ ]	compares results with (or integrates them into) prior theory or related research
-- [ ]	explains theoretical sampling vis-à-vis the interplay between the sampling process, the emerging findings, and theoretical gaps perceived therein
 - [ ]	reflects on how researcher’s biases may have affected their analysis
 - [ ]	explains the role of literature, especially where an extensive review preceded the GT study
 </checklist>
@@ -98,9 +100,9 @@ reliability typically do not apply.
     categories instead of interpreting.
 -   Presenting a tutorial on grounded theory instead of explaining how
     the current study was conducted.
--   Small, heterogenous samples creating the illusion of convergence and
+-   Small, homogeneous samples creating the illusion of convergence and
     theoretical saturation. For example, it is highly unlikely that a
-    full theory can be derived only from interviews with 20 people.
+    full theory can be derived only from interviews with 20 similar people.
 -   Focusing only on interviews without corroborating statements with
     other evidence (e.g. documents, observation).
 
