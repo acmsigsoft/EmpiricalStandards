@@ -55,8 +55,8 @@ collection and analysis or do not use theoretical sampling, consider the
 ### Desirable Attributes 
 <checklist name="Desirable">
     
-- [ ]	results involve relationships between the abstract concepts
 - [ ]	a graphic provides an overview of the main concepts and relationships
+- [ ]	results involve relationships between the concepts ("pushing to theory", not stopping with unconnected themes)
 - [ ]	explains how and why study deviates from claimed GT variant and/or how variants were combined
 - [ ]	includes data representing a diverse (rather than homogeneous) spectrum of cases
 - [ ]	explains how memo writing was used to drive the work
