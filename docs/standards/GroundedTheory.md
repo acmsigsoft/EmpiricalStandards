@@ -57,6 +57,7 @@ collection and analysis or do not use theoretical sampling, consider the
     
 - [ ]	provides supplemental materials such as interview guide(s), coding schemes, coding examples, decision rules, or extended chain-of-evidence tables
 - [ ]	results involve relationships between the concepts ("pushing to theory", not stopping with unconnected themes)
+- [ ]	a diagram provides an overview of the main concepts and relationships
 - [ ]	explains how and why study deviates from claimed GT variant and/or how variants were combined
 - [ ]	includes data representing a diverse (rather than homogeneous) spectrum of people or things
 - [ ]	explains how memo writing was used to drive the work
