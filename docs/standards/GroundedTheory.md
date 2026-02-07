@@ -35,7 +35,7 @@ collection and analysis or do not use theoretical sampling, consider the
 
 - [ ]	identifies the variant(s) of Grounded Theory used/adapted (Glaser, Strauss/Corbin, Charmaz, etc.)
 - [ ]	explains what initial data was used and what other data was analyzed later and why ("theoretical sampling")
-- [ ]	characterizes the data (e.g. participants' demographics, work roles)
+- [ ]	characterizes the data (participants' demographics, types of documents, nature of field notes, ...)
 - [ ]	states that and how theoretical saturation was determined
 - [ ]	explains how key patterns (e.g. categories) were found via GT steps (e.g. selective coding)
     
