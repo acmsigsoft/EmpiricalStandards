@@ -195,7 +195,7 @@ form:active {
 	padding-bottom: 20px;
 }
 
-.standard_links {
+.standard_links, .github_links {
 	font-size: 16px;
 	background-color: #dedee4;
 	padding: 5px;

@@ -202,6 +202,36 @@ function createForMoreInfoPart(standardKeys) {
 	return moreInfoContainer;
 }
 
+// Add the dynamic Github link
+function createGithubLink(standardKeys) {
+	var githubLinkContainer = document.createElement("DIV");
+	var githubLink = document.createElement("a");
+	githubLink.innerHTML = "Report a problem with this checklist.";
+	
+	var github = "https://github.com/acmsigsoft/EmpiricalStandards/issues/new?";
+	var labelList = "labels=";
+	
+	// Get all labels
+	for (let key of standardKeys) {
+		let label = key.replaceAll(" ", "");
+		label = label.replaceAll("\"", "");
+		console.log(label);
+		
+		if (label != "GeneralStandard") {
+			label += "Standard";
+		}
+		labelList += label + ",";
+	}
+	
+	// Build link
+	githubLink.href = github + labelList + "&assignees=drpaulralph&body=Describe+the+issue.";
+	githubLink.target = "_blank";
+	githubLink.className = "github_links";
+	
+	githubLinkContainer.appendChild(githubLink);
+	return githubLinkContainer;
+}
+
 // Functions below are directly accessed by the UI Files
 function generateStandardChecklist(file) {
 	console.log(file);
@@ -242,6 +272,12 @@ function generateStandardChecklist(file) {
 	// Create "For more information, see:"
 	var moreInfoContainer = createForMoreInfoPart(standardKeys);
 	container.appendChild(moreInfoContainer);
+	
+	// Add dynamic link to GitHub issues
+	HR = document.createElement("HR");
+	container.appendChild(HR);
+	var githubLink = createGithubLink(standardKeys);
+	container.appendChild(githubLink);
 
 	if (wrapper == null) {
 		document.body.appendChild(container);
