@@ -195,7 +195,7 @@ form:active {
 	padding-bottom: 20px;
 }
 
-.standard_links {
+.standard_links, .github_links {
 	font-size: 16px;
 	background-color: #dedee4;
 	padding: 5px;
@@ -203,6 +203,10 @@ form:active {
 	color: black;
 	margin: 10px;
 	line-height: 3em;
+}
+
+.github_links {
+	
 }
 
 #clear_container {
