@@ -23,7 +23,7 @@ layout: default
 	</div>
 
     <div id="image_container">
-		<img src="assets/img/landing-image.jpg">
+		<img src="assets/img/stockphoto_sigsoft.jpg">
 	</div>
 </section>
 
