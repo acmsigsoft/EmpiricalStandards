@@ -163,7 +163,6 @@ function hideDeviationBlockShowLocationTextbox() {
 	if (role == "\"author\"") {
 		id = this.id.replace("missing_checkbox:", "");
 		id = this.id.replace("item_location_textbox:", "");
-		console.log(id);
 
 		var locationTextbox = document.getElementById("item_location_textbox:" + id);
 		locationTextbox.style.visibility = "visible";
@@ -172,6 +171,7 @@ function hideDeviationBlockShowLocationTextbox() {
 		id = this.id.replace("checklist-radio:Yes:", "");
 	}
 	hideOtherMessages(id);
+	console.log(id);
 
 	// Hide all Deviation Blocks
 	var block = document.getElementById("deviation_block:" + id);
@@ -194,19 +194,14 @@ function hideDeviationBlockShowLocationTextbox() {
 		justificationBox.value = "";
 	}
 
-	// Uncheck all deviation-block-radio
+	// Uncheck deviation radios
 	for (let i = 0; i < document.getElementsByName("deviation_block-radio:" + id).length; i++) {
 		document.getElementsByName("deviation_block-radio:" + id)[i].checked = false;
 	}
-
-	// Uncheck all deviation-justified-radio
-	for (let i = 0; i < document.getElementsByName("deviation_block-radio:" + id).length; i++) {
-		document.getElementsByName("deviation_block-radio:" + id)[i].checked = false;
-	}
-
-	// Uncheck all deviation-not-justified-radio
-	for (let i = 0; i < document.getElementsByName("deviation_block-radio:" + id).length; i++) {
-		document.getElementsByName("deviation_block-radio:" + id)[i].checked = false;
+	
+	// Uncheck type 1 - type 4 radios
+	for (let i = 0; i < document.getElementsByName("deviation_not_justified-radio:" + id).length; i++) {
+		document.getElementsByName("deviation_not_justified-radio:" + id)[i].checked = false;
 	}
 
 	//This function is primarily responsible for controlling the displaying of the deviation blocks in the checklist.
