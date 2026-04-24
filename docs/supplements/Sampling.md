@@ -50,9 +50,8 @@ This standard applies to empirical research in which the researcher selects smal
 ## Invalid Criticisms
 
 - complaining about lack of representativeness or low external validity in studies where representativeness is not a goal
-- abstractly criticizing generalizability rather than pointing to best practices, e.g.:
-- invalid: &#39;as most respondents work in app development, the results may not generalize to other settings&#39;
-- valid: &#39;the researchers should have sent participation reminders to mitigate response bias&#39;
+- complaining that a study conducted in one country (e.g. Kenya) has low external validity because its results may not generalize to another country (e.g. the United States)
+- abstractly criticizing generalizability rather than pointing to best practices; e.g. complaining that the results may not generalize (bad) instead of pointing out that participation reminders should have been sent to mitigate response bias (good);
 - for qualitative research, claiming that the sample size is too small without considering how the items were selected (e.g. theoretical sampling) or the authors&#39; argument for saturation.
 
 ## Suggested Readings
