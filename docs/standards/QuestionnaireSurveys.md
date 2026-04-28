@@ -60,13 +60,14 @@ typically given to participants in controlled experiments (see the
 <checklist name="Desirable">
 
 - [ ]	provides supplementary materials including instrument(s), code books, analysis scripts and dataset(s)
+- [ ]   includes mechanisms to detect participants using AI or other automated means to answer questions; excludes AI-generated responses 
+- [ ]   includes attention-check items in the questionnaire; excludes participants who fail one or more of these checks
 - [ ]	characterizes the target population including demographic information (e.g. culture, knowledge)
 - [ ]	accounts for the principles of research ethics (e.g. informed consent, re-identification risk)
 - [ ]	explains and justifies instrument design and choice of scales (e.g. by research objectives or by analogy to similar studies)
 - [ ]	validates whether the instrument's items, layout, duration, and technology are appropriate (e.g. using pilots, test-retest, or expert and non-expert reviews)
 - [ ]	reports how the instrument has evolved through the validation process (if at all)
 - [ ]	analyzes response bias (quantitatively)
-- [ ]   includes attention-check items in the questionnaire, and excludes participants who fail one or more of these checks
 - [ ]	applies techniques for improving response rates (e.g. incentives, reminders, targeted advertising)
 - [ ]   applies an advanced method of handling missing data (e.g. Full Information Maximum Likelihood, Multiple Imputation, Bayesian methods)
 - [ ]	discusses possible effects of incentives (e.g. on voluntariness, response rates, response bias) if used
