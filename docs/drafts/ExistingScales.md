@@ -11,4 +11,8 @@
 | Attitude toward social infrastructure | Software Infrastructure Attitude Scale  | Kuutila, Miikka, et al. 2026 "The Software Infrastructure Attitude Scale (SIAS): A Questionnaire Instrument for Measuring Professionals' Attitudes Toward Technical and Sociotechnical Infrastructure." Proceedings of ICSE 2026. |
 | Perceived usefulness | Technology Acceptance Model | Davis, Fred D. 1989 "Perceived Usefulness, Perceived Ease of Use, and User Acceptance of Information Technology." MIS Quarterly 13(3). |
 | Perceived ease of use | Technology Acceptance Model | Davis, Fred D. 1989 "Perceived Usefulness, Perceived Ease of Use, and User Acceptance of Information Technology." MIS Quarterly 13(3). |
+| Performance expectancy | Unified Theory of Acceptance and Use of Technology | Venkatesh, Viswanath, et al. 2003 "User Acceptance of Information Technology: Toward a Unified View." MIS Quarterly 27(3). |
+| Effort expectancy | Unified Theory of Acceptance and Use of Technology | Venkatesh, Viswanath, et al. 2003 "User Acceptance of Information Technology: Toward a Unified View." MIS Quarterly 27(3). |
+| Social influence | Unified Theory of Acceptance and Use of Technology | Venkatesh, Viswanath, et al. 2003 "User Acceptance of Information Technology: Toward a Unified View." MIS Quarterly 27(3). |
+| Facilitating conditions | Unified Theory of Acceptance and Use of Technology | Venkatesh, Viswanath, et al. 2003 "User Acceptance of Information Technology: Toward a Unified View." MIS Quarterly 27(3). |
 | ... | ... | ...  |
