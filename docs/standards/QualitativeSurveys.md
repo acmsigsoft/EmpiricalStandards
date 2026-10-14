@@ -99,6 +99,7 @@ reliability typically do not apply.
 
 -   Interviewing a small number of similar people, creating the illusion
     of convergence and saturation
+-   Using a large language model to analyze data.
 -   Mis-presenting a qualitative survey as grounded theory or a case
     study.
 
