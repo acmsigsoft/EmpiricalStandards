@@ -119,9 +119,10 @@ different purposes, including:
 ## Antipatterns 
 
 -   Relying on a single approach to data collection (e.g. interviews)
-    without corroboration or data triangulation
+    without corroboration or data triangulation.
 -   Oversimplifying and over-rationalizing complex phenomena; presenting
-    messy, complicated things as simple and clean
+    messy, complicated things as simple and clean.
+-   Using a large language model to analyze data.
 
 ## Invalid Criticisms 
 
