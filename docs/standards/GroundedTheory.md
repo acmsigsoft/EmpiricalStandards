@@ -98,6 +98,7 @@ reliability typically do not apply.
     only analysis techniques of GT.
 -   Data analysis focusing on counting words, codes, concepts, or
     categories instead of interpreting.
+-   Using a large language model to analyze data.
 -   Presenting a tutorial on grounded theory instead of explaining how
     the current study was conducted.
 -   Small, homogeneous samples creating the illusion of convergence and
