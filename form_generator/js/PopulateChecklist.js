@@ -45,6 +45,13 @@ function populateChecklist() {
 
 						if (state.reasonable) {
 							reasonableYes.click();
+							
+							let reasonableExplanation = item.getElementsByClassName('question_block_free_text')[1];
+							let freeTextContent = reasonableExplanation.getElementsByClassName('free_text_answer')[0];
+
+							if (Object.hasOwn(state, "reasonableExplanation") && state.reasonableExplanation != "") {
+								freeTextContent.value = state.reasonableExplanation;
+							}
 
 						} else if (!state.reasonable) {
 							reasonableNo.click();

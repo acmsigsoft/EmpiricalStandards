@@ -50,6 +50,7 @@ function checkFormValidity(event) {
 					}
 					
 					let freeTextBox = li.getElementsByClassName('question_block_free_text')[0];
+					let reasonableExplanation = li.getElementsByClassName('question_block_free_text')[1];
 					
 					if (freeTextBox.style.display != "none") {
 						let freeTextContent = freeTextBox.getElementsByClassName('free_text_answer')[0];
@@ -60,6 +61,17 @@ function checkFormValidity(event) {
 							validity = false;
 						} else {
 							freeTextBox.classList.remove("attention");
+						}
+					}
+					if (reasonableExplanation.style.display != "none") {
+						let freeTextContent = reasonableExplanation.getElementsByClassName('free_text_answer')[0];
+					
+						// If explanation is missing, the item is invalid
+						if (freeTextContent.value == "") {
+							reasonableExplanation.classList.add("attention");
+							validity = false;
+						} else {
+							reasonableExplanation.classList.remove("attention");
 						}
 					}
 				}
