@@ -31,8 +31,10 @@ function generateOnePhaseReviewerDeviationBlock(checklistItemID,data) {
 
 		if(data.displayfree == "True"){
 			var freeTextQuestion = generateFreeTextQuestion("free_text_question", data.freelabel, checklistItemID);
+			var justifiedExplanation = generateFreeTextQuestion("justified_explanation", 'Why is this deviation reasonable?', checklistItemID);
 
 			deviationBlock.appendChild(freeTextQuestion);
+			deviationBlock.appendChild(justifiedExplanation);
 		}
 	}else{
 		console.log("Data not fetched");
@@ -57,8 +59,10 @@ function generateOnePhaseReviewerDeviationBlock(checklistItemID,data) {
 		deviationBlock.appendChild(deviationUnreasonable);
 		
 		var freeTextQuestion = generateFreeTextQuestion("free_text_question", 'How can this problem be addressed', checklistItemID);
+		var justifiedExplanation = generateFreeTextQuestion("justified_explanation", 'Why is this deviation reasonable?', checklistItemID);
 
 		deviationBlock.appendChild(freeTextQuestion);
+		deviationBlock.appendChild(justifiedExplanation);
 	}
 
 	console.log(deviationBlock);
@@ -97,8 +101,9 @@ function generateTwoPhaseReviewerDeviationBlock(checklistItemID,data) {
 
 		if(data.displayfree == "True"){
 			var freeTextQuestion = generateFreeTextQuestion("free_text_question", data.freelabel, checklistItemID);
-			console.log(data.freelabel);
+			var justifiedExplanation = generateFreeTextQuestion("justified_explanation", 'Why is this deviation reasonable?', checklistItemID);
 			deviationBlock.appendChild(freeTextQuestion);
+			deviationBlock.appendChild(justifiedExplanation);
 		}
 	}else{
 		console.log("Data not fetched");	
@@ -120,9 +125,11 @@ function generateTwoPhaseReviewerDeviationBlock(checklistItemID,data) {
 		deviationBlock.appendChild(deviationReasonable);
 		deviationBlock.appendChild(deviationUnreasonable);
 
-		var freeTextQuestion = generateFreeTextQuestion("free_text_question", "How can this problem be addressed", checklistItemID);
+		var freeTextQuestion = generateFreeTextQuestion("free_text_question", 'How can this problem be addressed', checklistItemID);
+		var justifiedExplanation = generateFreeTextQuestion("justified_explanation", 'Why is this deviation reasonable?', checklistItemID);
 
 		deviationBlock.appendChild(freeTextQuestion);
+		deviationBlock.appendChild(justifiedExplanation);
 	}
 
 	return deviationBlock;

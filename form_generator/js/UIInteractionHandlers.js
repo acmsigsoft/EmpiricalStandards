@@ -184,6 +184,8 @@ function hideDeviationBlockShowLocationTextbox() {
 	if (role != "\"author\"") {
 		var messageBlock = document.getElementById("free_text_question:" + id);
 		messageBlock.style.display = "none";
+		var explanationBlock = document.getElementById("justified_explanation:" + id);
+		explanationBlock.style.display = "none";
 		var noRadio = document.getElementById("checklist-radio:No:" + id);
 		noRadio.checked = false;
 	} else {
@@ -220,6 +222,8 @@ function createDeviationJustificationBlockShowHideJustificationLocationTextbox()
 		block.style.display = "none";
 		var block = document.getElementById("deviation_justified:" + id);
 		block.style.display = "block";
+		var explanationBlock = document.getElementById("justified_explanation:" + id);
+		explanationBlock.style.display = "block";
 
 		if (role != "\"author\"") {
 			var messageBlock = document.getElementById("free_text_question:" + id);
@@ -243,6 +247,8 @@ function createDeviationJustificationBlockShowHideJustificationLocationTextbox()
 		message.style.display = "block";
 		var messageBlock = document.getElementById("free_text_question:" + id);
 		messageBlock.style.display = "block";
+		var explanationBlock = document.getElementById("justified_explanation:" + id);
+		explanationBlock.style.display = "none";
 
 		deviationRadioName = this.name.replace("deviation_block-radio", "deviation_justified-radio");
 
@@ -312,6 +318,7 @@ function hideOtherMessages(id) {
 		document.getElementById("justification_reasonable:" + id).style.display = "none";
 		document.getElementById("justification_unreasonable:" + id).style.display = "none";
 		document.getElementById("free_text_question:" + id).style.display = "none";
+		document.getElementById("justified_explanation:" + id).style.display = "none";
 	}
 	catch (err) { }
 }
