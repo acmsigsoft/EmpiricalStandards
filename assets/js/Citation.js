@@ -8,6 +8,13 @@ citeButton.addEventListener("click", () => {
 });
 		
 closeModal.addEventListener("click", () => {
+	let copied_notification = document.getElementById("copied_notification");
+		
+	// Remove notification
+	if (copied_notification) {
+		copied_notification.remove();
+	}
+	
 	citationModal.close();
 });
 		
@@ -37,6 +44,14 @@ citationFormats.addEventListener("change", () => {
 	} else if (option == "ris") {
 		document.getElementById("citation_text").value = ris;
 	}
+	
+	let copied_notification = document.getElementById("copied_notification");
+		
+	// Remove notification
+	if (copied_notification) {
+		copied_notification.remove();
+	}
+	
 });
 		
 // Copy citation text according to clipboard
@@ -45,7 +60,28 @@ copyButton.addEventListener("click", () => {
 
 	navigator.clipboard.writeText(copy).then(function() {
 		console.log('Citation copied to clipboard.');
+		let copied_notification = document.getElementById("copied_notification");
+		
+		// Notify user
+		if (copied_notification) {
+			copied_notification.remove();
+		}
+		copied_notification = document.createElement("p");
+		copied_notification.id = "copied_notification";
+		copied_notification.innerText = "Citation copied!";
+		copyButton.after(copied_notification);
 	}, function(err) {
 		console.error('Could not copy citation to cliboard: ', err);
+		let copied_notification = document.getElementById("copied_notification");
+		
+		// Notify user
+		if (copied_notification) {
+			copied_notification.remove();
+		}
+		copied_notification = document.createElement("p");
+		copied_notification.id = "copied_notification";
+		copied_notification.innerText = "Citation not copied. Try again.";
+		copyButton.after(copied_notification);
+		
 	});
 });
