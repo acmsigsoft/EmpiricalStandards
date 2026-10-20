@@ -239,14 +239,22 @@ function saveFile() {
 								var reasonableDeviation = li.getElementsByClassName('deviationRadioYes')[0];						
 								locationTextbox = li.getElementsByClassName('justification_location_textbox');
 								
-								// store for the free_text_question
-								var questionDiv  = li.getElementsByClassName("question_block_free_text");
+								// Store for the free text questions
+								var freeTextBoxes = li.getElementsByClassName("question_block_free_text");
 								
-								if (questionDiv[0]) {
-									var inputCollection  = li.getElementsByClassName('free_text_answer');
+								if (freeTextBoxes[0] && freeTextBoxes[0].style.display != "none") {
+									let freeTextContent = freeTextBoxes[0].getElementsByClassName('free_text_answer');
 									
-									if (inputCollection[0]) {
-										var inputText = inputCollection[0].value;
+									if (freeTextContent[0]) {
+										var inputText = freeTextContent[0].value;
+									}
+								}
+									
+								if (freeTextBoxes[1] && freeTextBoxes[1].style.display != "none") {
+									let freeTextContent = freeTextBoxes[1].getElementsByClassName('free_text_answer');
+									
+									if (freeTextContent[0]) {
+										var explanationText = freeTextContent[0].value;
 									}
 								}
 
@@ -269,6 +277,9 @@ function saveFile() {
 										
 									} else {
 										essentialList += 'R' + '\t' + itemText + '\r\n';
+										if (explanationText !== ""){
+												essentialList += '\t\t> ' + explanationText + '\r\n';
+										}
 									}
 									
 								} else {
