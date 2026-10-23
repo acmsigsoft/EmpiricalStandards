@@ -50,6 +50,7 @@ function checkFormValidity(event) {
 					}
 					
 					let freeTextBox = li.getElementsByClassName('question_block_free_text')[0];
+					let reasonableExplanation = li.getElementsByClassName('question_block_free_text')[1];
 					
 					if (freeTextBox.style.display != "none") {
 						let freeTextContent = freeTextBox.getElementsByClassName('free_text_answer')[0];
@@ -60,6 +61,17 @@ function checkFormValidity(event) {
 							validity = false;
 						} else {
 							freeTextBox.classList.remove("attention");
+						}
+					}
+					if (reasonableExplanation.style.display != "none") {
+						let freeTextContent = reasonableExplanation.getElementsByClassName('free_text_answer')[0];
+					
+						// If explanation is missing, the item is invalid
+						if (freeTextContent.value == "") {
+							reasonableExplanation.classList.add("attention");
+							validity = false;
+						} else {
+							reasonableExplanation.classList.remove("attention");
 						}
 					}
 				}
@@ -227,14 +239,22 @@ function saveFile() {
 								var reasonableDeviation = li.getElementsByClassName('deviationRadioYes')[0];						
 								locationTextbox = li.getElementsByClassName('justification_location_textbox');
 								
-								// store for the free_text_question
-								var questionDiv  = li.getElementsByClassName("question_block_free_text");
+								// Store for the free text questions
+								var freeTextBoxes = li.getElementsByClassName("question_block_free_text");
 								
-								if (questionDiv[0]) {
-									var inputCollection  = li.getElementsByClassName('free_text_answer');
+								if (freeTextBoxes[0] && freeTextBoxes[0].style.display != "none") {
+									let freeTextContent = freeTextBoxes[0].getElementsByClassName('free_text_answer');
 									
-									if (inputCollection[0]) {
-										var inputText = inputCollection[0].value;
+									if (freeTextContent[0]) {
+										var inputText = freeTextContent[0].value;
+									}
+								}
+									
+								if (freeTextBoxes[1] && freeTextBoxes[1].style.display != "none") {
+									let freeTextContent = freeTextBoxes[1].getElementsByClassName('free_text_answer');
+									
+									if (freeTextContent[0]) {
+										var explanationText = freeTextContent[0].value;
 									}
 								}
 
@@ -257,6 +277,9 @@ function saveFile() {
 										
 									} else {
 										essentialList += 'R' + '\t' + itemText + '\r\n';
+										if (explanationText !== ""){
+												essentialList += '\t\t> ' + explanationText + '\r\n';
+										}
 									}
 									
 								} else {

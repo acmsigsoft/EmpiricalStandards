@@ -108,6 +108,12 @@ document.addEventListener("visibilitychange", () => {
 
 				if (reasonableYes.checked) {
 					storage.reasonable = true;
+					let reasonableExplanation = item.getElementsByClassName('question_block_free_text')[1];
+					let freeTextContent = reasonableExplanation.getElementsByClassName('free_text_answer')[0];
+
+					if (freeTextContent.value != "") {
+						storage.reasonableExplanation = freeTextContent.value;
+					}
 
 				} else if (reasonableNo.checked) {
 					storage.reasonable = false;
