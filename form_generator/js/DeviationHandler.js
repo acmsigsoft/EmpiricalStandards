@@ -193,16 +193,16 @@ function generateQuestionBlockWithTypeRadioAnswers(id, classValue, question, che
 	var dict = {};
 	
 	// type 1
-	dict[1] = "can be fixed by editing text only; e.g. clarifying text, adding references, changing a diagram, describing an additional limitation, copyediting.";
+	dict[1] = "fixable by editing text (e.g. adding limitations) or figures (e.g. redrawing a diagram)";
 	
 	// type 2
-	dict[2] = "can be fixed by doing some new data analysis, redoing some existing data analysis, or collecting a small amount of additional data (e.g. going back to one interviewee, collecting some additional primary studies for a systematic review).";
+	dict[2] = "fixable with minor changes to data analysis (e.g. adding effect sizes) or adding no more than 10% new data";
 	
 	// type 3
-	dict[3] = "can be fixed completely redoing data analysis, OR collecting additional data (e.g. conducting new or additional experiments or case studies; several new interviews, one or more additional rounds of questionnaire data collection).";
+	dict[3] = "fixable with moderate or major changes to data analysis or adding >10% new data";
 	
 	// type 4
-	dict[4] = "unacceptable conduct (e.g. plagiarism, p-hacking, HARKing, unethical data collection) OR problems the cannot be fixed without doing a brand new study (e.g. fundamentally invalid measures, data collection or analysis insufficient by an order of magnitude, no chain of evidence whatsoever from data to conclusions).";
+	dict[4] = "unacceptable conduct (e.g. plagiarism, p-hacking, HARKing, data fabrication, unethical data collection) OR unfixable problems (e.g. fundamentally invalid measures)";
 
     for (let i in type) {
         var deviationRadioType = document.createElement("input");
