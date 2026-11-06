@@ -202,7 +202,7 @@ function generateQuestionBlockWithTypeRadioAnswers(id, classValue, question, che
 	dict[3] = "fixable with moderate or major changes to data analysis or adding >10% new data";
 	
 	// type 4
-	dict[4] = "unacceptable conduct (e.g. plagiarism, p-hacking, HARKing, data fabrication, unethical data collection) OR unfixable problems (e.g. fundamentally invalid measures)";
+	dict[4] = "unfixable problems (e.g. fundamentally invalid measures) or misconduct (e.g. data fabrication, plagiarism, p-hacking, HARKing, unethical data collection)";
 
     for (let i in type) {
         var deviationRadioType = document.createElement("input");
